@@ -1,6 +1,6 @@
 import { promises as fs } from 'fs';
 import path from 'path';
-import type { CompanyProfile, SavedContract, SamApiResponse } from '@/types';
+import type { CompanyProfile, SavedContract, SamApiResponse, SamOpportunity } from '@/types';
 
 const DATA_DIR = path.join(process.cwd(), 'data');
 const COMPANY_PROFILE_FILE = path.join(DATA_DIR, 'company-profile.json');
@@ -193,6 +193,28 @@ export async function clearSearchCache(): Promise<void> {
     await fs.unlink(SAM_CACHE_FILE);
   } catch {
     // File doesn't exist
+  }
+}
+
+// Find an opportunity by ID in all cached search results
+export async function getOpportunityFromCache(noticeId: string): Promise<SamOpportunity | null> {
+  try {
+    await ensureDataDir();
+    const data = await fs.readFile(SAM_CACHE_FILE, 'utf-8');
+    const cache: CachedSearch[] = JSON.parse(data);
+    
+    // Search through all cached searches for the opportunity
+    for (const cached of cache) {
+      const opportunity = cached.data.opportunitiesData?.find(
+        (opp: SamOpportunity) => opp.noticeId === noticeId
+      );
+      if (opportunity) {
+        return opportunity;
+      }
+    }
+    return null;
+  } catch {
+    return null;
   }
 }
 

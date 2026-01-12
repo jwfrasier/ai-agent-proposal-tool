@@ -1,0 +1,2206 @@
+[
+  {
+    "key": "software development|||||10|0",
+    "data": {
+      "totalRecords": 14976,
+      "limit": 10,
+      "offset": 0,
+      "opportunitiesData": [
+        {
+          "noticeId": "feeb5740efe2400498b362b7244ed1d8",
+          "title": "SCBA Regulator Assembly",
+          "solicitationNumber": "W911S226U2395",
+          "fullParentPathName": "DEPT OF DEFENSE.DEPT OF THE ARMY.AMC.ACC.MISSION INSTALLATION CONTRACTING COMMAND.419TH CSB.W6QM MICC-FT DRUM",
+          "fullParentPathCode": "021.2100.AMC.ACC.MICC.419TH CSB.W911S2",
+          "postedDate": "2026-01-12",
+          "type": "Combined Synopsis/Solicitation",
+          "baseType": "Combined Synopsis/Solicitation",
+          "archiveType": "autocustom",
+          "archiveDate": "2027-01-12",
+          "typeOfSetAsideDescription": "Total Small Business Set-Aside (FAR 19.5)",
+          "typeOfSetAside": "SBA",
+          "responseDeadLine": "2026-01-15T08:55:00-04:00",
+          "naicsCode": "339999",
+          "naicsCodes": [
+            "339999"
+          ],
+          "classificationCode": "4210",
+          "active": "Yes",
+          "award": null,
+          "pointOfContact": [
+            {
+              "fax": "",
+              "type": "primary",
+              "email": "steven.c.larue.civ@army.mil",
+              "phone": "3157725901",
+              "title": null,
+              "fullName": "Steven Larue"
+            }
+          ],
+          "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=feeb5740efe2400498b362b7244ed1d8",
+          "organizationType": "OFFICE",
+          "officeAddress": {
+            "zipcode": "13602-5220",
+            "city": "FORT DRUM",
+            "countryCode": "USA",
+            "state": "NY"
+          },
+          "placeOfPerformance": {
+            "streetAddress": "Fort Drum",
+            "zip": "13602"
+          },
+          "additionalInfoLink": null,
+          "uiLink": "https://sam.gov/workspace/contract/opp/feeb5740efe2400498b362b7244ed1d8/view",
+          "links": [
+            {
+              "rel": "self",
+              "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=feeb5740efe2400498b362b7244ed1d8&limit=1"
+            }
+          ],
+          "resourceLinks": null
+        },
+        {
+          "noticeId": "feae6772e7e04e88a778f124d1e2a638",
+          "title": "59--CABLE ASSEMBLY,SPEC",
+          "solicitationNumber": "SPE4A626U1176",
+          "fullParentPathName": "DEPT OF DEFENSE.DEFENSE LOGISTICS AGENCY.DLA AVIATION.DLA AV RICHMOND.DLA AVIATION",
+          "fullParentPathCode": "097.97AS.DLA AVIATION.DLA AV RICHMOND.SPE4A6",
+          "postedDate": "2026-01-12",
+          "type": "Combined Synopsis/Solicitation",
+          "baseType": "Combined Synopsis/Solicitation",
+          "archiveType": "autocustom",
+          "archiveDate": "2026-02-26",
+          "typeOfSetAsideDescription": "Total Small Business Set-Aside (FAR 19.5)",
+          "typeOfSetAside": "SBA",
+          "responseDeadLine": "2026-01-27",
+          "naicsCode": "335931",
+          "naicsCodes": [
+            "335931"
+          ],
+          "classificationCode": "59",
+          "active": "Yes",
+          "award": null,
+          "pointOfContact": [
+            {
+              "fax": null,
+              "type": "primary",
+              "email": "DibbsBSM@dla.mil",
+              "phone": null,
+              "title": null,
+              "fullName": "Questions regarding this solicitation should be emailed to the buyer listed in block 5 of the solicitation document which can be found under the Additional Information link.\nIf the Additional Information link does not work, please go to https://www.dibbs.bsm.dla.mil/Solicitations/ and type the solicitation number in the Global Search box.\n"
+            }
+          ],
+          "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=feae6772e7e04e88a778f124d1e2a638",
+          "organizationType": "OFFICE",
+          "officeAddress": {
+            "zipcode": "23237",
+            "city": "RICHMOND",
+            "countryCode": "USA",
+            "state": "VA"
+          },
+          "placeOfPerformance": null,
+          "additionalInfoLink": null,
+          "uiLink": "https://sam.gov/workspace/contract/opp/feae6772e7e04e88a778f124d1e2a638/view",
+          "links": [
+            {
+              "rel": "self",
+              "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=feae6772e7e04e88a778f124d1e2a638&limit=1"
+            }
+          ],
+          "resourceLinks": null
+        },
+        {
+          "noticeId": "fe5832395f1c49609bc920c03a15f46d",
+          "title": "31--BEARING,SLEEVE",
+          "solicitationNumber": "SPE4A626T468M",
+          "fullParentPathName": "DEPT OF DEFENSE.DEFENSE LOGISTICS AGENCY.DLA AVIATION.DLA AV RICHMOND.DLA AVIATION",
+          "fullParentPathCode": "097.97AS.DLA AVIATION.DLA AV RICHMOND.SPE4A6",
+          "postedDate": "2026-01-12",
+          "type": "Combined Synopsis/Solicitation",
+          "baseType": "Combined Synopsis/Solicitation",
+          "archiveType": "autocustom",
+          "archiveDate": "2026-02-19",
+          "typeOfSetAsideDescription": "Total Small Business Set-Aside (FAR 19.5)",
+          "typeOfSetAside": "SBA",
+          "responseDeadLine": "2026-01-20",
+          "naicsCode": "332991",
+          "naicsCodes": [
+            "332991"
+          ],
+          "classificationCode": "31",
+          "active": "Yes",
+          "award": null,
+          "pointOfContact": [
+            {
+              "fax": null,
+              "type": "primary",
+              "email": "DibbsBSM@dla.mil",
+              "phone": null,
+              "title": null,
+              "fullName": "Questions regarding this solicitation should be emailed to the buyer listed in block 5 of the solicitation document which can be found under the Additional Information link.\nIf the Additional Information link does not work, please go to https://www.dibbs.bsm.dla.mil/Solicitations/ and type the solicitation number in the Global Search box.\n"
+            }
+          ],
+          "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=fe5832395f1c49609bc920c03a15f46d",
+          "organizationType": "OFFICE",
+          "officeAddress": {
+            "zipcode": "23237",
+            "city": "RICHMOND",
+            "countryCode": "USA",
+            "state": "VA"
+          },
+          "placeOfPerformance": null,
+          "additionalInfoLink": null,
+          "uiLink": "https://sam.gov/workspace/contract/opp/fe5832395f1c49609bc920c03a15f46d/view",
+          "links": [
+            {
+              "rel": "self",
+              "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=fe5832395f1c49609bc920c03a15f46d&limit=1"
+            }
+          ],
+          "resourceLinks": null
+        },
+        {
+          "noticeId": "fca2c2e0d2b742169826b92cf3ec084f",
+          "title": "53--SEAL,STARTER DRIVE",
+          "solicitationNumber": "SPE7L326T4462",
+          "fullParentPathName": "DEPT OF DEFENSE.DEFENSE LOGISTICS AGENCY.DLA LAND.DLA LAND COLUMBUS.DLA LAND AND MARITIME",
+          "fullParentPathCode": "097.97AS.DLA LAND.DLA LAND COLUMBUS.SPE7L3",
+          "postedDate": "2026-01-12",
+          "type": "Combined Synopsis/Solicitation",
+          "baseType": "Combined Synopsis/Solicitation",
+          "archiveType": "autocustom",
+          "archiveDate": "2026-02-22",
+          "typeOfSetAsideDescription": "Total Small Business Set-Aside (FAR 19.5)",
+          "typeOfSetAside": "SBA",
+          "responseDeadLine": "2026-01-23",
+          "naicsCode": "339991",
+          "naicsCodes": [
+            "339991"
+          ],
+          "classificationCode": "53",
+          "active": "Yes",
+          "award": null,
+          "pointOfContact": [
+            {
+              "fax": null,
+              "type": "primary",
+              "email": "DibbsBSM@dla.mil",
+              "phone": null,
+              "title": null,
+              "fullName": "Questions regarding this solicitation should be emailed to the buyer listed in block 5 of the solicitation document which can be found under the Additional Information link.\nIf the Additional Information link does not work, please go to https://www.dibbs.bsm.dla.mil/Solicitations/ and type the solicitation number in the Global Search box.\n"
+            }
+          ],
+          "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=fca2c2e0d2b742169826b92cf3ec084f",
+          "organizationType": "OFFICE",
+          "officeAddress": {
+            "zipcode": "43218-3990",
+            "city": "COLUMBUS",
+            "countryCode": "USA",
+            "state": "OH"
+          },
+          "placeOfPerformance": null,
+          "additionalInfoLink": null,
+          "uiLink": "https://sam.gov/workspace/contract/opp/fca2c2e0d2b742169826b92cf3ec084f/view",
+          "links": [
+            {
+              "rel": "self",
+              "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=fca2c2e0d2b742169826b92cf3ec084f&limit=1"
+            }
+          ],
+          "resourceLinks": null
+        },
+        {
+          "noticeId": "fc930165f648408f8d2f910d0a7cd7f5",
+          "title": "66--AMMETER",
+          "solicitationNumber": "SPE7M126T4428",
+          "fullParentPathName": "DEPT OF DEFENSE.DEFENSE LOGISTICS AGENCY.DLA MARITIME.DLA MARITIME COLUMBUS.DLA LAND AND MARITIME",
+          "fullParentPathCode": "097.97AS.DLA MARITIME.DLA MARITIME COLUMBS.SPE7M1",
+          "postedDate": "2026-01-12",
+          "type": "Combined Synopsis/Solicitation",
+          "baseType": "Combined Synopsis/Solicitation",
+          "archiveType": "autocustom",
+          "archiveDate": "2026-02-22",
+          "typeOfSetAsideDescription": "Total Small Business Set-Aside (FAR 19.5)",
+          "typeOfSetAside": "SBA",
+          "responseDeadLine": "2026-01-23",
+          "naicsCode": "334514",
+          "naicsCodes": [
+            "334514"
+          ],
+          "classificationCode": "66",
+          "active": "Yes",
+          "award": null,
+          "pointOfContact": [
+            {
+              "fax": null,
+              "type": "primary",
+              "email": "DibbsBSM@dla.mil",
+              "phone": null,
+              "title": null,
+              "fullName": "Questions regarding this solicitation should be emailed to the buyer listed in block 5 of the solicitation document which can be found under the Additional Information link.\nIf the Additional Information link does not work, please go to https://www.dibbs.bsm.dla.mil/Solicitations/ and type the solicitation number in the Global Search box.\n"
+            }
+          ],
+          "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=fc930165f648408f8d2f910d0a7cd7f5",
+          "organizationType": "OFFICE",
+          "officeAddress": {
+            "zipcode": "43218-3990",
+            "city": "COLUMBUS",
+            "countryCode": "USA",
+            "state": "OH"
+          },
+          "placeOfPerformance": null,
+          "additionalInfoLink": null,
+          "uiLink": "https://sam.gov/workspace/contract/opp/fc930165f648408f8d2f910d0a7cd7f5/view",
+          "links": [
+            {
+              "rel": "self",
+              "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=fc930165f648408f8d2f910d0a7cd7f5&limit=1"
+            }
+          ],
+          "resourceLinks": null
+        },
+        {
+          "noticeId": "fbce57cc9842454786395870c180b50b",
+          "title": "48--VALVE,BUTTERFLY",
+          "solicitationNumber": "SPE7L126Q0635",
+          "fullParentPathName": "DEPT OF DEFENSE.DEFENSE LOGISTICS AGENCY.DLA LAND.DLA LAND COLUMBUS.DLA LAND AND MARITIME",
+          "fullParentPathCode": "097.97AS.DLA LAND.DLA LAND COLUMBUS.SPE7L1",
+          "postedDate": "2026-01-12",
+          "type": "Combined Synopsis/Solicitation",
+          "baseType": "Combined Synopsis/Solicitation",
+          "archiveType": "autocustom",
+          "archiveDate": "2026-02-21",
+          "typeOfSetAsideDescription": "Total Small Business Set-Aside (FAR 19.5)",
+          "typeOfSetAside": "SBA",
+          "responseDeadLine": "2026-01-22",
+          "naicsCode": "332911",
+          "naicsCodes": [
+            "332911"
+          ],
+          "classificationCode": "48",
+          "active": "Yes",
+          "award": null,
+          "pointOfContact": [
+            {
+              "fax": null,
+              "type": "primary",
+              "email": "DibbsBSM@dla.mil",
+              "phone": null,
+              "title": null,
+              "fullName": "Questions regarding this solicitation should be emailed to the buyer listed in block 5 of the solicitation document which can be found under the Additional Information link.\nIf the Additional Information link does not work, please go to https://www.dibbs.bsm.dla.mil/Solicitations/ and type the solicitation number in the Global Search box.\n"
+            }
+          ],
+          "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=fbce57cc9842454786395870c180b50b",
+          "organizationType": "OFFICE",
+          "officeAddress": {
+            "zipcode": "43218-3990",
+            "city": "COLUMBUS",
+            "countryCode": "USA",
+            "state": "OH"
+          },
+          "placeOfPerformance": null,
+          "additionalInfoLink": null,
+          "uiLink": "https://sam.gov/workspace/contract/opp/fbce57cc9842454786395870c180b50b/view",
+          "links": [
+            {
+              "rel": "self",
+              "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=fbce57cc9842454786395870c180b50b&limit=1"
+            }
+          ],
+          "resourceLinks": null
+        },
+        {
+          "noticeId": "fb548cf5511c4189ba04bc212bd462e0",
+          "title": "CABLE ASSEMBLY,SPEC, , IN REPAIR/MODIFICATION OF",
+          "solicitationNumber": "N0038326QLA60",
+          "fullParentPathName": "DEPT OF DEFENSE.DEPT OF THE NAVY.NAVSUP.NAVSUP WEAPON SYSTEMS SUPPORT.NAVSUP WSS PHILADELPHIA.NAVSUP WEAPON SYSTEMS SUPPORT",
+          "fullParentPathCode": "017.1700.NAVSUP.NAVSUP WSS.NAVSUP WSS PHIL.N00383",
+          "postedDate": "2026-01-12",
+          "type": "Presolicitation",
+          "baseType": "Presolicitation",
+          "archiveType": "auto15",
+          "archiveDate": "2026-02-11",
+          "typeOfSetAsideDescription": null,
+          "typeOfSetAside": null,
+          "responseDeadLine": "2026-01-27T16:00:00-05:00",
+          "naicsCode": null,
+          "naicsCodes": [],
+          "classificationCode": "5995",
+          "active": "Yes",
+          "award": null,
+          "pointOfContact": [
+            {
+              "fax": "",
+              "type": "primary",
+              "email": "patrick.j.horan23.civ@us.navy.mil",
+              "phone": "",
+              "title": null,
+              "fullName": "Patrick Horan"
+            }
+          ],
+          "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=fb548cf5511c4189ba04bc212bd462e0",
+          "organizationType": "OFFICE",
+          "officeAddress": {
+            "zipcode": "19111-5098",
+            "city": "PHILADELPHIA",
+            "countryCode": "USA",
+            "state": "PA"
+          },
+          "placeOfPerformance": {
+            "city": {
+              "code": "65000",
+              "name": "Saint Louis"
+            },
+            "state": {
+              "code": "MO",
+              "name": "Missouri"
+            },
+            "country": {
+              "code": "USA",
+              "name": "UNITED STATES"
+            }
+          },
+          "additionalInfoLink": null,
+          "uiLink": "https://sam.gov/workspace/contract/opp/fb548cf5511c4189ba04bc212bd462e0/view",
+          "links": [
+            {
+              "rel": "self",
+              "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=fb548cf5511c4189ba04bc212bd462e0&limit=1"
+            }
+          ],
+          "resourceLinks": null
+        },
+        {
+          "noticeId": "f9c0c9e4c41c48ad9694dbb149a53a55",
+          "title": "SPEED MAC F100 MULTIPLE AWARD MULTI-YEAR IDIQ",
+          "solicitationNumber": "FA812126R0001DRAFT",
+          "fullParentPathName": "DEPT OF DEFENSE.DEPT OF THE AIR FORCE.AIR FORCE MATERIEL COMMAND.AIR FORCE SUSTAINMENT CENTER.FA8121  AFSC PZAAA",
+          "fullParentPathCode": "057.5700.AFMC.AFSC.FA8121",
+          "postedDate": "2026-01-12",
+          "type": "Presolicitation",
+          "baseType": "Presolicitation",
+          "archiveType": "autocustom",
+          "archiveDate": "2026-01-18",
+          "typeOfSetAsideDescription": null,
+          "typeOfSetAside": null,
+          "responseDeadLine": "2026-01-16T16:00:00-06:00",
+          "naicsCode": "336412",
+          "naicsCodes": [
+            "336412"
+          ],
+          "classificationCode": "2840",
+          "active": "Yes",
+          "award": null,
+          "pointOfContact": [
+            {
+              "fax": "",
+              "type": "primary",
+              "email": "felicia.rogers.1@us.af.mil",
+              "phone": "4057364550",
+              "title": null,
+              "fullName": "Felicia Rogers"
+            },
+            {
+              "fax": "",
+              "type": "secondary",
+              "email": "roxanne.marquez@us.af.mil",
+              "phone": "",
+              "title": null,
+              "fullName": "Roxanne Marquez"
+            }
+          ],
+          "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=f9c0c9e4c41c48ad9694dbb149a53a55",
+          "organizationType": "OFFICE",
+          "officeAddress": {
+            "zipcode": "73145-3303",
+            "city": "TINKER AFB",
+            "countryCode": "USA",
+            "state": "OK"
+          },
+          "placeOfPerformance": {
+            "streetAddress": "",
+            "city": {
+              "code": "0",
+              "name": "S Coffeyville"
+            },
+            "state": {
+              "code": "OK",
+              "name": "Oklahoma"
+            },
+            "zip": "73145",
+            "country": {
+              "code": "USA",
+              "name": "UNITED STATES"
+            }
+          },
+          "additionalInfoLink": null,
+          "uiLink": "https://sam.gov/workspace/contract/opp/f9c0c9e4c41c48ad9694dbb149a53a55/view",
+          "links": [
+            {
+              "rel": "self",
+              "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=f9c0c9e4c41c48ad9694dbb149a53a55&limit=1"
+            }
+          ],
+          "resourceLinks": null
+        },
+        {
+          "noticeId": "f9be92d7a7f04e9e83271b5fdc994d3e",
+          "title": "Power Meters Ultrasound",
+          "solicitationNumber": "W911S226U2425",
+          "fullParentPathName": "DEPT OF DEFENSE.DEPT OF THE ARMY.AMC.ACC.MISSION INSTALLATION CONTRACTING COMMAND.419TH CSB.W6QM MICC-FT DRUM",
+          "fullParentPathCode": "021.2100.AMC.ACC.MICC.419TH CSB.W911S2",
+          "postedDate": "2026-01-12",
+          "type": "Combined Synopsis/Solicitation",
+          "baseType": "Combined Synopsis/Solicitation",
+          "archiveType": "autocustom",
+          "archiveDate": "2027-01-12",
+          "typeOfSetAsideDescription": "Total Small Business Set-Aside (FAR 19.5)",
+          "typeOfSetAside": "SBA",
+          "responseDeadLine": "2026-01-26T15:30:00-07:00",
+          "naicsCode": "334515",
+          "naicsCodes": [
+            "334515"
+          ],
+          "classificationCode": "6625",
+          "active": "Yes",
+          "award": null,
+          "pointOfContact": [
+            {
+              "fax": "",
+              "type": "primary",
+              "email": "jerry.a.mata.civ@health.mil",
+              "phone": "9155691749",
+              "title": null,
+              "fullName": "Jerry Mata"
+            }
+          ],
+          "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=f9be92d7a7f04e9e83271b5fdc994d3e",
+          "organizationType": "OFFICE",
+          "officeAddress": {
+            "zipcode": "13602-5220",
+            "city": "FORT DRUM",
+            "countryCode": "USA",
+            "state": "NY"
+          },
+          "placeOfPerformance": {
+            "streetAddress": "WBAMC, FORT BLISS, TX",
+            "zip": "79918"
+          },
+          "additionalInfoLink": null,
+          "uiLink": "https://sam.gov/workspace/contract/opp/f9be92d7a7f04e9e83271b5fdc994d3e/view",
+          "links": [
+            {
+              "rel": "self",
+              "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=f9be92d7a7f04e9e83271b5fdc994d3e&limit=1"
+            }
+          ],
+          "resourceLinks": null
+        },
+        {
+          "noticeId": "f93a9e42c2714b188d8f48844d54c15f",
+          "title": "59--INSULATION SLEEVING,EL",
+          "solicitationNumber": "SPE4A626U1168",
+          "fullParentPathName": "DEPT OF DEFENSE.DEFENSE LOGISTICS AGENCY.DLA AVIATION.DLA AV RICHMOND.DLA AVIATION",
+          "fullParentPathCode": "097.97AS.DLA AVIATION.DLA AV RICHMOND.SPE4A6",
+          "postedDate": "2026-01-12",
+          "type": "Combined Synopsis/Solicitation",
+          "baseType": "Combined Synopsis/Solicitation",
+          "archiveType": "autocustom",
+          "archiveDate": "2026-02-26",
+          "typeOfSetAsideDescription": null,
+          "typeOfSetAside": null,
+          "responseDeadLine": "2026-01-27",
+          "naicsCode": "335999",
+          "naicsCodes": [
+            "335999"
+          ],
+          "classificationCode": "59",
+          "active": "Yes",
+          "award": null,
+          "pointOfContact": [
+            {
+              "fax": null,
+              "type": "primary",
+              "email": "DibbsBSM@dla.mil",
+              "phone": null,
+              "title": null,
+              "fullName": "Questions regarding this solicitation should be emailed to the buyer listed in block 5 of the solicitation document which can be found under the Additional Information link.\nIf the Additional Information link does not work, please go to https://www.dibbs.bsm.dla.mil/Solicitations/ and type the solicitation number in the Global Search box.\n"
+            }
+          ],
+          "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=f93a9e42c2714b188d8f48844d54c15f",
+          "organizationType": "OFFICE",
+          "officeAddress": {
+            "zipcode": "23237",
+            "city": "RICHMOND",
+            "countryCode": "USA",
+            "state": "VA"
+          },
+          "placeOfPerformance": null,
+          "additionalInfoLink": null,
+          "uiLink": "https://sam.gov/workspace/contract/opp/f93a9e42c2714b188d8f48844d54c15f/view",
+          "links": [
+            {
+              "rel": "self",
+              "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=f93a9e42c2714b188d8f48844d54c15f&limit=1"
+            }
+          ],
+          "resourceLinks": null
+        }
+      ]
+    },
+    "cachedAt": "2026-01-12T18:49:59.686Z"
+  },
+  {
+    "key": "web application development|||||10|0",
+    "data": {
+      "totalRecords": 14976,
+      "limit": 10,
+      "offset": 0,
+      "opportunitiesData": [
+        {
+          "noticeId": "feeb5740efe2400498b362b7244ed1d8",
+          "title": "SCBA Regulator Assembly",
+          "solicitationNumber": "W911S226U2395",
+          "fullParentPathName": "DEPT OF DEFENSE.DEPT OF THE ARMY.AMC.ACC.MISSION INSTALLATION CONTRACTING COMMAND.419TH CSB.W6QM MICC-FT DRUM",
+          "fullParentPathCode": "021.2100.AMC.ACC.MICC.419TH CSB.W911S2",
+          "postedDate": "2026-01-12",
+          "type": "Combined Synopsis/Solicitation",
+          "baseType": "Combined Synopsis/Solicitation",
+          "archiveType": "autocustom",
+          "archiveDate": "2027-01-12",
+          "typeOfSetAsideDescription": "Total Small Business Set-Aside (FAR 19.5)",
+          "typeOfSetAside": "SBA",
+          "responseDeadLine": "2026-01-15T08:55:00-04:00",
+          "naicsCode": "339999",
+          "naicsCodes": [
+            "339999"
+          ],
+          "classificationCode": "4210",
+          "active": "Yes",
+          "award": null,
+          "pointOfContact": [
+            {
+              "fax": "",
+              "type": "primary",
+              "email": "steven.c.larue.civ@army.mil",
+              "phone": "3157725901",
+              "title": null,
+              "fullName": "Steven Larue"
+            }
+          ],
+          "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=feeb5740efe2400498b362b7244ed1d8",
+          "organizationType": "OFFICE",
+          "officeAddress": {
+            "zipcode": "13602-5220",
+            "city": "FORT DRUM",
+            "countryCode": "USA",
+            "state": "NY"
+          },
+          "placeOfPerformance": {
+            "streetAddress": "Fort Drum",
+            "zip": "13602"
+          },
+          "additionalInfoLink": null,
+          "uiLink": "https://sam.gov/workspace/contract/opp/feeb5740efe2400498b362b7244ed1d8/view",
+          "links": [
+            {
+              "rel": "self",
+              "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=feeb5740efe2400498b362b7244ed1d8&limit=1"
+            }
+          ],
+          "resourceLinks": null
+        },
+        {
+          "noticeId": "feae6772e7e04e88a778f124d1e2a638",
+          "title": "59--CABLE ASSEMBLY,SPEC",
+          "solicitationNumber": "SPE4A626U1176",
+          "fullParentPathName": "DEPT OF DEFENSE.DEFENSE LOGISTICS AGENCY.DLA AVIATION.DLA AV RICHMOND.DLA AVIATION",
+          "fullParentPathCode": "097.97AS.DLA AVIATION.DLA AV RICHMOND.SPE4A6",
+          "postedDate": "2026-01-12",
+          "type": "Combined Synopsis/Solicitation",
+          "baseType": "Combined Synopsis/Solicitation",
+          "archiveType": "autocustom",
+          "archiveDate": "2026-02-26",
+          "typeOfSetAsideDescription": "Total Small Business Set-Aside (FAR 19.5)",
+          "typeOfSetAside": "SBA",
+          "responseDeadLine": "2026-01-27",
+          "naicsCode": "335931",
+          "naicsCodes": [
+            "335931"
+          ],
+          "classificationCode": "59",
+          "active": "Yes",
+          "award": null,
+          "pointOfContact": [
+            {
+              "fax": null,
+              "type": "primary",
+              "email": "DibbsBSM@dla.mil",
+              "phone": null,
+              "title": null,
+              "fullName": "Questions regarding this solicitation should be emailed to the buyer listed in block 5 of the solicitation document which can be found under the Additional Information link.\nIf the Additional Information link does not work, please go to https://www.dibbs.bsm.dla.mil/Solicitations/ and type the solicitation number in the Global Search box.\n"
+            }
+          ],
+          "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=feae6772e7e04e88a778f124d1e2a638",
+          "organizationType": "OFFICE",
+          "officeAddress": {
+            "zipcode": "23237",
+            "city": "RICHMOND",
+            "countryCode": "USA",
+            "state": "VA"
+          },
+          "placeOfPerformance": null,
+          "additionalInfoLink": null,
+          "uiLink": "https://sam.gov/workspace/contract/opp/feae6772e7e04e88a778f124d1e2a638/view",
+          "links": [
+            {
+              "rel": "self",
+              "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=feae6772e7e04e88a778f124d1e2a638&limit=1"
+            }
+          ],
+          "resourceLinks": null
+        },
+        {
+          "noticeId": "fe5832395f1c49609bc920c03a15f46d",
+          "title": "31--BEARING,SLEEVE",
+          "solicitationNumber": "SPE4A626T468M",
+          "fullParentPathName": "DEPT OF DEFENSE.DEFENSE LOGISTICS AGENCY.DLA AVIATION.DLA AV RICHMOND.DLA AVIATION",
+          "fullParentPathCode": "097.97AS.DLA AVIATION.DLA AV RICHMOND.SPE4A6",
+          "postedDate": "2026-01-12",
+          "type": "Combined Synopsis/Solicitation",
+          "baseType": "Combined Synopsis/Solicitation",
+          "archiveType": "autocustom",
+          "archiveDate": "2026-02-19",
+          "typeOfSetAsideDescription": "Total Small Business Set-Aside (FAR 19.5)",
+          "typeOfSetAside": "SBA",
+          "responseDeadLine": "2026-01-20",
+          "naicsCode": "332991",
+          "naicsCodes": [
+            "332991"
+          ],
+          "classificationCode": "31",
+          "active": "Yes",
+          "award": null,
+          "pointOfContact": [
+            {
+              "fax": null,
+              "type": "primary",
+              "email": "DibbsBSM@dla.mil",
+              "phone": null,
+              "title": null,
+              "fullName": "Questions regarding this solicitation should be emailed to the buyer listed in block 5 of the solicitation document which can be found under the Additional Information link.\nIf the Additional Information link does not work, please go to https://www.dibbs.bsm.dla.mil/Solicitations/ and type the solicitation number in the Global Search box.\n"
+            }
+          ],
+          "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=fe5832395f1c49609bc920c03a15f46d",
+          "organizationType": "OFFICE",
+          "officeAddress": {
+            "zipcode": "23237",
+            "city": "RICHMOND",
+            "countryCode": "USA",
+            "state": "VA"
+          },
+          "placeOfPerformance": null,
+          "additionalInfoLink": null,
+          "uiLink": "https://sam.gov/workspace/contract/opp/fe5832395f1c49609bc920c03a15f46d/view",
+          "links": [
+            {
+              "rel": "self",
+              "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=fe5832395f1c49609bc920c03a15f46d&limit=1"
+            }
+          ],
+          "resourceLinks": null
+        },
+        {
+          "noticeId": "fca2c2e0d2b742169826b92cf3ec084f",
+          "title": "53--SEAL,STARTER DRIVE",
+          "solicitationNumber": "SPE7L326T4462",
+          "fullParentPathName": "DEPT OF DEFENSE.DEFENSE LOGISTICS AGENCY.DLA LAND.DLA LAND COLUMBUS.DLA LAND AND MARITIME",
+          "fullParentPathCode": "097.97AS.DLA LAND.DLA LAND COLUMBUS.SPE7L3",
+          "postedDate": "2026-01-12",
+          "type": "Combined Synopsis/Solicitation",
+          "baseType": "Combined Synopsis/Solicitation",
+          "archiveType": "autocustom",
+          "archiveDate": "2026-02-22",
+          "typeOfSetAsideDescription": "Total Small Business Set-Aside (FAR 19.5)",
+          "typeOfSetAside": "SBA",
+          "responseDeadLine": "2026-01-23",
+          "naicsCode": "339991",
+          "naicsCodes": [
+            "339991"
+          ],
+          "classificationCode": "53",
+          "active": "Yes",
+          "award": null,
+          "pointOfContact": [
+            {
+              "fax": null,
+              "type": "primary",
+              "email": "DibbsBSM@dla.mil",
+              "phone": null,
+              "title": null,
+              "fullName": "Questions regarding this solicitation should be emailed to the buyer listed in block 5 of the solicitation document which can be found under the Additional Information link.\nIf the Additional Information link does not work, please go to https://www.dibbs.bsm.dla.mil/Solicitations/ and type the solicitation number in the Global Search box.\n"
+            }
+          ],
+          "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=fca2c2e0d2b742169826b92cf3ec084f",
+          "organizationType": "OFFICE",
+          "officeAddress": {
+            "zipcode": "43218-3990",
+            "city": "COLUMBUS",
+            "countryCode": "USA",
+            "state": "OH"
+          },
+          "placeOfPerformance": null,
+          "additionalInfoLink": null,
+          "uiLink": "https://sam.gov/workspace/contract/opp/fca2c2e0d2b742169826b92cf3ec084f/view",
+          "links": [
+            {
+              "rel": "self",
+              "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=fca2c2e0d2b742169826b92cf3ec084f&limit=1"
+            }
+          ],
+          "resourceLinks": null
+        },
+        {
+          "noticeId": "fc930165f648408f8d2f910d0a7cd7f5",
+          "title": "66--AMMETER",
+          "solicitationNumber": "SPE7M126T4428",
+          "fullParentPathName": "DEPT OF DEFENSE.DEFENSE LOGISTICS AGENCY.DLA MARITIME.DLA MARITIME COLUMBUS.DLA LAND AND MARITIME",
+          "fullParentPathCode": "097.97AS.DLA MARITIME.DLA MARITIME COLUMBS.SPE7M1",
+          "postedDate": "2026-01-12",
+          "type": "Combined Synopsis/Solicitation",
+          "baseType": "Combined Synopsis/Solicitation",
+          "archiveType": "autocustom",
+          "archiveDate": "2026-02-22",
+          "typeOfSetAsideDescription": "Total Small Business Set-Aside (FAR 19.5)",
+          "typeOfSetAside": "SBA",
+          "responseDeadLine": "2026-01-23",
+          "naicsCode": "334514",
+          "naicsCodes": [
+            "334514"
+          ],
+          "classificationCode": "66",
+          "active": "Yes",
+          "award": null,
+          "pointOfContact": [
+            {
+              "fax": null,
+              "type": "primary",
+              "email": "DibbsBSM@dla.mil",
+              "phone": null,
+              "title": null,
+              "fullName": "Questions regarding this solicitation should be emailed to the buyer listed in block 5 of the solicitation document which can be found under the Additional Information link.\nIf the Additional Information link does not work, please go to https://www.dibbs.bsm.dla.mil/Solicitations/ and type the solicitation number in the Global Search box.\n"
+            }
+          ],
+          "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=fc930165f648408f8d2f910d0a7cd7f5",
+          "organizationType": "OFFICE",
+          "officeAddress": {
+            "zipcode": "43218-3990",
+            "city": "COLUMBUS",
+            "countryCode": "USA",
+            "state": "OH"
+          },
+          "placeOfPerformance": null,
+          "additionalInfoLink": null,
+          "uiLink": "https://sam.gov/workspace/contract/opp/fc930165f648408f8d2f910d0a7cd7f5/view",
+          "links": [
+            {
+              "rel": "self",
+              "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=fc930165f648408f8d2f910d0a7cd7f5&limit=1"
+            }
+          ],
+          "resourceLinks": null
+        },
+        {
+          "noticeId": "fbce57cc9842454786395870c180b50b",
+          "title": "48--VALVE,BUTTERFLY",
+          "solicitationNumber": "SPE7L126Q0635",
+          "fullParentPathName": "DEPT OF DEFENSE.DEFENSE LOGISTICS AGENCY.DLA LAND.DLA LAND COLUMBUS.DLA LAND AND MARITIME",
+          "fullParentPathCode": "097.97AS.DLA LAND.DLA LAND COLUMBUS.SPE7L1",
+          "postedDate": "2026-01-12",
+          "type": "Combined Synopsis/Solicitation",
+          "baseType": "Combined Synopsis/Solicitation",
+          "archiveType": "autocustom",
+          "archiveDate": "2026-02-21",
+          "typeOfSetAsideDescription": "Total Small Business Set-Aside (FAR 19.5)",
+          "typeOfSetAside": "SBA",
+          "responseDeadLine": "2026-01-22",
+          "naicsCode": "332911",
+          "naicsCodes": [
+            "332911"
+          ],
+          "classificationCode": "48",
+          "active": "Yes",
+          "award": null,
+          "pointOfContact": [
+            {
+              "fax": null,
+              "type": "primary",
+              "email": "DibbsBSM@dla.mil",
+              "phone": null,
+              "title": null,
+              "fullName": "Questions regarding this solicitation should be emailed to the buyer listed in block 5 of the solicitation document which can be found under the Additional Information link.\nIf the Additional Information link does not work, please go to https://www.dibbs.bsm.dla.mil/Solicitations/ and type the solicitation number in the Global Search box.\n"
+            }
+          ],
+          "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=fbce57cc9842454786395870c180b50b",
+          "organizationType": "OFFICE",
+          "officeAddress": {
+            "zipcode": "43218-3990",
+            "city": "COLUMBUS",
+            "countryCode": "USA",
+            "state": "OH"
+          },
+          "placeOfPerformance": null,
+          "additionalInfoLink": null,
+          "uiLink": "https://sam.gov/workspace/contract/opp/fbce57cc9842454786395870c180b50b/view",
+          "links": [
+            {
+              "rel": "self",
+              "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=fbce57cc9842454786395870c180b50b&limit=1"
+            }
+          ],
+          "resourceLinks": null
+        },
+        {
+          "noticeId": "fb548cf5511c4189ba04bc212bd462e0",
+          "title": "CABLE ASSEMBLY,SPEC, , IN REPAIR/MODIFICATION OF",
+          "solicitationNumber": "N0038326QLA60",
+          "fullParentPathName": "DEPT OF DEFENSE.DEPT OF THE NAVY.NAVSUP.NAVSUP WEAPON SYSTEMS SUPPORT.NAVSUP WSS PHILADELPHIA.NAVSUP WEAPON SYSTEMS SUPPORT",
+          "fullParentPathCode": "017.1700.NAVSUP.NAVSUP WSS.NAVSUP WSS PHIL.N00383",
+          "postedDate": "2026-01-12",
+          "type": "Presolicitation",
+          "baseType": "Presolicitation",
+          "archiveType": "auto15",
+          "archiveDate": "2026-02-11",
+          "typeOfSetAsideDescription": null,
+          "typeOfSetAside": null,
+          "responseDeadLine": "2026-01-27T16:00:00-05:00",
+          "naicsCode": null,
+          "naicsCodes": [],
+          "classificationCode": "5995",
+          "active": "Yes",
+          "award": null,
+          "pointOfContact": [
+            {
+              "fax": "",
+              "type": "primary",
+              "email": "patrick.j.horan23.civ@us.navy.mil",
+              "phone": "",
+              "title": null,
+              "fullName": "Patrick Horan"
+            }
+          ],
+          "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=fb548cf5511c4189ba04bc212bd462e0",
+          "organizationType": "OFFICE",
+          "officeAddress": {
+            "zipcode": "19111-5098",
+            "city": "PHILADELPHIA",
+            "countryCode": "USA",
+            "state": "PA"
+          },
+          "placeOfPerformance": {
+            "city": {
+              "code": "65000",
+              "name": "Saint Louis"
+            },
+            "state": {
+              "code": "MO",
+              "name": "Missouri"
+            },
+            "country": {
+              "code": "USA",
+              "name": "UNITED STATES"
+            }
+          },
+          "additionalInfoLink": null,
+          "uiLink": "https://sam.gov/workspace/contract/opp/fb548cf5511c4189ba04bc212bd462e0/view",
+          "links": [
+            {
+              "rel": "self",
+              "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=fb548cf5511c4189ba04bc212bd462e0&limit=1"
+            }
+          ],
+          "resourceLinks": null
+        },
+        {
+          "noticeId": "f9c0c9e4c41c48ad9694dbb149a53a55",
+          "title": "SPEED MAC F100 MULTIPLE AWARD MULTI-YEAR IDIQ",
+          "solicitationNumber": "FA812126R0001DRAFT",
+          "fullParentPathName": "DEPT OF DEFENSE.DEPT OF THE AIR FORCE.AIR FORCE MATERIEL COMMAND.AIR FORCE SUSTAINMENT CENTER.FA8121  AFSC PZAAA",
+          "fullParentPathCode": "057.5700.AFMC.AFSC.FA8121",
+          "postedDate": "2026-01-12",
+          "type": "Presolicitation",
+          "baseType": "Presolicitation",
+          "archiveType": "autocustom",
+          "archiveDate": "2026-01-18",
+          "typeOfSetAsideDescription": null,
+          "typeOfSetAside": null,
+          "responseDeadLine": "2026-01-16T16:00:00-06:00",
+          "naicsCode": "336412",
+          "naicsCodes": [
+            "336412"
+          ],
+          "classificationCode": "2840",
+          "active": "Yes",
+          "award": null,
+          "pointOfContact": [
+            {
+              "fax": "",
+              "type": "primary",
+              "email": "felicia.rogers.1@us.af.mil",
+              "phone": "4057364550",
+              "title": null,
+              "fullName": "Felicia Rogers"
+            },
+            {
+              "fax": "",
+              "type": "secondary",
+              "email": "roxanne.marquez@us.af.mil",
+              "phone": "",
+              "title": null,
+              "fullName": "Roxanne Marquez"
+            }
+          ],
+          "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=f9c0c9e4c41c48ad9694dbb149a53a55",
+          "organizationType": "OFFICE",
+          "officeAddress": {
+            "zipcode": "73145-3303",
+            "city": "TINKER AFB",
+            "countryCode": "USA",
+            "state": "OK"
+          },
+          "placeOfPerformance": {
+            "streetAddress": "",
+            "city": {
+              "code": "0",
+              "name": "S Coffeyville"
+            },
+            "state": {
+              "code": "OK",
+              "name": "Oklahoma"
+            },
+            "zip": "73145",
+            "country": {
+              "code": "USA",
+              "name": "UNITED STATES"
+            }
+          },
+          "additionalInfoLink": null,
+          "uiLink": "https://sam.gov/workspace/contract/opp/f9c0c9e4c41c48ad9694dbb149a53a55/view",
+          "links": [
+            {
+              "rel": "self",
+              "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=f9c0c9e4c41c48ad9694dbb149a53a55&limit=1"
+            }
+          ],
+          "resourceLinks": null
+        },
+        {
+          "noticeId": "f9be92d7a7f04e9e83271b5fdc994d3e",
+          "title": "Power Meters Ultrasound",
+          "solicitationNumber": "W911S226U2425",
+          "fullParentPathName": "DEPT OF DEFENSE.DEPT OF THE ARMY.AMC.ACC.MISSION INSTALLATION CONTRACTING COMMAND.419TH CSB.W6QM MICC-FT DRUM",
+          "fullParentPathCode": "021.2100.AMC.ACC.MICC.419TH CSB.W911S2",
+          "postedDate": "2026-01-12",
+          "type": "Combined Synopsis/Solicitation",
+          "baseType": "Combined Synopsis/Solicitation",
+          "archiveType": "autocustom",
+          "archiveDate": "2027-01-12",
+          "typeOfSetAsideDescription": "Total Small Business Set-Aside (FAR 19.5)",
+          "typeOfSetAside": "SBA",
+          "responseDeadLine": "2026-01-26T15:30:00-07:00",
+          "naicsCode": "334515",
+          "naicsCodes": [
+            "334515"
+          ],
+          "classificationCode": "6625",
+          "active": "Yes",
+          "award": null,
+          "pointOfContact": [
+            {
+              "fax": "",
+              "type": "primary",
+              "email": "jerry.a.mata.civ@health.mil",
+              "phone": "9155691749",
+              "title": null,
+              "fullName": "Jerry Mata"
+            }
+          ],
+          "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=f9be92d7a7f04e9e83271b5fdc994d3e",
+          "organizationType": "OFFICE",
+          "officeAddress": {
+            "zipcode": "13602-5220",
+            "city": "FORT DRUM",
+            "countryCode": "USA",
+            "state": "NY"
+          },
+          "placeOfPerformance": {
+            "streetAddress": "WBAMC, FORT BLISS, TX",
+            "zip": "79918"
+          },
+          "additionalInfoLink": null,
+          "uiLink": "https://sam.gov/workspace/contract/opp/f9be92d7a7f04e9e83271b5fdc994d3e/view",
+          "links": [
+            {
+              "rel": "self",
+              "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=f9be92d7a7f04e9e83271b5fdc994d3e&limit=1"
+            }
+          ],
+          "resourceLinks": null
+        },
+        {
+          "noticeId": "f93a9e42c2714b188d8f48844d54c15f",
+          "title": "59--INSULATION SLEEVING,EL",
+          "solicitationNumber": "SPE4A626U1168",
+          "fullParentPathName": "DEPT OF DEFENSE.DEFENSE LOGISTICS AGENCY.DLA AVIATION.DLA AV RICHMOND.DLA AVIATION",
+          "fullParentPathCode": "097.97AS.DLA AVIATION.DLA AV RICHMOND.SPE4A6",
+          "postedDate": "2026-01-12",
+          "type": "Combined Synopsis/Solicitation",
+          "baseType": "Combined Synopsis/Solicitation",
+          "archiveType": "autocustom",
+          "archiveDate": "2026-02-26",
+          "typeOfSetAsideDescription": null,
+          "typeOfSetAside": null,
+          "responseDeadLine": "2026-01-27",
+          "naicsCode": "335999",
+          "naicsCodes": [
+            "335999"
+          ],
+          "classificationCode": "59",
+          "active": "Yes",
+          "award": null,
+          "pointOfContact": [
+            {
+              "fax": null,
+              "type": "primary",
+              "email": "DibbsBSM@dla.mil",
+              "phone": null,
+              "title": null,
+              "fullName": "Questions regarding this solicitation should be emailed to the buyer listed in block 5 of the solicitation document which can be found under the Additional Information link.\nIf the Additional Information link does not work, please go to https://www.dibbs.bsm.dla.mil/Solicitations/ and type the solicitation number in the Global Search box.\n"
+            }
+          ],
+          "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=f93a9e42c2714b188d8f48844d54c15f",
+          "organizationType": "OFFICE",
+          "officeAddress": {
+            "zipcode": "23237",
+            "city": "RICHMOND",
+            "countryCode": "USA",
+            "state": "VA"
+          },
+          "placeOfPerformance": null,
+          "additionalInfoLink": null,
+          "uiLink": "https://sam.gov/workspace/contract/opp/f93a9e42c2714b188d8f48844d54c15f/view",
+          "links": [
+            {
+              "rel": "self",
+              "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=f93a9e42c2714b188d8f48844d54c15f&limit=1"
+            }
+          ],
+          "resourceLinks": null
+        }
+      ]
+    },
+    "cachedAt": "2026-01-12T18:56:52.136Z"
+  },
+  {
+    "key": "IT modernization|||||10|0",
+    "data": {
+      "totalRecords": 14976,
+      "limit": 10,
+      "offset": 0,
+      "opportunitiesData": [
+        {
+          "noticeId": "feeb5740efe2400498b362b7244ed1d8",
+          "title": "SCBA Regulator Assembly",
+          "solicitationNumber": "W911S226U2395",
+          "fullParentPathName": "DEPT OF DEFENSE.DEPT OF THE ARMY.AMC.ACC.MISSION INSTALLATION CONTRACTING COMMAND.419TH CSB.W6QM MICC-FT DRUM",
+          "fullParentPathCode": "021.2100.AMC.ACC.MICC.419TH CSB.W911S2",
+          "postedDate": "2026-01-12",
+          "type": "Combined Synopsis/Solicitation",
+          "baseType": "Combined Synopsis/Solicitation",
+          "archiveType": "autocustom",
+          "archiveDate": "2027-01-12",
+          "typeOfSetAsideDescription": "Total Small Business Set-Aside (FAR 19.5)",
+          "typeOfSetAside": "SBA",
+          "responseDeadLine": "2026-01-15T08:55:00-04:00",
+          "naicsCode": "339999",
+          "naicsCodes": [
+            "339999"
+          ],
+          "classificationCode": "4210",
+          "active": "Yes",
+          "award": null,
+          "pointOfContact": [
+            {
+              "fax": "",
+              "type": "primary",
+              "email": "steven.c.larue.civ@army.mil",
+              "phone": "3157725901",
+              "title": null,
+              "fullName": "Steven Larue"
+            }
+          ],
+          "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=feeb5740efe2400498b362b7244ed1d8",
+          "organizationType": "OFFICE",
+          "officeAddress": {
+            "zipcode": "13602-5220",
+            "city": "FORT DRUM",
+            "countryCode": "USA",
+            "state": "NY"
+          },
+          "placeOfPerformance": {
+            "streetAddress": "Fort Drum",
+            "zip": "13602"
+          },
+          "additionalInfoLink": null,
+          "uiLink": "https://sam.gov/workspace/contract/opp/feeb5740efe2400498b362b7244ed1d8/view",
+          "links": [
+            {
+              "rel": "self",
+              "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=feeb5740efe2400498b362b7244ed1d8&limit=1"
+            }
+          ],
+          "resourceLinks": null
+        },
+        {
+          "noticeId": "feae6772e7e04e88a778f124d1e2a638",
+          "title": "59--CABLE ASSEMBLY,SPEC",
+          "solicitationNumber": "SPE4A626U1176",
+          "fullParentPathName": "DEPT OF DEFENSE.DEFENSE LOGISTICS AGENCY.DLA AVIATION.DLA AV RICHMOND.DLA AVIATION",
+          "fullParentPathCode": "097.97AS.DLA AVIATION.DLA AV RICHMOND.SPE4A6",
+          "postedDate": "2026-01-12",
+          "type": "Combined Synopsis/Solicitation",
+          "baseType": "Combined Synopsis/Solicitation",
+          "archiveType": "autocustom",
+          "archiveDate": "2026-02-26",
+          "typeOfSetAsideDescription": "Total Small Business Set-Aside (FAR 19.5)",
+          "typeOfSetAside": "SBA",
+          "responseDeadLine": "2026-01-27",
+          "naicsCode": "335931",
+          "naicsCodes": [
+            "335931"
+          ],
+          "classificationCode": "59",
+          "active": "Yes",
+          "award": null,
+          "pointOfContact": [
+            {
+              "fax": null,
+              "type": "primary",
+              "email": "DibbsBSM@dla.mil",
+              "phone": null,
+              "title": null,
+              "fullName": "Questions regarding this solicitation should be emailed to the buyer listed in block 5 of the solicitation document which can be found under the Additional Information link.\nIf the Additional Information link does not work, please go to https://www.dibbs.bsm.dla.mil/Solicitations/ and type the solicitation number in the Global Search box.\n"
+            }
+          ],
+          "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=feae6772e7e04e88a778f124d1e2a638",
+          "organizationType": "OFFICE",
+          "officeAddress": {
+            "zipcode": "23237",
+            "city": "RICHMOND",
+            "countryCode": "USA",
+            "state": "VA"
+          },
+          "placeOfPerformance": null,
+          "additionalInfoLink": null,
+          "uiLink": "https://sam.gov/workspace/contract/opp/feae6772e7e04e88a778f124d1e2a638/view",
+          "links": [
+            {
+              "rel": "self",
+              "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=feae6772e7e04e88a778f124d1e2a638&limit=1"
+            }
+          ],
+          "resourceLinks": null
+        },
+        {
+          "noticeId": "fe5832395f1c49609bc920c03a15f46d",
+          "title": "31--BEARING,SLEEVE",
+          "solicitationNumber": "SPE4A626T468M",
+          "fullParentPathName": "DEPT OF DEFENSE.DEFENSE LOGISTICS AGENCY.DLA AVIATION.DLA AV RICHMOND.DLA AVIATION",
+          "fullParentPathCode": "097.97AS.DLA AVIATION.DLA AV RICHMOND.SPE4A6",
+          "postedDate": "2026-01-12",
+          "type": "Combined Synopsis/Solicitation",
+          "baseType": "Combined Synopsis/Solicitation",
+          "archiveType": "autocustom",
+          "archiveDate": "2026-02-19",
+          "typeOfSetAsideDescription": "Total Small Business Set-Aside (FAR 19.5)",
+          "typeOfSetAside": "SBA",
+          "responseDeadLine": "2026-01-20",
+          "naicsCode": "332991",
+          "naicsCodes": [
+            "332991"
+          ],
+          "classificationCode": "31",
+          "active": "Yes",
+          "award": null,
+          "pointOfContact": [
+            {
+              "fax": null,
+              "type": "primary",
+              "email": "DibbsBSM@dla.mil",
+              "phone": null,
+              "title": null,
+              "fullName": "Questions regarding this solicitation should be emailed to the buyer listed in block 5 of the solicitation document which can be found under the Additional Information link.\nIf the Additional Information link does not work, please go to https://www.dibbs.bsm.dla.mil/Solicitations/ and type the solicitation number in the Global Search box.\n"
+            }
+          ],
+          "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=fe5832395f1c49609bc920c03a15f46d",
+          "organizationType": "OFFICE",
+          "officeAddress": {
+            "zipcode": "23237",
+            "city": "RICHMOND",
+            "countryCode": "USA",
+            "state": "VA"
+          },
+          "placeOfPerformance": null,
+          "additionalInfoLink": null,
+          "uiLink": "https://sam.gov/workspace/contract/opp/fe5832395f1c49609bc920c03a15f46d/view",
+          "links": [
+            {
+              "rel": "self",
+              "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=fe5832395f1c49609bc920c03a15f46d&limit=1"
+            }
+          ],
+          "resourceLinks": null
+        },
+        {
+          "noticeId": "fca2c2e0d2b742169826b92cf3ec084f",
+          "title": "53--SEAL,STARTER DRIVE",
+          "solicitationNumber": "SPE7L326T4462",
+          "fullParentPathName": "DEPT OF DEFENSE.DEFENSE LOGISTICS AGENCY.DLA LAND.DLA LAND COLUMBUS.DLA LAND AND MARITIME",
+          "fullParentPathCode": "097.97AS.DLA LAND.DLA LAND COLUMBUS.SPE7L3",
+          "postedDate": "2026-01-12",
+          "type": "Combined Synopsis/Solicitation",
+          "baseType": "Combined Synopsis/Solicitation",
+          "archiveType": "autocustom",
+          "archiveDate": "2026-02-22",
+          "typeOfSetAsideDescription": "Total Small Business Set-Aside (FAR 19.5)",
+          "typeOfSetAside": "SBA",
+          "responseDeadLine": "2026-01-23",
+          "naicsCode": "339991",
+          "naicsCodes": [
+            "339991"
+          ],
+          "classificationCode": "53",
+          "active": "Yes",
+          "award": null,
+          "pointOfContact": [
+            {
+              "fax": null,
+              "type": "primary",
+              "email": "DibbsBSM@dla.mil",
+              "phone": null,
+              "title": null,
+              "fullName": "Questions regarding this solicitation should be emailed to the buyer listed in block 5 of the solicitation document which can be found under the Additional Information link.\nIf the Additional Information link does not work, please go to https://www.dibbs.bsm.dla.mil/Solicitations/ and type the solicitation number in the Global Search box.\n"
+            }
+          ],
+          "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=fca2c2e0d2b742169826b92cf3ec084f",
+          "organizationType": "OFFICE",
+          "officeAddress": {
+            "zipcode": "43218-3990",
+            "city": "COLUMBUS",
+            "countryCode": "USA",
+            "state": "OH"
+          },
+          "placeOfPerformance": null,
+          "additionalInfoLink": null,
+          "uiLink": "https://sam.gov/workspace/contract/opp/fca2c2e0d2b742169826b92cf3ec084f/view",
+          "links": [
+            {
+              "rel": "self",
+              "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=fca2c2e0d2b742169826b92cf3ec084f&limit=1"
+            }
+          ],
+          "resourceLinks": null
+        },
+        {
+          "noticeId": "fc930165f648408f8d2f910d0a7cd7f5",
+          "title": "66--AMMETER",
+          "solicitationNumber": "SPE7M126T4428",
+          "fullParentPathName": "DEPT OF DEFENSE.DEFENSE LOGISTICS AGENCY.DLA MARITIME.DLA MARITIME COLUMBUS.DLA LAND AND MARITIME",
+          "fullParentPathCode": "097.97AS.DLA MARITIME.DLA MARITIME COLUMBS.SPE7M1",
+          "postedDate": "2026-01-12",
+          "type": "Combined Synopsis/Solicitation",
+          "baseType": "Combined Synopsis/Solicitation",
+          "archiveType": "autocustom",
+          "archiveDate": "2026-02-22",
+          "typeOfSetAsideDescription": "Total Small Business Set-Aside (FAR 19.5)",
+          "typeOfSetAside": "SBA",
+          "responseDeadLine": "2026-01-23",
+          "naicsCode": "334514",
+          "naicsCodes": [
+            "334514"
+          ],
+          "classificationCode": "66",
+          "active": "Yes",
+          "award": null,
+          "pointOfContact": [
+            {
+              "fax": null,
+              "type": "primary",
+              "email": "DibbsBSM@dla.mil",
+              "phone": null,
+              "title": null,
+              "fullName": "Questions regarding this solicitation should be emailed to the buyer listed in block 5 of the solicitation document which can be found under the Additional Information link.\nIf the Additional Information link does not work, please go to https://www.dibbs.bsm.dla.mil/Solicitations/ and type the solicitation number in the Global Search box.\n"
+            }
+          ],
+          "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=fc930165f648408f8d2f910d0a7cd7f5",
+          "organizationType": "OFFICE",
+          "officeAddress": {
+            "zipcode": "43218-3990",
+            "city": "COLUMBUS",
+            "countryCode": "USA",
+            "state": "OH"
+          },
+          "placeOfPerformance": null,
+          "additionalInfoLink": null,
+          "uiLink": "https://sam.gov/workspace/contract/opp/fc930165f648408f8d2f910d0a7cd7f5/view",
+          "links": [
+            {
+              "rel": "self",
+              "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=fc930165f648408f8d2f910d0a7cd7f5&limit=1"
+            }
+          ],
+          "resourceLinks": null
+        },
+        {
+          "noticeId": "fbce57cc9842454786395870c180b50b",
+          "title": "48--VALVE,BUTTERFLY",
+          "solicitationNumber": "SPE7L126Q0635",
+          "fullParentPathName": "DEPT OF DEFENSE.DEFENSE LOGISTICS AGENCY.DLA LAND.DLA LAND COLUMBUS.DLA LAND AND MARITIME",
+          "fullParentPathCode": "097.97AS.DLA LAND.DLA LAND COLUMBUS.SPE7L1",
+          "postedDate": "2026-01-12",
+          "type": "Combined Synopsis/Solicitation",
+          "baseType": "Combined Synopsis/Solicitation",
+          "archiveType": "autocustom",
+          "archiveDate": "2026-02-21",
+          "typeOfSetAsideDescription": "Total Small Business Set-Aside (FAR 19.5)",
+          "typeOfSetAside": "SBA",
+          "responseDeadLine": "2026-01-22",
+          "naicsCode": "332911",
+          "naicsCodes": [
+            "332911"
+          ],
+          "classificationCode": "48",
+          "active": "Yes",
+          "award": null,
+          "pointOfContact": [
+            {
+              "fax": null,
+              "type": "primary",
+              "email": "DibbsBSM@dla.mil",
+              "phone": null,
+              "title": null,
+              "fullName": "Questions regarding this solicitation should be emailed to the buyer listed in block 5 of the solicitation document which can be found under the Additional Information link.\nIf the Additional Information link does not work, please go to https://www.dibbs.bsm.dla.mil/Solicitations/ and type the solicitation number in the Global Search box.\n"
+            }
+          ],
+          "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=fbce57cc9842454786395870c180b50b",
+          "organizationType": "OFFICE",
+          "officeAddress": {
+            "zipcode": "43218-3990",
+            "city": "COLUMBUS",
+            "countryCode": "USA",
+            "state": "OH"
+          },
+          "placeOfPerformance": null,
+          "additionalInfoLink": null,
+          "uiLink": "https://sam.gov/workspace/contract/opp/fbce57cc9842454786395870c180b50b/view",
+          "links": [
+            {
+              "rel": "self",
+              "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=fbce57cc9842454786395870c180b50b&limit=1"
+            }
+          ],
+          "resourceLinks": null
+        },
+        {
+          "noticeId": "fb548cf5511c4189ba04bc212bd462e0",
+          "title": "CABLE ASSEMBLY,SPEC, , IN REPAIR/MODIFICATION OF",
+          "solicitationNumber": "N0038326QLA60",
+          "fullParentPathName": "DEPT OF DEFENSE.DEPT OF THE NAVY.NAVSUP.NAVSUP WEAPON SYSTEMS SUPPORT.NAVSUP WSS PHILADELPHIA.NAVSUP WEAPON SYSTEMS SUPPORT",
+          "fullParentPathCode": "017.1700.NAVSUP.NAVSUP WSS.NAVSUP WSS PHIL.N00383",
+          "postedDate": "2026-01-12",
+          "type": "Presolicitation",
+          "baseType": "Presolicitation",
+          "archiveType": "auto15",
+          "archiveDate": "2026-02-11",
+          "typeOfSetAsideDescription": null,
+          "typeOfSetAside": null,
+          "responseDeadLine": "2026-01-27T16:00:00-05:00",
+          "naicsCode": null,
+          "naicsCodes": [],
+          "classificationCode": "5995",
+          "active": "Yes",
+          "award": null,
+          "pointOfContact": [
+            {
+              "fax": "",
+              "type": "primary",
+              "email": "patrick.j.horan23.civ@us.navy.mil",
+              "phone": "",
+              "title": null,
+              "fullName": "Patrick Horan"
+            }
+          ],
+          "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=fb548cf5511c4189ba04bc212bd462e0",
+          "organizationType": "OFFICE",
+          "officeAddress": {
+            "zipcode": "19111-5098",
+            "city": "PHILADELPHIA",
+            "countryCode": "USA",
+            "state": "PA"
+          },
+          "placeOfPerformance": {
+            "city": {
+              "code": "65000",
+              "name": "Saint Louis"
+            },
+            "state": {
+              "code": "MO",
+              "name": "Missouri"
+            },
+            "country": {
+              "code": "USA",
+              "name": "UNITED STATES"
+            }
+          },
+          "additionalInfoLink": null,
+          "uiLink": "https://sam.gov/workspace/contract/opp/fb548cf5511c4189ba04bc212bd462e0/view",
+          "links": [
+            {
+              "rel": "self",
+              "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=fb548cf5511c4189ba04bc212bd462e0&limit=1"
+            }
+          ],
+          "resourceLinks": null
+        },
+        {
+          "noticeId": "f9c0c9e4c41c48ad9694dbb149a53a55",
+          "title": "SPEED MAC F100 MULTIPLE AWARD MULTI-YEAR IDIQ",
+          "solicitationNumber": "FA812126R0001DRAFT",
+          "fullParentPathName": "DEPT OF DEFENSE.DEPT OF THE AIR FORCE.AIR FORCE MATERIEL COMMAND.AIR FORCE SUSTAINMENT CENTER.FA8121  AFSC PZAAA",
+          "fullParentPathCode": "057.5700.AFMC.AFSC.FA8121",
+          "postedDate": "2026-01-12",
+          "type": "Presolicitation",
+          "baseType": "Presolicitation",
+          "archiveType": "autocustom",
+          "archiveDate": "2026-01-18",
+          "typeOfSetAsideDescription": null,
+          "typeOfSetAside": null,
+          "responseDeadLine": "2026-01-16T16:00:00-06:00",
+          "naicsCode": "336412",
+          "naicsCodes": [
+            "336412"
+          ],
+          "classificationCode": "2840",
+          "active": "Yes",
+          "award": null,
+          "pointOfContact": [
+            {
+              "fax": "",
+              "type": "primary",
+              "email": "felicia.rogers.1@us.af.mil",
+              "phone": "4057364550",
+              "title": null,
+              "fullName": "Felicia Rogers"
+            },
+            {
+              "fax": "",
+              "type": "secondary",
+              "email": "roxanne.marquez@us.af.mil",
+              "phone": "",
+              "title": null,
+              "fullName": "Roxanne Marquez"
+            }
+          ],
+          "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=f9c0c9e4c41c48ad9694dbb149a53a55",
+          "organizationType": "OFFICE",
+          "officeAddress": {
+            "zipcode": "73145-3303",
+            "city": "TINKER AFB",
+            "countryCode": "USA",
+            "state": "OK"
+          },
+          "placeOfPerformance": {
+            "streetAddress": "",
+            "city": {
+              "code": "0",
+              "name": "S Coffeyville"
+            },
+            "state": {
+              "code": "OK",
+              "name": "Oklahoma"
+            },
+            "zip": "73145",
+            "country": {
+              "code": "USA",
+              "name": "UNITED STATES"
+            }
+          },
+          "additionalInfoLink": null,
+          "uiLink": "https://sam.gov/workspace/contract/opp/f9c0c9e4c41c48ad9694dbb149a53a55/view",
+          "links": [
+            {
+              "rel": "self",
+              "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=f9c0c9e4c41c48ad9694dbb149a53a55&limit=1"
+            }
+          ],
+          "resourceLinks": null
+        },
+        {
+          "noticeId": "f9be92d7a7f04e9e83271b5fdc994d3e",
+          "title": "Power Meters Ultrasound",
+          "solicitationNumber": "W911S226U2425",
+          "fullParentPathName": "DEPT OF DEFENSE.DEPT OF THE ARMY.AMC.ACC.MISSION INSTALLATION CONTRACTING COMMAND.419TH CSB.W6QM MICC-FT DRUM",
+          "fullParentPathCode": "021.2100.AMC.ACC.MICC.419TH CSB.W911S2",
+          "postedDate": "2026-01-12",
+          "type": "Combined Synopsis/Solicitation",
+          "baseType": "Combined Synopsis/Solicitation",
+          "archiveType": "autocustom",
+          "archiveDate": "2027-01-12",
+          "typeOfSetAsideDescription": "Total Small Business Set-Aside (FAR 19.5)",
+          "typeOfSetAside": "SBA",
+          "responseDeadLine": "2026-01-26T15:30:00-07:00",
+          "naicsCode": "334515",
+          "naicsCodes": [
+            "334515"
+          ],
+          "classificationCode": "6625",
+          "active": "Yes",
+          "award": null,
+          "pointOfContact": [
+            {
+              "fax": "",
+              "type": "primary",
+              "email": "jerry.a.mata.civ@health.mil",
+              "phone": "9155691749",
+              "title": null,
+              "fullName": "Jerry Mata"
+            }
+          ],
+          "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=f9be92d7a7f04e9e83271b5fdc994d3e",
+          "organizationType": "OFFICE",
+          "officeAddress": {
+            "zipcode": "13602-5220",
+            "city": "FORT DRUM",
+            "countryCode": "USA",
+            "state": "NY"
+          },
+          "placeOfPerformance": {
+            "streetAddress": "WBAMC, FORT BLISS, TX",
+            "zip": "79918"
+          },
+          "additionalInfoLink": null,
+          "uiLink": "https://sam.gov/workspace/contract/opp/f9be92d7a7f04e9e83271b5fdc994d3e/view",
+          "links": [
+            {
+              "rel": "self",
+              "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=f9be92d7a7f04e9e83271b5fdc994d3e&limit=1"
+            }
+          ],
+          "resourceLinks": null
+        },
+        {
+          "noticeId": "f93a9e42c2714b188d8f48844d54c15f",
+          "title": "59--INSULATION SLEEVING,EL",
+          "solicitationNumber": "SPE4A626U1168",
+          "fullParentPathName": "DEPT OF DEFENSE.DEFENSE LOGISTICS AGENCY.DLA AVIATION.DLA AV RICHMOND.DLA AVIATION",
+          "fullParentPathCode": "097.97AS.DLA AVIATION.DLA AV RICHMOND.SPE4A6",
+          "postedDate": "2026-01-12",
+          "type": "Combined Synopsis/Solicitation",
+          "baseType": "Combined Synopsis/Solicitation",
+          "archiveType": "autocustom",
+          "archiveDate": "2026-02-26",
+          "typeOfSetAsideDescription": null,
+          "typeOfSetAside": null,
+          "responseDeadLine": "2026-01-27",
+          "naicsCode": "335999",
+          "naicsCodes": [
+            "335999"
+          ],
+          "classificationCode": "59",
+          "active": "Yes",
+          "award": null,
+          "pointOfContact": [
+            {
+              "fax": null,
+              "type": "primary",
+              "email": "DibbsBSM@dla.mil",
+              "phone": null,
+              "title": null,
+              "fullName": "Questions regarding this solicitation should be emailed to the buyer listed in block 5 of the solicitation document which can be found under the Additional Information link.\nIf the Additional Information link does not work, please go to https://www.dibbs.bsm.dla.mil/Solicitations/ and type the solicitation number in the Global Search box.\n"
+            }
+          ],
+          "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=f93a9e42c2714b188d8f48844d54c15f",
+          "organizationType": "OFFICE",
+          "officeAddress": {
+            "zipcode": "23237",
+            "city": "RICHMOND",
+            "countryCode": "USA",
+            "state": "VA"
+          },
+          "placeOfPerformance": null,
+          "additionalInfoLink": null,
+          "uiLink": "https://sam.gov/workspace/contract/opp/f93a9e42c2714b188d8f48844d54c15f/view",
+          "links": [
+            {
+              "rel": "self",
+              "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=f93a9e42c2714b188d8f48844d54c15f&limit=1"
+            }
+          ],
+          "resourceLinks": null
+        }
+      ]
+    },
+    "cachedAt": "2026-01-12T18:57:24.652Z"
+  },
+  {
+    "key": "cloud services|||||10|0",
+    "data": {
+      "totalRecords": 14981,
+      "limit": 10,
+      "offset": 0,
+      "opportunitiesData": [
+        {
+          "noticeId": "feeb5740efe2400498b362b7244ed1d8",
+          "title": "SCBA Regulator Assembly",
+          "solicitationNumber": "W911S226U2395",
+          "fullParentPathName": "DEPT OF DEFENSE.DEPT OF THE ARMY.AMC.ACC.MISSION INSTALLATION CONTRACTING COMMAND.419TH CSB.W6QM MICC-FT DRUM",
+          "fullParentPathCode": "021.2100.AMC.ACC.MICC.419TH CSB.W911S2",
+          "postedDate": "2026-01-12",
+          "type": "Combined Synopsis/Solicitation",
+          "baseType": "Combined Synopsis/Solicitation",
+          "archiveType": "autocustom",
+          "archiveDate": "2027-01-12",
+          "typeOfSetAsideDescription": "Total Small Business Set-Aside (FAR 19.5)",
+          "typeOfSetAside": "SBA",
+          "responseDeadLine": "2026-01-15T08:55:00-04:00",
+          "naicsCode": "339999",
+          "naicsCodes": [
+            "339999"
+          ],
+          "classificationCode": "4210",
+          "active": "Yes",
+          "award": null,
+          "pointOfContact": [
+            {
+              "fax": "",
+              "type": "primary",
+              "email": "steven.c.larue.civ@army.mil",
+              "phone": "3157725901",
+              "title": null,
+              "fullName": "Steven Larue"
+            }
+          ],
+          "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=feeb5740efe2400498b362b7244ed1d8",
+          "organizationType": "OFFICE",
+          "officeAddress": {
+            "zipcode": "13602-5220",
+            "city": "FORT DRUM",
+            "countryCode": "USA",
+            "state": "NY"
+          },
+          "placeOfPerformance": {
+            "streetAddress": "Fort Drum",
+            "zip": "13602"
+          },
+          "additionalInfoLink": null,
+          "uiLink": "https://sam.gov/workspace/contract/opp/feeb5740efe2400498b362b7244ed1d8/view",
+          "links": [
+            {
+              "rel": "self",
+              "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=feeb5740efe2400498b362b7244ed1d8&limit=1"
+            }
+          ],
+          "resourceLinks": null
+        },
+        {
+          "noticeId": "feae6772e7e04e88a778f124d1e2a638",
+          "title": "59--CABLE ASSEMBLY,SPEC",
+          "solicitationNumber": "SPE4A626U1176",
+          "fullParentPathName": "DEPT OF DEFENSE.DEFENSE LOGISTICS AGENCY.DLA AVIATION.DLA AV RICHMOND.DLA AVIATION",
+          "fullParentPathCode": "097.97AS.DLA AVIATION.DLA AV RICHMOND.SPE4A6",
+          "postedDate": "2026-01-12",
+          "type": "Combined Synopsis/Solicitation",
+          "baseType": "Combined Synopsis/Solicitation",
+          "archiveType": "autocustom",
+          "archiveDate": "2026-02-26",
+          "typeOfSetAsideDescription": "Total Small Business Set-Aside (FAR 19.5)",
+          "typeOfSetAside": "SBA",
+          "responseDeadLine": "2026-01-27",
+          "naicsCode": "335931",
+          "naicsCodes": [
+            "335931"
+          ],
+          "classificationCode": "59",
+          "active": "Yes",
+          "award": null,
+          "pointOfContact": [
+            {
+              "fax": null,
+              "type": "primary",
+              "email": "DibbsBSM@dla.mil",
+              "phone": null,
+              "title": null,
+              "fullName": "Questions regarding this solicitation should be emailed to the buyer listed in block 5 of the solicitation document which can be found under the Additional Information link.\nIf the Additional Information link does not work, please go to https://www.dibbs.bsm.dla.mil/Solicitations/ and type the solicitation number in the Global Search box.\n"
+            }
+          ],
+          "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=feae6772e7e04e88a778f124d1e2a638",
+          "organizationType": "OFFICE",
+          "officeAddress": {
+            "zipcode": "23237",
+            "city": "RICHMOND",
+            "countryCode": "USA",
+            "state": "VA"
+          },
+          "placeOfPerformance": null,
+          "additionalInfoLink": null,
+          "uiLink": "https://sam.gov/workspace/contract/opp/feae6772e7e04e88a778f124d1e2a638/view",
+          "links": [
+            {
+              "rel": "self",
+              "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=feae6772e7e04e88a778f124d1e2a638&limit=1"
+            }
+          ],
+          "resourceLinks": null
+        },
+        {
+          "noticeId": "fe5832395f1c49609bc920c03a15f46d",
+          "title": "31--BEARING,SLEEVE",
+          "solicitationNumber": "SPE4A626T468M",
+          "fullParentPathName": "DEPT OF DEFENSE.DEFENSE LOGISTICS AGENCY.DLA AVIATION.DLA AV RICHMOND.DLA AVIATION",
+          "fullParentPathCode": "097.97AS.DLA AVIATION.DLA AV RICHMOND.SPE4A6",
+          "postedDate": "2026-01-12",
+          "type": "Combined Synopsis/Solicitation",
+          "baseType": "Combined Synopsis/Solicitation",
+          "archiveType": "autocustom",
+          "archiveDate": "2026-02-19",
+          "typeOfSetAsideDescription": "Total Small Business Set-Aside (FAR 19.5)",
+          "typeOfSetAside": "SBA",
+          "responseDeadLine": "2026-01-20",
+          "naicsCode": "332991",
+          "naicsCodes": [
+            "332991"
+          ],
+          "classificationCode": "31",
+          "active": "Yes",
+          "award": null,
+          "pointOfContact": [
+            {
+              "fax": null,
+              "type": "primary",
+              "email": "DibbsBSM@dla.mil",
+              "phone": null,
+              "title": null,
+              "fullName": "Questions regarding this solicitation should be emailed to the buyer listed in block 5 of the solicitation document which can be found under the Additional Information link.\nIf the Additional Information link does not work, please go to https://www.dibbs.bsm.dla.mil/Solicitations/ and type the solicitation number in the Global Search box.\n"
+            }
+          ],
+          "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=fe5832395f1c49609bc920c03a15f46d",
+          "organizationType": "OFFICE",
+          "officeAddress": {
+            "zipcode": "23237",
+            "city": "RICHMOND",
+            "countryCode": "USA",
+            "state": "VA"
+          },
+          "placeOfPerformance": null,
+          "additionalInfoLink": null,
+          "uiLink": "https://sam.gov/workspace/contract/opp/fe5832395f1c49609bc920c03a15f46d/view",
+          "links": [
+            {
+              "rel": "self",
+              "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=fe5832395f1c49609bc920c03a15f46d&limit=1"
+            }
+          ],
+          "resourceLinks": null
+        },
+        {
+          "noticeId": "fca2c2e0d2b742169826b92cf3ec084f",
+          "title": "53--SEAL,STARTER DRIVE",
+          "solicitationNumber": "SPE7L326T4462",
+          "fullParentPathName": "DEPT OF DEFENSE.DEFENSE LOGISTICS AGENCY.DLA LAND.DLA LAND COLUMBUS.DLA LAND AND MARITIME",
+          "fullParentPathCode": "097.97AS.DLA LAND.DLA LAND COLUMBUS.SPE7L3",
+          "postedDate": "2026-01-12",
+          "type": "Combined Synopsis/Solicitation",
+          "baseType": "Combined Synopsis/Solicitation",
+          "archiveType": "autocustom",
+          "archiveDate": "2026-02-22",
+          "typeOfSetAsideDescription": "Total Small Business Set-Aside (FAR 19.5)",
+          "typeOfSetAside": "SBA",
+          "responseDeadLine": "2026-01-23",
+          "naicsCode": "339991",
+          "naicsCodes": [
+            "339991"
+          ],
+          "classificationCode": "53",
+          "active": "Yes",
+          "award": null,
+          "pointOfContact": [
+            {
+              "fax": null,
+              "type": "primary",
+              "email": "DibbsBSM@dla.mil",
+              "phone": null,
+              "title": null,
+              "fullName": "Questions regarding this solicitation should be emailed to the buyer listed in block 5 of the solicitation document which can be found under the Additional Information link.\nIf the Additional Information link does not work, please go to https://www.dibbs.bsm.dla.mil/Solicitations/ and type the solicitation number in the Global Search box.\n"
+            }
+          ],
+          "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=fca2c2e0d2b742169826b92cf3ec084f",
+          "organizationType": "OFFICE",
+          "officeAddress": {
+            "zipcode": "43218-3990",
+            "city": "COLUMBUS",
+            "countryCode": "USA",
+            "state": "OH"
+          },
+          "placeOfPerformance": null,
+          "additionalInfoLink": null,
+          "uiLink": "https://sam.gov/workspace/contract/opp/fca2c2e0d2b742169826b92cf3ec084f/view",
+          "links": [
+            {
+              "rel": "self",
+              "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=fca2c2e0d2b742169826b92cf3ec084f&limit=1"
+            }
+          ],
+          "resourceLinks": null
+        },
+        {
+          "noticeId": "fc930165f648408f8d2f910d0a7cd7f5",
+          "title": "66--AMMETER",
+          "solicitationNumber": "SPE7M126T4428",
+          "fullParentPathName": "DEPT OF DEFENSE.DEFENSE LOGISTICS AGENCY.DLA MARITIME.DLA MARITIME COLUMBUS.DLA LAND AND MARITIME",
+          "fullParentPathCode": "097.97AS.DLA MARITIME.DLA MARITIME COLUMBS.SPE7M1",
+          "postedDate": "2026-01-12",
+          "type": "Combined Synopsis/Solicitation",
+          "baseType": "Combined Synopsis/Solicitation",
+          "archiveType": "autocustom",
+          "archiveDate": "2026-02-22",
+          "typeOfSetAsideDescription": "Total Small Business Set-Aside (FAR 19.5)",
+          "typeOfSetAside": "SBA",
+          "responseDeadLine": "2026-01-23",
+          "naicsCode": "334514",
+          "naicsCodes": [
+            "334514"
+          ],
+          "classificationCode": "66",
+          "active": "Yes",
+          "award": null,
+          "pointOfContact": [
+            {
+              "fax": null,
+              "type": "primary",
+              "email": "DibbsBSM@dla.mil",
+              "phone": null,
+              "title": null,
+              "fullName": "Questions regarding this solicitation should be emailed to the buyer listed in block 5 of the solicitation document which can be found under the Additional Information link.\nIf the Additional Information link does not work, please go to https://www.dibbs.bsm.dla.mil/Solicitations/ and type the solicitation number in the Global Search box.\n"
+            }
+          ],
+          "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=fc930165f648408f8d2f910d0a7cd7f5",
+          "organizationType": "OFFICE",
+          "officeAddress": {
+            "zipcode": "43218-3990",
+            "city": "COLUMBUS",
+            "countryCode": "USA",
+            "state": "OH"
+          },
+          "placeOfPerformance": null,
+          "additionalInfoLink": null,
+          "uiLink": "https://sam.gov/workspace/contract/opp/fc930165f648408f8d2f910d0a7cd7f5/view",
+          "links": [
+            {
+              "rel": "self",
+              "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=fc930165f648408f8d2f910d0a7cd7f5&limit=1"
+            }
+          ],
+          "resourceLinks": null
+        },
+        {
+          "noticeId": "fbce57cc9842454786395870c180b50b",
+          "title": "48--VALVE,BUTTERFLY",
+          "solicitationNumber": "SPE7L126Q0635",
+          "fullParentPathName": "DEPT OF DEFENSE.DEFENSE LOGISTICS AGENCY.DLA LAND.DLA LAND COLUMBUS.DLA LAND AND MARITIME",
+          "fullParentPathCode": "097.97AS.DLA LAND.DLA LAND COLUMBUS.SPE7L1",
+          "postedDate": "2026-01-12",
+          "type": "Combined Synopsis/Solicitation",
+          "baseType": "Combined Synopsis/Solicitation",
+          "archiveType": "autocustom",
+          "archiveDate": "2026-02-21",
+          "typeOfSetAsideDescription": "Total Small Business Set-Aside (FAR 19.5)",
+          "typeOfSetAside": "SBA",
+          "responseDeadLine": "2026-01-22",
+          "naicsCode": "332911",
+          "naicsCodes": [
+            "332911"
+          ],
+          "classificationCode": "48",
+          "active": "Yes",
+          "award": null,
+          "pointOfContact": [
+            {
+              "fax": null,
+              "type": "primary",
+              "email": "DibbsBSM@dla.mil",
+              "phone": null,
+              "title": null,
+              "fullName": "Questions regarding this solicitation should be emailed to the buyer listed in block 5 of the solicitation document which can be found under the Additional Information link.\nIf the Additional Information link does not work, please go to https://www.dibbs.bsm.dla.mil/Solicitations/ and type the solicitation number in the Global Search box.\n"
+            }
+          ],
+          "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=fbce57cc9842454786395870c180b50b",
+          "organizationType": "OFFICE",
+          "officeAddress": {
+            "zipcode": "43218-3990",
+            "city": "COLUMBUS",
+            "countryCode": "USA",
+            "state": "OH"
+          },
+          "placeOfPerformance": null,
+          "additionalInfoLink": null,
+          "uiLink": "https://sam.gov/workspace/contract/opp/fbce57cc9842454786395870c180b50b/view",
+          "links": [
+            {
+              "rel": "self",
+              "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=fbce57cc9842454786395870c180b50b&limit=1"
+            }
+          ],
+          "resourceLinks": null
+        },
+        {
+          "noticeId": "fb548cf5511c4189ba04bc212bd462e0",
+          "title": "CABLE ASSEMBLY,SPEC, , IN REPAIR/MODIFICATION OF",
+          "solicitationNumber": "N0038326QLA60",
+          "fullParentPathName": "DEPT OF DEFENSE.DEPT OF THE NAVY.NAVSUP.NAVSUP WEAPON SYSTEMS SUPPORT.NAVSUP WSS PHILADELPHIA.NAVSUP WEAPON SYSTEMS SUPPORT",
+          "fullParentPathCode": "017.1700.NAVSUP.NAVSUP WSS.NAVSUP WSS PHIL.N00383",
+          "postedDate": "2026-01-12",
+          "type": "Presolicitation",
+          "baseType": "Presolicitation",
+          "archiveType": "auto15",
+          "archiveDate": "2026-02-11",
+          "typeOfSetAsideDescription": null,
+          "typeOfSetAside": null,
+          "responseDeadLine": "2026-01-27T16:00:00-05:00",
+          "naicsCode": null,
+          "naicsCodes": [],
+          "classificationCode": "5995",
+          "active": "Yes",
+          "award": null,
+          "pointOfContact": [
+            {
+              "fax": "",
+              "type": "primary",
+              "email": "patrick.j.horan23.civ@us.navy.mil",
+              "phone": "",
+              "title": null,
+              "fullName": "Patrick Horan"
+            }
+          ],
+          "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=fb548cf5511c4189ba04bc212bd462e0",
+          "organizationType": "OFFICE",
+          "officeAddress": {
+            "zipcode": "19111-5098",
+            "city": "PHILADELPHIA",
+            "countryCode": "USA",
+            "state": "PA"
+          },
+          "placeOfPerformance": {
+            "city": {
+              "code": "65000",
+              "name": "Saint Louis"
+            },
+            "state": {
+              "code": "MO",
+              "name": "Missouri"
+            },
+            "country": {
+              "code": "USA",
+              "name": "UNITED STATES"
+            }
+          },
+          "additionalInfoLink": null,
+          "uiLink": "https://sam.gov/workspace/contract/opp/fb548cf5511c4189ba04bc212bd462e0/view",
+          "links": [
+            {
+              "rel": "self",
+              "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=fb548cf5511c4189ba04bc212bd462e0&limit=1"
+            }
+          ],
+          "resourceLinks": null
+        },
+        {
+          "noticeId": "f9c0c9e4c41c48ad9694dbb149a53a55",
+          "title": "SPEED MAC F100 MULTIPLE AWARD MULTI-YEAR IDIQ",
+          "solicitationNumber": "FA812126R0001DRAFT",
+          "fullParentPathName": "DEPT OF DEFENSE.DEPT OF THE AIR FORCE.AIR FORCE MATERIEL COMMAND.AIR FORCE SUSTAINMENT CENTER.FA8121  AFSC PZAAA",
+          "fullParentPathCode": "057.5700.AFMC.AFSC.FA8121",
+          "postedDate": "2026-01-12",
+          "type": "Presolicitation",
+          "baseType": "Presolicitation",
+          "archiveType": "autocustom",
+          "archiveDate": "2026-01-18",
+          "typeOfSetAsideDescription": null,
+          "typeOfSetAside": null,
+          "responseDeadLine": "2026-01-16T16:00:00-06:00",
+          "naicsCode": "336412",
+          "naicsCodes": [
+            "336412"
+          ],
+          "classificationCode": "2840",
+          "active": "Yes",
+          "award": null,
+          "pointOfContact": [
+            {
+              "fax": "",
+              "type": "primary",
+              "email": "felicia.rogers.1@us.af.mil",
+              "phone": "4057364550",
+              "title": null,
+              "fullName": "Felicia Rogers"
+            },
+            {
+              "fax": "",
+              "type": "secondary",
+              "email": "roxanne.marquez@us.af.mil",
+              "phone": "",
+              "title": null,
+              "fullName": "Roxanne Marquez"
+            }
+          ],
+          "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=f9c0c9e4c41c48ad9694dbb149a53a55",
+          "organizationType": "OFFICE",
+          "officeAddress": {
+            "zipcode": "73145-3303",
+            "city": "TINKER AFB",
+            "countryCode": "USA",
+            "state": "OK"
+          },
+          "placeOfPerformance": {
+            "streetAddress": "",
+            "city": {
+              "code": "0",
+              "name": "S Coffeyville"
+            },
+            "state": {
+              "code": "OK",
+              "name": "Oklahoma"
+            },
+            "zip": "73145",
+            "country": {
+              "code": "USA",
+              "name": "UNITED STATES"
+            }
+          },
+          "additionalInfoLink": null,
+          "uiLink": "https://sam.gov/workspace/contract/opp/f9c0c9e4c41c48ad9694dbb149a53a55/view",
+          "links": [
+            {
+              "rel": "self",
+              "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=f9c0c9e4c41c48ad9694dbb149a53a55&limit=1"
+            }
+          ],
+          "resourceLinks": null
+        },
+        {
+          "noticeId": "f9be92d7a7f04e9e83271b5fdc994d3e",
+          "title": "Power Meters Ultrasound",
+          "solicitationNumber": "W911S226U2425",
+          "fullParentPathName": "DEPT OF DEFENSE.DEPT OF THE ARMY.AMC.ACC.MISSION INSTALLATION CONTRACTING COMMAND.419TH CSB.W6QM MICC-FT DRUM",
+          "fullParentPathCode": "021.2100.AMC.ACC.MICC.419TH CSB.W911S2",
+          "postedDate": "2026-01-12",
+          "type": "Combined Synopsis/Solicitation",
+          "baseType": "Combined Synopsis/Solicitation",
+          "archiveType": "autocustom",
+          "archiveDate": "2027-01-12",
+          "typeOfSetAsideDescription": "Total Small Business Set-Aside (FAR 19.5)",
+          "typeOfSetAside": "SBA",
+          "responseDeadLine": "2026-01-26T15:30:00-07:00",
+          "naicsCode": "334515",
+          "naicsCodes": [
+            "334515"
+          ],
+          "classificationCode": "6625",
+          "active": "Yes",
+          "award": null,
+          "pointOfContact": [
+            {
+              "fax": "",
+              "type": "primary",
+              "email": "jerry.a.mata.civ@health.mil",
+              "phone": "9155691749",
+              "title": null,
+              "fullName": "Jerry Mata"
+            }
+          ],
+          "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=f9be92d7a7f04e9e83271b5fdc994d3e",
+          "organizationType": "OFFICE",
+          "officeAddress": {
+            "zipcode": "13602-5220",
+            "city": "FORT DRUM",
+            "countryCode": "USA",
+            "state": "NY"
+          },
+          "placeOfPerformance": {
+            "streetAddress": "WBAMC, FORT BLISS, TX",
+            "zip": "79918"
+          },
+          "additionalInfoLink": null,
+          "uiLink": "https://sam.gov/workspace/contract/opp/f9be92d7a7f04e9e83271b5fdc994d3e/view",
+          "links": [
+            {
+              "rel": "self",
+              "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=f9be92d7a7f04e9e83271b5fdc994d3e&limit=1"
+            }
+          ],
+          "resourceLinks": null
+        },
+        {
+          "noticeId": "f93a9e42c2714b188d8f48844d54c15f",
+          "title": "59--INSULATION SLEEVING,EL",
+          "solicitationNumber": "SPE4A626U1168",
+          "fullParentPathName": "DEPT OF DEFENSE.DEFENSE LOGISTICS AGENCY.DLA AVIATION.DLA AV RICHMOND.DLA AVIATION",
+          "fullParentPathCode": "097.97AS.DLA AVIATION.DLA AV RICHMOND.SPE4A6",
+          "postedDate": "2026-01-12",
+          "type": "Combined Synopsis/Solicitation",
+          "baseType": "Combined Synopsis/Solicitation",
+          "archiveType": "autocustom",
+          "archiveDate": "2026-02-26",
+          "typeOfSetAsideDescription": null,
+          "typeOfSetAside": null,
+          "responseDeadLine": "2026-01-27",
+          "naicsCode": "335999",
+          "naicsCodes": [
+            "335999"
+          ],
+          "classificationCode": "59",
+          "active": "Yes",
+          "award": null,
+          "pointOfContact": [
+            {
+              "fax": null,
+              "type": "primary",
+              "email": "DibbsBSM@dla.mil",
+              "phone": null,
+              "title": null,
+              "fullName": "Questions regarding this solicitation should be emailed to the buyer listed in block 5 of the solicitation document which can be found under the Additional Information link.\nIf the Additional Information link does not work, please go to https://www.dibbs.bsm.dla.mil/Solicitations/ and type the solicitation number in the Global Search box.\n"
+            }
+          ],
+          "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=f93a9e42c2714b188d8f48844d54c15f",
+          "organizationType": "OFFICE",
+          "officeAddress": {
+            "zipcode": "23237",
+            "city": "RICHMOND",
+            "countryCode": "USA",
+            "state": "VA"
+          },
+          "placeOfPerformance": null,
+          "additionalInfoLink": null,
+          "uiLink": "https://sam.gov/workspace/contract/opp/f93a9e42c2714b188d8f48844d54c15f/view",
+          "links": [
+            {
+              "rel": "self",
+              "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=f93a9e42c2714b188d8f48844d54c15f&limit=1"
+            }
+          ],
+          "resourceLinks": null
+        }
+      ]
+    },
+    "cachedAt": "2026-01-12T19:00:17.322Z"
+  }
+]

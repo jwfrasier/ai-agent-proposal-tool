@@ -71,9 +71,26 @@ export async function GET(request: NextRequest) {
       offset: searchParams.get('offset') ? parseInt(searchParams.get('offset')!) : 0,
     };
     
-    // Check if we should skip cache (force refresh)
+    // Check if we should skip cache (force refresh) or use sample data
     const skipCache = searchParams.get('refresh') === 'true';
+    const useSample = searchParams.get('useSample') === 'true';
     const cacheKey = generateCacheKey(params);
+    
+    // If explicitly requesting sample data, return filtered samples
+    if (useSample) {
+      console.log('Using sample data for:', cacheKey);
+      const sampleOpportunities = await getSampleOpportunities();
+      const filtered = filterSampleOpportunities(sampleOpportunities, params);
+      
+      return NextResponse.json({
+        totalRecords: filtered.length,
+        limit: params.limit || 25,
+        offset: params.offset || 0,
+        opportunitiesData: filtered.slice(params.offset || 0, (params.offset || 0) + (params.limit || 25)),
+        isDemo: true,
+        fromCache: false,
+      });
+    }
     
     // Try to get from cache first
     if (!skipCache) {
@@ -106,17 +123,17 @@ export async function GET(request: NextRequest) {
         keyword: new URL(request.url).searchParams.get('keyword') || undefined,
         naicsCode: new URL(request.url).searchParams.get('naicsCode') || undefined,
         typeOfSetAside: new URL(request.url).searchParams.get('typeOfSetAside') || undefined,
-        limit: 25,
-        offset: 0,
+        limit: new URL(request.url).searchParams.get('limit') ? parseInt(new URL(request.url).searchParams.get('limit')!) : 25,
+        offset: new URL(request.url).searchParams.get('offset') ? parseInt(new URL(request.url).searchParams.get('offset')!) : 0,
       };
       
       const filtered = filterSampleOpportunities(sampleOpportunities, params);
       
       return NextResponse.json({
         totalRecords: filtered.length,
-        limit: 25,
-        offset: 0,
-        opportunitiesData: filtered,
+        limit: params.limit || 25,
+        offset: params.offset || 0,
+        opportunitiesData: filtered.slice(params.offset || 0, (params.offset || 0) + (params.limit || 25)),
         isDemo: true,
         demoMessage: 'Using sample data. SAM.gov API error: ' + errorMessage,
       });

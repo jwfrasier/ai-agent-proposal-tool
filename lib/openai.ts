@@ -158,34 +158,130 @@ export async function generateProposalOutline(
     messages: [
       {
         role: 'system',
-        content: `You are a government contracting proposal expert. Generate a detailed proposal outline based on the opportunity requirements and company capabilities. The outline should follow standard government proposal structure and highlight the company's strengths.`
+        content: `You are an expert government contracting proposal writer with 20+ years of experience writing winning federal proposals. Generate a comprehensive, detailed proposal outline that addresses all requirements and positions the company for success.
+
+Your proposal outline should include:
+1. Executive Summary with clear value proposition
+2. Technical Approach with specific methodologies and solutions
+3. Management Plan with organizational structure and key personnel
+4. Past Performance with relevant project examples
+5. Pricing Strategy overview
+6. Risk Management approach
+
+Make it specific, actionable, and tailored to the exact requirements in the solicitation. Use professional proposal language and structure.`
       },
       {
         role: 'user',
         content: `
-## OPPORTUNITY
-Title: ${opportunity.title}
-Solicitation: ${opportunity.solicitationNumber}
-Agency: ${opportunity.department}
-Description: ${opportunity.description}
+## SOLICITATION DETAILS
 
-## COMPANY
-Name: ${companyProfile.name}
-Capabilities: ${companyProfile.capabilities}
-Core Competencies: ${companyProfile.coreCompetencies?.join(', ')}
-Differentiators: ${companyProfile.differentiators}
+**Title:** ${opportunity.title}
+**Solicitation Number:** ${opportunity.solicitationNumber || 'N/A'}
+**Agency:** ${opportunity.department}${opportunity.subTier ? ` - ${opportunity.subTier}` : ''}
+**NAICS:** ${opportunity.naicsCode}
+**Set-Aside:** ${opportunity.typeOfSetAsideDescription || 'Full and Open Competition'}
+**Response Deadline:** ${opportunity.responseDeadLine}
 
-## SCORING ANALYSIS
-Overall Score: ${score.overallScore}/100
-Strengths: ${score.analysis.strengths.join(', ')}
-Key Requirements: ${score.analysis.keyRequirements.join(', ')}
+**Full Requirements/Description:**
+${opportunity.description || 'No detailed description available'}
 
-Generate a comprehensive proposal outline with sections, subsections, and key points to address.
+---
+
+## COMPANY PROFILE
+
+**Company:** ${companyProfile.name}
+**UEI:** ${companyProfile.uei}
+**Years in Business:** ${companyProfile.yearsInBusiness}
+**Employee Count:** ${companyProfile.employeeCount}
+**Hourly Rate:** $${companyProfile.hourlyRate || 'TBD'}
+
+**Core Capabilities:**
+${companyProfile.capabilities}
+
+**Technical Competencies:**
+${companyProfile.coreCompetencies?.map(c => `• ${c}`).join('\n') || 'Not specified'}
+
+**Competitive Advantages:**
+${companyProfile.differentiators}
+
+**NAICS Codes:** ${companyProfile.naicsCodes.join(', ')}
+**Certifications:** ${companyProfile.smallBusinessTypes?.join(', ') || 'Standard Small Business'}
+
+**Past Performance Projects:**
+${companyProfile.pastPerformance && companyProfile.pastPerformance.length > 0 
+  ? companyProfile.pastPerformance.map(pp => `
+• ${pp.contractName} - ${pp.agency}
+  - Contract: ${pp.contractNumber}
+  - Value: ${pp.value}
+  - Period: ${pp.period}
+  - Description: ${pp.description}
+`).join('\n')
+  : 'Limited documented past performance - emphasize team expertise and capabilities'}
+
+---
+
+## OPPORTUNITY ANALYSIS
+
+**Overall Fit Score:** ${score.overallScore}/100
+**Recommendation:** ${score.analysis.bidNoGoBid}
+
+**Key Strengths for This Opportunity:**
+${score.analysis.strengths.map(s => `• ${s}`).join('\n')}
+
+**Areas to Address:**
+${score.analysis.weaknesses.map(w => `• ${w}`).join('\n')}
+
+**Critical Requirements Identified:**
+${score.analysis.keyRequirements.map(r => `• ${r}`).join('\n')}
+
+**Recommended Focus Areas:**
+${score.analysis.recommendedActions.map(a => `• ${a}`).join('\n')}
+
+---
+
+## PROPOSAL GENERATION REQUEST
+
+Based on the above information, generate a DETAILED, SPECIFIC proposal outline that:
+
+1. **Addresses every requirement** mentioned in the solicitation description
+2. **Provides concrete technical approaches** - not just section titles, but actual strategies and methodologies
+3. **Highlights the company's relevant strengths** from the analysis
+4. **Mitigates weaknesses** by showing how the company will address gaps
+5. **Includes specific deliverables and outcomes** for each major section
+6. **Demonstrates understanding** of the agency's needs and constraints
+7. **Provides a clear management structure** with roles and responsibilities
+8. **References relevant past performance** (or explains capability despite limited past performance)
+
+Structure the outline in standard government proposal format:
+- Volume I: Technical Proposal
+  - Executive Summary
+  - Understanding of Requirements
+  - Technical Approach & Methodology
+  - Management Approach
+  - Key Personnel & Organization
+  - Past Performance & Corporate Experience
+  - Quality Assurance Plan
+  - Risk Management
+  - Transition Plan (if applicable)
+  
+- Volume II: Pricing Proposal
+  - Pricing Strategy Overview
+  - Labor Categories & Rates
+  - Cost Breakdown
+  - Value Proposition
+
+For EACH section, provide:
+- Section overview (what will be covered)
+- 3-5 specific bullet points with actual content/strategies
+- Key messages to emphasize
+- How it addresses the requirements
+
+Make this a working document that could guide actual proposal development. Be specific and detailed, not generic.
 `
       }
     ],
-    temperature: 0.5,
-    max_tokens: 3000,
+    temperature: 0.6,
+    max_tokens: 4000,
   });
   
   return response.choices[0]?.message?.content || '';
