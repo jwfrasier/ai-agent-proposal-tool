@@ -1,0 +1,232 @@
+[
+  {
+    "noticeId": "SAMPLE-001-2026",
+    "title": "Enterprise Web Application Development and Modernization Services",
+    "solicitationNumber": "W911NF-26-R-0042",
+    "department": "Department of Defense",
+    "subTier": "Army Contracting Command",
+    "office": "ACC-APG",
+    "postedDate": "2026-01-05",
+    "type": "Solicitation",
+    "baseType": "Solicitation",
+    "archiveType": "auto30",
+    "archiveDate": "2026-03-15",
+    "typeOfSetAsideDescription": "Total Small Business Set-Aside",
+    "typeOfSetAside": "SBA",
+    "responseDeadLine": "2026-02-15",
+    "naicsCode": "541511",
+    "naicsCodes": ["541511"],
+    "classificationCode": "D302",
+    "active": "Yes",
+    "award": null,
+    "description": "The Army Contracting Command requires enterprise web application development and modernization services. The contractor shall provide full-stack development services including:\n\n1. Modern web application development using React, Next.js, and Node.js\n2. Legacy system modernization and migration to cloud-native architectures\n3. API development and integration services\n4. DevOps implementation and CI/CD pipeline development\n5. Microservices architecture design and implementation\n\nThe contractor must demonstrate experience with:\n- Agile development methodologies\n- Cloud platforms (AWS, Azure, or GCP)\n- Database design and management\n- Security best practices and compliance\n\nPeriod of Performance: Base year plus four option years\nEstimated Value: $2.5M - $5M\n\nThis is a Small Business Set-Aside. Offerors must be registered in SAM.gov and have an active UEI.",
+    "organizationType": "OFFICE",
+    "additionalInfoLink": "https://sam.gov/opp/sample001",
+    "uiLink": "https://sam.gov/opp/sample001",
+    "resourceLinks": [],
+    "officeAddress": {
+      "zipcode": "21005",
+      "city": "Aberdeen Proving Ground",
+      "countryCode": "USA",
+      "state": "MD"
+    },
+    "placeOfPerformance": {
+      "city": { "code": "00000", "name": "Remote/Contractor Site" },
+      "state": { "code": "MD", "name": "Maryland" },
+      "country": { "code": "USA", "name": "United States" }
+    },
+    "pointOfContact": [
+      {
+        "type": "primary",
+        "email": "sample.poc@army.mil",
+        "phone": "410-555-0100",
+        "title": "Contract Specialist",
+        "fullName": "Jane Smith"
+      }
+    ]
+  },
+  {
+    "noticeId": "SAMPLE-002-2026",
+    "title": "AI/Machine Learning Platform Development for Data Analytics",
+    "solicitationNumber": "70CMSD26C00000123",
+    "department": "Department of Homeland Security",
+    "subTier": "Customs and Border Protection",
+    "office": "CBP Procurement",
+    "postedDate": "2026-01-08",
+    "type": "Combined Synopsis/Solicitation",
+    "baseType": "Combined Synopsis/Solicitation",
+    "archiveType": "auto30",
+    "archiveDate": "2026-03-20",
+    "typeOfSetAsideDescription": "Total Small Business Set-Aside",
+    "typeOfSetAside": "SBA",
+    "responseDeadLine": "2026-02-20",
+    "naicsCode": "541512",
+    "naicsCodes": ["541512", "541511"],
+    "classificationCode": "D307",
+    "active": "Yes",
+    "award": null,
+    "description": "CBP requires development of an AI/Machine Learning platform to support advanced data analytics capabilities. The solution shall include:\n\n- Custom AI model development and training\n- Large Language Model (LLM) integration and fine-tuning\n- Natural Language Processing capabilities\n- Predictive analytics dashboards\n- Real-time data processing pipelines\n- Python-based backend services\n- Modern React frontend for visualization\n\nTechnical Requirements:\n- Experience with TensorFlow, PyTorch, or similar frameworks\n- Cloud-native architecture (preferably AWS GovCloud)\n- FedRAMP compliance experience\n- Agile/Scrum development methodology\n- CI/CD pipeline implementation\n\nContract Type: Firm Fixed Price\nEstimated Value: $1.8M - $3.2M\nPeriod: 12-month base with two 12-month options",
+    "organizationType": "OFFICE",
+    "additionalInfoLink": "https://sam.gov/opp/sample002",
+    "uiLink": "https://sam.gov/opp/sample002",
+    "resourceLinks": [],
+    "officeAddress": {
+      "zipcode": "20229",
+      "city": "Washington",
+      "countryCode": "USA",
+      "state": "DC"
+    },
+    "placeOfPerformance": {
+      "city": { "code": "00000", "name": "Washington" },
+      "state": { "code": "DC", "name": "District of Columbia" },
+      "country": { "code": "USA", "name": "United States" }
+    },
+    "pointOfContact": [
+      {
+        "type": "primary",
+        "email": "procurement@cbp.dhs.gov",
+        "phone": "202-555-0200",
+        "title": "Contracting Officer",
+        "fullName": "Michael Johnson"
+      }
+    ]
+  },
+  {
+    "noticeId": "SAMPLE-003-2026",
+    "title": "Cloud Migration and Infrastructure Modernization Support",
+    "solicitationNumber": "GS-35F-0000X",
+    "department": "General Services Administration",
+    "subTier": "Federal Acquisition Service",
+    "office": "IT Schedule 70",
+    "postedDate": "2026-01-03",
+    "type": "Solicitation",
+    "baseType": "Solicitation",
+    "archiveType": "auto30",
+    "archiveDate": "2026-02-28",
+    "typeOfSetAsideDescription": "Partial Small Business Set-Aside",
+    "typeOfSetAside": "SBP",
+    "responseDeadLine": "2026-02-10",
+    "naicsCode": "541519",
+    "naicsCodes": ["541519", "518210"],
+    "classificationCode": "D310",
+    "active": "Yes",
+    "award": null,
+    "description": "GSA seeks contractors to provide cloud migration and infrastructure modernization services for multiple federal agencies. Services required include:\n\n1. Assessment and planning for cloud migration\n2. AWS/Azure/GCP implementation and configuration\n3. Containerization using Docker and Kubernetes\n4. Infrastructure as Code (Terraform, CloudFormation)\n5. Microservices architecture implementation\n6. DevSecOps practices and tooling\n7. 24/7 monitoring and support\n\nQualifications:\n- Active cloud certifications (AWS, Azure, or GCP)\n- Experience with federal cloud environments\n- Understanding of FedRAMP and FISMA requirements\n- Demonstrated experience with Unix/Linux systems\n- Node.js and Python development capabilities\n\nThis is a BPA against IT Schedule 70.\nCeiling: $10M over 5 years\nMultiple awards anticipated",
+    "organizationType": "OFFICE",
+    "additionalInfoLink": "https://sam.gov/opp/sample003",
+    "uiLink": "https://sam.gov/opp/sample003",
+    "resourceLinks": [],
+    "officeAddress": {
+      "zipcode": "20405",
+      "city": "Washington",
+      "countryCode": "USA",
+      "state": "DC"
+    },
+    "placeOfPerformance": {
+      "city": { "code": "00000", "name": "Multiple Locations" },
+      "state": { "code": "US", "name": "United States" },
+      "country": { "code": "USA", "name": "United States" }
+    },
+    "pointOfContact": [
+      {
+        "type": "primary",
+        "email": "it70@gsa.gov",
+        "phone": "202-555-0300",
+        "title": "Program Manager",
+        "fullName": "Sarah Williams"
+      }
+    ]
+  },
+  {
+    "noticeId": "SAMPLE-004-2026",
+    "title": "Salesforce CRM Implementation and Integration Services",
+    "solicitationNumber": "HQ0034-26-R-0055",
+    "department": "Department of Veterans Affairs",
+    "subTier": "Veterans Health Administration",
+    "office": "Technology Acquisition Center",
+    "postedDate": "2026-01-10",
+    "type": "Presolicitation",
+    "baseType": "Presolicitation",
+    "archiveType": "auto30",
+    "archiveDate": "2026-04-01",
+    "typeOfSetAsideDescription": "Service-Disabled Veteran-Owned Small Business Set-Aside",
+    "typeOfSetAside": "SDVOSBC",
+    "responseDeadLine": "2026-03-01",
+    "naicsCode": "541512",
+    "naicsCodes": ["541512"],
+    "classificationCode": "D302",
+    "active": "Yes",
+    "award": null,
+    "description": "The VA requires Salesforce CRM implementation and integration services to modernize veteran services. The contractor shall:\n\n- Implement Salesforce Health Cloud and Service Cloud\n- Develop custom Lightning components\n- Integrate with existing VA systems via APIs\n- Migrate data from legacy CRM systems\n- Provide training and change management support\n- Develop custom reports and dashboards\n- Ensure 508 compliance for all interfaces\n\nRequired Experience:\n- Salesforce certified developers and administrators\n- Healthcare industry CRM implementations\n- Experience with VA or federal health agencies preferred\n- API integration expertise (REST, SOAP)\n- Agile project management\n\nThis procurement is set aside for Service-Disabled Veteran-Owned Small Businesses (SDVOSB).\n\nEstimated Contract Value: $3M - $6M\nPeriod of Performance: 3 years",
+    "organizationType": "OFFICE",
+    "additionalInfoLink": "https://sam.gov/opp/sample004",
+    "uiLink": "https://sam.gov/opp/sample004",
+    "resourceLinks": [],
+    "officeAddress": {
+      "zipcode": "20420",
+      "city": "Washington",
+      "countryCode": "USA",
+      "state": "DC"
+    },
+    "placeOfPerformance": {
+      "city": { "code": "00000", "name": "Washington" },
+      "state": { "code": "DC", "name": "District of Columbia" },
+      "country": { "code": "USA", "name": "United States" }
+    },
+    "pointOfContact": [
+      {
+        "type": "primary",
+        "email": "tac.contracts@va.gov",
+        "phone": "202-555-0400",
+        "title": "Contract Specialist",
+        "fullName": "Robert Chen"
+      }
+    ]
+  },
+  {
+    "noticeId": "SAMPLE-005-2026",
+    "title": "IT Help Desk and Technical Support Services",
+    "solicitationNumber": "140D0426R0001",
+    "department": "Department of the Interior",
+    "subTier": "Bureau of Land Management",
+    "office": "National Operations Center",
+    "postedDate": "2026-01-02",
+    "type": "Solicitation",
+    "baseType": "Solicitation",
+    "archiveType": "auto30",
+    "archiveDate": "2026-02-15",
+    "typeOfSetAsideDescription": "8(a) Set-Aside",
+    "typeOfSetAside": "8A",
+    "responseDeadLine": "2026-01-30",
+    "naicsCode": "541519",
+    "naicsCodes": ["541519"],
+    "classificationCode": "D399",
+    "active": "Yes",
+    "award": null,
+    "description": "BLM requires IT help desk and technical support services including:\n\n- Tier 1-3 technical support\n- Hardware and software troubleshooting\n- Network connectivity support\n- User account management\n- Software installation and configuration\n- Remote desktop support\n- Knowledge base maintenance\n\nNote: This opportunity requires primarily on-site support staff and may not be ideal for companies focused on software development.\n\nRequirements:\n- ITIL certification preferred\n- Experience with ServiceNow or similar ticketing systems\n- CompTIA A+ or equivalent certifications\n- Security+ certification required\n\nThis is an 8(a) competitive set-aside.\nContract Value: $500K - $1.2M annually\nPeriod: Base + 4 option years",
+    "organizationType": "OFFICE",
+    "additionalInfoLink": "https://sam.gov/opp/sample005",
+    "uiLink": "https://sam.gov/opp/sample005",
+    "resourceLinks": [],
+    "officeAddress": {
+      "zipcode": "80225",
+      "city": "Denver",
+      "countryCode": "USA",
+      "state": "CO"
+    },
+    "placeOfPerformance": {
+      "city": { "code": "00000", "name": "Denver" },
+      "state": { "code": "CO", "name": "Colorado" },
+      "country": { "code": "USA", "name": "United States" }
+    },
+    "pointOfContact": [
+      {
+        "type": "primary",
+        "email": "blm.contracts@blm.gov",
+        "phone": "303-555-0500",
+        "title": "Contracting Officer",
+        "fullName": "David Martinez"
+      }
+    ]
+  }
+]
