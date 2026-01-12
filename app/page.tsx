@@ -1,65 +1,606 @@
-import Image from "next/image";
+'use client';
 
-export default function Home() {
+import { useEffect, useState, useCallback } from 'react';
+import { useRouter } from 'next/navigation';
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Skeleton } from '@/components/ui/skeleton';
+import { SearchFilters } from '@/components/SearchFilters';
+import { ContractCard } from '@/components/ContractCard';
+import {
+  Building2,
+  Search,
+  Bookmark,
+  TrendingUp,
+  AlertCircle,
+  Settings,
+  FileText,
+  Sparkles,
+  ChevronLeft,
+  ChevronRight,
+  RefreshCw,
+  Zap,
+} from 'lucide-react';
+import type { SamOpportunity, SavedContract, SearchParams, CompanyProfile } from '@/types';
+
+export default function DashboardPage() {
+  const router = useRouter();
+  const [opportunities, setOpportunities] = useState<SamOpportunity[]>([]);
+  const [savedContracts, setSavedContracts] = useState<SavedContract[]>([]);
+  const [companyProfile, setCompanyProfile] = useState<CompanyProfile | null>(null);
+  const [loading, setLoading] = useState(false);
+  const [initialLoading, setInitialLoading] = useState(true);
+  const [scoringId, setScoringId] = useState<string | null>(null);
+  const [totalRecords, setTotalRecords] = useState(0);
+  const [currentOffset, setCurrentOffset] = useState(0);
+  const [searchParams, setSearchParams] = useState<SearchParams>({});
+  const [error, setError] = useState<string | null>(null);
+
+  const LIMIT = 10;
+
+  // Default quick search queries relevant to Iron Grove's capabilities
+  const quickSearches = [
+    { keyword: 'software development', label: 'Software Dev' },
+    { keyword: 'web application development', label: 'Web Apps' },
+    { keyword: 'IT modernization', label: 'IT Modernization' },
+    { keyword: 'cloud services', label: 'Cloud Services' },
+    { keyword: 'data analytics AI', label: 'AI & Analytics' },
+    { naicsCode: '541511', label: 'NAICS 541511' },
+    { naicsCode: '541512', label: 'NAICS 541512' },
+  ];
+
+  useEffect(() => {
+    fetchInitialData();
+  }, []);
+
+  // Auto-load software development results on initial load
+  useEffect(() => {
+    if (!initialLoading && opportunities.length === 0 && !loading) {
+      // Auto-search for software development contracts
+      searchOpportunities({ keyword: 'software development' }, 0);
+    }
+  }, [initialLoading]);
+
+  const fetchInitialData = async () => {
+    setInitialLoading(true);
+    await Promise.all([
+      fetchSavedContracts(),
+      fetchCompanyProfile(),
+    ]);
+    setInitialLoading(false);
+  };
+
+  const fetchCompanyProfile = async () => {
+    try {
+      const response = await fetch('/api/company');
+      if (response.ok) {
+        const data = await response.json();
+        setCompanyProfile(data);
+      }
+    } catch (error) {
+      console.error('Error fetching company profile:', error);
+    }
+  };
+
+  const fetchSavedContracts = async () => {
+    try {
+      const response = await fetch('/api/contracts');
+      if (response.ok) {
+        const data = await response.json();
+        setSavedContracts(data);
+      }
+    } catch (error) {
+      console.error('Error fetching saved contracts:', error);
+    }
+  };
+
+  const searchOpportunities = useCallback(async (params: SearchParams, offset = 0) => {
+    setLoading(true);
+    setError(null);
+    try {
+      const queryParams = new URLSearchParams();
+      if (params.keyword) queryParams.append('keyword', params.keyword);
+      if (params.naicsCode) queryParams.append('naicsCode', params.naicsCode);
+      if (params.typeOfSetAside && params.typeOfSetAside !== 'none') {
+        queryParams.append('typeOfSetAside', params.typeOfSetAside);
+      }
+      if (params.postedFrom) queryParams.append('postedFrom', params.postedFrom);
+      if (params.postedTo) queryParams.append('postedTo', params.postedTo);
+      queryParams.append('limit', String(LIMIT));
+      queryParams.append('offset', String(offset));
+
+      const response = await fetch(`/api/sam?${queryParams.toString()}`);
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || 'Failed to search opportunities');
+      }
+
+      const data = await response.json();
+      setOpportunities(data.opportunitiesData || []);
+      setTotalRecords(data.totalRecords || 0);
+      setCurrentOffset(offset);
+      setSearchParams(params);
+    } catch (error) {
+      console.error('Error searching:', error);
+      setError(error instanceof Error ? error.message : 'Failed to search opportunities');
+      setOpportunities([]);
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+
+  const handleSearch = (params: SearchParams) => {
+    searchOpportunities(params, 0);
+  };
+
+  const handlePageChange = (direction: 'prev' | 'next') => {
+    const newOffset = direction === 'next' 
+      ? currentOffset + LIMIT 
+      : Math.max(0, currentOffset - LIMIT);
+    searchOpportunities(searchParams, newOffset);
+  };
+
+  const handleSaveOpportunity = async (opportunity: SamOpportunity) => {
+    try {
+      const response = await fetch('/api/contracts', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          opportunity,
+          status: 'reviewing',
+        }),
+      });
+
+      if (response.ok) {
+        const saved = await response.json();
+        setSavedContracts(prev => {
+          const exists = prev.some(c => c.id === saved.id);
+          if (exists) return prev;
+          return [...prev, saved];
+        });
+      }
+    } catch (error) {
+      console.error('Error saving opportunity:', error);
+    }
+  };
+
+  const handleScoreOpportunity = async (opportunity: SamOpportunity) => {
+    if (!companyProfile) {
+      alert('Please set up your company profile first');
+      router.push('/company');
+      return;
+    }
+
+    setScoringId(opportunity.noticeId);
+    try {
+      const response = await fetch('/api/score', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ opportunity }),
+      });
+
+      if (response.ok) {
+        const score = await response.json();
+        
+        // Save the contract with the score
+        const saveResponse = await fetch('/api/contracts', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            opportunity,
+            score,
+            status: 'reviewing',
+          }),
+        });
+
+        if (saveResponse.ok) {
+          const saved = await saveResponse.json();
+          setSavedContracts(prev => {
+            const filtered = prev.filter(c => c.id !== saved.id);
+            return [...filtered, saved];
+          });
+        }
+      } else {
+        const error = await response.json();
+        alert(error.message || 'Failed to score opportunity');
+      }
+    } catch (error) {
+      console.error('Error scoring:', error);
+      alert('Failed to score opportunity');
+    } finally {
+      setScoringId(null);
+    }
+  };
+
+  const handleViewContract = (id: string) => {
+    router.push(`/contracts/${id}`);
+  };
+
+  const isOpportunitySaved = (noticeId: string) => {
+    return savedContracts.some(c => c.id === noticeId);
+  };
+
+  const getOpportunityScore = (noticeId: string) => {
+    const saved = savedContracts.find(c => c.id === noticeId);
+    return saved?.score;
+  };
+
+  // Stats calculations
+  const stats = {
+    total: savedContracts.length,
+    reviewing: savedContracts.filter(c => c.status === 'reviewing').length,
+    pursuing: savedContracts.filter(c => c.status === 'pursuing').length,
+    submitted: savedContracts.filter(c => c.status === 'submitted').length,
+    avgScore: savedContracts.filter(c => c.score).length > 0
+      ? Math.round(
+          savedContracts.filter(c => c.score).reduce((sum, c) => sum + (c.score?.overallScore || 0), 0) /
+          savedContracts.filter(c => c.score).length
+        )
+      : 0,
+  };
+
+  const totalPages = Math.ceil(totalRecords / LIMIT);
+  const currentPage = Math.floor(currentOffset / LIMIT) + 1;
+
+  if (initialLoading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        <div className="container mx-auto px-4 py-8">
+          <div className="space-y-8">
+            <Skeleton className="h-20 w-full" />
+            <div className="grid gap-4 md:grid-cols-4">
+              {[1, 2, 3, 4].map(i => (
+                <Skeleton key={i} className="h-32" />
+              ))}
+            </div>
+            <Skeleton className="h-96 w-full" />
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-slate-100">
+      {/* Header */}
+      <header className="border-b border-slate-700/50 bg-slate-900/50 backdrop-blur-sm sticky top-0 z-50">
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center">
+                <FileText className="h-5 w-5 text-white" />
+              </div>
+              <div>
+                <h1 className="text-xl font-bold tracking-tight">GovContracts</h1>
+                <p className="text-xs text-slate-400">Federal Opportunity Dashboard</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-3">
+              {companyProfile ? (
+                <Link href="/company">
+                  <Button variant="outline" size="sm" className="gap-2 border-slate-600 hover:bg-slate-800">
+                    <Building2 className="h-4 w-4" />
+                    <span className="hidden sm:inline">{companyProfile.name}</span>
+                    <span className="sm:hidden">Profile</span>
+                  </Button>
+                </Link>
+              ) : (
+                <Link href="/company">
+                  <Button size="sm" className="gap-2 bg-amber-500 hover:bg-amber-600 text-slate-900">
+                    <Settings className="h-4 w-4" />
+                    Setup Profile
+                  </Button>
+                </Link>
+              )}
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </header>
+
+      <main className="container mx-auto px-4 py-8">
+        {/* Welcome Banner */}
+        {!companyProfile && (
+          <Card className="mb-8 bg-gradient-to-r from-amber-500/20 to-orange-500/20 border-amber-500/30">
+            <CardContent className="py-6">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-amber-500/20 flex items-center justify-center">
+                  <AlertCircle className="h-6 w-6 text-amber-400" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-semibold text-amber-200">Complete Your Setup</h3>
+                  <p className="text-sm text-amber-300/80">
+                    Set up your company profile to enable AI-powered opportunity scoring and PDF generation.
+                  </p>
+                </div>
+                <Link href="/company">
+                  <Button className="bg-amber-500 hover:bg-amber-600 text-slate-900">
+                    Get Started
+                  </Button>
+                </Link>
+              </div>
+            </CardContent>
+          </Card>
+        )}
+
+        {/* Stats Cards */}
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4 mb-8">
+          <Card className="bg-slate-800/50 border-slate-700/50">
+            <CardHeader className="pb-2">
+              <CardDescription className="text-slate-400">Saved Opportunities</CardDescription>
+              <CardTitle className="text-3xl font-bold text-slate-100">{stats.total}</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="flex items-center gap-1 text-sm text-slate-400">
+                <Bookmark className="h-4 w-4" />
+                <span>Total tracked</span>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-slate-800/50 border-slate-700/50">
+            <CardHeader className="pb-2">
+              <CardDescription className="text-slate-400">Actively Reviewing</CardDescription>
+              <CardTitle className="text-3xl font-bold text-blue-400">{stats.reviewing}</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="flex items-center gap-1 text-sm text-slate-400">
+                <Search className="h-4 w-4" />
+                <span>Under evaluation</span>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-slate-800/50 border-slate-700/50">
+            <CardHeader className="pb-2">
+              <CardDescription className="text-slate-400">Pursuing</CardDescription>
+              <CardTitle className="text-3xl font-bold text-emerald-400">{stats.pursuing}</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="flex items-center gap-1 text-sm text-slate-400">
+                <TrendingUp className="h-4 w-4" />
+                <span>Active pursuits</span>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-slate-800/50 border-slate-700/50">
+            <CardHeader className="pb-2">
+              <CardDescription className="text-slate-400">Average Score</CardDescription>
+              <CardTitle className="text-3xl font-bold text-amber-400">
+                {stats.avgScore > 0 ? stats.avgScore : '—'}
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="flex items-center gap-1 text-sm text-slate-400">
+                <Sparkles className="h-4 w-4" />
+                <span>AI fit score</span>
+              </div>
+            </CardContent>
+          </Card>
         </div>
+
+        {/* Main Content */}
+        <Tabs defaultValue="search" className="space-y-6">
+          <TabsList className="bg-slate-800/50 border border-slate-700/50">
+            <TabsTrigger value="search" className="gap-2 data-[state=active]:bg-slate-700">
+              <Search className="h-4 w-4" />
+              Search Opportunities
+            </TabsTrigger>
+            <TabsTrigger value="saved" className="gap-2 data-[state=active]:bg-slate-700">
+              <Bookmark className="h-4 w-4" />
+              Saved ({stats.total})
+            </TabsTrigger>
+          </TabsList>
+
+          <TabsContent value="search" className="space-y-6">
+            {/* Quick Search Buttons */}
+            <Card className="bg-slate-800/50 border-slate-700/50">
+              <CardHeader className="pb-3">
+                <CardTitle className="text-sm font-medium flex items-center gap-2 text-slate-300">
+                  <Zap className="h-4 w-4 text-amber-400" />
+                  Quick Search (Cached)
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-wrap gap-2">
+                  {quickSearches.map((qs, idx) => (
+                    <Button
+                      key={idx}
+                      variant="outline"
+                      size="sm"
+                      className="border-slate-600 hover:bg-amber-500/20 hover:border-amber-500/50 hover:text-amber-200"
+                      onClick={() => {
+                        if (qs.naicsCode) {
+                          searchOpportunities({ naicsCode: qs.naicsCode }, 0);
+                        } else {
+                          searchOpportunities({ keyword: qs.keyword }, 0);
+                        }
+                      }}
+                      disabled={loading}
+                    >
+                      {qs.label}
+                    </Button>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Search Filters */}
+            <SearchFilters onSearch={handleSearch} loading={loading} />
+
+            {/* Error Message */}
+            {error && (
+              <Card className="bg-red-500/10 border-red-500/30">
+                <CardContent className="py-4">
+                  <div className="flex items-center gap-3">
+                    <AlertCircle className="h-5 w-5 text-red-400" />
+                    <div>
+                      <p className="font-medium text-red-200">Search Error</p>
+                      <p className="text-sm text-red-300/80">{error}</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            )}
+
+            {/* Results */}
+            {loading ? (
+              <div className="space-y-4">
+                {[1, 2, 3].map(i => (
+                  <Card key={i} className="bg-slate-800/50 border-slate-700/50">
+                    <CardContent className="py-6">
+                      <div className="space-y-4">
+                        <Skeleton className="h-6 w-3/4 bg-slate-700" />
+                        <Skeleton className="h-4 w-1/2 bg-slate-700" />
+                        <Skeleton className="h-20 w-full bg-slate-700" />
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            ) : opportunities.length > 0 ? (
+              <>
+                <div className="flex items-center justify-between text-sm text-slate-400">
+                  <span>
+                    Showing {currentOffset + 1} - {Math.min(currentOffset + LIMIT, totalRecords)} of {totalRecords.toLocaleString()} results
+                  </span>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={() => searchOpportunities(searchParams, currentOffset)}
+                    className="gap-2"
+                  >
+                    <RefreshCw className="h-4 w-4" />
+                    Refresh
+                  </Button>
+                </div>
+
+                <div className="space-y-4">
+                  {opportunities.map(opp => (
+                    <ContractCard
+                      key={opp.noticeId}
+                      opportunity={opp}
+                      score={getOpportunityScore(opp.noticeId)}
+                      isSaved={isOpportunitySaved(opp.noticeId)}
+                      onSave={() => handleSaveOpportunity(opp)}
+                      onScore={() => handleScoreOpportunity(opp)}
+                      onView={() => handleViewContract(opp.noticeId)}
+                      scoring={scoringId === opp.noticeId}
+                    />
+                  ))}
+                </div>
+
+                {/* Pagination */}
+                {totalPages > 1 && (
+                  <div className="flex items-center justify-center gap-4 pt-4">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={() => handlePageChange('prev')}
+                      disabled={currentOffset === 0}
+                      className="gap-2 border-slate-600 hover:bg-slate-800"
+                    >
+                      <ChevronLeft className="h-4 w-4" />
+                      Previous
+                    </Button>
+                    <span className="text-sm text-slate-400">
+                      Page {currentPage} of {totalPages}
+                    </span>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={() => handlePageChange('next')}
+                      disabled={currentOffset + LIMIT >= totalRecords}
+                      className="gap-2 border-slate-600 hover:bg-slate-800"
+                    >
+                      Next
+                      <ChevronRight className="h-4 w-4" />
+                    </Button>
+                  </div>
+                )}
+              </>
+            ) : searchParams.keyword || searchParams.naicsCode ? (
+              <Card className="bg-slate-800/50 border-slate-700/50">
+                <CardContent className="py-12 text-center">
+                  <Search className="h-12 w-12 mx-auto text-slate-600 mb-4" />
+                  <h3 className="text-lg font-medium text-slate-300">No Results Found</h3>
+                  <p className="text-slate-400 mt-1">
+                    Try adjusting your search filters or keywords
+                  </p>
+                </CardContent>
+              </Card>
+            ) : (
+              <Card className="bg-slate-800/50 border-slate-700/50">
+                <CardContent className="py-12 text-center">
+                  <Search className="h-12 w-12 mx-auto text-slate-600 mb-4" />
+                  <h3 className="text-lg font-medium text-slate-300">Search Federal Opportunities</h3>
+                  <p className="text-slate-400 mt-1">
+                    Enter keywords, NAICS codes, or use filters to find relevant contract opportunities from SAM.gov
+                  </p>
+                </CardContent>
+              </Card>
+            )}
+          </TabsContent>
+
+          <TabsContent value="saved" className="space-y-4">
+            {savedContracts.length > 0 ? (
+              <>
+                {/* Filter by status */}
+                <div className="flex gap-2 flex-wrap">
+                  <Badge variant="outline" className="cursor-pointer border-slate-600">
+                    All ({stats.total})
+                  </Badge>
+                  <Badge variant="outline" className="cursor-pointer border-slate-600">
+                    Reviewing ({stats.reviewing})
+                  </Badge>
+                  <Badge variant="outline" className="cursor-pointer border-slate-600">
+                    Pursuing ({stats.pursuing})
+                  </Badge>
+                  <Badge variant="outline" className="cursor-pointer border-slate-600">
+                    Submitted ({stats.submitted})
+                  </Badge>
+                </div>
+
+                <div className="space-y-4">
+                  {savedContracts.map(contract => (
+                    <ContractCard
+                      key={contract.id}
+                      opportunity={contract.opportunity}
+                      score={contract.score}
+                      isSaved={true}
+                      onView={() => handleViewContract(contract.id)}
+                    />
+                  ))}
+                </div>
+              </>
+            ) : (
+              <Card className="bg-slate-800/50 border-slate-700/50">
+                <CardContent className="py-12 text-center">
+                  <Bookmark className="h-12 w-12 mx-auto text-slate-600 mb-4" />
+                  <h3 className="text-lg font-medium text-slate-300">No Saved Opportunities</h3>
+                  <p className="text-slate-400 mt-1">
+                    Search for opportunities and save ones that interest you
+                  </p>
+                </CardContent>
+              </Card>
+            )}
+          </TabsContent>
+        </Tabs>
       </main>
+
+      {/* Footer */}
+      <footer className="border-t border-slate-700/50 mt-12">
+        <div className="container mx-auto px-4 py-6">
+          <div className="flex items-center justify-between text-sm text-slate-400">
+            <p>GovContracts Dashboard — Federal Opportunity Management</p>
+            <p>Data sourced from SAM.gov</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
