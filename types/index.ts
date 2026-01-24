@@ -185,3 +185,79 @@ export interface ApiError {
   message: string;
   statusCode: number;
 }
+
+// Agent System Types
+export interface AgentRun {
+  id: string;
+  status: 'selecting' | 'awaiting_approval' | 'generating' | 'completed' | 'error';
+  startedAt: string;
+  completedAt?: string;
+  selectedOpportunities: SelectedOpportunity[];
+  selectionReasoning: SelectionReasoning;
+  generatedProposals?: GeneratedProposal[];
+  costTracking?: CostTracking;
+  error?: string;
+}
+
+export interface SelectedOpportunity {
+  opportunity: SamOpportunity;
+  selectionScore: number;
+  factors: SelectionFactors;
+  reasoning: string;
+}
+
+export interface SelectionFactors {
+  aiScoreFactor: number;      // 0-100
+  naicsMatchFactor: number;    // 0-100
+  deadlineProximityFactor: number; // 0-100
+  capabilityAlignmentFactor: number; // 0-100
+  setAsideEligibilityFactor: number; // 0-100
+  weightedScore: number;       // Final weighted score
+}
+
+export interface SelectionReasoning {
+  totalEvaluated: number;
+  searchCriteria: SearchParams;
+  selectionStrategy: string;
+  factorWeights: Record<string, number>;
+  decisionLog: string[];
+}
+
+export interface GeneratedProposal {
+  opportunityId: string;
+  score: OpportunityScore;
+  proposalOutline: string;
+  generatedAt: string;
+}
+
+export interface CostTracking {
+  selectionPhase: {
+    totalTokens: number;
+    promptTokens: number;
+    completionTokens: number;
+    estimatedCost: number;
+    cachedScores: number;
+    newScores: number;
+  };
+  proposalPhase?: {
+    totalTokens: number;
+    promptTokens: number;
+    completionTokens: number;
+    estimatedCost: number;
+  };
+  totalCost: number;
+  totalTokens: number;
+}
+
+export interface CachedOpportunityScore {
+  opportunityId: string;
+  score: OpportunityScore;
+  cachedAt: string;
+  companyProfileId: string; // Invalidate if company profile changes
+}
+
+export interface TokenUsage {
+  promptTokens: number;
+  completionTokens: number;
+  totalTokens: number;
+}

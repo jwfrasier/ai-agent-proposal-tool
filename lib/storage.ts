@@ -1,11 +1,13 @@
 import { promises as fs } from 'fs';
 import path from 'path';
-import type { CompanyProfile, SavedContract, SamApiResponse, SamOpportunity } from '@/types';
+import type { CompanyProfile, SavedContract, SamApiResponse, SamOpportunity, AgentRun, CachedOpportunityScore, OpportunityScore } from '@/types';
 
 const DATA_DIR = path.join(process.cwd(), 'data');
 const COMPANY_PROFILE_FILE = path.join(DATA_DIR, 'company-profile.json');
 const SAVED_CONTRACTS_FILE = path.join(DATA_DIR, 'saved-contracts.json');
 const SAM_CACHE_FILE = path.join(DATA_DIR, 'sam-cache.json');
+const AGENT_RESULTS_FILE = path.join(DATA_DIR, 'agent-results.json');
+const SCORE_CACHE_FILE = path.join(DATA_DIR, 'opportunity-scores-cache.json');
 
 // Cache expiry in milliseconds (24 hours)
 const CACHE_EXPIRY_MS = 24 * 60 * 60 * 1000;
@@ -228,3 +230,142 @@ export const defaultSearchQueries = [
   { naicsCode: '541511', label: 'Custom Programming (541511)' },
   { naicsCode: '541512', label: 'Systems Design (541512)' },
 ];
+
+// Agent Run Operations
+export async function saveAgentRun(run: AgentRun): Promise<void> {
+  await ensureDataDir();
+  let runs: AgentRun[] = [];
+  
+  try {
+    const data = await fs.readFile(AGENT_RESULTS_FILE, 'utf-8');
+    runs = JSON.parse(data);
+  } catch {
+    // File doesn't exist yet, start with empty array
+  }
+  
+  // Find and update existing run or add new one
+  const existingIndex = runs.findIndex(r => r.id === run.id);
+  if (existingIndex >= 0) {
+    runs[existingIndex] = run;
+  } else {
+    runs.unshift(run); // Add to beginning
+  }
+  
+  // Keep only last 20 runs
+  runs = runs.slice(0, 20);
+  
+  await fs.writeFile(AGENT_RESULTS_FILE, JSON.stringify(runs, null, 2));
+}
+
+export async function getAgentRun(runId: string): Promise<AgentRun | null> {
+  try {
+    await ensureDataDir();
+    const data = await fs.readFile(AGENT_RESULTS_FILE, 'utf-8');
+    const runs: AgentRun[] = JSON.parse(data);
+    return runs.find(r => r.id === runId) || null;
+  } catch {
+    return null;
+  }
+}
+
+export async function getAllAgentRuns(): Promise<AgentRun[]> {
+  try {
+    await ensureDataDir();
+    const data = await fs.readFile(AGENT_RESULTS_FILE, 'utf-8');
+    return JSON.parse(data);
+  } catch {
+    return [];
+  }
+}
+
+export async function deleteAgentRun(runId: string): Promise<boolean> {
+  try {
+    await ensureDataDir();
+    const data = await fs.readFile(AGENT_RESULTS_FILE, 'utf-8');
+    const runs: AgentRun[] = JSON.parse(data);
+    const filtered = runs.filter(r => r.id !== runId);
+    
+    if (filtered.length === runs.length) {
+      return false; // Run not found
+    }
+    
+    await fs.writeFile(AGENT_RESULTS_FILE, JSON.stringify(filtered, null, 2));
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+// Opportunity Score Cache Operations
+const SCORE_CACHE_EXPIRY_MS = 24 * 60 * 60 * 1000; // 24 hours
+
+export async function getCachedScore(
+  opportunityId: string,
+  companyProfileId: string
+): Promise<OpportunityScore | null> {
+  try {
+    await ensureDataDir();
+    const data = await fs.readFile(SCORE_CACHE_FILE, 'utf-8');
+    const cache: CachedOpportunityScore[] = JSON.parse(data);
+    
+    const cached = cache.find(
+      c => c.opportunityId === opportunityId && c.companyProfileId === companyProfileId
+    );
+    
+    if (!cached) return null;
+    
+    // Check if cache is expired
+    const cachedTime = new Date(cached.cachedAt).getTime();
+    if (Date.now() - cachedTime > SCORE_CACHE_EXPIRY_MS) {
+      return null;
+    }
+    
+    return cached.score;
+  } catch {
+    return null;
+  }
+}
+
+export async function setCachedScore(
+  opportunityId: string,
+  score: OpportunityScore,
+  companyProfileId: string
+): Promise<void> {
+  await ensureDataDir();
+  
+  let cache: CachedOpportunityScore[] = [];
+  try {
+    const existing = await fs.readFile(SCORE_CACHE_FILE, 'utf-8');
+    cache = JSON.parse(existing);
+  } catch {
+    // File doesn't exist yet
+  }
+  
+  // Remove existing entry for this opportunity + company combo
+  cache = cache.filter(
+    c => !(c.opportunityId === opportunityId && c.companyProfileId === companyProfileId)
+  );
+  
+  // Add new entry
+  cache.push({
+    opportunityId,
+    score,
+    cachedAt: new Date().toISOString(),
+    companyProfileId,
+  });
+  
+  // Keep only last 500 cached scores
+  if (cache.length > 500) {
+    cache = cache.slice(-500);
+  }
+  
+  await fs.writeFile(SCORE_CACHE_FILE, JSON.stringify(cache, null, 2));
+}
+
+export async function clearScoreCache(): Promise<void> {
+  try {
+    await fs.unlink(SCORE_CACHE_FILE);
+  } catch {
+    // File doesn't exist
+  }
+}

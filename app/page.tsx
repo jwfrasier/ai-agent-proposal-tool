@@ -349,6 +349,16 @@ export default function DashboardPage() {
               </div>
             </div>
             <div className="flex items-center gap-3">
+              <Link href="/agent">
+                <Button
+                  size="sm"
+                  className="gap-2 bg-blue-600 hover:bg-blue-700"
+                >
+                  <Sparkles className="h-4 w-4" />
+                  <span className="hidden sm:inline">AI Agent</span>
+                  <span className="sm:hidden">Agent</span>
+                </Button>
+              </Link>
               {companyProfile ? (
                 <Link href="/company">
                   <Button

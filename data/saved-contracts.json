@@ -401,5 +401,127 @@
     "status": "reviewing",
     "savedAt": "2026-01-12T19:01:08.844Z",
     "updatedAt": "2026-01-12T19:01:08.844Z"
+  },
+  {
+    "id": "fe3e79e534614e099f16a133f1ef7891",
+    "opportunity": {
+      "noticeId": "fe3e79e534614e099f16a133f1ef7891",
+      "title": "Outreach Support Services",
+      "solicitationNumber": "W911NF26RA002",
+      "fullParentPathName": "DEPT OF DEFENSE.DEPT OF THE ARMY.AMC.ACC.ACC-CTRS.ACC-APG.W6QK ACC-APG DURHAM",
+      "fullParentPathCode": "021.2100.AMC.ACC.ACC-CTRS.ACC-APG.W911NF",
+      "postedDate": "2026-01-21",
+      "type": "Solicitation",
+      "baseType": "Solicitation",
+      "archiveType": "auto15",
+      "archiveDate": "2026-03-21",
+      "typeOfSetAsideDescription": "Women-Owned Small Business",
+      "typeOfSetAside": "WOSB",
+      "responseDeadLine": "2026-03-06T16:00:00-05:00",
+      "naicsCode": "541990",
+      "naicsCodes": [
+        "541990"
+      ],
+      "classificationCode": "R408",
+      "active": "Yes",
+      "award": null,
+      "pointOfContact": [
+        {
+          "fax": "",
+          "type": "primary",
+          "email": "william.a.creech3.civ@army.mil",
+          "phone": "9195494387",
+          "title": null,
+          "fullName": "William A Creech"
+        },
+        {
+          "fax": "",
+          "type": "secondary",
+          "email": "mia.a.steele2.civ@army.mil",
+          "phone": "9195410996",
+          "title": null,
+          "fullName": "Mia A Steele"
+        }
+      ],
+      "description": "<p>The primary objective is to establish and strengthen networks that connect the U.S. Department of Defense and U.S. Army DEVCOM Army Research Laboratory&nbsp;(DEVCOM ARL) and its Government Partners with academia, industry, and other government agencies. These networks aim to promote the exchange of scientific ideas, the generation of&nbsp;knowledge, and the development of a skilled research and engineering workforce through the implementation of K-12 and university focused science and technology education and outreach&nbsp;initiatives. These efforts support the nation&#39;s need for an agile, highly capable, and technically proficient talent pool. To achieve these goals, The DoD and Army&#39;s vision includes developing&nbsp;a comprehensive pipeline of outreach programs that equip individuals with the skills and experience necessary for the future workforce. This network also supports the achievement of&nbsp;DoD and Army objectives and helps maintain the United States&#39; leadership in science and technology.</p>\n",
+      "organizationType": "OFFICE",
+      "officeAddress": {
+        "zipcode": "27709-2211",
+        "city": "RESEARCH TRIANGLE PAR",
+        "countryCode": "USA",
+        "state": "NC"
+      },
+      "placeOfPerformance": {
+        "city": {
+          "code": "175",
+          "name": "Aberdeen Proving Ground"
+        },
+        "state": {
+          "code": "MD",
+          "name": "Maryland"
+        },
+        "country": {
+          "code": "USA",
+          "name": "UNITED STATES"
+        }
+      },
+      "additionalInfoLink": null,
+      "uiLink": "https://sam.gov/workspace/contract/opp/fe3e79e534614e099f16a133f1ef7891/view",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=fe3e79e534614e099f16a133f1ef7891&limit=1"
+        }
+      ],
+      "resourceLinks": [
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/423d40ffabca4f39a081747c2502df9a/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/7456007f21c444628f92c5677b130af1/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/7945a6d7e09746479fb2b1fb882880c2/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/9343e269d5b94877b666d78e154a64ec/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/cc205d82b36a402881d591cff0db5959/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/ded28105b50b4d21815552136e250f07/download"
+      ]
+    },
+    "score": {
+      "opportunityId": "fe3e79e534614e099f16a133f1ef7891",
+      "overallScore": 60,
+      "naicsMatch": 40,
+      "capabilityMatch": 70,
+      "pastPerformanceRelevance": 50,
+      "setAsideEligibility": 100,
+      "analysis": {
+        "summary": "Iron Grove Technologies has a moderate alignment with the Outreach Support Services opportunity, primarily due to its technical capabilities. However, the lack of direct experience in educational outreach and networking initiatives presents a challenge.",
+        "strengths": [
+          "Strong technical expertise in software development and integration.",
+          "Agile delivery model allowing for quick adaptation to project needs.",
+          "Eligibility as a Women-Owned Small Business set-aside."
+        ],
+        "weaknesses": [
+          "Limited past performance directly related to education and outreach.",
+          "NAICS code alignment is weak as the primary NAICS for this opportunity is 541990, which is not a core competency for the company.",
+          "Small team size may limit capacity for large-scale outreach initiatives."
+        ],
+        "keyRequirements": [
+          "Establish and strengthen networks with academia and industry.",
+          "Develop outreach programs for K-12 and university education.",
+          "Promote the exchange of scientific ideas and workforce development."
+        ],
+        "recommendedActions": [
+          "Consider partnerships with organizations that have experience in educational outreach.",
+          "Explore training or hiring personnel with expertise in educational program development.",
+          "Conduct market research to understand the specific needs and expectations of the DoD and Army in this area."
+        ],
+        "relevantPastPerformance": [
+          "Custom LLM implementation with Python backend and Next.js frontend"
+        ],
+        "bidNoGoBid": "NO-GO",
+        "reasoning": "While Iron Grove Technologies has strong technical capabilities, the lack of direct experience in outreach and education initiatives, coupled with a weak NAICS alignment, suggests that pursuing this opportunity may not be the best fit. The company would need to significantly adapt its offerings and build new partnerships to meet the requirements effectively."
+      },
+      "scoredAt": "2026-01-21T18:09:23.732Z"
+    },
+    "notes": "",
+    "status": "reviewing",
+    "savedAt": "2026-01-21T18:09:23.745Z",
+    "updatedAt": "2026-01-21T18:09:23.745Z"
   }
 ]

@@ -1,5 +1,5 @@
 import OpenAI from 'openai';
-import type { CompanyProfile, SamOpportunity, OpportunityScore, ScoreAnalysis } from '@/types';
+import type { CompanyProfile, SamOpportunity, OpportunityScore, ScoreAnalysis, TokenUsage } from '@/types';
 
 function getOpenAIClient() {
   const apiKey = process.env.OPENAI_API_KEY;
@@ -13,6 +13,14 @@ export async function scoreOpportunity(
   opportunity: SamOpportunity,
   companyProfile: CompanyProfile
 ): Promise<OpportunityScore> {
+  const result = await scoreOpportunityWithTokens(opportunity, companyProfile);
+  return result.score;
+}
+
+export async function scoreOpportunityWithTokens(
+  opportunity: SamOpportunity,
+  companyProfile: CompanyProfile
+): Promise<{ score: OpportunityScore; tokenUsage: TokenUsage }> {
   const prompt = buildScoringPrompt(opportunity, companyProfile);
   const openai = getOpenAIClient();
   
@@ -60,7 +68,7 @@ You must respond with valid JSON only, no markdown formatting. The JSON should m
   // Parse the JSON response
   const parsed = JSON.parse(content);
   
-  return {
+  const score: OpportunityScore = {
     opportunityId: opportunity.noticeId,
     overallScore: parsed.overallScore,
     naicsMatch: parsed.naicsMatch,
@@ -70,6 +78,14 @@ You must respond with valid JSON only, no markdown formatting. The JSON should m
     analysis: parsed.analysis as ScoreAnalysis,
     scoredAt: new Date().toISOString(),
   };
+  
+  const tokenUsage: TokenUsage = {
+    promptTokens: response.usage?.prompt_tokens || 0,
+    completionTokens: response.usage?.completion_tokens || 0,
+    totalTokens: response.usage?.total_tokens || 0,
+  };
+  
+  return { score, tokenUsage };
 }
 
 function buildScoringPrompt(opportunity: SamOpportunity, company: CompanyProfile): string {
@@ -152,6 +168,15 @@ export async function generateProposalOutline(
   companyProfile: CompanyProfile,
   score: OpportunityScore
 ): Promise<string> {
+  const result = await generateProposalOutlineWithTokens(opportunity, companyProfile, score);
+  return result.outline;
+}
+
+export async function generateProposalOutlineWithTokens(
+  opportunity: SamOpportunity,
+  companyProfile: CompanyProfile,
+  score: OpportunityScore
+): Promise<{ outline: string; tokenUsage: TokenUsage }> {
   const openai = getOpenAIClient();
   const response = await openai.chat.completions.create({
     model: 'gpt-4o-mini',
@@ -284,5 +309,61 @@ Make this a working document that could guide actual proposal development. Be sp
     max_tokens: 4000,
   });
   
-  return response.choices[0]?.message?.content || '';
+  const outline = response.choices[0]?.message?.content || '';
+  
+  const tokenUsage: TokenUsage = {
+    promptTokens: response.usage?.prompt_tokens || 0,
+    completionTokens: response.usage?.completion_tokens || 0,
+    totalTokens: response.usage?.total_tokens || 0,
+  };
+  
+  return { outline, tokenUsage };
+}
+
+export async function extractKeyRequirements(
+  description: string
+): Promise<string[]> {
+  if (!description || description.trim().length === 0) {
+    return [];
+  }
+
+  const openai = getOpenAIClient();
+  
+  try {
+    const response = await openai.chat.completions.create({
+      model: 'gpt-4o-mini',
+      messages: [
+        {
+          role: 'system',
+          content: `You are an expert at analyzing government contract solicitations. Extract the key technical requirements, deliverables, qualifications, and capabilities needed from the solicitation description. Return ONLY a valid JSON array of strings, with each string being a specific requirement or capability needed. Focus on technical skills, certifications, experience levels, specific technologies, and deliverable requirements. Maximum 15 items.`
+        },
+        {
+          role: 'user',
+          content: `Extract key requirements from this solicitation:\n\n${description.substring(0, 3000)}`
+        }
+      ],
+      temperature: 0.2,
+      max_tokens: 1000,
+    });
+    
+    const content = response.choices[0]?.message?.content;
+    if (!content) {
+      return [];
+    }
+    
+    // Parse JSON array
+    try {
+      const requirements = JSON.parse(content);
+      if (Array.isArray(requirements)) {
+        return requirements.filter(r => typeof r === 'string' && r.length > 0);
+      }
+      return [];
+    } catch {
+      // If not valid JSON, try to extract from text
+      return [];
+    }
+  } catch (error) {
+    console.error('Error extracting requirements:', error);
+    return [];
+  }
 }
