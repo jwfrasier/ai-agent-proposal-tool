@@ -1,0 +1,33 @@
+{
+  "totalRecords": 2,
+  "limit": 25,
+  "offset": 0,
+  "opportunitiesData": [
+    {
+      "noticeId": "abc123",
+      "title": "Janitorial Services",
+      "fullParentPathName": "DEPT OF DEFENSE.ARMY",
+      "naicsCode": "561720",
+      "typeOfSetAsideDescription": "Total Small Business Set-Aside",
+      "postedDate": "2026-05-19",
+      "responseDeadLine": "2026-06-15T17:00:00-04:00",
+      "awardCeiling": "150000",
+      "placeOfPerformance": { "city": { "name": "Fort Bragg" }, "state": { "code": "NC" } },
+      "description": "Provide janitorial services...",
+      "uiLink": "https://sam.gov/opp/abc123/view"
+    },
+    {
+      "noticeId": "def456",
+      "title": "IT Help Desk",
+      "fullParentPathName": "GSA",
+      "naicsCode": "541512",
+      "typeOfSetAsideDescription": "WOSB",
+      "postedDate": "2026-05-20",
+      "responseDeadLine": "2026-06-20T17:00:00-04:00",
+      "awardCeiling": "275000",
+      "placeOfPerformance": { "city": { "name": "Arlington" }, "state": { "code": "VA" } },
+      "description": "Tier 1 help desk support...",
+      "uiLink": "https://sam.gov/opp/def456/view"
+    }
+  ]
+}
