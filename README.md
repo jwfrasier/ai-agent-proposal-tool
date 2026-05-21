@@ -1,165 +1,56 @@
 # GovContracts Dashboard
 
-A Next.js application for searching, analyzing, and managing federal government contract opportunities from SAM.gov with AI-powered scoring and PDF generation.
+Personal-use federal contract opportunity tracker. Each morning, pulls fresh SAM.gov opportunities matching configured NAICS codes (≤ $350k award ceiling), scores them against a company profile using Claude Sonnet 4.6, and surfaces the top picks as an inbox-style dashboard. Generates capability statements, GO/NO-GO analyses, proposal outlines, and compliance matrices on demand.
 
-## Features
+## Stack
 
-- **Contract Search**: Search SAM.gov federal opportunities by keyword, NAICS code, set-aside type, and date ranges
-- **Company Profile**: Configure your company's capabilities, certifications, and past performance
-- **AI-Powered Scoring**: Analyze opportunities against your company profile using OpenAI GPT-4
-- **Opportunity Management**: Save, track, and manage opportunities through their lifecycle
-- **PDF Generation**: Generate capability statements, opportunity analyses, and proposal outlines
+Next.js 16 (App Router, React 19) · SQLite via better-sqlite3 + Drizzle ORM · Anthropic SDK (tool-use structured outputs) · Tailwind v4 + shadcn/ui · pino · vitest. Deployed as one Fly machine.
 
-## Getting Started
+## Local development
 
-### Prerequisites
-
-- Node.js 18+ 
-- npm or yarn
-- SAM.gov API Key (free registration at [SAM.gov](https://sam.gov))
-- OpenAI API Key (from [OpenAI Platform](https://platform.openai.com))
-
-### Installation
-
-1. Clone the repository:
-```bash
-cd govcontracts-dashboard
-```
-
-2. Install dependencies:
 ```bash
 npm install
-```
-
-3. Create a `.env.local` file with your API keys:
-```env
-OPENAI_API_KEY=your_openai_api_key_here
-SAM_GOV_API_KEY=your_sam_gov_api_key_here
-```
-
-4. Run the development server:
-```bash
+cp .env.example .env.local   # fill in keys
+npm run db:migrate
 npm run dev
 ```
 
-5. Open [http://localhost:3000](http://localhost:3000) in your browser.
+Visit http://localhost:3000.
 
-## Getting API Keys
+### Required env vars
 
-### SAM.gov API Key
+| Var | Notes |
+|---|---|
+| `ANTHROPIC_API_KEY` | From console.anthropic.com |
+| `SAM_GOV_API_KEY`   | From sam.gov account → API keys |
+| `CRON_SECRET`       | 16+ char random string; matches GitHub secret |
+| `DAILY_COST_CAP_USD`| Per-run AI spend cap; default 2.00 |
+| `DATABASE_URL`      | Path to SQLite file; default `./data/govcontracts.db` |
+| `ANTHROPIC_MODEL`   | Default `claude-sonnet-4-6` |
 
-1. Go to [SAM.gov](https://sam.gov)
-2. Create an account or sign in
-3. Navigate to your account settings
-4. Request an API key from the API section
-5. The key will be emailed to you (may take a few days)
+## Running the daily job manually
 
-### OpenAI API Key
-
-1. Go to [OpenAI Platform](https://platform.openai.com)
-2. Create an account or sign in
-3. Navigate to API Keys
-4. Create a new secret key
-5. Copy and save the key securely
-
-## Usage
-
-### 1. Set Up Company Profile
-
-Before scoring opportunities, configure your company profile:
-
-- Navigate to the Company Profile page
-- Enter your company details (UEI, CAGE code, NAICS codes)
-- Add your capabilities and past performance
-- Select relevant small business certifications
-- Save your profile
-
-### 2. Search Opportunities
-
-Use the search interface to find relevant contracts:
-
-- Enter keywords related to your services
-- Filter by NAICS code for targeted results
-- Select set-aside types matching your certifications
-- Use date filters for recent opportunities
-
-### 3. Score & Analyze
-
-Select interesting opportunities and use AI scoring:
-
-- Click "AI Score" on any opportunity
-- Review the detailed analysis including:
-  - Overall fit score (0-100)
-  - NAICS code match
-  - Capability alignment
-  - Past performance relevance
-  - Set-aside eligibility
-  - GO/NO-GO recommendation
-
-### 4. Generate Documents
-
-Create submission-ready documents:
-
-- **Capability Statement**: Company overview PDF
-- **Opportunity Analysis**: Detailed scoring report
-- **Proposal Outline**: AI-generated proposal structure
-
-## Project Structure
-
-```
-govcontracts-dashboard/
-├── app/
-│   ├── page.tsx                 # Dashboard home
-│   ├── company/page.tsx         # Company profile editor
-│   ├── contracts/[id]/page.tsx  # Contract detail view
-│   └── api/
-│       ├── company/route.ts     # Company profile API
-│       ├── sam/route.ts         # SAM.gov proxy
-│       ├── score/route.ts       # AI scoring
-│       ├── contracts/route.ts   # Saved contracts
-│       └── pdf/route.ts         # PDF generation
-├── components/
-│   ├── ui/                      # shadcn/ui components
-│   ├── ContractCard.tsx
-│   ├── ScoreDisplay.tsx
-│   ├── SearchFilters.tsx
-│   ├── CompanyProfileForm.tsx
-│   └── PDFTemplates/
-├── lib/
-│   ├── sam-api.ts               # SAM.gov API client
-│   ├── openai.ts                # OpenAI integration
-│   ├── pdf-generator.ts         # PDF utilities
-│   ├── storage.ts               # JSON file operations
-│   └── utils.ts
-├── data/                        # Local JSON storage
-│   ├── company-profile.json
-│   └── saved-contracts.json
-└── types/
-    └── index.ts                 # TypeScript types
+```bash
+curl -X POST -H "x-cron-secret: $CRON_SECRET" http://localhost:3000/api/cron/run-daily
 ```
 
-## Tech Stack
+## Deploying to Fly
 
-- **Framework**: Next.js 14 (App Router)
-- **UI**: Tailwind CSS + shadcn/ui
-- **AI**: OpenAI GPT-4
-- **PDF**: @react-pdf/renderer
-- **Icons**: Lucide React
-- **Data**: SAM.gov Public API
+```bash
+fly launch --no-deploy            # accept the existing fly.toml
+fly volumes create govcontracts_data --size 1 --region iad
+fly secrets set ANTHROPIC_API_KEY=... SAM_GOV_API_KEY=... CRON_SECRET=... DAILY_COST_CAP_USD=2.00
+fly deploy
+```
 
-## Data Storage
+Then in GitHub repo settings → Secrets, add `CRON_SECRET` and `APP_URL` (e.g. `https://govcontracts.fly.dev`). The `.github/workflows/cron.yml` workflow fires daily at 13:00 UTC.
 
-This application uses local JSON files for data storage:
+## Architecture
 
-- `data/company-profile.json` - Your company profile
-- `data/saved-contracts.json` - Saved opportunities and scores
+See `docs/superpowers/specs/2026-05-21-govcontracts-rebuild-design.md`.
 
-For production use, consider migrating to a proper database.
+## Tests
 
-## License
-
-MIT License - See LICENSE file for details.
-
-## Disclaimer
-
-This application is not affiliated with SAM.gov or any government agency. Always verify opportunity details on the official SAM.gov website before submitting proposals.
+```bash
+npm test                 # vitest unit + integration
+```

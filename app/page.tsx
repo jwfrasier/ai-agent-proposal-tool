@@ -7,8 +7,9 @@ import { CronRunCard } from '@/components/CronRunCard';
 export const dynamic = 'force-dynamic';
 
 export default async function DashboardPage() {
+  const now = new Date();
   const lastRun = db.select().from(schema.cronRuns).orderBy(desc(schema.cronRuns.startedAt)).limit(1).get();
-  const lastRunStart = lastRun?.startedAt ?? new Date(Date.now() - 86400_000);
+  const lastRunStart = lastRun?.startedAt ?? new Date(now.getTime() - 86400_000);
 
   const allOpps = db.select().from(schema.opportunities).all();
   const newSinceLastRun = allOpps.filter((o) => o.firstSeenAt.getTime() >= lastRunStart.getTime());
@@ -30,7 +31,7 @@ export default async function DashboardPage() {
   return (
     <div className="space-y-8">
       <section>
-        <h1 className="mb-2 text-2xl font-semibold">Today's picks</h1>
+        <h1 className="mb-2 text-2xl font-semibold">Today&apos;s picks</h1>
         <TodaysPicks picks={picks} />
       </section>
 
