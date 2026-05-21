@@ -1,36 +1,17 @@
-import type { Metadata } from "next";
-import { Space_Grotesk, JetBrains_Mono } from "next/font/google";
-import "./globals.css";
+import './globals.css';
+import { AppNav } from '@/components/AppNav';
 
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-sans",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  variable: "--font-mono",
-  subsets: ["latin"],
-  weight: ["400", "500"],
-});
-
-export const metadata: Metadata = {
-  title: "GovContracts Dashboard | Federal Opportunity Management",
-  description: "Search, analyze, and manage federal government contract opportunities from SAM.gov with AI-powered scoring and PDF generation.",
-  keywords: ["government contracts", "SAM.gov", "federal opportunities", "procurement", "small business"],
+export const metadata = {
+  title: 'GovContracts',
+  description: 'SAT-range federal contract opportunity tracker',
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="dark">
-      <body
-        className={`${spaceGrotesk.variable} ${jetbrainsMono.variable} font-sans antialiased`}
-      >
-        {children}
+    <html lang="en">
+      <body className="min-h-screen bg-background text-foreground antialiased">
+        <AppNav />
+        <main className="mx-auto max-w-6xl px-6 py-8">{children}</main>
       </body>
     </html>
   );
