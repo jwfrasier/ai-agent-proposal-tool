@@ -57,6 +57,33 @@ export async function samFetch(
   throw new Error(`SAM request failed after ${MAX_RETRIES} attempts: ${String(lastErr)}`);
 }
 
+// SAM's `description` field is a URL to a separate endpoint that returns the actual text.
+// Returns plain text (the endpoint sometimes returns JSON, sometimes raw text).
+export async function fetchSamDescription(descUrl: string): Promise<string | null> {
+  if (!descUrl || !descUrl.startsWith('http')) return null;
+  try {
+    const raw = await samFetch(descUrl, {});
+    if (typeof raw === 'string') return raw;
+    if (raw && typeof raw === 'object') {
+      const obj = raw as Record<string, unknown>;
+      if (typeof obj.description === 'string') return obj.description;
+      if (typeof obj.descriptions === 'string') return obj.descriptions;
+    }
+    return null;
+  } catch (err) {
+    log.warn({ err: String(err), descUrl }, 'Failed to fetch SAM description');
+    return null;
+  }
+}
+
+// SAM.gov requires US date format MM/DD/YYYY. Accepts ISO YYYY-MM-DD from callers and converts.
+function toSamDate(d: string | undefined): string | undefined {
+  if (!d) return undefined;
+  const iso = /^(\d{4})-(\d{2})-(\d{2})$/.exec(d);
+  if (iso) return `${iso[2]}/${iso[3]}/${iso[1]}`;
+  return d;
+}
+
 export async function samSearch(query: {
   naics: string;
   postedFrom?: string;
@@ -67,8 +94,8 @@ export async function samSearch(query: {
   const raw = await samFetch('/opportunities/v2/search', {
     api_version: 'v2',
     ncode: query.naics,
-    postedFrom: query.postedFrom,
-    postedTo: query.postedTo,
+    postedFrom: toSamDate(query.postedFrom),
+    postedTo: toSamDate(query.postedTo),
     limit: query.limit ?? 25,
     offset: query.offset ?? 0,
   });

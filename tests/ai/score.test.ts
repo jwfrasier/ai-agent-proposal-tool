@@ -5,8 +5,12 @@ vi.mock('@/lib/ai/client', () => {
     anthropic: { messages: { create: vi.fn() } },
     costFor: (_m: string, p: number, c: number) => (p / 1_000_000) * 3 + (c / 1_000_000) * 15,
     PRICING: { 'claude-sonnet-4-6': { input: 3, output: 15 } },
+    MODEL_CHAIN: ['claude-sonnet-4-6', 'claude-haiku-4-5-20251001'],
   };
 });
+
+// Traces do real fs writes; stub them out in unit tests.
+vi.mock('@/lib/ai/trace', () => ({ writeTrace: vi.fn() }));
 
 import { anthropic } from '@/lib/ai/client';
 import { scoreOpportunity } from '@/lib/ai/score';
@@ -45,6 +49,9 @@ describe('scoreOpportunity', () => {
             key_requirements: ['24/7 coverage', 'ITIL'],
             risks: ['Tight deadline'],
             win_themes: ['Cost', 'Past performance'],
+            confidence: 0.9,
+            confidence_reason: 'Clear NAICS and capability match.',
+            ambiguity: 'none',
           },
         },
       ],
@@ -58,6 +65,10 @@ describe('scoreOpportunity', () => {
     expect(result.keyRequirements).toContain('24/7 coverage');
     expect(result.promptTokens).toBe(1200);
     expect(result.costUsd).toBeCloseTo((1200 / 1e6) * 3 + (300 / 1e6) * 15);
+    expect(result.confidence).toBe(0.9);
+    expect(result.ambiguity).toBe('none');
+    expect(result.tierDowngraded).toBe(false);
+    expect(result.traceId).toBeTruthy();
   });
 
   it('throws when model returns no tool_use block', async () => {

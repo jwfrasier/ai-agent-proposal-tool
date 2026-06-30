@@ -1,0 +1,39 @@
+{
+  "id": "nogo-construction",
+  "description": "Federal building renovation and construction — clear NO_GO. NAICS 236220 (Commercial and Institutional Building Construction), no IT work.",
+  "opportunity": {
+    "noticeId": "EVAL-007-GSA-CONST",
+    "rawJson": {},
+    "title": "GSA Federal Building HVAC Replacement and Structural Renovation",
+    "agency": "General Services Administration — Public Buildings Service",
+    "naics": "236220",
+    "setAside": "Total Small Business",
+    "postedAt": "2026-06-04T14:00:00.000Z",
+    "responseDeadline": "2026-07-05T17:00:00.000Z",
+    "awardCeiling": 320000,
+    "placeOfPerformance": "Philadelphia, PA",
+    "description": "GSA Public Buildings Service requires a licensed general contractor to replace the aging HVAC system in the James A. Byrne Federal Courthouse annex and perform associated structural repairs to the mechanical room floor slab. Scope of work: removal and disposal of existing HVAC units and ductwork, installation of new energy-efficient split-system HVAC units, concrete slab repair and resurfacing in the mechanical room, fire-rated ceiling tile replacement in affected corridors, and final commissioning and balancing of the new system. Contractor must hold a valid PA contractor license and proof of general liability and workers compensation insurance. Work must be performed during off-hours (evenings and weekends) to minimize disruption to court operations. Certified payroll and Davis-Bacon wage rates apply.",
+    "firstSeenAt": "2026-06-04T14:00:00.000Z",
+    "lastSyncedAt": "2026-06-04T14:00:00.000Z",
+    "status": "new"
+  },
+  "profile": {
+    "id": 1,
+    "version": 1,
+    "name": "Frasier Digital LLC",
+    "uei": "FRSDGTL12345",
+    "cageCode": "9FD12",
+    "naicsCodes": ["541511", "541512", "541513", "541519", "541611", "518210"],
+    "certifications": ["Small Business", "Small Disadvantaged Business"],
+    "capabilities": "Government web modernization, Section 508 accessibility compliance, AI/RAG chatbot development, cloud migration (AWS GovCloud, Azure Government), IT consulting, digital transformation for federal agencies.",
+    "contactName": "Joseph Frasier",
+    "contactEmail": "joseph@frasierdigital.com",
+    "contactPhone": "555-123-4567",
+    "updatedAt": "2026-06-01T00:00:00.000Z"
+  },
+  "expected": {
+    "recommendation": "NO_GO",
+    "fitMin": 0,
+    "fitMax": 15
+  }
+}

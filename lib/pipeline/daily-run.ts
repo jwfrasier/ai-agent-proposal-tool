@@ -2,10 +2,66 @@ import { eq, desc } from 'drizzle-orm';
 import type { DB } from '../db/client';
 import * as schema from '../db/schema';
 import { searchByProfile } from '../sam/search';
+import { fetchSamDescription } from '../sam/client';
+import { isBiddableNoticeType, noticeTypeOf } from '../sam/notice-type';
+import { screenOpportunity, type ScreenResult } from '../screening/screen';
 import { scoreOpportunity } from '../ai/score';
 import { rankCandidates } from './heuristic';
 import { log as rootLog } from '../log';
 import type { SamOpportunityRaw } from '../sam/schemas';
+
+type LogFn = (level: 'info' | 'warn' | 'error', msg: string, ctx?: unknown) => void;
+
+// SAM's search API returns `description` as a URL to a separate endpoint, not the text itself.
+// Resolve it to the real description (once) before scoring, and persist so we never re-fetch.
+async function resolveDescription(
+  db: DB,
+  opp: schema.Opportunity,
+  log: LogFn,
+): Promise<schema.Opportunity> {
+  const desc = opp.description ?? '';
+  if (!desc.startsWith('https://api.sam.gov')) return opp;
+  const resolved = await fetchSamDescription(desc);
+  if (!resolved) {
+    log('warn', 'Description URL did not resolve; scoring on metadata only', { noticeId: opp.noticeId });
+    return opp;
+  }
+  db.update(schema.opportunities)
+    .set({ description: resolved })
+    .where(eq(schema.opportunities.noticeId, opp.noticeId))
+    .run();
+  return { ...opp, description: resolved };
+}
+
+// Synthetic score for an opportunity the deterministic pre-screen auto-passed.
+// Records the PASS + cited signals as a real scores row, with no AI cost.
+function screenedOutScore(
+  opportunityId: string,
+  profileVersion: number,
+  screen: ScreenResult,
+): schema.NewScore {
+  const note = { matched: false, reason: screen.reason };
+  return {
+    opportunityId,
+    profileVersion,
+    fitScore: 0,
+    recommendation: 'NO_GO',
+    naicsMatch: note,
+    capabilityMatch: note,
+    setasideMatch: note,
+    keyRequirements: [],
+    risks: screen.signals.map((s) => `${s.rule}: "${s.matched}"`),
+    winThemes: [],
+    confidence: 0.99,
+    confidenceReason: screen.reason,
+    ambiguity: 'none',
+    model: `screen:${screen.category}`,
+    promptTokens: 0,
+    completionTokens: 0,
+    costUsd: 0,
+    createdAt: new Date(),
+  };
+}
 
 export interface RunDailyArgs {
   db: DB;
@@ -89,10 +145,12 @@ export async function runDaily(args: RunDailyArgs): Promise<RunSummary> {
         ? ymd(new Date(lastSuccess.finishedAt.getTime()))
         : ymd(new Date(Date.now() - 7 * 86400_000)));
 
-    log('info', 'Searching SAM', { postedFrom, naics: profile.naicsCodes });
+    const postedTo = ymd(new Date());
+    log('info', 'Searching SAM', { postedFrom, postedTo, naics: profile.naicsCodes });
     const samOpps = await searchByProfile({
       naicsCodes: profile.naicsCodes,
       postedFrom,
+      postedTo,
       maxAwardCeiling: 350_000,
     });
     oppsFetched = samOpps.length;
@@ -130,9 +188,18 @@ export async function runDaily(args: RunDailyArgs): Promise<RunSummary> {
         .all()
         .map((r) => r.id),
     );
-    const eligible = allOpps.filter((o) => !alreadyScoredIds.has(o.noticeId));
+    const eligible = allOpps.filter(
+      (o) => !alreadyScoredIds.has(o.noticeId) && isBiddableNoticeType(noticeTypeOf(o.rawJson)),
+    );
+    const skippedNonBiddable = allOpps.filter(
+      (o) => !alreadyScoredIds.has(o.noticeId) && !isBiddableNoticeType(noticeTypeOf(o.rawJson)),
+    ).length;
     const ranked = rankCandidates(eligible, profile).slice(0, topN);
-    log('info', 'Ranked candidates', { eligible: eligible.length, taking: ranked.length });
+    log('info', 'Ranked candidates', {
+      eligible: eligible.length,
+      taking: ranked.length,
+      skippedNonBiddable,
+    });
 
     let lastCostUsd = 0;
     for (const opp of ranked) {
@@ -142,7 +209,27 @@ export async function runDaily(args: RunDailyArgs): Promise<RunSummary> {
         break;
       }
       try {
-        const scored = await scoreOpportunity(opp, profile);
+        const oppForScoring = await resolveDescription(db, opp, log);
+        const screen = screenOpportunity({
+          noticeType: noticeTypeOf(oppForScoring.rawJson),
+          title: oppForScoring.title,
+          description: oppForScoring.description,
+          setAside: oppForScoring.setAside,
+        });
+
+        // Hybrid screening: auto-PASS the slam-dunks without spending an AI call.
+        if (screen.disposition === 'auto_pass') {
+          db.insert(schema.scores).values(screenedOutScore(opp.noticeId, profile.version, screen)).run();
+          oppsScored++;
+          log('info', 'Screened out (no AI call)', {
+            noticeId: opp.noticeId,
+            category: screen.category,
+            matched: screen.signals[0]?.matched,
+          });
+          continue;
+        }
+
+        const scored = await scoreOpportunity(oppForScoring, profile, screen);
         db.insert(schema.scores).values({
           opportunityId: opp.noticeId,
           profileVersion: profile.version,
@@ -154,6 +241,9 @@ export async function runDaily(args: RunDailyArgs): Promise<RunSummary> {
           keyRequirements: scored.keyRequirements,
           risks: scored.risks,
           winThemes: scored.winThemes,
+          confidence: scored.confidence,
+          confidenceReason: scored.confidenceReason,
+          ambiguity: scored.ambiguity,
           model: scored.model,
           promptTokens: scored.promptTokens,
           completionTokens: scored.completionTokens,
@@ -163,7 +253,14 @@ export async function runDaily(args: RunDailyArgs): Promise<RunSummary> {
         totalCostUsd += scored.costUsd;
         lastCostUsd = scored.costUsd;
         oppsScored++;
-        log('info', 'Scored', { noticeId: opp.noticeId, fit: scored.fitScore, costUsd: scored.costUsd });
+        log('info', 'Scored', {
+          noticeId: opp.noticeId,
+          fit: scored.fitScore,
+          costUsd: scored.costUsd,
+          confidence: scored.confidence,
+          tierDowngraded: scored.tierDowngraded,
+          traceId: scored.traceId,
+        });
       } catch (err) {
         log('error', 'Scoring failed', { noticeId: opp.noticeId, err: String(err) });
         status = status === 'ok' ? 'partial' : status;

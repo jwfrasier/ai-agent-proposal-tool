@@ -12,7 +12,9 @@
     "test:coverage": "vitest run --coverage",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "tsx lib/db/migrate.ts",
-    "db:studio": "drizzle-kit studio"
+    "db:studio": "drizzle-kit studio",
+    "evals": "tsx evals/run.ts",
+    "inspect": "tsx scripts/inspect.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.97.1",

@@ -2,6 +2,9 @@
 import { useState, useTransition } from 'react';
 import { Button } from '@/components/ui/button';
 import { ScoreBadge } from './ScoreBadge';
+import { ScoreConfidenceBadge } from './ScoreConfidenceBadge';
+import { ScreeningPanel } from './ScreeningPanel';
+import type { ScreenResult } from '@/lib/screening/screen';
 
 type DocKind = 'capability' | 'analysis' | 'proposal' | 'compliance_matrix';
 
@@ -12,6 +15,9 @@ type Score = {
   naicsMatch: { matched: boolean; reason: string };
   capabilityMatch: { matched: boolean; reason: string };
   setasideMatch: { matched: boolean; reason: string };
+  confidence: number | null;
+  confidenceReason: string | null;
+  ambiguity: string | null;
 };
 
 type Doc = {
@@ -29,16 +35,19 @@ type Opp = {
   setAside: string | null;
   status: string;
   description: string | null;
+  rawJson?: { uiLink?: string } | null;
 };
 
 export function OpportunityDetail({
   opp,
   scores,
   documents,
+  screen,
 }: {
   opp: Opp;
   scores: Score[];
   documents: Doc[];
+  screen?: ScreenResult;
 }) {
   const [pending] = useTransition();
   const [msg, setMsg] = useState<string | null>(null);
@@ -72,12 +81,33 @@ export function OpportunityDetail({
       <header>
         <h1 className="text-2xl font-semibold">{opp.title}</h1>
         <p className="text-sm text-muted-foreground">{opp.agency} · NAICS {opp.naics ?? 'n/a'} · {opp.setAside ?? 'no set-aside'}</p>
+        {opp.rawJson?.uiLink && (
+          <a
+            href={opp.rawJson.uiLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-1 inline-block text-sm text-blue-600 hover:underline"
+          >
+            View on sam.gov ↗
+          </a>
+        )}
       </header>
+
+      {screen && <ScreeningPanel screen={screen} />}
 
       <section className="rounded border p-4 space-y-2">
         <div className="flex items-center justify-between">
           <h2 className="font-medium">Score</h2>
-          <ScoreBadge score={latest?.fitScore ?? null} recommendation={latest?.recommendation} />
+          <div className="flex items-center gap-3">
+            {latest && (
+              <ScoreConfidenceBadge
+                confidence={latest.confidence}
+                confidenceReason={latest.confidenceReason}
+                ambiguity={latest.ambiguity}
+              />
+            )}
+            <ScoreBadge score={latest?.fitScore ?? null} recommendation={latest?.recommendation} />
+          </div>
         </div>
         {latest && (
           <dl className="grid grid-cols-3 gap-2 text-sm">
@@ -114,7 +144,13 @@ export function OpportunityDetail({
 
       <section className="rounded border p-4 space-y-2">
         <h2 className="font-medium">Description</h2>
-        <pre className="whitespace-pre-wrap text-sm">{opp.description ?? '(none)'}</pre>
+        {opp.description?.startsWith('http') ? (
+          <p className="text-sm text-muted-foreground">
+            Description not yet fetched — open the original on sam.gov via the link above.
+          </p>
+        ) : (
+          <pre className="whitespace-pre-wrap text-sm">{opp.description ?? '(none)'}</pre>
+        )}
       </section>
 
       {msg && <div className="text-sm text-blue-600">{msg}</div>}

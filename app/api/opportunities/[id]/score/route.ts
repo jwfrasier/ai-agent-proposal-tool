@@ -2,6 +2,8 @@ import { NextResponse } from 'next/server';
 import { eq } from 'drizzle-orm';
 import { db, schema } from '@/lib/db/client';
 import { scoreOpportunity } from '@/lib/ai/score';
+import { screenOpportunity } from '@/lib/screening/screen';
+import { noticeTypeOf } from '@/lib/sam/notice-type';
 
 export async function POST(_req: Request, ctx: { params: Promise<{ id: string }> }) {
   const { id } = await ctx.params;
@@ -10,7 +12,13 @@ export async function POST(_req: Request, ctx: { params: Promise<{ id: string }>
   const profile = db.select().from(schema.companyProfile).where(eq(schema.companyProfile.id, 1)).get();
   if (!profile) return NextResponse.json({ error: 'no_profile' }, { status: 400 });
 
-  const scored = await scoreOpportunity(opp, profile);
+  const screen = screenOpportunity({
+    noticeType: noticeTypeOf(opp.rawJson),
+    title: opp.title,
+    description: opp.description,
+    setAside: opp.setAside,
+  });
+  const scored = await scoreOpportunity(opp, profile, screen);
   const inserted = db.insert(schema.scores).values({
     opportunityId: opp.noticeId,
     profileVersion: profile.version,
@@ -22,6 +30,9 @@ export async function POST(_req: Request, ctx: { params: Promise<{ id: string }>
     keyRequirements: scored.keyRequirements,
     risks: scored.risks,
     winThemes: scored.winThemes,
+    confidence: scored.confidence,
+    confidenceReason: scored.confidenceReason,
+    ambiguity: scored.ambiguity,
     model: scored.model,
     promptTokens: scored.promptTokens,
     completionTokens: scored.completionTokens,

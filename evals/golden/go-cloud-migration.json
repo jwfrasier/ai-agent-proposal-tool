@@ -1,0 +1,39 @@
+{
+  "id": "go-cloud-migration",
+  "description": "HHS cloud migration to AWS GovCloud — GO. NAICS 541513, SDB set-aside (we hold SDB cert), $280k under SAT.",
+  "opportunity": {
+    "noticeId": "EVAL-003-HHS-CLOUD",
+    "rawJson": {},
+    "title": "HHS OPDIV Legacy Application Migration to AWS GovCloud",
+    "agency": "Department of Health and Human Services",
+    "naics": "541513",
+    "setAside": "Small Disadvantaged Business",
+    "postedAt": "2026-06-10T08:00:00.000Z",
+    "responseDeadline": "2026-07-25T17:00:00.000Z",
+    "awardCeiling": 280000,
+    "placeOfPerformance": "Rockville, MD (remote work authorized, occasional on-site)",
+    "description": "HHS seeks a Small Disadvantaged Business to migrate three legacy Node.js and Python web applications from an on-premise data center to AWS GovCloud (US-East). The work includes: cloud architecture design, containerization using Docker and ECS Fargate, CI/CD pipeline setup with CodePipeline and CodeBuild, data migration of PostgreSQL databases to RDS, and FedRAMP boundary documentation updates. The contractor must follow AWS Well-Architected Framework principles and produce an as-built architecture diagram and updated system security plan (SSP) artifacts. Security scanning via AWS Inspector and GuardDuty must be enabled post-migration. Period of performance: 8 months. Minimal past performance documentation required given SAT threshold.",
+    "firstSeenAt": "2026-06-10T08:00:00.000Z",
+    "lastSyncedAt": "2026-06-10T08:00:00.000Z",
+    "status": "new"
+  },
+  "profile": {
+    "id": 1,
+    "version": 1,
+    "name": "Frasier Digital LLC",
+    "uei": "FRSDGTL12345",
+    "cageCode": "9FD12",
+    "naicsCodes": ["541511", "541512", "541513", "541519", "541611", "518210"],
+    "certifications": ["Small Business", "Small Disadvantaged Business"],
+    "capabilities": "Government web modernization, Section 508 accessibility compliance, AI/RAG chatbot development, cloud migration (AWS GovCloud, Azure Government), IT consulting, digital transformation for federal agencies.",
+    "contactName": "Joseph Frasier",
+    "contactEmail": "joseph@frasierdigital.com",
+    "contactPhone": "555-123-4567",
+    "updatedAt": "2026-06-01T00:00:00.000Z"
+  },
+  "expected": {
+    "recommendation": "GO",
+    "fitMin": 65,
+    "fitMax": 100
+  }
+}

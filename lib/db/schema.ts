@@ -54,6 +54,9 @@ export const scores = sqliteTable('scores', {
   completionTokens: integer('completion_tokens').notNull(),
   costUsd: real('cost_usd').notNull(),
   createdAt: integer('created_at', { mode: 'timestamp_ms' }).notNull(),
+  confidence: real('confidence'),
+  confidenceReason: text('confidence_reason'),
+  ambiguity: text('ambiguity'),
 });
 
 export const documents = sqliteTable('documents', {

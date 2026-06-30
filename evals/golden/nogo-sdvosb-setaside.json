@@ -1,0 +1,39 @@
+{
+  "id": "nogo-sdvosb-setaside",
+  "description": "SDVOSB-only IT modernization set-aside — NO_GO despite capability match. We are not SDVOSB, so the set-aside is disqualifying regardless of fit.",
+  "opportunity": {
+    "noticeId": "EVAL-006-VA-SDVOSB",
+    "rawJson": {},
+    "title": "VA Benefits Portal Web Modernization — SDVOSB Set-Aside",
+    "agency": "Department of Veterans Affairs — Office of Information & Technology",
+    "naics": "541511",
+    "setAside": "Service-Disabled Veteran-Owned Small Business (SDVOSB)",
+    "postedAt": "2026-06-12T11:00:00.000Z",
+    "responseDeadline": "2026-07-18T17:00:00.000Z",
+    "awardCeiling": 165000,
+    "placeOfPerformance": "Remote",
+    "description": "This acquisition is set aside 100% for Service-Disabled Veteran-Owned Small Business (SDVOSB) concerns verified in the VA Vendor Information Pages (VIP) database. The Department of Veterans Affairs seeks to modernize the VA Benefits Portal to improve user experience for veterans filing benefit claims online. Work includes: UX redesign of the claims submission workflow, React front-end rebuild, REST API integration with existing backend services, and Section 508 compliance testing. Estimated period of performance: 5 months. Award ceiling: $165,000. IMPORTANT: Only firms holding an active SDVOSB verification in the VA VIP database at time of offer submission are eligible to receive this award. Offerors must submit proof of SDVOSB status with their offer.",
+    "firstSeenAt": "2026-06-12T11:00:00.000Z",
+    "lastSyncedAt": "2026-06-12T11:00:00.000Z",
+    "status": "new"
+  },
+  "profile": {
+    "id": 1,
+    "version": 1,
+    "name": "Frasier Digital LLC",
+    "uei": "FRSDGTL12345",
+    "cageCode": "9FD12",
+    "naicsCodes": ["541511", "541512", "541513", "541519", "541611", "518210"],
+    "certifications": ["Small Business", "Small Disadvantaged Business"],
+    "capabilities": "Government web modernization, Section 508 accessibility compliance, AI/RAG chatbot development, cloud migration (AWS GovCloud, Azure Government), IT consulting, digital transformation for federal agencies.",
+    "contactName": "Joseph Frasier",
+    "contactEmail": "joseph@frasierdigital.com",
+    "contactPhone": "555-123-4567",
+    "updatedAt": "2026-06-01T00:00:00.000Z"
+  },
+  "expected": {
+    "recommendation": "NO_GO",
+    "fitMin": 0,
+    "fitMax": 40
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "go-rag-chatbot",
+  "description": "DOJ AI knowledge-management RAG chatbot — strong GO. 541512, Small Business set-aside, $200k, squarely in our AI/RAG capability.",
+  "opportunity": {
+    "noticeId": "EVAL-002-DOJ-RAG",
+    "rawJson": {},
+    "title": "DOJ Internal Knowledge Management AI Chatbot (RAG Architecture)",
+    "agency": "Department of Justice",
+    "naics": "541512",
+    "setAside": "Small Business",
+    "postedAt": "2026-06-05T09:00:00.000Z",
+    "responseDeadline": "2026-07-20T17:00:00.000Z",
+    "awardCeiling": 200000,
+    "placeOfPerformance": "Washington, DC (hybrid, up to 2 days on-site per week)",
+    "description": "The Department of Justice Office of Information Technology requires development of an internal knowledge management chatbot using Retrieval-Augmented Generation (RAG) architecture. The system must ingest and index existing policy documents, legal guidance memos, and training materials stored in SharePoint and S3-compatible storage. The contractor shall build a conversational AI interface allowing DOJ staff to query the document corpus using natural language. Requirements include: FedRAMP-authorized LLM API integration, role-based access controls, audit logging of all queries and responses, and a React-based front-end deployable on DOJ's existing Azure Government environment. Deliverables: technical architecture document, working prototype at 30 days, production deployment at 90 days, and operational runbook. No past performance documentation required under the Simplified Acquisition Threshold.",
+    "firstSeenAt": "2026-06-05T09:00:00.000Z",
+    "lastSyncedAt": "2026-06-05T09:00:00.000Z",
+    "status": "new"
+  },
+  "profile": {
+    "id": 1,
+    "version": 1,
+    "name": "Frasier Digital LLC",
+    "uei": "FRSDGTL12345",
+    "cageCode": "9FD12",
+    "naicsCodes": ["541511", "541512", "541513", "541519", "541611", "518210"],
+    "certifications": ["Small Business", "Small Disadvantaged Business"],
+    "capabilities": "Government web modernization, Section 508 accessibility compliance, AI/RAG chatbot development, cloud migration (AWS GovCloud, Azure Government), IT consulting, digital transformation for federal agencies.",
+    "contactName": "Joseph Frasier",
+    "contactEmail": "joseph@frasierdigital.com",
+    "contactPhone": "555-123-4567",
+    "updatedAt": "2026-06-01T00:00:00.000Z"
+  },
+  "expected": {
+    "recommendation": "GO",
+    "fitMin": 70,
+    "fitMax": 100
+  }
+}

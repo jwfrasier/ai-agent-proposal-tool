@@ -1,0 +1,39 @@
+{
+  "id": "go-web-modernization",
+  "description": "GSA public-facing website modernization — clear GO. Strong NAICS match (541511), Total Small Business set-aside we qualify for, well within SAT, capabilities align perfectly.",
+  "opportunity": {
+    "noticeId": "EVAL-001-GSA-WEB",
+    "rawJson": {},
+    "title": "GSA.gov Public-Facing Website Modernization and Accessibility Uplift",
+    "agency": "General Services Administration",
+    "naics": "541511",
+    "setAside": "Total Small Business",
+    "postedAt": "2026-06-01T12:00:00.000Z",
+    "responseDeadline": "2026-07-15T17:00:00.000Z",
+    "awardCeiling": 175000,
+    "placeOfPerformance": "Washington, DC (remote work authorized)",
+    "description": "The General Services Administration (GSA) seeks a qualified small business to modernize its public-facing informational website. The work includes migrating content from legacy CMS to a modern Next.js-based headless CMS, implementing WCAG 2.1 AA / Section 508 compliance across all pages, improving Core Web Vitals scores, and deploying to cloud infrastructure. The contractor shall deliver a fully accessible, mobile-responsive website with automated accessibility testing integrated into the CI/CD pipeline. Period of performance: 6 months. Deliverables include: discovery report, design system, production deployment, and final accessibility audit report. No prior federal past performance required at this award level.",
+    "firstSeenAt": "2026-06-01T12:00:00.000Z",
+    "lastSyncedAt": "2026-06-01T12:00:00.000Z",
+    "status": "new"
+  },
+  "profile": {
+    "id": 1,
+    "version": 1,
+    "name": "Frasier Digital LLC",
+    "uei": "FRSDGTL12345",
+    "cageCode": "9FD12",
+    "naicsCodes": ["541511", "541512", "541513", "541519", "541611", "518210"],
+    "certifications": ["Small Business", "Small Disadvantaged Business"],
+    "capabilities": "Government web modernization, Section 508 accessibility compliance, AI/RAG chatbot development, cloud migration (AWS GovCloud, Azure Government), IT consulting, digital transformation for federal agencies.",
+    "contactName": "Joseph Frasier",
+    "contactEmail": "joseph@frasierdigital.com",
+    "contactPhone": "555-123-4567",
+    "updatedAt": "2026-06-01T00:00:00.000Z"
+  },
+  "expected": {
+    "recommendation": "GO",
+    "fitMin": 70,
+    "fitMax": 100
+  }
+}

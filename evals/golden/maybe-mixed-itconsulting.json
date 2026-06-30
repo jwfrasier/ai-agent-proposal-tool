@@ -1,0 +1,39 @@
+{
+  "id": "maybe-mixed-itconsulting",
+  "description": "DHS IT modernization with heavy ERP/SAP component we lack — borderline MAYBE. NAICS 541611, Small Business set-aside, $300k. IT consulting is in scope but ERP customization is not a core capability.",
+  "opportunity": {
+    "noticeId": "EVAL-008-DHS-ERP",
+    "rawJson": {},
+    "title": "DHS IT Modernization Support: Legacy System Analysis and ERP Migration Planning",
+    "agency": "Department of Homeland Security — Office of the Chief Financial Officer",
+    "naics": "541611",
+    "setAside": "Small Business",
+    "postedAt": "2026-06-15T09:00:00.000Z",
+    "responseDeadline": "2026-07-30T17:00:00.000Z",
+    "awardCeiling": 300000,
+    "placeOfPerformance": "Washington, DC (hybrid, 3 days on-site per week required)",
+    "description": "DHS Office of the Chief Financial Officer seeks IT modernization consulting support to (1) document and analyze legacy financial management systems currently running on a 2008-era Oracle platform, (2) develop a migration roadmap to a modern SAP S/4HANA ERP system per OMB A-123 requirements, and (3) produce a data mapping document for migrating Chart of Accounts, vendor master data, and open purchase orders. Contractor must demonstrate experience with federal financial management systems and familiarity with SAP S/4HANA or comparable ERP platforms. Additionally, the contractor shall develop a web-based project dashboard (React or Vue.js) to track migration milestones and surface KPIs to DHS leadership. Approximately 60% of effort is ERP analysis and roadmapping; 40% is web dashboard development. Period of performance: 9 months. Three days per week on-site in Washington DC is mandatory.",
+    "firstSeenAt": "2026-06-15T09:00:00.000Z",
+    "lastSyncedAt": "2026-06-15T09:00:00.000Z",
+    "status": "new"
+  },
+  "profile": {
+    "id": 1,
+    "version": 1,
+    "name": "Frasier Digital LLC",
+    "uei": "FRSDGTL12345",
+    "cageCode": "9FD12",
+    "naicsCodes": ["541511", "541512", "541513", "541519", "541611", "518210"],
+    "certifications": ["Small Business", "Small Disadvantaged Business"],
+    "capabilities": "Government web modernization, Section 508 accessibility compliance, AI/RAG chatbot development, cloud migration (AWS GovCloud, Azure Government), IT consulting, digital transformation for federal agencies.",
+    "contactName": "Joseph Frasier",
+    "contactEmail": "joseph@frasierdigital.com",
+    "contactPhone": "555-123-4567",
+    "updatedAt": "2026-06-01T00:00:00.000Z"
+  },
+  "expected": {
+    "recommendation": "MAYBE",
+    "fitMin": 30,
+    "fitMax": 70
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "go-508-accessibility",
+  "description": "VA Section 508 accessibility audit and remediation — GO. NAICS 541519, no set-aside restriction, $95k, core capability.",
+  "opportunity": {
+    "noticeId": "EVAL-004-VA-508",
+    "rawJson": {},
+    "title": "VA Enterprise Portal Section 508 Compliance Audit and Remediation",
+    "agency": "Department of Veterans Affairs",
+    "naics": "541519",
+    "setAside": null,
+    "postedAt": "2026-06-08T10:00:00.000Z",
+    "responseDeadline": "2026-07-10T17:00:00.000Z",
+    "awardCeiling": 95000,
+    "placeOfPerformance": "Remote, occasional travel to Washington DC",
+    "description": "The Department of Veterans Affairs requires a qualified contractor to perform a comprehensive Section 508 / WCAG 2.1 AA accessibility audit of the VA Enterprise Portal (approximately 200 web pages and 15 PDF documents) and remediate identified deficiencies. Scope includes: automated scanning using axe-core and Deque tools, manual keyboard-navigation and screen-reader testing (NVDA, JAWS, VoiceOver), detailed findings report with VPAT, and remediation of all critical and serious violations in HTML/CSS/JavaScript. The contractor must provide testing scripts and a re-audit at project close to confirm remediation. Period of performance: 90 days. This is an open competition with no set-aside restrictions; all responsible sources may submit offers.",
+    "firstSeenAt": "2026-06-08T10:00:00.000Z",
+    "lastSyncedAt": "2026-06-08T10:00:00.000Z",
+    "status": "new"
+  },
+  "profile": {
+    "id": 1,
+    "version": 1,
+    "name": "Frasier Digital LLC",
+    "uei": "FRSDGTL12345",
+    "cageCode": "9FD12",
+    "naicsCodes": ["541511", "541512", "541513", "541519", "541611", "518210"],
+    "certifications": ["Small Business", "Small Disadvantaged Business"],
+    "capabilities": "Government web modernization, Section 508 accessibility compliance, AI/RAG chatbot development, cloud migration (AWS GovCloud, Azure Government), IT consulting, digital transformation for federal agencies.",
+    "contactName": "Joseph Frasier",
+    "contactEmail": "joseph@frasierdigital.com",
+    "contactPhone": "555-123-4567",
+    "updatedAt": "2026-06-01T00:00:00.000Z"
+  },
+  "expected": {
+    "recommendation": "GO",
+    "fitMin": 70,
+    "fitMax": 100
+  }
+}

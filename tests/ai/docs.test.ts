@@ -3,7 +3,10 @@ import { describe, it, expect, vi, beforeEach } from 'vitest';
 vi.mock('@/lib/ai/client', () => ({
   anthropic: { messages: { create: vi.fn() } },
   costFor: () => 0.01,
+  MODEL_CHAIN: ['claude-sonnet-4-6', 'claude-haiku-4-5-20251001'],
 }));
+
+vi.mock('@/lib/ai/trace', () => ({ writeTrace: vi.fn() }));
 
 import { anthropic } from '@/lib/ai/client';
 import { generateDoc } from '@/lib/ai/docs';

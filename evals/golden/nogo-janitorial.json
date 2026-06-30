@@ -1,0 +1,39 @@
+{
+  "id": "nogo-janitorial",
+  "description": "Pentagon janitorial and custodial services — clear NO_GO. NAICS 561720 (Janitorial Services), zero capability overlap with IT firm.",
+  "opportunity": {
+    "noticeId": "EVAL-005-DOD-JAN",
+    "rawJson": {},
+    "title": "Pentagon Facility Janitorial and Custodial Services",
+    "agency": "Department of Defense — Washington Headquarters Services",
+    "naics": "561720",
+    "setAside": "Total Small Business",
+    "postedAt": "2026-06-03T09:00:00.000Z",
+    "responseDeadline": "2026-07-01T17:00:00.000Z",
+    "awardCeiling": 45000,
+    "placeOfPerformance": "Arlington, VA (Pentagon Reservation)",
+    "description": "The Washington Headquarters Services requires janitorial and custodial services for approximately 12,000 square feet of administrative office space in the Pentagon Reservation. Services include: daily trash removal, vacuuming, mopping hard floors, restroom cleaning and restocking (soap, paper towels, toilet paper), periodic deep cleaning of common areas, and window cleaning (interior surfaces only). Personnel must be able to pass a DoD security background investigation for unescorted access. Performance period: base year plus two option years. Equipment and supplies furnished by the contractor. Work hours: 6:00 AM to 9:00 AM weekdays.",
+    "firstSeenAt": "2026-06-03T09:00:00.000Z",
+    "lastSyncedAt": "2026-06-03T09:00:00.000Z",
+    "status": "new"
+  },
+  "profile": {
+    "id": 1,
+    "version": 1,
+    "name": "Frasier Digital LLC",
+    "uei": "FRSDGTL12345",
+    "cageCode": "9FD12",
+    "naicsCodes": ["541511", "541512", "541513", "541519", "541611", "518210"],
+    "certifications": ["Small Business", "Small Disadvantaged Business"],
+    "capabilities": "Government web modernization, Section 508 accessibility compliance, AI/RAG chatbot development, cloud migration (AWS GovCloud, Azure Government), IT consulting, digital transformation for federal agencies.",
+    "contactName": "Joseph Frasier",
+    "contactEmail": "joseph@frasierdigital.com",
+    "contactPhone": "555-123-4567",
+    "updatedAt": "2026-06-01T00:00:00.000Z"
+  },
+  "expected": {
+    "recommendation": "NO_GO",
+    "fitMin": 0,
+    "fitMax": 20
+  }
+}

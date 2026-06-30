@@ -48,3 +48,6 @@ next-env.d.ts
 
 # parallel-agent worktrees
 .claude/
+
+# agent run traces
+data/traces/

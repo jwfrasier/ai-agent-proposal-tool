@@ -9,6 +9,11 @@ const schema = z.object({
   NODE_ENV: z.enum(['development', 'production', 'test']).default('development'),
   ANTHROPIC_MODEL: z.string().default('claude-sonnet-4-6'),
   LOG_LEVEL: z.enum(['trace', 'debug', 'info', 'warn', 'error']).default('info'),
+  // HTTP Basic Auth password gating the whole app (middleware reads process.env directly;
+  // listed here for documentation/validation). Optional in dev; set via `fly secrets` in prod.
+  APP_PASSWORD: z.string().optional(),
+  // Directory for per-call AI run traces (audit/replay).
+  TRACE_DIR: z.string().default('./data/traces'),
 });
 
 const parsed = schema.safeParse(process.env);
@@ -26,6 +31,8 @@ export const config = {
   nodeEnv: parsed.data.NODE_ENV,
   anthropicModel: parsed.data.ANTHROPIC_MODEL,
   logLevel: parsed.data.LOG_LEVEL,
+  appPassword: parsed.data.APP_PASSWORD,
+  traceDir: parsed.data.TRACE_DIR,
 } as const;
 
 export type Config = typeof config;

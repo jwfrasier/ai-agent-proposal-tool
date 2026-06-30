@@ -11,6 +11,9 @@ export const ScoreSchema = z.object({
   key_requirements: z.array(z.string()),
   risks: z.array(z.string()),
   win_themes: z.array(z.string()),
+  confidence: z.number().min(0).max(1),
+  confidence_reason: z.string(),
+  ambiguity: z.enum(['none', 'missing_info', 'contradictory', 'borderline']),
 });
 
 export type ScoreResult = z.infer<typeof ScoreSchema>;
@@ -18,7 +21,19 @@ export type ScoreResult = z.infer<typeof ScoreSchema>;
 // JSON Schema form (what Anthropic tool definitions accept)
 export const ScoreJsonSchema = {
   type: 'object',
-  required: ['fit_score', 'recommendation', 'naics_match', 'capability_match', 'setaside_match', 'key_requirements', 'risks', 'win_themes'],
+  required: [
+    'fit_score',
+    'recommendation',
+    'naics_match',
+    'capability_match',
+    'setaside_match',
+    'key_requirements',
+    'risks',
+    'win_themes',
+    'confidence',
+    'confidence_reason',
+    'ambiguity',
+  ],
   properties: {
     fit_score: { type: 'integer', minimum: 0, maximum: 100 },
     recommendation: { type: 'string', enum: ['GO', 'NO_GO', 'MAYBE'] },
@@ -40,5 +55,8 @@ export const ScoreJsonSchema = {
     key_requirements: { type: 'array', items: { type: 'string' } },
     risks: { type: 'array', items: { type: 'string' } },
     win_themes: { type: 'array', items: { type: 'string' } },
+    confidence: { type: 'number', minimum: 0, maximum: 1 },
+    confidence_reason: { type: 'string' },
+    ambiguity: { type: 'string', enum: ['none', 'missing_info', 'contradictory', 'borderline'] },
   },
 } as const;
