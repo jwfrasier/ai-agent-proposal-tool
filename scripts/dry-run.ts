@@ -21,10 +21,15 @@ if (Number.isNaN(costCapUsd) || costCapUsd <= 0) {
   console.error(`Invalid cost cap: "${capArg}"`);
   process.exit(1);
 }
+// The daily run caps throughput at topN=10; a backlog dry-run must cover the
+// whole unscored set to project a meaningful number. Override with a high topN
+// (2nd arg to tune). The cost cap still governs total Haiku triage spend.
+const topNArg = process.argv[3];
+const topN = topNArg ? Number(topNArg) : 10_000;
 
 (async () => {
-  console.log(`\nTriage dry-run (triageOnly) — cap $${costCapUsd.toFixed(2)}, no Sonnet spend.\n`);
-  const s = await runDaily({ db, costCapUsd, triageOnly: true });
+  console.log(`\nTriage dry-run (triageOnly) — cap $${costCapUsd.toFixed(2)}, topN ${topN}, no Sonnet spend.\n`);
+  const s = await runDaily({ db, costCapUsd, triageOnly: true, topN });
 
   const fmt = (n: number) => `$${n.toFixed(4)}`;
   console.log('─'.repeat(60));
