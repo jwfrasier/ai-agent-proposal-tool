@@ -63,6 +63,43 @@ function screenedOutScore(
   };
 }
 
+function solicitationNumberOf(rawJson: unknown): string | null {
+  if (rawJson && typeof rawJson === 'object' && 'solicitationNumber' in rawJson) {
+    const v = (rawJson as { solicitationNumber?: unknown }).solicitationNumber;
+    if (typeof v === 'string' && v.trim().length > 0) return v.trim();
+  }
+  return null;
+}
+
+// Zero-cost marker row: this opportunity is a repost of an already-scored solicitation.
+function dupMarkerScore(
+  opportunityId: string,
+  profileVersion: number,
+  solNum: string,
+): schema.NewScore {
+  const note = { matched: false, reason: `Duplicate solicitation ${solNum} already scored this profile version.` };
+  return {
+    opportunityId,
+    profileVersion,
+    fitScore: 0,
+    recommendation: 'NO_GO',
+    naicsMatch: note,
+    capabilityMatch: note,
+    setasideMatch: note,
+    keyRequirements: [],
+    risks: [`duplicate_solicitation: "${solNum}"`],
+    winThemes: [],
+    confidence: 0.99,
+    confidenceReason: note.reason,
+    ambiguity: 'none',
+    model: `dup:${solNum}`,
+    promptTokens: 0,
+    completionTokens: 0,
+    costUsd: 0,
+    createdAt: new Date(),
+  };
+}
+
 export interface RunDailyArgs {
   db: DB;
   costCapUsd: number;
@@ -188,6 +225,14 @@ export async function runDaily(args: RunDailyArgs): Promise<RunSummary> {
         .all()
         .map((r) => r.id),
     );
+    // Solicitation numbers already scored at this profile version (dedup key beyond noticeId).
+    const scoredSolNums = new Set<string>();
+    for (const o of allOpps) {
+      if (alreadyScoredIds.has(o.noticeId)) {
+        const sn = solicitationNumberOf(o.rawJson);
+        if (sn) scoredSolNums.add(sn);
+      }
+    }
     const eligible = allOpps.filter(
       (o) => !alreadyScoredIds.has(o.noticeId) && isBiddableNoticeType(noticeTypeOf(o.rawJson)),
     );
@@ -207,6 +252,13 @@ export async function runDaily(args: RunDailyArgs): Promise<RunSummary> {
         log('warn', 'Cost cap reached, stopping', { totalCostUsd, costCapUsd });
         status = 'partial';
         break;
+      }
+      const solNum = solicitationNumberOf(opp.rawJson);
+      if (solNum && scoredSolNums.has(solNum)) {
+        db.insert(schema.scores).values(dupMarkerScore(opp.noticeId, profile.version, solNum)).run();
+        oppsScored++;
+        log('info', 'Deduped repeated solicitation (no AI call)', { noticeId: opp.noticeId, solNum });
+        continue;
       }
       try {
         const oppForScoring = await resolveDescription(db, opp, log);
@@ -253,6 +305,7 @@ export async function runDaily(args: RunDailyArgs): Promise<RunSummary> {
         totalCostUsd += scored.costUsd;
         lastCostUsd = scored.costUsd;
         oppsScored++;
+        if (solNum) scoredSolNums.add(solNum);
         log('info', 'Scored', {
           noticeId: opp.noticeId,
           fit: scored.fitScore,
