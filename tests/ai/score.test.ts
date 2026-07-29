@@ -79,4 +79,23 @@ describe('scoreOpportunity', () => {
     });
     await expect(scoreOpportunity(fakeOpp as never, fakeProfile)).rejects.toThrow(/tool_use/);
   });
+
+  it('sends HTML-stripped, trimmed description to the model', async () => {
+    vi.mocked(anthropic.messages.create as never).mockResolvedValue({
+      content: [{ type: 'tool_use', name: 'record_score', input: {
+        fit_score: 10, recommendation: 'NO_GO',
+        naics_match: { matched: false, reason: '' }, capability_match: { matched: false, reason: '' },
+        setaside_match: { matched: false, reason: '' }, key_requirements: [], risks: [], win_themes: [],
+        confidence: 0.5, confidence_reason: 'x', ambiguity: 'none',
+      } }],
+      usage: { input_tokens: 100, output_tokens: 20 },
+      model: 'claude-sonnet-4-6',
+    });
+    const oppWithHtml = { ...fakeOpp, description: '<p>Custom&nbsp;portal</p>' };
+    await scoreOpportunity(oppWithHtml as never, fakeProfile);
+    const sent = vi.mocked(anthropic.messages.create as never).mock.calls[0][0];
+    const userText = sent.messages[0].content;
+    expect(userText).toContain('Custom portal');   // entities decoded, tags stripped
+    expect(userText).not.toContain('<p>');          // no raw HTML
+  });
 });
