@@ -14,7 +14,8 @@
     "db:migrate": "tsx lib/db/migrate.ts",
     "db:studio": "drizzle-kit studio",
     "evals": "tsx evals/run.ts",
-    "inspect": "tsx scripts/inspect.ts"
+    "inspect": "tsx scripts/inspect.ts",
+    "dry-run": "tsx scripts/dry-run.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.97.1",
