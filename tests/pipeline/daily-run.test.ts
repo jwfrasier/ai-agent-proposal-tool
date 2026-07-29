@@ -154,4 +154,24 @@ describe('runDaily', () => {
     await runDaily({ db: db as never, costCapUsd: 5.0, topN: 5, postedFromOverride: '2026-05-18' });
     expect(vi.mocked(scoreOpportunity).mock.calls.length).toBe(1);
   });
+
+  it('a same-run duplicate of a triage-rejected solicitation is deduped, not re-triaged', async () => {
+    const db = freshDb();
+    seedProfile(db);
+    vi.mocked(searchByProfile).mockResolvedValue([
+      { ...samOpp, noticeId: 'a', solicitationNumber: 'SOL-DUP' } as never,
+      { ...samOpp, noticeId: 'b', solicitationNumber: 'SOL-DUP' } as never,
+    ]);
+    vi.mocked(triageOpportunity).mockResolvedValue({
+      verdict: 'reject', reason: 'commodity buy', model: 'claude-haiku-4-5-20251001',
+      promptTokens: 100, completionTokens: 8, costUsd: 0.0003, traceId: 't',
+    } as never);
+
+    await runDaily({ db: db as never, costCapUsd: 5.0, topN: 5, postedFromOverride: '2026-05-18' });
+
+    expect(vi.mocked(triageOpportunity).mock.calls.length).toBe(1);
+    const rows = db.select().from(schema.scores).all();
+    expect(rows.filter((r) => r.model === 'triage:haiku').length).toBe(1);
+    expect(rows.filter((r) => r.model.startsWith('dup:')).length).toBe(1);
+  });
 });
