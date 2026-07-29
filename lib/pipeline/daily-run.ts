@@ -192,12 +192,6 @@ export async function runDaily(args: RunDailyArgs): Promise<RunSummary> {
     .get();
   const cronRunId = cronRow.id;
 
-  // Reap stale runs a prior crash left stuck at 'running' (single-machine invariant: only this run should be active).
-  db.update(schema.cronRuns)
-    .set({ status: 'failed', errorSummary: 'reaped: stale running run (process died before finalize)', finishedAt: new Date() })
-    .where(and(eq(schema.cronRuns.status, 'running'), ne(schema.cronRuns.id, cronRunId)))
-    .run();
-
   let oppsFetched = 0;
   let oppsNew = 0;
   let oppsScored = 0;
@@ -208,6 +202,12 @@ export async function runDaily(args: RunDailyArgs): Promise<RunSummary> {
   let projectedSonnetCostUsd = 0;
 
   try {
+    // Reap stale runs a prior crash left stuck at 'running' (single-machine invariant: only this run should be active).
+    db.update(schema.cronRuns)
+      .set({ status: 'failed', errorSummary: 'reaped: stale running run (process died before finalize)', finishedAt: new Date() })
+      .where(and(eq(schema.cronRuns.status, 'running'), ne(schema.cronRuns.id, cronRunId)))
+      .run();
+
     const profile = db.select().from(schema.companyProfile).where(eq(schema.companyProfile.id, 1)).get();
     if (!profile) throw new Error('No company profile configured');
 
