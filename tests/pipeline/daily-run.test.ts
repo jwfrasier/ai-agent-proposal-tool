@@ -192,4 +192,19 @@ describe('runDaily', () => {
     expect(summary.projectedSonnetCostUsd).toBeGreaterThan(0);
     expect(summary.status).toBe('ok');
   });
+
+  it('reaps a stale running cron_run left by a prior crash', async () => {
+    const db = freshDb();
+    seedProfile(db);
+    // Simulate a previous run that died mid-flight.
+    db.insert(schema.cronRuns).values({ startedAt: new Date(Date.now() - 3600_000), status: 'running', costCapUsd: 2, logs: [] }).run();
+    vi.mocked(searchByProfile).mockResolvedValue([]);
+
+    await runDaily({ db: db as never, costCapUsd: 2.0, topN: 5 });
+
+    const stuck = db.select().from(schema.cronRuns).all().filter((r) => r.status === 'running');
+    expect(stuck.length).toBe(0); // the new run finishes 'ok'; the stale one is reaped to 'failed'
+    const errored = db.select().from(schema.cronRuns).all().filter((r) => r.status === 'failed');
+    expect(errored.length).toBe(1);
+  });
 });

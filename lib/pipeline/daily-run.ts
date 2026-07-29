@@ -1,4 +1,4 @@
-import { eq, desc } from 'drizzle-orm';
+import { eq, desc, and, ne } from 'drizzle-orm';
 import type { DB } from '../db/client';
 import * as schema from '../db/schema';
 import { searchByProfile } from '../sam/search';
@@ -191,6 +191,12 @@ export async function runDaily(args: RunDailyArgs): Promise<RunSummary> {
     .returning()
     .get();
   const cronRunId = cronRow.id;
+
+  // Reap stale runs a prior crash left stuck at 'running' (single-machine invariant: only this run should be active).
+  db.update(schema.cronRuns)
+    .set({ status: 'failed', errorSummary: 'reaped: stale running run (process died before finalize)', finishedAt: new Date() })
+    .where(and(eq(schema.cronRuns.status, 'running'), ne(schema.cronRuns.id, cronRunId)))
+    .run();
 
   let oppsFetched = 0;
   let oppsNew = 0;
@@ -397,22 +403,22 @@ export async function runDaily(args: RunDailyArgs): Promise<RunSummary> {
     status = 'failed';
     errorSummary = String(err);
     log('error', 'Run failed', { err: errorSummary });
+  } finally {
+    const finishedAt = new Date();
+    db.update(schema.cronRuns)
+      .set({
+        finishedAt,
+        status,
+        oppsFetched,
+        oppsNew,
+        oppsScored,
+        totalCostUsd,
+        errorSummary,
+        logs,
+      })
+      .where(eq(schema.cronRuns.id, cronRunId))
+      .run();
   }
-
-  const finishedAt = new Date();
-  db.update(schema.cronRuns)
-    .set({
-      finishedAt,
-      status,
-      oppsFetched,
-      oppsNew,
-      oppsScored,
-      totalCostUsd,
-      errorSummary,
-      logs,
-    })
-    .where(eq(schema.cronRuns.id, cronRunId))
-    .run();
 
   return { cronRunId, status, oppsFetched, oppsNew, oppsScored, totalCostUsd, errorSummary, triageAdvanced, projectedSonnetCostUsd };
 }
