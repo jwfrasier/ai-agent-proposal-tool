@@ -166,4 +166,27 @@ describe('runStructured', () => {
     await expect(runStructured<TestResult>(baseOpts)).rejects.toThrow();
     expect(vi.mocked(writeTrace).mock.calls[0]![0]!.validation).toBe('fail');
   });
+
+  it('uses the models override instead of MODEL_CHAIN when provided', async () => {
+    vi.mocked(anthropic.messages.create as never).mockResolvedValue({
+      content: [{ type: 'tool_use', name: 'record_triage', input: { verdict: 'advance', reason: 'ok' } }],
+      usage: { input_tokens: 100, output_tokens: 10 },
+      model: 'claude-haiku-4-5-20251001',
+    });
+
+    const res = await runStructured({
+      system: 'sys',
+      userContent: 'u',
+      toolName: 'record_triage',
+      toolDescription: 'd',
+      jsonSchema: { type: 'object' },
+      parse: (x) => x,
+      label: 'triage:test',
+      models: ['claude-haiku-4-5-20251001'],
+    });
+
+    expect(res.model).toBe('claude-haiku-4-5-20251001');
+    const call = vi.mocked(anthropic.messages.create as never).mock.calls[0][0];
+    expect(call.model).toBe('claude-haiku-4-5-20251001');
+  });
 });

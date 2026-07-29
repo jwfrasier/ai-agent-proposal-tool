@@ -12,6 +12,7 @@ export interface RunStructuredOpts<T> {
   parse: (input: unknown) => T; // e.g. a zod schema's parse — throws on mismatch
   label: string;                // trace label, e.g. "score:opp-123"
   maxTokens?: number;           // default 1500
+  models?: string[];            // override MODEL_CHAIN (e.g. Haiku-first for triage)
 }
 
 export interface RunStructuredResult<T> {
@@ -74,8 +75,9 @@ export async function runStructured<T>(opts: RunStructuredOpts<T>): Promise<RunS
     { role: 'user', content: opts.userContent },
   ];
 
-  for (let i = 0; i < MODEL_CHAIN.length; i++) {
-    const model = MODEL_CHAIN[i]!;
+  const chain = opts.models ?? MODEL_CHAIN;
+  for (let i = 0; i < chain.length; i++) {
+    const model = chain[i]!;
     const tierDowngraded = i > 0;
     const tStart = Date.now();
 
