@@ -15,7 +15,8 @@
     "db:studio": "drizzle-kit studio",
     "evals": "tsx evals/run.ts",
     "inspect": "tsx scripts/inspect.ts",
-    "dry-run": "tsx scripts/dry-run.ts"
+    "dry-run": "tsx scripts/dry-run.ts",
+    "run-now": "tsx scripts/run-now.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.97.1",
