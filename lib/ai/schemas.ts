@@ -60,3 +60,19 @@ export const ScoreJsonSchema = {
     ambiguity: { type: 'string', enum: ['none', 'missing_info', 'contradictory', 'borderline'] },
   },
 } as const;
+
+export const TriageSchema = z.object({
+  verdict: z.enum(['advance', 'reject']),
+  reason: z.string(),
+});
+
+export type TriageResult = z.infer<typeof TriageSchema>;
+
+export const TriageJsonSchema = {
+  type: 'object',
+  required: ['verdict', 'reason'],
+  properties: {
+    verdict: { type: 'string', enum: ['advance', 'reject'] },
+    reason: { type: 'string' },
+  },
+} as const;
