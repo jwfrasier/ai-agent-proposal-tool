@@ -174,4 +174,22 @@ describe('runDaily', () => {
     expect(rows.filter((r) => r.model === 'triage:haiku').length).toBe(1);
     expect(rows.filter((r) => r.model.startsWith('dup:')).length).toBe(1);
   });
+
+  it('triageOnly: runs triage, skips Sonnet, reports projected cost', async () => {
+    const db = freshDb();
+    seedProfile(db);
+    vi.mocked(searchByProfile).mockResolvedValue([
+      { ...samOpp, noticeId: 'a', solicitationNumber: 'SOL-A' } as never,
+      { ...samOpp, noticeId: 'b', solicitationNumber: 'SOL-B' } as never,
+    ]);
+    // both advance (default mock)
+    const summary = await runDaily({
+      db: db as never, costCapUsd: 5.0, topN: 5, triageOnly: true, postedFromOverride: '2026-05-18',
+    });
+
+    expect(vi.mocked(scoreOpportunity).mock.calls.length).toBe(0);
+    expect(summary.triageAdvanced).toBe(2);
+    expect(summary.projectedSonnetCostUsd).toBeGreaterThan(0);
+    expect(summary.status).toBe('ok');
+  });
 });

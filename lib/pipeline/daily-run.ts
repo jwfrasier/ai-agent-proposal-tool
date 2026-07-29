@@ -136,6 +136,7 @@ export interface RunDailyArgs {
   costCapUsd: number;
   topN?: number;
   postedFromOverride?: string;
+  triageOnly?: boolean; // run Layers 1-2 only; skip Sonnet, report projected cost
 }
 
 export interface RunSummary {
@@ -146,6 +147,8 @@ export interface RunSummary {
   oppsScored: number;
   totalCostUsd: number;
   errorSummary: string | null;
+  triageAdvanced: number;
+  projectedSonnetCostUsd: number;
 }
 
 function ymd(d: Date): string {
@@ -174,7 +177,7 @@ function mapSamToInsert(raw: SamOpportunityRaw, now: Date): schema.NewOpportunit
 }
 
 export async function runDaily(args: RunDailyArgs): Promise<RunSummary> {
-  const { db, costCapUsd, topN = 10 } = args;
+  const { db, costCapUsd, topN = 10, triageOnly = false } = args;
   const startedAt = new Date();
   const logs: Array<{ ts: number; level: string; msg: string; ctx?: unknown }> = [];
   const log = (level: 'info' | 'warn' | 'error', msg: string, ctx?: unknown) => {
@@ -195,10 +198,23 @@ export async function runDaily(args: RunDailyArgs): Promise<RunSummary> {
   let totalCostUsd = 0;
   let status: RunSummary['status'] = 'ok';
   let errorSummary: string | null = null;
+  let triageAdvanced = 0;
+  let projectedSonnetCostUsd = 0;
 
   try {
     const profile = db.select().from(schema.companyProfile).where(eq(schema.companyProfile.id, 1)).get();
     if (!profile) throw new Error('No company profile configured');
+
+    const recentSonnet = db
+      .select({ c: schema.scores.costUsd })
+      .from(schema.scores)
+      .where(eq(schema.scores.model, 'claude-sonnet-4-6'))
+      .orderBy(desc(schema.scores.createdAt))
+      .limit(50)
+      .all();
+    const avgSonnetCost = recentSonnet.length
+      ? recentSonnet.reduce((s, r) => s + r.c, 0) / recentSonnet.length
+      : 0.0203;
 
     const lastSuccess = db
       .select()
@@ -326,6 +342,11 @@ export async function runDaily(args: RunDailyArgs): Promise<RunSummary> {
           continue;
         }
 
+        triageAdvanced++;
+        if (triageOnly) {
+          continue; // dry run: do not spend Sonnet
+        }
+
         const scored = await scoreOpportunity(oppForScoring, profile, screen);
         db.insert(schema.scores).values({
           opportunityId: opp.noticeId,
@@ -364,6 +385,14 @@ export async function runDaily(args: RunDailyArgs): Promise<RunSummary> {
         status = status === 'ok' ? 'partial' : status;
       }
     }
+
+    projectedSonnetCostUsd = triageOnly ? triageAdvanced * avgSonnetCost : 0;
+    log('info', 'Cost projection', {
+      triageAdvanced,
+      avgSonnetCost,
+      projectedSonnetCostUsd,
+      note: triageOnly ? 'dry-run: Sonnet not spent' : 'full run',
+    });
   } catch (err) {
     status = 'failed';
     errorSummary = String(err);
@@ -385,5 +414,5 @@ export async function runDaily(args: RunDailyArgs): Promise<RunSummary> {
     .where(eq(schema.cronRuns.id, cronRunId))
     .run();
 
-  return { cronRunId, status, oppsFetched, oppsNew, oppsScored, totalCostUsd, errorSummary };
+  return { cronRunId, status, oppsFetched, oppsNew, oppsScored, totalCostUsd, errorSummary, triageAdvanced, projectedSonnetCostUsd };
 }
