@@ -121,4 +121,37 @@ describe('runDaily', () => {
     expect(scoreCalls).toBe(1);       // only ONE real score for the duplicate pair
     expect(dupRows.length).toBe(1);   // the second is a dup marker
   });
+
+  it('triage reject persists a triage marker and skips the Sonnet score', async () => {
+    const db = freshDb();
+    seedProfile(db);
+    vi.mocked(searchByProfile).mockResolvedValue([{ ...samOpp, noticeId: 'a', solicitationNumber: 'SOL-A' } as never]);
+    vi.mocked(triageOpportunity).mockResolvedValue({
+      verdict: 'reject', reason: 'commodity buy', model: 'claude-haiku-4-5-20251001',
+      promptTokens: 100, completionTokens: 8, costUsd: 0.0003, traceId: 't',
+    } as never);
+
+    const summary = await runDaily({ db: db as never, costCapUsd: 5.0, topN: 5, postedFromOverride: '2026-05-18' });
+
+    expect(vi.mocked(scoreOpportunity).mock.calls.length).toBe(0);
+    const rows = db.select().from(schema.scores).all();
+    expect(rows.some((r) => r.model === 'triage:haiku')).toBe(true);
+    expect(summary.totalCostUsd).toBeCloseTo(0.0003, 6); // triage cost counted
+  });
+
+  it('triage advance proceeds to the Sonnet score', async () => {
+    const db = freshDb();
+    seedProfile(db);
+    vi.mocked(searchByProfile).mockResolvedValue([{ ...samOpp, noticeId: 'a', solicitationNumber: 'SOL-A' } as never]);
+    vi.mocked(scoreOpportunity).mockResolvedValue({
+      fitScore: 75, recommendation: 'GO',
+      naicsMatch: { matched: true, reason: '' }, capabilityMatch: { matched: true, reason: '' },
+      setasideMatch: { matched: true, reason: '' }, keyRequirements: [], risks: [], winThemes: [],
+      model: 'claude-sonnet-4-6', promptTokens: 1000, completionTokens: 200, costUsd: 0.006,
+    } as never);
+    // triageOpportunity default mock = advance (set in beforeEach)
+
+    await runDaily({ db: db as never, costCapUsd: 5.0, topN: 5, postedFromOverride: '2026-05-18' });
+    expect(vi.mocked(scoreOpportunity).mock.calls.length).toBe(1);
+  });
 });

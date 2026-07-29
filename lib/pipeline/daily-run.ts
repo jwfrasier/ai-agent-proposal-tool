@@ -6,6 +6,8 @@ import { fetchSamDescription } from '../sam/client';
 import { isBiddableNoticeType, noticeTypeOf } from '../sam/notice-type';
 import { screenOpportunity, type ScreenResult } from '../screening/screen';
 import { scoreOpportunity } from '../ai/score';
+import { triageOpportunity } from '../ai/triage';
+import type { TriageOutput } from '../ai/triage';
 import { rankCandidates } from './heuristic';
 import { log as rootLog } from '../log';
 import type { SamOpportunityRaw } from '../sam/schemas';
@@ -96,6 +98,35 @@ function dupMarkerScore(
     promptTokens: 0,
     completionTokens: 0,
     costUsd: 0,
+    createdAt: new Date(),
+  };
+}
+
+// Marker row for an opportunity the cheap Haiku triage rejected (no Sonnet spend).
+function triageMarkerScore(
+  opportunityId: string,
+  profileVersion: number,
+  triage: TriageOutput,
+): schema.NewScore {
+  const note = { matched: false, reason: triage.reason };
+  return {
+    opportunityId,
+    profileVersion,
+    fitScore: 0,
+    recommendation: 'NO_GO',
+    naicsMatch: note,
+    capabilityMatch: note,
+    setasideMatch: note,
+    keyRequirements: [],
+    risks: [`triage_reject: "${triage.reason}"`],
+    winThemes: [],
+    confidence: 0.9,
+    confidenceReason: triage.reason,
+    ambiguity: 'none',
+    model: 'triage:haiku',
+    promptTokens: triage.promptTokens,
+    completionTokens: triage.completionTokens,
+    costUsd: triage.costUsd,
     createdAt: new Date(),
   };
 }
@@ -273,11 +304,25 @@ export async function runDaily(args: RunDailyArgs): Promise<RunSummary> {
         if (screen.disposition === 'auto_pass') {
           db.insert(schema.scores).values(screenedOutScore(opp.noticeId, profile.version, screen)).run();
           oppsScored++;
+          // A same-run duplicate of this solicitation should hit the dedup guard, not repeat a paid call.
+          if (solNum) scoredSolNums.add(solNum);
           log('info', 'Screened out (no AI call)', {
             noticeId: opp.noticeId,
             category: screen.category,
             matched: screen.signals[0]?.matched,
           });
+          continue;
+        }
+
+        // Layer 2: cheap Haiku triage before the expensive Sonnet score.
+        const triage = await triageOpportunity(oppForScoring, profile);
+        totalCostUsd += triage.costUsd;
+        if (triage.verdict === 'reject') {
+          db.insert(schema.scores).values(triageMarkerScore(opp.noticeId, profile.version, triage)).run();
+          oppsScored++;
+          // A same-run duplicate of this solicitation should hit the dedup guard, not repeat a paid Haiku call.
+          if (solNum) scoredSolNums.add(solNum);
+          log('info', 'Triaged out (Haiku)', { noticeId: opp.noticeId, reason: triage.reason, costUsd: triage.costUsd });
           continue;
         }
 
