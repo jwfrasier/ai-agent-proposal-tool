@@ -11,7 +11,7 @@ export function trimForScoring(
 ): string {
   if (!text) return '';
   let s = text
-    .replace(/<[^>]+>/g, ' ')      // strip HTML tags
+    .replace(/<\/?[a-z][a-z0-9]*(?:\s[^<>]*)?>/gi, ' ')   // strip real HTML tags only
     .replace(/&nbsp;/gi, ' ')
     .replace(/&amp;/gi, '&')
     .replace(/&lt;/gi, '<')

@@ -21,4 +21,10 @@ describe('trimForScoring', () => {
     const clean = 'Custom web modernization services.';
     expect(trimForScoring(trimForScoring(clean))).toBe(clean);
   });
+
+  it('keeps plain-text angle brackets that are not HTML tags', () => {
+    expect(trimForScoring('budget < 3 and > 2, contracts under < $350k')).toBe(
+      'budget < 3 and > 2, contracts under < $350k',
+    );
+  });
 });
