@@ -48,7 +48,14 @@ const AUTO_PASS_CATEGORIES = new Set<ScreenCategory>([
   'out_of_scope',
 ]);
 
-const NON_BIDDABLE_NOTICE_TYPES = new Set(['Award Notice', 'Justification', 'Intent to Bundle Requirements (DoD-Funded)']);
+const NON_BIDDABLE_NOTICE_TYPES = new Set([
+  'Award Notice',
+  'Justification',
+  // SAM's real label for bundle/consolidation notices (the old
+  // 'Intent to Bundle Requirements (DoD-Funded)' literal never matched live data):
+  'Consolidate/(Substantially) Bundle',
+  'Intent to Bundle Requirements (DoD-Funded)',
+]);
 
 interface Rule {
   category: ScreenCategory;
@@ -68,7 +75,7 @@ const RULES: Rule[] = [
   { category: 'brand_name_sole_source', label: 'Manufactured-by / through-reseller', pattern: /manufactured by [A-Z][\w.&-]+(?:\s+through\s+[A-Z][\w.&-]+)?/ },
 
   // ── Commodity license / subscription buy ────────────────────────────────
-  { category: 'commodity_license', label: 'Annual subscription buy', pattern: /\bannual subscription\b/i },
+  { category: 'commodity_license', label: 'Annual subscription / license buy', pattern: /\bannual (subscription|license)\b/i },
   { category: 'commodity_license', label: 'Limited / subscription license', pattern: /\b(limited license|subscription limited license|software license renewal|license renewal|maintenance renewal)\b/i },
   { category: 'commodity_license', label: 'Manufacturer part number (catalog buy)', pattern: /\bpart\s*(number|no\.?|#)\b/i },
 

@@ -48,4 +48,16 @@ describe('screenOpportunity', () => {
     expect(r.category).toBeNull();
     expect(r.signals).toHaveLength(0);
   });
+
+  it('auto-passes SAM bundle notices (Consolidate/(Substantially) Bundle)', () => {
+    const r = screenOpportunity({ noticeType: 'Consolidate/(Substantially) Bundle', title: 'X', description: 'y' });
+    expect(r.disposition).toBe('auto_pass');
+    expect(r.category).toBe('already_decided');
+  });
+
+  it('flags an "annual license" commodity buy', () => {
+    const r = screenOpportunity({ title: 'Moodle Annual License FY26', description: 'Purchase of annual license.' });
+    expect(r.disposition).toBe('auto_pass');
+    expect(r.category).toBe('commodity_license');
+  });
 });
