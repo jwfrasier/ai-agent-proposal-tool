@@ -15,7 +15,7 @@ jobs:
       - name: Check demo availability
         run: |
           check() {
-            resp=$(curl -sS -m 20 -w '\n%{http_code}' https://vaers-demo.vercel.app/ || printf '\n000')
+            resp=$(curl -sS -m 20 -w '\n%{http_code}' https://vaers-demo.frasierdigital.com/ || printf '\n000')
             code=$(printf '%s' "$resp" | tail -1)
             body=$(printf '%s' "$resp" | sed '$d')
             [ "$code" = "200" ] || { echo "landing HTTP $code"; return 1; }
@@ -23,7 +23,7 @@ jobs:
             api=$(curl -sS -m 20 -o /dev/null -w '%{http_code}' -X POST \
               -H 'Content-Type: application/json' \
               -d '{"mode":"ask","question":""}' \
-              https://vaers-demo.vercel.app/api/assist || echo 000)
+              https://vaers-demo.frasierdigital.com/api/assist || echo 000)
             [ "$api" = "400" ] || { echo "assist function HTTP $api (expected 400)"; return 1; }
             return 0
           }
@@ -42,7 +42,7 @@ jobs:
           open=$(gh issue list -R "$GITHUB_REPOSITORY" --label vaers-demo-down --state open --json number --jq length)
           if [ "$open" = "0" ]; then
             gh issue create -R "$GITHUB_REPOSITORY" \
-              --title "VAERS demo is DOWN (vaers-demo.vercel.app)" \
+              --title "VAERS demo is DOWN (vaers-demo.frasierdigital.com)" \
               --label vaers-demo-down \
               --body "Automated uptime check failed at $(date -u +%Y-%m-%dT%H:%M)Z. The Tab 2-2 prototype link is unreachable or unhealthy. Check https://vercel.com status, then redeploy: cd docs/responses/2026-09-04-cdc-vaers/prototype && vercel deploy --prod. Failed run: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
           fi
