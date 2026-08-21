@@ -17,6 +17,7 @@
     "inspect": "tsx scripts/inspect.ts",
     "dry-run": "tsx scripts/dry-run.ts",
     "run-now": "tsx scripts/run-now.ts",
+    "roster-check": "tsx scripts/roster-check.ts",
     "watch": "tsx scripts/watch.ts"
   },
   "dependencies": {
