@@ -1,0 +1,106 @@
+name: Notice watch
+
+on:
+  schedule:
+    - cron: "23 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: notice-watch
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: rebuild
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run notice watch
+        id: watch
+        run: |
+          set +e
+          npx tsx scripts/watch.ts 2>&1 | tee watch-output.txt
+          code=${PIPESTATUS[0]}
+          set -e
+          echo "exit_code=$code" >> "$GITHUB_OUTPUT"
+          echo "watch exited with code $code"
+          # Defer pass/fail handling to the Report step so state persistence runs first.
+
+      - name: Persist watch state back to rebuild
+        if: steps.watch.outputs.exit_code == '0' || steps.watch.outputs.exit_code == '2'
+        run: |
+          git config user.name "notice-watch-bot"
+          git config user.email "actions@users.noreply.github.com"
+          if git diff --quiet -- data/watch-state.json watchlist.json; then
+            echo "no state changes to persist"
+            exit 0
+          fi
+          git add data/watch-state.json watchlist.json
+          git commit -m "chore(watch): update notice watch state [skip ci]"
+          git pull --rebase origin rebuild
+          git push origin rebuild
+          echo "pushed state commit $(git rev-parse HEAD)"
+
+      - name: Report result
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          code="${{ steps.watch.outputs.exit_code }}"
+          now="$(date -u +%Y-%m-%dT%H:%M)Z"
+          run_url="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+          case "$code" in
+            0)
+              for n in $(gh issue list -R "$GITHUB_REPOSITORY" --label notice-watch-alarm --state open --json number --jq '.[].number'); do
+                gh issue close -R "$GITHUB_REPOSITORY" "$n" -c "Notice watch is clean again at $now. Recovery run: $run_url"
+              done
+              echo "no alarms"
+              ;;
+            2)
+              {
+                echo "Notice watch found alarms at $now."
+                echo ""
+                echo "Run: $run_url"
+                echo ""
+                echo '```'
+                cat watch-output.txt
+                echo '```'
+              } > issue-body.md
+              open=$(gh issue list -R "$GITHUB_REPOSITORY" --label notice-watch-alarm --state open --json number --jq '.[0].number // empty')
+              if [ -n "$open" ]; then
+                gh issue edit -R "$GITHUB_REPOSITORY" "$open" --body-file issue-body.md
+                gh issue comment -R "$GITHUB_REPOSITORY" "$open" --body "Alarms still present at $now — issue body refreshed with latest watch output. Run: $run_url"
+              else
+                gh issue create -R "$GITHUB_REPOSITORY" \
+                  --title "Notice watch ALARM: watched SAM.gov notices changed" \
+                  --label notice-watch-alarm \
+                  --body-file issue-body.md
+              fi
+              echo "::error::Notice watch found alarms — see the notice-watch-alarm issue"
+              exit 2
+              ;;
+            1)
+              echo "::error::Notice watch config error (exit 1) — check watchlist.json"
+              cat watch-output.txt || true
+              exit 1
+              ;;
+            *)
+              echo "::error::Notice watch failed unexpectedly (exit code: ${code:-none})"
+              cat watch-output.txt || true
+              exit 1
+              ;;
+          esac
