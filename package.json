@@ -16,7 +16,8 @@
     "evals": "tsx evals/run.ts",
     "inspect": "tsx scripts/inspect.ts",
     "dry-run": "tsx scripts/dry-run.ts",
-    "run-now": "tsx scripts/run-now.ts"
+    "run-now": "tsx scripts/run-now.ts",
+    "watch": "tsx scripts/watch.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.97.1",
