@@ -14,25 +14,37 @@ import type { SamOpportunityRaw } from '../sam/schemas';
 
 type LogFn = (level: 'info' | 'warn' | 'error', msg: string, ctx?: unknown) => void;
 
+// Model tag for the zero-cost marker written when a description could not be fetched.
+// Such rows are excluded from every "already scored" check so the opp retries next run.
+export const DESC_FETCH_FAILED_MODEL = 'desc_fetch_failed';
+
 // SAM's search API returns `description` as a URL to a separate endpoint, not the text itself.
 // Resolve it to the real description (once) before scoring, and persist so we never re-fetch.
+// If the fetch fails, retry once immediately; if it still fails, report `descFailed` so the
+// caller skips AI spend — scoring on metadata alone produces unreliable results.
 async function resolveDescription(
   db: DB,
   opp: schema.Opportunity,
   log: LogFn,
-): Promise<schema.Opportunity> {
+): Promise<{ opp: schema.Opportunity; descFailed: boolean }> {
   const desc = opp.description ?? '';
-  if (!desc.startsWith('https://api.sam.gov')) return opp;
-  const resolved = await fetchSamDescription(desc);
+  if (!desc.startsWith('https://api.sam.gov')) return { opp, descFailed: false };
+  let resolved = await fetchSamDescription(desc);
   if (!resolved) {
-    log('warn', 'Description URL did not resolve; scoring on metadata only', { noticeId: opp.noticeId });
-    return opp;
+    log('warn', 'Description URL did not resolve; retrying once', { noticeId: opp.noticeId });
+    resolved = await fetchSamDescription(desc);
+  }
+  if (!resolved) {
+    log('warn', 'Description URL did not resolve after retry; skipping AI for this opportunity', {
+      noticeId: opp.noticeId,
+    });
+    return { opp, descFailed: true };
   }
   db.update(schema.opportunities)
     .set({ description: resolved })
     .where(eq(schema.opportunities.noticeId, opp.noticeId))
     .run();
-  return { ...opp, description: resolved };
+  return { opp: { ...opp, description: resolved }, descFailed: false };
 }
 
 // Synthetic score for an opportunity the deterministic pre-screen auto-passed.
@@ -102,6 +114,50 @@ function dupMarkerScore(
   };
 }
 
+// Zero-cost marker row: this opportunity's description could not be fetched, so no AI was
+// spent on it. Unlike the other markers, this one must NOT count as "already scored" —
+// the pipeline excludes it from the skip checks so the opportunity retries next run.
+function descFetchFailedMarkerScore(
+  opportunityId: string,
+  profileVersion: number,
+): schema.NewScore {
+  const note = {
+    matched: false,
+    reason: 'Description fetch failed after retry; AI scoring skipped. Will re-attempt on the next run.',
+  };
+  return {
+    opportunityId,
+    profileVersion,
+    fitScore: 0,
+    recommendation: 'NO_GO',
+    naicsMatch: note,
+    capabilityMatch: note,
+    setasideMatch: note,
+    keyRequirements: [],
+    risks: ['desc_fetch_failed: description unavailable, not scored'],
+    winThemes: [],
+    confidence: 0,
+    confidenceReason: note.reason,
+    ambiguity: 'none',
+    model: DESC_FETCH_FAILED_MODEL,
+    promptTokens: 0,
+    completionTokens: 0,
+    costUsd: 0,
+    createdAt: new Date(),
+  };
+}
+
+// Remove stale desc_fetch_failed markers for an opportunity so a real score (or a fresh
+// marker) supersedes them instead of accumulating one row per failing run.
+function clearDescFailMarkers(db: DB, opportunityId: string): void {
+  db.delete(schema.scores)
+    .where(and(
+      eq(schema.scores.opportunityId, opportunityId),
+      eq(schema.scores.model, DESC_FETCH_FAILED_MODEL),
+    ))
+    .run();
+}
+
 // Marker row for an opportunity the cheap Haiku triage rejected (no Sonnet spend).
 function triageMarkerScore(
   opportunityId: string,
@@ -149,6 +205,7 @@ export interface RunSummary {
   errorSummary: string | null;
   triageAdvanced: number;
   projectedSonnetCostUsd: number;
+  descFetchFailed: number;
 }
 
 function ymd(d: Date): string {
@@ -200,6 +257,7 @@ export async function runDaily(args: RunDailyArgs): Promise<RunSummary> {
   let errorSummary: string | null = null;
   let triageAdvanced = 0;
   let projectedSonnetCostUsd = 0;
+  let descFetchFailed = 0;
 
   try {
     // Reap stale runs a prior crash left stuck at 'running' (single-machine invariant: only this run should be active).
@@ -270,11 +328,16 @@ export async function runDaily(args: RunDailyArgs): Promise<RunSummary> {
     }
 
     const allOpps = db.select().from(schema.opportunities).all();
+    // desc_fetch_failed markers are excluded: they record a skipped (not scored) opportunity
+    // and must not block a re-attempt on this run.
     const alreadyScoredIds = new Set(
       db
         .select({ id: schema.scores.opportunityId })
         .from(schema.scores)
-        .where(eq(schema.scores.profileVersion, profile.version))
+        .where(and(
+          eq(schema.scores.profileVersion, profile.version),
+          ne(schema.scores.model, DESC_FETCH_FAILED_MODEL),
+        ))
         .all()
         .map((r) => r.id),
     );
@@ -314,7 +377,22 @@ export async function runDaily(args: RunDailyArgs): Promise<RunSummary> {
         continue;
       }
       try {
-        const oppForScoring = await resolveDescription(db, opp, log);
+        const { opp: oppForScoring, descFailed } = await resolveDescription(db, opp, log);
+        if (descFailed) {
+          // No usable description -> AI scores would be metadata-only guesses. Skip all AI
+          // spend and leave a zero-cost marker. The marker is excluded from the skip checks
+          // above, so the opportunity is re-attempted on the next run. Refresh (not stack)
+          // the marker, and do NOT add its solNum to scoredSolNums or count it as scored.
+          clearDescFailMarkers(db, opp.noticeId);
+          db.insert(schema.scores).values(descFetchFailedMarkerScore(opp.noticeId, profile.version)).run();
+          descFetchFailed++;
+          log('warn', 'Description unavailable; wrote desc_fetch_failed marker (no AI call, retry next run)', {
+            noticeId: opp.noticeId,
+          });
+          continue;
+        }
+        // Description resolved: any marker left by a previous failing run is now superseded.
+        clearDescFailMarkers(db, opp.noticeId);
         const screen = screenOpportunity({
           noticeType: noticeTypeOf(oppForScoring.rawJson),
           title: oppForScoring.title,
@@ -392,6 +470,12 @@ export async function runDaily(args: RunDailyArgs): Promise<RunSummary> {
       }
     }
 
+    if (descFetchFailed > 0) {
+      log('warn', 'Run has partial data: opportunities skipped because their description fetch failed', {
+        descFetchFailed,
+      });
+    }
+
     projectedSonnetCostUsd = triageOnly ? triageAdvanced * avgSonnetCost : 0;
     log('info', 'Cost projection', {
       triageAdvanced,
@@ -420,5 +504,5 @@ export async function runDaily(args: RunDailyArgs): Promise<RunSummary> {
       .run();
   }
 
-  return { cronRunId, status, oppsFetched, oppsNew, oppsScored, totalCostUsd, errorSummary, triageAdvanced, projectedSonnetCostUsd };
+  return { cronRunId, status, oppsFetched, oppsNew, oppsScored, totalCostUsd, errorSummary, triageAdvanced, projectedSonnetCostUsd, descFetchFailed };
 }
