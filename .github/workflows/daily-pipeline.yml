@@ -45,7 +45,7 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           SAM_GOV_API_KEY: ${{ secrets.SAM_GOV_API_KEY }}
-          CRON_SECRET: ci-not-used
+          CRON_SECRET: ci-placeholder-secret-not-used-in-actions
           APP_PASSWORD: ci-not-used
           DAILY_COST_CAP_USD: "2.00"
           DATABASE_URL: ./data/govcontracts.db
@@ -53,6 +53,7 @@ jobs:
           LOG_LEVEL: info
           TRACE_DIR: ./data/traces
         run: |
+          set -o pipefail
           echo "run_start_ms=$(date +%s)000" >> "$GITHUB_OUTPUT"
           npx tsx scripts/run-now.ts 2>&1 | tee pipeline-output.txt
           tail -20 pipeline-output.txt
@@ -103,6 +104,7 @@ jobs:
       - name: Persist DB snapshot to pipeline-data
         if: always() && steps.pipeline.outcome == 'success'
         run: |
+          sqlite3 data/govcontracts.db "PRAGMA wal_checkpoint(TRUNCATE);"
           gzip -c data/govcontracts.db > dbstate/govcontracts.db.gz
           cd dbstate
           git config user.name "pipeline-bot"
