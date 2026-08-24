@@ -60,22 +60,38 @@ jobs:
 
       - name: Check for new leads (fit >= 50)
         id: leads
+        env:
+          RUN_START_MS: ${{ steps.pipeline.outputs.run_start_ms }}
         run: |
-          sqlite3 data/govcontracts.db "
-            SELECT '- **' || s.fit_score || ' ' || s.recommendation || '** — ' || o.title ||
-                   ' (' || o.agency || ') · due ' || coalesce(date(o.response_deadline/1000,'unixepoch'),'n/a') ||
-                   ' · notice ' || o.notice_id
+          python3 - <<'PYEOF'
+          import json, os, sqlite3, datetime
+          con = sqlite3.connect('data/govcontracts.db')
+          rows = con.execute("""
+            SELECT o.notice_id, o.title, o.agency, o.set_aside, o.naics, s.fit_score,
+                   s.recommendation, o.response_deadline, s.win_themes, s.risks,
+                   s.key_requirements, o.raw_json, o.description
             FROM scores s JOIN opportunities o ON o.notice_id = s.opportunity_id
-            WHERE s.created_at >= ${{ steps.pipeline.outputs.run_start_ms }}
-              AND s.fit_score >= 50
-            ORDER BY s.fit_score DESC;" > leads.txt
-          if [ -s leads.txt ]; then
-            echo "found=true" >> "$GITHUB_OUTPUT"
-            cat leads.txt
-          else
-            echo "found=false" >> "$GITHUB_OUTPUT"
-            echo "no leads at or above threshold"
-          fi
+            WHERE s.created_at >= ? AND s.fit_score >= 50
+            ORDER BY s.fit_score DESC""", (int(os.environ['RUN_START_MS']),)).fetchall()
+          def bullets(js, cap=4):
+              try: items = json.loads(js)[:cap]
+              except Exception: return '  - (unparsed)\n'
+              return ''.join(f'  - {i}\n' for i in items) or '  - (none)\n'
+          out = []
+          for nid, title, agency, sa, naics, fit, rec, ddl, wt, rk, kr, raw, desc in rows:
+              due = datetime.datetime.utcfromtimestamp(ddl/1000).strftime('%a %b %d, %Y') if ddl else 'n/a'
+              try: links = json.loads(raw).get('resourceLinks') or []
+              except Exception: links = []
+              out.append(f"## {fit} {rec} — {title}\n\n"
+                  f"**{agency}** · due **{due}** · set-aside: {sa or 'not stated'} · NAICS {naics or 'n/a'}\n"
+                  f"[SAM notice](https://sam.gov/opp/{nid}/view) · {len(links)} attachment(s)\n\n"
+                  f"**Why it fits:**\n{bullets(wt)}\n**Risks:**\n{bullets(rk)}\n"
+                  f"**Key requirements:**\n{bullets(kr)}\n"
+                  + (f"**Summary:** {desc[:400]}…\n" if desc else ''))
+          open('leads.md','w').write('\n---\n\n'.join(out))
+          print(f"{len(rows)} lead(s) at or above threshold")
+          PYEOF
+          if [ -s leads.md ]; then echo "found=true" >> "$GITHUB_OUTPUT"; else echo "found=false" >> "$GITHUB_OUTPUT"; fi
 
       - name: Open/refresh leads issue
         if: steps.leads.outputs.found == 'true'
@@ -87,7 +103,7 @@ jobs:
           {
             echo "Daily pipeline scored new opportunities at or above fit 50 on $now."
             echo ""
-            cat leads.txt
+            cat leads.md
             echo ""
             echo "Run: $run_url — full details in the screener DB (pipeline-data branch)."
           } > issue-body.md
