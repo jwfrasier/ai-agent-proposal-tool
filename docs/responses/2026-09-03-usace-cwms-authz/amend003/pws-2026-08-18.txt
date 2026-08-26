@@ -1,0 +1,329 @@
+
+PERFORMANCE WORK STATEMENT
+CWMS Database Authorization Maintenance and Improvements
+General
+This is a non-personnel services contract to provide the United States Army Corps of Engineers (USACE), Institute for Water Resources (IWR), Hydrologic Engineering Center (HEC) with software enhancements for the Corps Water Management System (CWMS). The Government shall not exercise any supervision or control over the contract service providers performing the services herein. Such contract service providers shall be accountable solely to the Contractor who, in turn is responsible to the Government.
+1.1 Description of Services/Introduction
+The contractor shall provide all personnel, equipment, supplies, facilities, transportation, tools, materials, supervision, and other items and non-personal services necessary to perform work on adding software capability as defined in this Performance Work Statement (PWS) except for those items specified as government furnished property and services.  The contractor shall perform to the standards in this contract.
+1.2 Background
+The mission of the IWR HEC is to serve as the USACE Center of Expertise in the technical areas of surface and groundwater hydrology, river hydraulics and sediment  transport, hydrologic statistics and risk analysis, reservoir system analysis, planning analysis, real-time water control management and a number of other closely associated technical subjects. HEC's primary goal is to support the nation in its water resources management responsibilities by increasing USACE’s technical capability in hydrologic engineering and water resources planning and management. In addition to supporting USACE along with Division and District Offices, HEC provides technical support to the Corps overseas. Additionally, HEC provides services to other Federal, state, local and international agencies engaged in these technical areas.
+The primary way HEC accomplishes this mission is by developing state-of-the-art software tools bringing them to state-of-the practice that are reliably used by water resources engineers and planners. Since its inception in 1964, HEC has been developing and integrating software tools that support the water resources computing requirements for Corps field offices, headquarters, laboratories, and other Federal, state, and international agencies. 
+The CWMS is the Army Information System (AIS) that supports and enhances the decision-making process for the USACE water management mission. USACE is responsible for round-the-clock monitoring and operation of approximately 600 reservoir, lock and dam, and other water control projects. This responsibility also expands, during flood control operations, to approximately 120 additional Section 7 (Non-USACE) projects. Section 7 dams are non-USACE-owned dams for which the USACE prescribes regulations for flood control or navigation operations. These projects are operated under the authority of Section 7 of the Flood Control Act of 1944, which dictates how the Corps manages storage for flood risk management, while the dam owner manages the remaining storage.
+CWMS provides critical information for making decisions that are fundamental in achieving the full range of benefits of the authorized purposes of USACE projects. CWMS integrates real-time data acquisition, database storage, flow forecasting of watershed runoff, reservoir operation decision support, river profile computation, inundated area determination, consequence analysis, and information dissemination into a comprehensive software package. CWMS and associated software underpin the USACE Water Management Enterprise System (WMES) by acquiring, processing, and reporting the hydrometeorological data required to manage USACE water resources projects under routine and emergency conditions. CWMS incorporates state-of-the-art modeling techniques such as spatially distributed rainfall-runoff flow forecasting, rule-based reservoir systems operation, steady and unsteady-flow water surface profile analysis, 2-D flow analysis, event-by-event flow impact for damage and life-loss estimation. In addition to determining reservoir operations, current and forecasted river water surface elevation/profiles and inundated flood area information can be utilized for flood fight decisions, flood evacuation warnings, and transportation interruption alerts. 
+The focus of this contract is on the database and API components of our CWMS system.  CWMS is currently going through a transition from maintaining 32 independent, and geographically isolated systems, that feed into a public only central database, to a "single" cloud based system that will contain all data, both public and private. Part of this transition is merging the multiple District databases into an Oracle RDS instance with an HTTP REST API called CWMS-Data-API (CDA). Previous to this decision, much of the data authorization was done within each individual database so that appropriate data constraints could be implemented while allowing District applications to access Oracle directly. The CWMS Database Schema (CWMS DB) has thus made heavy use of session contexts and the Oracle Virtual Private Database (VPD) system to provide appropriate authorization. It is clear to us that this will not be sufficient going forward, and a more appropriate model of authorization needs to be adopted. While CWMS DB is currently using Oracle, is it likely the CWMS DB will migrate the data to various forms of storage appropriate to the type of data and its usage. As such, HEC believes it is most appropriate to focus our updated access control efforts on CDA, the API through which data will be accessed. CDA is a Java-based REST API using "javalin.io" as the underlying platform. The current Javelin AccessManager has changed from its initial implementation over time and will adapt to future requirements as needed.
+1.3 Objectives
+With the initial work of creating the authorization policies, proxies, and UI, improve each as described in the technical exhibits as well as get the new systems running in the USACE CWBI Cloud environment.
+1.4 Scope
+Services to be performed include:
+•	Get infrastructure stood up in CWBI Cloud environment
+•	Update UI based on feedback from existing usage
+•	Meeting participation and notes
+•	Various required maintenance tasks
+1.5 Terminology
+Authorization and Access control are used interchangeably throughout this document.
+USACE Staff and District Staff are used interchangeably through this document.
+2.0 Specific Tasks 
+Technical Resources
+Note these relevant public Technical Resources: 
+https://owasp.org/www-project-top-ten/
+https://github.com/USACE/cwms-data-api/
+https://github.com/USACE-WaterManagement/cwms-access-management/ (current UI)
+https://github.com/hydrologicengineeringcenter/cwms-data-api-client-javascriptview it on GitHub
+https://github.com/HydrologicEngineeringCenter/cwms-data-api-client/
+https://www.hec.usace.army.mil/xmlSchema/cwms/
+https://github.com/hydrologicEngineeringCenter/cwms-database
+Docker images available 
+registry-public.hecdev.net/cwms/database-ready-ora-23.5:latest-dev (a temporary instance with schema installed based on oracle-free database image)
+Functionality
+Functional requirements for all work under this PWS include:
+A report describing possible Authorization control methods that recommend a specific method or set of methods with supporting evidence.
+A web UI to allow technical or non-technical users to set appropriate access control on CWMS Database objects. CWMS developers currently use the React Framework to implement interfaces.
+Code changes to CDA to perform the appropriate authorization checks as defined by the users.
+Code changes to other components as identified to support authorization checks. 
+Work Unit
+ A unit of work for this contract consists of at least one of the following: 
+Document addition or major edits that improve clarity  
+Meeting notes as described in Task 1 
+Code changes through pull requests that may be 
+Skeleton/strawman test code 
+Working test code (for example, code created to analyze a user reported issue that was not already covered and should be submitted as an additional regression test)
+New code to implement a required feature or portion of feature, with appropriate tests 
+Refactoring code changes to improve functionality, with new tests if functionality is not already covered 
+New tests are not required for refactoring if the behavior is already covered under test
+Tests, or proof that existing tests cover changes, are required for code changes.
+Source Code Updates and Automated Tests
+Updates to source code and build scripts must also include necessary updates to existing automated testing processes to proceed successfully. For example, new arguments in a function call might require updates to a related unit test, or a change in dependencies could require updates to a Docker container. This requirement applies to existing tests that require only minor updates for compatibility with the new improvements. Automated integration tests are required for authentication and authorization code. There is a central build system that runs the integration tests and the CWMS-Data-API and CWMS Database integration tests are structured in such a way to allow local running in one of three ways:
+Using Docker, through the testcontainers-java library, the ready-database (as described in Technical Resources) is started, and the tests are run.
+Using Docker, through the testcontainers-java library, a new database is created, the schema installed, and tests run. The schema will be reinstalled for each run.
+The tests can be pointed at an existing Oracle database for faster cycling. NOTE: The tests assume they can do anything they want to that database; this method should not be used against a shared database.
+Data should be loaded as appropriate at the start of the test. It is expected that new tools and helpers will be required as additional endpoints for data are constructed. The Contractor should follow the existing design patterns where appropriate; deviations should be coordinated and are appreciated when necessary. 
+A specific, individual test for each element developed is not required. The goal of tests is to: 
+Provide as-built style documentation 
+Verify operation during refactoring and addition
+Guide development so at least one initial usage is seen and used 
+Prevent future regressions by documenting user issues that have been resolved
+Tests should be designed in a way that shows natural usage of the API. The project goal is to have tests that cover all endpoints, not one test or test set per endpoint. If for any given set of controllers it appears better to create a test or set of tests that cover both at multiple data sources, then this is preferred.
+The Junit5 platform and REST Assured are currently used for tests against the API.
+At minimum, tests must exist to demonstrate that the access control implemented both succeeds and fails correctly. The preferred test locations, in order, are with the existing junit5 unit tests, the junit5 integration test suite, anything repeatable locally, and anything repeatable by the build server (currently TeamCity, actively being migrated to GitHub actions.)
+The integration tests use the testcontainers-java library to create, or use, an instance of a CWMS Oracle Database. An extension was created that the tests use. If additional services are required for implementation of the access control methods, then the starting of such services for the integrations should be added to the existing extension or a new extension as appropriate.
+Security
+The Contractor is encouraged to operate the OWASP Zap tool on changes regularly. HEC staff will do this regularly. Software developed under this contract MUST be resilient to cyber-attacks such as SQL injection, parameter poisoning, cross-site scripting, and cross-site request forgery. Developers should regularly review the information provided at the OWASP Top Ten link in the technical resources section.
+Coordination
+Some of this effort requires collaboration and coordination with HEC staff performing concurrent work regarding CWMS-Data-API or CWMS database. Some work under these tasks requires the Contractor to consult with HEC regarding certain design choices. This consultation, collaboration, and coordination must occur as part of the ordinary course of software development for HEC.
+All work necessary to complete a task is considered in scope of the task itself, including if the work is outside the primary source. For example, if it is determined that CWMS-Data-API code cannot function correctly without a correction to the CWMS Database Schema code, then a correction of the CWMS Database Schema code is part of the work needed to complete the task. Proper corrections to the Database Schema or other elements are preferred; however, it is understood that this is not always immediately practical. 
+Since development of the CWMS-Data-API and CWMS database is being carried out by the Contractor, HEC, other USACE Staff, and other vendors, the Contractor should contact the Contracting Officer's Representative and Technical PoC if they think external changes have interfered with work unreasonably.
+Rate of Work
+The government will review all submitted work for standards, maintainability and functionality. The government also has limited time to perform these reviews. During check-in meetings the government and contractor will establish an appropriate rate of development and volume of submitted work.
+Reviews and Work Acceptance
+For implementation work, HEC expects the Contractor to submit small units of work to be reviewed regularly as development progresses. 
+To support the review of small work units, HEC will maintain the following deliverable review schedule (days refer to business days): 
+Meeting notes, 1 day 
+Up to three source files or 200 lines of code changed or added, 3 days 
+Up to ten source files or 500 lines of code changed or added, 5 days 
+More than ten files or more than 500 lines of code changed or added, 10 days
+Acceptance of work by HEC will be noted in one of three ways:
+Marking a pull-request approved 
+Approval text or label within a GitHub Issue 
+Agreement in a comment that the work was performed but “overcome-by-events” for closed pull-requests or closed pull-requests not merged for valid reasons, such as waiting on staged work or waiting on updates from feedback.
+HEC or District staff may review and provide comments on submissions.
+2.1 Tasks
+Task 1a - Development Meetings - There will be 26 one-hour meetings, with meetings scheduled every two weeks to track progress and discuss bottlenecks or other impediments related to the completion of all tasks. Meetings may include up to three Contractor staff relevant to the current work. It is expected to take two hours to create and upload appropriate notes, create new issues, and update existing issues.
+Task 1a Deliverables: The Contractor will provide meeting notes within 1 business day. Meeting notes must include at least one of the following:
+Typed minutes in Confluence
+Jira/GitHub issues (new or updated)
+Jira Epics or GitHub Milestones documenting intent from the meeting
+Skeleton pull requests with initial test names and descriptions
+
+Period of Performance for Task 1a–360 Days from award
+
+(OPTIONAL) Task 1b - Development Meetings - There will be 26 one-hour meetings, with meetings scheduled every two weeks to track progress and discuss bottlenecks or other impediments related to the completion of all tasks. Meetings may include up to three Contractor staff relevant to the current work. It is expected to take two hours to create and upload appropriate notes, create new issues, and update existing issues.
+Task 1b Deliverables: The Contractor will provide meeting notes within 1 business day. Meeting notes must include at least one of the following:
+Typed minutes in confluence
+Jira/GitHub issues (new or updated)
+Jira Epics or GitHub Milestones documenting intent from the meeting
+Skeleton pull requests with initial test names and descriptions
+
+Period of Performance for Task 1b–360 Days from award
+
+Task 2 - Improve Authorization Web UI
+Given the requirements in Technical Exhibit 1, the Contractor will identify what elements are missing and implement the new requirements.
+Task 2 Deliverables: The Contractor will submit appropriate code, documentation, test code, and discussion notes continuously through the allotted period of performance. Each submission of work shall be complete for the definition of "Work Unit" provided above. The minimum successful product is an interface to manage access control, the access control method working for time series data, and the documentation and training materials.
+Items to be implemented:
+Changes to CDA and other related projects to support the access control method selected.
+A web-based user interface suitable for individual and bulk manipulation of permissions by technical and non-technical users.
+Documentation and training materials for the selected method.
+
+Period of Performance for Task 2 – 180 Days from Award
+
+Task 3a - Implement New authorization within the CWBI environment
+Given the requirements in Technical Exhibit 2 the Contractor will coordinate with CWBI PMO, HEC, and other USACE staff, to enable the use of the Authorization system in the CWBI environments.
+Task 3a Deliverables: Functional policy-based authorization within at least the CWBI Dev environment.
+Period of Performance for Task 3a – 180 Days from Award
+
+(Optional) Task 3b - Implement New authorization within the CWBI environment
+Given the requirements in Technical Exhibit 2 the Contractor will coordinate with CWBI PMO, HEC, and other USACE staff, to enable the use of the Authorization system in the CWBI environments.
+Task 3b Deliverables: Functional policy-based authorization within at least the CWBI Test environment.
+
+Period of Performance for Task 3b – 180 Days from Award 
+
+
+(OPTIONAL) Task 4 - Load testing
+Given the requirements in Technical Exhibit 3 the Contractor will implement the ability to perform load testing.
+Task 4 Deliverables: The Contractor will submit appropriate code, documentation, test code, and discussion notes continuously through the allotted period of performance. Each submission of work shall be complete for the definition of "Work Unit" provided above. 
+This task requires changes to CDA and other related projects to allow load testing in appropriate environments
+
+Period of Performance for Task 4 – 180 Days from Award
+
+Task 5a - Maintenance CWMS-Data-Api authorization systems
+The contractor shall perform maintenance and minor modifications of CWMS software code as defined in Technical Exhibit 4. The contractor has up to five days to start a task when requested and no more than two days to provide initial work unit submittals after starting work on a task. 
+ Any issue may result in a combination of issue classification, bug fix, minor modification or documentation activities. The activities are split to allow discussion, and, except for initial classification, distinctions should not be considered prescriptive to workflow. 
+Task 5a Deliverables. Task 5a is not expected to exceed 803 hours of total effort. HEC staff will be able to commit 6 hours per week to review submissions; the contractor should limit the volume of work submitted each week to allow appropriate government review of submitted code. It is recommended the contractor does not regularly exceed 20 hours per week of work under this maintenance task.
+Work that is expected to take more than 2 hours (excluding government review time), must be given notice to proceed in advance by the Project’s Technical POC, the Project’s Technical Supervisor POC, or their designee. Work that has been approved and is reasonably expected to take no more than 2 hours can proceed based on contractor’s judgment of priority and the established rate of work. Requests must be provided in the form of a GitHub issue. A designated label created by one of the previously listed people will be considered approval. The contractor is required to log their activities to be provided with the invoice The log shall give: 
+Government Requestor 
+Date of service 
+Notes describing the units of work completed 
+Current Status of GitHub issue
+For bugs fixed and software improvements, provide a description on how the issue was addressed, or the bug fixed, including the tests performed to verify fix. 
+Hours worked on each GitHub issue
+Deliverables consist of completed work units and will be invoiced monthly. For all bug fixes (minor, routine and major), deliverables will include documentation describing the testing performed to verify the bug fix within the appropriate GitHub Issue. When testing new code, testing will be performed to verify that the bug fixes do not introduce additional bugs in other areas of the code by running and documenting completion of the automated benchmark tests.  
+ All delivered source code will be checked into the appropriate government-controlled software depots. The government technical POC will have the time listed in Section 2 Reviews and Work Acceptance to review the work provided and request corrections or modifications. The contractor will have five days to address the government technical POC requests or comments. 
+Each invoice will refer to a GitHub Issue.  Each GitHub Issue will have all the information mentioned in the above log. 
+
+Period of Performance for Task 5a – 360 Days from Award
+ 
+(OPTIONAL) Task 5b - Maintenance CWMS-Data-Api authorization systems
+The contractor shall perform maintenance and minor modifications of CWMS software code as defined in Technical Exhibit 4. The contractor has up to five days to start a task when requested and no more than two days to provide initial work unit submittals after starting work on a task. 
+Any issue may result in a combination of issue classification, bug fix, minor modification or documentation activities. The activities are split to allow discussion, and, except for initial classification, distinctions should not be considered prescriptive to workflow. 
+Task 5b Deliverables. Task 5b is not expected to exceed 704 hours of total effort. HEC staff will be able to commit 6 hours per week to review submissions; the contractor should limit the volume of work submitted each week to allow appropriate government review of submitted code. It is recommended the contractor does not regularly exceed 20 hours per week of work under this maintenance task.
+Work that is expected to take more than 2 hours (excluding government review time), must be given notice to proceed in advance by the Project’s Technical POC, the Project’s Technical Supervisor POC, or their designee. Work that has been approved and is reasonably expected to take no more than 2 hours can proceed based on contractor’s judgment of priority and the established rate of work. Requests must be provided in the form of a GitHub issue. A designated label created by one of the previously listed people will be considered approval. The contractor is required to log their activities to be provided with the invoice The log shall give: 
+Government Requestor 
+Date of service 
+Notes describing the units of work completed 
+Current Status of GitHub issue
+For bugs fixed and software improvements, provide a description on how the issue was addressed, or the bug fixed, including the tests performed to verify fix. 
+Hours worked on each GitHub issue
+Deliverables consist of completed work units and will be invoiced monthly. For all bug fixes (minor, routine and major), deliverables will include documentation describing the testing performed to verify the bug fix within the appropriate GitHub Issue. When testing new code, testing will be performed to verify that the bug fixes do not introduce additional bugs in other areas of the code by running and documenting completion of the automated benchmark tests.  
+ All delivered source code will be checked into the appropriate government-controlled software depots. The government technical POC will have the time listed in Section 2 Reviews and Work Acceptance to review the work provided and request corrections or modifications. The contractor will have five days to address the government technical POC requests or comments. 
+Each invoice will refer to a GitHub Issue.  Each GitHub Issue will have all the information mentioned in the above log. 
+Period of Performance for Task 5b – 360 Days from Award
+Technical Exhibit 1 Improve Authorization web UI
+The Authorization UI must:
+ Allow District Administrators to create roles and policies, assign roles to users, and assign policies to roles.  
+Allow District Administrators to be assigned to roles.
+District Administrators should be able to do the following through the web Authorization UI:
+Users Tab
+View All Users who have roles/permissions assigned to access data for their district.
+Assign roles to users for a specific district.
+Show new users that do not have assigned privileges yet.
+User registration can happen at any time.
+Those users will have an account in the system, without any assigned roles.
+User admins need to see a list of these users so that appropriate roles can be assigned.
+Organize users by the assigned roles.
+Would not be able to assign roles associated with data for districts that they do not have permission.
+Roles Tab
+Allow district administrators to create roles specific to that district’s data.
+Allow administrators to assign policies to roles.
+Be able to sort/filter roles by assigned policies.
+Be able to view/edit/filter all roles associated with specific district’s data.
+Administrators would not be able to edit roles for a district that they do not have permission to edit. 
+Policy Tab
+View policies associated with districts data.
+Assign a time series to a policy.
+Continue to use time series groups for this (or manage within the Authorization system) and allow districts to manage the time series in the Authorization UI.  Either restrictive or allowed. 
+Assign based on time series parameters (LOC/parameter/version).
+Assign embargo to time series.
+Create policy and perform at least basic validation.
+
+Technical Exhibit 2 Implement module into CWBI environment.  
+CWMS Data API (CDA), and Database, are modules (CWMS-Data) with the USACE/CWBI cloud environment and are configured using Amazon Web Services Cloud Development Kit (AWS CDK) in the python language. Additionally, some changes are requested through the CWBI GitHub Issuing system. The CWMS-Data module needs to be expanded to include the required OPA, Cache, and Proxy containers to be integrated with the CWMS-Data API. Services are hosted in an AWS -gov region. Limitation of the -gov regions and FedRAMP apply.
+CWBI requirements are as follows.
+All CWBI requirements were included for completeness, and some requirements may conflict with what is in the contract or already assumed to be handled by the government. If the vendor feels a particular element should be handled by the government, it should be brought up before award to confirm responsibility.
+Code
+Utilize government approved centralized source code repositories to store all government funded software development or customization of COTS products, specifically CWBI’s GitHub Enterprise environment.
+Deploy the application/service using only hardened images, stacks or instances provided and approved by the CWBI PMO. Any legitimate need to deviate from the standard instances will be considered case by case.  CWBI recommends the use of Chain Guard for hardened images.
+Include health check options in code data so that CWBI’s uptime monitoring can report when a module is up or down.
+Cybersecurity
+The Contractor shall maintain administrative, technical, and physical safeguards and controls required for the security level and services being provided in accordance with  the latest version of the DoW Cloud Computing Security Requirements Guide (SRG). The solution must meet security standards and controls specified in DoDI 8500.01 (Cybersecurity) and 8510.01 (RMF). 
+The contractor will be responsible for generating and providing RMF required authorization related documentation and artifacts to the CWBI Information System Security Manager (ISSM).  
+The contractor must provide security incident response plans. Updates to the plans are required on an annual basis or when a significant change occurs to the technical or operational environment. 
+The Contractor will ensure that the cloud environment fully complies or exceeds the security requirements for Impact Level 4 in the DoW Cloud Security Model SRG. The Contractor will make the environment accessible for a DoW security team to evaluate the environment prior to the placement of any DoW data in the environment and allow for periodical security reviews of the environment during the performance of this contract. 
+The CWBI PMO will perform monthly Cybersecurity vulnerability scans.  The contractor shall address and resolve all findings in accordance with DoW and Army directives and policies.  The contractor shall work with the CWBI Cybersecurity Team to remediate all identified vulnerabilities within the specific time requirement. 
+The contractor will work with the Government’s chosen Cyber Security Service Provider (CSSP) to establish CSSP services (as required by DoDI 8530 and as described by the DISA Cloud Computing Security Requirements Guide) for Army applications hosted in commercial cloud.   
+The contractor shall ensure that all data-at-rest and data in-transit is encrypted utilizing NSA-approved encryption. 
+In compliance with DoDI 8500.01 (2014, incorporating Change 1 effective 2019) section 3, DoDI 8510.01 (2019) section 3.2.d, and USACE ER 25-1-112 (2014) section 7.1.3; all information systems (IS) and platform information technology (PIT) systems developed and/or supported under this contract shall comply with all DoW, DISA, Army, and USACE cybersecurity and information technology (IT) requirements. This includes IS/PIT compliance with DISA security technical implementation guides (STIG) and being categorized IAW CNSSI 1253 using security controls developed IAW the risk management framework (NIST SP 800-53). STIG compliance shall include but is not limited to most current version of the DISA published Application Security and Development STIG and the DoW Internet-NIPRNet demilitarized zone (DMZ) STIG. Further, the contractor shall comply DFARS clause 252.204-7012 (Safeguarding Covered Defense Information and Cyber Incident Reporting) and implement NIST SP 800–171 requirements to protect covered defense information / controlled unclassified information.  All contractors supporting this contract staff shall comply with DoW 8570.01-M Information Assurance Workforce Improvement Program.  CWBI leads the compliance with these provisions, and the contractor shall coordinate with CWBI to provide required information and documentation necessary to meet these requirements.
+Provide required input to and documentation for the Assessment and Authorization (A&A) and receipt of appropriate approval(s) such as Certificate of Networthiness (CoN), Authorization to Operate (ATO), Approval to Connect (ATC) through the Risk Management Framework (RMF) for DoW Information Technology (IT), DoD Instruction 8510.01 and Department of War (DoW) Directive 8500.01.  Documentation shall meet Department of Defense Architectural Framework (DoDAF) standards.
+The contractor will comply with the DoW Secure Cloud Computing Architecture (SCCA).
+Maintain all cybersecurity training and certifications necessary to operate within the CWBI cloud environment.
+Participate in the security assessment, security authorization, and continuous monitoring of the module by providing information and/or taking specific action(s) as instructed by the CWBI Cybersecurity Team.
+Develop and provide the artifacts required in support of the accreditation package artifacts.
+Provide required input to the security control comprehensive self-assessment. Serve as the Subject Matter Expert (SME) for the systems security controls, vulnerability mitigations and milestones as it applies to the system Plan of Action and Milestone (POAM). 
+Assist in entry of all required supporting artifact and related documentation into the Enterprise Mission Assurance Support Service (eMASS).
+CWBI is primarily responsible for testing, and the contractor shall support those as required, to include:
+• Provide required input to the systems Security Control Assessor (SCA) assessment. This includes:
+On-site services during the period of assessment 
+Insight into the technical configuration of the system software and documentation as it applies to the self-assessed RMF controls, 
+Insight into the STIG and/or SRG and ACAS reports results 
+• Configure the module securely; applying the DoW Information Systems Agency (DISA) Security Technical Implementation Guides and/or the Security Requirements Guides (SRGs). 
+• The contractor shall coordinate with CWBI to provide a STIG/SRG compliance matrix which lists the module components, relevant STIGs and/or SRGs, release date, assessment date, and assessor(s). For each applicable STIG, the contractor shall:
+Provide the assessment results in .CKL format exported from the latest DISA IASE STIG Viewer.
+List STIG compliance assessments are characterized in descending levels of severity as Low, Moderate and Critical/High.  
+Remediate all valid Critical/High STIG findings on identification and notify the government PM whenever a Critical/High STIG finding cannot be resolved immediately.  
+Remediate all Low and Moderate STIGs to the maximum extent practicable, and present to the government a Plan of Objectives and Milestones (POA&M) that resolves the remaining Moderate STIG findings in less than 2 months and Low STIG findings in less than 4 months.
+As STIGs or SRGs are updated by DISA IASE, the contractor will re-assess compliance and provided updated assessment results.
+The contractor shall work with CWBI to assess compliance with any applicable EXORD, OPORD, or TASKORD published by USCYBERCOM, HQDA, CIO/G-6, NETCOM, etc., and implement any required configuration changes or provide reports or mitigations.
+The contractor shall work with the CWBI Cybersecurity team to ensure that the system remains secure in operation and in IAVM compliance by conducting DISA Assured Compliance Assessment Solution (ACAS) scans of the system at least twice per month.
+The contractor shall maintain a compliance score at or above 90% for all applicable Security Content Automation Protocol (SCAP) scans and shall resolve all findings rated "Critical" or "High" immediately.  Whenever a "Critical" or "High" finding cannot be immediately resolved, the contractor shall notify CWBI.  The contractor will resolve "Moderate" findings and will present CWBI with a comprehensive list of these findings and the plan to resolve each.
+The contractor shall coordinate with the CWBI Cloud administrators to implement and ensure compliance with continuous monitoring strategy IAW with NIST SP 800-137, "Information Security Continuous Monitoring and Annual FISMA reporting" and ensure that required reports, tests, and other documentation are provided to fulfill periodic reporting requirement.
+Ensure proper handling and disposition of information within the application/service through either a new or existing file plan that covers the identification, access, handling, and disposition of records in accordance with applicable federal laws, Executive Orders, directives, policies, regulations, standards, and operational requirements.
+Data
+Data Storage, Rights, and Ownership
+The Contractor must physically maintain all data solely on equipment located within the legal jurisdiction of the United States IAW DFARS 239.7602-2(b).  All data, including but not limited to documents, administrative data, support data, and billing data, transmitted via the system or maintained in the system shall always reside in data processing and storage equipment located in the United States or in data processing and storage equipment of which the operation and maintenance are subject only to the laws of the United States. Data transmitted must only be subject to disclosure pursuant to U.S. Federal law and not the laws of any other jurisdiction or foreign nation. All DoW information/data placed or created by DoW users in a Cloud Service Provider’s (CSP) Cloud Service Offering (CSO) is owned by the DoW, the Mission Owner, and/or their Information Owner, the Civil Works Business Intelligence (CWBI) program. The CSP has no rights to the DoW’s information/data. For more information on data storage, data rights, and data ownership requirements refer to Section 5.2, Legal Considerations, in the DoW Cloud Computing Security Reference Guide (SRG). 
+The Government shall retain unlimited rights to all development and automation performed and all data, application source code, Infrastructure-as-Code (IaC) or Configuration as Code (CaC) or processes created under this contract. This would not include code, processes, or automation that USACE might subscribe to that are commercially available under Commercial Use Rights and/or Government Purpose Rights.   
+The Government shall retain unlimited rights of all user data/information/knowledge provided to, created/developed in, loaded/transitioned to, or hosted in/by the contractor, CSP, tenant, multiple CSP, multiple tenants, CSO, vendor IT infrastructure, hosting environment, system(s).  This includes rights to logs, scans, analytics, and other data, conducted by the contractor, CSP, or tenant, on their IT infrastructure, hosting environment, system(s), or prototype process. The Government retains the right to request full copies of this data at any time. 
+The contractor shall fill out Appendix A: Data Rights Table, as part of their proposal.
+Data Exchange
+All new and existing modules, systems, or services deemed non-legacy shall expose their data and functionality through service interfaces (e.g., OpenAPI specification).  
+All data sources are developed with built-in data exchange capabilities. Data mapping shall also be implemented to increase efficiency and ease of use of data assets as they are being translated or transformed. At a minimum, the contractor shall comply with Global Force Management Data Initiative; International Standards for dates; Geopolitical Entities, Names and Codes, Common (GENC); Joint Consultation, Command and Control Exchange Data Model; Resource Description Framework standards and schemas: CW Vocabulary Management Services; or Spatial Data Standards for Facilities, Infrastructure and Environment (SDSFIE).  
+Define the Information Type(s) received, processed, stored, transmitted, or displayed by the system and categorize the system IAW NIST SP 800-60 Volume II and CNSSI 1253 prior to uploading to the CWBI environment.  Data confidentiality, integrity, and availability cannot exceed IL4 thresholds.
+Follow DoW and Army Data Strategy guidance to make data visible, accessible, understandable, linked, trustworthy, interoperable, and secure (VAULTIS).
+Complete and maintain applicable Record Management Survey, Personable Identifiable Information, Controlled Unclassified Information, and System of Record Notice forms.
+Documentation
+Prior to cloud work, the contractor shall deliver a Project Management Plan (PMP) in editable format within 45 days of contract award to include a RACI Chart illustrating stakeholder responsibilities, OV-1 (Operational Viewpoint) DoW Architecture Framework (AF) cloud/application diagram, network models, and database entity relationship diagram.
+Document RMF, change management, and module description details into CWBI’s centralized module tracking tool to ensure CWBI can maintain its Authority-to-Operate (ATO).  This includes input and upkeep of RMF records related to Personnel, Security, Operations, Logistics Materials, Planning, Communications, and Training in Confluence.
+Infrastructure
+Build to the highest abstraction of cloud services to meet functional, technical, performance and cost goals. These services include commercial SaaS, PaaS, Database Management as a Service, and so forth, to accelerate testing, accreditation, and fielding to the Army. 
+Use modern software development methodologies (e.g., agile, DevSecOps) to support rapid delivery of standardized, reliable, integrated, and secure mission capabilities. 
+Legacy systems undergoing modifications to adapt to a service-enabled architecture will design anti-corruption layers to support the transitional period.  
+All service interfaces, without exception, be designed to be consumable from external sources and must plan and design to be able to expose the interface to developers. 
+The contractor must ensure that there will be no other form of Inter-Process communication allowed: no direct linking, no direct reads of another data store, no shared-memory model, and no backdoors whatsoever. The only Inter-Process communication allowed is intra-system data exchanges or service interface calls over the network. 
+Use microservices architecture and automation where technically and economically feasible.  
+Configure application-level auditing as follows:  
+Generate audit records containing information that establishes what type of event occurred, when the event occurred, where the event occurred, source of the event, outcome of the event, and identity of subjects associated with the event; and  
+Review and analyze audit records at least weekly for indications of organization-defined inappropriate or unusual activity; and  
+Retain such audit records for 90 days; and  
+Protect audit records from unauthorized access, modification, and deletion.
+For any publicly available application/service in CWBI:  
+Review the proposed content of information prior to posting onto the publicly accessible information system to ensure that non-public information is not included.  
+Is Section 508 compatible. 
+Includes a government consent banner, where applicable. 
+Review the content on the publicly accessible information system for non-public information at least quarterly and remove such information if discovered.  
+Check the validity of information inputs (if any).  
+Generate error messages that provide information necessary for corrective actions without revealing information that could be exploited by adversaries. 
+Reveal error messages only to authorized personnel.
+Include the CWBI logo on the home page of any web-based applications hosted by CWBI under its Authority to Operate.
+Collaborate with the Government to establish module access controls.   Module authorization and authentication procedures shall use CWBI’s standardized common services approach, which currently is centered on the use of Login.gov SaaS, OpenID, and Keycloak technologies. Modules will work with Keycloak support team to implement authentication using the appropriate identity provider (Login.gov or EAMS-A) based upon defined requirements.  
+The contractor shall coordinate with CWBI to determine the appropriate architecture documentation.  The contractor shall update documentation as necessary and make it available to the Government upon request throughout the Period of Performance.  The contractor shall maintain System Architecture Diagrams to be provided with the architecture document.  The diagrams shall be maintained and delivered using Government approved formats.  The document shall include both a logical and physical diagram that identifies software, hardware, operating systems, databases, web Services, security, user access, required ports & protocols, along with network views.  Documentation shall meet standards for Department of War Architectural Framework (DoWAF) as utilized and defined by CWBI.  
+Metadata
+Register all applicable data sets in the USACE CW Data Catalog (maintained by the CWBI PMO) and comply with Dublin Core Metadata Element Sets and International Standards Organization Metadata Registries requirements. Review and update metadata records, at minimum, annually. 
+Compliance with publishing all application programming interface (API) information within the CW Data Catalog.   
+
+Technical Exhibit 3 Load testing
+Given existing issues, and the addition of the new authorization steps, additional mass testing should be performed. Utilizing tools, such as but not limited to Apache JMeter, to do distributed load testing of data inserts, retrievals, updates, calculations (the rate endpoint) with a combination of authenticated and not-authenticated accounts against at least one single instance of CDA and one round-robin (at least two instances) instance of CDA. An Apache CloudStack environment can be provided to run these tests; however, more generic alternatives can be proposed. However, it is required that any developer can run these tests locally even if doing so would not reflect system performance – e.g. on a local development machine.
+It should be reasonably easy for a developer to target a specific system to load test. 
+The minimum facilities to be load tested are:
+Authorization mechanisms
+Time Series storage and retrieval, including catalogs of information
+Location storage and retrieval, including catalogs of information
+While testing of other components is desired, currently the focus is on setting up infrastructure to do any load testing. For this test, a single POST and GET of the requirement mechanism will be accepted. However, the analysis would benefit from using several different length time windows.
+This testing is to establish baseline performance, as such there are no performance targets.
+Desired test loads are as follows, or some combination thereof:
+Single user, 50 request/second, parallelism of 10
+100 users, 50 requests/second, parallelism of 10 (each)
+1000 users, 100 requests/second
+10000 request/second
+100000 requests/second
+For each scenario above, perform 1 instance of CDA, 2 instances of CDA (round-robin), and 3 instances of CDA (also round-robin) tests. Also, some combination of reads and writes, the vendor may assume the system is read heavy for this task.
+Intent of data is to determine both RDS database vertical scaling or read replica requirements and if horizontal scaling benefits CDA usage.
+Assume the CPU/memory specification to assume for CDA is 1 VCPU, 2GB RAM. 
+As stated above, the goal is a baseline to analyze. The vendor is not expected to experiment with different scales or CPU/memory specs.
+
+Technical Exhibit 4 Maintenance
+The vendor will need to coordinate testing and bug reports with the community and correct discovered problems that are outside the scope of work performed for Technical Exhibit 1.
+Provide maintenance to Authorization tools as real world testing is conducted, and it is applied to the needs of USACE staff.  Make improvements and adjustments based on user feedback and fix bugs that are found. The following list describes the type of activities to be performed as part of maintenance.   
+Issue Classification. If the issue is a bug, then the contractor will identify the bug category, minor, routine, and major. The contractor will report status, via GitHub issue and receive direction to continue work after spending one hour classifying the issue. The contractor will also define the estimated amount of time to complete bug fixes and minor modifications or enhancements as part of issue classification.  
+Bug Fixes in software code.  The contractor will report status, via GitHub Issue, and receive direction to continue work after spending two hours working on a bug fix. The contractor is directed to push draft code changes in a pull request after four hours of work have been completed, and document in the appropriate GitHub Issue.  
+Minor Modifications and Enhancements. The contractor is directed to spend up to four hours, or as directed by HEC staff, completing a minor modification before reporting status, via GitHub Issue, and receiving direction to continue the work. The contractor is directed to push draft code changes in a pull request after four hours of work have been completed, and document in the appropriate GitHub Issue.  
+Documentation. Software documentation is associated with the work completed above. 
+Issue classification requires the evaluation of an issue to determine if the issue is:
+a bug in existing code;
+improper usage of the application or library;
+a functionality gap in what the existing code is capable of doing and what the code needs to do.
+Bug fixes are required for issues preventing appropriate usage of the software and be categorized as:
+Minor Bug Fixes are those that normally require a few additional lines of logic/coding to be added to the existing code base. 
+Routine Bug Fixes are those that normally require additional logic/coding, but require the addition of additional functions, procedures, objects to accomplish. 
+Major Bug Fixes are those that require many hours of investigation to figure out the problem, and then many additional hours to modify the code in order to fix the problem. 
+Functionality gaps in code are periodically identified. The work associated with a minor modification will normally require but is not limited to the following:
+the creation of new script, function or procedure calls;
+new classes or packages;
+new tables or other database objects;
+java code objects;
+the creation of a new user function;
+refactoring;
+development of work-around methods or script approaches to accomplish special needs.
+Documentation of work is any formal recording of what was done, how to use a software application, and reasoning behind design choices that developers and users can use to understand the workings of the system. Jira issue comments, while important, do not constitute documentation. Documentation may be provided by combination of any means appropriate to the given change, such as, but not limited to:
+A manual test case that anyone can perform;
+Javadocs;
+Automated test case;
+Formal project documentation.
+
+

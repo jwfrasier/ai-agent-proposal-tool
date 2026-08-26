@@ -1,0 +1,231 @@
+
+1.0 PROPOSAL SUBMISSION REQUIREMENTS
+1.1 Proposal Organization
+To effectively and equitably evaluate proposals, the Government must receive information sufficiently detailed and in the order described below that clearly describe an Offeror's capabilities. It is the responsibility of the Offeror to submit complete proposal information and documents that are fully responsive to the submission requirements of the solicitation. Offerors are responsible for organizing submitted material sequentially under tabs and numbered pages to facilitate evaluation. Materials not organized under the appropriate tabs and in the sequence of subparagraphs set out below, may easily be overlooked during evaluations, possibly affecting an Offeror’s rating. Submit proposals in the format and quantities as indicated below. Proposals shall be comprised of four volumes, and submitted in electronic form, as indicated below.
+Offerors shall organize their proposal into volumes as follows:
+Volume I – Technical
+Response to Project Technical Approach (Factor 1)
+Experience, Management Approach, Key Personnel, and Transition Plan (Factor 2)
+Volume II – Past Performance (Factor 3)
+Volume III – Price (Factor 4)
+1.2 Proposal Format
+Each volume shall be clearly identified and shall begin at the top of a page. All pages of each volume shall be appropriately numbered and identified by the complete company name, date, and RFP number in the header and/or footer. A Table of Contents should be created using the Table of Contents feature in MS Word.
+Documents shall use the following page setup parameters:
+Margins: Top, Bottom, Left, Right – 1”
+Gutter: 0”
+From Edge: Header, Footer 0.5”
+Page Size: Width – 8.5”, Height – 11”
+Spreadsheets, Tables, and Charts: May be 11” x 17” but will count as two pages. Tables and illustrations may be landscape and may use a reduced font size of no less than 10-point.
+Pricing Restrictions: No Price Information is to be submitted in Volumes I or II.
+The following additional restrictions apply:
+File Packaging: All of the proposal files shall be submitted as separate uploads in their native format, i.e., PDF, MS Word, Excel. Please note – Self-extracting .exe files are not acceptable.
+Content Requirement: The proposal shall be prepared clearly and concisely to demonstrate that the Offeror has a complete understanding of the requirements. Offerors shall prepare proposals on the presumption that the Government has no previous knowledge of the Offeror’s capabilities. Proposals will be evaluated only on the information specifically presented in respective submittals, with the exception of the Past Performance evaluations.
+Cross-Referencing: When applicable, the Offeror shall cross-reference to the solicitation by annotating the solicitation reference in parentheses (e.g., Sec C, para 4.0).
+Accuracy of Information: Proposals must set forth full, accurate, and complete information as required by this solicitation (including attachments). The penalty for making a false statement in proposals is prescribed in 18 U.S.C. §1001.
+Award Intent: Offerors should submit their best proposal initially as the Government intends to make awards without negotiations except clarifications. The Government reserves the right to conduct negotiations, if deemed necessary.
+Structure of Files: Each file of the proposal shall consist of a Table of Contents, Summary Section, and the Narrative discussion. The Summary Section shall contain a brief abstract of the file. Proprietary information must be clearly marked.
+
+2.0 PROPOSAL EVALUATION FACTORS
+2.1 Volume I – Technical (Page Limit: 30 Pages)
+2.1.1 Factor 1 – Response to Project Technical Approach
+Offerors shall submit a proposal response to the Performance Work Statement that includes the Offeror’s proposed level of effort per task, and the technical approach to performing the requirement as described in the Performance Work Statement (PWS). Technical approach narratives may be enhanced with charts, tables, pseudo code, or any logical means of conveying the proposed technical approach that the Offeror will use to accomplish the work. Broad general statements that merely mimic the solicitation, repeat, paraphrase, or promise general performance are not sufficient.
+Proposals for Factor 1 must be organized into the following tabs:
+TAB A: Technical Approach – The Offeror shall describe how it will interact with the CWBI-PMO and contractor to realize the Authorization improvement requirements in the CWBI-Dev environment. Task requirements are in Technical Exhibit 2.
+TAB B: UI Improvements – The requirements and asking code (see PWS Section 2.0/Technical Resources) describe existing shortcomings and how implementation of the required improvements will progress through the contract. At least one specific requirement should be addressed in detail. Task requirements are in Technical Exhibit 1.
+TAB C: Load Testing – Given the requirements in Technical Exhibit 3, describe the proposed infrastructure and process for load testing. If specific tools are proposed, explain why.
+2.1.2 Factor 2 – Management Approach, Key Personnel, and Transition Plan
+Offerors shall propose Key Personnel for this requirement and submit resumes demonstrating appropriate education (including certifications) and experience of the key personnel proposed (see Section 1.1 and Section 2.1 of the PWS). Resumes are only required for the Project Manager, Senior Oracle DBA, System Engineer/Architect, Senior Forms Developer, and Senior APEX or Java Developer.
+Offerors shall submit a written narrative proposal which describes and demonstrates the Offeror’s technical understanding and approach to satisfy the support needs of the CWMS Data API as outlined in the PWS. Additionally, Offerors shall provide detailed information as to their approach to effectively manage the work specified in the PWS. Offerors shall provide enough information to demonstrate a thorough understanding of time and personnel requirements, information on how the Offeror will meet programmatic deadlines, and information on how the Offeror will maintain the functions outlined in the PWS.
+Proposals for Factor 2 must be organized into the following tabs:
+TAB A: Management Approach – The Offeror shall describe its staffing structure and include an organizational chart that clearly shows the management team and lines of authority and communication.
+TAB B: Key Personnel Resumes and Experience – The Offeror shall submit resumes and letters of commitment demonstrating the required education, certifications, and experience of the five specified Key Personnel roles.
+TAB C: Transition Plan – The Offeror shall submit a transition plan that clearly describes the process, details, and schedule for HEC to continue any work not completed.
+2.2 Volume II – Past Performance (Page Limit: 25 Pages)
+2.2.1 Factor 3 – Past Performance
+Offerors shall submit examples of recent and relevant efforts and the quality of those efforts to demonstrate accomplishments and capabilities to successfully perform and accomplish the effort required by this RFP. There are three aspects to the past performance information to be submitted: (a) Recency, (b) Relevancy and (c) Quality of Past Performance.
+2.2.1.1 Relevant Past Performance
+The Offeror shall submit a minimum of one (1) and no more than three (3) examples of its most “recent” and “relevant” project efforts performed to demonstrate its company’s accomplishments on contracts similar to the effort required in this solicitation. Efforts are considered “Recent” if their performance occurred within the last three (3) years.
+For each “recent” and “relevant” project example, the Offeror shall furnish the information specified below. If the Offeror is submitting “task order type projects”, each single task order project shall be submitted on a separate project data sheet. Do not combine task orders and present them as one entire project.
+At a minimum, provide the following information:
+Company Name
+Name of Project
+Location of Project
+Owner’s Name and Owner's Point of Contact (telephone, e-mail)
+General Scope of Project/Contract Work as it relates to the PWS of this solicitation, including project size, complexity, and any distinctive and/or unique features of the project
+Offeror’s Role (Prime, Subcontractor, Joint Venture Partner, etc.) and the type of work your company self-performed
+Contract Type (e.g., performance-based, Firm-Fixed-Price, etc.)
+Contract Award Date (Month/Year); Completion Date of the Base Year (Month/Year); Completion of Option Years (Month/Year)
+If this contract is being performed under an option year, the completion date of the current option being performed (Month/Year)
+Contract Dollar Value - Base Year Price and Total Price (Base Year and all Options)
+Type and Extent of Work Subcontracted
+The Approach to the Operational Services
+How the Project was Managed (e.g., oversight, schedule, quality, property management, safety, etc.)
+Termination or Liquidated Damages Information (comments regarding any known performance deemed unacceptable to the customer or not in accordance with the contract terms and conditions)
+Contract Number (if providing information from a US Government contract)
+2.2.1.2 Quality of Past Performance
+2.2.1.2.1 CPARS and PPQ Submission: The Offeror shall submit evidence of the quality of its past performance on the projects submitted in paragraph 2.2.1.1. The Offeror shall provide a completed Contractor performance evaluation, whether annual or final, found in the Contractor Performance Assessment Rating System (www.cpars.gov). If a completed Contractor performance evaluation does not exist in CPARS (for example, non-U.S. Government projects), the Offeror shall provide a completed Past Performance Questionnaire (PPQ). If, at the time of evaluation, a completed Contractor performance evaluation exists in CPARS that conflicts with a submitted PPQ, the completed contractor performance evaluation will govern.
+2.2.1.2.2 Unacceptable Formats: Any past performance surveys/assessment/evaluation forms, other than CPARS or the PPQ form provided at the end of this section, are unacceptable submissions by the Offeror to evidence the quality of its past performance and will not be considered or evaluated.
+2.2.1.2.3 Use of Previous PPQs: Completed CPARS or PPQs that were submitted in response to previous solicitations may be used in this source selection. However, Offerors shall not incorporate any CPARS or PPQs by merely referencing other proposals. A copy of the CPARS or PPQ must accompany the company effort submitted under Experience/Past Performance in paragraph 2.2.1. While the Government may elect to consider data from other sources, the burden of providing detailed, current, accurate, and complete past performance information rests with the Offeror.
+2.2.1.2.4 Corrective Actions: If an Offeror has been required to take corrective action for any substandard performance, or other performance problems such as cost overruns, extended performance periods, numerous warranty calls, etc., the Offeror should explain the circumstances and the corrective actions taken.
+2.2.1.2.5 Direct Submission to HEC: If a project owner will only provide completed PPQs and/or CPARS directly to the U.S. Army Humphrey’s Engineering Center, it is the Offeror’s responsibility to ensure that the project owner submits the PPQ and/or PPIRS before the proposal due date using the following electronic mailing addresses:
+David A. Kaplan at email: David.A.Kaplan@usace.army.mil (with copy furnished to David.A.Kaplan@usace.army.mil)
+Quan Nguyen at email: quan.nguyen@usace.army.mil (with copy furnished to quan.nguyen@usace.army.mil)
+
+PPQs and/or CPARS received after the proposal receipt date will not be considered timely and will not be included in the evaluation of the Offeror’s proposal.
+
+2.2.1.2.6 Joint Venture Submission Requirements: Offerors submitting proposals as a Joint Venture (JV) shall obtain a SAM Unique ID number and be registered in the System for Award Management (SAM) as the offering Joint Venture. The Offeror must provide up to five (5) “recent”, “relevant” projects performed by the JV that reflect the JV’s ability to perform the work as required by Paragraph 2.2.1.
+2.2.2 Verification of Past Performance
+The Government reserves the right to verify the past performance record of cited projects (or other recent projects not submitted) by reviewing the Contractor Performance Assessment Rating System (CPARS), or other Government appraisal systems, or to interview owners or references. The Government may check any or all cited references to verify supplied information. An Offeror will be afforded the opportunity to reply to or explain adverse performance information which the Offeror has not previously had an opportunity to address.
+2.2.3 Teaming Submission Requirements
+Offerors proposing with subcontractor or Team Partners shall provide a Teaming Agreement fully executed by all parties that identifies the subcontractor Teaming Partner(s) company name, SAM Unique ID number, and SAM verification, and clearly states the subcontractor’s commitment to perform on this contract and the type of work to be provided as part of the Team.
+The Prime Contractor must provide up to three (3) “recent”, “relevant” projects that reflect the Offeror’s ability to perform the work as required by Paragraph 2.2.1 (subparagraphs 2.2.1.1 and 2.2.1.2). Additionally, the Offeror must provide up to five (5) “recent”, “relevant” projects performed by each proposed Teaming Partner that reflect the Teaming Partner’s ability to perform the work identified in the Teaming Agreement.
+Only the experience and past performance information for the Prime Contractor and major Subcontractors performing at least 25% percent of the work for this factor shall be submitted. The Offeror shall also submit the written consent of its major Subcontractors to allow disclosure of past performance information to the Offeror.
+2.3 Volume III – Price
+2.3.1 Factor 4 – Price
+Offerors shall submit a price proposal for all tasks with subtotals per task in the PWS. To support price analysis, an excel spreadsheet must be included with supplemental information as follows:
+Offerors shall propose fully burdened labor rates for all employees who will work under the contract. The labor rates must reflect differences in skills, complexity of various disciplines, and professional job difficulty. The proposed level of effort per labor category (or person) per task must be included. 
+The price proposal must include a grand total price for all tasks, including options.
+
+3.0 EVALUATION FACTORS AND APPROACH FOR AWARD
+3.1 Evaluation Factors
+The following evaluation factors will be used to evaluate each proposal:
+Factor 1 – Response to Project Technical Approach: The Offeror shall be evaluated on its demonstrated technical approach to respond to PWS and Sample data. The Offeror must submit a narrative to describe its technical approach for the work described in the solicitation.
+Factor 2 –Management Approach, Key Personnel, and Transition Plan: The Offeror’s Management Approach, Key Personnel, experience levels, and Transition Plan narrative will be evaluated by the Government to determine the Offeror’s capabilities to execute the work contemplated under this solicitation.
+Factor 3 – Past Performance: The Offeror’s past performance will be evaluated by the Government to assess the Offeror’s probability of successfully performing the requirements in the Performance Work Statement.
+Factor 4 – Price: Price will be evaluated using price analysis techniques at RFO 15.404-1, based on a comparison of competitive prices received in response to the solicitation and a comparison of proposed prices to the Independent Government Estimate (IGE). If needed, cost analysis found at RFO 15.404-2 will be used.
+Award will be made to the Offeror whose proposal is most beneficial to the Government based upon an integrated assessment of the evaluation factors described below. The non-price factors (1 – 3) are of equal importance. The non-price factors combined are more important than price.
+3.2 Evaluation Approach
+All proposals shall be subject to evaluation by the Source Selection Evaluation Board (SSEB).
+3.2.1 Technical Factors Rating Scheme
+The Technical Factors rating scheme, excerpted below, focuses on consideration of risk in conjunction with the strengths, significant strengths, weaknesses, significant weaknesses, uncertainties, and deficiencies in determining technical ratings of the Offeror’s proposal. The color rating depicts how well the Offeror’s proposal meets the Technical factors’ requirements. Factors 1 and 2 will be rated using the following combined technical/risk adjectival ratings:
+
+
+
+
+Adjectival Rating
+Description
+Outstanding
+Proposal indicates an exceptional approach and understanding of the requirements and contains multiple strengths, and risk of unsuccessful performance is low.
+Good
+Proposal indicates a thorough approach and understanding of the requirements and contains at least one strength, and risk of unsuccessful performance is low to moderate.
+Acceptable
+Proposal meets requirements and indicates an adequate approach and understanding of the requirements, and risk of unsuccessful performance is no worse than moderate.
+Marginal
+Proposal has not demonstrated an adequate approach and understanding of the requirements and/or risk of unsuccessful performance is high.
+Unacceptable
+Proposal does not meet requirements of the solicitation, and thus, contains one or more deficiencies, and/or risk of unsuccessful performance is unacceptable. Proposal is unawardable.
+3.2.1.1 Evaluation Criteria for Factor 1 – Response to Project Technical Approach
+The Offeror shall be evaluated on its demonstrated technical approach to respond to the requirements in the PWS. The Offeror must submit a narrative to describe its technical approach for each PWS task. The Government will review the technical response to each PWS task to evaluate the following:
+3.2.1.1.1 TAB A – Technical Approach
+Offeror shall be evaluated on its ability to support the full system development life cycle. Offeror shall be evaluated on their knowledge of agile development processes and the ability to utilize agile development methodologies.
+The ability to work on a dynamic project contributed to by other Government staff and contractors.
+The Offeror must demonstrate knowledge of Database Administration, REST API development, Access Control mechanisms, Configuration Management, and Cybersecurity.
+The Offeror must demonstrate knowledge of Civil Works Business Intelligence (CWBI) processes and requirements.
+Offeror must demonstrate understanding and the ability to communicate security needs succinctly.
+3.2.1.1.2 General Technical Approach Evaluation
+The Government will evaluate the strengths, significant strengths, weaknesses, significant weaknesses, and any deficiencies in the Offeror’s technical approach. The Government will evaluate how well an Offeror’s proposed technical approach to the requirement in the PWS adequately describes their procedures, methods, and delivery of services that meet or exceed the Government’s minimum requirements.
+3.2.1.1.3 TAB B – UI Improvements
+The Offeror will be evaluated on how effective and clear the communication of the changes required, the overall design, and details of any perceived or apparent shortcoming of the current systems.
+3.2.1.1.4 TAB C – Load Testing
+The Offeror will be evaluated on how effective and clear the communication describing the methods and tools are.
+3.2.1.2 Evaluation Criteria for Factor 2 – Experience, Management Approach, Key Personnel, and Transition Plan
+The Offeror must submit a comprehensive Management Approach, Key Personnel, and Transition Plan narrative to explain its company’s capabilities and personnel experience to execute the work contemplated under this solicitation.
+3.2.1.2.1 TAB A – Management Plan
+Address each of the following items in a narrative format:
+Management plan that demonstrates the ability to reduce performance risk, ensure responsiveness to changes, provides excellent customer service, and provides for timely performance.
+Management plan that clearly establishes a hierarchy, delineates responsibilities, and provides a staffing plan that demonstrates its staff is available for, and capable of completing the PWS requirements simultaneously, without degradation in the performance level of any of the tasks being performed under the contract.
+3.2.1.2.2 TAB B – Key Personnel
+Offerors shall propose the Key Personnel identified by the Government for this requirement and submit resumes demonstrating the appropriate education and experience. Resumes should include proposed job title, education, certifications held, special qualifications, and experience (listing the job title, specific duties, responsibilities, and the respective dates). The Offeror shall submit letters of commitment for all Key Personnel. The Offeror shall also be evaluated on the experience and qualifications of the Key Personnel as required in accordance with the Performance Work Statement (PWS)
+3.2.1.2.3 TAB C – Transition Plan
+Describe the process, details, and schedule for providing an orderly transition for HEC to continue any uncompleted work
+3.2.2 Evaluation Criteria for Factor 3 – Past Performance
+The past performance factor will be used to determine the level of performance risk associated with each Offeror. Offerors should provide performance history and references to demonstrate satisfactory performance for at least one (1) prior or current contracts that are similar in size, scope, and complexity to this requirement performed within the last three (3) years. References should also be provided for any anticipated subcontractor to be used.
+Offerors should provide the following:
+Reference: Name, Address, POC, and phone numbers
+Contract Number, Value, and Dates
+Description of the Contract Effort Relevance to this Solicitation
+
+3.2.2.1 Performance Evaluation: Each Offeror will be evaluated on its performance under existing and prior efforts for similar services. The Offerors may include an overall narrative explaining what aspects of the contract effort are deemed relevant to the proposal effort, as well as significant accomplishments and difficulties. Offerors are responsible for the accuracy and completeness of all information, and the Government does not assume the responsibility for conducting research because of incorrect reference information of any kind. The references should be provided in descending order, with the most relevant contracts appearing first.
+
+3.2.2.2 Past Performance History Record: The Government will evaluate the Offeror’s record of past and current performance within the last three (3) years to ascertain the probability of successfully performing the required efforts of the PWS.
+
+3.2.2.3 Subcontractor Record of Performance: The Government will focus its inquiries on the Offeror’s (and major subcontractor’s) record of performance as it relates to all solicitation requirements, including schedule, performance, and management of subcontractors. Major subcontractors are defined as members of an Offeror’s overall team who are expected to perform twenty-five (25) percent or more of the proposed effort. A significant achievement, problem, or lack of relevant data in any element of the work can become an important consideration in the evaluation process. Therefore, Offerors will be reminded to include the most recent and relevant efforts (within the past three years) in their proposal. Absent any recent and relevant past performance history or when the performance record is so sparse that no meaningful confidence assessment rating can be reasonably assigned, the Offeror will be assigned a “neutral rating” and its proposal will not be evaluated either favorably or unfavorably on past performance.
+The Government may use data provided by the Offeror in its proposal and data obtained from other sources, including data in Government files or data obtained through interviews with personnel familiar with the contractor and their current and past performance under Federal, State, or Local government or commercial contracts for same or similar services as compared to the North American Industry Classification System (NAICS) 541511. Data used in conducting performance risk assessments shall not extend past three years prior to the issue date of the RFP but may include performance data generated during the past five years without regard to the contract award date.
+
+3.2.2.4 Submissions for Prime and Major Subcontractors: Offerors shall submit all Government and/or commercial contracts for the prime Offeror and each major subcontractor in performance or awarded during the past three years, from the issue date of this RFP, which are relevant to the efforts required by this RFP. The Government may consider a wide array of information from a variety of sources but is not compelled to rely on all the information available.
+
+3.2.2.5 Evaluation Elements: The past performance factor considers each Offeror’s demonstrated recent and relevant record of performance in supplying services that meet the contract requirements. There are three aspects to the past performance evaluation: recency, relevancy, and performance confidence assessment:
+
+3.2.2.5.1 Recency: The first aspect of the past performance evaluation is to assess the recency of the Offeror’s past performance. Recency is generally expressed as a period during which past performance references are considered relevant and is critical to establishing the relevancy of past performance information. For this acquisition, recency is defined as past performance references within the last three years as of the date of this solicitation release.
+
+3.2.2.5.2 Relevancy: The second aspect of the past performance evaluation is to assess the Offeror’s past performance to determine how relevant a recent effort accomplished by the Offeror is to the effort to be acquired through the source selection. Relevancy is not separately rated; however, the following criteria will be used to establish what is relevant, which shall include similarity of service/support, complexity, dollar value, contract type, and degree of subcontract/teaming:
+
+
+Rating
+Description
+Very Relevant
+Present/past performance effort involved essentially the same scope and magnitude of effort and complexities this solicitation requires.
+Relevant
+Present/past performance effort involved similar scope and magnitude of effort and complexities this solicitation requires.
+Somewhat Relevant
+Present/past performance effort involved some of the scope and magnitude of effort and complexities this solicitation requires.
+Not Relevant
+Present/past performance effort involved little or none of the scope and magnitude of effort and complexities this solicitation requires.
+
+3.2.2.5.3 Quality: The third aspect of the past performance evaluation is to establish the overall quality of the Offeror’s past performance by determining how well the contractor performed on the recent and relevant contracts. The past performance evaluation conducted in support of this source selection does not establish, create, or change the existing record and history of the Offeror’s past performance on past contracts; rather, the past performance evaluation process gathers information from customers on how well the Offeror performed those past contracts. Evaluators will review all past performance information collected and determine the quality of the Offeror’s performance, general trends, and usefulness of the information and incorporate these into the performance confidence assessment. A separate quality assessment rating is not required; rather, the past performance confidence assessment rating is based on the Offeror’s overall record of recency, relevancy, and quality of performance.
+
+3.2.2.5.4 Performance Confidence Assessment: The final step is for the team to arrive at a single consensus performance confidence assessment for the Offeror, selecting the most appropriate rating from the chart below. This rating considers the assessed quality of the relevant/recent efforts gathered.
+
+
+Rating
+Description
+Substantial Confidence
+Based on the Offeror’s recent/relevant performance record, the Government has a high expectation that the Offeror will successfully perform the required effort.
+Satisfactory Confidence
+Based on the Offeror’s recent/relevant performance record, the Government has a reasonable expectation that the Offeror will successfully perform the required effort.
+Neutral Confidence
+No recent/relevant performance record is available, or the Offeror’s performance record is so sparse that no meaningful confidence assessment rating can be reasonably assigned. The Offeror may not be evaluated favorably or unfavorably on the factor of past performance.
+Limited Confidence
+Based on the Offeror’s recent/relevant performance record, the Government has a low expectation that the Offeror will successfully perform the required effort.
+No Confidence
+Based on the Offeror’s recent/relevant performance record, the Government has no expectation that the Offeror will successfully perform the required effort.
+3.2.3 Evaluation Criteria for Factor 4 – Price
+3.2.3.1 Price Analysis and Unbalanced Pricing: Price will be evaluated using price analysis techniques at RFO 15.404-1, based on a comparison of competitive prices received in response to the solicitation and a comparison of proposed prices to the Independent Government Estimate (IGE). If needed, cost analysis found at RFO 15.404-2 will be used. The Government will evaluate prices to ensure that unbalanced pricing between Contract Line Item Numbers (CLINs) is not occurring. The proposed labor rates should reflect a clear understanding of the requirement and the ability to obtain and retain qualified personnel.
+
+3.2.3.2 Price Reasonableness and Program Continuity: Offerors shall propose fully burdened labor rates for all labor categories. The labor rates proposed must reflect differences in skills, the complexity of various disciplines, and professional job difficulty. Proposed rates will be evaluated for reasonableness to ensure they represent a fair compensation structure capable of maintaining program continuity, uninterrupted high-quality work, and availability of required competent professional service employees. Lowered rates for essentially the same professional work should be justified to demonstrate sound management judgment and a comprehensive understanding of the requirement. Labor rates that are not in reasonable relationship to the various job categories may be viewed as evidence of failure to comprehend the complexity of the contract requirements, since it may impair the Contractor’s ability to attract and retain competent professional service employees.
+
+4.0 PROPOSAL NEGOTIATIONS
+4.1 Award Without Negotiations
+In accordance with solicitation provision FAR 52.215-1, the Government intends to evaluate proposals and award a contract without negotiations with Offerors (except clarifications as described in FAR 15.306(a)). Therefore, Offerors are cautioned to provide their best terms for price and non-priced technical submission with their initial offers. The Government reserves the right to conduct negotiations, if the Contracting Officer determines that negotiations are necessary or are otherwise in the Government's best interest.
+
+5.0 BASIS FOR AWARD
+5.1 Best Value and Relative Importance
+The Government will award a Firm-Fixed-Price contract to the responsible Offeror whose proposal conformed to the RFP, is fair and reasonable, and has been determined to be most beneficial to the Government based on the four evaluation factors in descending order of importance:
+Factor 1 – Response to First Project Technical Approach 
+Factor 2 – Management Approach, Key Personnel, and Transition Plan 
+Factor 3 – Past Performance
+Factor 4 – Price
+The non-price factors when combined (Factors 1, 2, and 3) are significantly more important than the price factor (Factor 4). As the differences in technical and past performance ratings and relative advantages or disadvantages become less distinct, differences in prices between proposals are of increased importance in determining the most advantageous proposal. Conversely, as differences in prices become less distinct, differences in ratings and relative advantages and disadvantages between proposals are of increased importance to the determination.
+To receive consideration for award, an Offeror must receive a rating of no less than acceptable for all technical factors (Factors 1 and 2) and a past performance rating of no less than neutral confidence (Factor 3).
+5.2 Reservation of Rights
+The Government reserves the right to accept other than the lowest price offer. The Government reserves the right to reject any and all offers.
+
+6.0 DEFINITIONS
+Clarification: Means limited exchanges between the Government and Offerors that may occur when award without negotiations is contemplated. An Offeror may be given the opportunity to clarify certain aspects of the proposals (e.g., the relevance of an Offeror’s past performance information/adverse past performance information to which the Offeror has not previously had an opportunity to respond) or to resolve minor or clerical errors. Clarification does not give the Offeror an opportunity to revise or modify its proposal, except to the extent that corrections of apparent clerical mistakes result in a revision. Clarifications do not require negotiations or submission of additional proposal information.
+Communications: Exchanges between the Government and Offerors, after receipt of proposals, leading to negotiations.
+Deficiency: A material failure of a proposal to meet a Government requirement or combination of significant weaknesses in a proposal that increases the risk of unsuccessful contract performance to an unacceptable level. Refer to RFO 15.001. A deficiency will preclude award action to that Offeror.
+Evaluation Notice (EN): The PCO's written notification to the Offeror for purposes of clarifications, communications, or in support of negotiations.
+Performance Confidence Assessment: An evaluation of the likelihood (or Government's confidence) that the Offeror will successfully perform the solicitation's requirements. The evaluation is based upon past performance information.
+Recency: Pertaining to past performance information, is a measure of the time that has elapsed since the past performance reference occurred. Recency is generally expressed as a time period during which past performance references are considered relevant.
+Relevancy: Pertaining to past performance information, is a measure of the extent of similarity between the service/support effort, complexity, dollar value, contract type, and subcontract/teaming or other comparable attributes of past performance examples and the source solicitation requirements; and a measure of the likelihood that the past performance is an indicator of future performance.
+Requirements Documents: All aspects of the RFP that convey the needs of the Government to Offerors, including the SOO, SOW, PWS, technical requirement documents, and system requirement documents.
+Risk: Pertaining to source selection, is the potential for unsuccessful contract performance. The consideration of risk assesses the degree to which an Offeror's proposed approach to achieving the technical factor may involve risk of disruption of schedule, increased cost or degradation of performance, the need for increased Government oversight, and the likelihood of unsuccessful contract performance. (For firm-fixed-price contracts, the reference to increased cost may be removed from the risk definition.)
+Source Selection Authority (SSA): The official designated to make the source selection decision.
+Source Selection Decision Document (SSDD): The document that reflects the SSA's independent, integrated, comparative assessment and decision.
+Source Selection Evaluation Board (SSEB): A group of Government and, if needed, approved non-Government personnel, representing the various functional disciplines relevant to the acquisition.
+Source Selection Plan (SSP): A plan that describes how the source selection will be organized, how proposals will be evaluated and analyzed, and how source(s) will be selected.
+Strength: Any aspect of a proposal that, when judged against a stated evaluation criterion, has merit or exceeds specified performance or capability requirements in a way that will be advantageous to the Government during contract performance.
+Significant Strength is an aspect of an Offeror’s proposal that has appreciable merit or appreciably exceeds specified performance or capability requirements in a way that will be appreciably advantageous to the Government during contract performance.
+Subjective Trade-off: A source selection process used when it may be in the best interest of the Government to consider award to other than the lowest priced Offeror or other than the highest technically rated Offeror but is not possible to place a quantifiable value on proposed performance or capabilities above threshold (minimum) requirements.
+Weakness: A flaw in the proposal that increases the risk of unsuccessful contract performance. 
+Significant Weakness is a flaw that appreciably increases the risk of unsuccessful contract performance. Failure by an Offeror to rectify multiple significant weaknesses deemed essential will preclude award action to that Offeror (See RFO 15.001).

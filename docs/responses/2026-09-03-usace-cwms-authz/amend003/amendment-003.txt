@@ -1,0 +1,248 @@
+                                DEPARTMENT OF THE ARMY
+                                   U.S. ARMY CORPS OF ENGINEERS
+                                 USACE MISSION SUPPORT BATTALION
+                                         7701 TELEGRAPH ROAD
+                                     ALEXANDRIA, VA 22315-3860
+
+
+
+
+REPLY TO
+ATTENTION OF
+
+
+Contracting Office: CEHEC-CT                                                       26 AUG 2026
+                         COMBINED SYNOPSIS SOLICITATION
+Solicitation Number: PANHEC-26-P-0000 026407
+Requirement Title: CWMS Database Authorization Maintenance and Improvements
+I. GENERAL INFORMATION
+This is a combined synopsis/solicitation for Commercial Products and Commercial Services
+prepared in accordance with the format in Revolutionary Federal Acquisition Regulation
+Overhaul (RFO) 12.202.
+A Firm Fixed Priced (FFP) award will be made in accordance with the following:
+The North American Industrial Classification System (NAICS) code for this acquisition is
+541511 Custom Computer Programming Services: with a size standard of $34.0M.
+II. NATURE OF ACQUISITION:
+
+The U.S. Army Corps of Engineers Institution for Water Resource (IWR) has a requirement to
+purchase the services stated below. This procurement will be awarded using Simplified
+Acquisition Procedures.
+All questions must be received by 24 AUG 2026, 4:30 pm US Eastern Time (ET).
+Proposals must be received no later than 03 SEP 2026, 4:30 pm ET.
+Electronic proposals submitted via email are required.
+The email for questions and proposals must be submitted to the Contract Specialist:
+Ms. Quan Nguyen, at email: Quan.Nguyen@usace.army.mil
+and a copy furnished to the Contracting Officer
+Mr. David A. Kaplan, at email: David.A.Kaplan@usace.army.mil
+It is the Offeror’s responsibility to ensure the proposal has been received by the contracting
+office via email prior to the due date and time. Fax proposals will not be accepted. Late
+proposals will be processed in accordance with RFO 12.203 Evaluation. Upon receipt of the
+electronic offer, the Government will acknowledge receipt of that offer via email to the Offeror.
+
+
+
+
+                                               CUI
+                                        See FAR 2.201 and 3.104                                     1
+III. SCHEDULE OF SUPPLIES/SERVICES:
+
+The contractor will provide support for software enhancements to the CWMS, focusing on the
+database and API components. This includes improving the authorization web UI, implementing
+the new authorization system within the CWBI cloud environment, conducting load testing, and
+performing ongoing maintenance and improvements based on user feedback.
+
+Period of Performance:
+The period of performance is 360 calendar days from date of contract award.
+Place of Performance:
+The Offeror’s facility. See the PWS for additional information.
+IV. BASIS FOR AWARD
+
+All Proposals will be comparatively evaluated in accordance with RFO 12.203 Evaluation.
+Evaluation will be based on the factors described below: Technical and Price. The binding
+Price Proposal must be submitted using the CLIN structure below in Factor 4 - Price.
+
+The Government will use price analysis to determine the total evaluated price. The price factor
+will be evaluated for price reasonableness in accordance with RFO 12.203(a)(3). See also RFO
+15.404-1. The price to be analyzed is the total price inclusive of the base and all options.
+Contract Line Items: This requirement and associated contract line-item numbers (CLIN) are
+provided below (also within the PWS):
+ CLIN                       Description                      Quantity     Unit of        Price
+                                                                          Measure
+ 1001    Task 1a                                                  1        Job
+ 1002    Task 1b                                                  1        Job
+ 2001    Task 2                                                   1        Job
+ 3001    Task 3a                                                  1        Job
+ 3002    Task 3b                                                  1        Job
+ 4001    Task 4                                                   1        Job
+ 5001    Task 5a                                                  1        Job
+ 5002    Task 5b                                                  1        Job
+                                              Grand Total
+
+All services are to be performed in accordance with the attached PWS.
+Price must show the total price per task to complete the required services in accordance with the
+PWS, including all indirect rates and profit. This requirement will be awarded as a firm-fixed
+price contract.
+Negotiations: The Government intends to award a contract without negotiations with respective
+offerors. Offerors shall submit sufficient information and, in the format specified in the Proposal
+
+
+
+                                                                                                    2
+Preparation Instructions. Offerors may be asked to clarify certain aspects of their offer (e.g., the
+relevance of technical capability information).
+V. PROPOSAL PREPARATION INSTRUCTIONS RFO 52.212-1 ADDENDUM -
+INSTRUCTIONS TO OFFERORS – COMMERCIAL PRODUCTS AND COMMERCIAL
+SERVICES
+To ensure timely and equitable evaluation of proposals, offerors must comply with instructions
+contained herein. Proposals must be complete, detailed and respond directly to the requirements
+of this solicitation.
+Interested parties capable of providing the requirement must submit a signed and dated offer on
+company letterhead with unit prices, extended prices, discount terms, tax identification number,
+CAGE code, and SAM UEI in response to this solicitation. The requirements of this
+synopsis/solicitation, including specification, "Schedule of Supplies/Services" and terms and
+conditions, the offeror agrees to all solicitation requirements. Offerors must clearly identify any
+exception to the solicitation terms and conditions and provide complete accompanying rationale.
+All offer information shall be emailed to the points of contact listed in the notice. The offer must
+be signed and dated by an authorized official of the company. Electronic submissions via e-
+mail are required.
+Offerors must provide pricing for the total price to complete the required services, the hourly rate
+proposed for each labor category and subtotal cost of labor for each of the labor categories.
+To be eligible to receive an award resulting from this RFP, Contractors must be registered in the
+System for Award Management (SAM) database, no exceptions. To register, please visit
+http://www.sam.gov.
+Offer Content: See the attached Proposal Submission Instructions and Evaluation Criteria.
+VI. CONTRACT TERMS AND CONDITIONS:
+
+The following provisions and clauses apply to this acquisition and can be viewed electronically
+at https://www.acquisition.gov/ in accordance with RFO 52.252-2. The use in this solicitation of
+any Department of Defense Federal Acquisition Regulation Supplement (48 CFR Chapter 2)
+provision with an authorized deviation is indicated by the addition of "(DEVIATION)" after the
+name of the regulation.
+
+
+The Following Provisions and Clauses Are Incorporated by Full Text:
+
+RFO 52.212-2: Evaluation—Commercial Products and Commercial Services
+(a) The Government will award a contract resulting from this solicitation to the responsible
+offeror whose offer conforming to the solicitation will be most advantageous to the
+Government, price and other factors considered. The following factors shall be used to evaluate
+Proposals:
+
+   •   Factor 1 – Response to First Project Technical Approach
+   •   Factor 2 – Management Approach, Key Personnel, and Transition Plan
+
+
+                                                                                                       3
+   •   Factor 3 – Past Performance
+   •   Factor 4 – Price
+
+The non-price factors are equally important. When combined, the non-price factors are
+more importance than Price.
+A written notice of award or acceptance of an offer, mailed or otherwise furnished to the
+successful offeror within the time for acceptance specified in the offer, shall result in a binding
+contract without further action by either party. Before the offer’s specified expiration time, the
+Government may accept an offer (or part of an offer), whether or not there are negotiations after
+its receipt, unless a written notice of withdrawal is received before award.
+RFO 4.203-1(a)(2) Entity - Level Offeror Representations and Certifications is
+incorporated by reference in this combine synopsis and solicitation. Offerors must include a
+statement that certifies the Offeror’s Representations and Certifications are up to date in System
+for Award management.
+The following RFO and DFARS (Class Deviation 2026-O000x) clauses are applicable to this
+solicitation and the resultant contact.
+
+                     Prohibition on Contracting for Hardware, Software, and Services Developed or Provided by
+  52.204-23
+                     Kaspersky Lab and Other Covered Entities
+                     Prohibition of Contracting for Certain Telecomunications and Video Surveillance Services or
+  52.204-25
+                     Equipment
+  52.204-27          Prohibition on a ByteDance Covered Application
+
+  52.209-10          Prohibition on Contracting with Inverted Domestic Corporations
+
+  52.212-4           Contract Terms and Conditions – Commercial Products and Services
+
+  52.217-5           Evaluation Of Options
+
+  52.222-50          Combating Trafficking in Persons
+
+  52.222-90          Addressing DEI Discrimination by Federal Contractors
+
+  52.226-8           Encouraging Contractor Policies to Ban Text Messaging While Driving
+
+  52.232-39          Unenforceability of Unauthorized Obligations
+
+  52.232-40          Providing Accelerated Payments to Small Business Subcontractors
+
+  52.233-3           Protest after Award
+
+  52.233-4           Applicable Law for Breach of Contract Claim
+
+  52.240-90          Security Prohibitions and Exclusions Representations and Certifications
+
+  52.240-91          Security Prohibitions and Exclusions
+
+  252.203-7000       Requirements Relating to Compensation of Former DoD Officials
+
+
+
+
+                                                                                                             4
+  252.203-7002       Requirement to Inform Employees of Whistleblower Rights
+
+  252.203-7005       Representation Relating to Compensation of Former DoD Officials
+
+  252.204-7003       Control of Government Personnel Work Product
+
+  252.204-7008       Compliance With Safeguarding Covered Defense Information Controls
+  252.204-7012
+                     Safeguarding Covered Defense Information and Cyber Incident Reporting
+  (CD 2025-O0025)
+  252.204-7016       Covered Defense Telecommunications Equipment or Services--Representation
+                     Prohibition on the Acquisition of Covered Defense Telecommunications Equipment or
+  252.204-7017
+                     Services--Representation
+                     Prohibition on the Acquisition of Covered Defense Telecommunications Equipment or
+  252.204-7018
+                     Services
+                     Subcontracting With Firms That Are Owned or Controlled By The Government of a Country
+  252.209-7004
+                     that is a State Sponsor of Terrorism
+  252.225-7012       Preference for Certain Domestic Commodities
+
+  252.225-7048       Export-Controlled Items
+                     Prohibition on Certain Procurements from the Xinjiang Uyghur Autonomous Region–
+  252.225-7059
+                     Representation
+  252.225-7060       Prohibition on Certain Procurements from the Xinjiang Uyghur Autonomous Region
+
+  252.232-7003       Electronic Submission of Payment Requests and Receiving Reports
+
+  252.232-7010       Levies on Contract Payments
+
+  252.240-7997       NIST SP 800-171 DOD Assessment Requirements
+
+
+
+RFO 52.217-7: Option for Increased Quantity – Separately Priced Line Items
+The Government may require performance of the numbered line item, identified in the Schedule
+as an option task, at the price stated in the Schedule. The Contracting Officer may exercise the
+option by written notice to the Contractor no less than 10 days prior to expiration of the
+contract. Performance of optional tasks shall be at the rate called for under the contract, unless
+the parties otherwise agree.
+(End of clause)
+KAPLAN.DAVID.ANDREW.1 Digitally  signed by
+                         KAPLAN.DAVID.ANDREW.1260033391
+260033391                Date: 2026.08.26 06:40:57 -04'00'
+________________________________
+David A. Kaplan
+Contracting Officer
+David.A.Kaplan@usace.army.mil
+
+Attachments:
+Performance Work Statement
+Proposal Submission Instructions and Evaluation Criteria
+
+
+                                                                                                       5
+

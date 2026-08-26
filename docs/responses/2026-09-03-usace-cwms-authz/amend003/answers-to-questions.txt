@@ -1,0 +1,340 @@
+
+1. Documents and Attachments
+ID
+Vendor Question / Clarification Request
+Q1
+The combined synopsis-solicitation and PWS are referenced multiple times (e.g., ‘All services are to be performed in accordance with the attached PWS’), and Technical Exhibit 3 is named in the opportunity summary, but neither document appears to be attached to the solicitation as posted. Please provide the full PWS, all Technical Exhibits, and any other referenced attachments so that offerors can prepare a compliant technical and price proposal.
+
+Answer: Exhibit 3 is on page 20 of the PWS. 
+Q2
+Technical Exhibit 2 requires the contractor to “fill out Appendix A: Data Rights Table, as part of their proposal.” Appendix A is not among the posted documents. Will the Government provide the form, confirm the format offerors should use, or should offerors treat that requirement as not applicable to this procurement? Can an offeror use its own format - listing each component with its origin, license and rights asserted, and distinguishing contract-produced code carrying Government unlimited rights from open-source components carried under their own licenses?
+
+Answer: The paragraph above asserts that the Government will retain all rights. This can be ignored.
+Q3
+Section 1.1 of the Proposal Submission Instructions identifies Volume IV but provides no content requirements. To ensure a complete submission, could the Government please confirm if this volume should contain: (a) A signed and dated cover letter with all information required by Section V of the solicitation (TIN, CAGE, UEI, etc.), (b) A statement confirming our SAM Representations and Certifications are current, and (c) Any required Teaming Agreements?
+
+Answer: A signed cover letter is preferred. This will not count against the page counts. The cover letter should contain the CAGE, SAM UEI and TIN, the representation of current SAM reps and certs, and any teaming agreements. 
+Q4
+Section 1.2 permits submission as a single .zip file or as separate native-format uploads. Please confirm that submitting each volume as a separate PDF or Excel file attached to a single email is an acceptable method.
+
+Answer: Section 1.2 contains an error. A Zip file will not be accepted. Submit each volume separately. Single or multiple emails are acceptable. The file size limit per email is 25mb. 
+Q5
+Please confirm that the Excel supplement required by paragraph 2.3.1 should cover all eight contract line items including the optional tasks, and that it may be submitted as a separate file referenced from the Volume III narrative rather than embedded within it.
+
+Answer: The excel should cover all the line items. It should be submitted as a separate file. 
+2. Key Personnel Requirements and Roles
+ID
+Vendor Question / Clarification Request
+Q6
+The proposal instructions direct offerors to PWS Section 1.1 and Section 2.1 for Key Personnel education and experience requirements. Those sections describe services and tasks rather than qualifications. Would the Government identify the minimum education, certification, and years of experience expected for each of the five Key Personnel roles?
+
+Answer: Any combination of education, certification, and experience that shows sufficient knowledge and understanding of the required tasks.
+Q7
+The PWS and Technical Exhibits 1–4 describe Java REST API development (CWMS-Data-API/Javalin), React web UI development, AWS CDK infrastructure work, and load testing. Oracle Forms and Oracle APEX appear nowhere in the PWS. Are the Senior Forms Developer and Senior APEX developer positions applicable to this scope? If so, where in the PWS does that requirement appear?
+
+Answer: Unlikely, we do not currently and do not plan to use Oracle APEX or Forms. We have existing components already built using React, NodeJS/Typescript, and a REST API that are to be expanded, not replaced. 
+Q8
+For the Senior Forms Developer and Senior Oracle DBA key personnel positions, will the Government accept equivalent senior experience in web application and forms-based UI development, and in database engineering/administration (including cloud RDS and large-scale data migration), respectively?
+
+Answer: If it can be shown for those developers that they have sufficient experience in the direct use of the technologies already in use and created under the previous effort.
+Q9
+May a single individual be proposed to fulfill more than one of the five Key Personnel roles, provided that individual’s resume demonstrates the required education, certifications, and experience for each role they are proposed against? Or does the Government require five distinct individuals?
+
+Answer: Yes
+3. Security, CWBI Responsibilities, and Access
+ID
+Vendor Question / Clarification Request
+Q10
+Technical Exhibit 2 assigns the contractor responsibility for RMF authorization documentation, incident response plans, STIG/SRG assessments, eMASS artifact entry, and ACAS/SCAP remediation, while also stating that “CWBI leads the compliance with these provisions.” Please clarify the division of responsibility between the CWBI PMO and the contractor for: (a) generating RMF authorization artifacts for the ISSM; (b) entering artifacts in eMASS; (c) the STIG and SRG compliance matrix and .CKL exports; (d) ACAS scans twice monthly; (e) maintaining SCAP at 90 percent or above; (f) the security incident response plan; (g) on-site services during the period of the Security Control Assessment; (h) and IL4 environment accessibility for Department of War security-team evaluation. Technical Exhibit 2 also states that "CWBI leads the compliance with these provisions, and the contractor shall coordinate with CWBI" and that "CWBI is primarily responsible for testing."
+
+Answer: CWBI performs scanning on a regular basis and requires that we follow the “Application Security and Development” and “Application Server” STIGs. We  (HEC/CWMS) need to be able to respond to scan results and requests for the current state of STIG compliance promptly. The vendor will not need to directly interact with eMASS. The vendor must ensure that work performed, e.g. changes to source, comply with required rules and that it is reasonably easy to perform updates to libraries and container images, if those images are not distroless.
+Q11
+Will contractors be granted direct access to the CWBI Cloud environment and underlying databases, or will all work be performed in a Government-supplied enclave? What personnel clearance (e.g., Public Trust, Secret) and IT certifications (e.g., DoD 8140/8570, RMF/ATO support) are required for staff touching production CWMS data?
+
+Performance requires access to Government-furnished systems, including the CWBI cloud environment and the CWBI GitHub Enterprise instance. Could the Government please describe the process and anticipated timeline after contract award for provisioning contractor personnel with the necessary access and credentials?
+
+Answer: Contractor Staff will not be working with production data. Target environment is CWBI’s dev environment and test environments, which contains limited data. Should the effort proceed such that the changes are “promoted to production” we can revisit contractor staff credentials and decide on a path forward for levels of access.
+
+Contractors may be provided limited, access to the cloud environment, same as HEC staff.  HEC and Contractor will not have direct control of the CDK code or ability to create services directly, changes to infrastructure require opening issues in CWBI’s Platform1 Jira space. CWBI *may* allow pull requests to the dev CDK.
+
+Forms DD 7798 and DD 2875 (https://cwbi.sec.usace.army.mil/cms/assets/6a90dda6-310b-42fd-b17a-638a596e6134.pdf, https://cwbi.sec.usace.army.mil/cms/assets/bb28b503-71e6-4331-b2cf-b0b3cecb2f20.pdf)
+Access to “Platform 1” (https://jira.il2.dso.mil) will be required to submit tickets for proposed changes to infrastructure. Instructions will be provided after award. NOTE: we do not recommend starting the process until after award.
+
+Clearence is Public Trust, IT certifications required are most basic for “privileged access”.
+
+Onboarding into the CWBI environment and Platform 1 will likely take up to one month. 
+
+Q12
+Technical Exhibit 2 lists on-site services during the period of the Security Control Assessor (SCA) assessment, but the Combined Synopsis Solicitation gives the Place of Performance as the Offeror’s facility, and the CLIN structure contains no travel line. Are on-site services required, and should offerors price travel for the SCA assessment? If so, please identify the anticipated location(s), frequency, and duration of any required on-site support.
+
+Answer: That particular section is boilerplate, we just need to be aware the SCA assessment may happen and be ready to respond. If we need to do so it can be done over Teams or other appropriate teleconference system.
+
+We do not expect this to occur during this effort.
+Q13
+The PWS requires contractor use of Confluence, Jira, CWBI’s GitHub Enterprise environment, and Keycloak-integrated authentication (Login.gov / EAMS-A). Please confirm the Government will furnish and sponsor all required contractor accounts and access (including any CAC or EAMS-A sponsorship, if applicable), and provide the anticipated timeline from award to account provisioning.
+
+Answer: CAC should not be required. Platform1 has provisions for non-CAC access, required steps will be provided after award. Appropriate GitHub repository access will be granted after the kickoff meeting and should only take a day or two.
+
+For Platform1, the timing is unknown, but we would anticipate at least a week.
+
+For access to bastion hosts, and thus, for example, the active database in CWBI, a fixed IP subnet (a single IP preferred), from the Contractor will be required to allow access.
+Q14
+Please confirm whether contractor-owned systems are expected to process, store, or transmit CUI or Covered Defense Information under this requirement.
+
+Answer: No CUI or CDI is present for this requirement.
+
+Q15
+Please confirm whether a current NIST SP 800-171 assessment in SPRS is required for proposal submission. If not required at proposal submission, whether it is required prior to award.
+
+Answer: This contract involves public information. A NIST assessment is not required.
+Q16
+Please confirm whether DFARS 252.204-7019 and 252.204-7020 apply to this acquisition.
+
+Answer: DFARS 252.204-7019 and 252.204-7020 do not apply. DFARS 252.240-7997 does apply as it is a required clause. 
+Q17
+Please confirm whether CMMC certification or assessment is required for this solicitation. 
+
+Answer: CMMC is not required.
+Q18
+Will the Government furnish a local development environment, or is the Offeror expected to stand up and maintain the full stack at its own facility and cost? The README requires a running CWMS Oracle instance, CWMS Data API, Keycloak and Traefik to develop against. This is separate from the CWBI Dev access asked about below.
+
+Answer: Docker compose stacks are available in each repository, all use the genzvl/oracle-free images and can run on a relatively low-end laptop.
+
+
+Q19
+What is the expected elapsed time from award for contractor personnel to obtain CWBI Dev access, and what onboarding, training, or background investigation requirements should be priced?
+
+Answer: Given the relatively short PoP we would like to have all the access paperwork within the first weeks. Read access to existing CDK can be provided immediately, and other components are already public. Even without immediate direct access to the AWS console or bastion hosts, a contractor should be able to get started on additional work and planning within existing tools, such as the docker-compose stacks.
+4. Proposal Volume Instructions, Formatting, and Page Limits
+ID
+Vendor Question / Clarification Request
+Q20
+What counts against the page limits?
+
+Answer: 
+
+Volume 1 - The cover page, the table of contents, key personnel resumes and letters of commitment do not count against the page limit. Key personnel resumes are limited to no more than 2 pages each. The summary section and organizational charts count against the page limit. 
+
+Volume 2 – CPARS and PPQs do not count. Everything else counts against the page limit.
+Q21
+May letters of commitment be placed in Volume IV with a cross-reference from Factor 2?
+
+Answer:  No. 
+Q22
+Submission Instructions 1.1 lists Volume IV, Administrative Requirements. No later paragraph describes its contents, and it is not an evaluation factor. What must Volume IV contain, and does it carry a page limit?
+
+Answer: Volume IV requirements were carried over from a template. Volume IV is not required. Offerors must be registered in SAM.gov. A simple affirmation of current registration can be added to the technical proposal. Bank information may be requested after award to establish direct deposit. Offerors may elect to provide it with their proposal, but it is not required until after award. 
+Q23
+The Factor 2 tabs are listed as A Management Approach, B Key Personnel Resumes and Experience, and C Transition Plan in Section 2.1.2, and as A Management Plan and B Transition Plan in Section 3.2.1.2. Which tab structure should offerors follow?
+
+Answer: The correct tabs for Factor 2 are: Tab A Management Approach, Tab B Key Personnel Resumes and Experience, and Tab C Transition Plan. The Combined Synopsis Solicitation was revised to correct the discrepancy. 
+5. Evaluation Factors and Past Performance
+ID
+Vendor Question / Clarification Request
+Q24
+The evaluation criteria list seven CPARS-style elements with no weights, the volume structure defines four factors with Price as Factor 4, yet the price instruction refers to ‘Factor 2 — Price.’ Please confirm the correct factor numbering, the relative weights of the factors, and clarify whether the CPARS-style elements are source-selection criteria or post-award CPARS ratings.
+
+Answer: The four factors are correctly listed in Section 1.1 of the Proposal Submission Instructions and Evaluation Criteria. A correction was made to the Combined Synopsis Solicitation to correct the discrepancy between the documents. 
+
+The reference to “the first task order” was an error. This reference is removed. This is a standalone contract. The PWS posted with this amendment is complete. 
+
+The reference to “Factor 2 – Price” in the Combined Synopsis Solicitation was corrected to Factor 4 – Price.
+
+Factor 3 – Past Performance within the Proposal Submission Instructions and Evaluation Criteria details how past performance will be evaluated. Offerors may submit PPQs if they do not have CPARS. Unavailability of CPARS will not negatively affect the past performance rating, however unavailability of any past performance rating will result in a “neutral confidence” rating. See the definitions in the solicitation. PPQs may be completed by both government and non-government evaluators. PPQs should be submitted directly to the Points of Contact listed for this solicitation. 
+
+Factor 4 – Price. Any price assumptions should be included with the PDF (binding price volume). 
+
+Answer: The non-price factors are of equal importance. The non-price factors are more important than price.
+Q25
+Volume II requires data fields (contract number, CAGE) that are federal-centric. Will the Government accept PPQs documenting comparable commercial custom software development engagements in lieu of the federal PPQ-0 form?
+
+Answer: Yes. 
+Q26
+Will the Government permit offerors to satisfy the past performance evaluation factor through a proposed subcontractor or teammate? If yes, must that partner be identified and committed at proposal submission?
+
+Answer: Maybe. The Offeror needs to have their own past performance. Subcontractor past performance will be considered as part of the prime only if a sub is a major sub. The offeror cannot solely rely on subcontractor’s past performance as its own. 
+Q27
+Submission Instructions 2.2.1.1 requires a minimum of one and no more than three examples. Paragraph 3.2.2 says offerors should provide performance history for at least three prior or current contracts. Which governs?
+
+Answer: Submission Instructions 2.1.1.1 governs. The discrepancy with paragraph 3.2.2 was corrected.
+6. NAICS Code Discrepancy
+ID
+Vendor Question / Clarification Request
+Q28
+The combined synopsis/solicitation states NAICS 514511; the SAM.gov notice states NAICS 541511 (Custom Computer Programming Services) with a $34.0 million size standard. Would the Government confirm that 541511 applies and that the $34.0M size standard is final?
+
+Answer: The NAICS code is 541511. 
+7. Technical Tasks, Pricing, and Scope Clarifications
+ID
+Vendor Question / Clarification Request
+Q29
+(PWS 1.3 Objectives) The PWS states that initial work creating the authorization policies, proxies, and UI has already been performed. Was this initial work performed under a prior Government contract? If so, please identify the prior contract number and incumbent contractor, and confirm whether this requirement is a follow-on to that effort.
+
+Answer: Similar services were previously completed on contract W912HQ25P0049. This requirement is a follow-on with a slightly different focus. 
+Q30
+To assist offerors in proposing an appropriate level of effort for the fixed development tasks, is the Government able to share the anticipated price magnitude for this requirement or the value of any predecessor effort covering similar CWMS-Data-API development?
+
+Answer: See the answer to question 20 above. 
+Q31
+Tasks 1a and 1b are worded identically, each describing 26 one-hour meetings. Since 26 biweekly meetings spans 52 weeks, is Task 1b a second concurrent meeting series, or an additional quantity of meetings?
+
+Answer: Additional quantity.
+Q32
+(Tasks 1b, 3b, 5b; RFO 52.217-7) RFO 52.217-7 states options may be exercised no less than 10 days prior to expiration of the contract, while optional Tasks 1b, 3b, and 5b carry their own 180- or 360-day periods of performance. Please confirm whether each optional task’s period of performance begins upon option exercise (potentially extending performance beyond the 360-calendar-day base period), or whether all option task periods run concurrently from date of award.
+
+Answer: The period of performance starts when the task is awarded. 
+Q33
+Tasks 5a and 5b are structured as issue-driven maintenance with stated effort ceilings (803 and 704 hours) and monthly invoicing of completed work units, while the synopsis states award will be firm-fixed-price. For CLINs 5001 and 5002, please confirm: (a) whether payment will be made in equal monthly installments or in proportion to completed work units invoiced monthly; and (b) how the fixed price will be treated if Government-directed maintenance demand is materially below the stated hour ceiling. (c) For pricing purposes, should offerors consider these hour figures to be Not-To-Exceed (NTE) ceilings for the FFP tasks, or are they Government estimates? If they are estimates, please clarify the mechanism for addressing work that exceeds these figures within the FFP structure.
+
+Answer: Invoicing cannot be equal across months unless the work is equal across months. See RFO 52.212-4. Payment will only be made for work delivered and accepted. If work is not performed no payment will be made. If demand is significantly above or below the stated hour ceiling, there may be a need to issue a change order to adjust the scope of work. 
+Q34
+The Functionality section requires “a report describing possible Authorization control methods.” However, Technical Exhibit 2 states the CWMS-Data module needs to be expanded to include the required OPA, Cache, and Proxy containers, indicating an authorization architecture has already been selected. Please confirm whether the authorization control methods report remains a required deliverable, or if the report that already exists in the cwms-data-api repository satisfies this requirement. Does that report satisfy the Functionality requirement, or should offerors price a new or updated report as part of this effort? If an update is expected, which sections should it cover?
+
+Answer: That is accidentally left over from the previous PWS. The existing report and design documents can be found here: https://cwms-data-api.readthedocs.io/latest/rfc/0001-data-authorization-middleware.html
+
+That said, if any issues are identified, proposed changes are welcome.
+Q35
+Please confirm whether OPA, cache, and proxy are mandatory solution components or elements of the current baseline that may be modified or replaced if technical validation supports another approach. Please also confirm whether Government approval of the recommendation is required before implementation proceeds.
+
+Answer: OPA is required, the gov’t has determined that it is the best overall means to integrate both the primary CWMS-Data authorization as well as additional and future components. While the cache is not “required”, CWMS, for other performance needs will be creating a Redis/ValKey/etc cache in the environment so it should be considered as “given”. As no work has been completed to integrate the existing transparent proxy in our runtime environment we are open to changes; however, costs, both direct and long term maintainability, will be considered.
+Q36
+Please identify the as-built authorization baseline that will be furnished at award, including deployed repositories, branches or commits, accepted capabilities, current policy format and store, cache and proxy products or configurations, CDA integration points, infrastructure-as-code, automated tests, known defects, and deferred backlog. Please confirm whether the Government will provide the predecessor documentation and configuration artifacts needed to reproduce the current CWBI-Dev state.
+
+Answer: 
+To recreate the Current CWBI-dev state ->
+
+git clone https://github.com/usace/cwm-data-api.git
+cd cwms-data-api
+docker compose up -d
+<browser> -> http://localhost:8081/cwms-data/
+
+Previous documentation: https://cwms-data-api.readthedocs.io/latest/rfc/0001-data-authorization-middleware.html
+
+At this time “active” authorization is limit to simple role based. Simply “office (USACE District), and role” with “CWMS User” being able to edit data, “TS ID Creator” able to 
+create a new Time series identifier, and otherwise access being read only.
+
+Existing tests in https://github.com/usace/cwms-data-api are based around the above limitations.
+
+The following PR is the work to integrate the new auth flow into the API, https://github.com/USACE/cwms-data-api/pull/1461. NOTE: there we changes right before the end of the previous effort, and some recently, that has caused additional work necessary to complete and merge that PR. It is known to have worked at one point and is structurally sound within the existing design documents.
+
+https://github.com/USACE-WaterManagement/cwms-access-management/ contains tests on policies.
+
+One primary issue is that the docker-compose.podman.yml changes need to be brought in line with the existing docker-compose.yml files and the podman specific variants removed, unless a reason specific to podman exists to keep them. The separate files were accepted due to some rapid changes, related to feature flags, that were happening around the time of original effort to allow some stability. 
+
+With the addition of feature flags and some improved matrix testing, the gov’t intends to enforce “single items of truth” for these test and development setups.
+
+Q37
+Please confirm whether Task 3a modifies a module already operating within the CWBI ATO boundary or requires a new or significant-change authorization action. Please identify the existing RMF and ATO artifacts, inherited controls, open POA&M items or findings, scheduled assessments, artifact templates, and eMASS, Confluence, and scanning access that will be furnished or made available to the Contractor.
+
+Answer: CWMS-Data is already operating within the CWBI boundary. Changes to the infrastructure will be through Platform1 Jira issue to the CWBI contractor responsible for all CWBI AWS infrastructure. Should any ATO documents be required, the CWBI ISSO or ISSM will reach out through email or the Jira issue to request it.
+Q38
+Volume I, Tab C requires a Load Testing narrative. Please clarify the load testing scope, expected tooling/standards (e.g., JMeter, Gatling, Locust), target user counts, performance baselines, and whether the load tests extend to the full CWMS application stack.
+
+Answer: 
+Expected tooling: Gov’t has no specific expectation. However, open source and unrestricted usage licensing is preferred. Additionally, the ability to run the load test locally, e.g. for testing “correctness” vs load as well as an environment of more verisimilitude is also preferred. (E.G. if the gov’t *MUST* start up a bunch of external cloud infrastructure just to test the system, that is a problem – it is however acceptable as an option within the same tool)
+
+Target user counts: read, up-to a few million in short burst, regularly 30-40 active humans, roughly the same in automated processes. 
+We have also noticed the following:
+A small set of “bots” downloading excessive data regularly
+What appears to be “write amplification”, data stored into the CWMS Database comes in relatively short bursts (hourly transmissions from GOES, followed by computations on those small tests, hourly downloads from USGS, USBR, etc). This is most likely the cause of some recent throttling on block storage performance.
+
+Load focus is on CDA response times regardless of specific application, to allow for the proper creation and analysis of various data caching solutions.
+
+We are not expecting great performance of CDA, the task is just to setup the load testing environment some reasonable usage defaults for further analysis and development.
+
+Q39
+Technical Exhibit 3, Load Testing TE3 states an Apache CloudStack environment “can be provided” to run load tests. Please confirm whether the Government-furnished environment will be provided at no cost to the contractor for Task 4, including cloud consumption costs associated with generating the specified load levels, or whether load-generation infrastructure costs should be included in the CLIN 4001 fixed price.
+
+Answer: The CloudStack infrastructure, if used, has no additional costs. Use is not a requirement should another be demonstrably better. However, the CloudStack environment is a development environment controlled by HEC and while it does have technical limits, they’re fairly high.
+Q40
+Technical Exhibit 3 lists “1,000 users, 100 requests/second” without stating whether the rate is aggregate or per user and does not specify parallelism. Please confirm the intended rate and parallelism; whether the 10,000- and 100,000-request-per-second scenarios are required achieved loads or controlled attempts for baseline characterization; and whether every stated load must be executed against each one-, two-, and three-instance topology and each applicable authentication and read/write combination.
+
+Answer: Controlled attempts for baseline characterization. Assume a combination of parallel and sequence users.
+
+“one-, two-, and three-instance topology” the gov’t would like to test against each. However, this can be a test configuration property, it doesn’t have to be for every run.
+
+For combinations, as many as practical. The locations and timeseries catalog, time series (write and read), and any current for future authorization and authentication mechanism are the primary concern of current and future study. 100% coverage is not required, just a reasonable starting sample size.
+Q41
+Volume I, Tab B requires a UI Improvements narrative. Please identify the current CWMS user-interface technology stack, applicable accessibility standards (e.g., Section 508 / WCAG 2.0 AA), and whether the UI work includes back-end service integration.
+
+Answer: https://github.com/USACE-WaterManagement/cwms-access-management/
+Q42
+(Could you clarify the specific scope boundaries for the database authorization maintenance and improvements? 
+
+Answer: Any change, primarily to the CDA, CWMS-Database, or CWMS-Access-Management repositories, required to correct any discovered defects. Should there be an issue with an upstream library not controlled by USACE we would encourage any reasonable participation in their bugfix process.
+Q43
+Are the required services expected to be performed on site?
+
+Answer: no
+Q44
+The PWS requires the contractor to deliver a report recommending an authorization method. However, Technical Exhibit 2 specifies that the deployed module must include "OPA, Cache, and Proxy containers," with OPA referring to Open Policy Agent. This suggests a specific authorization framework may have already been selected. Could the Government please clarify if OPA is the mandated authorization method? If so, should the required report be treated as a validation and implementation plan for OPA, rather than an open evaluation of competing methods? This will allow offerors to scope and price the Task 2 effort accurately.
+
+Answer: The recommendation report was left over from the previous PWS, see https://cwms-data-api.readthedocs.io/latest/rfc/0001-data-authorization-middleware.html for the existing report.
+
+OPA itself, and the policies concept need to remain; there are additional modules outside the scope of this effort that will eventually integrate into that system. Other existing design choices can change with sufficient reasoning.
+Q45
+The PWS references "initial work" on authorization policies, proxies, and UI, and directs the contractor to "identify what elements are missing." To accurately scope and price the work for Tasks 2, 3, and 5, could the Government please provide a baseline summary of the current authorization code base? This might include which features have been implemented, any known defects, and a list of outstanding issues relevant to this effort.
+
+Answer: See the following issues lists and open PRs:
+https://github.com/USACE/cwms-data-api/issues?q=is%3Aissue%20state%3Aopen%20label%3Aauth-contract
+https://github.com/USACE-WaterManagement/cwms-access-management/pull/13
+https://github.com/USACE/cwms-data-api/pull/1461
+
+
+Q46
+The PWS states that "all work necessary to complete a task is considered in scope... including if the work is outside the primary source." To accurately price this Firm-Fixed-Price (FFP) effort and prevent potential scope ambiguity, could the Government please provide a definitive list of the source code repositories and system components that are considered within the contractor's scope of responsibility? Furthermore, could the Government please clarify the contractual process for addressing unforeseeable work arising from changes made by HEC or other vendors?
+
+Answer:
+Primary:
+https://github.com/USACE/cwms-data-api/
+https://github.com/USACE-watermanagement/cwms-access-management
+https://github.com/hydrologicengineeringcenter/cwms-database
+Additional, though less likely:
+https://github.com/hydrologicengineeringcenter/cwms-python
+https://github.com/hydrologicengineeringcenter/cwms-cli
+https://github.com/hydrologicengineeringcenter/cwms-data-api-client
+
+While the gov’t does not anticipate any major issues with such, should bugs/feature requirements arise an external library, that aren’t getting fixed, and are preventing this effort from progressing, we would support the contractor in coordinating with that library to fix the issue.
+
+For unforeseeable work caused by another contractor:
+If it is a simple merge conflict, the first approved and merged in “wins” and whomever as the conflict will need to correct the code. These are likely as the awardee of this will likely be editing files in similar areas, require changes, though, should be obvious.
+
+Should the issue go beyond simple source file change conflicts into major design issues they should be brought up as soon as possible, or at least during the biweekly meetings to discuss the path forward. Tasks 5a/b exists to cover these issues as well as user discovered issues.
+
+Major changes that affect this effort are unlikely, additionally major design changes require the creation of an ADR, https://github.com/USACE/cwms-data-api/tree/develop/docs/source/decisions), that all parties can comment on before acceptance.
+
+Q47
+The PWS states HEC can commit only 6 hours per week to review code submissions and recommends the contractor not regularly exceed 20 hours per week on Task 5 maintenance work. At a maximum recommended rate of 20 hours per week over 360 days (approximately 51 weeks), a contractor could submit up to approximately 1,020 hours of work, which exceeds the 803-hour Task 5a estimate. If HEC's review capacity limits the rate of Government acceptance and that constraint prevents the contractor from completing all work within the period of performance, will the Government extend the period of performance or reduce the scope at no cost to the contractor?
+
+Answer: The value is a rough target and can change it is not expected that a vendor work at exactly that rate. Additionally, at this time HEC will be able to provide additional staff for review and acceptance. The given values are provided so that both HEC and the vendor can appropriately plan staff workload given other required duties.
+
+Q48
+The PWS notes several points where contractor performance depends on Government review, decision, or action (e.g., approval of the authorization method report for Task 2, notice to proceed for Task 5 work, and PMP approval before cloud work). To properly assess and mitigate schedule risk in our FFP proposal, could the Government please provide the expected review and approval timelines for these key decision gates?
+
+Answer: For code review the timelines are provided in Section 2.0 “Reviews and Work Acceptance”; however, we attempt to review everything a quickly as possible given other duties.
+For task 2, NOTE: the “authorization report” is already required. Award of this effort and outcome of the kickoff meeting is acceptance to start the provided technical approach.
+
+For Task 5, approval given tasks can be provided on demand, as well as coordinating at the check-in meetings what needs to happen, and at what priority. For maintenance work HEC will generally approval more work than could be completed within other limits so that 
+The vendor can use their judgement within the priorities
+A given developer can pivot to another task should something prove exceptionally difficult or some other impediment (e.g. waiting on an external library to create a new release to fix a bug) exist
+
+For the project management plan. This can be minimal, with appropriate diagrams similar to https://cwbi-apps.github.io/cwbi-devops-docs/docs/overview/standard-app/. The CWBI change process is fairly standard and the networks (AWS VPCs) already defined.
+
+Q49
+Does the "Section 508 compatible" requirement in that list apply to the authorization management interface, which appears to be an internal administrative tool rather than a publicly available service? If it does, what conformance level applies, and is an Accessibility Conformance Report a deliverable or an acceptance condition?
+
+Answer: 508 compliance is required by HEC. It allows various testing tools, such as Storybook, to behave well. As well as generally enforcing superior design.
+
+100% passing of every 508 rule will not be required. 
+Q50
+The PWS requires delivery of a Project Management Plan in editable format within 45 days of award, including a RACI chart and OV-1 architecture views. That deliverable does not appear in the task and CLIN structure. Which CLIN (task) funds it?
+
+Answer: That is boiler plate from CWBI. To-date HEC has not been asked for RACI chart by CWBI for existing system. Should such formal documentation be demanded during the process we will make use of the maintenance tasks.
+
+At a minimum, a brief description of how the contractor will handle infrastructure design and diagrams similar to https://cwbi-apps.github.io/cwbi-devops-docs/docs/overview/standard-app/ should be created.
+Q51
+On-site services and travel. Technical Exhibit 2 lists on-site services during the period of the Security Control Assessor assessment. Section III of the Combined Synopsis Solicitation gives Place of Performance as the Offeror's facility, and the CLIN structure contains no travel line. Should offerors price travel for the SCA assessment, and if so, to what location and for how many days?
+
+Answer: Follow the Performance Work Statement for Place of Performance if it is in conflict with the CSS. 
+
+No travel is required, that is boiler plate from CWBI. All previous data requests and assessments have been virtual. We have also, to-date, not participated in a SCA assessment with CWBI; generally, we just go through the App Security Development and Application Server STIGS and confirm we are meeting the requirements therein.
