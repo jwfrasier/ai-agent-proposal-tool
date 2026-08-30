@@ -1,0 +1,920 @@
+<meta charset="utf-8"><title>vol1-body</title><style>
+  html, body { font-family: "Times New Roman", Times, serif; font-size: 12pt; line-height: 1.18; color: #000; margin: 0; padding: 0; }
+  * { font-family: "Times New Roman", Times, serif !important; }
+  h1 { font-size: 14pt; font-weight: bold; margin: 0 0 10pt 0; page-break-after: avoid; }
+  h2 { font-size: 13pt; font-weight: bold; margin: 12pt 0 5pt 0; page-break-after: avoid; }
+  h3 { font-size: 12pt; font-weight: bold; margin: 9pt 0 3pt 0; page-break-after: avoid; }
+  p { margin: 0 0 6pt 0; }
+  ul, ol { margin: 0 0 6pt 0; padding-left: 22pt; }
+  li { margin-bottom: 3pt; }
+  hr { border: none; border-top: 0.5pt solid #000; margin: 10pt 0; }
+  a { color: #000; text-decoration: none; }
+  strong { font-weight: bold; } em { font-style: italic; }
+  code { font-family: "Courier New", Courier, monospace !important; font-size: 10pt; }
+  pre { font-family: "Courier New", Courier, monospace !important; font-size: 9pt; line-height: 1.15; margin: 6pt 0 10pt 0; white-space: pre-wrap; overflow-wrap: anywhere; max-width: 100%; }
+  pre code { font-size: 9pt; }
+  code { overflow-wrap: anywhere; }
+  table { border-collapse: collapse; width: 100%; max-width: 100%; margin: 6pt 0 10pt 0; font-size: 10pt; page-break-inside: auto; }
+  th, td { border: 0.5pt solid #000; padding: 3pt 5pt; vertical-align: top; text-align: left; overflow-wrap: anywhere; }
+  th { background: #e8e8e8; font-weight: bold; white-space: nowrap; }
+  tr { page-break-inside: avoid; }
+  .flag { background: #ffef9e; font-weight: bold; }
+  .vol-title { font-size: 18pt; font-weight: bold; text-align: center; margin: 150pt 0 10pt 0; }
+  .vol-sub { font-size: 13pt; text-align: center; margin: 0 0 6pt 0; }
+  .section-break { page-break-before: always; }
+  .toc td { border: none; padding: 2pt 4pt; font-size: 12pt; }
+  .toc { margin-top: 10pt; }
+</style><h1>Summary Section</h1>
+<p>Frasier Digital, LLC — a small disadvantaged business in Tomball, Texas (NAICS 541511) — proposes to finish, deploy, and maintain the CWMS data-authorization system for the Hydrologic Engineering Center with a named team of five key personnel and two associate engineers, working from our own facility. Our approach starts from the repositories as they are: we land the open pull requests the previous effort left (cwms-data-api #1461, cwms-access-management #13), decide the three sources of truth the current baseline hard-codes (embargo, offices, constraints) through ADRs, expose the CWMS security schema&#39;s own time-series-group primitives through new CDA endpoints, and build the Technical Exhibit 1 administrator interface on top of them in six increments — all behind a feature flag so the office-plus-role model HEC runs today keeps working at every commit. In CWBI, the proxy, OPA, and cache run as sidecars in the existing CWMS-Data task, changed through Platform1 with fully specified requests. Load testing is a k6 harness in the repository that any developer runs locally and that scales to HEC&#39;s CloudStack environment, with the one-, two-, and three-instance topology as a configuration property. Maintenance follows the PWS clocks exactly, sized to HEC&#39;s review capacity.</p>
+<p>This volume contains Factor 1 (Tab A Technical Approach, Tab B UI Improvements, Tab C Load Testing) and Factor 2 (Tab A Management Approach, Tab B Key Personnel, Tab C Transition Plan), followed by an annex of five resumes and five letters of commitment that do not count against the page limit. Frasier Digital, LLC is registered and active in SAM.gov (UEI PY8MJ4JPHJ45, CAGE 213L8; expires 27 May 2027), its Representations and Certifications are current, and no teaming partners are proposed. No price information appears in this volume.</p>
+<div class="section-break"></div><h1>Factor 1 — Response to Project Technical Approach</h1>
+<h2>TAB A — Technical Approach</h2>
+<h3>A.1 What we are inheriting, and what &quot;done&quot; means</h3>
+<p>HEC&#39;s decision to move authorization out of per-district Oracle Virtual Private Database policies and into the CWMS-Data-API (CDA) is the right one for a single cloud-hosted system, and the previous effort (W912HQ25P0049) produced a coherent design for it: a transparent proxy in front of CDA that resolves the caller&#39;s identity, asks Open Policy Agent (OPA) for a decision, caches it, and forwards the request to CDA with a single <code>x-cwms-auth-context</code> header that CDA&#39;s data layer turns into WHERE clauses on office, embargo, and sensitivity (PWS 1.2; ADR 0005, docs/source/decisions). We have read that design, the code that implements it, and the code that does not yet, and our technical approach starts from the specific state of the repositories rather than from the design on paper — because the two currently disagree.</p>
+<p><strong>Table A-1. The baseline as it stands in the repositories (verified August 2026).</strong></p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>State</th>
+<th>What finishing it requires</th>
+<th>Task</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>cwms-data-api PR #1461</strong> — <code>AuthorizationContextHelper</code>, <code>AuthorizationFilterHelper</code>, <code>TimeSeriesController</code>/<code>TimeSeriesDao</code> filtering, <code>UserDao</code> time-series-group privileges</td>
+<td>Open since Nov 2025; 19 commits ahead of <code>develop</code>, <strong>161 behind</strong>; two of four schema-matrix CI legs and the OpenAPI static test failing; no approvals; unit tests only</td>
+<td>Rebase onto <code>develop</code>; move header parsing into <code>ApiServlet</code> after the authenticator as a context attribute (the November review comment); apply the office filter in the DAO, not only the controller; return 403 rather than 400 on office denial; make the feature flag runtime-toggleable; split the podman/Keycloak infrastructure commits into their own PR; add <code>*IT</code> integration tests that prove allow <strong>and</strong> deny</td>
+<td>2</td>
+</tr>
+<tr>
+<td><strong>ADR 0006 and <code>docs/source/access-management/**</code> on <code>develop</code></strong></td>
+<td>Marked &quot;Implemented&quot; and documents the helper classes — which exist only on the PR #1461 branch</td>
+<td>Reconcile documentation with merged reality in the same PR series; until then the docs describe behaviour CDA does not have</td>
+<td>2</td>
+</tr>
+<tr>
+<td><strong>cwms-access-management PR #13</strong> (login bounce: <code>token</code> vs <code>access_token</code>; memoized auth context; compose parity)</td>
+<td>Open since Feb 2026</td>
+<td>Merge with the compose file de-duplicated (see below); replace the short-lived access-token pattern the author flagged as &quot;not quite correct&quot; with refresh handling</td>
+<td>2</td>
+</tr>
+<tr>
+<td><strong><code>auth-contract</code> issues</strong> — 136 open across sub-epics 3a–3k</td>
+<td>Titles only, no bodies; created as a plan, not as a backlog</td>
+<td>Triage in the first two development meetings into: done-by-code, superseded-by-this-PWS, still-open; close with a comment, or attach acceptance criteria. Issue #1523 (&quot;PWS delivery audit&quot;) is the right frame and we will complete it</td>
+<td>1a, 5a</td>
+</tr>
+<tr>
+<td><strong>Compose vs. podman drift</strong> — <code>docker-compose.podman.yml</code> and <code>Dockerfile.podman</code> exist only on the PR #1461 branch; the UI repo is built against that layout (external <code>cwmsdb_net</code>, CDA on 7001, Keycloak on 8080) while CDA&#39;s <code>docker-compose.yml</code> runs Keycloak on 8081 behind Traefik, uses office <code>q0</code> not <code>s0</code>, starts Keycloak deliberately <em>after</em> CDA, and defaults the management flag off</td>
+<td>Two incompatible local stacks</td>
+<td>One compose file per repository with profiles for the variants that have a reason to exist (Q&amp;A 36: &quot;single items of truth&quot;); podman-specific files removed unless a podman-specific reason survives review</td>
+<td>2</td>
+</tr>
+<tr>
+<td><strong>Three hard-coded sources of truth</strong> — request constraints computed in the proxy&#39;s TypeScript rather than in Rego; office→division map hard-coded in <code>helpers/offices.rego</code>; embargo hours encoded in the time-series-group <em>name suffix</em> (<code>policy-dam_operator-r-72h</code>) after the <code>at_sec_ts_group_embargo</code> table was created and then dropped</td>
+<td>None of the three is editable by a district administrator</td>
+<td>Decide one home for each (Section A.2, Task 2) before building the UI that edits them</td>
+<td>2</td>
+</tr>
+<tr>
+<td><strong>CDA principal cache, PR #1841</strong> (<code>LruTtlMap</code>, open July–Aug 2026) and the proxy&#39;s Redis + in-memory decision cache</td>
+<td>Two caches for overlapping data, neither with tests</td>
+<td>One cache topology, defined in an ADR (Section A.2)</td>
+<td>2, 3a</td>
+</tr>
+<tr>
+<td><strong>Rego tests</strong></td>
+<td>None (<code>opa test</code> coverage is zero); integration tests require five services and are documented as partially broken (Keycloak/DB username mismatch)</td>
+<td>Policy unit tests with every persona and every deny path; integration-test fixture fixed</td>
+<td>2, 5a</td>
+</tr>
+</tbody></table>
+<p>Two consequences follow. First, <strong>the first thirty days are about landing what exists</strong>, not adding to it; a proposal that started from &quot;Task 2: build the UI&quot; would be scheduling work on top of an unmerged foundation. Second, the effective authorization model today is the simple one the Government described in the Q&amp;A — office plus role (<code>CWMS Users</code> may write, <code>TS ID Creator</code> may create identifiers, everyone else reads), enforced by <code>CdaAccessManager</code> and Oracle VPD — and <strong>that model must keep working at every commit</strong> while the policy-based model comes up behind a feature flag beside it.</p>
+<h3>A.2 Approach by task</h3>
+<p><strong>Task 1a / 1b — Development meetings (PWS 2.1).</strong> Biweekly one-hour meetings with up to three of our staff relevant to the current work, and notes within one business day in the forms the PWS lists: typed minutes in Confluence, new or updated GitHub issues, milestones for intent, and skeleton pull requests with test names where a meeting produced a design decision. We treat the notes as the authoritative record for Task 5 approvals (Section A.2, Task 5) and as the running &quot;PWS delivery audit&quot;. Our note template has four sections — decisions, work approved, blockers with owner, and next-meeting inputs — and every decision that changes a design is also recorded as an ADR in <code>docs/source/decisions</code> so that other contributors can comment before acceptance (Q&amp;A 46). Task 1b is priced as an additional 26-meeting quantity per Q&amp;A 31.</p>
+<p><strong>Task 2 — Improve authorization and the web UI (PWS 2.1; TE1).</strong> Task B describes the UI work in detail. The sequence below is what makes the UI possible:</p>
+<ol>
+<li><em>Land PR #1461 behind the flag</em> (<code>cwms.dataapi.access.management.enabled</code>, made a Togglz feature so it can be toggled per environment without restart, consistent with how <code>USER_LISTS</code> is handled). The rebase includes the review items in Table A-1 and integration tests in the existing <code>DataApiTestIT</code> pattern using the <code>TestAccounts</code> persona users, with at least one test per persona that asserts a 403 and one that asserts filtered rows.</li>
+<li><em>Decide the three sources of truth and record them as ADRs.</em> Our recommendation, which we will bring to the first meeting with a written comparison: (a) <strong>embargo</strong> lives in the schema — reinstate <code>at_sec_ts_group_embargo(ts_group_code, embargo_hours)</code> from the previous effort&#39;s SQL, extend <code>av_sec_ts_group_mask</code>, and retire the name-suffix regex (<code>UserDao.EMBARGO_PATTERN</code>, issue #1541), which resolves the open reviewer question on PR #1461 about where an office&#39;s embargo rules come from; (b) <strong>offices and regions</strong> are loaded into OPA through its data API from <code>cwms_office</code>, replacing the hard-coded map, on a refresh interval; (c) <strong>constraints</strong> move from the proxy&#39;s TypeScript into Rego so that a policy is one artifact, testable with <code>opa test</code>, and the proxy becomes a thin decision client. Each is a small, reversible change and each removes a place where district-editable data is currently a code edit.</li>
+<li><em>Expose the security primitives CDA lacks.</em> The CWMS schema already has everything the TE1 Policy tab needs — <code>at_sec_ts_groups</code>, <code>at_sec_ts_group_masks</code> (a LIKE pattern over <code>Location.Parameter.ParameterType.Interval.Duration.Version</code>), <code>at_sec_allow</code>, and the <code>cwms_sec</code> package procedures <code>assign_ts_masks_to_ts_group</code> and <code>assign_ts_group_user_group</code> — but CDA exposes none of it; the existing <code>/timeseries/group</code> endpoints are the data-categorization groups, not the security groups. We add <code>/auth/ts-groups/{id}</code>, <code>/masks</code>, and <code>/user-groups</code> controllers under <code>api/auth/</code>, registered in <code>ApiServlet.addUserManagementHandlers()</code> with the <code>CWMS User Admins</code> role, backed by jOOQ bindings to <code>cwms_sec</code> in the same style as the existing <code>CWMS_TS_PACKAGE</code> calls. District-scoped role administration uses the <code>POST/DELETE /user/{user-name}/roles/{office-id}</code> endpoints CDA already has and the management UI does not yet call.</li>
+<li><em>Build the UI increments in TE1 order</em> (Tab B), each as a work unit with tests, and the documentation and training materials as the last increment of the 180-day period.</li>
+</ol>
+<p>The minimum successful product the PWS defines — an interface to manage access control, the access-control method working for time-series data, and documentation — is reached at the end of step 3 plus the first two UI increments; the remainder of Task 2 is breadth.</p>
+<p><strong>Task 3a / 3b — Stand up the authorization system in CWBI-Dev, then CWBI-Test (PWS 2.1; TE2).</strong> CWMS-Data already operates inside the CWBI boundary as an ECS/Fargate module with an internal ALB, RDS Oracle, and Keycloak as the identity provider, defined in Python CDK (Q&amp;A 37; CWBI standard-app pattern). We cannot create services; every infrastructure change is a Platform1 Jira issue to the CWBI infrastructure contractor, with the possibility of pull requests to the dev CDK (Q&amp;A 11). Our approach is therefore to arrive at the first Platform1 ticket with the change fully specified:</p>
+<ul>
+<li><em>Container placement.</em> The proxy, OPA, and cache run as additional containers in the CWMS-Data task definition — sidecars to CDA, sharing its task network — rather than as separate services. That keeps the <code>x-cwms-auth-context</code> header on a localhost hop, which matters because the header is unsigned (Section A.4). We will document the alternative (separate services behind path-based ALB listeners) in the same ADR with the cost and maintainability comparison Q&amp;A 35 asks for, and recommend the sidecar layout unless CWBI&#39;s task-size limits force the split.</li>
+<li><em>Cache.</em> CWMS is creating a Redis/Valkey cache in the environment for other needs (Q&amp;A 35); we treat it as given, key the decision and user-context entries as the proxy does today, and retire the proxy&#39;s in-memory map and the CDA-side <code>LruTtlMap</code> so that there is one cache with one TTL policy and one invalidation path (user role change → evict <code>user:context:{username}</code>).</li>
+<li><em>Images and health.</em> Hardened images per CWBI (Chainguard where an image exists; otherwise distroless or an image with a documented update path — Q&amp;A 10), a <code>/health</code> endpoint on every container for CWBI&#39;s uptime monitoring (the proxy and OPA have them; CDA does not — we add <code>GET /cwms-data/health</code> so the target-group check stops depending on <code>/offices/HEC</code>), and the CWBI logo and consent banner on the management UI (TE2 Infrastructure).</li>
+<li><em>STIG posture.</em> We self-assess against the Application Security and Development STIG and the Application Server STIG before each Dev deployment and keep the checklist in the repository; CWBI scans, we respond within the timelines in TE2, and the ISSO/ISSM asks for any ATO artifact through email or the Jira issue (Q&amp;A 10, 37). No eMASS interaction, no on-site SCA, no travel (Q&amp;A 12, 51).</li>
+<li><em>Identity.</em> Keycloak with Login.gov or EAMS-A as CWBI directs (TE2 Infrastructure); CDA&#39;s <code>OpenIdConnectIdentitityProvider</code> already consumes Keycloak JWTs, and the proxy&#39;s decode-without-verify shortcut is replaced with JWKS verification against the same well-known endpoint.</li>
+<li><em>Definition of done.</em> Task 3a: a CWBI-Dev deployment where a persona user&#39;s request through the public FQDN is decided by OPA, cached, and filtered by CDA, with the flag on; the same request with the flag off behaves exactly as today. Task 3b repeats the promotion into CWBI-Test with the Test-environment configuration in the CDK environment YAML.</li>
+</ul>
+<p><strong>Task 4 — Load testing (PWS 2.1; TE3).</strong> Tab C.</p>
+<p><strong>Task 5a / 5b — Maintenance (PWS 2.1; TE4).</strong> Maintenance is a workflow with clocks, and we run it as one. A request arrives as a GitHub issue; we start within five days and submit a first work unit within two days of starting (PWS Task 5a). Classification takes up to one hour and ends with a status comment (bug — minor/routine/major; misuse; functionality gap) and an estimate; work over two hours waits for the approval label from the Technical POC, Technical Supervisor, or designee; a draft pull request is pushed after four hours of work regardless of completeness; every fix carries the description of the testing performed, and the monthly invoice references the issue with the six log fields the PWS requires (requestor, date, work-unit notes, issue status, fix description with tests, hours). Because the Government pays for delivered and accepted work units rather than in equal monthly amounts (Q&amp;A 33), our maintenance staffing is fractional and elastic — a named associate engineer carries the steady-state load with a senior engineer behind him for major fixes — and weekly volume is tuned in the biweekly meeting against HEC&#39;s review capacity (PWS Rate of Work; Q&amp;A 47). Scope is the repositories the Government named: cwms-data-api, cwms-access-management, and cwms-database primarily; cwms-python, cwms-cli, and cwms-data-api-client if a fix requires it; and upstream libraries through their own bug process with HEC&#39;s support (Q&amp;A 46).</p>
+<p><strong>Work-unit discipline across every task.</strong> Pull requests are sized to HEC&#39;s review ladder — up to three files or 200 lines for a three-day review; up to ten files or 500 lines for five; anything larger for ten — and we prefer the first rung. Tests, or proof that existing tests cover the change, accompany every code change; new tools and helpers for loading test data follow the existing <code>defaultload.txt</code>/<code>timeseries.csv</code> fixture pattern; and the test-location preference order in the PWS (JUnit 5 unit tests, the JUnit 5 integration suite, anything repeatable locally, then anything repeatable on the build server) is the order we use.</p>
+<h3>A.3 Working with HEC, the CWBI-PMO, and other contractors</h3>
+<p><strong>Three interfaces, three cadences.</strong> With HEC&#39;s Technical POC: pull-request review at the PWS ladder, the biweekly meeting, and a shared channel for same-day questions; we submit small units and we do not queue more than HEC can review in a week. With the CWBI-PMO: Platform1 Jira issues for every infrastructure change, written to their template with the standard-app diagram attached; response to scan results and STIG-state requests inside the TE2 timelines; ISSO/ISSM artifact requests answered from the repository&#39;s security folder. With other contractors and USACE staff working in the same files: the Government&#39;s rule is that the first approved merge wins and the other party resolves the conflict (Q&amp;A 46) — we rebase daily on <code>develop</code> to keep our side of that small, and anything beyond a source conflict goes to the next meeting or, if it cannot wait, to the Technical POC and COR the same day (PWS Coordination). Design-bearing disagreements become ADRs that all parties can comment on before acceptance.</p>
+<p><strong>Onboarding path (Q&amp;A 11, 13, 19).</strong> Week 1: DD 7798 and DD 2875 for every named person, Public Trust initiation, the Platform1 access request, and delivery of Frasier Digital&#39;s fixed egress IP address to CWBI for bastion-host access <span class="flag">[FLAG: Joseph — confirm the static IP / fixed-egress arrangement before render]</span>. After kickoff: GitHub Enterprise repository access, expected within a day or two. Platform1: a week or more; bastion access: up to a month. None of that gates the first month of work: the CDA, access-management, and database repositories are public, the docker-compose stacks run on a laptop with the <code>gvenzl/oracle-free</code> image (Q&amp;A 18), read access to the CDK is available immediately (Q&amp;A 19), and the PR #1461 rebase, the ADRs, and the first UI increments are all local work. Our transition-in schedule (Factor 2, Tab C) shows the two tracks side by side.</p>
+<h3>A.4 The knowledge areas the Government will evaluate (instr. 3.2.1.1.1)</h3>
+<p><strong>Full life cycle and agile practice.</strong> Two-week iterations aligned to the meeting cadence; a definition of done that equals an accepted work unit; every increment behind a feature flag until HEC turns it on; GitHub Actions as the build server — CDA&#39;s <code>build.yml</code> already runs the four-schema matrix, the integration tests, the OpenAPI static test, and the nightly ECR push through OIDC, so our CI additions (Rego tests, the k6 harness, the proxy&#39;s vitest suite) are steps in that workflow, not a parallel system. The TeamCity migration the PWS mentions is complete; only naming vestiges remain and we will remove them as we touch those files.</p>
+<p><strong>Database administration.</strong> CWMS is Oracle today and will migrate data to storage matched to its use (PWS 1.2); the authorization work must not deepen the Oracle dependency. Our Senior Oracle DBA owns the schema changes the design needs (the embargo table, the mask view extension, any <code>cwms_sec</code> procedure change), reviews the VPD interaction so that CDA-level filtering never contradicts a database-level policy, and keeps the integration-test images (<code>schema_installer:latest-dev</code>, <code>database-ready-ora-23.5</code>) current with the schema PRs in cwms-database. RDS-specific behaviour in GovCloud — parameter groups, the block-storage throttling the Government has observed under bursty writes (Q&amp;A 38) — is part of the Tab C baseline.</p>
+<p><strong>REST API development.</strong> CDA is Javalin 4 with an <code>IdentityProvider</code> SPI and an <code>AccessManager</code>; the correct place for header parsing is the servlet&#39;s <code>before</code> chain, once, into a context attribute (the review comment on PR #1461), and the correct place for row filtering is the DAO. New endpoints ship with OpenAPI annotations so the static analysis test passes, and the API remains consumable by external clients (TE2 Data Exchange) — the cwms-python and JavaScript clients are among the repositories in scope.</p>
+<p><strong>Access-control mechanisms.</strong> Deny by default; OPA and the policy concept remain the decision point because further modules will integrate with it (Q&amp;A 44); the policy model is district → user group → time-series group → mask → privilege → embargo, which is the CWMS security schema&#39;s own model, so the UI edits real rows rather than a parallel store. Authentication stays with Keycloak and CDA&#39;s existing providers (OIDC, API key, CAC where enabled). Tests prove both outcomes for every persona.</p>
+<p><strong>Configuration management.</strong> GitHub Enterprise for everything the Government funds; one compose file per repository; feature flags through Togglz; ADRs for design changes; container base-image updates as a recurring maintenance work unit so that &quot;reasonably easy to update libraries and images&quot; (Q&amp;A 10) is demonstrated, not asserted.</p>
+<p><strong>Cybersecurity, and communicating it succinctly.</strong> OWASP ZAP runs in CI against the compose stack on every pull request that touches request handling; the OWASP Top Ten review is part of our pull-request template. Four specific weaknesses in the current baseline are closed in Task 2, and we state them here because the evaluators asked for the ability to communicate security needs succinctly: (1) CDA does not verify that <code>x-cwms-auth-context</code> came from the proxy, so anything that reaches CDA directly can forge or omit it — we sign the header with an HMAC shared between proxy and CDA (sidecar placement makes the key exchange local), and treat a missing header as deny when the flag is on; (2) the proxy honours an <code>x-test-user</code> impersonation header that is not gated by environment — removed outside test profiles; (3) the proxy decodes JWTs without verifying them — replaced by JWKS verification; (4) <code>BYPASS_AUTH=true</code> fails open — replaced by fail-closed with an explicit break-glass procedure. Audit records carry event type, time, source, outcome, and subject (TE2 Infrastructure), and are reviewed weekly during Task 5.</p>
+<p><strong>CWBI processes and requirements.</strong> Platform1 change requests; hardened images; health endpoints; the standard-app layout (Fargate service, internal ALB, RDS, Keycloak, WAF in front); secrets in Secrets Manager with ARNs in SSM; a minimal PMP with the standard-app diagram for our module (Q&amp;A 48, 50); API registration in the CW Data Catalog (TE2 Metadata); no CUI or CDI in the work (Q&amp;A 14).</p>
+<h3>A.5 Proposed level of effort per task (instr. 2.1.1)</h3>
+<p>Hours below reconcile exactly with Volume III and with the staffing plan in Factor 2, Tab A. No price information is included in this volume.</p>
+<p><strong>Table A-2. Level of effort by task and role (hours).</strong> <span class="flag">[FLAG: reconcile with Vol III model before render]</span></p>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>PM</th>
+<th>Sr Oracle DBA</th>
+<th>Sys Eng / Architect</th>
+<th>Sr Forms (React) Dev</th>
+<th>Sr Java Dev</th>
+<th>Associate Engineers</th>
+<th><strong>Total</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1a Development meetings (26)</td>
+<td>78</td>
+<td>8</td>
+<td>12</td>
+<td>12</td>
+<td>12</td>
+<td>8</td>
+<td><strong>130</strong></td>
+</tr>
+<tr>
+<td>2 Authorization + UI</td>
+<td>50</td>
+<td>30</td>
+<td>—</td>
+<td>220</td>
+<td>150</td>
+<td>100</td>
+<td><strong>550</strong></td>
+</tr>
+<tr>
+<td>3a CWBI-Dev stand-up</td>
+<td>40</td>
+<td>—</td>
+<td>120</td>
+<td>—</td>
+<td>40</td>
+<td>—</td>
+<td><strong>200</strong></td>
+</tr>
+<tr>
+<td>5a Maintenance (≤803)</td>
+<td>70</td>
+<td>60</td>
+<td>—</td>
+<td>100</td>
+<td>150</td>
+<td>400</td>
+<td><strong>780</strong></td>
+</tr>
+<tr>
+<td><strong>Base total</strong></td>
+<td>238</td>
+<td>98</td>
+<td>132</td>
+<td>332</td>
+<td>352</td>
+<td>508</td>
+<td><strong>1,660</strong></td>
+</tr>
+<tr>
+<td>1b Development meetings (option)</td>
+<td>78</td>
+<td>8</td>
+<td>12</td>
+<td>12</td>
+<td>12</td>
+<td>8</td>
+<td><strong>130</strong></td>
+</tr>
+<tr>
+<td>3b CWBI-Test stand-up (option)</td>
+<td>20</td>
+<td>—</td>
+<td>80</td>
+<td>—</td>
+<td>20</td>
+<td>—</td>
+<td><strong>120</strong></td>
+</tr>
+<tr>
+<td>4 Load testing (option)</td>
+<td>20</td>
+<td>20</td>
+<td>60</td>
+<td>—</td>
+<td>40</td>
+<td>40</td>
+<td><strong>180</strong></td>
+</tr>
+<tr>
+<td>5b Maintenance (option, ≤704)</td>
+<td>60</td>
+<td>50</td>
+<td>—</td>
+<td>90</td>
+<td>130</td>
+<td>350</td>
+<td><strong>680</strong></td>
+</tr>
+<tr>
+<td><strong>All-options total</strong></td>
+<td>416</td>
+<td>176</td>
+<td>284</td>
+<td>434</td>
+<td>554</td>
+<td>906</td>
+<td><strong>2,770</strong></td>
+</tr>
+</tbody></table>
+<p>Task 5a and 5b hours are ceilings for planning; the Government&#39;s answer that payment follows delivered and accepted work units (Q&amp;A 33) is reflected in the elastic staffing described in Task 5 above.</p>
+<div class="section-break"></div><h2>TAB B — UI Improvements</h2>
+<h3>B.1 The current access-management application</h3>
+<p>The <code>cwms-access-management</code> repository is an Nx monorepo (pnpm, Node 24, TypeScript 5) containing a Fastify authorization proxy, a Fastify management API, a Commander/Ink CLI, and a React 18 management UI built with Vite, Tailwind, TanStack Query, react-router, and zustand. The UI has five pages — Home, Login, Users, Roles, Policies — and it is, in its entirety, <strong>read-only</strong>. The Users page is a table of username, email, full name, and an Active badge with client-side search; the <code>User</code> type in the UI&#39;s API service omits the <code>offices</code> and <code>roles</code> fields that the management API actually returns, so district scope is invisible. The Roles page lists role names and IDs; every description renders as &quot;–&quot; because the flat <code>GET /roles</code> in CDA returns only distinct group identifiers with no office. The Policies page lists Rego files read from OPA&#39;s <code>/v1/policies</code> endpoint and renders them with a syntax highlighter. The management API answers <code>POST</code> and <code>DELETE</code> on users and roles with HTTP 501. A Keycloak admin service exists in the code and is not wired to anything. In short: the previous effort delivered the frame and the read paths; the write paths, the district scoping, and the policy editing that TE1 describes do not exist yet.</p>
+<p>Three further shortcomings shape the design, all traced to specific files:</p>
+<ol>
+<li><strong>District scope has no representation in the UI or the management API.</strong> CDA&#39;s own user endpoints (<code>GET /users?office=…</code>, <code>POST/DELETE /user/{user-name}/roles/{office-id}</code>) are office-scoped and already enforce the <code>CWMS User Admins</code> role; the management API calls <code>GET /users?include-roles=true&amp;page-size=1000</code> once and flattens roles across offices. Every TE1 requirement that says &quot;for their district&quot; depends on restoring that scope end to end.</li>
+<li><strong>Policy data is not data.</strong> Offices and regions are a hard-coded map in <code>policies/helpers/offices.rego</code> (with a comment promising to load them &quot;in a future sprint&quot;); embargo hours are parsed from a naming convention on time-series-group identifiers; per-persona constraints are computed in the proxy&#39;s TypeScript. A Policy tab that lets a district administrator &quot;create policy and perform at least basic validation&quot; cannot be built against files that are mounted into the OPA container and require a container restart to change.</li>
+<li><strong>There is no CDA endpoint for the security time-series groups.</strong> The schema has them — <code>at_sec_ts_groups</code>, <code>at_sec_ts_group_masks</code>, <code>at_sec_allow</code>, and the <code>cwms_sec</code> procedures that manage them — and the <code>/timeseries/group</code> endpoints look like the right thing but are the data-categorization groups in <code>at_ts_group</code>. &quot;Assign a time series to a policy&quot; therefore begins in Java, not in React.</li>
+</ol>
+<p>The shortcomings are ordinary for a first increment, and they define the order of work.</p>
+<h3>B.2 Technical Exhibit 1, requirement by requirement</h3>
+<p><strong>Table B-1. Gap analysis against TE1.</strong> <em>Exists</em> = works today; <em>Partial</em> = data path exists, UI does not; <em>Missing</em> = requires new CDA endpoint(s) or a source-of-truth decision.</p>
+<table>
+<thead>
+<tr>
+<th>TE1 requirement</th>
+<th>State</th>
+<th>Where the change lands</th>
+<th>Increment</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Users tab</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>View all users with roles/permissions for their district</td>
+<td>Partial</td>
+<td>UI <code>UsersPage</code>, API <code>getUsers(office)</code> → CDA <code>GET /users?office=&amp;include-roles=true</code></td>
+<td>U1</td>
+</tr>
+<tr>
+<td>Assign roles to users for a specific district</td>
+<td>Partial</td>
+<td>UI assign control → mgmt API (new write route) → CDA <code>POST /user/{u}/roles/{office}</code> (exists)</td>
+<td>U1</td>
+</tr>
+<tr>
+<td>Show new users that do not yet have privileges</td>
+<td>Missing</td>
+<td>CDA <code>GET /users?unassigned=true&amp;office=</code> (new param), UI &quot;Unassigned&quot; filter</td>
+<td>U2 (§B.4)</td>
+</tr>
+<tr>
+<td>Organize users by assigned roles</td>
+<td>Partial</td>
+<td>UI grouping on the roles field the API already returns</td>
+<td>U1</td>
+</tr>
+<tr>
+<td>Cannot assign roles for districts they lack permission on</td>
+<td>Partial</td>
+<td>CDA enforces via <code>is_user_admin(office)</code>; UI limits the office selector to the admin&#39;s offices from <code>/user/profile</code></td>
+<td>U1</td>
+</tr>
+<tr>
+<td><strong>Roles tab</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Create roles specific to a district&#39;s data</td>
+<td>Missing</td>
+<td>CDA endpoint wrapping <code>cwms_sec.create_user_group</code> / <code>delete_user_group</code> (office-scoped); UI create form</td>
+<td>R1</td>
+</tr>
+<tr>
+<td>Assign policies to roles</td>
+<td>Missing</td>
+<td>Policy = time-series-group grant (<code>assign_ts_group_user_group</code>) — see Policy tab; UI role detail page lists grants</td>
+<td>R2</td>
+</tr>
+<tr>
+<td>Sort/filter roles by assigned policies</td>
+<td>Missing</td>
+<td>Follows R2 data</td>
+<td>R2</td>
+</tr>
+<tr>
+<td>View/edit/filter roles for a district</td>
+<td>Partial</td>
+<td><code>GET /roles</code> gains office scope (from <code>av_sec_user_groups</code>); UI filter</td>
+<td>R1</td>
+</tr>
+<tr>
+<td>Cannot edit roles for districts they lack permission on</td>
+<td>Partial</td>
+<td>CDA role check; UI scope</td>
+<td>R1</td>
+</tr>
+<tr>
+<td><strong>Policy tab</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>View policies associated with district data</td>
+<td>Partial</td>
+<td>Today: Rego viewer. After P1: list of security time-series groups with masks, grants, embargo for the district</td>
+<td>P1</td>
+</tr>
+<tr>
+<td>Assign a time series to a policy</td>
+<td>Missing</td>
+<td>CDA <code>/auth/ts-groups/{id}/masks</code> (new) → <code>assign_ts_masks_to_ts_group</code>; UI selector</td>
+<td>P1 (§B.3)</td>
+</tr>
+<tr>
+<td>Use time-series groups (or manage within the authorization system); restrictive or allowed</td>
+<td>Missing</td>
+<td>Security groups <em>are</em> the mechanism; allowed vs restrictive expressed as read/write/none grant per user group; UI toggle</td>
+<td>P1</td>
+</tr>
+<tr>
+<td>Assign by time-series parameters (LOC/parameter/version)</td>
+<td>Missing</td>
+<td>Mask pattern over the six-part identifier; UI mask builder with catalog preview</td>
+<td>P1 (§B.3)</td>
+</tr>
+<tr>
+<td>Assign embargo to a time series</td>
+<td>Missing</td>
+<td>Embargo column/table decision (Tab A, ADR); CDA field; UI hours picker</td>
+<td>P1 (§B.3)</td>
+</tr>
+<tr>
+<td>Create policy and perform basic validation</td>
+<td>Missing</td>
+<td>CDA validation (mask syntax, office ownership, group-name uniqueness) + UI inline validation</td>
+<td>P1</td>
+</tr>
+<tr>
+<td><strong>Cross-cutting</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Bulk manipulation of permissions (PWS Task 2)</td>
+<td>Missing</td>
+<td>Multi-select on Users and Policy tabs; batched CDA calls with per-row result</td>
+<td>U3</td>
+</tr>
+<tr>
+<td>Section 508 (Q&amp;A 49)</td>
+<td>Partial</td>
+<td>Keyboard paths, labels, focus order, error messaging; Storybook stories per component</td>
+<td>every increment</td>
+</tr>
+</tbody></table>
+<p>Increment order across the 180-day Task 2 period: <strong>U1 → P1 → U2 → R1 → R2 → U3</strong>, with documentation and training materials in the final increment. The PWS minimum successful product — an interface to manage access control and the access-control method working for time-series data — is reached at the end of P1.</p>
+<h3>B.3 One requirement in detail: assign a time series to a policy, scoped by location, parameter, and version, with an embargo</h3>
+<p>This is the requirement that touches every layer, so it is the one we take all the way down.</p>
+<p><strong>What a district administrator is doing.</strong> SWT&#39;s water manager wants raw stage data at a set of gauges to be readable by the district&#39;s cooperators only after 72 hours, while the district&#39;s own operators see it immediately. In CWMS terms: a security time-series group scoped to <code>*.Stage.Inst.*.0.Raw*</code> at those locations, granted <em>read</em> to the <code>external_cooperator</code> user group with a 72-hour embargo, and <em>read/write</em> to <code>dam_operator</code> with none.</p>
+<p><strong>Data model.</strong> We use the schema&#39;s own model rather than inventing a parallel one, because the database, VPD, and CDA&#39;s <code>UserDao</code> already understand it:</p>
+<ul>
+<li><code>at_sec_ts_groups(db_office_code, ts_group_code, ts_group_id, description)</code> — the policy, owned by an office.</li>
+<li><code>at_sec_ts_group_masks(db_office_code, ts_group_code, ts_group_mask)</code> — one or more LIKE patterns over the six-part time-series identifier <code>Location.Parameter.ParameterType.Interval.Duration.Version</code>; the location/parameter/version scoping TE1 asks for is a mask with wildcards in the other positions, normalized by <code>cwms_util</code> (<code>*</code> and <code>?</code> accepted).</li>
+<li><code>at_sec_allow(db_office_code, ts_group_code, user_group_code, privilege_bit)</code> — the grant: read (2), write (4), or none.</li>
+<li><code>at_sec_ts_group_embargo(ts_group_code, embargo_hours)</code> — reinstated from the previous effort&#39;s <code>001-ts-group-embargo.sql</code>, replacing the name-suffix convention (Tab A, ADR). <code>av_sec_ts_group_mask</code> and <code>av_sec_ts_privileges</code> are extended to carry the hours so that one view answers &quot;what may this user see, and from when&quot;.</li>
+</ul>
+<p><strong>Policy evaluation.</strong> The proxy already sends OPA <code>{user:{offices, roles, ts_privileges[]}, resource, action, context}</code>; <code>ts_privileges</code> gains <code>embargo_hours</code> from the view instead of from a regex, and <code>helpers/time_rules.rego</code> — which already contains <code>get_ts_group_embargo_hours</code> — reads it. The decision returned to CDA carries <code>ts_group_embargo</code> in the constraints block; <code>AuthorizationFilterHelper.getTsGroupEmbargoFilter</code> (present in PR #1461, never called) is wired into <code>TimeSeriesDaoImpl.getRequestedTimeSeries</code> beside the office filter, producing <code>date_time &lt; now − embargo_hours</code> for matching identifiers. Embargoed rows are absent, not zeroed; the response&#39;s paging cursor is computed after the filter so that clients see a consistent window. A Rego unit test file per persona asserts the allow, the deny, and the embargo boundary at ±1 second.</p>
+<p><strong>CDA endpoints (new, <code>api/auth/</code>, role <code>CWMS User Admins</code>).</strong></p>
+<table>
+<thead>
+<tr>
+<th>Method and path</th>
+<th>Backed by</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>GET /auth/ts-groups?office=</code></td>
+<td><code>av_sec_ts_group_mask</code>, <code>av_sec_ts_privileges</code></td>
+<td>List policies for a district with masks, grants, embargo</td>
+</tr>
+<tr>
+<td><code>POST /auth/ts-groups</code></td>
+<td><code>cwms_sec.create_ts_group</code></td>
+<td>Create a policy (validates name uniqueness within office)</td>
+</tr>
+<tr>
+<td><code>PATCH /auth/ts-groups/{id}</code></td>
+<td><code>change_ts_group_desc</code>, embargo table</td>
+<td>Edit description or embargo hours</td>
+</tr>
+<tr>
+<td><code>PUT /auth/ts-groups/{id}/masks</code></td>
+<td><code>assign_ts_masks_to_ts_group</code> (add/remove lists)</td>
+<td>Set the location/parameter/version patterns</td>
+</tr>
+<tr>
+<td><code>PUT /auth/ts-groups/{id}/user-groups/{ug}</code></td>
+<td><code>assign_ts_group_user_group</code> with <code>read</code>, <code>write</code>, or <code>none</code></td>
+<td>Grant or revoke</td>
+</tr>
+<tr>
+<td><code>GET /auth/ts-groups/{id}/preview?office=</code></td>
+<td><code>GET /catalog/TIMESERIES</code> with <code>like=</code></td>
+<td>Show which identifiers a mask currently matches</td>
+</tr>
+</tbody></table>
+<p>Each is a jOOQ call into <code>cwms_sec</code> in the style of the existing <code>CWMS_TS_PACKAGE</code> bindings, with DTOs under <code>data/dto/auth/</code> (reusing <code>TsGroupPrivilege</code> from PR #1461), OpenAPI annotations so the static-analysis test passes, and an <code>*IT</code> test class in the <code>DataApiTestIT</code> pattern that creates a group as a <code>CWMS User Admins</code> user, assigns masks and a grant, then reads time series as an <code>external_cooperator</code> and asserts that rows inside the embargo window are absent and rows outside it are present.</p>
+<p><strong>Management API.</strong> A <code>routes/ts-groups.ts</code> that forwards the six calls with zod validation (<code>middleware/validation.ts</code>), and the office-scoped <code>getUsers</code>/<code>getRoles</code> changes from increment U1. The management API stops flattening roles across offices.</p>
+<p><strong>React UI — the Policy tab flow.</strong></p>
+<ol>
+<li><em>Office selector</em> limited to the offices where <code>/user/profile</code> says the administrator holds <code>CWMS User Admins</code>. Everything on the page is scoped to it.</li>
+<li><em>Policy list</em> (replaces the Rego viewer as the default view; the viewer moves to an &quot;Advanced&quot; panel): name, description, mask count, grants, embargo, last modified.</li>
+<li><em>Create / edit policy</em> form: name, description, embargo hours (0 = none) — inline validation from the CDA response.</li>
+<li><em>Mask builder</em>: three fields — Location (with type-ahead from <code>/locations?office=</code>), Parameter (from <code>/parameters</code>), Version (free text) — and a generated pattern shown as text (<code>*.Stage.Inst.*.0.Raw*</code>) that an advanced user can edit directly. A <strong>preview</strong> panel calls the preview endpoint and lists the identifiers the pattern currently matches, with a count, so that an administrator sees the effect before saving. Multiple masks per policy.</li>
+<li><em>Grants</em>: a table of the district&#39;s user groups with a three-state control (none / read / read+write) per row; changes are batched into one <code>PUT</code> per changed row with per-row success or error shown in place.</li>
+<li><em>Bulk assignment</em> (increment U3): select several policies or several time series from the catalog and apply a grant or an embargo in one action, with a result table.</li>
+</ol>
+<p>Components are built with Storybook stories and React Testing Library tests; keyboard operation, visible focus, labelled controls, and error text tied to fields by <code>aria-describedby</code> are part of each component&#39;s definition of done (Q&amp;A 49 — HEC requires 508 conformance and uses Storybook; full pass on every rule is not required, but the interactive path must work without a mouse).</p>
+<p><strong>What &quot;working&quot; looks like at the end of P1.</strong> A district administrator with no command-line access creates the SWT policy above through the UI; a cooperator&#39;s <code>GET /cwms-data/timeseries?name=…&amp;office=SWT</code> returns data older than 72 hours and nothing newer; an operator&#39;s identical request returns everything; with the feature flag off, both requests behave exactly as before the change. That scenario is the acceptance test, and it is also the first walkthrough in the training materials.</p>
+<h3>B.4 A second requirement, in brief: show new users who have no privileges yet</h3>
+<p>With <code>cwms.dataapi.access.openid.create_users=true</code> — set in both compose files — a person&#39;s first Keycloak login creates an <code>at_sec_cwms_users</code> row with no <code>at_sec_users</code> membership. Those are the users TE1 wants surfaced, and today they are invisible: <code>UserDao.getAll</code> deliberately restricts its result to users who already have a group membership. The change is one query parameter and one join: <code>GET /users?office=&amp;unassigned=true</code> implemented as <code>at_sec_cwms_users</code> left-joined to <code>av_sec_users</code> on office, returning rows with no membership (or, optionally, no persona-group membership), with a matching <code>UsersControllerTestIT</code>. The management API forwards the parameter; the Users page gains an <strong>Unassigned</strong> filter beside the office selector and an <em>assign role</em> control on each row that calls the existing <code>POST /user/{user-name}/roles/{office-id}</code>. Registration can happen at any time, so the list is live, not a snapshot.</p>
+<h3>B.5 How the UI work progresses through the contract</h3>
+<p>Increment U1 (district scope restored, role assignment working) ships in the first month alongside the PR #1461 rebase, because it exercises only endpoints CDA already has. P1 follows once the embargo ADR is accepted, since its schema change is the one decision that cannot be reversed cheaply. U2 and R1 are small and fill review gaps. R2 and U3 complete the exhibit. Documentation — an administrator guide organized by the three tabs, and a short training deck with the SWT walkthrough — is the final Task 2 work unit, delivered in the repository&#39;s <code>docs/source/access-management/management/</code> tree where the previous effort left placeholders.</p>
+<div class="section-break"></div><h2>TAB C — Load Testing</h2>
+<h3>C.1 What the Government asked for, restated as design constraints</h3>
+<p>TE3 and the Q&amp;A answers give six constraints, and each one narrows the design:</p>
+<ol>
+<li><strong>Any developer must be able to run the tests locally</strong>, even where local numbers do not reflect production (TE3; Q&amp;A 38) — so the harness cannot depend on cloud infrastructure to exist at all.</li>
+<li><strong>The same tool must scale to an environment of &quot;more verisimilitude&quot;</strong> as an option, not a rewrite (Q&amp;A 38) — HEC&#39;s Apache CloudStack environment at no cost, or another if demonstrably better (Q&amp;A 39).</li>
+<li><strong>Open-source, unrestricted licensing</strong> (Q&amp;A 38).</li>
+<li><strong>The target of interest is CDA response time</strong>, regardless of the calling application, so that caching strategies can be analysed (Q&amp;A 38); the stated intent is to learn whether RDS needs vertical scaling or read replicas and whether CDA benefits from horizontal scaling (TE3).</li>
+<li><strong>One, two, and three CDA instances</strong> (round-robin) must each be testable, but as a configuration property rather than a mandatory triple run (Q&amp;A 40); CPU/memory fixed at 1 vCPU / 2 GB per CDA instance (TE3).</li>
+<li><strong>This is baseline characterization, not performance targets</strong> (TE3; Q&amp;A 40): the five load rows are controlled attempts, coverage of read/write and authenticated/unauthenticated combinations should be &quot;as many as practical&quot; starting from a reasonable sample, and the minimum facilities are authorization, time-series storage and retrieval with catalogs, and location storage and retrieval with catalogs.</li>
+</ol>
+<h3>C.2 Tool: k6, and why</h3>
+<p>TE3 names Apache JMeter as an example; the previous effort&#39;s design document listed JMeter but its repository actually contains <strong>k6</strong> scripts (<code>tools/benchmark/scenarios.js</code>, <code>quick-benchmark.js</code>, <code>run-benchmark.sh</code>) with Keycloak password-grant tokens for the persona test users and thresholds on p95/p99 latency. We propose to keep k6 and build the harness on it, for four reasons that map to the constraints above:</p>
+<ul>
+<li><strong>Local by default.</strong> k6 is a single static binary; a scenario is a JavaScript file; a run is one command against <code>http://localhost:8081/cwms-data</code>. Nothing about it assumes a cluster.</li>
+<li><strong>Scales without changing the artifact.</strong> The same script runs distributed (k6 in Docker across CloudStack VMs, or the open-source <code>k6-operator</code> on Kubernetes) — the &quot;option within the same tool&quot; the Government described.</li>
+<li><strong>Open source, Apache 2.0</strong>, with no GUI-bound test definitions to version-control.</li>
+<li><strong>It is already there.</strong> Continuity with the existing scripts, tokens, and report format (<code>docs/benchmarks/</code>), which HEC has seen.</li>
+</ul>
+<p>JMeter remains a legitimate alternative and we would switch if HEC prefers it: the scenario matrix in C.4 is tool-neutral and the harness layout keeps the runner behind one script so that a JMeter <code>.jmx</code> set could replace the k6 files without touching the rest. What the previous scripts lack — and what Task 4 adds — is the multi-instance topology, the write paths, the data-seeding step, and the result analysis.</p>
+<h3>C.3 Harness layout</h3>
+<p>Everything lives in the cwms-data-api repository under <code>load-tests/</code> so that the code under test and the tests that load it are versioned together and the harness is maintained under Task 5 like any other code.</p>
+<pre><code>load-tests/
+  README.md                 how to run locally, against CloudStack, against CWBI-Dev (read-only)
+  config/
+    local.json              target base URL, instance count, auth mode, data set, durations
+    cloudstack.json
+    cwbi-dev.json           read-only scenarios only; never write to a shared environment
+  scenarios/
+    auth.js                 authorization mechanisms: unauthenticated, API key, OIDC bearer, via-proxy vs direct
+    timeseries.js           GET /timeseries (several window lengths), POST /timeseries, catalog TIMESERIES
+    locations.js            GET /locations, GET /locations/{id}, catalog LOCATIONS, POST /locations
+    ratings.js              POST /ratings/rate-values and /rate-ts (the &quot;rate&quot; endpoint)
+    mix.js                  read-heavy composite (the Government&#39;s stated assumption)
+  lib/
+    tokens.js               Keycloak password grant for persona users; API-key header helper
+    data.js                 identifier lists generated from the seeded data set
+    windows.js              begin/end generators for 1 h, 1 d, 7 d, 30 d, 365 d windows
+  seed/
+    seed.py                 loads the load_data/ CSV and parquet fixtures (LRL, MVP) into the target DB
+  topology/
+    docker-compose.load.yml overlay: `--scale data-api=N` behind Traefik round-robin; OPA/proxy/cache profiles
+  run.sh                    one entry point: run.sh &lt;config&gt; &lt;scenario&gt; [--instances N] [--auth mode] [--profile proxy]
+  results/                  JSON summaries per run; analysis notebook reads them
+  analysis/
+    baseline.ipynb          p50/p95/p99, throughput, error rate by scenario × instances × auth × window
+</code></pre>
+<p><strong>Targeting a specific system</strong> (TE3: &quot;reasonably easy for a developer to target a specific system&quot;) is the <code>config/*.json</code> file plus <code>--instances</code>; nothing else changes between a laptop and CloudStack.</p>
+<p><strong>Instance topology.</strong> CDA&#39;s compose file already carries the Traefik load-balancer label (<code>traefik.http.services.data-api.loadbalancer.server.port=7000</code>); the load overlay adds <code>--scale data-api=N</code> and a health-checked round-robin so that one, two, or three instances are a number in the config, exactly as Q&amp;A 40 asked. Each instance is pinned at 1 vCPU / 2 GB (TE3) through compose resource limits, and the same pins carry to CloudStack VMs. The authorization profile adds the proxy, OPA, and cache containers in front so that &quot;via proxy&quot; and &quot;direct to CDA&quot; can be compared on identical runs — the difference is the authorization overhead the design is meant to keep under a few milliseconds.</p>
+<p><strong>Data.</strong> The repository&#39;s <code>load_data/</code> notebooks and the LRL/MVP location and melted-time-series fixtures give a realistic seed; <code>seed.py</code> loads them once per environment and generates the identifier lists the scenarios draw from, so every developer runs against the same data shape. Write scenarios use a dedicated office and identifier prefix and clean up after themselves; the <code>cwbi-dev.json</code> config disables writes outright.</p>
+<h3>C.4 Scenario matrix</h3>
+<p><strong>Table C-1. Load rows from TE3 × topology × mode.</strong> Every cell is a config combination, not a separate script; the run script iterates the ones selected.</p>
+<table>
+<thead>
+<tr>
+<th>TE3 load row</th>
+<th>Users / rate / parallelism</th>
+<th>Instances</th>
+<th>Auth modes</th>
+<th>Read/write mix</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>L1</td>
+<td>1 user, 50 req/s, parallelism 10</td>
+<td>1, 2, 3</td>
+<td>unauth, API key, OIDC, via-proxy</td>
+<td>read; write</td>
+</tr>
+<tr>
+<td>L2</td>
+<td>100 users, 50 req/s each, parallelism 10</td>
+<td>1, 2, 3</td>
+<td>unauth, OIDC, via-proxy</td>
+<td>read-heavy mix (90/10)</td>
+</tr>
+<tr>
+<td>L3</td>
+<td>1,000 users, 100 req/s aggregate</td>
+<td>1, 2, 3</td>
+<td>OIDC, via-proxy</td>
+<td>read-heavy mix</td>
+</tr>
+<tr>
+<td>L4</td>
+<td>10,000 req/s (controlled attempt)</td>
+<td>1, 2, 3</td>
+<td>unauth, via-proxy</td>
+<td>read</td>
+</tr>
+<tr>
+<td>L5</td>
+<td>100,000 req/s (controlled attempt)</td>
+<td>3</td>
+<td>unauth</td>
+<td>read (catalog + timeseries)</td>
+</tr>
+</tbody></table>
+<p>Per Q&amp;A 40, L1–L3 are interpreted as a combination of parallel and sequential virtual users; L4 and L5 are attempts whose purpose is to find where the stack saturates (CDA CPU, connection pool, RDS I/O, or the load generator itself — the harness records which). Each scenario runs the facilities TE3 lists as minimum: authorization (token acquisition and a decision-bearing request), time-series <code>GET</code> across five window lengths and one <code>POST</code>, catalog of time series, location <code>GET</code>/<code>POST</code> and catalog of locations, and the rating endpoints. Coverage of the remaining endpoints is added as the sample grows; TE3 accepts a single <code>POST</code> and <code>GET</code> per mechanism for this baseline and does not require 100 % (Q&amp;A 40).</p>
+<p><strong>Runs per cell</strong> are short (60–120 s steady state after a 30 s ramp) so that a full local sweep of the read cells fits in an evening on a laptop, and a CloudStack sweep including L4/L5 fits in a day.</p>
+<h3>C.5 What the baseline answers, and what we deliver</h3>
+<p>The Government named three questions and two observations, and the analysis notebook is organized around them:</p>
+<ul>
+<li><strong>RDS vertical vs. read replica.</strong> Compare RDS-side latency and I/O across L1–L3 with one CDA instance (isolating the database) against two and three instances (adding API concurrency); a database-bound curve flattens as instances rise.</li>
+<li><strong>CDA horizontal scaling.</strong> Throughput and p95 per added instance at fixed load; the point where a third instance stops helping is the database or the proxy, and the via-proxy/direct comparison says which.</li>
+<li><strong>Caching strategy.</strong> Via-proxy runs with a cold and a warm decision cache show the authorization overhead and the cache hit rate; the previous effort&#39;s single-instance measurement (about 2–3 ms proxy overhead, 99.7 % Redis hit rate on a developer machine) becomes a multi-instance figure on shared infrastructure.</li>
+<li><strong>&quot;Write amplification&quot; and bot downloads (Q&amp;A 38).</strong> Two dedicated scenarios: hourly-style write bursts (GOES-shaped, small and frequent) followed by computations, to reproduce the block-storage throttling HEC has observed; and a small number of clients pulling large time-series windows continuously, to characterize what a download bot costs the rest of the system. Both feed the caching discussion — a read-through cache in front of catalog and long-window reads is the obvious candidate and the numbers will say whether it is worth it.</li>
+</ul>
+<p><strong>Deliverables (Task 4):</strong> the harness and overlay in the repository with a README that a new developer can follow in under an hour; seeded data and identifier lists; a results folder with the JSON summaries of the baseline sweep on the local stack and on CloudStack; the analysis notebook and a short baseline report (tables of p50/p95/p99, throughput, error rate, and saturation point per cell, with the three questions answered as far as the data allows and the next experiments suggested); and a GitHub Actions job that runs a smoke subset of the read scenarios on every pull request to <code>develop</code> so that the harness does not rot between uses. No performance targets are asserted — TE3 is explicit that there are none — but the harness is built so that HEC can set them later and let CI enforce them.</p>
+<div class="section-break"></div><h1>Factor 2 — Management Approach, Key Personnel, and Transition Plan</h1>
+<h2>TAB A — Management Approach</h2>
+<h3>A.1 Organization and lines of authority</h3>
+<p>Frasier Digital, LLC is a principal-led small disadvantaged business. The Project Manager is the company&#39;s founder and managing member; there is no account layer between the Contracting Officer&#39;s Representative and the person with authority over staffing, priorities, and corrective action. The organization for this contract is shown in Figure A-1.</p>
+<p><strong>Figure A-1. Organization chart and lines of communication.</strong></p>
+<table>
+<tr><th colspan="2" style="text-align:center">Government</th><th colspan="2" style="text-align:center">Contracting</th></tr>
+<tr><td colspan="2" style="text-align:center">USACE HEC — Technical POC / Technical Supervisor<br>CWBI-PMO — Platform1, ISSO/ISSM<br><em>code review · priorities · approvals · scans</em></td><td colspan="2" style="text-align:center">CEHEC-CT — Contracting Officer / Contract Specialist<br><em>contract administration · invoices</em></td></tr>
+<tr><td colspan="4" style="text-align:center"><strong>Joseph Frasier — Project Manager (KEY)</strong><br>single point of contact · owns every deliverable · chairs biweekly meetings · approves every submission</td></tr>
+<tr><td style="text-align:center"><strong>Scott Carpenter</strong><br>System Engineer / Architect (KEY)<br>CWBI, CDK, sidecars (proxy, OPA, cache), images, STIG</td><td style="text-align:center"><strong>Randy Chong</strong><br>Senior Java Developer (KEY)<br>CDA, PR #1461, <code>auth/</code> endpoints, integration tests</td><td style="text-align:center"><strong>Zachary Antosko</strong><br>Senior React/TypeScript Web-Forms Developer (KEY)<br>management UI, management API, TE1 increments</td><td style="text-align:center"><strong>Efrain Rocha</strong><br>Senior Oracle DBA (KEY)<br>schema, VPD interaction, RDS, test images</td></tr>
+<tr><td colspan="4" style="text-align:center"><strong>Delivery pod (non-key)</strong> — reports to the PM; day-to-day direction from the senior owner of each stream<br>Andrew Frasier, associate engineer — Task 2 UI components · Seth Chesky, associate engineer — Task 5a maintenance and tests</td></tr>
+</table><p>Authority runs one way: every team member reports to the Project Manager, who is the only person who commits the company to the Government. Communication runs on one shared channel visible to the whole team, so that a question asked of any engineer is seen by the PM the same day. Technical direction from HEC arrives through pull-request review, GitHub issues, and the biweekly meeting; we do not create side channels that the Government cannot see.</p>
+<h3>A.2 Staffing plan and simultaneity</h3>
+<p>The team is named, confirmed, and sized against the level of effort in Factor 1, Table A-2, which Volume III prices. Table A-3 shows how the base-period tasks run concurrently across the 360-day period of performance without any task starving another: Task 2 and Task 3a run in parallel through month six on different people (the UI and CDA developers on Task 2; the architect on Task 3a), Task 5a runs at a steady fractional rate from the first approved issue, and Task 1a is a fixed cadence.</p>
+<p><strong>Table A-3. Base-period staffing by task and quarter (average hours per week).</strong> <span class="flag">[FLAG: reconcile with Vol III]</span></p>
+<table>
+<thead>
+<tr>
+<th>Person (role)</th>
+<th>Q1 (days 1–90)</th>
+<th>Q2 (91–180)</th>
+<th>Q3 (181–270)</th>
+<th>Q4 (271–360)</th>
+<th>Tasks</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Joseph Frasier (PM)</td>
+<td>6</td>
+<td>5</td>
+<td>4</td>
+<td>4</td>
+<td>1a, 2, 3a, 5a</td>
+</tr>
+<tr>
+<td>Scott Carpenter (Architect)</td>
+<td>6</td>
+<td>5</td>
+<td>1</td>
+<td>1</td>
+<td>1a, 3a</td>
+</tr>
+<tr>
+<td>Randy Chong (Sr Java)</td>
+<td>8</td>
+<td>7</td>
+<td>5</td>
+<td>5</td>
+<td>1a, 2, 5a</td>
+</tr>
+<tr>
+<td>Zachary Antosko (Sr React/TS)</td>
+<td>9</td>
+<td>9</td>
+<td>4</td>
+<td>3</td>
+<td>1a, 2, 5a</td>
+</tr>
+<tr>
+<td>Efrain Rocha (Sr Oracle DBA)</td>
+<td>3</td>
+<td>2</td>
+<td>2</td>
+<td>1</td>
+<td>1a, 2, 5a</td>
+</tr>
+<tr>
+<td>Andrew Frasier (associate)</td>
+<td>4</td>
+<td>4</td>
+<td>—</td>
+<td>—</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Seth Chesky (associate)</td>
+<td>6</td>
+<td>8</td>
+<td>10</td>
+<td>8</td>
+<td>5a</td>
+</tr>
+<tr>
+<td><strong>Team total</strong></td>
+<td><strong>42</strong></td>
+<td><strong>40</strong></td>
+<td><strong>26</strong></td>
+<td><strong>22</strong></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>Task 5a&#39;s weekly volume is held under the 20-hour planning figure the PWS suggests and is tuned in each biweekly meeting to HEC&#39;s review capacity (PWS Rate of Work; Q&amp;A 47). Option tasks add hours without adding people: Task 3b reuses the architect once 3a is stable; Task 4 uses the architect and the Java developer with the associate engineers running sweeps; Task 5b continues the 5a pattern.</p>
+<p><strong>Why this staffing does not degrade under concurrency.</strong> Three properties, each structural rather than aspirational: (1) the two build streams — UI/CDA (Task 2) and CWBI (Task 3a) — have different owners and different repositories, so they contend only for HEC&#39;s review time, which we manage by submitting small units; (2) maintenance has a dedicated owner whose time is not borrowed from the build streams, and a senior engineer behind him for major fixes; (3) the Project Manager&#39;s hours are a floor, not an average — the meeting cadence, note delivery, and Task 5 approvals are fixed obligations and are scheduled first.</p>
+<p><strong>Capacity disclosure.</strong> Frasier Digital has proposals under evaluation with other agencies whose periods of performance could overlap this one. We size and price every bid against total committed capacity: the hours above are net of every potential concurrent award, the named delivery pod exists to absorb surge, and the Project Manager&#39;s commitment to this contract is protected as a floor. <span class="flag">[FLAG: Joseph — confirm wording against current award status at render; DoWEA is cancelled, SSS RS and NOAA remain under evaluation, VAERS submits the same week.]</span> We state this proactively because fixed-price, deliverable-based work only functions when capacity claims are honest.</p>
+<h3>A.3 Responsiveness, customer service, and timeliness</h3>
+<p>The PWS sets clocks, and we have built our operating rhythm on them rather than on our own:</p>
+<table>
+<thead>
+<tr>
+<th>Obligation</th>
+<th>PWS source</th>
+<th>How we meet it</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Meeting notes within 1 business day</td>
+<td>Task 1a</td>
+<td>Notes drafted during the meeting from a fixed template; posted same day</td>
+</tr>
+<tr>
+<td>Start a maintenance task within 5 days; first work unit within 2 days of starting</td>
+<td>Task 5a</td>
+<td>Issue triage twice weekly; classification (≤1 h) is the first work unit</td>
+</tr>
+<tr>
+<td>Respond to HEC review comments within 5 days</td>
+<td>Task 5a</td>
+<td>Reviewer comments are the top of the queue; unaddressed comments block new submissions</td>
+</tr>
+<tr>
+<td>Status after 1 h classification / 2 h bug work / 4 h modification; draft PR at 4 h</td>
+<td>TE4</td>
+<td>Time-boxed by the engineer; the PR template carries the elapsed-hours field</td>
+</tr>
+<tr>
+<td>STIG state and scan-result responses &quot;promptly&quot;</td>
+<td>TE2; Q&amp;A 10</td>
+<td>Security folder in the repository is current before each Dev deployment; CWBI requests answered within 2 business days</td>
+</tr>
+<tr>
+<td>Notice to proceed before work over 2 h</td>
+<td>Task 5a</td>
+<td>We ask in the issue; we do not start without the label</td>
+</tr>
+</tbody></table>
+<p>Customer service on a contract like this means not consuming the customer&#39;s time. HEC has six hours a week for review; our internal review happens before HEC&#39;s, every PR is small enough to review in one sitting, and every submission states what it does, what it touches, and how it was tested in the first three lines of the description.</p>
+<h3>A.4 Reducing performance risk</h3>
+<p><strong>Table A-4. Risk register.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Risk</th>
+<th>Likelihood / impact</th>
+<th>Mitigation</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>PR #1461 rework is larger than a rebase (161 commits behind; failing CI)</td>
+<td>Med / Med</td>
+<td>Rebase in the first two weeks on public repos before CWBI access; scope the rework in the first meeting; feature flag keeps <code>develop</code> releasable throughout</td>
+<td>Randy</td>
+</tr>
+<tr>
+<td>CWBI access takes the full month (Q&amp;A 11)</td>
+<td>High / Low</td>
+<td>Month-one work is all local (Factor 2, Tab C); Platform1 ticket templates prepared before award</td>
+<td>Scott</td>
+</tr>
+<tr>
+<td>Source-of-truth decisions (embargo, offices, constraints) stall in discussion</td>
+<td>Med / High</td>
+<td>Written comparison with a recommendation at meeting one; ADR with a comment window; the UI increment order puts the dependent work (P1) second, not first</td>
+<td>Joseph</td>
+</tr>
+<tr>
+<td>Concurrent changes by HEC or other vendors conflict with ours (Q&amp;A 46)</td>
+<td>Med / Low</td>
+<td>Daily rebase on <code>develop</code>; &quot;first merged wins&quot;; design conflicts escalated same day</td>
+<td>Randy</td>
+</tr>
+<tr>
+<td>HEC review bandwidth limits acceptance rate (Q&amp;A 47)</td>
+<td>Med / Med</td>
+<td>Small PRs; weekly volume set in the meeting; HEC adding reviewers</td>
+<td>Joseph</td>
+</tr>
+<tr>
+<td>Oracle RDS behaves differently from the local <code>oracle-free</code> image</td>
+<td>Low / Med</td>
+<td>DBA reviews every schema PR against RDS constraints; CloudStack or CWBI-Dev validation before Test promotion</td>
+<td>Efrain</td>
+</tr>
+<tr>
+<td>Moonlighting team members&#39; availability shifts</td>
+<td>Low / Med</td>
+<td>Letters of commitment; hours sized to what each person can sustain; the delivery pod absorbs surge; PM approval required for any substitution, with CO/COR notification</td>
+<td>Joseph</td>
+</tr>
+<tr>
+<td>Fixed-IP egress for bastion access not ready at award (Q&amp;A 13)</td>
+<td>Low / Low</td>
+<td>Provisioned before award <span class="flag">[FLAG: Joseph]</span></td>
+<td>Joseph</td>
+</tr>
+</tbody></table>
+<p><strong>Quality.</strong> Definition of done is an accepted work unit. Every code change carries tests in the PWS&#39;s preferred locations; OWASP ZAP runs in CI; STIG self-checks precede every Dev deployment; documentation is a work unit, not an afterthought — and the PWS&#39;s own list of what counts as documentation (a manual test case anyone can perform, Javadocs, an automated test, formal project documentation) is the checklist in our PR template.</p>
+<p><strong>SAM registration and representations.</strong> Frasier Digital, LLC is registered and active in SAM.gov (UEI PY8MJ4JPHJ45, CAGE 213L8; registration expires 27 May 2027), and its Representations and Certifications in SAM are current (RFO 4.203-1). No subcontractors or teaming partners are proposed; all personnel named in this proposal perform as members of the Frasier Digital team. <span class="flag">[FLAG: Joseph — confirm the &quot;no subcontractors&quot; characterization of the 1099 team is the wording you want.]</span></p>
+<div class="section-break"></div><h2>TAB B — Key Personnel Resumes and Experience</h2>
+<h3>B.1 How we read the five roles after the Q&amp;A</h3>
+<p>The solicitation names five key personnel roles: Project Manager, Senior Oracle DBA, System Engineer/Architect, Senior Forms Developer, and Senior APEX or Java Developer. The Government&#39;s answers to questions 7 and 8 settle how two of them apply here: Oracle APEX and Oracle Forms are not used and not planned; the existing components are React, NodeJS/TypeScript, and a Java REST API, &quot;to be expanded, not replaced&quot;; and equivalent experience is acceptable for the Forms Developer and Oracle DBA positions when the person can show &quot;sufficient experience in the direct use of the technologies already in use.&quot; We have staffed to that test. The Senior Forms Developer role is filled by a senior React/TypeScript developer whose recent work is exactly the kind of data-management web interface TE1 describes; the Senior Oracle DBA role is filled by a database engineer with Oracle, Oracle Cloud, and AWS experience who owns the schema side of this design; the Java option of the fifth role is taken. Each resume in the annex opens with the technologies in use on this contract and where the person has used them.</p>
+<h3>B.2 Role-to-requirement matrix</h3>
+<p><strong>Table B-1. Key personnel against the technologies in use (Q&amp;A 7–8) and the PWS knowledge areas (instr. 3.2.1.1.1).</strong></p>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Person</th>
+<th>Direct use of the technologies in this system</th>
+<th>Years</th>
+<th>Relevant depth for this contract</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Project Manager</strong></td>
+<td>Joseph Frasier</td>
+<td>React/TypeScript and Node (WeWork, Ecotone, Region 4); authentication and role-based-access backends (Region 4); REST API design; CI/CD; federal and state delivery (USDA-facing app at Deloitte; Louisiana Dept. of Education)</td>
+<td>11+</td>
+<td>Program manager and hands-on developer on a ground-up platform for thousands of users with role-based access (Region 4, 2024–25); current enterprise AI implementations end-to-end (PwC); single accountable point for a small named team</td>
+</tr>
+<tr>
+<td><strong>Senior Oracle DBA</strong></td>
+<td>Efrain Rocha</td>
+<td>Oracle (enterprise data warehouses at JPMorgan; Oracle Cloud Infrastructure platform delivery at Gene by Gene); PostgreSQL at 90+ TB; AWS; Java, Python, SQL; Docker and CI/CD</td>
+<td>25+</td>
+<td>Led database and DevOps teams in regulated, data-intensive environments; partitioning, replication, retention, and migration at scale — the profile needed for the schema, VPD interaction, RDS behaviour, and test-image maintenance in this design <span class="flag">[FLAG: add Oracle versions / DBA duties from Efrain&#39;s reply]</span></td>
+</tr>
+<tr>
+<td><strong>System Engineer / Architect</strong></td>
+<td>Scott Carpenter</td>
+<td>AWS services and infrastructure-as-code (Amazon SDE; AWS apprenticeship — automated IaC cutting deployment time 96 %); Java and Python; distributed backend systems; Docker; secure-coding and vulnerability documentation for new endpoints</td>
+<td>5</td>
+<td>Owns the CWBI-side work: sidecar containers, CDK change requests through Platform1, hardened images, health checks, STIG self-assessment. U.S. Army veteran (2014–18) <span class="flag">[FLAG: add CDK/ECS specifics from Scott&#39;s reply]</span></td>
+</tr>
+<tr>
+<td><strong>Senior Forms Developer</strong> (React/TypeScript web forms)</td>
+<td>Zachary Antosko</td>
+<td>React/Redux and TypeScript; Node/NestJS REST backends; PostgreSQL/MySQL with TypeORM; AWS (RDS, DynamoDB, Lambda, S3); Docker; RabbitMQ streaming</td>
+<td>5</td>
+<td>Built a database-migration framework with automated ETL and a validation engine across 1.15 M records (ID Plans); led a four-engineer platform redesign to pilot in three months (Honeywell); data-management UIs for property, lease, and CRM systems — the shape of the TE1 administrator interface <span class="flag">[FLAG: add form/admin-UI and testing-tool specifics from Zach&#39;s reply]</span></td>
+</tr>
+<tr>
+<td><strong>Senior APEX or Java Developer</strong> (Java)</td>
+<td>Randy Chong</td>
+<td>Java / Spring Boot REST services; AWS ECS, EKS, RDS, CloudWatch in production, including multi-region failover exercises; JUnit; Angular with React exposure; prior QA engineering</td>
+<td>4+</td>
+<td>Software Engineer II on JPMorgan Chase&#39;s digital forms platform (100+ forms): sole developer on a production multi-form completion feature; self-service form-onboarding system; production support and deployment of infrastructure and code. AWS Certified Cloud Practitioner. Owns CDA: the PR #1461 rebase, new <code>auth/</code> endpoints, integration tests <span class="flag">[FLAG: add JUnit/REST-Assured/Oracle specifics from Randy&#39;s reply]</span></td>
+</tr>
+</tbody></table>
+<p>All five are U.S. citizens. Public Trust is the clearance level the Government stated (Q&amp;A 11); no team member has a known impediment.</p>
+<h3>B.3 Why this person for this role</h3>
+<p><strong>Joseph Frasier, Project Manager.</strong> The management risk on a small-business award is the distance between the customer and the decision. Here it is zero: the PM is the owner, ran the last ground-up platform the company delivered as both PM and developer, and will chair every biweekly meeting personally. His hands-on React/TypeScript and authentication-backend background means he reads every pull request, not just the status.</p>
+<p><strong>Efrain Rocha, Senior Oracle DBA.</strong> The authorization design succeeds or fails at the schema: where embargo lives, how masks are evaluated, and whether CDA-level filtering ever contradicts a VPD policy. That needs someone who has run production Oracle at enterprise scale and has also lived through platform migrations — the PWS says CWMS will move data to storage matched to its use, and our DBA has led exactly that kind of transition.</p>
+<p><strong>Scott Carpenter, System Engineer/Architect.</strong> The CWBI work is infrastructure-as-code inside someone else&#39;s pipeline, with hardened images and a security posture to document. Scott&#39;s AWS background is operational (deployments, IaC automation, backend services on distributed systems) and his Army service is a straightforward fit with a Corps of Engineers customer&#39;s expectations of discipline in a change process.</p>
+<p><strong>Zachary Antosko, Senior Forms Developer.</strong> TE1 is a data-administration interface: users, roles, policies, masks, bulk operations, validation. Zach&#39;s last two roles were building and migrating data-management systems with React front ends and TypeScript backends, including the validation engineering that keeps bulk operations safe.</p>
+<p><strong>Randy Chong, Senior Java Developer.</strong> CDA is a Java REST API, and the first job is landing an open pull request that is 161 commits behind on a codebase with a four-schema CI matrix. Randy works in a large-bank Java/AWS production environment where that kind of disciplined rebase-test-deploy loop is daily practice, and his forms-platform work gives him the domain sense for the authorization endpoints the UI will call.</p>
+<h3>B.4 Substitution</h3>
+<p>Key personnel are committed by the letters in the annex. Any substitution during performance requires the Project Manager&#39;s approval and written notice to the Contracting Officer and COR with the proposed replacement&#39;s resume, and the replacement will meet or exceed the qualifications shown here.</p>
+<div class="section-break"></div><h2>TAB C — Transition Plan</h2>
+<h3>C.1 Principle: nothing of value ever lives only with us</h3>
+<p>The simplest transition plan is the one that never has to be executed as an event. From the first day of performance, every artifact this contract produces lives in HEC&#39;s own repositories, issue trackers, and Confluence: code in USACE&#39;s GitHub Enterprise (TE2 Code), decisions as ADRs in <code>docs/source/decisions</code>, work status as GitHub issues with the PWS log fields, meeting notes in Confluence, security posture in the repository&#39;s security folder, and the load-test harness beside the code it tests. There is no Frasier-Digital-side wiki, backlog, or environment that HEC would need to recover. Transition-out is therefore a matter of closing the loop on work in flight, not of handing over a body of knowledge.</p>
+<h3>C.2 Transition-in (award to day 30)</h3>
+<p>Two tracks run in parallel so that access paperwork never idles the engineering work (Q&amp;A 11, 13, 18, 19).</p>
+<p><strong>Table C-1. Transition-in schedule.</strong></p>
+<table>
+<thead>
+<tr>
+<th>When</th>
+<th>Access track (Government-dependent)</th>
+<th>Engineering track (independent of access)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Award week</td>
+<td>DD 7798 and DD 2875 submitted for all named staff; Public Trust initiated; Platform1 access request filed; Frasier Digital&#39;s fixed egress IP delivered to CWBI for bastion access; read access to the dev CDK requested</td>
+<td>Local stacks running on every engineer&#39;s machine from the public repositories and docker-compose (Q&amp;A 18); PR #1461 rebase started; <code>auth-contract</code> issue triage drafted</td>
+</tr>
+<tr>
+<td>Kickoff meeting (week 1–2)</td>
+<td>GitHub Enterprise repository access granted (1–2 days after kickoff)</td>
+<td>Kickoff is acceptance to start the technical approach (Q&amp;A 48); first ADR drafts (embargo home, office data source, cache topology) presented; first meeting notes posted within 1 business day</td>
+</tr>
+<tr>
+<td>Weeks 2–4</td>
+<td>Platform1 access (≈1 week+); bastion access when CWBI completes onboarding (≤1 month)</td>
+<td>PR #1461 rebase submitted in review-ladder-sized pieces; UI increment U1 in progress; minimal PMP with the standard-app diagram delivered (Q&amp;A 48, 50); first Platform1 ticket drafted and reviewed with HEC before submission</td>
+</tr>
+<tr>
+<td>Day 30</td>
+<td>All paperwork complete; CWBI-Dev reachable</td>
+<td>First accepted work units; Task 5a ready to accept issues; Task 3a change request submitted through Platform1</td>
+</tr>
+</tbody></table>
+<p>Onboarding does not gate delivery: the Government confirmed that a contractor &quot;should be able to get started on additional work and planning within existing tools&quot; before console or bastion access lands (Q&amp;A 19), and the first month&#39;s engineering is scoped to exactly that.</p>
+<h3>C.3 Continuity during performance</h3>
+<p>Three standing practices make any point in the contract a clean handoff point:</p>
+<ul>
+<li><strong>Every open item is an issue with a status.</strong> Work in progress is a GitHub issue that says what is done, what remains, which branch holds it, and what the next step is. The PWS log fields (requestor, date, notes, status, fix description with tests, hours) are filled as work proceeds, not at invoice time.</li>
+<li><strong>Every design-bearing choice is an ADR.</strong> Someone who did not attend the meeting can read why the embargo table exists, why the sidecars are in the CDA task, and why the cache has one TTL policy, and can reverse the decision with full context.</li>
+<li><strong>Every increment is behind a flag until HEC turns it on.</strong> <code>develop</code> is releasable at every commit; there is never a half-integrated state that only the contractor knows how to finish.</li>
+</ul>
+<h3>C.4 Transition-out (final 30 days and close-out)</h3>
+<p><strong>Table C-2. Transition-out schedule.</strong></p>
+<table>
+<thead>
+<tr>
+<th>When</th>
+<th>Activity</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>T−30 days</td>
+<td>Inventory of uncompleted work: every open issue and branch reviewed with HEC in the biweekly meeting; each marked <em>finish</em>, <em>hand off</em>, or <em>close</em></td>
+<td>Handoff list in Confluence with owner and state for each item</td>
+</tr>
+<tr>
+<td>T−30 to T−14</td>
+<td><em>Finish</em> items completed as work units; <em>hand off</em> items brought to a documented stopping point: passing tests, a draft PR with a written &quot;to complete this&quot; section, and an ADR if design-bearing</td>
+<td>PRs in review or merged; issues updated</td>
+</tr>
+<tr>
+<td>T−14</td>
+<td>Documentation audit: administrator guide and training materials (Task 2), load-test README and baseline report (Task 4), security folder and STIG checklist (Task 3), PMP diagram current</td>
+<td>Documentation work units accepted</td>
+</tr>
+<tr>
+<td>T−14 to T−7</td>
+<td>Two handoff sessions inside the biweekly-meeting cadence — one for the authorization system (proxy, OPA, cache, CDA integration, UI), one for the harness and maintenance backlog — recorded as meeting notes with the questions asked and answered</td>
+<td>Notes in Confluence; follow-up issues filed</td>
+</tr>
+<tr>
+<td>T−7</td>
+<td>Maintenance log reconciled: every invoice-referenced issue resolved or annotated with its state; final Task 5 invoice log delivered</td>
+<td>Complete log per PWS Task 5a</td>
+</tr>
+<tr>
+<td>T−0</td>
+<td>Credentials and access returned per CWBI process; final meeting notes; Frasier Digital retains nothing the Government needs</td>
+<td>Close-out confirmed in writing to the COR</td>
+</tr>
+</tbody></table>
+<p><strong>Option tasks.</strong> If Task 3b, 4, or 5b is exercised, the same practices continue and the transition-out schedule shifts to the end of the last exercised task&#39;s period of performance (Q&amp;A 32). If an option is not exercised, the base-period close-out above already leaves the Dev deployment, the harness, and the maintenance backlog in a state HEC can carry forward with its own staff or a successor.</p>
+<p><strong>Unforeseen early termination.</strong> Because the practices in C.3 hold throughout, a transition at any point follows Table C-2 compressed to the notice period; nothing in it depends on a minimum lead time beyond the handoff sessions, which can be held within a week.</p>

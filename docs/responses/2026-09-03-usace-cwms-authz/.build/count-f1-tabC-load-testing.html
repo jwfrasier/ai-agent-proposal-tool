@@ -1,0 +1,135 @@
+<meta charset="utf-8"><title>count-f1-tabC-load-testing</title><style>
+  html, body { font-family: "Times New Roman", Times, serif; font-size: 12pt; line-height: 1.18; color: #000; margin: 0; padding: 0; }
+  * { font-family: "Times New Roman", Times, serif !important; }
+  h1 { font-size: 14pt; font-weight: bold; margin: 0 0 10pt 0; page-break-after: avoid; }
+  h2 { font-size: 13pt; font-weight: bold; margin: 12pt 0 5pt 0; page-break-after: avoid; }
+  h3 { font-size: 12pt; font-weight: bold; margin: 9pt 0 3pt 0; page-break-after: avoid; }
+  p { margin: 0 0 6pt 0; }
+  ul, ol { margin: 0 0 6pt 0; padding-left: 22pt; }
+  li { margin-bottom: 3pt; }
+  hr { border: none; border-top: 0.5pt solid #000; margin: 10pt 0; }
+  a { color: #000; text-decoration: none; }
+  strong { font-weight: bold; } em { font-style: italic; }
+  code { font-family: "Courier New", Courier, monospace !important; font-size: 10pt; }
+  pre { font-family: "Courier New", Courier, monospace !important; font-size: 9pt; line-height: 1.15; margin: 6pt 0 10pt 0; white-space: pre-wrap; overflow-wrap: anywhere; max-width: 100%; }
+  pre code { font-size: 9pt; }
+  code { overflow-wrap: anywhere; }
+  table { border-collapse: collapse; width: 100%; max-width: 100%; margin: 6pt 0 10pt 0; font-size: 10pt; page-break-inside: auto; }
+  th, td { border: 0.5pt solid #000; padding: 3pt 5pt; vertical-align: top; text-align: left; overflow-wrap: anywhere; }
+  th { background: #e8e8e8; font-weight: bold; white-space: nowrap; }
+  tr { page-break-inside: avoid; }
+  .flag { background: #ffef9e; font-weight: bold; }
+  .vol-title { font-size: 18pt; font-weight: bold; text-align: center; margin: 150pt 0 10pt 0; }
+  .vol-sub { font-size: 13pt; text-align: center; margin: 0 0 6pt 0; }
+  .section-break { page-break-before: always; }
+  .toc td { border: none; padding: 2pt 4pt; font-size: 12pt; }
+  .toc { margin-top: 10pt; }
+</style><h2>TAB C — Load Testing</h2>
+<h3>C.1 What the Government asked for, restated as design constraints</h3>
+<p>TE3 and the Q&amp;A answers give six constraints, and each one narrows the design:</p>
+<ol>
+<li><strong>Any developer must be able to run the tests locally</strong>, even where local numbers do not reflect production (TE3; Q&amp;A 38) — so the harness cannot depend on cloud infrastructure to exist at all.</li>
+<li><strong>The same tool must scale to an environment of &quot;more verisimilitude&quot;</strong> as an option, not a rewrite (Q&amp;A 38) — HEC&#39;s Apache CloudStack environment at no cost, or another if demonstrably better (Q&amp;A 39).</li>
+<li><strong>Open-source, unrestricted licensing</strong> (Q&amp;A 38).</li>
+<li><strong>The target of interest is CDA response time</strong>, regardless of the calling application, so that caching strategies can be analysed (Q&amp;A 38); the stated intent is to learn whether RDS needs vertical scaling or read replicas and whether CDA benefits from horizontal scaling (TE3).</li>
+<li><strong>One, two, and three CDA instances</strong> (round-robin) must each be testable, but as a configuration property rather than a mandatory triple run (Q&amp;A 40); CPU/memory fixed at 1 vCPU / 2 GB per CDA instance (TE3).</li>
+<li><strong>This is baseline characterization, not performance targets</strong> (TE3; Q&amp;A 40): the five load rows are controlled attempts, coverage of read/write and authenticated/unauthenticated combinations should be &quot;as many as practical&quot; starting from a reasonable sample, and the minimum facilities are authorization, time-series storage and retrieval with catalogs, and location storage and retrieval with catalogs.</li>
+</ol>
+<h3>C.2 Tool: k6, and why</h3>
+<p>TE3 names Apache JMeter as an example; the previous effort&#39;s design document listed JMeter but its repository actually contains <strong>k6</strong> scripts (<code>tools/benchmark/scenarios.js</code>, <code>quick-benchmark.js</code>, <code>run-benchmark.sh</code>) with Keycloak password-grant tokens for the persona test users and thresholds on p95/p99 latency. We propose to keep k6 and build the harness on it, for four reasons that map to the constraints above:</p>
+<ul>
+<li><strong>Local by default.</strong> k6 is a single static binary; a scenario is a JavaScript file; a run is one command against <code>http://localhost:8081/cwms-data</code>. Nothing about it assumes a cluster.</li>
+<li><strong>Scales without changing the artifact.</strong> The same script runs distributed (k6 in Docker across CloudStack VMs, or the open-source <code>k6-operator</code> on Kubernetes) — the &quot;option within the same tool&quot; the Government described.</li>
+<li><strong>Open source, Apache 2.0</strong>, with no GUI-bound test definitions to version-control.</li>
+<li><strong>It is already there.</strong> Continuity with the existing scripts, tokens, and report format (<code>docs/benchmarks/</code>), which HEC has seen.</li>
+</ul>
+<p>JMeter remains a legitimate alternative and we would switch if HEC prefers it: the scenario matrix in C.4 is tool-neutral and the harness layout keeps the runner behind one script so that a JMeter <code>.jmx</code> set could replace the k6 files without touching the rest. What the previous scripts lack — and what Task 4 adds — is the multi-instance topology, the write paths, the data-seeding step, and the result analysis.</p>
+<h3>C.3 Harness layout</h3>
+<p>Everything lives in the cwms-data-api repository under <code>load-tests/</code> so that the code under test and the tests that load it are versioned together and the harness is maintained under Task 5 like any other code.</p>
+<pre><code>load-tests/
+  README.md                 how to run locally, against CloudStack, against CWBI-Dev (read-only)
+  config/
+    local.json              target base URL, instance count, auth mode, data set, durations
+    cloudstack.json
+    cwbi-dev.json           read-only scenarios only; never write to a shared environment
+  scenarios/
+    auth.js                 authorization mechanisms: unauthenticated, API key, OIDC bearer, via-proxy vs direct
+    timeseries.js           GET /timeseries (several window lengths), POST /timeseries, catalog TIMESERIES
+    locations.js            GET /locations, GET /locations/{id}, catalog LOCATIONS, POST /locations
+    ratings.js              POST /ratings/rate-values and /rate-ts (the &quot;rate&quot; endpoint)
+    mix.js                  read-heavy composite (the Government&#39;s stated assumption)
+  lib/
+    tokens.js               Keycloak password grant for persona users; API-key header helper
+    data.js                 identifier lists generated from the seeded data set
+    windows.js              begin/end generators for 1 h, 1 d, 7 d, 30 d, 365 d windows
+  seed/
+    seed.py                 loads the load_data/ CSV and parquet fixtures (LRL, MVP) into the target DB
+  topology/
+    docker-compose.load.yml overlay: `--scale data-api=N` behind Traefik round-robin; OPA/proxy/cache profiles
+  run.sh                    one entry point: run.sh &lt;config&gt; &lt;scenario&gt; [--instances N] [--auth mode] [--profile proxy]
+  results/                  JSON summaries per run; analysis notebook reads them
+  analysis/
+    baseline.ipynb          p50/p95/p99, throughput, error rate by scenario × instances × auth × window
+</code></pre>
+<p><strong>Targeting a specific system</strong> (TE3: &quot;reasonably easy for a developer to target a specific system&quot;) is the <code>config/*.json</code> file plus <code>--instances</code>; nothing else changes between a laptop and CloudStack.</p>
+<p><strong>Instance topology.</strong> CDA&#39;s compose file already carries the Traefik load-balancer label (<code>traefik.http.services.data-api.loadbalancer.server.port=7000</code>); the load overlay adds <code>--scale data-api=N</code> and a health-checked round-robin so that one, two, or three instances are a number in the config, exactly as Q&amp;A 40 asked. Each instance is pinned at 1 vCPU / 2 GB (TE3) through compose resource limits, and the same pins carry to CloudStack VMs. The authorization profile adds the proxy, OPA, and cache containers in front so that &quot;via proxy&quot; and &quot;direct to CDA&quot; can be compared on identical runs — the difference is the authorization overhead the design is meant to keep under a few milliseconds.</p>
+<p><strong>Data.</strong> The repository&#39;s <code>load_data/</code> notebooks and the LRL/MVP location and melted-time-series fixtures give a realistic seed; <code>seed.py</code> loads them once per environment and generates the identifier lists the scenarios draw from, so every developer runs against the same data shape. Write scenarios use a dedicated office and identifier prefix and clean up after themselves; the <code>cwbi-dev.json</code> config disables writes outright.</p>
+<h3>C.4 Scenario matrix</h3>
+<p><strong>Table C-1. Load rows from TE3 × topology × mode.</strong> Every cell is a config combination, not a separate script; the run script iterates the ones selected.</p>
+<table>
+<thead>
+<tr>
+<th>TE3 load row</th>
+<th>Users / rate / parallelism</th>
+<th>Instances</th>
+<th>Auth modes</th>
+<th>Read/write mix</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>L1</td>
+<td>1 user, 50 req/s, parallelism 10</td>
+<td>1, 2, 3</td>
+<td>unauth, API key, OIDC, via-proxy</td>
+<td>read; write</td>
+</tr>
+<tr>
+<td>L2</td>
+<td>100 users, 50 req/s each, parallelism 10</td>
+<td>1, 2, 3</td>
+<td>unauth, OIDC, via-proxy</td>
+<td>read-heavy mix (90/10)</td>
+</tr>
+<tr>
+<td>L3</td>
+<td>1,000 users, 100 req/s aggregate</td>
+<td>1, 2, 3</td>
+<td>OIDC, via-proxy</td>
+<td>read-heavy mix</td>
+</tr>
+<tr>
+<td>L4</td>
+<td>10,000 req/s (controlled attempt)</td>
+<td>1, 2, 3</td>
+<td>unauth, via-proxy</td>
+<td>read</td>
+</tr>
+<tr>
+<td>L5</td>
+<td>100,000 req/s (controlled attempt)</td>
+<td>3</td>
+<td>unauth</td>
+<td>read (catalog + timeseries)</td>
+</tr>
+</tbody></table>
+<p>Per Q&amp;A 40, L1–L3 are interpreted as a combination of parallel and sequential virtual users; L4 and L5 are attempts whose purpose is to find where the stack saturates (CDA CPU, connection pool, RDS I/O, or the load generator itself — the harness records which). Each scenario runs the facilities TE3 lists as minimum: authorization (token acquisition and a decision-bearing request), time-series <code>GET</code> across five window lengths and one <code>POST</code>, catalog of time series, location <code>GET</code>/<code>POST</code> and catalog of locations, and the rating endpoints. Coverage of the remaining endpoints is added as the sample grows; TE3 accepts a single <code>POST</code> and <code>GET</code> per mechanism for this baseline and does not require 100 % (Q&amp;A 40).</p>
+<p><strong>Runs per cell</strong> are short (60–120 s steady state after a 30 s ramp) so that a full local sweep of the read cells fits in an evening on a laptop, and a CloudStack sweep including L4/L5 fits in a day.</p>
+<h3>C.5 What the baseline answers, and what we deliver</h3>
+<p>The Government named three questions and two observations, and the analysis notebook is organized around them:</p>
+<ul>
+<li><strong>RDS vertical vs. read replica.</strong> Compare RDS-side latency and I/O across L1–L3 with one CDA instance (isolating the database) against two and three instances (adding API concurrency); a database-bound curve flattens as instances rise.</li>
+<li><strong>CDA horizontal scaling.</strong> Throughput and p95 per added instance at fixed load; the point where a third instance stops helping is the database or the proxy, and the via-proxy/direct comparison says which.</li>
+<li><strong>Caching strategy.</strong> Via-proxy runs with a cold and a warm decision cache show the authorization overhead and the cache hit rate; the previous effort&#39;s single-instance measurement (about 2–3 ms proxy overhead, 99.7 % Redis hit rate on a developer machine) becomes a multi-instance figure on shared infrastructure.</li>
+<li><strong>&quot;Write amplification&quot; and bot downloads (Q&amp;A 38).</strong> Two dedicated scenarios: hourly-style write bursts (GOES-shaped, small and frequent) followed by computations, to reproduce the block-storage throttling HEC has observed; and a small number of clients pulling large time-series windows continuously, to characterize what a download bot costs the rest of the system. Both feed the caching discussion — a read-through cache in front of catalog and long-window reads is the obvious candidate and the numbers will say whether it is worth it.</li>
+</ul>
+<p><strong>Deliverables (Task 4):</strong> the harness and overlay in the repository with a README that a new developer can follow in under an hour; seeded data and identifier lists; a results folder with the JSON summaries of the baseline sweep on the local stack and on CloudStack; the analysis notebook and a short baseline report (tables of p50/p95/p99, throughput, error rate, and saturation point per cell, with the three questions answered as far as the data allows and the next experiments suggested); and a GitHub Actions job that runs a smoke subset of the read scenarios on every pull request to <code>develop</code> so that the harness does not rot between uses. No performance targets are asserted — TE3 is explicit that there are none — but the harness is built so that HEC can set them later and let CI enforce them.</p>

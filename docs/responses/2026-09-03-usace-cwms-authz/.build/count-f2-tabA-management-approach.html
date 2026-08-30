@@ -1,0 +1,224 @@
+<meta charset="utf-8"><title>count-f2-tabA-management-approach</title><style>
+  html, body { font-family: "Times New Roman", Times, serif; font-size: 12pt; line-height: 1.18; color: #000; margin: 0; padding: 0; }
+  * { font-family: "Times New Roman", Times, serif !important; }
+  h1 { font-size: 14pt; font-weight: bold; margin: 0 0 10pt 0; page-break-after: avoid; }
+  h2 { font-size: 13pt; font-weight: bold; margin: 12pt 0 5pt 0; page-break-after: avoid; }
+  h3 { font-size: 12pt; font-weight: bold; margin: 9pt 0 3pt 0; page-break-after: avoid; }
+  p { margin: 0 0 6pt 0; }
+  ul, ol { margin: 0 0 6pt 0; padding-left: 22pt; }
+  li { margin-bottom: 3pt; }
+  hr { border: none; border-top: 0.5pt solid #000; margin: 10pt 0; }
+  a { color: #000; text-decoration: none; }
+  strong { font-weight: bold; } em { font-style: italic; }
+  code { font-family: "Courier New", Courier, monospace !important; font-size: 10pt; }
+  pre { font-family: "Courier New", Courier, monospace !important; font-size: 9pt; line-height: 1.15; margin: 6pt 0 10pt 0; white-space: pre-wrap; overflow-wrap: anywhere; max-width: 100%; }
+  pre code { font-size: 9pt; }
+  code { overflow-wrap: anywhere; }
+  table { border-collapse: collapse; width: 100%; max-width: 100%; margin: 6pt 0 10pt 0; font-size: 10pt; page-break-inside: auto; }
+  th, td { border: 0.5pt solid #000; padding: 3pt 5pt; vertical-align: top; text-align: left; overflow-wrap: anywhere; }
+  th { background: #e8e8e8; font-weight: bold; white-space: nowrap; }
+  tr { page-break-inside: avoid; }
+  .flag { background: #ffef9e; font-weight: bold; }
+  .vol-title { font-size: 18pt; font-weight: bold; text-align: center; margin: 150pt 0 10pt 0; }
+  .vol-sub { font-size: 13pt; text-align: center; margin: 0 0 6pt 0; }
+  .section-break { page-break-before: always; }
+  .toc td { border: none; padding: 2pt 4pt; font-size: 12pt; }
+  .toc { margin-top: 10pt; }
+</style><h1>Factor 2 — Management Approach, Key Personnel, and Transition Plan</h1>
+<h2>TAB A — Management Approach</h2>
+<h3>A.1 Organization and lines of authority</h3>
+<p>Frasier Digital, LLC is a principal-led small disadvantaged business. The Project Manager is the company&#39;s founder and managing member; there is no account layer between the Contracting Officer&#39;s Representative and the person with authority over staffing, priorities, and corrective action. The organization for this contract is shown in Figure A-1.</p>
+<p><strong>Figure A-1. Organization chart and lines of communication.</strong></p>
+<table>
+<tr><th colspan="2" style="text-align:center">Government</th><th colspan="2" style="text-align:center">Contracting</th></tr>
+<tr><td colspan="2" style="text-align:center">USACE HEC — Technical POC / Technical Supervisor<br>CWBI-PMO — Platform1, ISSO/ISSM<br><em>code review · priorities · approvals · scans</em></td><td colspan="2" style="text-align:center">CEHEC-CT — Contracting Officer / Contract Specialist<br><em>contract administration · invoices</em></td></tr>
+<tr><td colspan="4" style="text-align:center"><strong>Joseph Frasier — Project Manager (KEY)</strong><br>single point of contact · owns every deliverable · chairs biweekly meetings · approves every submission</td></tr>
+<tr><td style="text-align:center"><strong>Scott Carpenter</strong><br>System Engineer / Architect (KEY)<br>CWBI, CDK, sidecars (proxy, OPA, cache), images, STIG</td><td style="text-align:center"><strong>Randy Chong</strong><br>Senior Java Developer (KEY)<br>CDA, PR #1461, <code>auth/</code> endpoints, integration tests</td><td style="text-align:center"><strong>Zachary Antosko</strong><br>Senior React/TypeScript Web-Forms Developer (KEY)<br>management UI, management API, TE1 increments</td><td style="text-align:center"><strong>Efrain Rocha</strong><br>Senior Oracle DBA (KEY)<br>schema, VPD interaction, RDS, test images</td></tr>
+<tr><td colspan="4" style="text-align:center"><strong>Delivery pod (non-key)</strong> — reports to the PM; day-to-day direction from the senior owner of each stream<br>Andrew Frasier, associate engineer — Task 2 UI components · Seth Chesky, associate engineer — Task 5a maintenance and tests</td></tr>
+</table><p>Authority runs one way: every team member reports to the Project Manager, who is the only person who commits the company to the Government. Communication runs on one shared channel visible to the whole team, so that a question asked of any engineer is seen by the PM the same day. Technical direction from HEC arrives through pull-request review, GitHub issues, and the biweekly meeting; we do not create side channels that the Government cannot see.</p>
+<h3>A.2 Staffing plan and simultaneity</h3>
+<p>The team is named, confirmed, and sized against the level of effort in Factor 1, Table A-2, which Volume III prices. Table A-3 shows how the base-period tasks run concurrently across the 360-day period of performance without any task starving another: Task 2 and Task 3a run in parallel through month six on different people (the UI and CDA developers on Task 2; the architect on Task 3a), Task 5a runs at a steady fractional rate from the first approved issue, and Task 1a is a fixed cadence.</p>
+<p><strong>Table A-3. Base-period staffing by task and quarter (average hours per week).</strong> <span class="flag">[FLAG: reconcile with Vol III]</span></p>
+<table>
+<thead>
+<tr>
+<th>Person (role)</th>
+<th>Q1 (days 1–90)</th>
+<th>Q2 (91–180)</th>
+<th>Q3 (181–270)</th>
+<th>Q4 (271–360)</th>
+<th>Tasks</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Joseph Frasier (PM)</td>
+<td>6</td>
+<td>5</td>
+<td>4</td>
+<td>4</td>
+<td>1a, 2, 3a, 5a</td>
+</tr>
+<tr>
+<td>Scott Carpenter (Architect)</td>
+<td>6</td>
+<td>5</td>
+<td>1</td>
+<td>1</td>
+<td>1a, 3a</td>
+</tr>
+<tr>
+<td>Randy Chong (Sr Java)</td>
+<td>8</td>
+<td>7</td>
+<td>5</td>
+<td>5</td>
+<td>1a, 2, 5a</td>
+</tr>
+<tr>
+<td>Zachary Antosko (Sr React/TS)</td>
+<td>9</td>
+<td>9</td>
+<td>4</td>
+<td>3</td>
+<td>1a, 2, 5a</td>
+</tr>
+<tr>
+<td>Efrain Rocha (Sr Oracle DBA)</td>
+<td>3</td>
+<td>2</td>
+<td>2</td>
+<td>1</td>
+<td>1a, 2, 5a</td>
+</tr>
+<tr>
+<td>Andrew Frasier (associate)</td>
+<td>4</td>
+<td>4</td>
+<td>—</td>
+<td>—</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Seth Chesky (associate)</td>
+<td>6</td>
+<td>8</td>
+<td>10</td>
+<td>8</td>
+<td>5a</td>
+</tr>
+<tr>
+<td><strong>Team total</strong></td>
+<td><strong>42</strong></td>
+<td><strong>40</strong></td>
+<td><strong>26</strong></td>
+<td><strong>22</strong></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>Task 5a&#39;s weekly volume is held under the 20-hour planning figure the PWS suggests and is tuned in each biweekly meeting to HEC&#39;s review capacity (PWS Rate of Work; Q&amp;A 47). Option tasks add hours without adding people: Task 3b reuses the architect once 3a is stable; Task 4 uses the architect and the Java developer with the associate engineers running sweeps; Task 5b continues the 5a pattern.</p>
+<p><strong>Why this staffing does not degrade under concurrency.</strong> Three properties, each structural rather than aspirational: (1) the two build streams — UI/CDA (Task 2) and CWBI (Task 3a) — have different owners and different repositories, so they contend only for HEC&#39;s review time, which we manage by submitting small units; (2) maintenance has a dedicated owner whose time is not borrowed from the build streams, and a senior engineer behind him for major fixes; (3) the Project Manager&#39;s hours are a floor, not an average — the meeting cadence, note delivery, and Task 5 approvals are fixed obligations and are scheduled first.</p>
+<p><strong>Capacity disclosure.</strong> Frasier Digital has proposals under evaluation with other agencies whose periods of performance could overlap this one. We size and price every bid against total committed capacity: the hours above are net of every potential concurrent award, the named delivery pod exists to absorb surge, and the Project Manager&#39;s commitment to this contract is protected as a floor. <span class="flag">[FLAG: Joseph — confirm wording against current award status at render; DoWEA is cancelled, SSS RS and NOAA remain under evaluation, VAERS submits the same week.]</span> We state this proactively because fixed-price, deliverable-based work only functions when capacity claims are honest.</p>
+<h3>A.3 Responsiveness, customer service, and timeliness</h3>
+<p>The PWS sets clocks, and we have built our operating rhythm on them rather than on our own:</p>
+<table>
+<thead>
+<tr>
+<th>Obligation</th>
+<th>PWS source</th>
+<th>How we meet it</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Meeting notes within 1 business day</td>
+<td>Task 1a</td>
+<td>Notes drafted during the meeting from a fixed template; posted same day</td>
+</tr>
+<tr>
+<td>Start a maintenance task within 5 days; first work unit within 2 days of starting</td>
+<td>Task 5a</td>
+<td>Issue triage twice weekly; classification (≤1 h) is the first work unit</td>
+</tr>
+<tr>
+<td>Respond to HEC review comments within 5 days</td>
+<td>Task 5a</td>
+<td>Reviewer comments are the top of the queue; unaddressed comments block new submissions</td>
+</tr>
+<tr>
+<td>Status after 1 h classification / 2 h bug work / 4 h modification; draft PR at 4 h</td>
+<td>TE4</td>
+<td>Time-boxed by the engineer; the PR template carries the elapsed-hours field</td>
+</tr>
+<tr>
+<td>STIG state and scan-result responses &quot;promptly&quot;</td>
+<td>TE2; Q&amp;A 10</td>
+<td>Security folder in the repository is current before each Dev deployment; CWBI requests answered within 2 business days</td>
+</tr>
+<tr>
+<td>Notice to proceed before work over 2 h</td>
+<td>Task 5a</td>
+<td>We ask in the issue; we do not start without the label</td>
+</tr>
+</tbody></table>
+<p>Customer service on a contract like this means not consuming the customer&#39;s time. HEC has six hours a week for review; our internal review happens before HEC&#39;s, every PR is small enough to review in one sitting, and every submission states what it does, what it touches, and how it was tested in the first three lines of the description.</p>
+<h3>A.4 Reducing performance risk</h3>
+<p><strong>Table A-4. Risk register.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Risk</th>
+<th>Likelihood / impact</th>
+<th>Mitigation</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>PR #1461 rework is larger than a rebase (161 commits behind; failing CI)</td>
+<td>Med / Med</td>
+<td>Rebase in the first two weeks on public repos before CWBI access; scope the rework in the first meeting; feature flag keeps <code>develop</code> releasable throughout</td>
+<td>Randy</td>
+</tr>
+<tr>
+<td>CWBI access takes the full month (Q&amp;A 11)</td>
+<td>High / Low</td>
+<td>Month-one work is all local (Factor 2, Tab C); Platform1 ticket templates prepared before award</td>
+<td>Scott</td>
+</tr>
+<tr>
+<td>Source-of-truth decisions (embargo, offices, constraints) stall in discussion</td>
+<td>Med / High</td>
+<td>Written comparison with a recommendation at meeting one; ADR with a comment window; the UI increment order puts the dependent work (P1) second, not first</td>
+<td>Joseph</td>
+</tr>
+<tr>
+<td>Concurrent changes by HEC or other vendors conflict with ours (Q&amp;A 46)</td>
+<td>Med / Low</td>
+<td>Daily rebase on <code>develop</code>; &quot;first merged wins&quot;; design conflicts escalated same day</td>
+<td>Randy</td>
+</tr>
+<tr>
+<td>HEC review bandwidth limits acceptance rate (Q&amp;A 47)</td>
+<td>Med / Med</td>
+<td>Small PRs; weekly volume set in the meeting; HEC adding reviewers</td>
+<td>Joseph</td>
+</tr>
+<tr>
+<td>Oracle RDS behaves differently from the local <code>oracle-free</code> image</td>
+<td>Low / Med</td>
+<td>DBA reviews every schema PR against RDS constraints; CloudStack or CWBI-Dev validation before Test promotion</td>
+<td>Efrain</td>
+</tr>
+<tr>
+<td>Moonlighting team members&#39; availability shifts</td>
+<td>Low / Med</td>
+<td>Letters of commitment; hours sized to what each person can sustain; the delivery pod absorbs surge; PM approval required for any substitution, with CO/COR notification</td>
+<td>Joseph</td>
+</tr>
+<tr>
+<td>Fixed-IP egress for bastion access not ready at award (Q&amp;A 13)</td>
+<td>Low / Low</td>
+<td>Provisioned before award <span class="flag">[FLAG: Joseph]</span></td>
+<td>Joseph</td>
+</tr>
+</tbody></table>
+<p><strong>Quality.</strong> Definition of done is an accepted work unit. Every code change carries tests in the PWS&#39;s preferred locations; OWASP ZAP runs in CI; STIG self-checks precede every Dev deployment; documentation is a work unit, not an afterthought — and the PWS&#39;s own list of what counts as documentation (a manual test case anyone can perform, Javadocs, an automated test, formal project documentation) is the checklist in our PR template.</p>
+<p><strong>SAM registration and representations.</strong> Frasier Digital, LLC is registered and active in SAM.gov (UEI PY8MJ4JPHJ45, CAGE 213L8; registration expires 27 May 2027), and its Representations and Certifications in SAM are current (RFO 4.203-1). No subcontractors or teaming partners are proposed; all personnel named in this proposal perform as members of the Frasier Digital team. <span class="flag">[FLAG: Joseph — confirm the &quot;no subcontractors&quot; characterization of the 1099 team is the wording you want.]</span></p>

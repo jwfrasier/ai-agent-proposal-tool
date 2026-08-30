@@ -1,0 +1,112 @@
+<meta charset="utf-8"><title>count-f2-tabC-transition-plan</title><style>
+  html, body { font-family: "Times New Roman", Times, serif; font-size: 12pt; line-height: 1.18; color: #000; margin: 0; padding: 0; }
+  * { font-family: "Times New Roman", Times, serif !important; }
+  h1 { font-size: 14pt; font-weight: bold; margin: 0 0 10pt 0; page-break-after: avoid; }
+  h2 { font-size: 13pt; font-weight: bold; margin: 12pt 0 5pt 0; page-break-after: avoid; }
+  h3 { font-size: 12pt; font-weight: bold; margin: 9pt 0 3pt 0; page-break-after: avoid; }
+  p { margin: 0 0 6pt 0; }
+  ul, ol { margin: 0 0 6pt 0; padding-left: 22pt; }
+  li { margin-bottom: 3pt; }
+  hr { border: none; border-top: 0.5pt solid #000; margin: 10pt 0; }
+  a { color: #000; text-decoration: none; }
+  strong { font-weight: bold; } em { font-style: italic; }
+  code { font-family: "Courier New", Courier, monospace !important; font-size: 10pt; }
+  pre { font-family: "Courier New", Courier, monospace !important; font-size: 9pt; line-height: 1.15; margin: 6pt 0 10pt 0; white-space: pre-wrap; overflow-wrap: anywhere; max-width: 100%; }
+  pre code { font-size: 9pt; }
+  code { overflow-wrap: anywhere; }
+  table { border-collapse: collapse; width: 100%; max-width: 100%; margin: 6pt 0 10pt 0; font-size: 10pt; page-break-inside: auto; }
+  th, td { border: 0.5pt solid #000; padding: 3pt 5pt; vertical-align: top; text-align: left; overflow-wrap: anywhere; }
+  th { background: #e8e8e8; font-weight: bold; white-space: nowrap; }
+  tr { page-break-inside: avoid; }
+  .flag { background: #ffef9e; font-weight: bold; }
+  .vol-title { font-size: 18pt; font-weight: bold; text-align: center; margin: 150pt 0 10pt 0; }
+  .vol-sub { font-size: 13pt; text-align: center; margin: 0 0 6pt 0; }
+  .section-break { page-break-before: always; }
+  .toc td { border: none; padding: 2pt 4pt; font-size: 12pt; }
+  .toc { margin-top: 10pt; }
+</style><h2>TAB C — Transition Plan</h2>
+<h3>C.1 Principle: nothing of value ever lives only with us</h3>
+<p>The simplest transition plan is the one that never has to be executed as an event. From the first day of performance, every artifact this contract produces lives in HEC&#39;s own repositories, issue trackers, and Confluence: code in USACE&#39;s GitHub Enterprise (TE2 Code), decisions as ADRs in <code>docs/source/decisions</code>, work status as GitHub issues with the PWS log fields, meeting notes in Confluence, security posture in the repository&#39;s security folder, and the load-test harness beside the code it tests. There is no Frasier-Digital-side wiki, backlog, or environment that HEC would need to recover. Transition-out is therefore a matter of closing the loop on work in flight, not of handing over a body of knowledge.</p>
+<h3>C.2 Transition-in (award to day 30)</h3>
+<p>Two tracks run in parallel so that access paperwork never idles the engineering work (Q&amp;A 11, 13, 18, 19).</p>
+<p><strong>Table C-1. Transition-in schedule.</strong></p>
+<table>
+<thead>
+<tr>
+<th>When</th>
+<th>Access track (Government-dependent)</th>
+<th>Engineering track (independent of access)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Award week</td>
+<td>DD 7798 and DD 2875 submitted for all named staff; Public Trust initiated; Platform1 access request filed; Frasier Digital&#39;s fixed egress IP delivered to CWBI for bastion access; read access to the dev CDK requested</td>
+<td>Local stacks running on every engineer&#39;s machine from the public repositories and docker-compose (Q&amp;A 18); PR #1461 rebase started; <code>auth-contract</code> issue triage drafted</td>
+</tr>
+<tr>
+<td>Kickoff meeting (week 1–2)</td>
+<td>GitHub Enterprise repository access granted (1–2 days after kickoff)</td>
+<td>Kickoff is acceptance to start the technical approach (Q&amp;A 48); first ADR drafts (embargo home, office data source, cache topology) presented; first meeting notes posted within 1 business day</td>
+</tr>
+<tr>
+<td>Weeks 2–4</td>
+<td>Platform1 access (≈1 week+); bastion access when CWBI completes onboarding (≤1 month)</td>
+<td>PR #1461 rebase submitted in review-ladder-sized pieces; UI increment U1 in progress; minimal PMP with the standard-app diagram delivered (Q&amp;A 48, 50); first Platform1 ticket drafted and reviewed with HEC before submission</td>
+</tr>
+<tr>
+<td>Day 30</td>
+<td>All paperwork complete; CWBI-Dev reachable</td>
+<td>First accepted work units; Task 5a ready to accept issues; Task 3a change request submitted through Platform1</td>
+</tr>
+</tbody></table>
+<p>Onboarding does not gate delivery: the Government confirmed that a contractor &quot;should be able to get started on additional work and planning within existing tools&quot; before console or bastion access lands (Q&amp;A 19), and the first month&#39;s engineering is scoped to exactly that.</p>
+<h3>C.3 Continuity during performance</h3>
+<p>Three standing practices make any point in the contract a clean handoff point:</p>
+<ul>
+<li><strong>Every open item is an issue with a status.</strong> Work in progress is a GitHub issue that says what is done, what remains, which branch holds it, and what the next step is. The PWS log fields (requestor, date, notes, status, fix description with tests, hours) are filled as work proceeds, not at invoice time.</li>
+<li><strong>Every design-bearing choice is an ADR.</strong> Someone who did not attend the meeting can read why the embargo table exists, why the sidecars are in the CDA task, and why the cache has one TTL policy, and can reverse the decision with full context.</li>
+<li><strong>Every increment is behind a flag until HEC turns it on.</strong> <code>develop</code> is releasable at every commit; there is never a half-integrated state that only the contractor knows how to finish.</li>
+</ul>
+<h3>C.4 Transition-out (final 30 days and close-out)</h3>
+<p><strong>Table C-2. Transition-out schedule.</strong></p>
+<table>
+<thead>
+<tr>
+<th>When</th>
+<th>Activity</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>T−30 days</td>
+<td>Inventory of uncompleted work: every open issue and branch reviewed with HEC in the biweekly meeting; each marked <em>finish</em>, <em>hand off</em>, or <em>close</em></td>
+<td>Handoff list in Confluence with owner and state for each item</td>
+</tr>
+<tr>
+<td>T−30 to T−14</td>
+<td><em>Finish</em> items completed as work units; <em>hand off</em> items brought to a documented stopping point: passing tests, a draft PR with a written &quot;to complete this&quot; section, and an ADR if design-bearing</td>
+<td>PRs in review or merged; issues updated</td>
+</tr>
+<tr>
+<td>T−14</td>
+<td>Documentation audit: administrator guide and training materials (Task 2), load-test README and baseline report (Task 4), security folder and STIG checklist (Task 3), PMP diagram current</td>
+<td>Documentation work units accepted</td>
+</tr>
+<tr>
+<td>T−14 to T−7</td>
+<td>Two handoff sessions inside the biweekly-meeting cadence — one for the authorization system (proxy, OPA, cache, CDA integration, UI), one for the harness and maintenance backlog — recorded as meeting notes with the questions asked and answered</td>
+<td>Notes in Confluence; follow-up issues filed</td>
+</tr>
+<tr>
+<td>T−7</td>
+<td>Maintenance log reconciled: every invoice-referenced issue resolved or annotated with its state; final Task 5 invoice log delivered</td>
+<td>Complete log per PWS Task 5a</td>
+</tr>
+<tr>
+<td>T−0</td>
+<td>Credentials and access returned per CWBI process; final meeting notes; Frasier Digital retains nothing the Government needs</td>
+<td>Close-out confirmed in writing to the COR</td>
+</tr>
+</tbody></table>
+<p><strong>Option tasks.</strong> If Task 3b, 4, or 5b is exercised, the same practices continue and the transition-out schedule shifts to the end of the last exercised task&#39;s period of performance (Q&amp;A 32). If an option is not exercised, the base-period close-out above already leaves the Dev deployment, the harness, and the maintenance backlog in a state HEC can carry forward with its own staff or a successor.</p>
+<p><strong>Unforeseen early termination.</strong> Because the practices in C.3 hold throughout, a transition at any point follows Table C-2 compressed to the notice period; nothing in it depends on a minimum lead time beyond the handoff sessions, which can be held within a week.</p>

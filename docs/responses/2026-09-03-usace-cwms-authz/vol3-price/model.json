@@ -1,0 +1,140 @@
+{
+ "rate": {
+  "PM": 165,
+  "SR": 145,
+  "AS": 90
+ },
+ "cat": {
+  "Joseph": "PM",
+  "Efrain": "SR",
+  "Scott": "SR",
+  "Zach": "SR",
+  "Randy": "SR",
+  "Andrew": "AS",
+  "Seth": "AS"
+ },
+ "label": {
+  "Joseph": "Project Manager",
+  "Efrain": "Senior Oracle DBA",
+  "Scott": "System Engineer / Architect",
+  "Zach": "Senior Forms (React/TypeScript) Developer",
+  "Randy": "Senior Java Developer",
+  "Andrew": "Associate Software Engineer",
+  "Seth": "Associate Software Engineer"
+ },
+ "tasks": [
+  {
+   "clin": "1001",
+   "task": "Task 1a",
+   "desc": "Development meetings (26)",
+   "option": false,
+   "hours": {
+    "Joseph": 78,
+    "Efrain": 8,
+    "Scott": 12,
+    "Zach": 12,
+    "Randy": 12,
+    "Seth": 8
+   },
+   "price": 19970
+  },
+  {
+   "clin": "2001",
+   "task": "Task 2",
+   "desc": "Improve authorization web UI and CDA integration",
+   "option": false,
+   "hours": {
+    "Joseph": 50,
+    "Efrain": 30,
+    "Zach": 220,
+    "Randy": 150,
+    "Andrew": 100
+   },
+   "price": 75250
+  },
+  {
+   "clin": "3001",
+   "task": "Task 3a",
+   "desc": "Implement authorization in CWBI-Dev",
+   "option": false,
+   "hours": {
+    "Joseph": 40,
+    "Scott": 120,
+    "Randy": 40
+   },
+   "price": 29800
+  },
+  {
+   "clin": "5001",
+   "task": "Task 5a",
+   "desc": "Maintenance (\u2264803 h)",
+   "option": false,
+   "hours": {
+    "Joseph": 70,
+    "Efrain": 60,
+    "Zach": 100,
+    "Randy": 150,
+    "Seth": 400
+   },
+   "price": 92500
+  },
+  {
+   "clin": "1002",
+   "task": "Task 1b",
+   "desc": "Development meetings, additional 26 (option)",
+   "option": true,
+   "hours": {
+    "Joseph": 78,
+    "Efrain": 8,
+    "Scott": 12,
+    "Zach": 12,
+    "Randy": 12,
+    "Seth": 8
+   },
+   "price": 19970
+  },
+  {
+   "clin": "3002",
+   "task": "Task 3b",
+   "desc": "Implement authorization in CWBI-Test (option)",
+   "option": true,
+   "hours": {
+    "Joseph": 20,
+    "Scott": 80,
+    "Randy": 20
+   },
+   "price": 17800
+  },
+  {
+   "clin": "4001",
+   "task": "Task 4",
+   "desc": "Load testing (option)",
+   "option": true,
+   "hours": {
+    "Joseph": 20,
+    "Efrain": 20,
+    "Scott": 60,
+    "Randy": 40,
+    "Seth": 40
+   },
+   "price": 24300
+  },
+  {
+   "clin": "5002",
+   "task": "Task 5b",
+   "desc": "Maintenance (\u2264704 h) (option)",
+   "option": true,
+   "hours": {
+    "Joseph": 60,
+    "Efrain": 50,
+    "Zach": 90,
+    "Randy": 130,
+    "Seth": 350
+   },
+   "price": 80550
+  }
+ ],
+ "base": 217520,
+ "options": 142620,
+ "total": 360140
+}

@@ -1,0 +1,249 @@
+<meta charset="utf-8"><title>count-f1-tabB-ui-improvements</title><style>
+  html, body { font-family: "Times New Roman", Times, serif; font-size: 12pt; line-height: 1.18; color: #000; margin: 0; padding: 0; }
+  * { font-family: "Times New Roman", Times, serif !important; }
+  h1 { font-size: 14pt; font-weight: bold; margin: 0 0 10pt 0; page-break-after: avoid; }
+  h2 { font-size: 13pt; font-weight: bold; margin: 12pt 0 5pt 0; page-break-after: avoid; }
+  h3 { font-size: 12pt; font-weight: bold; margin: 9pt 0 3pt 0; page-break-after: avoid; }
+  p { margin: 0 0 6pt 0; }
+  ul, ol { margin: 0 0 6pt 0; padding-left: 22pt; }
+  li { margin-bottom: 3pt; }
+  hr { border: none; border-top: 0.5pt solid #000; margin: 10pt 0; }
+  a { color: #000; text-decoration: none; }
+  strong { font-weight: bold; } em { font-style: italic; }
+  code { font-family: "Courier New", Courier, monospace !important; font-size: 10pt; }
+  pre { font-family: "Courier New", Courier, monospace !important; font-size: 9pt; line-height: 1.15; margin: 6pt 0 10pt 0; white-space: pre-wrap; overflow-wrap: anywhere; max-width: 100%; }
+  pre code { font-size: 9pt; }
+  code { overflow-wrap: anywhere; }
+  table { border-collapse: collapse; width: 100%; max-width: 100%; margin: 6pt 0 10pt 0; font-size: 10pt; page-break-inside: auto; }
+  th, td { border: 0.5pt solid #000; padding: 3pt 5pt; vertical-align: top; text-align: left; overflow-wrap: anywhere; }
+  th { background: #e8e8e8; font-weight: bold; white-space: nowrap; }
+  tr { page-break-inside: avoid; }
+  .flag { background: #ffef9e; font-weight: bold; }
+  .vol-title { font-size: 18pt; font-weight: bold; text-align: center; margin: 150pt 0 10pt 0; }
+  .vol-sub { font-size: 13pt; text-align: center; margin: 0 0 6pt 0; }
+  .section-break { page-break-before: always; }
+  .toc td { border: none; padding: 2pt 4pt; font-size: 12pt; }
+  .toc { margin-top: 10pt; }
+</style><h2>TAB B — UI Improvements</h2>
+<h3>B.1 The current access-management application</h3>
+<p>The <code>cwms-access-management</code> repository is an Nx monorepo (pnpm, Node 24, TypeScript 5) containing a Fastify authorization proxy, a Fastify management API, a Commander/Ink CLI, and a React 18 management UI built with Vite, Tailwind, TanStack Query, react-router, and zustand. The UI has five pages — Home, Login, Users, Roles, Policies — and it is, in its entirety, <strong>read-only</strong>. The Users page is a table of username, email, full name, and an Active badge with client-side search; the <code>User</code> type in the UI&#39;s API service omits the <code>offices</code> and <code>roles</code> fields that the management API actually returns, so district scope is invisible. The Roles page lists role names and IDs; every description renders as &quot;–&quot; because the flat <code>GET /roles</code> in CDA returns only distinct group identifiers with no office. The Policies page lists Rego files read from OPA&#39;s <code>/v1/policies</code> endpoint and renders them with a syntax highlighter. The management API answers <code>POST</code> and <code>DELETE</code> on users and roles with HTTP 501. A Keycloak admin service exists in the code and is not wired to anything. In short: the previous effort delivered the frame and the read paths; the write paths, the district scoping, and the policy editing that TE1 describes do not exist yet.</p>
+<p>Three further shortcomings shape the design, all traced to specific files:</p>
+<ol>
+<li><strong>District scope has no representation in the UI or the management API.</strong> CDA&#39;s own user endpoints (<code>GET /users?office=…</code>, <code>POST/DELETE /user/{user-name}/roles/{office-id}</code>) are office-scoped and already enforce the <code>CWMS User Admins</code> role; the management API calls <code>GET /users?include-roles=true&amp;page-size=1000</code> once and flattens roles across offices. Every TE1 requirement that says &quot;for their district&quot; depends on restoring that scope end to end.</li>
+<li><strong>Policy data is not data.</strong> Offices and regions are a hard-coded map in <code>policies/helpers/offices.rego</code> (with a comment promising to load them &quot;in a future sprint&quot;); embargo hours are parsed from a naming convention on time-series-group identifiers; per-persona constraints are computed in the proxy&#39;s TypeScript. A Policy tab that lets a district administrator &quot;create policy and perform at least basic validation&quot; cannot be built against files that are mounted into the OPA container and require a container restart to change.</li>
+<li><strong>There is no CDA endpoint for the security time-series groups.</strong> The schema has them — <code>at_sec_ts_groups</code>, <code>at_sec_ts_group_masks</code>, <code>at_sec_allow</code>, and the <code>cwms_sec</code> procedures that manage them — and the <code>/timeseries/group</code> endpoints look like the right thing but are the data-categorization groups in <code>at_ts_group</code>. &quot;Assign a time series to a policy&quot; therefore begins in Java, not in React.</li>
+</ol>
+<p>The shortcomings are ordinary for a first increment, and they define the order of work.</p>
+<h3>B.2 Technical Exhibit 1, requirement by requirement</h3>
+<p><strong>Table B-1. Gap analysis against TE1.</strong> <em>Exists</em> = works today; <em>Partial</em> = data path exists, UI does not; <em>Missing</em> = requires new CDA endpoint(s) or a source-of-truth decision.</p>
+<table>
+<thead>
+<tr>
+<th>TE1 requirement</th>
+<th>State</th>
+<th>Where the change lands</th>
+<th>Increment</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Users tab</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>View all users with roles/permissions for their district</td>
+<td>Partial</td>
+<td>UI <code>UsersPage</code>, API <code>getUsers(office)</code> → CDA <code>GET /users?office=&amp;include-roles=true</code></td>
+<td>U1</td>
+</tr>
+<tr>
+<td>Assign roles to users for a specific district</td>
+<td>Partial</td>
+<td>UI assign control → mgmt API (new write route) → CDA <code>POST /user/{u}/roles/{office}</code> (exists)</td>
+<td>U1</td>
+</tr>
+<tr>
+<td>Show new users that do not yet have privileges</td>
+<td>Missing</td>
+<td>CDA <code>GET /users?unassigned=true&amp;office=</code> (new param), UI &quot;Unassigned&quot; filter</td>
+<td>U2 (§B.4)</td>
+</tr>
+<tr>
+<td>Organize users by assigned roles</td>
+<td>Partial</td>
+<td>UI grouping on the roles field the API already returns</td>
+<td>U1</td>
+</tr>
+<tr>
+<td>Cannot assign roles for districts they lack permission on</td>
+<td>Partial</td>
+<td>CDA enforces via <code>is_user_admin(office)</code>; UI limits the office selector to the admin&#39;s offices from <code>/user/profile</code></td>
+<td>U1</td>
+</tr>
+<tr>
+<td><strong>Roles tab</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Create roles specific to a district&#39;s data</td>
+<td>Missing</td>
+<td>CDA endpoint wrapping <code>cwms_sec.create_user_group</code> / <code>delete_user_group</code> (office-scoped); UI create form</td>
+<td>R1</td>
+</tr>
+<tr>
+<td>Assign policies to roles</td>
+<td>Missing</td>
+<td>Policy = time-series-group grant (<code>assign_ts_group_user_group</code>) — see Policy tab; UI role detail page lists grants</td>
+<td>R2</td>
+</tr>
+<tr>
+<td>Sort/filter roles by assigned policies</td>
+<td>Missing</td>
+<td>Follows R2 data</td>
+<td>R2</td>
+</tr>
+<tr>
+<td>View/edit/filter roles for a district</td>
+<td>Partial</td>
+<td><code>GET /roles</code> gains office scope (from <code>av_sec_user_groups</code>); UI filter</td>
+<td>R1</td>
+</tr>
+<tr>
+<td>Cannot edit roles for districts they lack permission on</td>
+<td>Partial</td>
+<td>CDA role check; UI scope</td>
+<td>R1</td>
+</tr>
+<tr>
+<td><strong>Policy tab</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>View policies associated with district data</td>
+<td>Partial</td>
+<td>Today: Rego viewer. After P1: list of security time-series groups with masks, grants, embargo for the district</td>
+<td>P1</td>
+</tr>
+<tr>
+<td>Assign a time series to a policy</td>
+<td>Missing</td>
+<td>CDA <code>/auth/ts-groups/{id}/masks</code> (new) → <code>assign_ts_masks_to_ts_group</code>; UI selector</td>
+<td>P1 (§B.3)</td>
+</tr>
+<tr>
+<td>Use time-series groups (or manage within the authorization system); restrictive or allowed</td>
+<td>Missing</td>
+<td>Security groups <em>are</em> the mechanism; allowed vs restrictive expressed as read/write/none grant per user group; UI toggle</td>
+<td>P1</td>
+</tr>
+<tr>
+<td>Assign by time-series parameters (LOC/parameter/version)</td>
+<td>Missing</td>
+<td>Mask pattern over the six-part identifier; UI mask builder with catalog preview</td>
+<td>P1 (§B.3)</td>
+</tr>
+<tr>
+<td>Assign embargo to a time series</td>
+<td>Missing</td>
+<td>Embargo column/table decision (Tab A, ADR); CDA field; UI hours picker</td>
+<td>P1 (§B.3)</td>
+</tr>
+<tr>
+<td>Create policy and perform basic validation</td>
+<td>Missing</td>
+<td>CDA validation (mask syntax, office ownership, group-name uniqueness) + UI inline validation</td>
+<td>P1</td>
+</tr>
+<tr>
+<td><strong>Cross-cutting</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Bulk manipulation of permissions (PWS Task 2)</td>
+<td>Missing</td>
+<td>Multi-select on Users and Policy tabs; batched CDA calls with per-row result</td>
+<td>U3</td>
+</tr>
+<tr>
+<td>Section 508 (Q&amp;A 49)</td>
+<td>Partial</td>
+<td>Keyboard paths, labels, focus order, error messaging; Storybook stories per component</td>
+<td>every increment</td>
+</tr>
+</tbody></table>
+<p>Increment order across the 180-day Task 2 period: <strong>U1 → P1 → U2 → R1 → R2 → U3</strong>, with documentation and training materials in the final increment. The PWS minimum successful product — an interface to manage access control and the access-control method working for time-series data — is reached at the end of P1.</p>
+<h3>B.3 One requirement in detail: assign a time series to a policy, scoped by location, parameter, and version, with an embargo</h3>
+<p>This is the requirement that touches every layer, so it is the one we take all the way down.</p>
+<p><strong>What a district administrator is doing.</strong> SWT&#39;s water manager wants raw stage data at a set of gauges to be readable by the district&#39;s cooperators only after 72 hours, while the district&#39;s own operators see it immediately. In CWMS terms: a security time-series group scoped to <code>*.Stage.Inst.*.0.Raw*</code> at those locations, granted <em>read</em> to the <code>external_cooperator</code> user group with a 72-hour embargo, and <em>read/write</em> to <code>dam_operator</code> with none.</p>
+<p><strong>Data model.</strong> We use the schema&#39;s own model rather than inventing a parallel one, because the database, VPD, and CDA&#39;s <code>UserDao</code> already understand it:</p>
+<ul>
+<li><code>at_sec_ts_groups(db_office_code, ts_group_code, ts_group_id, description)</code> — the policy, owned by an office.</li>
+<li><code>at_sec_ts_group_masks(db_office_code, ts_group_code, ts_group_mask)</code> — one or more LIKE patterns over the six-part time-series identifier <code>Location.Parameter.ParameterType.Interval.Duration.Version</code>; the location/parameter/version scoping TE1 asks for is a mask with wildcards in the other positions, normalized by <code>cwms_util</code> (<code>*</code> and <code>?</code> accepted).</li>
+<li><code>at_sec_allow(db_office_code, ts_group_code, user_group_code, privilege_bit)</code> — the grant: read (2), write (4), or none.</li>
+<li><code>at_sec_ts_group_embargo(ts_group_code, embargo_hours)</code> — reinstated from the previous effort&#39;s <code>001-ts-group-embargo.sql</code>, replacing the name-suffix convention (Tab A, ADR). <code>av_sec_ts_group_mask</code> and <code>av_sec_ts_privileges</code> are extended to carry the hours so that one view answers &quot;what may this user see, and from when&quot;.</li>
+</ul>
+<p><strong>Policy evaluation.</strong> The proxy already sends OPA <code>{user:{offices, roles, ts_privileges[]}, resource, action, context}</code>; <code>ts_privileges</code> gains <code>embargo_hours</code> from the view instead of from a regex, and <code>helpers/time_rules.rego</code> — which already contains <code>get_ts_group_embargo_hours</code> — reads it. The decision returned to CDA carries <code>ts_group_embargo</code> in the constraints block; <code>AuthorizationFilterHelper.getTsGroupEmbargoFilter</code> (present in PR #1461, never called) is wired into <code>TimeSeriesDaoImpl.getRequestedTimeSeries</code> beside the office filter, producing <code>date_time &lt; now − embargo_hours</code> for matching identifiers. Embargoed rows are absent, not zeroed; the response&#39;s paging cursor is computed after the filter so that clients see a consistent window. A Rego unit test file per persona asserts the allow, the deny, and the embargo boundary at ±1 second.</p>
+<p><strong>CDA endpoints (new, <code>api/auth/</code>, role <code>CWMS User Admins</code>).</strong></p>
+<table>
+<thead>
+<tr>
+<th>Method and path</th>
+<th>Backed by</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>GET /auth/ts-groups?office=</code></td>
+<td><code>av_sec_ts_group_mask</code>, <code>av_sec_ts_privileges</code></td>
+<td>List policies for a district with masks, grants, embargo</td>
+</tr>
+<tr>
+<td><code>POST /auth/ts-groups</code></td>
+<td><code>cwms_sec.create_ts_group</code></td>
+<td>Create a policy (validates name uniqueness within office)</td>
+</tr>
+<tr>
+<td><code>PATCH /auth/ts-groups/{id}</code></td>
+<td><code>change_ts_group_desc</code>, embargo table</td>
+<td>Edit description or embargo hours</td>
+</tr>
+<tr>
+<td><code>PUT /auth/ts-groups/{id}/masks</code></td>
+<td><code>assign_ts_masks_to_ts_group</code> (add/remove lists)</td>
+<td>Set the location/parameter/version patterns</td>
+</tr>
+<tr>
+<td><code>PUT /auth/ts-groups/{id}/user-groups/{ug}</code></td>
+<td><code>assign_ts_group_user_group</code> with <code>read</code>, <code>write</code>, or <code>none</code></td>
+<td>Grant or revoke</td>
+</tr>
+<tr>
+<td><code>GET /auth/ts-groups/{id}/preview?office=</code></td>
+<td><code>GET /catalog/TIMESERIES</code> with <code>like=</code></td>
+<td>Show which identifiers a mask currently matches</td>
+</tr>
+</tbody></table>
+<p>Each is a jOOQ call into <code>cwms_sec</code> in the style of the existing <code>CWMS_TS_PACKAGE</code> bindings, with DTOs under <code>data/dto/auth/</code> (reusing <code>TsGroupPrivilege</code> from PR #1461), OpenAPI annotations so the static-analysis test passes, and an <code>*IT</code> test class in the <code>DataApiTestIT</code> pattern that creates a group as a <code>CWMS User Admins</code> user, assigns masks and a grant, then reads time series as an <code>external_cooperator</code> and asserts that rows inside the embargo window are absent and rows outside it are present.</p>
+<p><strong>Management API.</strong> A <code>routes/ts-groups.ts</code> that forwards the six calls with zod validation (<code>middleware/validation.ts</code>), and the office-scoped <code>getUsers</code>/<code>getRoles</code> changes from increment U1. The management API stops flattening roles across offices.</p>
+<p><strong>React UI — the Policy tab flow.</strong></p>
+<ol>
+<li><em>Office selector</em> limited to the offices where <code>/user/profile</code> says the administrator holds <code>CWMS User Admins</code>. Everything on the page is scoped to it.</li>
+<li><em>Policy list</em> (replaces the Rego viewer as the default view; the viewer moves to an &quot;Advanced&quot; panel): name, description, mask count, grants, embargo, last modified.</li>
+<li><em>Create / edit policy</em> form: name, description, embargo hours (0 = none) — inline validation from the CDA response.</li>
+<li><em>Mask builder</em>: three fields — Location (with type-ahead from <code>/locations?office=</code>), Parameter (from <code>/parameters</code>), Version (free text) — and a generated pattern shown as text (<code>*.Stage.Inst.*.0.Raw*</code>) that an advanced user can edit directly. A <strong>preview</strong> panel calls the preview endpoint and lists the identifiers the pattern currently matches, with a count, so that an administrator sees the effect before saving. Multiple masks per policy.</li>
+<li><em>Grants</em>: a table of the district&#39;s user groups with a three-state control (none / read / read+write) per row; changes are batched into one <code>PUT</code> per changed row with per-row success or error shown in place.</li>
+<li><em>Bulk assignment</em> (increment U3): select several policies or several time series from the catalog and apply a grant or an embargo in one action, with a result table.</li>
+</ol>
+<p>Components are built with Storybook stories and React Testing Library tests; keyboard operation, visible focus, labelled controls, and error text tied to fields by <code>aria-describedby</code> are part of each component&#39;s definition of done (Q&amp;A 49 — HEC requires 508 conformance and uses Storybook; full pass on every rule is not required, but the interactive path must work without a mouse).</p>
+<p><strong>What &quot;working&quot; looks like at the end of P1.</strong> A district administrator with no command-line access creates the SWT policy above through the UI; a cooperator&#39;s <code>GET /cwms-data/timeseries?name=…&amp;office=SWT</code> returns data older than 72 hours and nothing newer; an operator&#39;s identical request returns everything; with the feature flag off, both requests behave exactly as before the change. That scenario is the acceptance test, and it is also the first walkthrough in the training materials.</p>
+<h3>B.4 A second requirement, in brief: show new users who have no privileges yet</h3>
+<p>With <code>cwms.dataapi.access.openid.create_users=true</code> — set in both compose files — a person&#39;s first Keycloak login creates an <code>at_sec_cwms_users</code> row with no <code>at_sec_users</code> membership. Those are the users TE1 wants surfaced, and today they are invisible: <code>UserDao.getAll</code> deliberately restricts its result to users who already have a group membership. The change is one query parameter and one join: <code>GET /users?office=&amp;unassigned=true</code> implemented as <code>at_sec_cwms_users</code> left-joined to <code>av_sec_users</code> on office, returning rows with no membership (or, optionally, no persona-group membership), with a matching <code>UsersControllerTestIT</code>. The management API forwards the parameter; the Users page gains an <strong>Unassigned</strong> filter beside the office selector and an <em>assign role</em> control on each row that calls the existing <code>POST /user/{user-name}/roles/{office-id}</code>. Registration can happen at any time, so the list is live, not a snapshot.</p>
+<h3>B.5 How the UI work progresses through the contract</h3>
+<p>Increment U1 (district scope restored, role assignment working) ships in the first month alongside the PR #1461 rebase, because it exercises only endpoints CDA already has. P1 follows once the embargo ADR is accepted, since its schema change is the one decision that cannot be reversed cheaply. U2 and R1 are small and fill review gaps. R2 and U3 complete the exhibit. Documentation — an administrator guide organized by the three tabs, and a short training deck with the SWT walkthrough — is the final Task 2 work unit, delivered in the repository&#39;s <code>docs/source/access-management/management/</code> tree where the previous effort left placeholders.</p>
