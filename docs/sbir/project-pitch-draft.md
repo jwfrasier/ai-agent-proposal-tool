@@ -1,6 +1,6 @@
 # NSF Project Pitch — draft v1 (2026-09-01)
 
-**Company:** Frasier Digital, LLC · Tomball, TX · UEI PY8MJ4JPHJ45 · SBC Control ID [pending Step 1]
+**Company:** Frasier Digital, LLC · Tomball, TX · UEI PY8MJ4JPHJ45 · SBC Control ID SBC_002681056
 **Working title:** A Verifiable Safety-Gating Architecture for AI Assistance in High-Stakes Public Reporting
 **Topic area (pick in form):** Artificial Intelligence — or Digital Health if the reviewer pool looks stronger there.
 

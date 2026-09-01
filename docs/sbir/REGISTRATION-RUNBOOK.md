@@ -23,6 +23,7 @@ lives at sbir.gov and NSF at research.gov.)
 | Website | frasierdigital.com |
 | POC / authorized official | Joseph Frasier, Founder and Managing Member · joseph@frasierdigital.com · (850) 356-2382 |
 | Prior SBIR awards | None (answer: 0 Phase I, 0 Phase II) |
+| **SBC Control ID** | **SBC_002681056** (issued 2026-09-01) |
 | Majority VC/hedge/PE owned? | No |
 | NAICS (primary) | 541511 |
 
@@ -31,8 +32,7 @@ lives at sbir.gov and NSF at research.gov.)
 1. sbir.gov → "Registration" (tab open in your browser) → create account (Login.gov — you have one).
 2. Register the firm with the block above. The eligibility questions are the ownership/size ones —
    all answered above.
-3. You receive an **SBC Control ID** (format `SBC_123456789`) and a registry PDF.
-   **→ Save the ID here in this file and tell me — every agency proposal asks for it.**
+3. ✅ DONE 9/1/2026 — **SBC Control ID: SBC_002681056**. Download the registry PDF from your sbir.gov account and keep it with the company records.
 
 ## Step 2 — Research.gov (NSF) account
 
