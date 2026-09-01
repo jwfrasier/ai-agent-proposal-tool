@@ -8,7 +8,7 @@
 **Attachments (separate native files — NO zip; ≤25 MB per email, Q&A 4):**
 1. Frasier-Digital-CWMS-Cover-Letter.pdf (signed)
 2. Frasier-Digital-CWMS-Vol-I-Technical.pdf
-3. Frasier-Digital-CWMS-Vol-II-Past-Performance.pdf (includes completed USACE PPQ)
+3. Frasier-Digital-CWMS-Vol-II-Past-Performance.pdf (PPQ was submitted to you directly by the Region 4 reference; reference copy of Blocks 1–4 included)
 4. Frasier-Digital-CWMS-Vol-III-Price.pdf
 5. Vol-III-Price-FrasierDigital.xlsx
 
@@ -25,7 +25,7 @@ Per the Government's answers to offeror questions, each volume is attached as a 
 
 1. **Signed cover letter** — our offer on company letterhead with entity information, acknowledgment of Amendments 001 and 003, agreement to all terms, and confirmation that our SAM representations and certifications are current.
 2. **Volume I — Technical** (Factors 1 and 2), including key personnel resumes and letters of commitment.
-3. **Volume II — Past Performance** (Factor 3), with the completed USACE Past Performance Questionnaire from our Region 4 Education Service Center reference.
+3. **Volume II — Past Performance** (Factor 3). The completed Past Performance Questionnaire for our Region 4 Education Service Center reference was emailed to you directly by the client's technical lead in accordance with paragraph 2.2.1.2.5 of the submission instructions; a reference copy of the contractor-completed blocks accompanies the volume.
 4. **Volume III — Price** (Factor 4) — the binding PDF and the supporting Excel workbook covering all eight CLINs.
 
 We would appreciate an acknowledgment of receipt at your convenience. Thank you for the thorough answers to offeror questions; they shaped this proposal.

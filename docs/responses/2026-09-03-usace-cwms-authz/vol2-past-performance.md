@@ -2,7 +2,7 @@
 
 ## Summary
 
-Frasier Digital, LLC submits one recent and relevant project in accordance with instr. 2.2.1.1 (minimum of one, maximum of three): the Region 4 Education Service Center certification and training platform, a ground-up, role-based web platform with an authentication and access-control backend, REST services, and third-party API integration, delivered and operated for thousands of users between July 2024 and October 2025. The completed USACE Past Performance Questionnaire (Form PPQ-0) from the customer's technical lead accompanies this volume (instr. 2.2.1.2.1). No subcontractors or teaming partners are proposed, so no subcontractor past performance is submitted (instr. 2.2.3). Frasier Digital has no CPARS record; the questionnaire is provided in its place, as instr. 2.2.1.2.1 and the Government's Q&A answer 24 permit.
+Frasier Digital, LLC submits one recent and relevant project in accordance with instr. 2.2.1.1 (minimum of one, maximum of three): the Region 4 Education Service Center certification and training platform, a ground-up, role-based web platform with an authentication and access-control backend, REST services, and third-party API integration, delivered and operated for thousands of users between July 2024 and October 2025. The USACE Past Performance Questionnaire (Form PPQ-0) for this project was completed by the customer's technical lead and **submitted by him directly to the Contracting Officer and Contract Specialist at David.A.Kaplan@usace.army.mil and quan.nguyen@usace.army.mil**, as instr. 2.2.1.2.5 permits; a copy of the contractor-completed Blocks 1–4, as furnished to the client, follows this volume for reference. No subcontractors or teaming partners are proposed, so no subcontractor past performance is submitted (instr. 2.2.3). Frasier Digital has no CPARS record; the questionnaire is provided in its place, as instr. 2.2.1.2.1 and the Government's Q&A answer 24 permit.
 
 ## Project 1 — Region 4 Education Service Center, Certification Training and Completion-Tracking Platform
 
@@ -38,7 +38,7 @@ Frasier Digital, LLC submits one recent and relevant project in accordance with 
 
 ### Quality of past performance (instr. 2.2.1.2)
 
-The completed Form PPQ-0 from the Region 4 technical lead is attached to this volume. [FLAG: confirm receipt from Ethan; if returned directly to USACE instead, state that here and include our pre-filled copy.]
+The Form PPQ-0 for the project above was completed by the Region 4 technical lead and submitted directly to the Contracting Officer (David.A.Kaplan@usace.army.mil) and Contract Specialist (quan.nguyen@usace.army.mil) from his Region 4 account, in accordance with instr. 2.2.1.2.5, in advance of the proposal due date. A reference copy of Blocks 1–4 as furnished to the client follows this volume. Should the Government not locate the client's submission, the reference is available to re-send: see the point-of-contact information in the project data sheet.
 
 ## Corrective actions (instr. 2.2.1.2.4)
 

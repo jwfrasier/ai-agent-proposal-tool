@@ -135,9 +135,12 @@ const pageCount = pdf => (fs.readFileSync(pdf).toString('latin1').match(/\/Type\
   // ---------- Vol II ----------
   const v2 = path.join(BUILD, 'vol2.pdf');
   await render('vol2', marked.parse(prep(read('vol2-past-performance.md'))), v2, 'Volume II — Past Performance');
-  const ppq = path.join(OUT, 'PPQ-USACE-FrasierDigital-Region4-COMPLETED.pdf');
-  const v2inputs = [v2].concat(fs.existsSync(ppq) ? [ppq] : []);
-  if (!fs.existsSync(ppq)) console.log('!! completed PPQ not present — Vol II rendered without it (out/PPQ-USACE-FrasierDigital-Region4-COMPLETED.pdf)');
+  // Ethan submitted the completed PPQ directly to Kaplan/Nguyen (instr. 2.2.1.2.5, confirmed 9/1);
+  // Vol II carries our pre-filled Blocks 1-4 as the reference copy (page 1 only would suffice, full copy attached).
+  const ppqCompleted = path.join(OUT, 'PPQ-USACE-FrasierDigital-Region4-COMPLETED.pdf');
+  const ppq = fs.existsSync(ppqCompleted) ? ppqCompleted : path.join(OUT, 'PPQ-USACE-FrasierDigital-Region4-PREFILLED.pdf');
+  const v2inputs = [v2, ppq];
+  console.log('Vol II PPQ copy:', path.basename(ppq));
   console.log(execFileSync('swift', [MERGE, path.join(OUT, 'Frasier-Digital-CWMS-Vol-II-Past-Performance.pdf')].concat(v2inputs), { encoding: 'utf8' }).trim());
   console.log(`VOL II: ${pageCount(v2)} / 25 pages (PPQ excluded)`);
 

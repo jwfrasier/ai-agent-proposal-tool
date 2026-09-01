@@ -18,7 +18,7 @@ Checked against Proposal Submission Instructions (8/26 revision), Amendment 003 
 | LOE reconciles: Table A-2 = F2 Table A-3 = Vol III = xlsx | house rule | ⏳ A-2 = Vol III (both 1,660 / 2,770 h); Table A-3 hrs/week is an approximation — verify sums |
 | Resumes + LOCs for the 5 key roles (4 individuals, Zach dual per Q&A 9) | instr. 2.1.2; 3.2.1.2.2 | ⏳ resumes drafted with [FLAG]s; **LOCs unsigned** — due Mon 8/31 |
 | "Direct use" test on each resume | Q&A 8 | ⏳ needs replies from Zach/Scott/Randy (Efrain removed 9/1) |
-| Vol II ≤ 25 pp; min 1 ref; PPQ attached (excluded) | instr. 2.2; Q&A 27 | ⏳ 4 pp; **PPQ pending from Ethan** — must be completed before his Region 4 email closes 8/31 |
+| Vol II ≤ 25 pp; min 1 ref; PPQ attached (excluded) | instr. 2.2; Q&A 27 | ✅ 3 pp + PPQ reference copy; client submitted completed PPQ DIRECTLY to Kaplan/Nguyen (2.2.1.2.5, confirmed 9/1) — Vol II states this |
 | PPQ figure matches SSS/NOAA PPQs ($400k, Jul 2024–Oct 2025) | consistency map | ✅ pre-filled to match |
 | Vol III: per-task subtotals, grand total incl. options, rates, LOE per category per task, Excel separate | instr. 2.3.1; Q&A 5, 24 | ✅ $217,520 base / $360,140 total; xlsx formula-driven |
 | Cover letter: signed, CAGE/UEI/TIN, reps & certs statement, teaming, amendments acknowledged, no exceptions | CSS Sec. V; Q&A 3 | ⏳ drafted; **Joseph signs 9/2**; confirm 90-day validity |

@@ -41,7 +41,7 @@ Frasier Digital, LLC submits the enclosed proposal in response to combined synop
 **Enclosures** (separate native files per instr. 1.2 and Q&A 4):
 
 1. Volume I — Technical (Factors 1 and 2), including key personnel resumes and letters of commitment — PDF
-2. Volume II — Past Performance (Factor 3), with the completed USACE Past Performance Questionnaire — PDF
+2. Volume II — Past Performance (Factor 3) — PDF. The completed Past Performance Questionnaire for our Region 4 Education Service Center reference was submitted directly to you by the client per instr. 2.2.1.2.5; a reference copy of the contractor-completed blocks accompanies the volume
 3. Volume III — Price (Factor 4) — PDF (binding) and Excel workbook
 
 We appreciate the Government's thorough answers to offeror questions, which shaped this proposal, and we welcome any request for clarification.
