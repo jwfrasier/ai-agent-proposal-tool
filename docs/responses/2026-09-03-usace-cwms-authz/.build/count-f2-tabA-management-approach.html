@@ -38,7 +38,7 @@
 </table><p>Authority runs one way: every team member reports to the Project Manager, who is the only person who commits the company to the Government. Communication runs on one shared channel visible to the whole team, so that a question asked of any engineer is seen by the PM the same day. Technical direction from HEC arrives through pull-request review, GitHub issues, and the biweekly meeting; we do not create side channels that the Government cannot see.</p>
 <h3>A.2 Staffing plan and simultaneity</h3>
 <p>The team is named, confirmed, and sized against the level of effort in Factor 1, Table A-2, which Volume III prices. Table A-3 shows how the base-period tasks run concurrently across the 360-day period of performance without any task starving another: Task 2 and Task 3a run in parallel through month six on different people (the UI and CDA developers on Task 2; the architect on Task 3a), Task 5a runs at a steady fractional rate from the first approved issue, and Task 1a is a fixed cadence.</p>
-<p><strong>Table A-3. Base-period staffing by task and quarter (average hours per week).</strong> <span class="flag">[FLAG: reconcile with Vol III]</span></p>
+<p><strong>Table A-3. Base-period staffing by task and quarter (average hours per week; reconciles with Factor 1, Table A-2 base hours).</strong></p>
 <table>
 <thead>
 <tr>
@@ -60,18 +60,18 @@
 </tr>
 <tr>
 <td>Scott Carpenter (Architect)</td>
-<td>6</td>
 <td>5</td>
+<td>4</td>
 <td>1</td>
-<td>1</td>
+<td>—</td>
 <td>1a, 3a</td>
 </tr>
 <tr>
 <td>Randy Chong (Sr Java)</td>
 <td>8</td>
 <td>7</td>
-<td>5</td>
-<td>5</td>
+<td>6</td>
+<td>6</td>
 <td>1a, 2, 5a</td>
 </tr>
 <tr>
@@ -100,16 +100,16 @@
 </tr>
 <tr>
 <td><strong>Team total</strong></td>
-<td><strong>42</strong></td>
-<td><strong>40</strong></td>
-<td><strong>26</strong></td>
+<td><strong>41</strong></td>
+<td><strong>39</strong></td>
+<td><strong>27</strong></td>
 <td><strong>22</strong></td>
 <td></td>
 </tr>
 </tbody></table>
 <p>Task 5a&#39;s weekly volume is held under the 20-hour planning figure the PWS suggests and is tuned in each biweekly meeting to HEC&#39;s review capacity (PWS Rate of Work; Q&amp;A 47). Option tasks add hours without adding people: Task 3b reuses the architect once 3a is stable; Task 4 uses the architect and the Java developer with the associate engineers running sweeps; Task 5b continues the 5a pattern.</p>
 <p><strong>Why this staffing does not degrade under concurrency.</strong> Three properties, each structural rather than aspirational: (1) the two build streams — UI/CDA (Task 2) and CWBI (Task 3a) — have different owners and different repositories, so they contend only for HEC&#39;s review time, which we manage by submitting small units; (2) maintenance has a dedicated owner whose time is not borrowed from the build streams, and a senior engineer behind him for major fixes; (3) the Project Manager&#39;s hours are a floor, not an average — the meeting cadence, note delivery, and Task 5 approvals are fixed obligations and are scheduled first.</p>
-<p><strong>Capacity disclosure.</strong> Frasier Digital has proposals under evaluation with other agencies whose periods of performance could overlap this one. We size and price every bid against total committed capacity: the hours above are net of every potential concurrent award, the named delivery pod exists to absorb surge, and the Project Manager&#39;s commitment to this contract is protected as a floor. <span class="flag">[FLAG: Joseph — confirm wording against current award status at render; DoWEA is cancelled, SSS RS and NOAA remain under evaluation, VAERS submits the same week.]</span> We state this proactively because fixed-price, deliverable-based work only functions when capacity claims are honest.</p>
+<p><strong>Capacity disclosure.</strong> Frasier Digital has proposals under evaluation with other agencies whose periods of performance could overlap this one. We size and price every bid against total committed capacity: the hours above are net of every potential concurrent award, the named delivery pod exists to absorb surge, and the Project Manager&#39;s commitment to this contract is protected as a floor. We state this proactively because fixed-price, deliverable-based work only functions when capacity claims are honest.</p>
 <h3>A.3 Responsiveness, customer service, and timeliness</h3>
 <p>The PWS sets clocks, and we have built our operating rhythm on them rather than on our own:</p>
 <table>
@@ -208,9 +208,9 @@
 <tr>
 <td>Fixed-IP egress for bastion access not ready at award (Q&amp;A 13)</td>
 <td>Low / Low</td>
-<td>Provisioned before award <span class="flag">[FLAG: Joseph]</span></td>
+<td>Dedicated static-IP egress provisioned at award; delivering the address to CWBI is a week-1 transition-in item</td>
 <td>Joseph</td>
 </tr>
 </tbody></table>
 <p><strong>Quality.</strong> Definition of done is an accepted work unit. Every code change carries tests in the PWS&#39;s preferred locations; OWASP ZAP runs in CI; STIG self-checks precede every Dev deployment; documentation is a work unit, not an afterthought — and the PWS&#39;s own list of what counts as documentation (a manual test case anyone can perform, Javadocs, an automated test, formal project documentation) is the checklist in our PR template.</p>
-<p><strong>SAM registration and representations.</strong> Frasier Digital, LLC is registered and active in SAM.gov (UEI PY8MJ4JPHJ45, CAGE 213L8; registration expires 27 May 2027), and its Representations and Certifications in SAM are current (RFO 4.203-1). No subcontractors or teaming partners are proposed; all personnel named in this proposal perform as members of the Frasier Digital team. <span class="flag">[FLAG: Joseph — confirm the &quot;no subcontractors&quot; characterization of the 1099 team is the wording you want.]</span></p>
+<p><strong>SAM registration and representations.</strong> Frasier Digital, LLC is registered and active in SAM.gov (UEI PY8MJ4JPHJ45, CAGE 213L8; registration expires 27 May 2027), and its Representations and Certifications in SAM are current (RFO 4.203-1). No subcontractors or teaming partners are proposed; all personnel named in this proposal perform as members of the Frasier Digital team.</p>

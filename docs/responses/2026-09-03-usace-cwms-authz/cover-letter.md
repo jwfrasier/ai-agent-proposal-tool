@@ -2,7 +2,7 @@
 
 20915 Mystic Stone Dr · Tomball, TX 77375 · (850) 356-2382 · joseph@frasierdigital.com · frasierdigital.com
 
-[FLAG: date — day of send]
+September 2, 2026
 
 Ms. Quan Nguyen, Contract Specialist
 Mr. David A. Kaplan, Contracting Officer
@@ -16,7 +16,7 @@ Ms. Nguyen and Mr. Kaplan,
 
 Frasier Digital, LLC submits the enclosed proposal in response to combined synopsis/solicitation PANHEC-26-P-0000-026407 for CWMS Database Authorization Maintenance and Improvements, as amended. This letter constitutes our signed and dated offer on company letterhead in accordance with Section V of the solicitation.
 
-**Offer.** We offer to perform all tasks in the Performance Work Statement on a firm-fixed-price basis at the per-task prices in Volume III, for a grand total of **$360,140 for the base tasks and all options** (base tasks $217,520). Unit and extended prices, hourly rates by labor category, and the level of effort per labor category per task are in Volume III and the accompanying Excel workbook. Prices are firm for 90 calendar days from the proposal due date. No discount terms are offered beyond the stated prices. [FLAG: Joseph — confirm validity period]
+**Offer.** We offer to perform all tasks in the Performance Work Statement on a firm-fixed-price basis at the per-task prices in Volume III, for a grand total of **$360,140 for the base tasks and all options** (base tasks $217,520). Unit and extended prices, hourly rates by labor category, and the level of effort per labor category per task are in Volume III and the accompanying Excel workbook. Prices are firm for 90 calendar days from the proposal due date. No discount terms are offered beyond the stated prices.
 
 **Acknowledgment of amendments.** Frasier Digital acknowledges receipt of all amendments to the solicitation, including Amendment 001 (18 August 2026) and Amendment 003 (26 August 2026) with the Government's answers to offeror questions, and this proposal reflects the solicitation as amended.
 

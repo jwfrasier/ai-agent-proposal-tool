@@ -55,7 +55,7 @@ The minimum successful product the PWS defines — an interface to manage access
 
 **Three interfaces, three cadences.** With HEC's Technical POC: pull-request review at the PWS ladder, the biweekly meeting, and a shared channel for same-day questions; we submit small units and we do not queue more than HEC can review in a week. With the CWBI-PMO: Platform1 Jira issues for every infrastructure change, written to their template with the standard-app diagram attached; response to scan results and STIG-state requests inside the TE2 timelines; ISSO/ISSM artifact requests answered from the repository's security folder. With other contractors and USACE staff working in the same files: the Government's rule is that the first approved merge wins and the other party resolves the conflict (Q&A 46) — we rebase daily on `develop` to keep our side of that small, and anything beyond a source conflict goes to the next meeting or, if it cannot wait, to the Technical POC and COR the same day (PWS Coordination). Design-bearing disagreements become ADRs that all parties can comment on before acceptance.
 
-**Onboarding path (Q&A 11, 13, 19).** Week 1: DD 7798 and DD 2875 for every named person, Public Trust initiation, the Platform1 access request, and delivery of Frasier Digital's fixed egress IP address to CWBI for bastion-host access [FLAG: Joseph — confirm the static IP / fixed-egress arrangement before render]. After kickoff: GitHub Enterprise repository access, expected within a day or two. Platform1: a week or more; bastion access: up to a month. None of that gates the first month of work: the CDA, access-management, and database repositories are public, the docker-compose stacks run on a laptop with the `gvenzl/oracle-free` image (Q&A 18), read access to the CDK is available immediately (Q&A 19), and the PR #1461 rebase, the ADRs, and the first UI increments are all local work. Our transition-in schedule (Factor 2, Tab C) shows the two tracks side by side.
+**Onboarding path (Q&A 11, 13, 19).** Week 1: DD 7798 and DD 2875 for every named person, Public Trust initiation, the Platform1 access request, and delivery of Frasier Digital's fixed egress IP address to CWBI for bastion-host access (a dedicated static-IP egress provisioned for this contract). After kickoff: GitHub Enterprise repository access, expected within a day or two. Platform1: a week or more; bastion access: up to a month. None of that gates the first month of work: the CDA, access-management, and database repositories are public, the docker-compose stacks run on a laptop with the `gvenzl/oracle-free` image (Q&A 18), read access to the CDK is available immediately (Q&A 19), and the PR #1461 rebase, the ADRs, and the first UI increments are all local work. Our transition-in schedule (Factor 2, Tab C) shows the two tracks side by side.
 
 ### A.4 The knowledge areas the Government will evaluate (instr. 3.2.1.1.1)
 
@@ -77,7 +77,7 @@ The minimum successful product the PWS defines — an interface to manage access
 
 Hours below reconcile exactly with Volume III and with the staffing plan in Factor 2, Tab A. No price information is included in this volume.
 
-**Table A-2. Level of effort by task and role (hours).** [FLAG: reconcile with Vol III model before render]
+**Table A-2. Level of effort by task and role (hours).**
 
 | Task | PM | Sr Oracle DBA | Sys Eng / Architect | Sr Forms (React) Dev | Sr Java Dev | Associate Engineers | **Total** |
 |---|---|---|---|---|---|---|---|

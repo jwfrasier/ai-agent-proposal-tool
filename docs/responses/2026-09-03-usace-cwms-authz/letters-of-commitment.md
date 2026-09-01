@@ -9,7 +9,7 @@
 Solicitation PANHEC-26-P-0000-026407 — CWMS Database Authorization Maintenance and Improvements
 U.S. Army Corps of Engineers, Institute for Water Resources, Hydrologic Engineering Center
 
-Date: [FLAG: date]
+Date: ____________________
 
 I, **Joseph Frasier**, Founder and Managing Member of Frasier Digital, LLC, confirm that I will serve as **Project Manager** for the above solicitation and will be available to perform in that role for the full period of performance (360 calendar days from award, plus any exercised option tasks) at the level of effort proposed, if Frasier Digital, LLC is awarded the contract.
 
@@ -26,7 +26,7 @@ Signature: ______________________________ · Joseph Frasier · (850) 356-2382 ·
 Solicitation PANHEC-26-P-0000-026407 — CWMS Database Authorization Maintenance and Improvements
 U.S. Army Corps of Engineers, Institute for Water Resources, Hydrologic Engineering Center
 
-Date: [FLAG: date]
+Date: ____________________
 
 I, **Scott A. Carpenter**, confirm that I have agreed to serve as **System Engineer / Architect** on the Frasier Digital, LLC team for the above solicitation, and that I will be available to perform in that role for the full period of performance (360 calendar days from award, plus any exercised option tasks) at the level of effort proposed by Frasier Digital, LLC, if Frasier Digital, LLC is awarded the contract.
 
@@ -45,7 +45,7 @@ Acknowledged for Frasier Digital, LLC: ______________________________ Joseph Fra
 Solicitation PANHEC-26-P-0000-026407 — CWMS Database Authorization Maintenance and Improvements
 U.S. Army Corps of Engineers, Institute for Water Resources, Hydrologic Engineering Center
 
-Date: [FLAG: date]
+Date: ____________________
 
 I, **Zachary Antosko**, confirm that I have agreed to serve as **Senior Forms Developer** (React/TypeScript web forms) **and Senior Oracle DBA** (a dual key-personnel role per the Government’s answer to Question 9) on the Frasier Digital, LLC team for the above solicitation, and that I will be available to perform in that role for the full period of performance (360 calendar days from award, plus any exercised option tasks) at the level of effort proposed by Frasier Digital, LLC, if Frasier Digital, LLC is awarded the contract.
 
@@ -64,7 +64,7 @@ Acknowledged for Frasier Digital, LLC: ______________________________ Joseph Fra
 Solicitation PANHEC-26-P-0000-026407 — CWMS Database Authorization Maintenance and Improvements
 U.S. Army Corps of Engineers, Institute for Water Resources, Hydrologic Engineering Center
 
-Date: [FLAG: date]
+Date: ____________________
 
 I, **Randy Chong**, confirm that I have agreed to serve as **Senior Java Developer** (the solicitation's "Senior APEX or Java Developer") on the Frasier Digital, LLC team for the above solicitation, and that I will be available to perform in that role for the full period of performance (360 calendar days from award, plus any exercised option tasks) at the level of effort proposed by Frasier Digital, LLC, if Frasier Digital, LLC is awarded the contract.
 

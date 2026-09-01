@@ -57,7 +57,7 @@ Blended rate across all tasks: $130.01 per hour.
 3. **Place of performance and travel.** The contractor's facility; no travel is required or priced (Q&A 12, 43, 51). Any Security Control Assessment participation is virtual.
 4. **Other direct costs.** None. Development uses the public repositories and docker-compose stacks on contractor equipment (Q&A 18); Government-furnished access to CWBI, GitHub Enterprise, Platform1, Confluence, and Jira; HEC's CloudStack environment at no cost for load testing (Q&A 39). All software used is open source. No CUI or CDI is handled (Q&A 14); no NIST SP 800-171 assessment or CMMC certification is required (Q&A 15, 17).
 5. **Government review capacity.** Weekly submission volume is planned against HEC's stated review capacity (PWS Rate of Work; Q&A 47); hours above include the contractor's response to review comments within five days.
-6. **Price validity.** Prices are firm for 90 calendar days from the proposal due date. [FLAG: Joseph — confirm 90 days]
+6. **Price validity.** Prices are firm for 90 calendar days from the proposal due date.
 7. **Representations.** Frasier Digital, LLC is a small disadvantaged business, registered and active in SAM.gov (UEI PY8MJ4JPHJ45, CAGE 213L8, TIN 41-3497002), with current Representations and Certifications. No subcontractors are proposed.
 
 ## Reasonableness

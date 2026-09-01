@@ -115,7 +115,7 @@
 <p><strong>Work-unit discipline across every task.</strong> Pull requests are sized to HEC&#39;s review ladder — up to three files or 200 lines for a three-day review; up to ten files or 500 lines for five; anything larger for ten — and we prefer the first rung. Tests, or proof that existing tests cover the change, accompany every code change; new tools and helpers for loading test data follow the existing <code>defaultload.txt</code>/<code>timeseries.csv</code> fixture pattern; and the test-location preference order in the PWS (JUnit 5 unit tests, the JUnit 5 integration suite, anything repeatable locally, then anything repeatable on the build server) is the order we use.</p>
 <h3>A.3 Working with HEC, the CWBI-PMO, and other contractors</h3>
 <p><strong>Three interfaces, three cadences.</strong> With HEC&#39;s Technical POC: pull-request review at the PWS ladder, the biweekly meeting, and a shared channel for same-day questions; we submit small units and we do not queue more than HEC can review in a week. With the CWBI-PMO: Platform1 Jira issues for every infrastructure change, written to their template with the standard-app diagram attached; response to scan results and STIG-state requests inside the TE2 timelines; ISSO/ISSM artifact requests answered from the repository&#39;s security folder. With other contractors and USACE staff working in the same files: the Government&#39;s rule is that the first approved merge wins and the other party resolves the conflict (Q&amp;A 46) — we rebase daily on <code>develop</code> to keep our side of that small, and anything beyond a source conflict goes to the next meeting or, if it cannot wait, to the Technical POC and COR the same day (PWS Coordination). Design-bearing disagreements become ADRs that all parties can comment on before acceptance.</p>
-<p><strong>Onboarding path (Q&amp;A 11, 13, 19).</strong> Week 1: DD 7798 and DD 2875 for every named person, Public Trust initiation, the Platform1 access request, and delivery of Frasier Digital&#39;s fixed egress IP address to CWBI for bastion-host access <span class="flag">[FLAG: Joseph — confirm the static IP / fixed-egress arrangement before render]</span>. After kickoff: GitHub Enterprise repository access, expected within a day or two. Platform1: a week or more; bastion access: up to a month. None of that gates the first month of work: the CDA, access-management, and database repositories are public, the docker-compose stacks run on a laptop with the <code>gvenzl/oracle-free</code> image (Q&amp;A 18), read access to the CDK is available immediately (Q&amp;A 19), and the PR #1461 rebase, the ADRs, and the first UI increments are all local work. Our transition-in schedule (Factor 2, Tab C) shows the two tracks side by side.</p>
+<p><strong>Onboarding path (Q&amp;A 11, 13, 19).</strong> Week 1: DD 7798 and DD 2875 for every named person, Public Trust initiation, the Platform1 access request, and delivery of Frasier Digital&#39;s fixed egress IP address to CWBI for bastion-host access (a dedicated static-IP egress provisioned for this contract). After kickoff: GitHub Enterprise repository access, expected within a day or two. Platform1: a week or more; bastion access: up to a month. None of that gates the first month of work: the CDA, access-management, and database repositories are public, the docker-compose stacks run on a laptop with the <code>gvenzl/oracle-free</code> image (Q&amp;A 18), read access to the CDK is available immediately (Q&amp;A 19), and the PR #1461 rebase, the ADRs, and the first UI increments are all local work. Our transition-in schedule (Factor 2, Tab C) shows the two tracks side by side.</p>
 <h3>A.4 The knowledge areas the Government will evaluate (instr. 3.2.1.1.1)</h3>
 <p><strong>Full life cycle and agile practice.</strong> Two-week iterations aligned to the meeting cadence; a definition of done that equals an accepted work unit; every increment behind a feature flag until HEC turns it on; GitHub Actions as the build server — CDA&#39;s <code>build.yml</code> already runs the four-schema matrix, the integration tests, the OpenAPI static test, and the nightly ECR push through OIDC, so our CI additions (Rego tests, the k6 harness, the proxy&#39;s vitest suite) are steps in that workflow, not a parallel system. The TeamCity migration the PWS mentions is complete; only naming vestiges remain and we will remove them as we touch those files.</p>
 <p><strong>Database administration.</strong> CWMS is Oracle today and will migrate data to storage matched to its use (PWS 1.2); the authorization work must not deepen the Oracle dependency. Our Senior Oracle DBA owns the schema changes the design needs (the embargo table, the mask view extension, any <code>cwms_sec</code> procedure change), reviews the VPD interaction so that CDA-level filtering never contradicts a database-level policy, and keeps the integration-test images (<code>schema_installer:latest-dev</code>, <code>database-ready-ora-23.5</code>) current with the schema PRs in cwms-database. RDS-specific behaviour in GovCloud — parameter groups, the block-storage throttling the Government has observed under bursty writes (Q&amp;A 38) — is part of the Tab C baseline.</p>
@@ -126,7 +126,7 @@
 <p><strong>CWBI processes and requirements.</strong> Platform1 change requests; hardened images; health endpoints; the standard-app layout (Fargate service, internal ALB, RDS, Keycloak, WAF in front); secrets in Secrets Manager with ARNs in SSM; a minimal PMP with the standard-app diagram for our module (Q&amp;A 48, 50); API registration in the CW Data Catalog (TE2 Metadata); no CUI or CDI in the work (Q&amp;A 14).</p>
 <h3>A.5 Proposed level of effort per task (instr. 2.1.1)</h3>
 <p>Hours below reconcile exactly with Volume III and with the staffing plan in Factor 2, Tab A. No price information is included in this volume.</p>
-<p><strong>Table A-2. Level of effort by task and role (hours).</strong> <span class="flag">[FLAG: reconcile with Vol III model before render]</span></p>
+<p><strong>Table A-2. Level of effort by task and role (hours).</strong></p>
 <table>
 <thead>
 <tr>
@@ -588,7 +588,7 @@
 </table><p>Authority runs one way: every team member reports to the Project Manager, who is the only person who commits the company to the Government. Communication runs on one shared channel visible to the whole team, so that a question asked of any engineer is seen by the PM the same day. Technical direction from HEC arrives through pull-request review, GitHub issues, and the biweekly meeting; we do not create side channels that the Government cannot see.</p>
 <h3>A.2 Staffing plan and simultaneity</h3>
 <p>The team is named, confirmed, and sized against the level of effort in Factor 1, Table A-2, which Volume III prices. Table A-3 shows how the base-period tasks run concurrently across the 360-day period of performance without any task starving another: Task 2 and Task 3a run in parallel through month six on different people (the UI and CDA developers on Task 2; the architect on Task 3a), Task 5a runs at a steady fractional rate from the first approved issue, and Task 1a is a fixed cadence.</p>
-<p><strong>Table A-3. Base-period staffing by task and quarter (average hours per week).</strong> <span class="flag">[FLAG: reconcile with Vol III]</span></p>
+<p><strong>Table A-3. Base-period staffing by task and quarter (average hours per week; reconciles with Factor 1, Table A-2 base hours).</strong></p>
 <table>
 <thead>
 <tr>
@@ -610,18 +610,18 @@
 </tr>
 <tr>
 <td>Scott Carpenter (Architect)</td>
-<td>6</td>
 <td>5</td>
+<td>4</td>
 <td>1</td>
-<td>1</td>
+<td>—</td>
 <td>1a, 3a</td>
 </tr>
 <tr>
 <td>Randy Chong (Sr Java)</td>
 <td>8</td>
 <td>7</td>
-<td>5</td>
-<td>5</td>
+<td>6</td>
+<td>6</td>
 <td>1a, 2, 5a</td>
 </tr>
 <tr>
@@ -650,16 +650,16 @@
 </tr>
 <tr>
 <td><strong>Team total</strong></td>
-<td><strong>42</strong></td>
-<td><strong>40</strong></td>
-<td><strong>26</strong></td>
+<td><strong>41</strong></td>
+<td><strong>39</strong></td>
+<td><strong>27</strong></td>
 <td><strong>22</strong></td>
 <td></td>
 </tr>
 </tbody></table>
 <p>Task 5a&#39;s weekly volume is held under the 20-hour planning figure the PWS suggests and is tuned in each biweekly meeting to HEC&#39;s review capacity (PWS Rate of Work; Q&amp;A 47). Option tasks add hours without adding people: Task 3b reuses the architect once 3a is stable; Task 4 uses the architect and the Java developer with the associate engineers running sweeps; Task 5b continues the 5a pattern.</p>
 <p><strong>Why this staffing does not degrade under concurrency.</strong> Three properties, each structural rather than aspirational: (1) the two build streams — UI/CDA (Task 2) and CWBI (Task 3a) — have different owners and different repositories, so they contend only for HEC&#39;s review time, which we manage by submitting small units; (2) maintenance has a dedicated owner whose time is not borrowed from the build streams, and a senior engineer behind him for major fixes; (3) the Project Manager&#39;s hours are a floor, not an average — the meeting cadence, note delivery, and Task 5 approvals are fixed obligations and are scheduled first.</p>
-<p><strong>Capacity disclosure.</strong> Frasier Digital has proposals under evaluation with other agencies whose periods of performance could overlap this one. We size and price every bid against total committed capacity: the hours above are net of every potential concurrent award, the named delivery pod exists to absorb surge, and the Project Manager&#39;s commitment to this contract is protected as a floor. <span class="flag">[FLAG: Joseph — confirm wording against current award status at render; DoWEA is cancelled, SSS RS and NOAA remain under evaluation, VAERS submits the same week.]</span> We state this proactively because fixed-price, deliverable-based work only functions when capacity claims are honest.</p>
+<p><strong>Capacity disclosure.</strong> Frasier Digital has proposals under evaluation with other agencies whose periods of performance could overlap this one. We size and price every bid against total committed capacity: the hours above are net of every potential concurrent award, the named delivery pod exists to absorb surge, and the Project Manager&#39;s commitment to this contract is protected as a floor. We state this proactively because fixed-price, deliverable-based work only functions when capacity claims are honest.</p>
 <h3>A.3 Responsiveness, customer service, and timeliness</h3>
 <p>The PWS sets clocks, and we have built our operating rhythm on them rather than on our own:</p>
 <table>
@@ -758,12 +758,12 @@
 <tr>
 <td>Fixed-IP egress for bastion access not ready at award (Q&amp;A 13)</td>
 <td>Low / Low</td>
-<td>Provisioned before award <span class="flag">[FLAG: Joseph]</span></td>
+<td>Dedicated static-IP egress provisioned at award; delivering the address to CWBI is a week-1 transition-in item</td>
 <td>Joseph</td>
 </tr>
 </tbody></table>
 <p><strong>Quality.</strong> Definition of done is an accepted work unit. Every code change carries tests in the PWS&#39;s preferred locations; OWASP ZAP runs in CI; STIG self-checks precede every Dev deployment; documentation is a work unit, not an afterthought — and the PWS&#39;s own list of what counts as documentation (a manual test case anyone can perform, Javadocs, an automated test, formal project documentation) is the checklist in our PR template.</p>
-<p><strong>SAM registration and representations.</strong> Frasier Digital, LLC is registered and active in SAM.gov (UEI PY8MJ4JPHJ45, CAGE 213L8; registration expires 27 May 2027), and its Representations and Certifications in SAM are current (RFO 4.203-1). No subcontractors or teaming partners are proposed; all personnel named in this proposal perform as members of the Frasier Digital team. <span class="flag">[FLAG: Joseph — confirm the &quot;no subcontractors&quot; characterization of the 1099 team is the wording you want.]</span></p>
+<p><strong>SAM registration and representations.</strong> Frasier Digital, LLC is registered and active in SAM.gov (UEI PY8MJ4JPHJ45, CAGE 213L8; registration expires 27 May 2027), and its Representations and Certifications in SAM are current (RFO 4.203-1). No subcontractors or teaming partners are proposed; all personnel named in this proposal perform as members of the Frasier Digital team.</p>
 <div class="section-break"></div><h2>TAB B — Key Personnel Resumes and Experience</h2>
 <h3>B.1 How we read the five roles after the Q&amp;A</h3>
 <p>The solicitation names five key personnel roles: Project Manager, Senior Oracle DBA, System Engineer/Architect, Senior Forms Developer, and Senior APEX or Java Developer. The Government&#39;s answers to questions 7 and 8 settle how two of them apply here: Oracle APEX and Oracle Forms are not used and not planned; the existing components are React, NodeJS/TypeScript, and a Java REST API, &quot;to be expanded, not replaced&quot;; and equivalent experience is acceptable for the Forms Developer and Oracle DBA positions when the person can show &quot;sufficient experience in the direct use of the technologies already in use.&quot; We have staffed to that test, using the Government&#39;s confirmation that a single individual may be proposed for more than one key personnel role (Q&amp;A 9): the five roles are covered by four named individuals. The Senior Forms Developer and Senior Oracle DBA roles are both filled by Zachary Antosko — his recent work is exactly the kind of data-management web interface TE1 describes, and his database-engineering record (a migration framework with an automated validation engine across 1.15 million production records, delivered with zero downtime) carries the schema side of this design, whose changes are deliberately small, reviewable increments under HEC&#39;s review ladder. The Java option of the fifth role is taken. Each resume in the annex opens with the technologies in use on this contract and where the person has used them.</p>
