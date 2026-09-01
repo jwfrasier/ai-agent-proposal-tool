@@ -33,7 +33,7 @@
 <tr><th colspan="2" style="text-align:center">Government</th><th colspan="2" style="text-align:center">Contracting</th></tr>
 <tr><td colspan="2" style="text-align:center">USACE HEC — Technical POC / Technical Supervisor<br>CWBI-PMO — Platform1, ISSO/ISSM<br><em>code review · priorities · approvals · scans</em></td><td colspan="2" style="text-align:center">CEHEC-CT — Contracting Officer / Contract Specialist<br><em>contract administration · invoices</em></td></tr>
 <tr><td colspan="4" style="text-align:center"><strong>Joseph Frasier — Project Manager (KEY)</strong><br>single point of contact · owns every deliverable · chairs biweekly meetings · approves every submission</td></tr>
-<tr><td style="text-align:center"><strong>Scott Carpenter</strong><br>System Engineer / Architect (KEY)<br>CWBI, CDK, sidecars (proxy, OPA, cache), images, STIG</td><td style="text-align:center"><strong>Randy Chong</strong><br>Senior Java Developer (KEY)<br>CDA, PR #1461, <code>auth/</code> endpoints, integration tests</td><td style="text-align:center"><strong>Zachary Antosko</strong><br>Senior React/TypeScript Web-Forms Developer (KEY)<br>management UI, management API, TE1 increments</td><td style="text-align:center"><strong>Efrain Rocha</strong><br>Senior Oracle DBA (KEY)<br>schema, VPD interaction, RDS, test images</td></tr>
+<tr><td style="text-align:center"><strong>Scott Carpenter</strong><br>System Engineer / Architect (KEY)<br>CWBI, CDK, sidecars (proxy, OPA, cache), images, STIG</td><td style="text-align:center"><strong>Randy Chong</strong><br>Senior Java Developer (KEY)<br>CDA, PR #1461, <code>auth/</code> endpoints, integration tests</td><td colspan="2" style="text-align:center"><strong>Zachary Antosko</strong><br>Senior Forms (React/TypeScript) Developer + Senior Oracle DBA (KEY, dual role — Q&A 9)<br>management UI, management API, TE1 increments · schema, VPD interaction, test images</td></tr>
 <tr><td colspan="4" style="text-align:center"><strong>Delivery pod (non-key)</strong> — reports to the PM; day-to-day direction from the senior owner of each stream<br>Andrew Frasier, associate engineer — Task 2 UI components · Seth Chesky, associate engineer — Task 5a maintenance and tests</td></tr>
 </table><p>Authority runs one way: every team member reports to the Project Manager, who is the only person who commits the company to the Government. Communication runs on one shared channel visible to the whole team, so that a question asked of any engineer is seen by the PM the same day. Technical direction from HEC arrives through pull-request review, GitHub issues, and the biweekly meeting; we do not create side channels that the Government cannot see.</p>
 <h3>A.2 Staffing plan and simultaneity</h3>
@@ -75,19 +75,11 @@
 <td>1a, 2, 5a</td>
 </tr>
 <tr>
-<td>Zachary Antosko (Sr React/TS)</td>
-<td>9</td>
-<td>9</td>
+<td>Zachary Antosko (Sr Forms Dev + Sr Oracle DBA)</td>
+<td>12</td>
+<td>11</td>
+<td>6</td>
 <td>4</td>
-<td>3</td>
-<td>1a, 2, 5a</td>
-</tr>
-<tr>
-<td>Efrain Rocha (Sr Oracle DBA)</td>
-<td>3</td>
-<td>2</td>
-<td>2</td>
-<td>1</td>
 <td>1a, 2, 5a</td>
 </tr>
 <tr>
@@ -204,8 +196,8 @@
 <tr>
 <td>Oracle RDS behaves differently from the local <code>oracle-free</code> image</td>
 <td>Low / Med</td>
-<td>DBA reviews every schema PR against RDS constraints; CloudStack or CWBI-Dev validation before Test promotion</td>
-<td>Efrain</td>
+<td>Every schema PR validated against the integration-test Oracle images and, before Test promotion, in CloudStack or CWBI-Dev; RDS-specific behaviour raised to HEC in the biweekly meeting</td>
+<td>Zach</td>
 </tr>
 <tr>
 <td>Moonlighting team members&#39; availability shifts</td>

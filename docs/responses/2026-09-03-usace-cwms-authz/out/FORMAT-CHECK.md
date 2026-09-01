@@ -7,7 +7,7 @@ Checked against Proposal Submission Instructions (8/26 revision), Amendment 003 
 | Volumes I, II, III only (Vol IV deleted) | Q&A 22; instr. 1.1 | ✅ three volumes + cover letter |
 | Separate native files, no zip, ≤25 MB/email | instr. 1.2; Q&A 4 | ✅ 4 PDFs + 1 xlsx; size check at send |
 | Vol I ≤ 30 pp (cover, TOC, resumes, LOCs excluded; summary + org chart count) | instr. 2.1; Q&A 20 | ✅ **27 / 30** (pass 1) — re-verify after flag edits |
-| Resumes ≤ 2 pp each | Q&A 20 | ✅ all five exactly 2 pp |
+| Resumes ≤ 2 pp each | Q&A 20 | ⏳ four resumes — re-verify ≤2 pp after Zach dual-role edit |
 | LOCs in Vol I (not elsewhere) | Q&A 21 | ✅ annex in Vol I |
 | Factor 1 tabs A/B/C; Factor 2 tabs A Mgmt / B Key Personnel / C Transition | instr. 2.1.1, 2.1.2; Q&A 23 | ✅ |
 | Each volume: TOC + Summary + Narrative | instr. 1.2 | ✅ Vol I (TOC page + Summary Section); Vol II/III open with a Summary |
@@ -16,8 +16,8 @@ Checked against Proposal Submission Instructions (8/26 revision), Amendment 003 
 | No price information in Vol I or II | instr. 1.2 | ✅ grep "$" in Vol I/II md → only hours; confirm at send |
 | Level of effort per task in Factor 1 | instr. 2.1.1 | ✅ Table A-2, no dollars |
 | LOE reconciles: Table A-2 = F2 Table A-3 = Vol III = xlsx | house rule | ⏳ A-2 = Vol III (both 1,660 / 2,770 h); Table A-3 hrs/week is an approximation — verify sums |
-| Five key personnel resumes + LOCs | instr. 2.1.2; 3.2.1.2.2 | ⏳ resumes drafted with [FLAG]s; **LOCs unsigned** — due Mon 8/31 |
-| "Direct use" test on each resume | Q&A 8 | ⏳ needs replies from Efrain/Zach/Scott/Randy |
+| Resumes + LOCs for the 5 key roles (4 individuals, Zach dual per Q&A 9) | instr. 2.1.2; 3.2.1.2.2 | ⏳ resumes drafted with [FLAG]s; **LOCs unsigned** — due Mon 8/31 |
+| "Direct use" test on each resume | Q&A 8 | ⏳ needs replies from Zach/Scott/Randy (Efrain removed 9/1) |
 | Vol II ≤ 25 pp; min 1 ref; PPQ attached (excluded) | instr. 2.2; Q&A 27 | ⏳ 4 pp; **PPQ pending from Ethan** — must be completed before his Region 4 email closes 8/31 |
 | PPQ figure matches SSS/NOAA PPQs ($400k, Jul 2024–Oct 2025) | consistency map | ✅ pre-filled to match |
 | Vol III: per-task subtotals, grand total incl. options, rates, LOE per category per task, Excel separate | instr. 2.3.1; Q&A 5, 24 | ✅ $217,520 base / $360,140 total; xlsx formula-driven |

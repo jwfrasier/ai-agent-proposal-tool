@@ -1,4 +1,4 @@
-# Zachary Antosko — Senior Forms Developer, React/TypeScript (Key Personnel)
+# Zachary Antosko — Senior Forms Developer (React/TypeScript) and Senior Oracle DBA (Key Personnel, dual role per Q&A 9)
 
 Houston, TX · (361) 425-4862 · zachary.antosko@gmail.com
 
@@ -15,7 +15,7 @@ Houston, TX · (361) 425-4862 · zachary.antosko@gmail.com
 
 ## Proposed role
 
-Senior Forms Developer (React/TypeScript web forms): owns the `cwms-access-management` React application and the management API — the Users, Roles, and Policy tab increments in Technical Exhibit 1, the mask builder with catalog preview, bulk operations, validation, Storybook stories, and component tests; pairs with the Senior Java Developer on the CDA endpoints the UI calls.
+Dual key-personnel role under the Government's Q&A answer 9. **Senior Forms Developer** (React/TypeScript web forms): owns the `cwms-access-management` React application and the management API — the Users, Roles, and Policy tab increments in Technical Exhibit 1, the mask builder with catalog preview, bulk operations, validation, Storybook stories, and component tests; pairs with the Senior Java Developer on the CDA endpoints the UI calls. **Senior Oracle DBA**: owns the bounded schema increments in this design — reinstating the `at_sec_ts_group_embargo` table, extending the mask views, keeping the integration-test database images current — delivered as small, HEC-reviewed PL/SQL changes validated by the integration suite against the `database-ready` Oracle image, applying the same migration-and-validation discipline demonstrated at 1.15 M-record production scale.
 
 ## Experience
 

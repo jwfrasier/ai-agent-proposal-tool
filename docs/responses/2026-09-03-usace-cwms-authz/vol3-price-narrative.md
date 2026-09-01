@@ -25,7 +25,7 @@ Frasier Digital, LLC proposes a firm-fixed price for each task in the PWS, with 
 | Labor category | Key personnel | Fully burdened rate |
 |---|---|---|
 | Project Manager | Joseph Frasier | $165.00 |
-| Senior Oracle DBA | Efrain Rocha | $145.00 |
+| Senior Oracle DBA | Zachary Antosko (dual role per Q&A 9) | $145.00 |
 | System Engineer / Architect | Scott Carpenter | $145.00 |
 | Senior Forms (React/TypeScript) Developer | Zachary Antosko | $145.00 |
 | Senior Java Developer | Randy Chong | $145.00 |

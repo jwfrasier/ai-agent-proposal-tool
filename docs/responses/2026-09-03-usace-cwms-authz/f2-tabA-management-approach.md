@@ -14,7 +14,7 @@ Frasier Digital, LLC is a principal-led small disadvantaged business. The Projec
 <tr><th colspan="2" style="text-align:center">Government</th><th colspan="2" style="text-align:center">Contracting</th></tr>
 <tr><td colspan="2" style="text-align:center">USACE HEC — Technical POC / Technical Supervisor<br>CWBI-PMO — Platform1, ISSO/ISSM<br><em>code review · priorities · approvals · scans</em></td><td colspan="2" style="text-align:center">CEHEC-CT — Contracting Officer / Contract Specialist<br><em>contract administration · invoices</em></td></tr>
 <tr><td colspan="4" style="text-align:center"><strong>Joseph Frasier — Project Manager (KEY)</strong><br>single point of contact · owns every deliverable · chairs biweekly meetings · approves every submission</td></tr>
-<tr><td style="text-align:center"><strong>Scott Carpenter</strong><br>System Engineer / Architect (KEY)<br>CWBI, CDK, sidecars (proxy, OPA, cache), images, STIG</td><td style="text-align:center"><strong>Randy Chong</strong><br>Senior Java Developer (KEY)<br>CDA, PR #1461, <code>auth/</code> endpoints, integration tests</td><td style="text-align:center"><strong>Zachary Antosko</strong><br>Senior React/TypeScript Web-Forms Developer (KEY)<br>management UI, management API, TE1 increments</td><td style="text-align:center"><strong>Efrain Rocha</strong><br>Senior Oracle DBA (KEY)<br>schema, VPD interaction, RDS, test images</td></tr>
+<tr><td style="text-align:center"><strong>Scott Carpenter</strong><br>System Engineer / Architect (KEY)<br>CWBI, CDK, sidecars (proxy, OPA, cache), images, STIG</td><td style="text-align:center"><strong>Randy Chong</strong><br>Senior Java Developer (KEY)<br>CDA, PR #1461, <code>auth/</code> endpoints, integration tests</td><td colspan="2" style="text-align:center"><strong>Zachary Antosko</strong><br>Senior Forms (React/TypeScript) Developer + Senior Oracle DBA (KEY, dual role — Q&A 9)<br>management UI, management API, TE1 increments · schema, VPD interaction, test images</td></tr>
 <tr><td colspan="4" style="text-align:center"><strong>Delivery pod (non-key)</strong> — reports to the PM; day-to-day direction from the senior owner of each stream<br>Andrew Frasier, associate engineer — Task 2 UI components · Seth Chesky, associate engineer — Task 5a maintenance and tests</td></tr>
 </table>
 
@@ -31,8 +31,7 @@ The team is named, confirmed, and sized against the level of effort in Factor 1,
 | Joseph Frasier (PM) | 6 | 5 | 4 | 4 | 1a, 2, 3a, 5a |
 | Scott Carpenter (Architect) | 6 | 5 | 1 | 1 | 1a, 3a |
 | Randy Chong (Sr Java) | 8 | 7 | 5 | 5 | 1a, 2, 5a |
-| Zachary Antosko (Sr React/TS) | 9 | 9 | 4 | 3 | 1a, 2, 5a |
-| Efrain Rocha (Sr Oracle DBA) | 3 | 2 | 2 | 1 | 1a, 2, 5a |
+| Zachary Antosko (Sr Forms Dev + Sr Oracle DBA) | 12 | 11 | 6 | 4 | 1a, 2, 5a |
 | Andrew Frasier (associate) | 4 | 4 | — | — | 2 |
 | Seth Chesky (associate) | 6 | 8 | 10 | 8 | 5a |
 | **Team total** | **42** | **40** | **26** | **22** | |
@@ -69,7 +68,7 @@ Customer service on a contract like this means not consuming the customer's time
 | Source-of-truth decisions (embargo, offices, constraints) stall in discussion | Med / High | Written comparison with a recommendation at meeting one; ADR with a comment window; the UI increment order puts the dependent work (P1) second, not first | Joseph |
 | Concurrent changes by HEC or other vendors conflict with ours (Q&A 46) | Med / Low | Daily rebase on `develop`; "first merged wins"; design conflicts escalated same day | Randy |
 | HEC review bandwidth limits acceptance rate (Q&A 47) | Med / Med | Small PRs; weekly volume set in the meeting; HEC adding reviewers | Joseph |
-| Oracle RDS behaves differently from the local `oracle-free` image | Low / Med | DBA reviews every schema PR against RDS constraints; CloudStack or CWBI-Dev validation before Test promotion | Efrain |
+| Oracle RDS behaves differently from the local `oracle-free` image | Low / Med | Every schema PR validated against the integration-test Oracle images and, before Test promotion, in CloudStack or CWBI-Dev; RDS-specific behaviour raised to HEC in the biweekly meeting | Zach |
 | Moonlighting team members' availability shifts | Low / Med | Letters of commitment; hours sized to what each person can sustain; the delivery pod absorbs surge; PM approval required for any substitution, with CO/COR notification | Joseph |
 | Fixed-IP egress for bastion access not ready at award (Q&A 13) | Low / Low | Provisioned before award [FLAG: Joseph] | Joseph |
 

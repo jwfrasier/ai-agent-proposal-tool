@@ -19,25 +19,6 @@ Signature: ______________________________ · Joseph Frasier · (850) 356-2382 ·
 
 ---
 
-## Letter of Commitment — Efrain Rocha, Senior Oracle DBA
-
-**Frasier Digital, LLC** · 20915 Mystic Stone Dr, Tomball, TX 77375
-
-Solicitation PANHEC-26-P-0000-026407 — CWMS Database Authorization Maintenance and Improvements
-U.S. Army Corps of Engineers, Institute for Water Resources, Hydrologic Engineering Center
-
-Date: [FLAG: date]
-
-I, **Efrain Rocha**, confirm that I have agreed to serve as **Senior Oracle DBA** on the Frasier Digital, LLC team for the above solicitation, and that I will be available to perform in that role for the full period of performance (360 calendar days from award, plus any exercised option tasks) at the level of effort proposed by Frasier Digital, LLC, if Frasier Digital, LLC is awarded the contract.
-
-I have reviewed the Performance Work Statement for this requirement and the duties of the role. I am a United States citizen, and I understand that performance is at the contractor's facility with no travel required. I authorize Frasier Digital, LLC to include my name, resume, and this letter in its proposal.
-
-Signature: ______________________________ · Efrain Rocha · (281) 787-7007 · efrain.rocha@gmail.com
-
-Acknowledged for Frasier Digital, LLC: ______________________________ Joseph Frasier, Founder and Managing Member · Date: ________
-
----
-
 ## Letter of Commitment — Scott A. Carpenter, System Engineer / Architect
 
 **Frasier Digital, LLC** · 20915 Mystic Stone Dr, Tomball, TX 77375
@@ -57,7 +38,7 @@ Acknowledged for Frasier Digital, LLC: ______________________________ Joseph Fra
 
 ---
 
-## Letter of Commitment — Zachary Antosko, Senior Forms Developer
+## Letter of Commitment — Zachary Antosko, Senior Forms Developer and Senior Oracle DBA
 
 **Frasier Digital, LLC** · 20915 Mystic Stone Dr, Tomball, TX 77375
 
@@ -66,7 +47,7 @@ U.S. Army Corps of Engineers, Institute for Water Resources, Hydrologic Engineer
 
 Date: [FLAG: date]
 
-I, **Zachary Antosko**, confirm that I have agreed to serve as **Senior Forms Developer** (React/TypeScript web forms) on the Frasier Digital, LLC team for the above solicitation, and that I will be available to perform in that role for the full period of performance (360 calendar days from award, plus any exercised option tasks) at the level of effort proposed by Frasier Digital, LLC, if Frasier Digital, LLC is awarded the contract.
+I, **Zachary Antosko**, confirm that I have agreed to serve as **Senior Forms Developer** (React/TypeScript web forms) **and Senior Oracle DBA** (a dual key-personnel role per the Government’s answer to Question 9) on the Frasier Digital, LLC team for the above solicitation, and that I will be available to perform in that role for the full period of performance (360 calendar days from award, plus any exercised option tasks) at the level of effort proposed by Frasier Digital, LLC, if Frasier Digital, LLC is awarded the contract.
 
 I have reviewed the Performance Work Statement for this requirement and the duties of the role. I am a United States citizen, and I understand that performance is at the contractor's facility with no travel required. I authorize Frasier Digital, LLC to include my name, resume, and this letter in its proposal.
 

@@ -65,7 +65,7 @@ Questions we sent 8/21: `QUESTIONS-EMAIL.md`. Memory: `cwms-usace-authz-opportun
 | Role (solicitation title) | Person | "Direct use" evidence to surface | Status |
 |---|---|---|---|
 | Project Manager | Joseph Frasier | Region 4 PM + dev; React/TS; Node; auth/RBAC backend; federal delivery | ✔ |
-| Senior Oracle DBA | Efrain Rocha | Oracle (OCI partnership, Oracle DW at JPMC), Java, AWS, Docker; **needs explicit DBA duties/versions/RDS** | LOC + resume facts needed; rate TBD (~$100) |
+| Senior Oracle DBA (**dual role w/ Forms Dev — Q&A 9; Joseph's call 9/1, Efrain removed**) | Zachary Antosko | migration framework + validation engine across 1.15M records (zero downtime), MySQL/Postgres/TypeORM, AWS RDS; schema work bounded + HEC-reviewed | covered by Zach's LOC |
 | System Engineer / Architect | Scott Carpenter | AWS IaC (−96% deploy time), Java, Python, security docs; **ask: CDK? ECS? containers?** | LOC needed; $60/hr |
 | Senior Forms Developer (→ React web-forms) | Zachary Antosko | React/Redux, Node/TypeScript/NestJS, REST, Docker, AWS RDS; **ask: forms-heavy UI, testing tools, any Java/Oracle** | LOC needed; $75/hr |
 | Senior APEX **or Java** Developer | Randy Chong | Java/Spring REST, AWS ECS/EKS/RDS, JUnit; **ask: React exposure, Oracle/SQL, OIDC/JWT** | LOC needed; $65/hr; moonlight |

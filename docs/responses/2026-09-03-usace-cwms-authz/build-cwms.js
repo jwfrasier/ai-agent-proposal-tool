@@ -119,7 +119,7 @@ const pageCount = pdf => (fs.readFileSync(pdf).toString('latin1').match(/\/Type\
   await render('vol1-cover', cover, cPdf, null);
   await render('vol1-toc', toc, tPdf, null);
   await render('vol1-body', marked.parse(body), bPdf, 'Volume I — Technical');
-  const resumeFiles = ['resume-joseph-frasier.md', 'resume-efrain-rocha.md', 'resume-scott-carpenter.md', 'resume-zachary-antosko.md', 'resume-randy-chong.md'];
+  const resumeFiles = ['resume-joseph-frasier.md', 'resume-scott-carpenter.md', 'resume-zachary-antosko.md', 'resume-randy-chong.md'];
   for (const f of resumeFiles) { // per-resume ≤2pp check
     const tmp = path.join(BUILD, `count-${f}.pdf`);
     await render(`count-${f}`, marked.parse(prep(read(f))), tmp, 'x');
