@@ -96,7 +96,7 @@ innovation is concentrated where it pays — branching schema engine, assistance
 guardrails, low-code editing — and the risk is concentrated where we can retire it early,
 which the schedule below does.</p>
 <p><strong>Scalability and Phase 2 posture.</strong> The schema-driven engine scales sideways (new
-submitter types, new form versions, Spanish-language variant) without re-architecture.
+submitter types, new form versions, additional languages) without re-architecture.
 The upload subsystem is built with Phase 1 restrictions enforced in configuration, so
 Phase 2 expansion to images (2.4.2) is a policy change plus review, not a rebuild.
 Stateless application tier scales horizontally under Azure load balancing; surge events
@@ -131,11 +131,19 @@ submitter type and report characteristics, including the mandated provider
 vaccine-error-no-AE path (1.6.2, PRS#1). Branching rules are table-driven and unit-tested
 against a scenario matrix we expect the Government to extend during acceptance; the
 prototype already passes the vaccine-error-no-AE scenario, visibly announcing
-&quot;N questions removed&quot; so submitters trust the shortening form.</p>
+&quot;N questions removed&quot; so submitters trust the shortening form. The application delivers
+<strong>full English and Spanish parity</strong> (Amendment 0001, Q&amp;A 270): every public-path screen,
+field label, instruction, validation message, and help entry carries a reviewed Spanish
+translation managed as content in the same schema, with <code>lang</code> attributes switching
+per passage for assistive technology.</p>
 <p><strong>1.8 Low-code/configurable interface.</strong> Authorized CDC personnel edit field text,
-tooltips, help/FAQ content, choice options, and field visibility through an
-administrative interface with live preview, role-based access, versioning, and one-click
-rollback — no developer, no deployment (PRS#8). We will jointly script the Government&#39;s
+tooltips, help/FAQ content, choice options, and field visibility — and, per Amendment
+0001 Q&amp;A 165, <strong>the submission form itself: adding and modifying form fields and the
+branching-logic rules that show or suppress them</strong> — through an administrative interface
+with live preview, validation against the scenario matrix, role-based access,
+versioning, and one-click rollback — no developer, no deployment (PRS#8). Static
+content changes publish directly; field and branching changes pass a built-in
+consistency check and a preview-approve step before release. We will jointly script the Government&#39;s
 update scenarios early so acceptance testing runs against rehearsed reality. The change
 and configuration process is documented as part of Task 1.8 and taught to program
 personnel in a hands-on session before Beta.</p>
@@ -306,9 +314,13 @@ as code delivery to the CDC repository, so review is always of current, running 
 <p><strong>Prototype URL: <code>https://vaers-demo.frasierdigital.com</code></strong> <em>(no login required; desktop and mobile)</em></p>
 <p>Frasier Digital submits a <strong>working web application</strong>, not a mockup. The prototype was
 built with the same open-source stack proposed in Tab 2-1 (React front end, schema-driven
-form engine) and demonstrates the core PWS capabilities on synthetic data. It is hosted
-outside Government infrastructure for evaluation convenience only; the proposed solution
-is developed and deployed entirely within CDC&#39;s FedRAMP-authorized Azure environment.
+form engine) and demonstrates the core PWS capabilities on synthetic data. Consistent
+with Amendment 0001 Q&amp;A 28 and 267, it is hosted on contractor-controlled infrastructure
+using synthetic data only, and every component of its stack — React, Node.js, and
+standard web services — is available to CDC within the FedRAMP audit scope of the
+CDC-managed Azure environment where the production solution is developed and deployed.
+The link will remain live and unchanged through the evaluation period and at least
+60 days after the due date (Q&amp;A 214), monitored continuously for availability.
 The prototype collects, transmits, and stores no PHI/PII.</p>
 <p>An in-application version of this walkthrough, with one-click sample scenarios
 (a completed parent report and the PRS#1 pharmacist error case), is at the

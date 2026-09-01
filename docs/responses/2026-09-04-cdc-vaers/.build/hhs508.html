@@ -1,0 +1,142 @@
+<meta charset="utf-8"><title>hhs508</title><style>
+  html, body { font-family: "Times New Roman", Times, serif; font-size: 12pt; line-height: 1.18; color: #000; margin: 0; padding: 0; }
+  * { font-family: "Times New Roman", Times, serif !important; }
+  h1 { font-size: 14pt; font-weight: bold; margin: 0 0 10pt 0; page-break-after: avoid; }
+  h2 { font-size: 13pt; font-weight: bold; margin: 12pt 0 5pt 0; page-break-after: avoid; }
+  h3 { font-size: 12pt; font-weight: bold; margin: 9pt 0 3pt 0; page-break-after: avoid; }
+  p { margin: 0 0 6pt 0; }
+  ul, ol { margin: 0 0 6pt 0; padding-left: 22pt; }
+  li { margin-bottom: 3pt; }
+  hr { border: none; border-top: 0.5pt solid #000; margin: 10pt 0; }
+  a { color: #000; text-decoration: none; }
+  strong { font-weight: bold; } em { font-style: italic; }
+  table { border-collapse: collapse; width: 100%; margin: 6pt 0 10pt 0; font-size: 10pt; page-break-inside: auto; }
+  th, td { border: 0.5pt solid #000; padding: 3pt 5pt; vertical-align: top; text-align: left; }
+  th { background: #e8e8e8; font-weight: bold; }
+  tr { page-break-inside: avoid; }
+  .flag { background: #ffef9e; font-weight: bold; }
+  .vol-title { font-size: 18pt; font-weight: bold; text-align: center; margin: 150pt 0 10pt 0; }
+  .vol-sub { font-size: 13pt; text-align: center; margin: 0 0 6pt 0; }
+  .section-break { page-break-before: always; }
+</style><h1>HHS Section 508 Accessibility Conformance Checklist</h1>
+<p><strong>RFQ 75D301-26-Q-00146 — Modernized Application for Consumer and Healthcare Provider VAERS Reporting</strong>
+<strong>Offeror: Frasier Digital, LLC · UEI PY8MJ4JPHJ45 · CAGE 213L8</strong>
+Submitted per HHSAR 352.239-78(b)/(d) and Amendment 0001 Q&amp;A 187, 239, and 256: this checklist
+describes the proposed development approach and planned conformance for a custom application that
+does not yet exist; the full ACR/VPAT is delivered in draft with the Beta Release and updated at
+Final Release (PWS Section 8; Q&amp;A 23). Our prototype&#39;s Accessibility Conformance Report is attached
+separately as present-tense evidence of the practices claimed here.</p>
+<h2>1. Product and standards</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ICT item</td>
+<td>Custom responsive web application (public + healthcare-provider VAERS reporting), including branching form, document upload, FAQ/help, satisfaction surveys, and the administrative configuration interface</td>
+</tr>
+<tr>
+<td>Applicable standards</td>
+<td>Revised Section 508 Standards (36 CFR Part 1194, incorporating WCAG 2.0 Level A and AA); HHS Section 508 policy</td>
+</tr>
+<tr>
+<td>Conformance target</td>
+<td>WCAG 2.0 A/AA — full conformance for all end-user-facing interfaces and the administrative interface; WCAG 2.1 AA used as the working target in CI (a superset of the requirement)</td>
+</tr>
+<tr>
+<td>Evaluation methods planned</td>
+<td>Automated scanning in CI on every commit (axe-core ruleset); manual keyboard-only walkthroughs of every task flow; manual assistive-technology testing (NVDA + Chrome, VoiceOver + Safari, TalkBack + Chrome on Android) at each release gate — manual AT testing per Q&amp;A 23; color-contrast verification at design time; 508 review as an acceptance criterion on every user-story</td>
+</tr>
+</tbody></table>
+<h2>2. Conformance approach by criterion group (WCAG 2.0 A/AA)</h2>
+<table>
+<thead>
+<tr>
+<th>Criterion group</th>
+<th>Planned conformance</th>
+<th>How it is engineered, not inspected-in</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1.1 Text alternatives</td>
+<td>Supports</td>
+<td>Alt text required props on image components; decorative images marked presentational; upload previews carry descriptive labels</td>
+</tr>
+<tr>
+<td>1.2 Time-based media</td>
+<td>Supports</td>
+<td>No audio/video planned; any instructional media added will carry captions and transcripts</td>
+</tr>
+<tr>
+<td>1.3 Adaptable structure</td>
+<td>Supports</td>
+<td>Semantic HTML landmarks; form fields programmatically associated with labels and instructions; branching sections announced via <code>aria-live</code>; reading order equals DOM order</td>
+</tr>
+<tr>
+<td>1.4 Distinguishable</td>
+<td>Supports</td>
+<td>Token-based palette with ≥4.5:1 text contrast enforced at the design-system level; no color-only meaning; text resizable to 200 % without loss; no images of text</td>
+</tr>
+<tr>
+<td>2.1 Keyboard</td>
+<td>Supports</td>
+<td>Every interactive element reachable and operable by keyboard; no traps; custom widgets follow WAI-ARIA Authoring Practices; tested in CI with keyboard-simulation tests</td>
+</tr>
+<tr>
+<td>2.2 Enough time</td>
+<td>Supports</td>
+<td>Session timeout warnings with extension; autosave of in-progress reports so a timeout never destroys a submission (also a PWS abandonment-reduction measure)</td>
+</tr>
+<tr>
+<td>2.3 Seizures</td>
+<td>Supports</td>
+<td>Nothing flashes more than three times per second</td>
+</tr>
+<tr>
+<td>2.4 Navigable</td>
+<td>Supports</td>
+<td>Skip links; unique page titles per step; visible focus indicator; descriptive headings and link text; breadcrumb/step indicator on the branching form</td>
+</tr>
+<tr>
+<td>3.1 Readable</td>
+<td>Supports</td>
+<td>Language attributes set per page and per passage; <strong>English and Spanish parity</strong> (Amendment 0001 Q&amp;A 270) with <code>lang</code> switching</td>
+</tr>
+<tr>
+<td>3.2 Predictable</td>
+<td>Supports</td>
+<td>No context changes on focus/input; consistent navigation and identification; branching reveals fields without moving focus unexpectedly</td>
+</tr>
+<tr>
+<td>3.3 Input assistance</td>
+<td>Supports</td>
+<td>Inline validation with error text tied to fields by <code>aria-describedby</code>; error summary with links; plain-language error copy; suggestions on format errors; confirmation step before submission</td>
+</tr>
+<tr>
+<td>4.1 Compatible</td>
+<td>Supports</td>
+<td>Valid, parseable markup; name/role/value for all custom components; status messages via live regions</td>
+</tr>
+</tbody></table>
+<h2>3. Functional performance criteria (36 CFR 1194, Appendix C, Chapter 3)</h2>
+<p>Use without vision, with limited vision, without perception of color, without hearing, with limited
+hearing, without speech, with limited manipulation, with limited reach and strength, and with
+limited language, cognitive, and learning abilities: <strong>Supports (planned)</strong> — carried by the
+criterion groups above plus plain-language content (PWS Task 1.6.1), the assisted-completion
+features, and mobile-responsive touch targets ≥44 px.</p>
+<h2>4. Support documentation and services (Chapter 6)</h2>
+<p>Product help, FAQ content, and user guides delivered under this contract will themselves conform to
+WCAG 2.0 A/AA and be available in accessible electronic formats; support channels documented in the
+application do not require vision or hearing to use.</p>
+<h2>5. Present-tense evidence</h2>
+<p>The evaluation prototype at <strong><a href="https://vaers-demo.frasierdigital.com">https://vaers-demo.frasierdigital.com</a></strong> was built under these same
+practices and its automated audit results show <strong>0 WCAG 2.1 AA violations across all tested
+states</strong>; the attached Accessibility Conformance Report documents the methodology and results.
+Accessibility is an acceptance criterion in our definition of done (Volume I, Tabs 2-1 and 3-1),
+and the ACR/VPAT deliverable schedule (draft at Beta, final at Final Release, with remediation
+plan) is priced into CLIN 0001.</p>
+<p><strong>Certified by:</strong> Joseph Frasier, Founder and Managing Member, Frasier Digital, LLC ·
+<a href="mailto:joseph@frasierdigital.com">joseph@frasierdigital.com</a> · (850) 356-2382 · Date: <span class="flag">[FLAG: sign date]</span></p>

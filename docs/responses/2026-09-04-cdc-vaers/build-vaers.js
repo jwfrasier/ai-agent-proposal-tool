@@ -6,7 +6,7 @@
 const fs = require('fs');
 const path = require('path');
 const { execFileSync } = require('child_process');
-const SCRATCH = '/private/tmp/claude-501/-Users-joseph-govcontracts-dashboard/bb994d33-5b73-44de-880f-9800c90889ed/scratchpad';
+const SCRATCH = '/private/tmp/claude-501/-Users-joseph-govcontracts-dashboard/f0d25a34-3af3-476c-a3e1-15001c738034/scratchpad';
 const { marked } = require('/Users/joseph/govcontracts-dashboard/node_modules/marked');
 const puppeteer = require(path.join(SCRATCH, 'node_modules/puppeteer-core'));
 
@@ -104,6 +104,8 @@ const PDF_OPTS = { format: 'Letter', printBackground: true, preferCSSPageSize: f
   await render('dmp', marked.parse(prep(read('dmp.md'))), path.join(OUT, 'Frasier-Digital-Data-Management-Plan.pdf'), 'Data Management Plan');
   await render('atch1', marked.parse(prep(read('atch1-ai-use-plan.md'))), path.join(OUT, 'Frasier-Digital-ATCH1-AI-Use-Plan.pdf'), 'Attachment 1 — AI Use Compliance and Risk Management Plan');
   await render('acr', marked.parse(prep(read('acr-draft.md'))), path.join(OUT, 'Frasier-Digital-ACR.pdf'), 'Accessibility Conformance Report');
+  await render('hhs508', marked.parse(prep(read('hhs-508-checklist.md'))), path.join(OUT, 'Frasier-Digital-HHS-508-Checklist.pdf'), 'HHS Section 508 Accessibility Conformance Checklist');
+  await render('irp', marked.parse(prep(read('incident-response-plan.md'))), path.join(OUT, 'Frasier-Digital-Incident-Response-Plan.pdf'), 'Incident Response Plan');
 
   // ---- Vol II price PDF (mirrors the Excel workbook) ----
   const lines = [

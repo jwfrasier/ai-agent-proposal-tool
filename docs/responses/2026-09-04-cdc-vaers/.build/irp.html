@@ -1,0 +1,119 @@
+<meta charset="utf-8"><title>irp</title><style>
+  html, body { font-family: "Times New Roman", Times, serif; font-size: 12pt; line-height: 1.18; color: #000; margin: 0; padding: 0; }
+  * { font-family: "Times New Roman", Times, serif !important; }
+  h1 { font-size: 14pt; font-weight: bold; margin: 0 0 10pt 0; page-break-after: avoid; }
+  h2 { font-size: 13pt; font-weight: bold; margin: 12pt 0 5pt 0; page-break-after: avoid; }
+  h3 { font-size: 12pt; font-weight: bold; margin: 9pt 0 3pt 0; page-break-after: avoid; }
+  p { margin: 0 0 6pt 0; }
+  ul, ol { margin: 0 0 6pt 0; padding-left: 22pt; }
+  li { margin-bottom: 3pt; }
+  hr { border: none; border-top: 0.5pt solid #000; margin: 10pt 0; }
+  a { color: #000; text-decoration: none; }
+  strong { font-weight: bold; } em { font-style: italic; }
+  table { border-collapse: collapse; width: 100%; margin: 6pt 0 10pt 0; font-size: 10pt; page-break-inside: auto; }
+  th, td { border: 0.5pt solid #000; padding: 3pt 5pt; vertical-align: top; text-align: left; }
+  th { background: #e8e8e8; font-weight: bold; }
+  tr { page-break-inside: avoid; }
+  .flag { background: #ffef9e; font-weight: bold; }
+  .vol-title { font-size: 18pt; font-weight: bold; text-align: center; margin: 150pt 0 10pt 0; }
+  .vol-sub { font-size: 13pt; text-align: center; margin: 0 0 6pt 0; }
+  .section-break { page-break-before: always; }
+</style><h1>Incident Response Plan</h1>
+<p><strong>RFQ 75D301-26-Q-00146 — Modernized VAERS Reporting Application · Frasier Digital, LLC</strong>
+Submitted with the proposal per the PWS Standard-4 deliverables table (&quot;as part of Proposal&quot;) and
+Amendment 0001 Q&amp;A 160. This plan governs contractor-side incident response during performance; it
+will be aligned to CDC/OCIO incident-response procedures at kickoff and updated annually or upon
+significant change, per Standard-4.</p>
+<h2>1. Scope and definitions</h2>
+<p>Covers any suspected or confirmed incident affecting work performed under this contract: the
+application and its code, configuration, and pipelines in the CDC-managed Azure environment;
+contractor development environments (which hold <strong>no production data, PHI, PII, or other
+Government non-public information</strong> prior to ATD/ATO issuance — Q&amp;A 83); credentials and
+Government-furnished equipment; and the pre-award prototype environment (synthetic data only).
+An <em>incident</em> is any event that actually or potentially jeopardizes confidentiality, integrity, or
+availability of information or systems in scope, including compromise, malware, unauthorized
+access or disclosure, loss or theft of equipment or credentials, and supply-chain compromise of a
+dependency.</p>
+<h2>2. Roles</h2>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Person</th>
+<th>Responsibility</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Incident Response Lead</td>
+<td>Joseph Frasier, PM (Key)</td>
+<td>Declares incidents, owns notifications, directs response, approves closure</td>
+</tr>
+<tr>
+<td>Technical Lead</td>
+<td>Ryan Daley (Key)</td>
+<td>Containment and eradication actions; forensically sound evidence handling</td>
+</tr>
+<tr>
+<td>All team members</td>
+<td>—</td>
+<td>Report suspected incidents to the IR Lead immediately upon discovery; annual security-awareness, privacy, and records-management training before access (PWS Section 11)</td>
+</tr>
+</tbody></table>
+<p>The reporting channel operates independently of the management chain: any team member may invoke
+it directly, and notification is never queued behind analysis.</p>
+<h2>3. Response procedure</h2>
+<ol>
+<li><strong>Detect and report (continuous).</strong> Sources: Azure/CDC monitoring and scans, CI pipeline alerts
+(dependency and secret scanning on every commit), developer observation, CDC notice.</li>
+<li><strong>Notify (within 1 hour of discovery).</strong> The IR Lead notifies the COR and the CDC-designated
+security contact within <strong>one hour</strong> of discovering any suspected or confirmed incident
+involving Government information or systems, by the channels CDC designates at kickoff, and
+follows CDC/HHS and US-CERT reporting procedures, including timelines for incidents involving
+PII/PHI. Notification is made on suspicion — we do not wait for confirmation.</li>
+<li><strong>Contain.</strong> Isolate affected components (feature-flag rollback, credential revocation, pipeline
+freeze, environment isolation) in coordination with CDC/OCIO for anything inside the CDC
+boundary. Preserve logs and evidence; the application&#39;s audit records (event type, time, source,
+outcome, subject) are retained and protected per the PWS.</li>
+<li><strong>Eradicate and recover.</strong> Root cause identified and removed; affected secrets rotated;
+redeployment from known-good, scanned artifacts; verification testing before restoration.</li>
+<li><strong>Document and close.</strong> Written incident report to the COR covering timeline, scope, data
+affected, actions taken, and residual risk; closure requires COR concurrence.</li>
+<li><strong>Learn.</strong> Post-incident review within 5 business days; corrective actions tracked as POA&amp;M
+items with the remediation clocks in the RFQ (critical 15 days, high 30 days, medium 60 days
+per Amendment 0001 Q&amp;A 15); recurrence-prevention changes (tests, controls, process) merged
+before the review closes.</li>
+</ol>
+<h2>4. Specific scenarios</h2>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Immediate action beyond §3</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Lost/stolen GFE laptop or PIV</td>
+<td>Report to COR + CDC service desk within 1 hour; credential suspension request</td>
+</tr>
+<tr>
+<td>Credential or secret exposure in code</td>
+<td>Rotate immediately; purge from history; audit use since exposure</td>
+</tr>
+<tr>
+<td>Vulnerability disclosed in a dependency</td>
+<td>Assess exploitability same day; patch or mitigate within POA&amp;M clocks; document in the vulnerability log</td>
+</tr>
+<tr>
+<td>Prototype site (pre-award) defacement or compromise</td>
+<td>Take offline (uptime monitor alerts within minutes), rebuild from source, restore; no Government data is present by design</td>
+</tr>
+<tr>
+<td>Suspected PII/PHI exposure (post-award)</td>
+<td>Treat as presumptive breach: 1-hour COR/CDC notification, CDC/HHS breach procedures govern; contractor does not make external notifications</td>
+</tr>
+</tbody></table>
+<h2>5. Maintenance</h2>
+<p>Reviewed and updated annually, upon significant change to the technical or operational environment,
+and after every incident (PWS Standard-4). The version aligned with CDC procedures is delivered
+as part of the security and privacy documentation package supporting ATD issuance.</p>
+<p><strong>Approved:</strong> Joseph Frasier, Founder and Managing Member, Frasier Digital, LLC · Date: <span class="flag">[FLAG: sign date]</span></p>
