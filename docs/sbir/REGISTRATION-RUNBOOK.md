@@ -36,6 +36,10 @@ lives at sbir.gov and NSF at research.gov.)
 
 ## Step 2 — Research.gov (NSF) account
 
+**Status 9/1/2026: account created — NSF ID `0000A962T`.** Activation email sent to
+joseph@frasierdigital.com (temporary password inside; sign in, set a real password, then
+affiliate the organization and add the PI/AOR roles below).
+
 1. research.gov → "Register" → individual account for you, then affiliate the organization
    (they pull from SAM by UEI — everything's current, expires 5/27/2027).
 2. Roles: you = Principal Investigator + Authorized Organizational Representative (single-member
