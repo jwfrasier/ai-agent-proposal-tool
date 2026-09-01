@@ -1,0 +1,71 @@
+<meta charset="utf-8"><title>dmp</title><style>
+  html, body { font-family: "Times New Roman", Times, serif; font-size: 12pt; line-height: 1.18; color: #000; margin: 0; padding: 0; }
+  * { font-family: "Times New Roman", Times, serif !important; }
+  h1 { font-size: 14pt; font-weight: bold; margin: 0 0 10pt 0; page-break-after: avoid; }
+  h2 { font-size: 13pt; font-weight: bold; margin: 12pt 0 5pt 0; page-break-after: avoid; }
+  h3 { font-size: 12pt; font-weight: bold; margin: 9pt 0 3pt 0; page-break-after: avoid; }
+  p { margin: 0 0 6pt 0; }
+  ul, ol { margin: 0 0 6pt 0; padding-left: 22pt; }
+  li { margin-bottom: 3pt; }
+  hr { border: none; border-top: 0.5pt solid #000; margin: 10pt 0; }
+  a { color: #000; text-decoration: none; }
+  strong { font-weight: bold; } em { font-style: italic; }
+  table { border-collapse: collapse; width: 100%; margin: 6pt 0 10pt 0; font-size: 10pt; page-break-inside: auto; }
+  th, td { border: 0.5pt solid #000; padding: 3pt 5pt; vertical-align: top; text-align: left; }
+  th { background: #e8e8e8; font-weight: bold; }
+  tr { page-break-inside: avoid; }
+  .flag { background: #ffef9e; font-weight: bold; }
+  .vol-title { font-size: 18pt; font-weight: bold; text-align: center; margin: 150pt 0 10pt 0; }
+  .vol-sub { font-size: 13pt; text-align: center; margin: 0 0 6pt 0; }
+  .section-break { page-break-before: always; }
+</style><h1>Data Management Plan (CDCL.10 / CDCM.03)</h1>
+<p><strong>Frasier Digital, LLC — RFQ 75D301-26-Q-00146, Modernized VAERS Reporting Application</strong></p>
+<h2>1. Public health data to be collected or generated during performance</h2>
+<p>The application collects <strong>VAERS adverse-event report submissions</strong> from public and
+healthcare-provider submitters using the data elements of the current VAERS form (as
+furnished by CDC at kickoff), plus: uploaded medical-record documents (Phase 1 scope:
+medical records and vaccine documents related to the administration or adverse event),
+free-text supplemental information, customer-satisfaction survey responses (site
+navigation + post-submission), and operational usage metrics supporting the PWS
+performance targets (completion rates, abandonment, submission timing). The data may
+include PII and PHI. Frasier Digital generates no independent research data; all data is
+collected on CDC&#39;s behalf, inside CDC&#39;s environment, as an instrument of the VAERS
+program.</p>
+<h2>2. Standards</h2>
+<p>Data capture conforms to the <strong>Government-furnished VAERS data element definitions,
+business rules, and integration requirements</strong> (PWS Section 9, provided at kickoff);
+outputs are <strong>VAERS-compatible structured data</strong> with documented mappings (PWS Task 1.9)
+for transmission to existing VAERS systems as directed by CDC. Metadata and export
+formats use open, machine-readable standards (JSON/CSV/XML per the furnished integration
+specifications). Records management follows NARA-approved CDC schedules (CDCH.14).</p>
+<h2>3. Access and sharing — mechanisms, limitations, protections</h2>
+<p>All collected data is <strong>CDC-owned and resides exclusively within the CDC-managed
+FedRAMP-authorized Azure environment</strong>; Frasier Digital asserts no rights and imposes no
+limitations (FAR 52.227-17 unlimited Government rights; HHS/CDC retain unrestricted
+rights to all data). Access is need-to-know, role-based, and logged, under the controls
+of the SSP and the ATD/ATO. <strong>This DMP proposes no public access mechanism:</strong> VAERS
+submission data contains PII/PHI protected by the Privacy Act and HIPAA; public
+availability of VAERS data remains governed by CDC&#39;s existing de-identified VAERS data
+release processes, which are outside this contract&#39;s scope — this justification is
+provided per the CDCL.10 instruction that protections precluding accessibility be
+explained. De-identified, aggregate operational metrics (e.g., satisfaction and
+performance reporting) are delivered to CDC and may be released at CDC&#39;s discretion.
+Custom-developed source code (non-data) is open source per M-16-21 and delivered to the
+CDC-recognized repository.</p>
+<h2>4. Archiving and long-term preservation</h2>
+<p>Data persists in CDC-managed storage under CDC&#39;s NARA-approved records schedules; the
+application implements retention/disposition configuration as directed by CDC records
+authorities rather than contractor-defined schedules. At transition-out or contract
+end, all data, documentation, and configurations are delivered per PWS Task 4 with
+certification of sanitization of any contractor-side copies per NIST SP 800-88 (no
+contractor-side copies are anticipated: development uses synthetic data and Government
+data never leaves the CDC environment). Long-term preservation responsibility rests with
+CDC as data owner; we deliver the technical documentation (schemas, mappings, metadata)
+sufficient for preservation and future use.</p>
+<h2>5. Costs</h2>
+<p>No separate data-management costs: DMP implementation is inherent in the proposed
+firm-fixed price (schema/mapping documentation, retention configuration, transition
+deliverables). No archiving infrastructure is purchased — storage is the CDC-furnished
+environment.</p>
+<p><strong>Lifecycle maintenance:</strong> the DMP will be updated throughout performance as data
+collections evolve (e.g., Phase 2 upload expansion if exercised), per CDCL.10.</p>

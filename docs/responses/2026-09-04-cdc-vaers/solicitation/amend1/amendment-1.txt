@@ -1,0 +1,2231 @@
+                                                                                                                     1. CONTRACT ID CODE                    PAGE    OF PAGES
+   AMENDMENT OF SOLICITATION/MODIFICATION OF CONTRACT                                                                                                          1            44
+ 2. AMENDMENT/MODIFICATION NO.                          3. EFFECTIVE DATE              4. REQUISITION/PURCHASE REQ. NO.                     5. PROJECT NO. (If applicable)
+                      00001                                  08/31/2026                        000HCRDB-2026-00146
+ 6. ISSUED BY              CODE  15948                                                 7. ADMINISTERED BY (If other than Item 6)                  CODE
+ OFR - Office of Acquisition Services
+ Chamblee Campus Building 108
+ 4770 Buford Highway
+ Atlanta, GA 30341-
+
+ 8. NAME AND ADDRESS OF CONTRACTOR (No., street, county, State and ZIP Code)                                         ()   9A. AMENDMENT OF SOLICITATION NO.
+
+                                                                                                                           RFQ 75D301-26-Q-00146
+                                                                                                                     X     9B. DATED (See Item 11)
+
+
+                                                                                                                           10A. MODIFICATION OF CONTRACT/ORDER NO.
+
+
+
+
+                                                                                                                           10B. DATED (See Item 13)
+ CODE                                                        FACILITY CODE
+                                          11. THIS ITEM ONLY APPLIES TO AMENDMENTS OF SOLICITATIONS
+     The above numbered solicitation is amended as set forth in Item 14. The hour and date specified for receipt of Offers    is extended,      is not extended.
+ Offers must acknowledge receipt of this amendment prior to the hour and date specified in the solicitation or as amended, by one of the following methods:
+ (a) By completing Items 8 and 15, and returning          copies of the amendment; (b) By acknowledging receipt of this amendment on each copy of the offer
+ submitted; or (c) By separate letter or telegram which includes a reference to the solicitation and amendment numbers. FAILURE OF YOUR ACKNOWLEGMENT
+ TO BE RECEIVED AT THE PLACE DESIGNATED FOR THE RECEIPT OF OFFERS PRIOR TO THE HOUR AND DATE SPECIFIED MAY RESULT
+ IN REJECTION OF YOUR OFFER. If by virtue of this amendment you desire to change an offer already submitted, such change may be made by telegram or letter,
+ provided each telegram or letter makes reference to the solicitation and this amendment, and is received prior to the opening hour and date specified.
+ 12. ACCOUNTING AND APPROPRIATION DATA (If required)
+
+
+                                    13. THIS ITEM APPLIES ONLY TO MODIFICATIONS OF CONTRACTS/ORDERS,
+                                        IT MODIFIES THE CONTRACT/ORDER NO. AS DESCRIBED IN ITEM 14.
+() A. THIS CHANGE ORDER IS ISSUED PURSUANT TO: (Specify authority) THE CHANGES SET FORTH IN ITEM 14 ARE MADE IN THE CONTRACT ORDER NO. IN
+        ITEM 10A.
+
+     B. THE ABOVE NUMBERED CONTRACT/ORDER IS MODIFIED TO REFLECT THE ADMINISTRATIVE CHANGES (such as changes in paying office, appropriation date,
+        etc.) SET FORTH IN ITEM 14, PURSUANT TO THE AUTHORITY OF FAR 43.103(b).
+     C. THIS SUPPLEMENTAL AGREEMENT IS ENTERED INTO PURSUANT TO AUTHORITY OF:
+
+
+     D. OTHER (Specify type of modification and authority)
+
+
+
+ E. IMPORTANT: Contractor                    is not,         is required to sign this document and return                    copies to the issuing office.
+ 14. DESCRIPTION OF AMENDMENT/MODIFICATION (Organized by UCF section headings, including solicitation/contract subject matter where feasible.)
+
+
+
+ This solicitation amendment is issued to update the solicitation document and to provide the Questions
+ and Answers.
+
+
+ Howard D Bish
+ Contracting Officer
+ uwo8@cdc.gov
+
+
+ Except as provided herein, all terms and conditions of the document referenced in Item 9A or 10A, as heretofore changed, remains unchanged and in full force and effect.
+ 15A. NAME AND TITLE OF SIGNER (Type or print)                                             16A. NAME OF CONTRACTING OFFICER
+                                                                                            Howard D Bish
+
+ 15B. CONTRACTOR/OFFEROR                                      15C. DATE SIGNED              16B. UNITED STATES OF AMERICA                               16C. DATE SIGNED
+
+  ___________________________________________                                               BY ___________________________________________
+        (Signature of person authorized to sign)                                                       (Signature of Contracting Officer)
+NSN 7540-01-152-8070                                                                                                                         STANDARD FORM 30 (REV. 10-83)
+PREVIOUS EDITION UNUSABLE                                                          30-105                                                    Prescribed by GSA
+                                                                                                                                             FAR (48 CFR) 53.243
+                                                                                            Page 2 of 44
+
+
+
+
+RFQ 75D301-26-Q-00146
+Modernized Application for Consumer and Healthcare Provider VAERS Reporting
+Questions and Answers
+
+
+   1. Intelligent completion assistance (PWS Section 2; Task 1). Does the Government envision the
+      "intelligent validation that assists with form completion, answers user questions, and supports site
+      navigation" as a conversational/AI-assistant component, or as rules-based intelligent form
+      validation and contextual guidance? If AI-based approaches are acceptable, may the application
+      leverage CDC's existing FedRAMP-authorized Azure OpenAI services (e.g., via the EDAV
+      environment) rather than introducing new AI services?
+
+       Rule based form validation and AI for contextual guidance. Yes on EDAV or other FedRAMP
+       authorized provider.
+
+   2. Relationship to existing VAERS contracts (PWS Section 3). The PWS directs coordination with
+      "other existing contracts supporting the VAERS system." Please confirm this requirement is a
+      new capability with no incumbent contractor performing this scope, and briefly describe the
+      division of responsibilities between this contract and the existing VAERS support contracts.
+
+       This is a new capability with no incumbent contractor performing this scope of work.
+
+       Contract: #75D30124F19979
+       Contractor: General Dynamics Information Technology, Inc (GDIT)
+       Provides technical and programmatic support services to collect and analyze information
+       on vaccine adverse events (VAEs) and facilitate reporting to VAERS.
+
+       Contract: # 75D30126C20929
+       Contractor: EEC-Lukos JV, LLC
+       Provides CDC with a ready source of clinical, scientific, and technical services for the
+       review, abstraction and revision/updating of Medical Dictionary for Regulatory Activities
+       (MedDRA) coding of VAERS reports and associated medical records.
+
+
+   3. Page-limit treatment of required plans (Section F; CDCL.03/CDCL.10). Please confirm that the
+      Data Management Plan and the AI Compliance and Risk Management Plan are excluded from the
+      15-page Technical Proposal limitation, and identify where the CDCH.10 template referenced in
+      CDCL.03 may be obtained.
+
+       The 15-page limitation applies to the Technical Proposal. All other items may be submitted as
+       attachments and are not counted towards the 15-page limit. Resumes can be submitted as an
+       attachment and do not count against page limit.
+
+   4. Prototype (Tab 2-2). Please confirm that the prototype may be hosted on offeror-provided
+      infrastructure using synthetic data only, and state how long after the submission deadline the
+      prototype link must remain accessible for evaluation.
+
+       Confirmed. The prototype may be hosted on offeror-controlled infrastructure using synthetic/non-
+       production data only. The link must remain live and unchanged through the conclusion of
+                                                                                        Page 3 of 44
+
+
+   evaluation; offerors will be notified if earlier release is appropriate.
+
+
+5. Paperwork Reduction Act. The PWS notes the branching-logic form and new survey instruments
+   may trigger PRA review. Please confirm that PRA clearance activities are a Government
+   responsibility and describe how PRA timelines are expected to interact with the DOA+90-day
+   beta and DOA+150-day production milestones.
+
+   Yes, it’s a government responsibility and we will work with the awardee to address
+   timeline changes where appropriate.
+6. Question: Section F establishes a 15-page limit for the Technical Proposal and excludes
+   cover pages, tables of contents, and resumes. The solicitation separately requires a Data
+   Management Plan (per CDCL.10, evaluated under CDCM.03) and an Artificial Intelligence
+   Compliance and Risk Management Plan (per CDCH.10 and CDCL.03, evaluated under
+   CDCM.04), but neither appears in the Technical Volume tab structure in Section F. Please
+   confirm whether the Data Management Plan and the AI Compliance and Risk Management
+   Plan (a) count against the 15-page Technical Proposal limit, or (b) should be submitted as
+   separate attachments outside the page limit.
+
+   See answer to Question 3.
+
+7. Will the Government consider offerors whose relevant experience consists primarily of
+   commercial software modernization and custom application development projects,
+   provided they can clearly demonstrate the technical capability to perform the work? Or is
+   prior experience performing similar work specifically for the CDC or another Federal agency
+   expected to be a significant evaluation factor?
+
+   Yes. Relevant commercial or non-federal experience demonstrating comparable technical
+   complexity, healthcare workflows, and regulatory/PHI-PII requirements will be considered
+   under the Similar Experience factor.
+
+8. Additionally, is the Government open to proposals from newly established small
+   businesses that demonstrate strong technical capability and a credible execution
+   approach, even if they have limited federal prime contract past performance?
+
+   Yes. The Government will evaluate demonstrated technical capability and credible
+   execution approach; extensive federal prime experience is not a mandatory prerequisite.
+9. Scope of security authorization: ATD versus ATO.
+   PWS Section 5 and the stated objective describe the contractor producing security and
+   privacy documentation sufficient for CDC, in coordination with OCIO, to issue an Authority
+   to Develop. Section 11 also references an Authority to Operate, and the Standard 3 and
+   Standard 4 requirements describe a full Security Assessment and Authorization package
+   due within 120 days of the planned go-live date, including SSP, SAR, POA&M, contingency
+   plan and test, E-Authentication assessment, and penetration test results.
+
+   A development environment for the new VAERS user interface can be established within
+   CDC’s OCIO-hosted infrastructure using authorized software under a Change Request
+   (CR). Once all requirements are documented, a change request can be completed within
+   weeks. Those requirements include items such as identification and documentation of
+                                                                                       Page 4 of 44
+
+
+   software, architecture, configurations of products, vulnerability scans (once stood up),
+   firewall rules, etc. package. Government will provide existing information, as applicable.
+   Awardee is responsible for updating the security and privacy documentation package.
+
+10. Please confirm the contractor's responsibility. Specifically, is the contractor deploying into
+    CDC's existing FedRAMP-authorized Azure environment and producing documentation to
+    support CDC's issuance of the ATD and ATO, or is the contractor responsible for obtaining a
+    separate system authorization, including any third-party assessment organization
+    involvement?
+
+   See answer to Question 9.
+
+11. Placement and page treatment of required standalone plans.
+    Section L identifies the Volume I structure as Tab 1 Executive Summary, Tab 2 Technical
+    Approach, Tab 3 Management Approach, and Tab 4 Similar Experience, subject to the 15-
+    page limitation. Separately, the solicitation requires a Data Management Plan, an Artificial
+    Intelligence Compliance and Risk Management Plan, an Incident Response Plan, and a
+    Section 508 Accessibility Conformance Report.
+
+   See answer to Question 3.
+12. Please confirm where these documents should be placed in the quotation, and whether
+    they are excluded from the 15-page limitation in the same manner as cover pages, the table
+    of contents, and Key Personnel resumes.
+
+   See answer to Question 3.
+13. Final delivery date. The deliverables schedule lists the Testing and Final Release
+    (Production-Ready) deliverable as due both "DOA + 150 days" and "by end of period of
+    performance." Please confirm which date governs.
+
+   No separate option CLIN exists in Section B. Offerors are advised to rely on the solicitation
+   as written; no separately priced option period is required. DOA + 150 days governs.
+
+14. Option to extend services.
+    FAR 52.217-8, Option to Extend Services, is incorporated, and FAR 52.217-5 provides that
+    option prices are added to the total for evaluation. The schedule does not include a priced
+    option line item. Please confirm whether offerors should price an option period, and if so, in
+    what format.
+
+   FAR 52.217-8 is removed from the solicitation and will not be included any resulting award. This
+   requirement is considered to be for nonseverable services which means that it is a specific entire
+   job or undertaking, resulting in a defined end product, and provides value to the Government only
+   at the time the entire job is completed.
+
+15. Vulnerability remediation timeframes.
+    The POA&M requirements state remediation timeframes of 15 days for critical and 30 days
+    for high findings, with medium findings shown as 60 days in one section and 90 days in the
+    vulnerability management and cloud sections. Please confirm the governing timeframe for
+    medium findings.
+                                                                                         Page 5 of 44
+
+
+    It is recommended to use 60 days for any planning purposes.
+
+16. Submission email address.
+    The solicitation shows the submission address as uwo8@cdc.gov in most places, and as
+    uw08@cdc.gov in one instance in the instructions. These differ by a letter "o" versus a zero.
+    We are submitting to uwo8@cdc.gov and wanted to flag the discrepancy in case it is a
+    typographical error that could affect other offerors.
+
+    Submissions should be made to: uwo8@cdc.gov.
+
+17. Evaluation factors. Will the Government confirm the evaluation factors and their relative
+    importance for this quotation, including whether technical approach and past performance are
+    evaluated factors?
+    The evaluation factors are as indicated in solicitation Section E:
+
+    Factor 1: Technical
+            Sub-Factor 1: Technical Approach
+            Sub-Factor 2: Management Approach
+            Sub-Factor 3: Similar Experience
+
+    Factor 2: Price
+
+    Factor 3: Past Performance
+
+    Evaluation factors are listed in descending order of importance. Evaluation factors other than
+    price when combined are significantly more important than price.
+18. Past performance sources. Given the small-business set-aside, will the Government consider
+    recent commercial or non-federal past performance, and the past performance of proposed
+    subcontractors or teaming partners, in the evaluation?
+
+    Yes.
+
+19. Quote format. Are there page limits, formatting requirements, or specified volumes/sections for
+    the technical and price quote?
+
+    See solicitation Section F – Instructions to Offerors.
+
+20. Teaming and subcontracting. Does the Government anticipate that offerors may team or
+    subcontract to deliver the full scope across development, UX/Section 508, and security
+    authorization, and are there limitations on subcontracting beyond the standard clause?
+
+    Teaming and subcontracting are both permissible approaches. There are no limitations on
+    subcontracting beyond the standard clauses.
+
+21. Security authorization. Will the Government clarify the expected division of responsibility for the
+    SA&A/ATO package between the contractor and CDC/OCIO, and whether an existing System
+    Security Plan or defined authorization boundary will be provided as a starting point?
+    See answer to Question 9.
+
+22. Incumbent and access timing. Is there an incumbent currently supporting VAERS reporting, and
+    if so, will incumbent-developed code, designs, or artifacts be furnished as Government-Furnished
+                                                                                           Page 6 of 44
+
+
+    Information at kickoff? Relatedly, given the Tier 2 background investigation requirement and the
+    nine-month period of performance, when does CDC anticipate issuing PIV credentials and
+    granting Azure environment access relative to award?
+    Offerors are advised to rely on the solicitation as written. No further information regarding
+    incumbent status is provided. PIV credentials and Cloud environment access timing relative to
+    award will be addressed at kickoff. See also Question 13 regarding schedule.
+23. Section 508 deliverables. Will the Government confirm whether the required ACR/VPAT applies
+    to the final application only or also to interim/beta releases, and whether manual assistive-
+    technology testing is expected in addition to automated scanning?
+    The ACR/VPAT is due with Beta Release (draft) and updated with Final Release. Manual
+    assistive-technology testing is expected in addition to automated scanning.
+
+24. We noticed the solicitation has 3 modifications recorded on SAM.gov. Are there any updated or
+    additional documents we should review beyond the RFQ PDF currently attached?
+
+    No – the only prior modification was to add the following update:
+    8/18/2026 Updates: 1. Questions are due 8/20/2026 2:00 PM ET. 2. Add Attachment 1 Artificial
+    Intelligence (AI) Use Compliance and Risk Management Plan.
+
+25. Could you confirm the preferred submission format — are quotes to be submitted via email to
+    this address, and are there any page limits or specific formatting requirements?
+
+    See answers to questions 3 and 16.
+26. For the Similar Experience Factor, may the Government consider relevant experience performed
+    by proposed subcontractors and key personnel, or must the experience have been performed
+    under a contract held directly by the prime Offeror?
+    Subcontractor and key personnel experiences may be considered under the Similar Experience
+    factor.
+27. If subcontractor experience may be considered, are there any minimum workshare, commitment-
+    letter, or documentation requirements beyond the draft subcontracting agreement identified in the
+    RFQ?
+    No, only a written draft Subcontracting Agreement is required. No additional minimum
+    workshare documentation is required.
+
+28. For the proposal prototype, would an interactive prototype using synthetic data and demonstrating
+    representative workflows, branching logic, validation, accessibility, and user assistance satisfy the
+    requirement, or is the Government expecting a functioning full-stack application connected to a
+    database?
+    Yes, prototypes may be on Contractor controlled infrastructure, and no restrictions as long as
+    the prototype tech stack uses the same tech stack available and operated at CDC and are part of
+    FedRAMP approved and operated infrastructure.
+
+
+29. Must the proposal prototype be hosted within a FedRAMP-authorized environment, or may it be
+    hosted in a commercially available environment provided that it contains no VAERS data, PHI,
+    PII, or other Government information?
+                                                                                           Page 7 of 44
+
+
+    See answer to question 28.
+
+30. Does the Government require the “intelligent validation,” form-completion assistance,
+    supplemental-document suggestion tool, and interactive FAQ capabilities to use artificial
+    intelligence, or may Offerors propose deterministic rules-based functionality where appropriate?
+    Offerors may propose deterministic rules-based functionality where appropriate; AI is not
+    mandated, but considered helpful for contextual follow up question assistance.
+31. If an Offeror proposes no AI use in its solution, is an Artificial Intelligence Compliance and Risk
+    Management Plan still required with the proposal? If a plan is required, should the Offeror submit
+    the provided attachment indicating that AI is not proposed?
+    Yes, an AI Compliance and Risk Management Plan is required with every proposal. If no AI use is
+    proposed, submit the attachment indicating no AI use.
+
+32. Will the Government provide the selected contractor with the current VAERS data dictionary,
+    interface specifications, validation rules, integration documentation, representative test scenarios,
+    and baseline performance data following award?
+    Yes, these will be furnished at kickoff per PWS Section 9.
+
+33. The RFQ requires resumes for all proposed key personnel, while the Key Personnel table in
+    Section D does not identify specific positions. May Offerors determine and propose their own key
+    personnel positions based on their technical and management approaches?
+    Yes, offerors may propose their own Key Personnel positions consistent with their technical and
+    management approach. The Government did not identify any specific positions as key personnel
+    positions.
+
+34. Please confirm whether the 15-page Technical Proposal limitation includes the prototype
+    documentation and the Artificial Intelligence Compliance and Risk Management Plan, and
+    whether the Data Management Plan is included in or excluded from that limitation.
+    See answer to Question 3.
+35. Will the Government accept relevant commercial healthcare application experience as Similar
+    Experience when it demonstrates comparable healthcare workflows, PHI/PII safeguards,
+    regulatory requirements, technical complexity, and stakeholder coordination, even if the work
+    was not performed for a federal customer?
+    Yes, provided it demonstrates comparable workflows, PHI/PII safeguards, regulatory
+    requirements, complexity, and stakeholder coordination.
+
+36. Page limit. Section II states that cover pages, tables of contents, and resumes are excluded from
+    the fifteen-page Technical Proposal limit. HHSAR 352.239-78 separately requires an Accessibility
+    Conformance Report, and CDCL.03 requires an AI Compliance and Risk Management Plan where
+    AI use is identified. Do those two documents count against the fifteen pages, or are they
+    submitted as separate attachments alongside Volume I?
+
+    See answer to Question 3.
+37. Signature. Block 14 of the SF-18 calls for the signature of the person authorized to sign the
+    quotation. Does CDC accept a typed or electronic signature there, or does the Government
+    require a scanned wet signature?
+                                                                                        Page 8 of 44
+
+
+
+
+    An electronic signature is acceptable.
+
+38. Page limitation and required plans. Section F states the Technical Proposal shall not exceed 15
+    pages, with only cover pages, tables of contents, and resumes excluded. The solicitation also
+    requires several plans and documents at proposal time — the AI Use Compliance and Risk
+    Management Plan (Attachment 1 template, CDCH.10/CDCL.03), the Data Management Plan
+    (CDCL.10), the Incident Response Plan (listed in the deliverables table as due "as part of
+    Proposal"), and the Section 508 Accessibility Conformance Checklist or ACR (HHSAR 352.239-
+    78(b)/(d)). Do these documents count against the 15-page Technical Proposal limit, or may they
+    be submitted as separate attachments excluded from the page count?
+
+    See answer to Question 3.
+
+
+39. Section 508 submission at proposal time. HHSAR 352.239-78(b) and (d) require an HHS Section
+    508 Accessibility Conformance Checklist or an ACR/VPAT with the proposal. Because this
+    acquisition is for the development of an application that does not yet exist, would the Government
+    please confirm which submission it expects: (a) an HHS Section 508 Accessibility Conformance
+    Checklist completed for the ICT services to be developed, (b) an ACR/VPAT prepared against
+    the offeror's prototype, or (c) both? If a specific checklist from the HHS library is preferred,
+    please identify it.
+
+    See answer to Question 23.
+
+40. AI Use Compliance and Risk Management Plan format. Should the completed Attachment
+    1 template be submitted as its own document (Word or PDF attachment), or should its content
+    be reproduced within Volume I? If submitted as its own document, please confirm it is not
+    counted against the 15-page limit (see Question 1).
+    See answer to Question 3.
+41. Prototype accessibility from the CDC network. The prototype must be provided as an accessible
+    electronic link that the Government can reach and evaluate. Will the evaluation team be able to
+    access an externally hosted, publicly reachable HTTPS website on a non-.gov commercial
+    domain from the CDC network, and are there any restrictions on hosting location, domain, or site
+    technology the Government would like offerors to observe? Also, through what date should
+    offerors keep the prototype link live and unchanged?
+
+    Yes, evaluation team can access the link to an externally hosted, publicly reachable commercial
+    domain. However, the prototype tech stack used should be the same tech stack available and
+    operated at CDC and are part of FedRAMP approved and operated infrastructure (see also answer
+    to question 28).
+
+    The link should remain available throughout the evaluation process.
+
+
+42. Timing of Government-furnished access. PWS Section 5 states that PIV cards and laptops will be
+    furnished by the Government and that CDC will provide access to the CDC-managed
+    Azure environment. Given that the staff roster is due 30 days before the contract effective date
+    and that background investigations and training precede system access, when — relative to
+    the 09/28/2026 effective date — should offerors assume contractor personnel will receive
+                                                                                         Page 9 of 44
+
+
+    PIV credentials, Government laptops, and CDC Azure environment access? Should proposed
+    schedules assume development environment access is available on the effective date, or at some
+    later milestone?
+
+    Offerors should assume development environment access may not be available on / within two
+    weeks of start date and should build reasonable ramp-up time into their schedules; milestone
+    dates will be adjusted for Government-caused delays consistent with standard FAR delay
+    provisions.
+
+43. Paperwork Reduction Act clearance. The PWS states the Government will determine
+    PRA applicability and recommends early CO/PRA engagement, and HHSAR 352.211-3 requires
+    the contractor to allow at least 120 days for OMB clearance and prohibits data collection before
+    written CO authorization. Within the nine-month period of performance, does CDC hold
+    existing OMB clearance covering the redesigned reporting form and the new satisfaction
+    survey instruments (PWS 1.5 and 1.7), or should offerors plan and price contractor support for a
+    new or revised information collection request? What schedule assumption would the Government
+    like offerors to use for PRA clearance?
+
+    See answer to question 5.
+
+44. Baseline for the abandonment-rate requirement. PWS 1.10 and PRS require reducing
+    the submission abandonment rate by at least 30 percent compared to the baseline established
+    at project kickoff. Will the Government provide current VAERS submission analytics —
+    abandonment rate, completion time, and related metrics — for establishing that baseline, or is
+    the contractor responsible for instrumenting the current system and measuring the baseline
+    at kickoff? If the latter, is measurement of the existing system within the contract scope?
+
+    The Contractor is responsible for instrumenting the existing system and establishing the baseline
+    after project kickoff; this is within scope. The Government does not currently maintain this
+    analytics baseline.
+
+45. Existing application and upload tool documentation. PWS 2.1 requires integrating a new medical-
+    record upload capability while maintaining the current post-submission upload tool, and PRS#9
+    evaluates preservation of that tool. Will documentation, interface specifications, or source code
+    for the current VAERS reporting application and the existing post-submission upload tool be
+    made available to the awardee as Government-furnished information, and at what point after
+    award?
+
+    Available documentation will be furnished at kickoff; existing source code will be made available
+    to the extent it exists and is releasable.
+
+46. Option pricing. The schedule contains CLINs 0001 through 0003 with no separately identified
+    option period, while FAR 52.217-8 (Option to Extend Services) is incorporated and the
+    evaluation provision states that option prices will be added to the base for award purposes. Should
+    offerors include separately priced amounts for the potential six-month extension of services, and
+    if so, under what CLIN structure should those amounts be presented in the Price Proposal?
+
+    CLIN 0001 is the primary CLIN for this project. CLINs 0002 and 0003 are travel CLINs that
+    the Government will fund if determined to be necessary. FAR 52.217-8 is removed from the
+    solicitation. Also, see answers to questions 13 and 14.
+                                                                                           Page 10 of 44
+
+
+
+
+47. Set-aside status. Block 10 of the SF-18 is difficult to read in the posted PDF, and the notice on
+    SAM.gov does not display a set-aside type. Could you confirm whether this RFQ is a small
+    business set-aside?
+    This requirement is a 100% small business set-aside.
+
+48. Contract support hours. PWS Section 6, Subsection B requires contract support during CDC core
+    business hours, 8:30 a.m. to 5:00 p.m. ET. Could you clarify what that requires in practice: a
+    continuously staffed availability window, or availability for scheduled coordination and
+    Government-initiated contact within a defined response time? If there is an expected response
+    time we would like to price to it rather than guess.
+
+    Availability for scheduled coordination and Government-initiated contact within a reasonable
+    response time is sufficient. Offerors should propose their own reasonable response-time
+    commitment.
+
+49. SA&A package. The RFQ requires the contractor to complete and maintain an agency SA&A
+    package to support the agency ATO. As VAERS is an existing system, does CDC provide
+    existing artifacts such as a current System Security Plan, contingency plan or prior POA&M as a
+    starting point, or is the package expected to be developed from scratch?
+
+    Government will provide existing system artifacts and information, as applicable. You are not
+    expected to create a package from scratch.
+50. Proposal Prototype Hosting and Environment
+    Section F requires offerors to provide an accessible electronic link to the prototype for evaluation.
+    Please confirm that the proposal-stage prototype may be hosted in a contractor-controlled
+    commercial environment outside the CDC Azure environment, using synthetic/non-production
+    data, and that CDC security authorization/ATO requirements apply to the post-award application
+    rather than the proposal prototype.
+    See answer to questions 28 and 41.
+
+51. Draft Subcontracting Agreement and 15-Page Limit
+    Section F limits Volume I, Technical Proposal, to 15 pages, excluding cover pages, tables of
+    contents, and resumes. Tab 3-1 also requires offerors proposing subcontractors to provide a
+    written copy of the proposed draft Subcontracting Agreement. Please confirm that the draft
+    Subcontracting Agreement may be submitted as a separate attachment and is excluded from the
+    15-page Technical Proposal limitation.
+
+    See answer to Question 3.
+
+52. Data Management Plan and 15-Page Limit
+    CDCL.10 requires a Data Management Plan as part of the proposal and states that a proposal
+    received without a DMP will be deemed unacceptable. Please identify the proposal volume or
+    attachment in which the DMP should be submitted and confirm whether it is excluded from the
+    15-page Technical Proposal limitation.
+
+    See answer to Question 3.
+
+53. FedRAMP / ATO Authorization Boundary
+    The PWS states that the application will be developed and deployed within the CDC-managed
+    FedRAMP-authorized Azure environment and that the contractor will support CDC/OCIO
+                                                                                        Page 11 of 44
+
+
+    issuance of the ATD and ATO. Standard-4 also references a FedRAMP-compliant ATO, 3PAO
+    assessment, and agency SA&A. Please clarify whether the contractor-developed application
+    operating entirely within CDC's managed Azure environment is expected to obtain a separate
+    contractor/vendor FedRAMP authorization and 3PAO assessment, or whether the contractor is
+    expected to support CDC's application-level ATD/SA&A/ATO within the existing CDC cloud
+    authorization boundary.
+    No, the contractor will not need to obtain a separate ATO. The existing VAERS Azure
+    environment operates under CDC's existing authorization. The new application will be evaluated
+    for inheritance of applicable controls where appropriate, subject to CDC/OCIO's determination
+    during the ATD/ATO process. The Contractor is responsible for updating the security and
+    privacy documentation package. See answer to Question 9.
+
+
+54. Final Release Due Date
+    Section 8 identifies the Testing and Final Release (Production-Ready) deliverable as due “By end
+    of PoP (DOA + 150 days).” The stated Period of Performance is September 28, 2026 through
+    June 27, 2027, which is longer than 150 days. Please clarify whether the Production-Ready Final
+    Release is due 150 days after date of award or at the end of the nine-month Period of
+    Performance.
+    See answer to Question 13.
+
+55. Day-45 Alpha Integration Expectation
+    Section 8 requires a Working Prototype (Alpha) Demonstration Build within 45 calendar days,
+    while Section 9 states that VAERS data-element definitions, business rules, and integration
+    requirements will be provided at kickoff. Please clarify whether the Day-45 Alpha is required to
+    be integrated end-to-end with the existing VAERS environment, or whether the Alpha may
+    demonstrate the production application workflow and VAERS-compatible structured output using
+    a staged or simulated integration boundary, with operational VAERS integration completed
+    during subsequent Beta/Final activities.
+    The Alpha may demonstrate the production workflow and VAERS-compatible structured output
+    using a staged or simulated integration boundary; full operational integration is completed
+    during subsequent Beta/Final activities.
+
+56. Section 508 Documentation at Proposal Stage
+    HHSAR 352.239-78 on page 34 requires offerors to submit an appropriate HHS Section 508
+    Accessibility Conformance Checklist or Accessibility Conformance Report (ACR/VPAT) with
+    their offer. This solicitation is for development of a new custom web application that will not
+    exist in completed form at the time of proposal submission, and Section 8 separately requires an
+    ACR/VPAT with the Beta Release, updated with Final. Please clarify what Section 508
+    documentation the Government requires at proposal submission for a not-yet-developed custom
+    application, and whether an applicable HHS accessibility checklist addressing the proposed
+    development approach is sufficient at this stage.
+    See answer to Question 23.
+57. Magnitude. Can CDC share the IGCE range or the estimated level of effort (labor hours or FTEs)
+    for CLIN 0001? Is this acquisition being conducted under the simplified acquisition threshold?
+
+    The CDC will not disclose the Independent Government Cost Estimate (IGCE) nor an estimated
+    level of effort. The CDC is intentionally allowing the contractor community to independently
+                                                                                           Page 12 of 44
+
+
+    assess the requirements, leverage its industry expertise, and propose the most effective, efficient,
+    and innovative solution to meet the Government’s objectives.
+
+58. Hosting and authorization. The PWS places the application inside CDC's FedRAMP-authorized
+    Azure environment (Task 3.2, Section 11). Please confirm the contractor is not expected to hold
+    or obtain its own FedRAMP cloud service provider authorization, and that the SA&A obligation
+    is the agency ATD/ATO package for the application within CDC's existing boundary.
+    See answer to Question 9.
+
+59. Prototype (Tab 2-2). May the prototype be hosted on the offeror's own infrastructure using
+    synthetic data, and does it need to remain available only at submission or through the evaluation
+    period?
+    See answer to questions 28 and 41.
+
+60. Incumbency. Is there a current contractor supporting the VAERS public reporting front end, and
+    is this scope new work or a re-compete?
+
+    See answer to question 2.
+
+
+61. Key personnel and experience. How many key personnel positions does CDC expect? Can the
+    healthcare informatics experience evaluated under Tabs 3-2 and 4 be satisfied by proposed key
+    personnel or a subcontractor rather than the prime's corporate history, consistent with FAR
+    15.305(a)(2)(iii)?
+
+    The determination to identify key personnel is at the offeror’s discretion. Yes, key personnel or
+    subcontractor experience can satisfy health informatics experience rather than prime contractor’s
+    corporate history.
+
+
+62. 1CDP. Is integration with the One CDC Data Platform (Palantir Foundry) in base scope, or is
+    delivery of VAERS-compatible structured data mappings under Task 1.9 sufficient?
+    Delivery of VAERS-compatible structured data mappings under Task 1.9 is sufficient; 1CDP
+    integration is not in base scope.
+
+63. Contract vehicle. Task 4 and the Management Approach instructions refer to a "task order" and
+    an "incumbent Contractor." Please confirm this is a standalone firm-fixed-price contract and not
+    an order under an IDIQ or BPA.
+
+    This is a stand alone firm-fixed-price contract. All references to “task order: in the solicitation
+    should be to “contract.” There is no incumbent. This requirement is not an order under an IDIQ or
+    BPA.
+
+64. Background investigations. Section 11, paragraph 5 (Position Sensitivity Designations) is blank.
+    What investigation tier applies to contractor staff?
+    Public Trust Tier 2 applies.
+65. Section F.I excludes only cover pages, tables of contents, and resumes from the Volume I 15-
+    page limitation. The solicitation separately requires a Data Management Plan (CDCL.10), an AI
+    Compliance and Risk Management Plan where AI use is planned or potential
+    (CDCL.03/CDCH.10), a Section 508 Accessibility Conformance Checklist or ACR/VPAT
+                                                                                         Page 13 of 44
+
+
+    (HHSAR 352.239-78), and an Incident Response Plan “as part of Proposal” (PWS Standard-4).
+    Please confirm if these solicitation-required plans and artifacts (a) are excluded from the Volume
+    I 15-page limitation, and if not, (b) where they should be submitted.
+
+    See answer to Question 3.
+
+66. If subcontractors are proposed, may the required written copy of the draft Subcontracting
+    Agreement be submitted as an appendix, excluded from the Volume I 15-page limitation?
+
+    See answer to Question 3.
+
+67. Section B pre-prints CLINs 0002 and 0003 at $31,500.00 each (“Estimate” / “Not-to-Exceed”).
+    Should quoters carry these pre-printed NTE amounts as the quoted unit and extended prices for
+    CLINs 0002–0003 (with itemized travel estimates provided as supporting back-up
+    documentation), or should quoters propose actual estimated travel amounts below the NTE?
+    Please also confirm how CLINs 0002–0003 will be treated in the total evaluated price.
+
+    Offerors are to all use the same unit and extended NTE prices for CLINs 0002 and 0003. Both
+    CLINs should have a unit price and NTE extended price of $31,500.00.
+
+68. FAR 52.217-8 is included in the contract clauses. Will the potential six-month extension of
+    services be included in the total evaluated price (e.g., by adding up to six months of performance
+    at contract rates), and if so, how should quoters present pricing for the extension period?
+    See answer to question 14.
+
+69. Please confirm which provision fill-ins, representations, and certifications must be completed and
+    returned with the quotation (e.g., FAR 52.203-11, 52.203-18, 52.204-7, 52.229-11, and 52.240-
+    90), whether current SAM.gov representations and certifications satisfy any of these
+    requirements, and whether the CDCL.09 CPARS contractor representative information is
+    required with the quotation or at award.
+
+    Offerors are to complete any fill-ins, representations, and certifications required by the FAR
+    provisions indicated in the solicitation. If they are part of the current SAM.gov representations
+    and certifications then separate submissions are not required. Offerors are to complete CDCL.09.
+    The documentation can be submitted as part of the Price Proposal.
+
+70. Section F.I directs quotations to uwo8@cdc.gov but directs questions “exclusively by email to
+    uw08@cdc.gov,” while page 1 directs questions, quotes, and all communication to
+    uwo8@cdc.gov. Please confirm the correct e-mail address(es) for (a) questions and (b) quotation
+    submission, and whether the Government will acknowledge receipt of quotations.
+    See answer to Question 16.
+71. CDCL.03 requires the AI Compliance and Risk Management Plan to be submitted “using the
+    template provided,” but no template accompanies the RFQ document, and the invoicing
+    instructions reference a “Section J, List of Attachments” that the RFQ does not contain. Please
+    provide the AI plan template (Attachment 1) or identify where it is posted, and confirm the
+    complete list of attachments to this solicitation.
+    The AI plan attachment was added to the solicitation notice on 8/18/2026.
+    8/18/2026 Updates: 1. Questions are due 8/20/2026 2:00 PM ET. 2. Add Attachment 1 Artificial
+    Intelligence (AI) Use Compliance and Risk Management Plan.
+                                                                                          Page 14 of 44
+
+
+72. For the prototype submitted through an accessible electronic link: are credential-protected links
+    acceptable if access credentials are provided in the proposal? Should the link remain accessible
+    and unchanged through the full evaluation period, and will evaluators access it from the CDC
+    network (relevant to any firewall or allow-listing constraints)?
+    See answer to questions 28 and 41. The link should remain through evaluation period and
+    accessors will access it from the CDC network.
+
+73. The RFQ does not state where the completed and signed SF 18 should be placed within the two-
+    volume submission. Please advise where the Government prefers the signed SF 18 to be placed.
+    Please also confirm that quoters may annotate the SF 18 schedule block with “See Price
+    Breakdown Worksheet” in lieu of restating pricing on the form.
+
+    The signed SF 18 is to be included with the Price Proposal. Offerors may annotate the SF 18
+    schedule with “See Price Breakdown Worksheet” in lieu of restating pricing on the form.
+
+74. Correct email address for proposals and for questions
+
+    Section F, page 61, directs proposals to uwo8@cdc.gov and questions to uw08@cdc.gov. Please
+    confirm which address is correct for each, so that we can be certain our proposal volumes reach
+    the Contracting Officer. We have copied both addresses on this message for that reason.
+    See answer to Question 16.
+75. Attachment 1 and the 15-page Technical Proposal limitation
+
+    Amendment 0001 adds Attachment 1, the Artificial Intelligence (AI) Use Compliance and Risk
+    Management Plan. Section F excludes cover pages, tables of contents and resumes from the 15-
+    page limitation by name, and is silent on attachments. Please confirm whether Attachment 1
+    counts toward the 15-page Technical Proposal limitation, or is excluded from it.
+
+    We would ask the same of the Data Management Plan required by CDCL.10 and the
+    Accessibility Conformance Report required by HHSAR 352.239-78, both of which are submitted
+    with the proposal and neither of which is named in the Section F tab structure.
+    See answer to question 3.
+76. HHS onboarding and the period of performance
+
+    The PWS requires a completed background investigation through HHS onboarding for all
+    contractor and subcontractor personnel before work begins, with a period of performance starting
+    28 September 2026. Please confirm whether the onboarding period falls within the period of
+    performance, and advise the Government's expected processing time, so that offerors can
+    schedule accordingly.
+    See answer to question 42.
+77. Government-furnished information on the existing application
+
+    Please confirm what the Government will furnish at award regarding the existing VAERS
+    reporting application, specifically source code, data model documentation, design assets, and any
+    current Accessibility Conformance Report, and whether access to the CDC-managed Azure
+    environment is provided at start of performance.
+                                                                                         Page 15 of 44
+
+
+    Available documentation, including any existing ACR, will be furnished at kickoff to the extent it
+    exists and is releasable. Access to the CDC-managed Azure environment is provided per the
+    ATD-governed schedule discussed in Question 22.
+
+78. Is the working prototype a scored evaluation factor, or a supporting exhibit to the Technical Plan?
+    The prototype (Tab 2-2) is a scored element of the Technical Proposal evaluation.
+
+79. Task 1.1 requires requirements gathering after award. On what requirements does CDC expect
+    offerors to base a pre-award prototype?
+    Offerors should base the prototype on the publicly available current VAERS form and general
+    PWS requirements. Full data elements and business rules will be provided at kickoff. The
+    current form can be found at VAERS - Download / Upload a Writable PDF Form and the VAERS
+    Data Use Guide found at VAERS - Data Sets provides field names and form box alignment
+    (derived fields are related to this RFQ).
+
+80. What minimum functionality must the prototype demonstrate?
+    See answer to Question 28.
+
+81. Will CDC release the current VAERS form data elements and business rules before the due date
+    so prototypes can be based on them? Section 9 currently provides them at kickoff.
+    Offerors should base the prototype on the publicly available current VAERS form and general
+    PWS requirements. Any additional data elements and business rules will be provided at kickoff.
+    See question 264 for specific public artifacts available.
+
+82. If there are unforeseen delays from the Government side for ATD issuance, PIV provisioning, or
+    EPLC stage gate review, will the Day 45 Alpha, Day 90 Beta, and final release milestones be
+    adjusted?
+    Yes, milestone dates will be adjusted to the extent delays are attributable to Government
+    dependencies, consistent with standard FAR provisions.
+
+83. Section 5 states CDC will provide access to the CDC-managed Azure environment for
+    development, testing, and deployment, governed by the ATD. Please clarify whether the
+    Contractor is expected to perform initial design and development in Contractor-provided or
+    commercially available environments prior to ATD issuance and CDC environment provisioning,
+    or whether all development must occur within the CDC environment. If Contractor environments
+    are used, please confirm the applicable security configuration and scanning requirements under
+    Standard-3.
+    Yes, provided appropriate security configuration and scanning consistent with Standard-3
+    requirements are applied, and no Government/PHI/PII data is used prior to ATD/ATO issuance.
+
+84. Please clarify whether the Contractor is expected to author the full ATD, SA&A, and ATO
+    documentation packages, or to provide supporting input to CDC-authored packages. This
+    materially affects the level of effort proposed.
+    Correct. No, the contractor will not need to obtain a separate ATO. However, the Contractor is
+    responsible for updating the security and privacy documentation package.
+                                                                                           Page 16 of 44
+
+
+85. Section G requires Key Personnel resumes to demonstrate hands-on experience in healthcare
+    informatics, public health surveillance, or healthcare data management. Will comparable
+    experience delivering secure, regulated data systems for other federal agencies be considered
+    qualifying?
+    Yes, comparable experience delivering secure, regulated data systems for other federal agencies
+    will be considered.
+
+86. Which positions are considered Key Personnel, and is there a limit on the number of resumes?
+    The CDCH.04 table is blank.
+    See answer to Question 33. There is no stated limit on the number of Key Personnel resumes.
+
+87. Task 1.4 requires intelligent completion assistance. If an offeror proposes to meet this with rules-
+    based logic and conditional guidance rather than artificial intelligence, is an AI Compliance and
+    Risk Management Plan (Attachment 1) still required?
+    See answer to Question 31.
+
+88. Are the Data Management Plan, AI Compliance and Risk Management Plan, Incident Response
+    Plan, ACR/VPAT, draft subcontracting agreement, and three-year employee turnover table
+    required with the proposal, and if so, are they excluded from the 15-page limit?
+
+    See answer to Question 3.
+
+89. Please confirm CLIN 0001 is the only CLIN offerors price, and whether it is invoiced in nine
+    equal monthly increments or upon deliverable acceptance.
+
+    Confirmed, CLIN 0001 is the only CLIN offerors are to price. Offerors are to include $31,500 as
+    the unit and NTE extended price for CLINs 0002 and 0003. The proposed payment schedule can
+    be by deliverable acceptance or monthly increments.
+
+90. Section 8 states final release is due at DOA + 150 days, but the stated period of performance is
+    nine months. Please confirm the correct final release date.
+    See answer to Question 13.
+
+91. Standard-11 requires open-source release under FAR 52.227-14, while FAR 52.227-17 restricts
+    release without Contracting Officer permission. Which governs custom code developed under this
+    order?
+
+    The custom code is to be governed by FAR 52.227-17.
+92. Could CDC provide an overview of the current VAERS reporting application's architecture,
+    including the existing application components, frameworks, databases, APIs, integrations,
+    and infrastructure that the Contractor will need to interface with or replace?
+
+    See PWS Subsection D for the current architecture summary (Azure SQL Managed Instance,
+    VMs, ColdFusion, Tomcat, Node.js, .NET, Akamai, Blob Storage, Key Vault, Logic Apps).
+    Additional documentation will be furnished at kickoff.
+                                                                                     Page 17 of 44
+
+
+93. Could CDC provide documentation of the current VAERS data model, data elements,
+    business rules, validation rules, and integration specifications that will be available to the
+    Contractor at project kickoff?
+
+   See answer to Question 32.
+
+94. Could you please confirm will the Contractor be expected to modify or replace any existing
+    VAERS backend components, or is the scope limited to developing the new reporting
+    application and integrating with existing VAERS services?
+
+   Scope is limited to developing the new reporting application and integrating with existing
+   VAERS services. Wholesale replacement of backend components is not required.
+
+95. Could CDC clarify which Azure services, environments, subscriptions, networking
+    components, CI/CD tools, and security services will be Government-furnished and which are
+    expected to be provided/configured by the Contractor?
+
+   CDC furnishes the Azure environment, accounts, and standard platform services as
+   described in PWS Subsection B. Contractor-specific development tooling and licensing not
+   already available in the CDC environment are the Contractor's responsibility.
+
+96. Could CDC identify the APIs/interfaces currently available for integration with VAERS and
+    clarify whether new APIs or integration services are expected to be developed as part of this
+    effort?
+
+   Interface specifications will be provided at kickoff per PWS Section 9. New integration
+   services/structured data mappings may be required consistent with Task 1.9.
+
+97. Could CDC provide the complete current VAERS form and identify the specific differences in
+    fields, validation rules, and branching logic required between public and healthcare-provider
+    reporting?
+
+   The current publicly available VAERS form may be used as a proxy for prototype
+   development. Any additional data elements, validation rules, and branching specifications
+   will be furnished at kickoff if not available publicly online.
+
+98. Could CDC clarify whether the intelligent form assistance and supplemental-document
+    recommendation capabilities are expected to use AI/ML/Generative AI, rules-based logic, or
+    another approach?
+
+   See answer to Question 30.
+
+99. Could CDC provide the expected reporting, usage metrics, and analytics requirements,
+    including the specific metrics that must be captured for public and healthcare-provider
+    users?
+
+   Specific metric definitions will be finalized with CDC after award; see PWS Task 1.10 and
+   PRS#4 for baseline performance targets.
+                                                                                   Page 18 of 44
+
+
+
+
+100.       What is the approved budget or range allocated for this project?
+
+           See answer to question 57.
+
+101.       Is CDC open to an offshore-blended delivery model, and are there any data residency
+    or US-only staffing restrictions?
+
+           CDC is generally open to an offshore-blended delivery model, provided that the
+           model meets CDC’s security, compliance, data protection, and service-level
+           requirements. There are no general staffing restrictions; however, any sensitive or
+           regulated CDC data must remain within approved environments and jurisdictions.
+
+102.        Please confirm whether the required Data Management Plan and AI Compliance and
+    Risk Management Plan, if applicable, are included within the 15-page Technical Proposal
+    limitation or may be submitted as separate attachments.
+
+           See answer to question 3.
+
+103.       Please clarify whether the Accessibility Conformance Report (ACR/VPAT) is required
+    at proposal submission or is a post-award deliverable.
+
+           See answer to Question 39.
+
+
+104.       Does CDC expect the “intelligent form assistance” and supplemental document
+    suggestion capabilities to use AI/GenAI, or will a rules-based approach be considered
+    acceptable?
+
+           See answer to Question 30.
+
+105.       If AI functionality is expected or permitted, which CDC-approved AI services, models,
+    or technologies may be used within the CDC-managed environment?
+
+           Government approved FedRAMP-authorized AI services, with CDC approval, are
+           permitted. These may include, but not be limited to OpenAI, Claude, Gemini and MS
+           Copilot.
+-
+106.        Will CDC provide the required Azure infrastructure and cloud services, or should
+    offerors include Azure infrastructure, storage, monitoring, and other cloud consumption
+    costs in the firm-fixed-price proposal?
+
+           CDC provides the underlying Azure environment; however, any Contractor-specific
+           consumption, storage, or licensing beyond the standard CDC-furnished
+           environment should be identified and priced as a separate IT supply line item.
+                                                                                          Page 19 of 44
+
+
+107.        Can CDC confirm whether the production-ready Final Release at DOA +150 days
+    represents the production deployment/go-live date, and clarify the scope of work expected
+    during the remaining period of performance?
+
+            See answer to Question 13.
+108.        Is CDC prescribing a technology stack for the new application, or may the contractor
+    propose an appropriate .NET, Node.js, Java, Power Platform, or other Azure-compatible
+    architecture?
+            No specific stack is prescribed; offerors may propose an appropriate Azure-compatible
+            architecture.
+
+109.        For the low-code/configurable interface, is CDC expecting a specific platform, or would
+    a custom administrative interface that allows program personnel to manage content and
+    configuration satisfy the requirement?
+            No specific platform is mandated. A custom administrative interface satisfying Task 1.8's
+            intent is acceptable.
+
+110.       Does the supplemental-document suggestion tool require artificial intelligence or
+    machine learning, or may it use deterministic rules and configurable business logic?
+            See answer to Question 30.
+
+111.        If the offeror proposes no AI use, is an affirmative no-AI disclosure sufficient, or must
+    the AI Compliance and Risk Management Plan attachment still be completed and submitted?
+            See answer to Question 31.
+
+112.         What level of functionality is expected in the proposal-stage prototype? Would an
+    interactive prototype using synthetic data be acceptable, or must it contain working application
+    code?
+            See answer to Question 28.
+
+113.        Is there a required minimum staffing level or number of key personnel? May one
+    qualified individual perform multiple key roles?
+            There is no minimum staffing level. Yes, one individual can perform multiple roles.
+
+
+114.       Must an ACR/VPAT or Section 508 conformance checklist be submitted with the
+    proposal, or is it only a post-award deliverable?
+            See answer to Question 23.
+115.       Will CDC provide security, ATD, privacy and integration-documentation templates,
+    along with access to Government vulnerability-scanning tools?
+            Available templates will be furnished at kickoff. Government scanning tools/access will
+            be addressed as part of Azure environment provisioning; Contractor tooling not
+            otherwise furnished should be priced by the Contractor.
+                                                                                            Page 20 of 44
+
+
+116.       What are the anticipated transaction volume, concurrent-user volume and existing
+    performance baselines?
+
+            To be answered as soon as possible.
+
+117.       For Task 2.3, please clarify whether the supplemental-document suggestion capability is
+    expected to analyze information contained within the VAERS submission workflow only, or
+    whether the Government expects the solution to analyze and/or abstract the contents of uploaded
+    medical records in order to generate document suggestions.
+            The tool is expected to analyze information within the submission workflow to suggest
+            supplemental documents; deep content abstraction of uploaded medical records is not
+            required.
+
+118.        Please confirm that the proposal prototype is not expected to replicate all production
+    VAERS business rules, field-level validation rules, and integration mappings that will be
+    provided by the Government at kickoff, and that those Government-furnished requirements will
+    be incorporated and finalized following award.
+            Confirmed. See answer to question 28 also.
+
+119.        For the Working Prototype (Alpha) Demonstration Build due within 45 calendar days
+    after award, please confirm whether CDC expects the Alpha to be deployed within the CDC-
+    managed Azure environment, or whether the Alpha may initially be demonstrated in a
+    Contractor-controlled development environment while ATD, onboarding, and CDC environment
+    provisioning activities are completed.
+            See answers to Questions 55 and 83.
+
+120.         Please clarify the Government’s expected scope of Contractor effort between acceptance
+    of the Production-Ready Final Release at DOA + 150 days and the end of the stated nine-month
+    period of performance. In particular, should offerors assume this period is intended for
+    stabilization, production support, defect remediation, authorization-related activities, transition, or
+    additional development?
+            See answers to Questions 13.
+121.        PWS §4, Task 1.8 – Low-Code/Configurable Interface
+    For the “low-code/configurable interface,” does CDC have a preferred or mandated platform or
+    technology, or may the Contractor propose the most appropriate configurable content/interface
+    management approach within CDC Azure?
+
+            See answer to Questions 109
+
+122.        PWS §4, Task 1.9 / §9 – System Integration
+    Please identify the expected integration method(s) between the modernized application and
+    existing VAERS systems. Should Offerors assume API, database, file-based, messaging, or other
+    interfaces, and will interface specifications be provided at kick-off?
+
+            See answers to Questions 96.
+
+123.        PWS §4, Task 1.9 – Downstream VAERS Systems
+    Will the Contractor be responsible only for producing VAERS-compatible structured data, or also
+                                                                                       Page 21 of 44
+
+
+    for modifying existing downstream VAERS applications, databases, interfaces, or workflows to
+    receive the new submissions?
+
+            The Contractor is responsible only for producing VAERS-compatible structured data;
+            modification of downstream VAERS applications is out of scope.
+
+124.        PWS §1.D – Existing Documentation
+    Will CDC provide existing architecture documentation, database schemas, interface
+    specifications, VAERS data dictionaries, validation rules, source-code documentation, and
+    current business rules at kick-off?
+
+            See answer to Questions 32.
+
+125.        PWS §8 – Government-Furnished Environment and Access
+    The solicitation requires a Working Prototype within 45 days and a Beta Release within 90 days.
+    Please confirm whether CDC anticipates that the required Azure environments, accounts,
+    networking, repositories, credentials, and development access will be available immediately upon
+    award.
+
+            See answer to Questions 22.
+
+
+126.        PWS §3 / §8 – Government Dependencies and Schedule
+    If CDC-provided cloud access, integration information, security approvals, Government reviews,
+    or other Government dependencies delay performance, will corresponding deliverable dates be
+    adjusted?
+
+            Yes, the CDC will work with the contractor to update the deliverable due dates as needed
+            for any Government related delays.
+
+127.         PWS §3.4 / Security Requirements – Security Tools
+    Will CDC provide approved vulnerability-scanning, SAST/DAST, code-scanning, and security-
+    testing tools within the development environment, or should the Contractor include its own tool
+    licensing in the Firm-Fixed-Price proposal?
+
+            See answer to Questions 115.
+
+128.        CDCH.10 – AI Compliance and Risk Management Plan
+    If an Offeror proposes AI or generative AI only as an optional enhancement, must an AI
+    Compliance and Risk Management Plan be submitted with the initial quotation, or only if AI is
+    included in the proposed base technical solution?
+
+            See answer to Questions 31.
+
+
+129.        Task 1.10 – Median Submission Time
+    For the median end-to-end submission time target of ≤10 minutes, will CDC define a
+    representative “typical report” and Government test scenario for measurement purposes?
+                                                                                          Page 22 of 44
+
+
+            A representative test scenario will be defined in coordination with the Contractor after
+            award.
+
+130.         Section 8 – Final Release Schedule
+    The deliverables table states that Final Release is due “by end of PoP (DOA + 150 days),” while
+    the stated period of performance is approximately nine months. Please clarify whether
+    production-ready Final Release is due 150 days after award or at the end of the nine-month period
+    of performance.
+
+            See answer to Questions 13.
+
+
+131.        Existing Support Contracts
+    Please identify the roles and scope boundaries of existing VAERS contractors with whom the
+    awardee will be required to coordinate, particularly responsibility for current VAERS databases,
+    legacy applications, integration interfaces, infrastructure, and production operations.
+
+            See answer to Questions 2.
+
+132.        The PWS primarily identifies Contractor support for issuance of an Authority to Develop
+    (ATD), while Section 11 and the applicable security requirements also reference obtaining an
+    Authority to Operate (ATO). Please clarify whether the Contractor is responsible for supporting
+    both ATD and ATO issuance within the nine-month period of performance and identify the
+    authorization milestones required before Beta and Final/Production deployment.
+
+            See answer to Questions 9.
+
+133.        The existing VAERS environment operates within CDC-managed Azure. Please clarify
+    whether the existing VAERS Azure environment and supporting infrastructure are currently
+    covered by an active CDC ATO and whether the new application is expected to inherit or
+    leverage existing security controls and authorization artifacts, or require a separate/new
+    authorization package.
+
+            The existing VAERS Azure environment operates under CDC's existing authorization; the
+            new application will be evaluated for inheritance of applicable controls where
+            appropriate, subject to CDC/OCIO's determination during the ATD/ATO processes. The
+            Contractor is responsible for updating the security and privacy documentation package.
+
+            See answer to Question 9.
+
+
+134.         The Technical Proposal is limited to 15 pages, while the Prototype is submitted through
+    an external accessible link. Please confirm that the Prototype itself and content presented through
+    the external Prototype link are excluded from the 15-page Technical Proposal limitation. Please
+    also clarify whether supporting Prototype documentation submitted within the Technical Volume
+    counts toward the page limit.
+            See answer to Question 3.
+135.       The PWS requires coordination with other existing contracts supporting VAERS and
+    with CDC/OCIO hosting teams. Please identify the anticipated roles and responsibilities of the
+                                                                                          Page 23 of 44
+
+
+    existing VAERS support contractors and CDC/OCIO teams, particularly regarding legacy-system
+    maintenance, data interfaces, infrastructure, security authorization, deployment, and production
+    support.
+
+            See answer to Questions 2.
+
+136.         The overall period of performance is September 28, 2026 through June 27, 2027, while
+    the Final Production-Ready Release is identified as due "By end of PoP (DOA + 150 days)."
+    Please clarify whether the Final Release is required at DOA + 150 calendar days or at the end of
+    the nine-month period of performance. If Final Release is required at DOA + 150 days, please
+    identify the principal activities expected during the remaining period of performance.
+             See answer to Question 13. The remaining period is intended for stabilization,
+             production support, defect remediation, and transition-related activities.
+
+
+137.        The RFQ states that a Data Management Plan (DMP) shall be submitted with the
+    proposal for applicable public-health data collection/generation activities and that omission of a
+    required DMP will render a proposal unacceptable. However, the proposal-volume instructions
+    do not identify where the DMP is to be submitted. Please confirm whether a DMP is required
+    with this quotation and, if so, identify the applicable volume/tab and whether the DMP is
+    excluded from the 15-page Technical Proposal limitation.
+
+            See answer to Question 3.
+
+
+138.        The solicitation provides a template for the AI Compliance and Risk Management Plan
+    when planned or potential AI use is identified; however, Section F does not appear to specify
+    where the completed Plan should be submitted. Please confirm whether the completed AI
+    Compliance and Risk Management Plan should be submitted as a separate document/attachment
+    and identify the applicable Volume/Tab for submission. Please also confirm that the Plan is
+    excluded from the 15-page Technical Proposal page limitation.
+
+            See answer to Question 3.
+
+139.        Are there any specific positions that must be included as Key Personnel, and if not, may
+    Offerors determine their own Key Personnel positions?
+
+            See answer to Questions 33.
+
+140.       Can a signed teaming agreement that clearly defines the subcontractor's scope, duties,
+    and workshare satisfy the requirement for a proposed draft Subcontracting Agreement?
+
+            Yes.
+
+141.        Do the required Data Management Plan (DMP) and, if applicable, the AI Compliance and
+    Risk Management Plan count against the 15-page Volume I Technical Proposal limit, or are they
+    submitted as separate, uncounted attachments? Neither is listed among the four Volume I tabs,
+    but a proposal without a DMP is deemed "Unacceptable."
+
+            See answer to Question 3.
+                                                                                           Page 24 of 44
+
+
+142.         For the required prototype submitted "through an accessible electronic link," can it sit
+    behind a standard reviewer login (e.g., a staging URL or design-tool link), or must it be fully
+    public and unauthenticated? Are there size, duration, or browser/device constraints the evaluators
+    will test against?
+
+            See answer to Question 28.
+
+143.         The position sensitivity designation table referenced in the security requirements is blank
+    in the posted RFQ. Can CDC confirm the specific investigation tier(s) required for contractor
+    staff, given the roster must be submitted 30 days before the contract effective date?
+
+            Public Trust Tier 2.
+
+144.        What is CDC's anticipated timeline for issuing PIV cards/laptops and granting Azure
+    environment access / the Authority to Develop (ATD), relative to the Task 1 milestones
+    (wireframes at DOA+21, technical design at DOA+30, Alpha prototype at DOA+45)?
+
+            See answer to Questions 13.
+
+145.         Can CDC identify the existing contract(s) supporting the current VAERS system and
+    clarify the scope boundary between that support and this new development effort? Will the
+    current VAERS codebase and technical documentation be made available to offerors before or
+    only after award?
+
+            See answer to Questions 2. Yes, current codebase and tech documents will be made
+            available at kick-off.
+
+146.        Should the optional Phase 2 medical-image upload capability be priced now as a separate
+    option CLIN in this proposal, or is it intended to be priced later via a future modification, outside
+    the scope of this Price Proposal?
+
+            See answer to question 13.
+
+
+147.        CLIN 0001's unit price/amount fields are blank and no total estimated value, budget
+    range, or IGCE is stated in the solicitation. Can CDC share an estimated value range or historical
+    VAERS support spend to help size the technical approach appropriately?
+
+            See answer to question 57.
+
+148.        For the Similar Experience factor, must qualifying past performance be with a federal
+    public-health surveillance system specifically, or will comparable state-level, commercial, or
+    academic healthcare-data-system experience be weighted equally?
+
+            See answer to Questions 7.
+
+149.       Cloud Environment - Is Azure Kubernetes Service (AKS) service available in the cloud
+    environment?
+                                                                                           Page 25 of 44
+
+
+            Yes, the full list of FedRAMP compliant products available as part of the Azure and AWS
+            FedRAMP Audit Scopes may be considered for usage.
+
+150.        CDCH.04 lists an unpopulated Key Personnel table with no titles specified, while Section
+    F, Tab 3-2 requires resumes for "all proposed Key Personnel identified by the Offeror." Does
+    CDC have specific required Key Personnel roles in mind for this task order (e.g., Program
+    Manager, UX/Technical Lead, Security/ATD Lead), or is the Offeror free to designate its own
+    Key Personnel roles for evaluation purposes?
+
+            See answer to Question 33.
+
+151.         Section 9 (Reference Materials) states that Government-provided VAERS data element
+    definitions, business rules, and integration requirements will be provided "at kickoff" — after
+    award. But Task 1.6 and the Tab 2-2 Prototype evaluation require the Offeror to design a
+    branching-logic reporting form "using the data elements of the current VAERS form" before
+    award. Will CDC release the current VAERS data element list and business rules prior to the
+    September 4 due date, or should Offerors prototype against the current public-facing VAERS
+    form as a proxy?
+
+            See answer to Questions 79 and 97.
+
+152.        Question and proposal submission email address. Section F's General Instructions direct
+    the complete proposal to uwo8@cdc.gov (letter “o”), then in the very next sentence direct “all
+    questions, requests for clarification, and other inquiries” to uw08@cdc.gov (digit “0”) — a single
+    character apart. Page 1 of the SF-18 and the SAM.gov listing both use the letter-“o” form. Please
+    confirm, in writing, the single correct address for proposal submission.
+            See answer to Question 16.
+
+153.         Placement of the Data Management Plan, AI Compliance and Risk Management Plan,
+    and Incident Response Plan. CDCL.10 makes a Data Management Plan mandatory (“a proposal
+    received without a DMP will be deemed ‘Unacceptable’”); CDCL.03/CDCH.10 requires an AI
+    Compliance and Risk Management Plan “using the template provided” whenever AI use is
+    planned, expected, or possible; and a Standard-4 deliverables table lists an Incident Response
+    Plan as due “as part of Proposal.” None of the three appears in Section F's Volume I tab structure
+    (Tabs 1–4) or Volume II price tab, and none is named among the stated exclusions from the 15-
+    page Technical Proposal limit (only cover pages, tables of contents, and resumes are excluded).
+    Please confirm: (a) which of these documents must be submitted with the proposal and where
+    it/they should be placed relative to the required tab structure and (b) confirm that each is excluded
+    from the 15-page limit OR consider increasing the page limit substantially to accommodate any
+    additional information compiled in the required document(s).
+
+            See answer to Question 3.
+
+154.        Prototype (Tab 2-2) documentation and the page limit. Tab 2-2 must be “submitted
+    through an accessible electronic link,” a format Section F's paged format rules (page count, font,
+    margins) do not account for. Section F never states whether written material accompanying the
+    prototype link (e.g., an orientation guide or requirements cross-reference) counts toward the 15-
+    page Technical Proposal limit. Please confirm whether any prototype-related written material is
+    included in or excluded from the 15-page limit.
+            See answer to Question 3.
+                                                                                          Page 26 of 44
+
+
+
+
+155.         Tabbing. Please confirm whether, for the purposes of Volume 1 – Technical Proposal
+    compilation, tabs and section headings can be used interchangeably. Section F, Subsection II
+    specifies that the electronic Technical Proposal be organized across multiple tabs (e.g., Tab 1,
+    Tab 2-1, Tab 2-2, Tab 3-1, Tab 4) within a strict 15-page limit. In an electronic MS Office Word
+    or PDF submission, treating each tab as a separate document section requiring a hard page break
+    or dedicated digital divider sheet significantly consumes the page count. Please confirm that
+    offerors may flow content continuously using clear inline section/tab headings and PDF
+    bookmarks, or clarify whether electronic divider/tab pages are exempt from the 15-page
+    limitation.
+
+            Tabs and section headings can be used interchangeably. Offerors may flow content
+            continuously using clear inline section/tab headings and PDF bookmarks.
+
+156.        Personnel list submission timing — direct conflict. The Standard-1 deliverables table
+    requires the list of personnel with defined roles “within 7 days” (before an employee begins
+    working), while the Standard-4 deliverables table states “within 10 days” for what appears to be
+    the same deliverable. Please reconcile these two timeframes.
+
+            Within 7 days.
+
+157.         Travel CLIN inconsistent with the PWS's no-travel statement. PWS Section 7 states that
+    “no travel, other than that necessary for employee onboarding, is anticipated,” yet CLIN 0003
+    carries a $31,500 NTE estimate for non-conference meeting travel. Please confirm (a) that CLIN
+    0003 is a Government-directed contingency that offerors should nonetheless include in their price
+    proposal , and (b) that both travel CLINs 0002 and 0003 are excluded from the price evaluation.
+
+            Per Section 7: No travel, other than that necessary for employee onboarding, is
+            anticipated for this contract. The Contractor shall perform work remotely and coordinate
+            with CDC via virtual meetings. If the Government requests travel (e.g., for in-person
+            meetings at CDC Atlanta), travel must be approved in advance by the COR and shall be
+            reimbursed in accordance with applicable Federal Travel Regulation (FTR)
+            requirements and the travel terms of the contract.
+
+
+158.         Pass/fail evaluation gates with no corresponding submission instruction. CDCM.03 and
+    CDCM.04 make the Data Management Plan and the AI Compliance and Risk Management Plan
+    pass/fail gates — failing either eliminates a proposal outright, with no opportunity to cure since
+    award is intended without discussions — yet Section F's stated proposal-contents instructions
+    never direct offerors to prepare or submit either document. An offeror following Section F's
+    content instructions alone would have no notice that these outcome-determinative gates exist.
+    Please confirm Section F or Section G will be amended to obviate this deficiency.
+
+            The Data Management Plan and the AI Compliance and Risk Management Plan are to be
+            submitted as part of the Technical Proposal as attachments. They are not included within
+            the established page limit. The solicitation will be amended.
+
+159.        Three-year employee turnover table required only in the evaluation criteria. Section G's
+    Tab 3-1 evaluation criteria require “a table showing employee turnover rates for each of the past
+    three years,” but Section F's Tab 3-1 instructions ask only for the offeror's approach to “rapidly
+    obtaining and replacing qualified staff” and “availability of qualified personnel,” with no mention
+                                                                                         Page 27 of 44
+
+
+    of a turnover table. An offeror preparing Tab 3-1 solely from Section F would omit a document
+    Section G scores. Please confirm the turnover table is not required and that Section F will be
+    amended to state this explicitly.
+
+            Section G language to include “a table showing employee turnover rates for each of the
+            past three years” is applicable. Solicitation Section F will be amended.
+
+160.         Incident Response Plan is a required deliverable that the evaluation criteria never
+    mention. A Standard-4 deliverables table lists an Incident Response Plan as due “as part of
+    Proposal,” but Section G's Technical Proposal evaluation criteria (Tabs 1–4) do not reference it,
+    and it is not one of the two named pass/fail gates (DMP, AI Plan). If the Incident Response Plan
+    is indeed required with the proposal(see A.2 above), please clarify whether the Incident Response
+    Plan is evaluated at all — and if so, under which factor or sub-factor and against what criteria —
+    or confirm it is a pass/fail administrative submission outside the tradeoff, consistent with the
+    treatment of the DMP and AI Plan.
+
+            The Incident Response Plan in within the Information Security and Privacy requirements
+            tied to any product delivered, specifically it is part of Standard 4 when Implementing
+            Cloud Services. Security and Privacy requirements are not evaluated as part of the
+            proposal but must be taken account in the design of delivery and have specific
+            deliverables to be able to deploy.
+
+161.        No disclosed rating methodology for the Technical, Management, and Similar Experience
+    sub-factors. Section G states the DMP and the AI Compliance and Risk Management Plan will
+    each be rated “Pass/Fail,” but does not state whether the three Factor 1 sub-factors (Technical
+    Approach, Management Approach, Similar Experience) will be rated adjectivally (e.g.,
+    Outstanding/Good/Acceptable/Marginal/Unacceptable), numerically, or narratively only, for
+    purposes of the best-value tradeoff. Please confirm the rating methodology that will be used to
+    score these sub-factors.
+
+            The Government is not required to disclose the rating methodology.
+
+162.        Internally inconsistent statement of Price's relative importance. FAR 52.212-2(a),
+    incorporated in Section E, lists the evaluation factors “in descending order of importance” as (1)
+    Technical, (2) Price, (3) Past Performance — literally ranking Price above Past Performance.
+    CDCM.01 separately states that all non-price factors combined are significantly more important
+    than price, and that price becomes determinative only if technical proposals are judged essentially
+    equal. These describe different relationships between Price and Past Performance. Please confirm
+    how Price and Past Performance rank relative to each other outside of an essentially-equal
+    Technical result.
+
+            FAR 52.212-2 properly lists the evaluation factors in descending order of importance:
+
+
+            Factor 1: Technical
+                    Sub-Factor 1: Technical Approach
+                    Sub-Factor 2: Management Approach
+                    Sub-Factor 3: Similar Experience
+            Factor 2: Price
+            Factor 3: Past Performance
+                                                                                        Page 28 of 44
+
+
+            Evaluation factors other than price when combined are significantly more important than
+            price.
+
+            Individually, Technical is more important than Price and Price is more important than
+            Past Performance. However, combined Technical and Past Performance are more
+            important than Price.
+
+            CDCM.01 is removed from the solicitation.
+
+163.         Option pricing is contemplated for evaluation but absent from the pricing preparation
+    instructions. FAR 52.212-2(b) states the Government will evaluate offers “by adding the total
+    price for all options to the total price for the basic requirement,” and FAR 52.217-8 gives the
+    Government a six-month option to extend services. The Section B Schedule contains no option
+    CLIN, and Section F's price-volume instructions never direct offerors to submit option pricing.
+    Please confirm whether offerors must price the six-month extension option for evaluation
+    purposes, and if so, in what CLIN structure and format.
+    See answer to question 13
+
+164.       Can the government please provide a higher resolution version of the architectural
+    diagram for the current architecture that is provided in Subsection D?
+            VAERS_Architecture_01_07_2025.pdf
+
+165.         Does the low-code/configurable interface envisioned apply to static content only (landing
+    page copy, FAQs, tooltips) or does the government also expect program personnel to make direct
+    edits to the submission form itself, including fields or branching logic?
+            Low-code solution should apply to both static and submission form, including fields and
+            branching logic.
+
+166.         Does the low-code/configurable interface envisioned apply to static content only (landing
+    page copy, FAQs, tooltips) or does the government also expect program personnel to make direct
+    edits to the submission form itself, including fields or branching logic?
+            See answer to question165.
+
+167.         Will the government allow research with potential users of the VAERS system to allow
+    for user feedback on user flows, wireframes, and clickable prototypes?
+            Yes.
+
+
+168.        Can the government share the data model for VAERS?
+            No, however, a data dictionary will be provided.
+
+169.        Does CDC have access to a customer satisfaction measuring tool for VAERS through an
+    existing enterprise license?
+            No.
+
+170.        Should CLIN 0001 pricing in contractor's Volume II response include Phase 2 estimated
+    pricing or will this pricing be handled after Phase 1 is completed?
+                                                                                        Page 29 of 44
+
+
+            No. Any additional work will be addressed in a future solicitation.
+
+171.        Does the government intend to specify the key personnel in the RFQ? No Key Personnel
+    are identified in CDCH.04 but resumes for Key Personnel are required as part of the response.
+            See answer to Question 33.
+172.         The PoP is 9/28/2026 - 6/27/2027 which is approximately 9 months. The deliverables
+    table in Section 8 lists the Testing and Final release as DOA + 150 days. 150 days is
+    approximately 5 months. Can the government clarify what the remaining 4 months might
+    include?
+            See answer to Question 13.
+
+173.       The pricing schedule lists $31,500 for "meeting travel" (CLIN 0003). Section 7 of the
+    PWS says the only travel expected is for onboarding. Can the government clarify whether non-
+    onboarding-related travel is expected?
+            Per Section 7: No travel, other than that necessary for employee onboarding, is
+            anticipated for this contract. The Contractor shall perform work remotely and
+            coordinate with CDC via virtual meetings. If the Government requests travel (e.g.,
+            for in-person meetings at CDC Atlanta), travel must be approved in advance by the
+            COR and shall be reimbursed in accordance with applicable Federal Travel
+            Regulation (FTR) requirements and the travel terms of the contract.
+174.         The government indicates that a template should be used to document an AI Compliance
+    and Risk Management Plan. The reference indicates in accordance with CDCL.10, but that
+    section refers to a data management plan. Please confirm the correct template that should be used
+    for the AI Compliance and Risk Management Plan.
+            The DMP is an example template. Contractor is encouraged to submit a similar plan for
+            AI compliance and risk management.
+
+175.        PWS Task 1.10 requires a reduction in submission abandonment rate of at least 30%
+    "compared to the baseline established at project kickoff." Will the Government provide current
+    abandonment rate, median submission time, and page load time data at kickoff, or is the
+    Contractor expected to instrument the existing application and derive the baseline? If
+    Contractor-derived, what measurement window will the Government consider acceptable for
+    establishing that baseline?
+
+            See answer to Question 44.
+
+176.         Will the Government confirm the method of verification for the Task 1.10 performance
+    targets (page load ≤ 3 seconds, median end-to-end submission ≤ 10 minutes, abandonment
+    reduction ≥ 30%), and at what point in the period of performance those targets are assessed for
+    acceptance?
+
+            See answer to Question 13.
+
+177.        PWS Task 4 is identified as Transition Out. However, the Section 8
+    Deliverables/Reporting Schedule assigns to "Task 4" the Security and Privacy Documentation
+                                                                                        Page 30 of 44
+
+
+    Package Supporting ATD Issuance, the Compliance Documentation Package
+    (Security/Privacy/Section 508), and the Accessibility Conformance Report (ACR/VPAT) and
+    Remediation Plan. These deliverables appear to derive from PWS Tasks 3.3, 3.5, and 3.6 rather
+    than from Transition Out. Will the Government confirm the correct task mapping for these three
+    deliverables, and clarify whether the "PM / Task 4" designation for the Project Plan indicates a
+    distinct project management workstream?
+
+
+            Thank you for identifying this incongruence around the security package. You are correct
+            these Deliverables align with Task 3 and will also be required for any Transition Out to
+            ensure all documents are with the government.
+
+178.        PWS Task 4.4 requires submission of a detailed Transition-out Plan for COR approval at
+    least two months prior to contract end. This deliverable does not appear in the Section 8
+    Deliverables/Reporting Schedule. Will the Government confirm that the Transition-out Plan is a
+    required deliverable and identify its due date, and confirm whether the monthly transition-
+    readiness assessments required by Task 4.1 are separately deliverable to the COR?
+
+            Yes, a transition out plan is a deliverable and should be provided as outlined in the PWS
+            Task 4.4 two months prior to contract end. Yes, the monthly transition-readiness
+            assessments required by Task 4.1 should be delivered to the COR.
+
+
+179.         The Section 8 Deliverables/Reporting Schedule lists Testing and Final Release
+    (Production-Ready) as due "By end of PoP (DOA + 150 days)." For an award dated 28 September
+    2026, DOA + 150 days falls in late February 2027, while the period of performance extends to 27
+    June 2027. Will the Government confirm which date governs final release, and clarify the scope
+    of contractor effort expected between final release and the end of the period of performance —
+    specifically whether that interval covers sustainment, warranty, defect remediation, transition-
+    out activities, or a combination?
+
+            See answer to Question 13.
+
+
+180.        Regarding PWS Task 2.4.2, should offerors exclude Phase 2 (upload of pictures and
+    medical images) entirely from the quoted price, or does the Government wish to see a separate,
+    non-binding level-of-effort estimate for Phase 2 for planning purposes?
+
+            Offerors should exclude Phase 2 from the quoted price. A non-binding, separately
+            identified LOE estimate for planning purposes may be included but is not required.
+
+
+181.       PWS Task 2.3 requires a tool that "scans healthcare-provider submissions and suggests
+    supplemental documents to upload." Does the Government consider this an artificial
+                                                                                          Page 31 of 44
+
+
+    intelligence or machine learning capability, or would a deterministic, rules-based
+    implementation satisfy the requirement?
+
+            A deterministic, rules-based implementation is acceptable; AI/ML is not mandated.
+
+182.        Will the Government provide interface documentation for the existing VAERS system —
+    including current data formats, transmission mechanisms, and integration endpoints — and will
+    that documentation be made available during the question period or at kickoff?
+
+            This documentation will be furnished at kickoff.
+
+183.        Does CDC have a preferred or previously authorized low-code platform within the CDC-
+    managed Azure environment for the configurable interface required by PWS Task 1.8, or is
+    platform selection at the Contractor's discretion subject to ATD approval?
+
+            No specific platform is mandated; selection is at the Contractor's discretion, subject to
+            ATD/security approval.
+
+184.         10. Given that the Beta Release is due within 90 calendar days after date of award, what
+    is CDC's typical elapsed time from Contractor submission of the security and privacy
+    documentation package to issuance of the Authority to Develop? Will the Government consider
+    ATD processing time as excusable delay if it exceeds the Contractor's control?
+
+            Historical median processing time is not available for release. ATD processing delays
+            attributable to the Government would be treated consistent with standard FAR excusable-
+            delay provisions.
+
+185.      What is the anticipated elapsed time from award to issuance of PIV cards and delivery of
+    Government-furnished laptops?
+
+            This timeline is not specified in the solicitation; offerors should build reasonable ramp-up
+            time into their schedules and expect adjustment for Government-caused delays.
+
+186.        Does the Government impose page limits, a required volume structure, or a required file
+    format for the technical quotation?
+
+            See solicitation Section F.
+
+187.        Is a completed Accessibility Conformance Report (ACR/VPAT) required with the
+    quotation, or only as a deliverable during performance as indicated in the Section 8 schedule?
+
+            An HHS Section 508 Accessibility Conformance Checklist is required at proposal stage;
+            the full ACR/VPAT is a post-award deliverable due with Beta Release, updated at Final.
+                                                                                         Page 32 of 44
+
+
+188.         Attachment 1, Artificial Intelligence (AI) Use Compliance and Risk Management Plan,
+    states it applies where "the primary deliverable is not the development or delivery of an AI
+    system." If the Contractor uses AI-assisted software development tooling in internal operations
+    only, is Attachment 1 required to be submitted with the quotation, or completed upon award?
+
+            Yes, the AI Compliance and Risk Management Plan is required with every proposal
+            regardless of the nature or scope of proposed AI use, including internal-only tooling.
+
+189.        The PWS primarily identifies Contractor support for issuance of an Authority to Develop
+    (ATD), while Section 11 and the applicable security requirements also reference obtaining an
+    Authority to Operate (ATO). Please clarify whether the Contractor is responsible for supporting
+    both ATD and ATO issuance within the nine-month period of performance and identify the
+    authorization milestones required before Beta and Final/Production deployment.
+
+            See answer to Question 9.
+
+
+190.        The existing VAERS environment operates within CDC-managed Azure. Please clarify
+    whether the existing VAERS Azure environment and supporting infrastructure are currently
+    covered by an active CDC ATO and whether the new application is expected to inherit or
+    leverage existing security controls and authorization artifacts, or require a separate/new
+    authorization package.
+
+
+            The existing VAERS Azure environment operates under CDC's existing authorization.
+            The new application will be evaluated for inheritance of applicable controls where
+            appropriate, subject to CDC/OCIO's determination during the ATD/ATO process.
+
+191.         The Technical Proposal is limited to 15 pages, while the Prototype is submitted through
+    an external accessible link. Please confirm that the Prototype itself and content presented
+    through the external Prototype link are excluded from the 15-page Technical Proposal
+    limitation. Please also clarify whether supporting Prototype documentation submitted within
+    the Technical Volume counts toward the page limit.
+
+            See answer to Question 3.
+
+192.       The PWS requires coordination with other existing contracts supporting VAERS and with
+    CDC/OCIO hosting teams. Please identify the anticipated roles and responsibilities of the existing
+    VAERS support contractors and CDC/OCIO teams, particularly regarding legacy-system
+    maintenance, data interfaces, infrastructure, security authorization, deployment, and
+    production support.
+
+            Coordination points and role divisions with existing VAERS support contractors and
+            CDC/OCIO hosting teams will be identified after award.
+                                                                                         Page 33 of 44
+
+
+193.         The overall period of performance is September 28, 2026 through June 27, 2027, while
+    the Final Production-Ready Release is identified as due "By end of PoP (DOA + 150 days)." Please
+    clarify whether the Final Release is required at DOA + 150 calendar days or at the end of the
+    nine-month period of performance. If Final Release is required at DOA + 150 days, please
+    identify the principal activities expected during the remaining period of performance.
+
+            The remaining period is intended for stabilization, production support, defect
+            remediation, and transition-related activities.
+
+194.        The RFQ states that a Data Management Plan (DMP) shall be submitted with the
+    proposal for applicable public-health data collection/generation activities and that omission of a
+    required DMP will render a proposal unacceptable. However, the proposal-volume instructions
+    do not identify where the DMP is to be submitted. Please confirm whether a DMP is required
+    with this quotation and, if so, identify the applicable volume/tab and whether the DMP is
+    excluded from the 15-page Technical Proposal limitation.
+
+            See answer to Question 3.
+
+195.       The solicitation provides a template for the AI Compliance and Risk Management Plan
+    when planned or potential AI use is identified; however, Section F does not appear to specify
+    where the completed Plan should be submitted. Please confirm whether the completed AI
+    Compliance and Risk Management Plan should be submitted as a separate
+    document/attachment and identify the applicable Volume/Tab for submission. Please also
+    confirm that the Plan is excluded from the 15-page Technical Proposal page limitation.
+
+            Submit as a standalone attachment (Word or PDF), outside the four Volume I tabs. It is
+            excluded from the 15-page Technical Proposal limit.
+
+196.       If subcontractors are proposed, the RFQ requires a written copy of the proposed draft
+    Subcontracting Agreement. Please confirm whether the draft Subcontracting Agreement is
+    excluded from the 15-page Technical Proposal limitation and may be submitted as an
+    attachment.
+
+            Yes, it may be submitted as a separate attachment and is excluded from the 15-page
+            limit.
+
+197.        Are there any specific positions that must be included as Key Personnel, and if not, may
+    Offerors determine their own Key Personnel positions?
+
+            See answer to question 33. Offerors may propose their own Key Personnel positions
+            consistent with their technical and management approach.
+                                                                                          Page 34 of 44
+
+
+198.       Can a signed teaming agreement that clearly defines the subcontractor's scope, duties,
+    and workshare satisfy the requirement for a proposed draft Subcontracting Agreement?
+
+            Yes.
+
+199.         The RFQ states that cover pages, tables of contents, and resumes are excluded from the
+    15-page Technical Proposal limitation. Please confirm whether Tab 4 (Similar Experience/Past
+    Performance) content, including project summary sheets or past performance reference forms,
+    is also excluded from the page count.
+
+            See answer to Question 3.
+200.        The RFQ states that cover pages, tables of contents, and resumes are excluded from the
+    15-page Technical Proposal limitation. Please confirm whether Tab 4 (Similar Experience/Past
+    Performance) content, including project summary sheets or past performance reference forms, is
+    also excluded from the page count.
+            See answer to Question 3.
+201.        The RFQ imposes a 12 MB attachment limit and directs offerors to divide submissions
+    across multiple emails, while stating that transmission of an email does not by itself establish
+    Government receipt. Will the Government acknowledge receipt of each proposal email, or is
+    there another mechanism by which offerors can confirm complete and timely receipt?
+
+            The Government will acknowledge receipt of each proposal by email.
+
+202.        Volume II, Tab 1 is titled "Price Breakdown Worksheet," but no worksheet or pricing
+    template is included in the RFQ package. Will the Government provide a required pricing format,
+    or may offerors submit their own format addressing the cost elements?
+
+            Offerors may submit their own format addressing the cost elements.
+
+203.        Section E incorporates several provisions requiring representations and certifications, but
+    Section F does not address them. Are completed representations and certifications required to be
+    submitted with the proposal, and if so, in which volume should they be included? Are they
+    excluded from the 15-page Technical Proposal limitation?
+
+            Any representations and certifications required by Section E can be included with the
+            Price Proposal. The Price Proposal does not have a page limitation.
+
+204.        PWS Section 8 requires Testing and Final Release "by end of PoP (DOA + 150 days),"
+    while CLIN 0001 establishes a period of performance of 09/28/2026 through 06/27/2027, a span
+    of approximately 273 days. Which governs for purposes of the Final Release delivery date?
+            See answer to Question 13.
+
+205.        FAR 52.217-8 is incorporated in full text and permits up to 6 additional months of
+    performance, and Section E states that option prices will be added to the basic requirement for
+    evaluation purposes. However, no option CLIN appears in Section B. Will the government
+    calculate that themselves or should offerors price the 52.217-8 option period, and if so, in what
+    format?
+            See answer to question 13
+                                                                                          Page 35 of 44
+
+
+206.       Page 61 excludes only cover pages, tables of contents, and resumes from the 15-page
+    Technical Proposal limitation. The Data Management Plan and the AI Compliance and Risk
+    Management Plan are both separately required and separately evaluated on a pass/fail basis. Can
+    you confirm these two plans are excluded from the 15-page limitation?
+            See answer to Question 3.
+207.         Page 61 requires Technical Proposal text in Times New Roman 12-point, and separately
+    establishes minimum font sizes of 8-point for graphs and illustrations and 10-point for "tables and
+    text." Please clarify whether 10-point font is acceptable for narrative text presented within tables
+    and graphics, or whether the 12-point requirement governs all narrative content.
+
+            10-point font for narrative text is the acceptable minimum.
+
+208.        Does the Government require a specific file naming convention for proposal files and
+    emails beyond the sequencing identification described on page 61?
+
+            No.
+
+209.         Does supporting documentation accompanying the prototype count against the 15-page
+    Technical Proposal limitation, or is the prototype and its accompanying documentation evaluated
+    entirely outside the page limit?
+            No, provide it as an attachment.
+210.        Tab 2-2 requires a prototype demonstrating the proposed solution "to the maximum
+    extent practicable." Is the Government expecting a functional, deployed web application, or is a
+    representative demonstration of the proposed approach acceptable? What does the Government
+    consider the minimum acceptable level of fidelity?
+            Representative application is fine. However, see answer to question 28.
+
+
+211.        The PWS requires branching logic using the data elements of the current VAERS form.
+    Must the prototype use actual VAERS data elements and the current form structure, or is a
+    representative reporting workflow sufficient for evaluation purposes?
+            Representative application is fine. However, see answer to question 28.
+
+
+212.         PWS Section 9 states that VAERS data element definitions, business rules, and
+    integration requirements will be provided at kickoff. Can any of this information be released
+    during the solicitation period to inform prototype development, or should offerors develop
+    prototypes based solely on the publicly available VAERS form?
+            See answer to question 264.
+
+213.        Will Government evaluators access the prototype link from CDC networks and CDC-
+    managed devices? Are there any constraints on hosting platform, authentication method, or
+    supported browsers that offerors should accommodate to ensure the prototype is accessible to
+    evaluators?
+            See answer to question 28.
+
+214.        For how long after the proposal due date must the prototype link remain live and
+    accessible to the Government?
+                                                                                       Page 36 of 44
+
+
+            60 days. See answer to question 28.
+
+215.        CDCH.10 requires the offeror to identify whether planned or potential AI use may
+    involve a high-impact AI use case as defined in Appendix A of OMB M-25-21. Does CDC have a
+    preliminary determination as to whether AI use in this application would constitute a high-impact
+    use case?
+            No, it would depend on how it would be used and employed within the system.
+216.        CDCH.10 states that the Government will issue approval or disapproval before AI can be
+    incorporated. What is the expected Government turnaround for that approval, and will an AI
+    Compliance and Risk Management Plan found acceptable during proposal evaluation carry
+    forward at award without requiring a second approval cycle?
+            The AI Compliance and Risk Management Plan will be evaluated during the proposal
+            evaluation phase. If approved, a second approval cycle is not required.
+217.        The PWS requires the Contractor to coordinate with "the other existing contracts
+    supporting the VAERS system." Which existing contractors will the awardee be required to
+    coordinate with, and what mechanism will CDC provide for that coordination? Are there existing
+    interface agreements, documented APIs, or data exchange specifications that will be made
+    available?
+            Coordination points and points of contact for existing VAERS support contractors
+            will be identified after award; specific interface agreements are not releasable at
+            this time.
+
+218.        The solicitation describes the current environment as including Azure SQL Managed
+    Instance, virtual machines, ColdFusion, Tomcat, Node.js, .NET, Akamai, Blob Storage, Key
+    Vault, and Logic Apps, with the reporting interface supporting writable PDF, CXone, and eFax.
+    Can CDC describe the expected integration points for the new front end, and identify which
+    components the new application must integrate with versus replace?
+            See PWS Subsection D for the current architecture summary (Azure SQL Managed
+            Instance, VMs, ColdFusion, Tomcat, Node.js, .NET, Akamai, Blob Storage, Key Vault,
+            Logic Apps). Scope is limited to developing the new reporting application and integrating
+            with existing VAERS services; wholesale replacement is not required. Additional
+            documentation will be furnished at kickoff.
+
+219.        Is the CDC-managed Azure environment already provisioned for this effort, or does
+    standing up the development, test, and deployment environment fall within the period of
+    performance? What is the expected lead time between PIV issuance and developer access to the
+    environment?
+            Standing up the specific development/test/deployment environment configuration falls
+            within the period of performance. Expected lead time is not specified; offerors should
+            build reasonable ramp-up time into their schedules.
+
+220.        Task 1.10 requires reducing "the submission abandonment rate" by at least 30 percent
+    without identifying a submission channel. Does this requirement apply only to the modernized
+    web reporting form, or to all VAERS submission methods including writable PDF, eFax, and
+    CXone? If it applies across channels, how does the Government define abandonment for non-web
+    submission methods?
+                                                                                          Page 37 of 44
+
+
+            See answer to question 44.
+
+221.        The 30 percent reduction is measured against a baseline "established at project kickoff."
+    How will that baseline be measured, specifically: what population constitutes the denominator,
+    what instrumentation will be used, and over what observation window? Will the Government
+    provide the baseline value, or is establishing the baseline a Contractor responsibility?
+            See answer to question 44.
+
+
+222.        PRS#4 requires the Contractor to measure and report against Task 1.10 targets "using
+    approved methodology." Who approves the measurement methodology, by when must it be
+    approved, and is the methodology a separate deliverable? It does not appear in the PWS Section 8
+    deliverables schedule.
+            See answer to question 44. It is not a separately scheduled deliverable in Section 8 but
+            should be documented as part of Task 1.10 measurement reporting.
+
+223.        PWS Section 9 lists data element definitions, business rules, integration requirements,
+    and ATD/Azure security requirements as the reference materials provided at kickoff. Will CDC
+    also provide existing user research, usability testing findings, help desk or FAQ inquiry data, and
+    web analytics for the current VAERS reporting experience? These would materially inform the
+    customer-centric design, FAQ Data Report, and performance measurement requirements.
+            Available materials will be furnished at kickoff to the extent they exist and are
+            releasable.
+
+224.       Is the current VAERS reporting interface instrumented for web analytics or user behavior
+    measurement? If so, what tooling is in place, and will the Contractor have access to it at kickoff?
+            Any existing instrumentation and access details will be addressed at kickoff.
+
+225.         PRS#5 establishes a data completeness standard of at least 90 percent for required and
+    critical VAERS data elements. Is a current completeness baseline available, and will the
+    Government define the specific data elements considered "required and critical" for measurement
+    purposes?
+            The Government will define required and critical data elements at kickoff; a current
+            baseline, if available, will be furnished at that time.
+226.         Has OMB PRA clearance already been obtained for the modified VAERS reporting form
+    and for the two new customer satisfaction survey instruments, or is clearance required within this
+    period of performance? Page 34 states that the Government will determine PRA applicability;
+    please confirm the current status of that determination.
+            See answer to question 5.
+227.        If PRA clearance is required, who owns preparation and submission of the clearance
+    package, CDC or the Contractor? Given that HHSAR 352.211-3(b) directs the Contractor to
+    allow at least 120 days for OMB clearance, and that the survey instruments are due with Beta
+    Release at DOA + 90 days, how should offerors reflect this in their proposed schedule?
+            See answer to question 5.
+228.       CDCH.04 identifies key personnel as essential to contract performance and includes a
+    "Personnel Title" heading with no positions listed. Does the Government have required key
+                                                                                            Page 38 of 44
+
+
+    personnel positions or labor categories, or may offerors define their own? Will CDCH.04 be
+    populated at award?
+            Offerors may propose their own Key Personnel positions consistent with their technical
+            and management approach. The Government did not identify any specific positions as
+            key personnel positions. CDCH.04 will be populated based on the offeror’s proposal.
+
+229.       Please confirm that key personnel resumes, at 2 pages per resume, are excluded from the
+    15-page Technical Proposal limitation.
+            See answer to Question 3.
+230.        Task 1.8 requires a low-code/configurable interface, while Standard-11 requires that all
+    software first produced under the contract be open-source software with data rights under FAR
+    52.227-14. Would use of a commercial low-code platform satisfy Task 1.8, and how does CDC
+    reconcile a proprietary platform with the Federal Source Code Policy obligation? Standard-11
+    permits exceptions "unless otherwise specified in writing by the contract officer" - would such a
+    written exception be issued for this requirement?
+            It is possible that a commercial low-code platform would satisfy the task. It is still subject
+            to FEDRAMP and related security requirements.
+231.         Is there a CDC-approved list of low-code platforms, or an existing CDC enterprise
+    license (for example, within EDAV or 1CDP) that offerors should assume is available for this
+    effort?
+            See answer to Question 109.
+
+
+232.         In line with the RFO companion, will the government provide an affordability statement
+    to aid offerors in providing innovative solutions?
+
+            See answer to question 57.
+
+233.        Section F directs that each IT supply, including licenses and cloud services, be a
+    separately priced line item, while PWS Section 5 states that CDC will provide access to the CDC-
+    managed Azure environment. Are Azure compute, storage, and licensing costs borne by CDC's
+    existing environment, or must offerors price them as separately priced IT supply line items?
+            See answer to Question 106.
+
+234.        CLINs 0002 and 0003 are each shown as $31,500.00 estimate and $31,500.00 not-to-
+    exceed for onboarding and meeting travel, while PWS Section 7 states that no travel other than
+    that necessary for employee onboarding is anticipated. Should offerors price these CLINs at the
+    stated not-to-exceed amounts, or propose amounts based on their own estimates?
+            Per Section 7: No travel, other than that necessary for employee onboarding, is
+            anticipated for this contract. The Contractor shall perform work remotely and
+            coordinate with CDC via virtual meetings. If the Government requests travel (e.g.,
+            for in-person meetings at CDC Atlanta), travel must be approved in advance by the
+            COR and shall be reimbursed in accordance with applicable Federal Travel
+            Regulation (FTR) requirements and the travel terms of the contract.
+235.        Can the government kindly confirm that this requirement is a follow-up on the GSA
+    Market Research titled "Modernized Application for VAERS Reporting," which was released in
+    January 2026?
+                                                                                        Page 39 of 44
+
+
+            Yes, this is the same general requirement; however, there have been some updates.
+
+236.       Can the government kindly identify the incumbent contractor who previously performed
+    the work described within this RFQ?
+
+            There is no incumbent contractor.
+
+237.       Can the government kindly confirm whether the incumbent contractor is eligible to
+    compete for this award?
+
+            There is no incumbent contractor.
+
+238.         The PWS establishes deliverables at 10, 21, 30, 45, and 90 calendar days after date of
+    award, while CDC will furnish contractor laptops, PIV credentials, and access to the CDC-
+    managed Azure environment. If required Government-furnished equipment, credentials, system
+    access, security approvals, or development environment access are not available at the date of
+    award, will affected milestone dates be adjusted accordingly?
+
+            Yes.
+
+239.         If an Offeror submits an Artificial Intelligence Compliance and Risk Management Plan
+    with its proposal and that plan is found acceptable during evaluation, will award constitute
+    approval for the AI uses described in the plan, or is a separate post-award approval required
+    before those AI capabilities may be used?
+            An AI Plan found acceptable during evaluation is expected to carry forward at award.
+            Use beyond the scope described in the accepted plan requires a revised submission and
+            approval.
+
+240.        May an approved AI Compliance and Risk Management Plan authorize recurring
+    generative-AI-assisted software development activities throughout the SDLC, including source-
+    code generation, code review, refactoring, test generation, documentation generation,
+    accessibility remediation, security remediation, infrastructure-as-code assistance, and
+    development planning, provided such use remains within the approved data-handling, hosting,
+    model, and human-review controls?
+            Yes, provided such use remains within the data-handling, hosting, model, and human-
+            review controls described in the approved AI Compliance and Risk Management Plan.
+
+241.        For purposes of CDCH.10, does a model-version change within an already approved
+    provider or managed AI service require submission and approval of a revised AI plan, or may an
+    Offeror identify and obtain approval for a defined model family or managed AI service?
+            Offerors may identify and seek approval for a defined model family or managed AI
+            service; materially different models or providers would require a revised submission.
+
+242.        Does CDC permit contractor use of commercially hosted generative AI coding tools
+    when Government non-public information, CUI, PII, PHI, credentials, secrets, production data,
+    and other protected Government information are excluded from the AI system, subject to an
+    approved AI Compliance and Risk Management Plan?
+            Yes, subject to an approved AI Compliance and Risk Management Plan and confirmation
+            that no Government non-public information, CUI, PII, PHI, credentials, or production
+            data are processed by the external tool.
+                                                                                        Page 40 of 44
+
+
+243.         Will software development be required to occur exclusively on CDC-furnished
+    equipment? If so, may contractor personnel access and authenticate to approved commercial
+    generative AI development services from CDC-furnished laptops, including browser-based AI
+    services, IDE-integrated coding assistants, or command-line AI coding tools, when such use is
+    covered by an approved AI Compliance and Risk Management Plan? Please also clarify whether
+    CDC-managed devices will permit installation or use of the necessary IDE extensions, command-
+    line tools, package managers, source-control clients, container tooling, and outbound network
+    access required for those approved services.
+            Development is expected to occur on CDC-furnished equipment where required by
+            security policy. Use of approved external AI tools from CDC-furnished equipment, and
+            associated tooling/network access, is subject to CDC's standard device management
+            policies and will be coordinated at kickoff.
+
+244.         If commercial generative AI services are approved for software-development use but
+    cannot be accessed directly from CDC-furnished equipment, does CDC provide an approved
+    alternative, such as Azure OpenAI or another Government-authorized AI development
+    environment, that contractors may use for AI-assisted software engineering?
+            CDC's Azure OpenAI services within the EDAV environment are available as an
+            alternative as well as other HHS approved models.
+
+245.        Does use of generative AI solely for development of the pre-award proposal prototype
+    constitute AI use in contract performance requiring Government approval, or do the CDCH.10
+    requirements apply to AI use during contract performance following award?
+            CDCH.10 approval requirements apply to AI use during contract performance following
+            award, not to an offeror's internal tools used solely to develop the pre-award proposal
+            prototype.
+
+246.        For the Tab 2-2 proposal prototype, may Offerors use synthetic/non-sensitive test data
+    and mocked interfaces for existing VAERS integrations that will not be available until after
+    award, provided the prototype demonstrates the proposed workflows, branching logic,
+    functionality, architecture, and integration approach?
+            Yes. See answer to question 28.
+
+247.         For Tab 2-2, is CDC seeking a functional proof of concept demonstrating representative
+    end-to-end workflows, or is the expectation that the proposal prototype implement substantially
+    all functional requirements identified in Tasks 1 and 2?
+            Demonstration of functional requirements identified in the table and any other
+            improvements. See answer to question 28.
+
+248.        Is the Day-45 Alpha expected to integrate with live or test instances of existing VAERS
+    systems, or may external VAERS interfaces be mocked or stubbed until CDC provides the
+    applicable integration specifications, connectivity, credentials, and approvals?
+            External VAERS interfaces may be mocked or stubbed until CDC provides applicable
+            integration specifications, connectivity, credentials, and approvals.
+
+249.         Where delivery depends upon interfaces, access, technical information, approvals, or
+    actions from incumbent VAERS contractors, CDC hosting teams, or other Government support
+                                                                                         Page 41 of 44
+
+
+    organizations, how will schedule impacts resulting from delayed external dependencies be
+    handled?
+            Milestone dates will be adjusted to the extent delays are attributable to Government or
+            Government-designated dependencies.
+
+250.        Because the application is to be developed and deployed within the CDC-managed
+    FedRAMP-authorized Azure environment, please confirm whether the contractor is expected to
+    obtain a separate FedRAMP authorization or procure a separate 3PAO assessment for the
+    application, or whether the contractor is responsible for application-level controls,
+    documentation, remediation, and support of CDC's ATD/ATO process within the existing
+    authorized environment.
+            See questions 9 and 251.
+251.        Are independent penetration testing, 3PAO assessment, or other third-party security
+    assessment costs expected to be included in the contractor's Firm Fixed Price, or will applicable
+    CDC/Government security organizations perform those assessments against the application
+    within the CDC-managed environment?
+            For the CDC managed cloud environment these controls are inherited. CDC will work
+            with the contractor to obtain the application-level artifacts such as scans and other
+            security controls to support CDC authorizations.
+252.         Does CDC require any contractor-held HIPAA certification, third-party HIPAA
+    certification, or similar attestation as a condition of award or performance, or is HIPAA
+    compliance demonstrated through implementation and documentation of the applicable privacy
+    and security safeguards within the CDC-managed environment?
+            No specific third-party HIPAA certification is required; compliance is demonstrated
+            through implementation and documentation of applicable safeguards.
+
+253.         The PWS specifies a nine-month period of performance while the Production-Ready
+    Final Release is due at DOA + 150 days. Please clarify the expected contractor responsibilities
+    and level of effort for the remainder of the period of performance following final release,
+    including O&M, production support, defect remediation, enhancement work, and transition
+    activities.
+            See answer to Question 13.
+
+
+254.         Are there Government-designated mandatory Key Personnel positions or minimum
+    staffing levels for this requirement, or may the Offeror determine the appropriate Key Personnel,
+    labor categories, staffing levels, and staffing mix necessary to accomplish the PWS?
+            See answer to Question 33.
+
+255.        For the Similar Experience factor, may the Offeror rely on relevant experience of
+    proposed Key Personnel and/or subcontractors, including experience performed while employed
+    by other organizations, or is the evaluation limited to projects previously performed by the
+    Offeror as a corporate entity?
+
+            See answer to Question 33.
+                                                                                        Page 42 of 44
+
+
+-   Page 33 identifies an Incident Response Plan as due "as part of Proposal." Please confirm
+    whether the Incident Response Plan is required with the quotation and, if so, whether it is
+    included within the 15-page Technical Proposal limit or submitted as a separate attachment
+    outside the page limit.
+
+            See answer to Question 3.
+
+256.       Please confirm the Section 508 documentation required at proposal submission for a
+    custom solution that has not yet been developed. May the Offeror submit the applicable HHS
+    Accessibility Conformance Checklist describing the proposed approach and planned
+    conformance, with the final ACR/VPAT delivered at Beta as identified in the PWS?
+            Yes, required. It is submitted as a separate attachment and excluded from the 15-page
+            limit; it is evaluated on a pass/fail basis similar to the DMP and AI Plan.
+
+257.         To the extent implementation or testing of the redesigned reporting workflow or customer
+    satisfaction surveys requires PRA/OMB clearance, will CDC be responsible for obtaining the
+    applicable clearance, and will Government-caused clearance delays result in adjustment of
+    affected implementation or acceptance milestones?
+            See answer to question 5.
+258.        Please confirm the following: Section 4, Task 3.2 3.2 The Contractor shall ensure the
+    application is developed and deployed within the CDC-managed FedRAMP-authorized Azure
+    environment approved for use by CDC, consistent with Government security requirements.
+
+            Confirmed.
+
+259.       FAR 52.219-4 (Notice of Price Evaluation Preference for HUBZone Small Business
+    Concerns) is incorporated in Section D, while the SF-18 indicates a small business set-aside. Will
+    the HUBZone price evaluation preference be applied in the evaluation of quotes under this RFQ?
+
+            FAR 52.219-4 is removed from the solicitation.
+
+260.        Section B states a period of performance of 28 September 2026 through 27 June 2027,
+    while the Section 8 deliverable table states that Testing and Final Release (Production-Ready) is
+    due "By end of PoP (DOA + 150 days)". Please confirm the intended due date for Final Release
+    and the intended activity for the remainder of the period of performance.
+            See answer to Question 13.
+
+261.        Will the modernized application submit reports into the existing CDC VAERS system of
+    record, or into FDA's Adverse Event Monitoring System (AEMS)? Please identify the receiving
+    interface, its owner, and whether an interface specification will be furnished at kickoff.
+            The application reports into the existing CDC VAERS system of record. Interface
+            ownership and specifications will be identified at kickoff.
+
+262.        Regarding the Authority to Develop (ATD): what specific artifacts must the Contractor
+    submit, which official issues it, and what has been the historical median time from
+                                                                                        Page 43 of 44
+
+
+    documentation submission to ATD issuance for systems in the VAERS boundary? We are
+    familiar with ATT that allows development to start, and ATT in process while resources are
+    provisioned for Dev/Test.
+
+            CDC, in coordination with OCIO, issues the ATD.
+
+263.         Will an Authority to Operate (ATO) be required for production deployment within this
+    period of performance, and if so, is the Contractor responsible for the full SA&A package or for
+    supporting a CDC-led authorization? Or, would the government consider a Modification of the
+    existing VAERS ATO to add the new functionality in order to reduce the timeframe a full SA&A
+    package may introduce?
+
+            See answer to Question 9.
+
+
+264.        Task 1.9 requires VAERS-compatible data capture and transmission. Will CDC furnish the
+    VAERS data element definitions, business rules and integration requirements at kickoff, as
+    indicated in Section 9, and can a draft data dictionary be made available during the quotation
+    period?
+
+            Yes, at kick off data element definitions, business rules and integration requirements
+            will be provided. Offerors should base the prototype on the publicly available current
+            VAERS form and general PWS requirements. The current form can be found at VAERS -
+            Download / Upload a Writable PDF Form and the VAERS Data Use Guide found at VAERS
+            - Data Sets provides field names and form box alignment (derived fields are related to
+            this RFP).
+
+265.        Task 1.10 requires reducing submission abandonment by at least 30% against a baseline
+    established at project kickoff. Does CDC currently measure abandonment on the existing form,
+    and will baseline data be furnished?
+
+            See answer to Question 44.
+
+266.        Task 1.8 requires a low-code/configurable interface. Does CDC have an existing
+    preferred content management or configuration platform within the CDC Azure environment
+    that the Contractor should use, or is the mechanism at the Contractor's discretion?
+
+            See answer to Question 109.
+
+267.         For Tab 2-2, please confirm acceptable prototype hosting: may the prototype be hosted
+    on Contractor-controlled infrastructure outside the CDC boundary, and are there any
+    restrictions on the technologies or data used in the prototype?
+                                                                                             Page 44 of 44
+
+
+            Yes, prototypes may be on Contractor controlled infrastructure, and no restrictions as
+            long as the prototype tech stack uses the same tech stack available to CDC and are part
+            of FedRAMP approved infrastructure.
+
+268.       Please confirm whether the existing VAERS system operator will be made available for technical
+    exchange during performance, and how integration dependencies between the two efforts will
+    be coordinated.
+
+            Coordination points and points of contact for existing VAERS support contractors will be
+            identified after award.
+
+269.         Will CDC issue an amendment with a Q&A response, and by what date, given the 4 September
+    closing?
+
+            Yes.
+
+270.        The current online form provides item instructions in English and Spanish. Is Spanish parity
+    required in the modernized application, and are any additional languages expected?
+
+            English and Spanish are the languages expected.
+
+271.         Does the current online form distinguish public from healthcare-provider submitters in any way,
+    or is the branching required by PWS 1.6 entirely new to this acquisition?
+
+            No, this is a new feature.
+
+272.        Does the Government anticipate any period of performance beyond the nine-month base
+    period, whether through options or a follow-on requirement?
+
+            There are no current plans to extend.
+
+273.         Section 3 references coordination with other existing contracts supporting VAERS. Can you
+    identify those contracts or contract holders so we can appropriately account for integration
+    dependencies in our technical approach?
+
+            Coordination points and points of contact for existing VAERS support contractors will be
+            identified after award.
+
+274.        Can the deadline be extended?
+
+            The deadline for quotations is extended to 9/8/2026 10:00 AM ET.
+

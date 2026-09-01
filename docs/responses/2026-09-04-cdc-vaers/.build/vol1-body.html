@@ -1,0 +1,755 @@
+<meta charset="utf-8"><title>vol1-body</title><style>
+  html, body { font-family: "Times New Roman", Times, serif; font-size: 12pt; line-height: 1.18; color: #000; margin: 0; padding: 0; }
+  * { font-family: "Times New Roman", Times, serif !important; }
+  h1 { font-size: 14pt; font-weight: bold; margin: 0 0 10pt 0; page-break-after: avoid; }
+  h2 { font-size: 13pt; font-weight: bold; margin: 12pt 0 5pt 0; page-break-after: avoid; }
+  h3 { font-size: 12pt; font-weight: bold; margin: 9pt 0 3pt 0; page-break-after: avoid; }
+  p { margin: 0 0 6pt 0; }
+  ul, ol { margin: 0 0 6pt 0; padding-left: 22pt; }
+  li { margin-bottom: 3pt; }
+  hr { border: none; border-top: 0.5pt solid #000; margin: 10pt 0; }
+  a { color: #000; text-decoration: none; }
+  strong { font-weight: bold; } em { font-style: italic; }
+  table { border-collapse: collapse; width: 100%; margin: 6pt 0 10pt 0; font-size: 10pt; page-break-inside: auto; }
+  th, td { border: 0.5pt solid #000; padding: 3pt 5pt; vertical-align: top; text-align: left; }
+  th { background: #e8e8e8; font-weight: bold; }
+  tr { page-break-inside: avoid; }
+  .flag { background: #ffef9e; font-weight: bold; }
+  .vol-title { font-size: 18pt; font-weight: bold; text-align: center; margin: 150pt 0 10pt 0; }
+  .vol-sub { font-size: 13pt; text-align: center; margin: 0 0 6pt 0; }
+  .section-break { page-break-before: always; }
+</style><h1>Tab 1 — Executive Summary</h1>
+<hr>
+<p>Frasier Digital, LLC — a Texas small disadvantaged business — proposes to design,
+build, and deploy the modernized VAERS reporting application described in RFQ
+75D301-26-Q-00146, within CDC&#39;s FedRAMP-authorized Azure environment, open source per
+M-16-21, Section 508-conformant, delivered by a named principal-led team with deep
+healthcare-IT experience (Optum/UnitedHealthcare, healthtech platform engineering,
+60k-user healthcare systems).</p>
+<p>We did not wait for award to demonstrate understanding. A working prototype of the
+modernized reporting experience — branching public/provider form on the actual VAERS 2.0
+data elements, provider vaccine-error path with adverse-event field suppression,
+plain-language toggle, guarded intelligent completion assistance, low-code CDC-editable
+administration, and VAERS-compatible structured output — is live today for evaluation at
+<strong><a href="https://vaers-demo.frasierdigital.com">https://vaers-demo.frasierdigital.com</a></strong> (Tab 2-2), tested to 0 WCAG 2.1 AA violations.</p>
+<p>Our quote includes every required gate: the Data Management Plan, the completed AI Use
+Compliance and Risk Management Plan (Attachment 1 template), the Accessibility
+Conformance Report, itemized pricing, and signed representations. Firm-fixed-price
+CLIN 0001 with travel CLINs at the Government&#39;s stated NTE amounts; no other direct
+costs — the stack is open source and the cloud is Government-furnished.</p>
+<p>The team named in this proposal is the team that will do the work.</p>
+<div class="section-break"></div><h1>Tab 2-1 — Technical Plan</h1>
+<hr>
+<h2>1. Understanding of the Requirement</h2>
+<p>VAERS is the nation&#39;s front door for vaccine safety signals, and that front door is hard
+to walk through. A parent reporting a child&#39;s reaction and a pharmacist reporting a
+vaccine error today face the same experience: a long, expert-oriented form served by a
+legacy ColdFusion/Java stack, a writable PDF alternative, and navigation that predates
+modern mobile use. The predictable results are the ones this RFQ targets: abandoned
+submissions, incomplete critical fields, and provider reports forced through
+adverse-event questions that do not apply. Every abandoned report is a data point the
+Immunization Safety Office never sees.</p>
+<p>CDC is not buying a website refresh. It is buying <strong>data quality and completeness at the
+point of capture</strong>, delivered as a modern reporting experience: branching logic that asks
+each submitter only what applies (Task 1.6), plain language for the public path (1.6.1),
+AE-field suppression for provider vaccine-error reports (1.6.2), intelligent completion
+assistance (Section 2), integrated medical-record upload with a disciplined Phase 1 scope
+(Task 2), and VAERS-compatible structured outputs that feed existing downstream systems
+without disrupting them (Task 1.9) — all inside CDC&#39;s FedRAMP-authorized Azure
+environment, under an ATD CDC can defend, conforming to Section 508, and editable by CDC
+program personnel without a developer in the loop (Task 1.8).</p>
+<p>Three constraints shape our approach. <strong>First, the new application is a guest in a
+working ecosystem</strong>: existing VAERS support contracts, downstream data workflows, CXone
+and eFax channels, and the post-submission upload tool all continue operating; our
+integration surface is VAERS-compatible structured data and coordination through CDC, not
+replacement of back-end systems. <strong>Second, the nine-month period of performance with
+fixed deliverable clocks (wireframes DOA+21, alpha DOA+45, beta DOA+90, production
+DOA+150) leaves no room for a discovery phase that produces only documents</strong> — which is
+why we arrive with a working, tested prototype (Tab 2-2) rather than a promise of one.
+<strong>Third, trust requirements are asymmetric</strong>: a public submitter must never be given
+medical advice or a causality opinion by an assistance feature, and PHI/PII discipline
+must be engineered in from the first wireframe, not audited in at the end.</p>
+<p>We have already reduced this understanding to working software. The prototype at
+<strong>vaers-demo.frasierdigital.com</strong> (Tab 2-2) implements the branching form on the actual
+VAERS 2.0 data elements, the provider vaccine-error path with AE suppression, the
+plain-language/clinical toggle, completion assistance with guardrails, the low-code admin
+surface, and VAERS-compatible structured output — evaluated at 0 WCAG 2.1 AA violations
+across every page state. Every technical claim in this tab can be inspected there today.</p>
+<h2>2. Technical Approach and Architecture</h2>
+<p><strong>Architecture in one paragraph.</strong> A responsive single-page web application (React +
+TypeScript, USWDS-based design system) served from CDC&#39;s Azure environment, backed by a
+lightweight API tier (Node.js) and Azure SQL within the CDC tenancy. The submission form
+is <strong>schema-driven</strong>: form structure, branching rules, field text, tooltips, and help
+content live in versioned configuration, not code — this single design decision is what
+makes the low-code interface (Task 1.8) real rather than aspirational, because CDC
+program personnel edit the same configuration the form engine reads. Intelligent
+completion assistance runs against <strong>CDC&#39;s existing enterprise Azure OpenAI service
+(EDAV)</strong> behind a deterministic safety gate — no new AI services, no data leaving the
+boundary (our completed AI Use Compliance and Risk Management Plan, Attachment 1,
+governs this in detail). All custom code is delivered open source under M-16-21 to a
+CDC repository on a bi-weekly cadence. <span class="flag">[FLAG: final stack wording pending Bish Q&amp;A on
+EDAV availability; prototype covers both smart-validation-only and assistant answers.]</span></p>
+<p><strong>Why this is sound.</strong> Every load-bearing element is boring on purpose: React and Node
+are already present in CDC&#39;s VAERS environment; Azure SQL MI is the incumbent data
+platform; USWDS is the federal design standard; the AI layer is CDC&#39;s own service. The
+innovation is concentrated where it pays — branching schema engine, assistance
+guardrails, low-code editing — and the risk is concentrated where we can retire it early,
+which the schedule below does.</p>
+<p><strong>Scalability and Phase 2 posture.</strong> The schema-driven engine scales sideways (new
+submitter types, new form versions, Spanish-language variant) without re-architecture.
+The upload subsystem is built with Phase 1 restrictions enforced in configuration, so
+Phase 2 expansion to images (2.4.2) is a policy change plus review, not a rebuild.
+Stateless application tier scales horizontally under Azure load balancing; surge events
+(a safety communication driving reporting spikes) are a capacity configuration, not an
+engineering project.</p>
+<h2>3. Approach by PWS Task</h2>
+<h3>Task 1 — Design and Develop the Web Application</h3>
+<p><strong>1.1–1.2 Requirements confirmation and UX artifacts.</strong> Weeks 1–3 are structured
+stakeholder sessions with the VAERS program office to confirm data elements, integration
+constraints, and success metrics — anchored on our prototype as the strawman. Reviewing
+working software instead of static wireframes gets CDC to real decisions (&quot;suppress
+these three fields on this branch,&quot; &quot;this tooltip is wrong&quot;) in the first session.
+UX deliverables (user flows, wireframes, clickable prototype, landing/navigation
+redesign) are due DOA+21; we hit that clock by iterating the existing prototype under
+CDC direction, and we capture the abandonment-rate baseline methodology with CDC at
+kickoff (feeding 1.10/PRS#4).</p>
+<p><strong>1.3 Responsive application.</strong> Mobile-first build against a Government-agreed
+device/browser matrix (PRS#2), with field-level validation, inline error recovery, and
+save-and-resume so an interrupted submitter does not become an abandoned report.
+Automated cross-viewport regression tests run in CI on every commit.</p>
+<p><strong>1.4 Landing page and navigation redesign.</strong> Three clear front doors — report an
+adverse event, check on a report, find data — with reporting tools, FAQs, and data
+downloads reachable in ≤2 clicks (PRS#3). Redesign ships in the DOA+21 UX package.</p>
+<p><strong>1.5 / 1.7 Satisfaction surveys.</strong> Two instruments: site-navigation survey and
+post-submission pop-up (focus-trapped, 508-conformant, dismissible without penalty).
+Instruments delivered with Beta; response data reported per the approved schedule
+(PRS#7) and summarized in monthly status reports.</p>
+<p><strong>1.6 Branching-logic submission form.</strong> The core of the job. One schema, two rendered
+experiences: a plain-language public path written to a general reading level (1.6.1) and
+a clinical provider path — with branching that presents and suppresses fields per
+submitter type and report characteristics, including the mandated provider
+vaccine-error-no-AE path (1.6.2, PRS#1). Branching rules are table-driven and unit-tested
+against a scenario matrix we expect the Government to extend during acceptance; the
+prototype already passes the vaccine-error-no-AE scenario, visibly announcing
+&quot;N questions removed&quot; so submitters trust the shortening form.</p>
+<p><strong>1.8 Low-code/configurable interface.</strong> Authorized CDC personnel edit field text,
+tooltips, help/FAQ content, choice options, and field visibility through an
+administrative interface with live preview, role-based access, versioning, and one-click
+rollback — no developer, no deployment (PRS#8). We will jointly script the Government&#39;s
+update scenarios early so acceptance testing runs against rehearsed reality. The change
+and configuration process is documented as part of Task 1.8 and taught to program
+personnel in a hands-on session before Beta.</p>
+<p><strong>1.9 VAERS-compatible data capture and transmission.</strong> Structured outputs mapped
+field-for-field to the VAERS data dictionary (the prototype already emits
+VAERSDATA/VAERSVAX-shaped records including derived flags and computed fields), with
+transmission mechanics (format, channel, cadence) confirmed with CDC and the existing
+system contractors during 1.1 and proven in Government acceptance testing (PRS#6).
+De-identification boundaries mirror the published public-data split.</p>
+<p><strong>1.10 Performance.</strong> ≤3s page loads, ≤10min median submission, ≥30% abandonment
+reduction versus the kickoff baseline — engineered (static-first delivery, code
+splitting, CDN caching per CDC architecture) and then <strong>measured and reported</strong> with an
+approved methodology (PRS#4): real-user timing metrics, funnel analytics on abandonment,
+monthly reporting with deviations explained. The current prototype loads in ~1.2s on
+commodity hosting.</p>
+<p><strong>1.11 Iterative builds.</strong> Working builds delivered for Government review from Alpha
+(DOA+45) onward on a bi-weekly cadence aligned to technical reviews; defect triage with
+severity SLAs runs continuously through Beta (DOA+90) and Final (DOA+150).</p>
+<p><strong>1.12 User documentation.</strong> Public, provider, and administrator guides written against
+the final UX (PRS#16), plain-language reviewed, 508-conformant, delivered with Final.</p>
+<h3>Task 2 — Medical Record Upload and Document Management</h3>
+<p>Integrated upload lands in the form flow (2.1) while the existing post-submission tool
+continues untouched — its users lose nothing. A free-text box (2.2) captures narrative
+detail the structured fields miss. The <strong>supplemental-document suggestion tool (2.3)</strong>
+scans provider submissions against a transparent, configurable rule set (report
+characteristics → suggested document types) and reaches ≥90% suggestion coverage across
+Government-defined scenarios (PRS#10); the rules live in the same low-code configuration
+as the form, so CDC can tune suggestions as reporting patterns evolve. <strong>Phase 1
+restrictions (2.4.1) are enforced server-side</strong> — accepted document categories are
+configuration, giving CDC a designed, documented Phase 2 expansion path (2.4.2, PRS#11)
+without a rebuild. All upload handling is PHI-grade: encryption in transit and at rest,
+type/size validation, malware scanning per CDC standards, audit logging, least-privilege
+access (2.5, PRS#9). Defect remediation and upload performance optimization continue
+through Beta and Final (2.6).</p>
+<h3>Task 3 — Security, Privacy, Compliance, and ATD</h3>
+<p>Compliance runs as an engineering workstream from day one, not a documentation phase at
+the end. <strong>Privacy by architecture (3.1):</strong> PII/PHI minimization, no identifiers required
+for assistance features, de-identification split mirrored from VAERS public-data
+practice, HIPAA/Privacy Act protections documented in the PTA/PIA path. <strong>CDC
+environment only (3.2):</strong> all development, testing, and deployment inside the
+CDC-managed FedRAMP Azure boundary; we coordinate environment stand-up with CDC/OCIO and
+existing VAERS hosting teams in month one. <strong>ATD package (3.3, PRS#12):</strong> security and
+privacy documentation drafted with Beta and submitted in advance of deployment, with a
+named owner (PM) for Government review comments and remediation — our schedule holds a
+dedicated remediation window so ATD review does not sit on the critical path unbuffered.
+<strong>Safeguards (3.4, PRS#13):</strong> access control, FIPS-validated encryption, audit logging,
+secure configuration baselines, and vulnerability scanning in CI during development plus
+pre-deployment scans with zero known critical/high findings at deployment. <strong>Section 508
+(3.5, PRS#14):</strong> automated accessibility testing on every commit plus manual assistive-
+technology testing each release; ACR/VPAT delivered with Beta and updated at Final —
+the prototype&#39;s 0-violation axe results across all page states show this is our default
+engineering posture, not a remediation activity. Compliance documentation package (3.6,
+PRS#15), functional/security/accessibility test-and-remediate cycles before Beta and
+Final (3.7), and administrator/technical guides including Task 1.8 configuration
+guidance (3.8, PRS#16) complete the task.</p>
+<h3>Task 4 — Transition-Out</h3>
+<p>Transition readiness is a standing condition, not an end-of-contract scramble: because
+code goes to CDC&#39;s repository bi-weekly under M-16-21 with documentation maintained in
+the same repo, the Government holds current source, configuration, and process assets
+at all times. We assess and report transition readiness monthly to the COR (4.1,
+PRS#18), deliver the detailed Transition-out Plan at least two months before contract
+end (4.4), lead TEMs and shadowing with any successor (4.5, 4.10), and deliver final
+documentation, asset inventory reconciliation, account/access handover, and closeout
+(4.2–4.3, 4.6–4.11) with no degradation of support through the final day.</p>
+<h2>4. Schedule and Milestones</h2>
+<table>
+<thead>
+<tr>
+<th>Clock (from DOA)</th>
+<th>Milestone / Deliverable</th>
+<th>Our internal target</th>
+<th>Key activities in window</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>DOA+10</td>
+<td>Project Plan + Deployment &amp; Hosting Plan</td>
+<td>DOA+7</td>
+<td>Kickoff; baseline methodology agreed; OCIO environment coordination begins</td>
+</tr>
+<tr>
+<td>DOA+21</td>
+<td>UX wireframes, user flows, landing/nav redesign</td>
+<td>DOA+18</td>
+<td>Stakeholder sessions on live prototype; abandonment baseline captured</td>
+</tr>
+<tr>
+<td>DOA+30</td>
+<td>Technical Design Document (branching logic; low-code approach)</td>
+<td>DOA+27</td>
+<td>Schema + integration design confirmed with existing-system contractors</td>
+</tr>
+<tr>
+<td>DOA+45</td>
+<td><strong>Alpha</strong> demonstration build</td>
+<td>DOA+40</td>
+<td>Branching form + landing on CDC infrastructure; ATD documentation started</td>
+</tr>
+<tr>
+<td>DOA+90</td>
+<td><strong>Beta</strong> release + survey instruments, Phase 1 upload + Phase 2 provisions, draft ATD package, compliance package, ACR/VPAT</td>
+<td>DOA+80</td>
+<td>Full functionality; Government scenario testing; remediation window</td>
+</tr>
+<tr>
+<td>Pre-deployment</td>
+<td><strong>ATD issued</strong> (PRS#12)</td>
+<td>Beta+30</td>
+<td>Review-comment remediation; pre-deployment vulnerability scan</td>
+</tr>
+<tr>
+<td>DOA+150</td>
+<td><strong>Production-ready Final Release</strong> + source/build artifacts, user guides, O&amp;M docs</td>
+<td>DOA+140</td>
+<td>Acceptance testing; defect burn-down; updated ACR</td>
+</tr>
+<tr>
+<td>Monthly / bi-weekly</td>
+<td>Status reports (10th of month); technical reviews; transition-readiness assessments</td>
+<td>—</td>
+<td>Continuous</td>
+</tr>
+</tbody></table>
+<p>Internal targets run 3–10 days ahead of every contractual clock; the margin is our
+schedule risk reserve. Bi-weekly Government technical reviews fall on the same cadence
+as code delivery to the CDC repository, so review is always of current, running software.</p>
+<h2>5. Challenges and Solutions</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Challenge</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td><strong>ATD timing risk</strong> — Government review cycles are outside contractor control, and production deployment waits on ATD</td>
+<td>Draft package with Beta (60+ days before needed); dedicated remediation window; PM-owned comment turnaround ≤5 business days; SA&amp;A artifacts begun at kickoff, not Beta</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Coordination with existing VAERS contracts</strong> — integration constraints surface late in multi-contractor environments</td>
+<td>Named integration contact requested at kickoff; transmission format/channel confirmed in writing during 1.1; VAERS-compatible output validated against Government-furnished samples before Alpha</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Abandonment baseline (≥30% reduction) depends on a measurable starting point</strong></td>
+<td>Baseline methodology co-signed with CDC at kickoff per Task 1.10; PRS#4 is measure-and-report with approved methodology; funnel analytics designed in from wireframe stage</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Assistance-feature trust and safety</strong> — a public-facing AI feature in a vaccine-safety context invites misuse and misinformation risk</td>
+<td>Deterministic safety gate ahead of any generative response (emergency, medical-advice, causality, and injection inputs receive fixed approved responses); CDC-approved content corpus; kill-switch configuration; full plan in Attachment 1 — and the guardrails are live and testable in the prototype today</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>PRA implications for surveys/form changes</strong> could stretch timelines outside the PoP</td>
+<td>Flagged in our pre-quote questions; survey instruments delivered to clock regardless; schedule assumes CDC owns any required clearance in parallel <span class="flag">[FLAG: confirm assumption wording after Bish Q&amp;A response]</span></td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Nine-month PoP with fixed clocks</strong> leaves no absorption room for a slow start</td>
+<td>We start from working, tested software (Tab 2-2), a confirmed team (Tab 3-1), and internal targets ahead of every clock; week 1 is stakeholder sessions on a running system</td>
+</tr>
+</tbody></table>
+<div class="section-break"></div><h1>Tab 2-2: Prototype</h1>
+<p><strong>Prototype URL: <code>https://vaers-demo.frasierdigital.com</code></strong> <em>(no login required; desktop and mobile)</em></p>
+<p>Frasier Digital submits a <strong>working web application</strong>, not a mockup. The prototype was
+built with the same open-source stack proposed in Tab 2-1 (React front end, schema-driven
+form engine) and demonstrates the core PWS capabilities on synthetic data. It is hosted
+outside Government infrastructure for evaluation convenience only; the proposed solution
+is developed and deployed entirely within CDC&#39;s FedRAMP-authorized Azure environment.
+The prototype collects, transmits, and stores no PHI/PII.</p>
+<p>An in-application version of this walkthrough, with one-click sample scenarios
+(a completed parent report and the PRS#1 pharmacist error case), is at the
+<strong>&quot;For RFQ evaluators&quot;</strong> link in the site footer.</p>
+<h2>Suggested evaluation walkthrough (10 minutes)</h2>
+<ol>
+<li><strong>Public path:</strong> Start a report as a member of the public. Try &quot;Prefer to start by
+telling us what happened?&quot;: describe the event in plain words and the assistant
+proposes form answers drawn only from what you wrote — each individually reviewed,
+confirmed, and tagged &quot;AI-suggested, verify&quot; until you edit or accept it, with a
+receipt showing where answers landed. Note plain-language questions, &quot;Why we ask&quot;
+tooltips, inline validation, and the live completeness meter. Submit and inspect the
+structured record: field names mirror the published VAERS data dictionary
+(VAERSDATA / VAERSVAX), grouped to match the public-release de-identification split.</li>
+<li><strong>Provider path (PRS#1):</strong> Start over as a healthcare professional and select
+<em>&quot;vaccine administration error with no adverse event.&quot;</em> Every adverse-event question is
+suppressed and the form states how many questions were removed.</li>
+<li><strong>Mobile:</strong> Repeat either path on a phone.</li>
+<li><strong>Low-code administration (PRS#8):</strong> Open <em>Admin</em>, edit a field label, tooltip, or FAQ
+entry, and see the change live in the form — no developer involved.</li>
+<li><strong>Uploads (PRS#9/#11):</strong> Attach a PDF (accepted); attempt an image (rejected with
+Phase 2 explanation). At review, note auto-suggested supporting documents (PRS#10).</li>
+</ol>
+<h2>Feature-to-requirement map</h2>
+<table>
+<thead>
+<tr>
+<th>Prototype feature (all working)</th>
+<th>PWS</th>
+<th>PRS</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Branching submission form, public vs. provider; provider error-no-AE path suppresses all AE fields</td>
+<td>1.6, 1.6.2</td>
+<td>PRS#1</td>
+</tr>
+<tr>
+<td>Plain-language public version with clinical/plain toggle</td>
+<td>1.6.1</td>
+<td>PRS#1</td>
+</tr>
+<tr>
+<td>Full VAERS 2.0 data-element coverage (demographics through prior-event history); submission generates a record whose field names mirror the published VAERS data dictionary (VAERSDATA flags, VAERSVAX rows, computed NUMDAYS) with the public-release de-identification split</td>
+<td>1.6, 1.9</td>
+<td>PRS#5, #6</td>
+</tr>
+<tr>
+<td>Mobile-first responsive; full flows complete on phone viewports</td>
+<td>1.3</td>
+<td>PRS#2</td>
+</tr>
+<tr>
+<td>Redesigned landing page: clear paths to reporting form, FAQs, data downloads</td>
+<td>1.4</td>
+<td>PRS#3</td>
+</tr>
+<tr>
+<td>Intelligent completion assistance: smart inline validation, &quot;Why we ask&quot; tooltips, reactive FAQs, and a <strong>live AI assistant</strong> (form questions + narrative review, scripted fallback). Production-grade safety architecture: a classification stage routes safety-critical inputs (emergencies, medical-advice and causality questions, personal information, prompt injection) to fixed approved responses before any generative model runs, under a strict cannot-say policy. Production targets CDC&#39;s EDAV Azure OpenAI — no new AI services, Government environment only</td>
+<td>Scope §2–3</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Live completeness meter surfacing required/critical VAERS data elements to the submitter — the same metric CDC measures, driving the ≥90% completeness and abandonment-reduction targets</td>
+<td>1.1, 1.10</td>
+<td>PRS#4, #5</td>
+</tr>
+<tr>
+<td>Medical-record upload + free-text box; Phase 1 type restrictions enforced; Phase 2 (images) accommodated by design</td>
+<td>2.1, 2.2, 2.4</td>
+<td>PRS#9, #11</td>
+</tr>
+<tr>
+<td>Supplemental-document suggestion tool scanning provider submissions</td>
+<td>2.3</td>
+<td>PRS#10</td>
+</tr>
+<tr>
+<td>Site-navigation survey + post-submission popup survey</td>
+<td>1.5, 1.7</td>
+<td>PRS#7</td>
+</tr>
+<tr>
+<td>Low-code administration with live preview: content (labels, tooltips, FAQs, site text) AND interface (field visibility, choice options) — the PWS&#39;s &quot;content and interface updates&quot; demonstrated literally</td>
+<td>1.8</td>
+<td>PRS#8</td>
+</tr>
+<tr>
+<td>Section 508: keyboard navigable, screen-reader labeled, WCAG 2.1 AA — automated audit passes with zero violations across all pages and form states</td>
+<td>3.5</td>
+<td>PRS#14</td>
+</tr>
+<tr>
+<td>Performance: &lt;1s loads (75 KB compressed application), save-and-resume</td>
+<td>1.10</td>
+<td>PRS#4</td>
+</tr>
+</tbody></table>
+<h2>Architecture and scalability</h2>
+<p>The form is not hard-coded: sections, fields, branching conditions, plain/clinical text
+variants, tooltips, and validation rules are a <strong>declarative configuration schema</strong>
+rendered by a generic engine. One design decision serves four evaluation areas: branching
+correctness is testable data, not scattered code (PRS#1); the low-code interface edits
+the same configuration the form renders (PRS#8); VAERS field mappings live beside the
+fields they map (PRS#6); and future changes — new vaccines, Phase 2 image upload, new
+submitter types or languages — are configuration, not redevelopment. The demo persists
+configuration locally; production uses a role-restricted, versioned, audit-logged
+configuration service in CDC Azure. <strong>Risks demonstrated and mitigated:</strong> AI-scope
+ambiguity is hedged (validation, tooltips, and FAQs work with no AI service; the
+assistant is an additive layer); Phase 1/2 upload separation is enforced exactly as the
+PWS directs; plain-language substitution is a content operation CDC staff perform
+themselves, mitigating PRA-driven wording turnaround.</p>
+<div class="section-break"></div><h1>Tab 3-1 — Management Plan</h1>
+<hr>
+<h2>1. Organizational Structure and Program Manager Authority</h2>
+<p>Frasier Digital is a principal-led small business: the Program Manager is the company&#39;s
+founder and managing member, and he personally leads this delivery. That structure is
+CDC&#39;s management-risk mitigation. There is no account layer, no matrixed resource pool,
+and no approval chain above the PM — <strong>the person accountable to the COR has full,
+immediate authority over staffing, budget, priorities, and corrective action</strong>, and the
+distance between a Government comment and a binding decision is one phone call.</p>
+<p><strong>Joseph Frasier (PM / Lead Architect, Key Personnel)</strong> directs the program, owns all
+deliverables, chairs the bi-weekly technical reviews, and is the single point of contact
+for the CO and COR. <strong>Ryan Daley (Technical Lead, Key Personnel)</strong> owns day-to-day
+engineering execution and release quality; his healthcare-IT background (Optum/
+UnitedHealthcare; Shuttle Health) anchors the team&#39;s PHI/PII and ADA-conformance
+discipline. Supporting engineers report to Ryan; content and UX-research support report
+to Joseph. The team communicates in a single shared channel with CDC-visible status —
+no internal information asymmetry for the Government to penetrate.</p>
+<p>Escalation path: any team member → PM within the same business day; PM → COR per the
+communication plan below. For incidents, the 1-hour reporting channel operates
+independently of the management chain so notification is never queued behind analysis.</p>
+<h2>2. Staffing Plan</h2>
+<p>The team is named, confirmed, and sized honestly for a nine-month FFP delivery
+(~1.8 FTE average, weighted toward the build phase; commitments below reconcile exactly
+with the labor hours itemized in Volume II):</p>
+<table>
+<thead>
+<tr>
+<th>Person</th>
+<th>Role</th>
+<th>Commitment</th>
+<th>Relevant depth</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Joseph Frasier</td>
+<td>PM / Lead Architect + Security &amp; Compliance Lead (<strong>KEY</strong>)</td>
+<td>0.55 FTE (both roles)</td>
+<td>Federal delivery lead; architecture; prototype author; SA&amp;A/ATD/EPLC artifact ownership</td>
+</tr>
+<tr>
+<td>Ryan Daley</td>
+<td>Technical Lead — healthcare IT (<strong>KEY</strong>)</td>
+<td>0.25 FTE</td>
+<td>Optum/UnitedHealth; Shuttle Health; ADA-conformant UI delivery; CI/CD ownership</td>
+</tr>
+<tr>
+<td>Rahmin Shoukoohi</td>
+<td>Integration &amp; data engineer</td>
+<td>0.15 FTE</td>
+<td>HolonHealth (60k-user healthcare platform, auditable ledger); state education data-exchange; <strong>Atlanta-area — aligned to CDC core hours and available for coordinated on-site presence</strong></td>
+</tr>
+<tr>
+<td>Andrew Frasier</td>
+<td>Frontend engineer, test automation, 508 testing</td>
+<td>0.50 FTE</td>
+<td>Component build-out; automated accessibility testing in CI</td>
+</tr>
+<tr>
+<td>Seth Chesky</td>
+<td>QA &amp; accessibility engineer</td>
+<td>0.20 FTE</td>
+<td>Release-candidate QA cycles; manual assistive-technology testing; current on our component stack</td>
+</tr>
+<tr>
+<td>Rida Khazi</td>
+<td>Plain-language content, UX research, satisfaction surveys</td>
+<td>0.12 FTE</td>
+<td>Public-path language (Task 1.6.1); survey instruments (1.5/1.7)</td>
+</tr>
+</tbody></table>
+<p><strong>Rapid staffing.</strong> Our staffing risk is managed by design rather than by requisition:
+every person above is identified by name today, has worked with this team&#39;s stack and
+standards, and requires no recruiting pipeline. A pre-identified bench of additional
+vetted engineers from our standing roster can be activated inside two weeks —
+onboarding for this contract means Tier 2 (MRPT) paperwork, NDAs, and CDC trainings, not
+finding a stranger. Roster submission 30 days before the effective date, background
+investigations, and training compliance are managed by the PM as contract deliverables
+with the same tracking as technical milestones.</p>
+<p><strong>Capacity disclosure.</strong> Frasier Digital currently has proposals under evaluation with
+other agencies with periods of performance that could overlap this one. We size and
+price every bid against total committed capacity: the FTE commitments above are net of
+all potential concurrent awards, the named bench exists to absorb surge, and the PM&#39;s
+combined 0.55 FTE on this contract is protected as a floor, not an average. We flag this
+proactively because deliverable-based FFP work only functions when capacity claims are
+honest. <span class="flag">[FLAG: keep wording synced with actual award status at render time — mirrors
+NOAA disclosure pattern.]</span></p>
+<p><strong>Employee turnover — past three years.</strong> Frasier Digital does not operate a
+salaried-staff pool, so we answer this requirement transparently rather than
+statistically: delivery is performed by the firm&#39;s principal together with named
+associates who are individually committed to a specific engagement at proposal time and
+engaged under written agreement at award. No Frasier Digital delivery-team member has
+ever departed during an engagement.</p>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Salaried technical employees</th>
+<th>Departures (voluntary/involuntary)</th>
+<th>Mid-engagement departures from delivery teams</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2024</td>
+<td>0</td>
+<td>0 / 0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>2025</td>
+<td>0</td>
+<td>0 / 0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>2026 (YTD)</td>
+<td>0</td>
+<td>0 / 0</td>
+<td>0</td>
+</tr>
+</tbody></table>
+<p>On a nine-month contract, the turnover risk that matters is not a statistic but a
+question: <em>will the people named in this proposal be the people doing the work?</em> Our
+answer is structural, not historical — key personnel are contractually committed to this
+engagement, substitution requires CO/COR approval under the contract terms, each named
+associate has confirmed availability for this period of performance before being
+proposed, and the accountable principal cannot leave his own firm. A named,
+pre-identified bench (Section 2) backstops the commitment rather than a recruiting
+pipeline.</p>
+<h2>3. Performance Metrics and Measurement</h2>
+<p>Our internal metrics mirror the Government&#39;s Performance Requirements Summary line for
+line, measured continuously in CI and reported monthly — so Government acceptance
+testing confirms numbers we already track rather than discovering new ones:</p>
+<table>
+<thead>
+<tr>
+<th>PRS focus</th>
+<th>Our internal metric and cadence</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>PRS#1 branching correctness</td>
+<td>Scenario-matrix pass rate (100% target) — every commit, in CI</td>
+</tr>
+<tr>
+<td>PRS#2 responsiveness</td>
+<td>Device/browser matrix regression — every release candidate</td>
+</tr>
+<tr>
+<td>PRS#3 landing/navigation</td>
+<td>Access-path functional checks — every release</td>
+</tr>
+<tr>
+<td>PRS#4 performance</td>
+<td>Real-user page-load p95, submission-time median, abandonment funnel — continuous, reported monthly with methodology</td>
+</tr>
+<tr>
+<td>PRS#5 data completeness</td>
+<td>Required/critical field completeness on synthetic then live reports (≥90% target) — weekly analysis</td>
+</tr>
+<tr>
+<td>PRS#6 VAERS-compatible output</td>
+<td>Structured-output validation against data-dictionary mappings — every commit</td>
+</tr>
+<tr>
+<td>PRS#7 surveys</td>
+<td>Deployment status + response-data delivery per approved schedule</td>
+</tr>
+<tr>
+<td>PRS#8 low-code editability</td>
+<td>Government update-scenario rehearsal pass rate (≤1 dev intervention) — monthly from Alpha</td>
+</tr>
+<tr>
+<td>PRS#9–11 upload/Phase 1</td>
+<td>Upload defect counts by severity; Phase 1 restriction enforcement tests — every release</td>
+</tr>
+<tr>
+<td>PRS#12–13, #15 security/ATD</td>
+<td>SA&amp;A artifact status; scan findings burn-down (zero known critical/high at deployment) — bi-weekly</td>
+</tr>
+<tr>
+<td>PRS#14 Section 508</td>
+<td>Automated axe pass (0 violations) every commit + manual AT testing every release; ACR currency</td>
+</tr>
+<tr>
+<td>PRS#16 documentation</td>
+<td>Guide completeness vs. final UX — at Beta and Final</td>
+</tr>
+<tr>
+<td>PRS#17 PM reporting</td>
+<td>On-time PM deliverable rate (≥95%); bi-weekly review attendance (100%)</td>
+</tr>
+<tr>
+<td>PRS#18 transition readiness</td>
+<td>Monthly readiness assessment delivered; repo/docs currency check</td>
+</tr>
+</tbody></table>
+<p>Metrics appear in every monthly status report with trend lines, threshold status, and —
+where a threshold is at risk — a named corrective action with an owner and a date.</p>
+<h2>4. Quality Assurance, Risk Management, and Communications</h2>
+<p><strong>Quality control.</strong> Quality is enforced where it is cheapest — in the pipeline, before
+Government review: author-≠-reviewer code review on every change; CI gates (unit,
+integration, accessibility, cross-viewport, structured-output validation) that block
+merge on failure; bi-weekly code delivery to the CDC repository so the Government always
+reviews current, running software; severity-classified defect triage with remediation
+SLAs through Beta and Final. The QA function is owned by the Technical Lead and audited
+by the PM — findings, not assertions, drive release decisions.</p>
+<p><strong>Risk management.</strong> A living risk register (established at kickoff, reviewed at every
+bi-weekly technical review, summarized monthly) tracks each risk with probability,
+impact, trigger, owner, and mitigation. The top program risks and their mitigations are
+detailed in Tab 2-1 §5 — notably ATD review timing (draft package 60+ days early with a
+dedicated remediation window), multi-contractor integration (written interface
+confirmation during Task 1.1), and the abandonment baseline (methodology co-signed at
+kickoff). New risks enter the register through anyone on the team; only the PM retires
+them.</p>
+<p><strong>Change control.</strong> Scope, architecture, and performance standards are protected by a
+formal change process: any proposed change is written up with cost/schedule/performance
+impact, reviewed by the PM, and — where it touches contract scope or Government-approved
+baselines — submitted to the CO/COR for approval before implementation. Configuration
+changes made through the Task 1.8 low-code interface are versioned with one-click
+rollback, so CDC&#39;s own content changes are governed by the same discipline without
+developer gatekeeping.</p>
+<p><strong>Communications.</strong> Bi-weekly technical reviews chaired by the PM against working
+software; monthly status reports (by the 10th) covering accomplishments, schedule,
+risks, staffing changes, and planned-vs-actual expenditure; a Cost Management Plan
+maintained and current per Subsection C; ad-hoc access to the PM during CDC core hours
+(8:30–5:00 ET) with same-business-day response; 1-hour incident reporting. We operate on
+a no-surprises rule: any threshold at risk is in front of the COR before it is a
+problem, with a proposed correction attached.</p>
+<h2>5. Subcontractor Management</h2>
+<p>Frasier Digital will perform this requirement entirely with its own personnel. <strong>No
+subcontracting opportunities exist under this effort</strong>; accordingly, no subcontractor
+management plan or draft subcontract agreement is required. Should the Government later
+direct or approve a change to this posture, subcontracted work would be managed under
+the same QA gates, metrics, and communication cadence described above, with a draft
+agreement provided for Government review before execution.</p>
+<div class="section-break"></div><h1>Tab 4 — Similar Experience</h1>
+<hr>
+<h2>1. Anchor Engagement — Region 4 Education Service Center (Houston, TX)</h2>
+<p><strong>Certification training and completion-tracking platform, built from scratch and
+operated at scale. July 2024 – October 2025 · total engagement approximately $2 million
+· Frasier Digital principal-delivered (PM + development).</strong>
+<span class="flag">[FLAG: $2M figure conditional on reference verification per consistency map — fallback
+wording &quot;a multi-year, seven-figure engagement&quot; if unconfirmed at render.]</span></p>
+<p>Region 4 ESC engaged Frasier Digital to replace manual certification processes with a
+statewide-scale online platform serving school districts across all of Harris County and
+every additional entity dependent on Region 4&#39;s SCORM-based training system. Frasier
+built the entire system with no inherited codebase: full authentication backend, SCORM
+Cloud API integration, course loading/ingestion and validation, and end-to-end
+completion tracking — delivered and operated for <strong>thousands of concurrent
+non-technical users</strong> (school bus drivers, teachers, district staff).</p>
+<p>The parallel to this requirement is structural, not cosmetic:</p>
+<table>
+<thead>
+<tr>
+<th>Region 4 (delivered)</th>
+<th>VAERS modernization (required)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Public-facing workflows for non-technical users at population scale</td>
+<td>Public + provider reporting for the general population</td>
+</tr>
+<tr>
+<td>Guided flows, validation, and error recovery to protect data quality</td>
+<td>Branching form, validation, intelligent assistance (Tasks 1.3–1.6)</td>
+</tr>
+<tr>
+<td>Completion tracking with structured records feeding institutional reporting</td>
+<td>VAERS-compatible structured capture and transmission (Task 1.9)</td>
+</tr>
+<tr>
+<td>Privacy-sensitive education records context</td>
+<td>PHI/PII HIPAA/Privacy Act context (Task 3)</td>
+</tr>
+<tr>
+<td>Integration with an incumbent ecosystem (SCORM Cloud, district systems)</td>
+<td>Integration with existing VAERS systems and contracts</td>
+</tr>
+<tr>
+<td>Built from scratch to production under a small named team</td>
+<td>9-month design-build-deploy with fixed clocks</td>
+</tr>
+</tbody></table>
+<p>At roughly four times the size of this requirement&#39;s anticipated value, Region 4
+demonstrates the firm delivering the same shape of work — new-build, public-facing,
+data-quality-critical, integration-constrained — at greater scale than CDC is buying
+here.</p>
+<p><strong>Reference (customer POC):</strong> Ethan Gula, Software Developer II, Region 4 ESC ·
+(832) 585-3947 · <a href="mailto:ethan.gula@esc4.net">ethan.gula@esc4.net</a>
+<span class="flag">[FLAG: swap/augment with durable contact + backup Region 4 POC before render —
+evaluation runs past the POC&#39;s Region 4 tenure.]</span></p>
+<h2>2. Healthcare-IT Domain Expertise (Named Delivery Team)</h2>
+<p>The RFQ emphasizes healthcare-IT domain expertise. Ours is carried by the named people
+who will perform, not a corporate claims sheet:</p>
+<table>
+<thead>
+<tr>
+<th>Team member (role on this contract)</th>
+<th>Healthcare-IT experience</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Ryan Daley</strong> (Technical Lead, KEY)</td>
+<td><strong>Optum / UnitedHealthcare</strong>: engineered ADA-compliant member-facing UIs on Azure with enterprise CI/CD. <strong>Shuttle Health</strong> (healthtech): micro-frontend platform architecture, AWS serverless services, 90%+ automated test coverage — production healthcare software discipline</td>
+</tr>
+<tr>
+<td><strong>Rahmin Shoukoohi</strong> (Integration &amp; data engineer)</td>
+<td><strong>HolonHealth</strong> (current): senior engineer on a healthcare rewards platform serving 60,000+ clients; designed its ground-up auditable points-ledger — audit-grade data integrity in a healthcare compliance context. State education agency (2024–present): led 3-person team, 20+ secure data-exchange features, 69 districts</td>
+</tr>
+<tr>
+<td><strong>Joseph Frasier</strong> (PM / Lead Architect, KEY)</td>
+<td>Principal experience architecting and delivering enterprise platforms including current Fortune 100–500 AI implementations (full-stack, end-to-end) and production generative-AI features; regulated-data discipline across education (FERPA-adjacent) and government delivery</td>
+</tr>
+</tbody></table>
+<p>Collectively: member-facing healthcare UI at national-payer scale, healthcare platform
+data integrity, and PHI/PII-adjacent engineering habits — resident in the exact people
+staffed on this contract (Tab 3-1).</p>
+<h2>3. Documented Evidence</h2>
+<ul>
+<li><strong>Working prototype of this requirement</strong> — <a href="https://vaers-demo.frasierdigital.com">https://vaers-demo.frasierdigital.com</a>
+(Tab 2-2): the most direct evidence offered — similar experience made inspectable,
+built on the VAERS 2.0 data elements with 0 WCAG 2.1 AA violations across all tested
+states.</li>
+<li><strong>Region 4 project summary and reference POC</strong> (§1 above); the reference is available
+for Government feedback per the RFQ&#39;s past-performance provisions.</li>
+<li><strong>Federal delivery artifacts on request</strong>: recent federal proposal deliverables and
+past-performance questionnaire responses completed by the Region 4 customer.
+<span class="flag">[FLAG: confirm we want this line — it invites the ask; delete if not.]</span></li>
+<li><strong>Engineering evidence embedded in the prototype</strong>: automated accessibility audit
+results, end-to-end test suite, and open-source-ready codebase demonstrating the CI
+discipline described in Tabs 2-1/3-1.</li>
+</ul>

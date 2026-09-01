@@ -1,0 +1,600 @@
+<meta charset="utf-8"><title>atch1</title><style>
+  html, body { font-family: "Times New Roman", Times, serif; font-size: 12pt; line-height: 1.18; color: #000; margin: 0; padding: 0; }
+  * { font-family: "Times New Roman", Times, serif !important; }
+  h1 { font-size: 14pt; font-weight: bold; margin: 0 0 10pt 0; page-break-after: avoid; }
+  h2 { font-size: 13pt; font-weight: bold; margin: 12pt 0 5pt 0; page-break-after: avoid; }
+  h3 { font-size: 12pt; font-weight: bold; margin: 9pt 0 3pt 0; page-break-after: avoid; }
+  p { margin: 0 0 6pt 0; }
+  ul, ol { margin: 0 0 6pt 0; padding-left: 22pt; }
+  li { margin-bottom: 3pt; }
+  hr { border: none; border-top: 0.5pt solid #000; margin: 10pt 0; }
+  a { color: #000; text-decoration: none; }
+  strong { font-weight: bold; } em { font-style: italic; }
+  table { border-collapse: collapse; width: 100%; margin: 6pt 0 10pt 0; font-size: 10pt; page-break-inside: auto; }
+  th, td { border: 0.5pt solid #000; padding: 3pt 5pt; vertical-align: top; text-align: left; }
+  th { background: #e8e8e8; font-weight: bold; }
+  tr { page-break-inside: avoid; }
+  .flag { background: #ffef9e; font-weight: bold; }
+  .vol-title { font-size: 18pt; font-weight: bold; text-align: center; margin: 150pt 0 10pt 0; }
+  .vol-sub { font-size: 13pt; text-align: center; margin: 0 0 6pt 0; }
+  .section-break { page-break-before: always; }
+</style><h1>Attachment 1 — Artificial Intelligence (AI) Use Compliance and Risk Management Plan</h1>
+<p><strong>Frasier Digital, LLC — RFQ 75D301-26-Q-00146, Modernized VAERS Reporting Application</strong></p>
+<p><em>Completed on the Government-provided template (Attachment 1, posted 2026-08-18). Frasier
+Digital discloses two distinct AI uses and completes one card for each: <strong>Card A</strong> — the
+in-application intelligent completion assistance capability (a Government-approved
+application feature delivered under the PWS), and <strong>Card B</strong> — contractor-side AI-assisted
+software development tooling. The CDCH.10 eleven-element narrative plan (<code>ai-plan.md</code>)
+is retained as a companion appendix.</em></p>
+<hr>
+<h2>CARD A — In-Application Intelligent Completion Assistance</h2>
+<h3>1. Background</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Name of AI tool/system</td>
+<td>Intelligent completion assistance layer of the Modernized VAERS Reporting Application (application feature built by Frasier Digital on CDC&#39;s enterprise Azure OpenAI service, EDAV)</td>
+</tr>
+<tr>
+<td>Contractor using the AI</td>
+<td>Frasier Digital, LLC</td>
+</tr>
+<tr>
+<td>Subcontractor or service provider, if any</td>
+<td>None. The AI service is CDC&#39;s existing FedRAMP-authorized Azure OpenAI offering (EDAV); no third-party AI service is introduced</td>
+</tr>
+<tr>
+<td>Contract task/function supported</td>
+<td>PWS §1.6–1.8: intelligent completion assistance, plain-language field guidance, answering user questions, narrative review for completeness</td>
+</tr>
+<tr>
+<td>Describe how AI will be used in contract performance</td>
+<td>An optional, user-facing assistance layer: contextual guidance and plain-language explanation of VAERS fields; answers to user questions drawn from CDC-approved help content; optional narrative-to-form suggestions in which every AI-proposed answer is individually reviewed and confirmed by the user and visibly tagged until verified. Deterministic branching logic and field validation are rules-based, not AI. The AI layer never submits a report, alters submitted data, makes any determination, or blocks a user from proceeding. Design subject to Government approval at the wireframe/design review</td>
+</tr>
+<tr>
+<td>Is AI use required to perform the work, or optional?</td>
+<td>☒ Required (the PWS requires intelligent completion assistance; generative AI is our proposed implementation, subject to CO/COR design approval) ☐ Optional ☐ Unknown</td>
+</tr>
+<tr>
+<td>AI classification</td>
+<td>☒ Generative AI ☒ Natural Language Processing ☐ Agentic AI ☐ Classical/Predictive ML ☐ Computer Vision ☐ Reinforcement Learning</td>
+</tr>
+<tr>
+<td>Is this use limited to contractor internal operations?</td>
+<td>☐ Yes ☒ No</td>
+</tr>
+<tr>
+<td>Will the AI touch Government information, systems, identities, networks, or operations?</td>
+<td>☒ Yes (deployed entirely within the CDC-managed Azure environment; processes user-entered report assistance content inside the authorization boundary) ☐ No ☐ Unknown</td>
+</tr>
+<tr>
+<td>Was the AI system procured to support this particular contract per requirements in the Statement of Work?</td>
+<td>No new AI procurement. The application uses CDC&#39;s existing enterprise Azure OpenAI (EDAV) service consistent with the SOW; no new AI services, licenses, or subscriptions are introduced</td>
+</tr>
+</tbody></table>
+<h3>2. Who owns and supports this use?</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Contractor AI owner</td>
+<td>Joseph Frasier, Program Manager / Lead Architect</td>
+</tr>
+<tr>
+<td>Contractor technical support contact</td>
+<td>Ryan Daley, Senior Engineer</td>
+</tr>
+<tr>
+<td>Contractor privacy/security contact</td>
+<td>Joseph Frasier, Security &amp; Compliance Lead</td>
+</tr>
+<tr>
+<td>CDC/HHS program office using or receiving outputs</td>
+<td>CDC VAERS program office per RFQ 75D301-26-Q-00146 (Immunization Safety Office)</td>
+</tr>
+<tr>
+<td>Expected users</td>
+<td>☒ Public users ☒ Beneficiaries, patients, applicants, regulated entities, or other external parties (healthcare providers) ☒ CDC/HHS staff ☐ Contractor staff only</td>
+</tr>
+</tbody></table>
+<h3>3. Tool background</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Tool or product name</td>
+<td>Azure OpenAI Service via CDC EDAV; Frasier-built application assistance layer</td>
+</tr>
+<tr>
+<td>Developer/vendor</td>
+<td>Microsoft (service); OpenAI (models); Frasier Digital (application layer, delivered open source per M-16-21)</td>
+</tr>
+<tr>
+<td>Open-source, proprietary, Government-furnished, or other?</td>
+<td>☒ Government-furnished (EDAV Azure OpenAI service) ☒ Contractor-developed (application layer; open source per M-16-21) ☐ Open-source ☐ Proprietary/commercial ☐ Subcontractor-provided</td>
+</tr>
+<tr>
+<td>If the system uses an LLM or foundation model, what is the primary model?</td>
+<td>A GPT-family model from the CDC EDAV Azure OpenAI catalog; specific model/version selected with the COR at design review, pinned and documented in the delivered system documentation</td>
+</tr>
+<tr>
+<td>Who provides the LLM/foundation model?</td>
+<td>Microsoft Azure OpenAI, within the CDC authorization boundary</td>
+</tr>
+<tr>
+<td>What model options are available?</td>
+<td>Models available in CDC&#39;s EDAV Azure OpenAI catalog; configurable without code change</td>
+</tr>
+<tr>
+<td>Does it require an API key?</td>
+<td>☒ Yes — managed identity/keys held entirely within the CDC environment; no external keys, no calls leaving the boundary</td>
+</tr>
+<tr>
+<td>Attach or link, if available</td>
+<td>☒ Model card (Microsoft-published, incorporated by reference and attached to delivered system documentation) ☒ Vendor security documentation (Azure FedRAMP package, via CDC) ☒ Audit-log documentation (delivered with SSP artifacts) ☒ Terms of service / privacy policy (per HHS enterprise agreement) ☐ System card ☐ Data card ☐ Evaluation summary</td>
+</tr>
+</tbody></table>
+<h3>4. Where is it hosted and authorized?</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Hosting environment</td>
+<td>☒ FedRAMP-authorized cloud ☒ CDC/HHS environment (CDC-managed Azure) ☐ Contractor environment ☐ Commercial SaaS ☐ Local/offline</td>
+</tr>
+<tr>
+<td>Where is the system hosted?</td>
+<td>United States Azure regions under CDC tenancy (EDAV)</td>
+</tr>
+<tr>
+<td>Is the product directly FedRAMP authorized or available through a FedRAMP-authorized instance?</td>
+<td>☒ Yes ☐ No ☐ Not applicable ☐ Unknown</td>
+</tr>
+<tr>
+<td>If no, is it undergoing FedRAMP authorization?</td>
+<td>Not applicable</td>
+</tr>
+</tbody></table>
+<h3>5. What data will be used?</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Will the AI process, store, transmit, summarize, analyze, or generate Government information?</td>
+<td>☒ Yes (within the CDC boundary only) ☐ No ☐ Unknown</td>
+</tr>
+<tr>
+<td>Types of data involved</td>
+<td>☒ Public information (CDC-approved help/FAQ corpus) ☒ PII ☒ PHI (user-authored narrative content in a vaccine adverse-event context may contain health information; design minimizes — no identifiers are required to use the assistant, with PII-redaction filtering as defense-in-depth) ☐ Government nonpublic ☐ Procurement-sensitive ☐ Proprietary</td>
+</tr>
+<tr>
+<td>What information will be entered into the AI tool?</td>
+<td>User-typed questions; optional user-authored narrative drafts; non-identifying field context needed for guidance. All within the CDC boundary</td>
+</tr>
+<tr>
+<td>What outputs will the AI generate?</td>
+<td>Plain-language guidance and explanations; suggested field values (each individually user-reviewed, confirmed, and tagged until verified); missing-detail prompts for narrative completeness</td>
+</tr>
+<tr>
+<td>Will prompts, uploads, outputs, logs, or user interactions be stored?</td>
+<td>☒ Yes — logged within the CDC Azure environment only, fully accessible to CDC</td>
+</tr>
+<tr>
+<td>Retention period</td>
+<td>Per CDC records schedules and the approved SSP</td>
+</tr>
+<tr>
+<td>Will Government data, prompts, outputs, or logs be used to train, fine-tune, improve, or benchmark any model?</td>
+<td>☒ No</td>
+</tr>
+<tr>
+<td>Will any data, prompts, outputs, or logs be shared with other users, tenants, vendors, subcontractors, or third parties?</td>
+<td>☒ No</td>
+</tr>
+<tr>
+<td>Explain storage, use, retention, deletion, and sharing</td>
+<td>All Government data, prompts, outputs, and logs remain CDC property inside the CDC authorization boundary; accessible to CDC on demand; retained and deleted per CDC records schedules; never used for model training; never transferred outside the boundary. No limitations proposed on Government rights, access, or reuse</td>
+</tr>
+</tbody></table>
+<h3>6. Is this high-impact?</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Could the AI output materially affect an individual&#39;s or organization&#39;s rights, benefits, services, health, safety, access, eligibility, enforcement status, or other significant interests?</td>
+<td>☒ No</td>
+</tr>
+<tr>
+<td>Could CDC/HHS personnel rely on the AI output as a principal basis for a decision or action?</td>
+<td>☒ No — human submitters author and submit all reports; CDC personnel perform all downstream review of reports, not AI outputs</td>
+</tr>
+<tr>
+<td>Is the AI used only for internal drafting, summarization, or administrative support with human review before use?</td>
+<td>☐ Yes ☒ No (public-facing assistance; every suggestion is human-reviewed by the submitter before any use, and the non-AI path is always complete)</td>
+</tr>
+<tr>
+<td>High-impact rationale</td>
+<td>Assessed <strong>not high-impact</strong> (OMB M-25-21 App. A): the AI provides optional informational assistance for voluntary form completion; it does not control or materially influence decisions affecting rights, benefits, safety, or access; assistance is equivalent across public and provider paths and fully accessible; no user is required to interact with AI to submit a report. Descriptive information supporting the Government&#39;s own assessment is provided throughout; we will support any required AI impact assessment</td>
+</tr>
+</tbody></table>
+<h3>7. What safeguards are in place?</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>How will contractor personnel verify AI outputs before relying on them?</td>
+<td>No AI output enters a report without the submitter&#39;s individual review and confirmation; applied suggestions carry a visible &quot;AI-suggested — verify&quot; marking until confirmed or edited. Retrieval-based answers draw only from the CDC-approved content corpus</td>
+</tr>
+<tr>
+<td>What human review is required before AI-generated content is submitted to CDC/HHS?</td>
+<td>The human submitter authors and submits every report. Assistant content configuration (help corpus, prompt templates, guardrails) passes CDC program-staff approval through the low-code content workflow before deployment</td>
+</tr>
+<tr>
+<td>How will the contractor prevent unauthorized disclosure of Government information?</td>
+<td>All processing inside the CDC FedRAMP boundary under ATD/ATO controls; role-based access; FIPS 140-validated encryption in transit and at rest; no external service calls</td>
+</tr>
+<tr>
+<td>How will the contractor prevent misuse, unauthorized use, or corruption of the AI system?</td>
+<td>Input sanitization and prompt-injection guardrails; a classification stage routes safety-critical inputs (medical emergencies, requests for medical advice, causality questions, shared personal information, injection attempts) to fixed approved responses before any generative model is involved; output filtering under a strict cannot-say policy; rate limiting; kill-switch configuration flag letting CDC disable the assist layer without redeployment</td>
+</tr>
+<tr>
+<td>How will the contractor protect privacy, civil rights, and civil liberties?</td>
+<td>Assistance is optional and equivalent across paths; the non-AI path is always complete; 508/WCAG conformance within the ACR scope; no identifiers required to use the assistant; PII-redaction filter on prompts; no scores, rankings, or determinations about any individual</td>
+</tr>
+<tr>
+<td>What internal policies govern this AI use?</td>
+<td>Frasier Digital AI-use policy: transparency, accountability, data integrity, accuracy, sensitive-information protection, foreseeable-risk review; named accountable owner; documented review gates; prohibition on Government data in unapproved AI tools</td>
+</tr>
+</tbody></table>
+<h3>8. Monitoring and misuse protection</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>What is monitored?</td>
+<td>☒ Accuracy/performance ☒ Performance degradation or drift ☒ Data leakage signals ☒ Abuse/misuse ☒ Prompt injection ☒ Unauthorized access</td>
+</tr>
+<tr>
+<td>Does CDC/HHS have access to monitoring information, audit logs, or summary reports?</td>
+<td>☒ Yes — logs live in the CDC environment and are fully CDC-accessible; sampled transcript reviews conducted jointly with CDC; satisfaction-survey signal monitored across submitter types</td>
+</tr>
+<tr>
+<td>How are issues detected, escalated, and corrected?</td>
+<td>Automated monitoring and periodic sampled review detect issues; findings enter corrective action under the QCP; escalation through the PM to the COR</td>
+</tr>
+<tr>
+<td>When will CDC/HHS be informed?</td>
+<td>Incidents reported through the same 1-hour CDC incident-reporting channel as all other events; anticipated AI changes reported to CO/COR before incorporation</td>
+</tr>
+<tr>
+<td>What is the standard operating procedure for incidents or unacceptable outputs?</td>
+<td>Immediate containment via the kill-switch flag (assist layer disabled without redeployment; form remains fully usable); incident report within 1 hour; root-cause analysis and corrective action under the QCP; Government approval before re-enable</td>
+</tr>
+</tbody></table>
+<h3>9. Required contractor affirmation</h3>
+<p>Frasier Digital, LLC affirms that: AI will not be used unless approved by the Contracting
+Officer; the contractor has disclosed all planned or potential AI use; the contractor
+will not enter Government information into unapproved AI tools; the contractor will not
+use Government data to train, fine-tune, or improve an AI model unless expressly
+authorized; the contractor will maintain and update this AI Use Card throughout contract
+performance; the contractor will notify the Contracting Officer and COR before changed,
+expanded, or new AI use; the contractor will prevent unlawful discriminatory use or
+outputs; and the contractor will comply with applicable privacy, security, data rights,
+records, civil rights, and AI requirements.</p>
+<hr>
+<h2>CARD B — Contractor-Side AI-Assisted Software Development Tooling</h2>
+<h3>1. Background</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Name of AI tool/system</td>
+<td>Commercial AI development assistants (Anthropic Claude / Claude Code and comparable code-assistance tools)</td>
+</tr>
+<tr>
+<td>Contractor using the AI</td>
+<td>Frasier Digital, LLC</td>
+</tr>
+<tr>
+<td>Subcontractor or service provider, if any</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Contract task/function supported</td>
+<td>Software development under the PWS: code drafting, test generation, documentation drafting, 508 remediation suggestions</td>
+</tr>
+<tr>
+<td>Describe how AI will be used in contract performance</td>
+<td>Contractor engineers use AI assistants during development. All AI-assisted work product passes our standard review gates: author ≠ reviewer, senior-engineer review before merge, CI test and accessibility gates. Development uses synthetic data and public schemas only; CDC data never enters these tools</td>
+</tr>
+<tr>
+<td>Is AI use required to perform the work, or optional?</td>
+<td>☒ Optional (internal productivity tooling) ☐ Required ☐ Unknown</td>
+</tr>
+<tr>
+<td>AI classification</td>
+<td>☒ Generative AI ☒ Natural Language Processing ☐ Others</td>
+</tr>
+<tr>
+<td>Is this use limited to contractor internal operations?</td>
+<td>☒ Yes ☐ No</td>
+</tr>
+<tr>
+<td>Will the AI touch Government information, systems, identities, networks, or operations?</td>
+<td>☒ No (synthetic data and public schemas only; no Government information, credentials, or system access) ☐ Yes ☐ Unknown</td>
+</tr>
+<tr>
+<td>Was the AI system procured to support this particular contract per requirements in the Statement of Work?</td>
+<td>No — contractor-furnished internal tooling, not a contract deliverable or Government procurement</td>
+</tr>
+</tbody></table>
+<h3>2. Who owns and supports this use?</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Contractor AI owner</td>
+<td>Joseph Frasier, Program Manager / Lead Architect</td>
+</tr>
+<tr>
+<td>Contractor technical support contact</td>
+<td>Ryan Daley, Senior Engineer</td>
+</tr>
+<tr>
+<td>Contractor privacy/security contact</td>
+<td>Joseph Frasier, Security &amp; Compliance Lead</td>
+</tr>
+<tr>
+<td>CDC/HHS program office using or receiving outputs</td>
+<td>None directly; outputs are contractor work product delivered through normal review-gated deliverables</td>
+</tr>
+<tr>
+<td>Expected users</td>
+<td>☒ Contractor staff only</td>
+</tr>
+</tbody></table>
+<h3>3. Tool background</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Tool or product name</td>
+<td>Anthropic Claude / Claude Code (primary); comparable commercial code-assistance tools</td>
+</tr>
+<tr>
+<td>Developer/vendor</td>
+<td>Anthropic (primary); other established commercial vendors as adopted under policy</td>
+</tr>
+<tr>
+<td>Open-source, proprietary, Government-furnished, or other?</td>
+<td>☒ Proprietary/commercial (contractor-licensed)</td>
+</tr>
+<tr>
+<td>If the system uses an LLM or foundation model, what is the primary model?</td>
+<td>Anthropic Claude model family (current production models)</td>
+</tr>
+<tr>
+<td>Who provides the LLM/foundation model?</td>
+<td>Anthropic</td>
+</tr>
+<tr>
+<td>What model options are available?</td>
+<td>Vendor production model catalog</td>
+</tr>
+<tr>
+<td>Does it require an API key?</td>
+<td>☒ Yes — contractor-held accounts/keys; no Government credentials involved</td>
+</tr>
+<tr>
+<td>Attach or link, if available</td>
+<td>☒ Terms of service ☒ Privacy/data retention policy (vendor-published, available on request)</td>
+</tr>
+</tbody></table>
+<h3>4. Where is it hosted and authorized?</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Hosting environment</td>
+<td>☒ Commercial SaaS (contractor-side)</td>
+</tr>
+<tr>
+<td>Where is the system hosted?</td>
+<td>Vendor-operated United States cloud infrastructure</td>
+</tr>
+<tr>
+<td>Is the product directly FedRAMP authorized or available through a FedRAMP-authorized instance?</td>
+<td>☒ Not applicable — no Government information enters these tools</td>
+</tr>
+<tr>
+<td>If no, is it undergoing FedRAMP authorization?</td>
+<td>Not applicable</td>
+</tr>
+</tbody></table>
+<h3>5. What data will be used?</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Will the AI process, store, transmit, summarize, analyze, or generate Government information?</td>
+<td>☒ No</td>
+</tr>
+<tr>
+<td>Types of data involved</td>
+<td>☒ Public information (open-source application code per M-16-21, public schemas, synthetic test data only)</td>
+</tr>
+<tr>
+<td>What information will be entered into the AI tool?</td>
+<td>Application source code (open source by contract policy), synthetic data, public documentation</td>
+</tr>
+<tr>
+<td>What outputs will the AI generate?</td>
+<td>Draft code, tests, and documentation — all reviewed by the responsible senior engineer before commit</td>
+</tr>
+<tr>
+<td>Will prompts, uploads, outputs, logs, or user interactions be stored?</td>
+<td>☒ Yes — vendor-side per vendor retention policy; contains no Government information</td>
+</tr>
+<tr>
+<td>Retention period</td>
+<td>Per vendor policy; contractor accounts configured for no-training/limited-retention options where offered</td>
+</tr>
+<tr>
+<td>Will Government data, prompts, outputs, or logs be used to train, fine-tune, improve, or benchmark any model?</td>
+<td>☒ No Government data is present to be used</td>
+</tr>
+<tr>
+<td>Will any data, prompts, outputs, or logs be shared with other users, tenants, vendors, subcontractors, or third parties?</td>
+<td>☒ No</td>
+</tr>
+<tr>
+<td>Explain storage, use, retention, deletion, and sharing</td>
+<td>The controlling safeguard is data separation: CDC data never leaves the CDC environment and never enters contractor AI tooling. Tool-side storage therefore contains only open-source code and synthetic material</td>
+</tr>
+</tbody></table>
+<h3>6. Is this high-impact?</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Could the AI output materially affect an individual&#39;s or organization&#39;s rights, benefits, services, health, safety, access, eligibility, enforcement status, or other significant interests?</td>
+<td>☒ No</td>
+</tr>
+<tr>
+<td>Could CDC/HHS personnel rely on the AI output as a principal basis for a decision or action?</td>
+<td>☒ No</td>
+</tr>
+<tr>
+<td>Is the AI used only for internal drafting, summarization, or administrative support with human review before use?</td>
+<td>☒ Yes</td>
+</tr>
+<tr>
+<td>High-impact rationale</td>
+<td>Not high-impact: internal development assistance with mandatory human review; no Government data, no decisions about individuals</td>
+</tr>
+</tbody></table>
+<h3>7. What safeguards are in place?</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>How will contractor personnel verify AI outputs before relying on them?</td>
+<td>Author ≠ reviewer; senior-engineer review before merge; CI test, lint, and accessibility gates; characterization tests for AI-drafted changes</td>
+</tr>
+<tr>
+<td>What human review is required before AI-generated content is submitted to CDC/HHS?</td>
+<td>All deliverables pass the same review gates regardless of drafting method; the responsible senior engineer owns every commit</td>
+</tr>
+<tr>
+<td>How will the contractor prevent unauthorized disclosure of Government information?</td>
+<td>Hard prohibition on Government data in contractor AI tools (Frasier AI-use policy); development on synthetic data and public schemas only</td>
+</tr>
+<tr>
+<td>How will the contractor prevent misuse, unauthorized use, or corruption of the AI system?</td>
+<td>Contractor-managed accounts, access control, and policy training; periodic policy compliance review</td>
+</tr>
+<tr>
+<td>How will the contractor protect privacy, civil rights, and civil liberties?</td>
+<td>No personal data enters the tools; deliverable-level protections are governed by Card A and the SSP</td>
+</tr>
+<tr>
+<td>What internal policies govern this AI use?</td>
+<td>Frasier Digital AI-use policy (as in Card A §7)</td>
+</tr>
+</tbody></table>
+<h3>8. Monitoring and misuse protection</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>What is monitored?</td>
+<td>☒ Abuse/misuse (policy compliance) ☒ Data leakage signals (repo scanning for secrets/sensitive content)</td>
+</tr>
+<tr>
+<td>Does CDC/HHS have access to monitoring information, audit logs, or summary reports?</td>
+<td>☒ Upon request</td>
+</tr>
+<tr>
+<td>How are issues detected, escalated, and corrected?</td>
+<td>Repo scanning and review gates; escalation to the PM; corrective action under the QCP</td>
+</tr>
+<tr>
+<td>When will CDC/HHS be informed?</td>
+<td>Any suspected touch of Government information by an unapproved tool is reported through the 1-hour incident channel</td>
+</tr>
+<tr>
+<td>What is the standard operating procedure for incidents or unacceptable outputs?</td>
+<td>Contain (revoke access/rotate credentials), report within 1 hour, root-cause, corrective action</td>
+</tr>
+</tbody></table>
+<h3>9. Required contractor affirmation</h3>
+<p>Card A §9 affirmation applies in full to this use.</p>
+<hr>
+<p><strong>Signature:</strong></p>
+<p>Joseph Frasier, Founder &amp; Managing Member, Frasier Digital, LLC
+Date: ______________</p>
