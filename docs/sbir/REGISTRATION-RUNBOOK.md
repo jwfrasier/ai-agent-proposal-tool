@@ -42,8 +42,7 @@ affiliate the organization and add the PI/AOR roles below).
 
 1. research.gov → "Register" → individual account for you, then affiliate the organization
    (they pull from SAM by UEI — everything's current, expires 5/27/2027).
-2. Roles: you = Principal Investigator + Authorized Organizational Representative (single-member
-   LLC can hold both).
+2. ✅ DONE 9/1/2026: org registered, PI Primary Organization set; roles **Administrator, AOR, PI/co-PI all active**, no pending requests.
 3. **PI eligibility note:** at time of award the PI must be >50% employed by Frasier Digital.
    You don't have to satisfy this at pitch time — flag it, don't fix it now. [Decision for
    Phase I proposal stage, not pitch stage.]
