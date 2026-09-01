@@ -49,7 +49,7 @@ affiliate the organization and add the PI/AOR roles below).
 
 ## Step 3 — NSF Project Pitch (seedfund.nsf.gov/project-pitch — tab open)
 
-A ~3-page web form, rolling submissions, response typically ~3 weeks (invite or decline;
+**Portal: https://nsfgov.my.site.com/mywork/s/login/ — its own account (Salesforce site), separate from Research.gov; register with joseph@frasierdigital.com.** Character limits (verified 9/1 against the live site): boxes of 3,500 / 3,500 / 1,750 / 1,750 characters. Only ONE pitch may be pending per business. Rolling submissions, response typically ~3 weeks (invite or decline;
 an invite is required before a full Phase I proposal — next full-proposal window closes
 **Nov 4, 2026** under NSF 26-510). Four boxes:
 
@@ -58,8 +58,7 @@ an invite is required before a full Phase I proposal — next full-proposal wind
 3. **The Market Opportunity** (~250 words)
 4. **The Company and Team** (~250 words)
 
-**Paste-ready draft: `project-pitch-draft.md` in this folder.** Verify the current word limits
-against the live form (they shift occasionally) — the draft is written to fit with margin.
+**Paste-ready submission copy: `project-pitch-SUBMIT.md`** (plain-text blocks, all four within the character limits; approved by Joseph 9/1). `project-pitch-draft.md` is the annotated source.
 
 ## Step 4 (separate track) — AFWERX Open Topic
 
