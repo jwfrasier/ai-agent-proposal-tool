@@ -28,12 +28,12 @@ Verified 9/2 (send-day render) against Proposal Submission Instructions (8/26 re
 
 ## Known accepted deviations (signed exhibits)
 - Signed LOC pages carry no proposal header/footer — same treatment as USACE's own PPQ form pages in Vol II; they are annexes excluded from the page limitation.
-- Scott's LOC date line reads "9/1/2016" (his typo for 2026) — signature and letter text valid; ⏳ Joseph deciding: quick re-sign vs send as-is.
+- ~~Scott date typo~~ RESOLVED: Scott re-signed with corrected date 9/2/2026; swapped into build 9/2 ~16:15.
 - Joseph's LOC date line blank; "Acknowledged for Frasier Digital" countersign lines blank on Randy/Ryan/Scott letters (optional).
 
 ## Send sequence (Wed 9/2)
 1. ✅ All 4 signed LOCs → `to-sign/signed/` → `node build-cwms.js` (done 9/2 ~15:15)
-2. Joseph signs `out/Frasier-Digital-CWMS-Cover-Letter.pdf` (Preview)
+2. ✅ Cover letter signed by Joseph (flattened; protected copy at `to-sign/Cover-Letter-SIGNED-flattened.pdf` — kept OUT of `to-sign/signed/`, which the build sweeps into the LOC annex)
 3. `npm run watch` — must be clean
 4. Email per `out/EMAIL-DRAFT.md` → Quan.Nguyen@usace.army.mil, cc David.A.Kaplan@usace.army.mil
 5. Confirm the Government's email acknowledgment of receipt (CSS Sec. II); follow up by email if none within ~2 h
