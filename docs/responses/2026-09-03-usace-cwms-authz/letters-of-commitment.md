@@ -38,7 +38,7 @@ Acknowledged for Frasier Digital, LLC: ______________________________ Joseph Fra
 
 ---
 
-## Letter of Commitment — Zachary Antosko, Senior Forms Developer and Senior Oracle DBA
+## Letter of Commitment — Ryan Daley, Senior Forms Developer
 
 **Frasier Digital, LLC** · 20915 Mystic Stone Dr, Tomball, TX 77375
 
@@ -47,17 +47,17 @@ U.S. Army Corps of Engineers, Institute for Water Resources, Hydrologic Engineer
 
 Date: ____________________
 
-I, **Zachary Antosko**, confirm that I have agreed to serve as **Senior Forms Developer** (React/TypeScript web forms) **and Senior Oracle DBA** (a dual key-personnel role per the Government’s answer to Question 9) on the Frasier Digital, LLC team for the above solicitation, and that I will be available to perform in that role for the full period of performance (360 calendar days from award, plus any exercised option tasks) at the level of effort proposed by Frasier Digital, LLC, if Frasier Digital, LLC is awarded the contract.
+I, **Ryan Daley**, confirm that I have agreed to serve as **Senior Forms Developer** (React/TypeScript web forms) on the Frasier Digital, LLC team for the above solicitation, and that I will be available to perform in that role for the full period of performance (360 calendar days from award, plus any exercised option tasks) at the level of effort proposed by Frasier Digital, LLC, if Frasier Digital, LLC is awarded the contract.
 
 I have reviewed the Performance Work Statement for this requirement and the duties of the role. I am a United States citizen, and I understand that performance is at the contractor's facility with no travel required. I authorize Frasier Digital, LLC to include my name, resume, and this letter in its proposal.
 
-Signature: ______________________________ · Zachary Antosko · (361) 425-4862 · zachary.antosko@gmail.com
+Signature: ______________________________ · Ryan Daley · (832) 998-0924 · ryandaley321@gmail.com
 
 Acknowledged for Frasier Digital, LLC: ______________________________ Joseph Frasier, Founder and Managing Member · Date: ________
 
 ---
 
-## Letter of Commitment — Randy Chong, Senior Java Developer
+## Letter of Commitment — Randy Chong, Senior Java Developer and Senior Oracle DBA
 
 **Frasier Digital, LLC** · 20915 Mystic Stone Dr, Tomball, TX 77375
 
@@ -66,7 +66,7 @@ U.S. Army Corps of Engineers, Institute for Water Resources, Hydrologic Engineer
 
 Date: ____________________
 
-I, **Randy Chong**, confirm that I have agreed to serve as **Senior Java Developer** (the solicitation's "Senior APEX or Java Developer") on the Frasier Digital, LLC team for the above solicitation, and that I will be available to perform in that role for the full period of performance (360 calendar days from award, plus any exercised option tasks) at the level of effort proposed by Frasier Digital, LLC, if Frasier Digital, LLC is awarded the contract.
+I, **Randy Chong**, confirm that I have agreed to serve as **Senior Java Developer** (the solicitation's "Senior APEX or Java Developer") **and Senior Oracle DBA** (a dual key-personnel role per the Government's answer to Question 9) on the Frasier Digital, LLC team for the above solicitation, and that I will be available to perform in that role for the full period of performance (360 calendar days from award, plus any exercised option tasks) at the level of effort proposed by Frasier Digital, LLC, if Frasier Digital, LLC is awarded the contract.
 
 I have reviewed the Performance Work Statement for this requirement and the duties of the role. I am a United States citizen, and I understand that performance is at the contractor's facility with no travel required. I authorize Frasier Digital, LLC to include my name, resume, and this letter in its proposal.
 

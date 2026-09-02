@@ -7,7 +7,7 @@
  "cat": {
   "Joseph": "PM",
   "Scott": "SR",
-  "Zach": "SR",
+  "Ryan": "SR",
   "Randy": "SR",
   "Andrew": "AS",
   "Seth": "AS"
@@ -15,8 +15,8 @@
  "label": {
   "Joseph": "Project Manager",
   "Scott": "System Engineer / Architect",
-  "Zach": "Senior Forms (React/TypeScript) Developer / Senior Oracle DBA (dual role)",
-  "Randy": "Senior Java Developer",
+  "Ryan": "Senior Forms (React/TypeScript) Developer",
+  "Randy": "Senior Java Developer / Senior Oracle DBA (dual role)",
   "Andrew": "Associate Software Engineer",
   "Seth": "Associate Software Engineer"
  },
@@ -29,8 +29,8 @@
    "hours": {
     "Joseph": 78,
     "Scott": 12,
-    "Zach": 20,
-    "Randy": 12,
+    "Ryan": 12,
+    "Randy": 20,
     "Seth": 8
    },
    "price": 19970
@@ -42,8 +42,8 @@
    "option": false,
    "hours": {
     "Joseph": 50,
-    "Zach": 250,
-    "Randy": 150,
+    "Ryan": 220,
+    "Randy": 180,
     "Andrew": 100
    },
    "price": 75250
@@ -67,8 +67,8 @@
    "option": false,
    "hours": {
     "Joseph": 70,
-    "Zach": 160,
-    "Randy": 150,
+    "Ryan": 100,
+    "Randy": 210,
     "Seth": 400
    },
    "price": 92500
@@ -81,8 +81,8 @@
    "hours": {
     "Joseph": 78,
     "Scott": 12,
-    "Zach": 20,
-    "Randy": 12,
+    "Ryan": 12,
+    "Randy": 20,
     "Seth": 8
    },
    "price": 19970
@@ -106,9 +106,8 @@
    "option": true,
    "hours": {
     "Joseph": 20,
-    "Zach": 20,
     "Scott": 60,
-    "Randy": 40,
+    "Randy": 60,
     "Seth": 40
    },
    "price": 24300
@@ -120,8 +119,8 @@
    "option": true,
    "hours": {
     "Joseph": 60,
-    "Zach": 140,
-    "Randy": 130,
+    "Ryan": 90,
+    "Randy": 180,
     "Seth": 350
    },
    "price": 80550

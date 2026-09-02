@@ -110,8 +110,8 @@ const pageCount = pdf => (fs.readFileSync(pdf).toString('latin1').match(/\/Type\
 <div class="vol-sub">${DATE}</div>`;
   const toc = `<h1>Table of Contents — Volume I</h1>
 <table class="toc">${starts.map(([t, p]) => `<tr><td>${t}</td><td style="text-align:right">${p}</td></tr>`).join('')}
-<tr><td>Annex — Key Personnel Resumes (five, two pages each; excluded from page limitation)</td><td style="text-align:right">A-1</td></tr>
-<tr><td>Annex — Letters of Commitment (five; excluded from page limitation)</td><td style="text-align:right">A-11</td></tr></table>
+<tr><td>Annex — Key Personnel Resumes (four, two pages each; excluded from page limitation)</td><td style="text-align:right">A-1</td></tr>
+<tr><td>Annex — Letters of Commitment (four, covering the five key roles; excluded from page limitation)</td><td style="text-align:right">A-9</td></tr></table>
 <p style="margin-top:14pt;font-size:10pt;">Volume I body: ${bodyPages} pages against the 30-page limit (instr. 2.1). Cover, this table of contents, resumes, and letters of commitment are excluded from the page count per the Government's answer to question 20.</p>`;
 
   const cPdf = path.join(BUILD, 'vol1-cover.pdf'), tPdf = path.join(BUILD, 'vol1-toc.pdf');
@@ -119,7 +119,7 @@ const pageCount = pdf => (fs.readFileSync(pdf).toString('latin1').match(/\/Type\
   await render('vol1-cover', cover, cPdf, null);
   await render('vol1-toc', toc, tPdf, null);
   await render('vol1-body', marked.parse(body), bPdf, 'Volume I — Technical');
-  const resumeFiles = ['resume-joseph-frasier.md', 'resume-scott-carpenter.md', 'resume-zachary-antosko.md', 'resume-randy-chong.md'];
+  const resumeFiles = ['resume-joseph-frasier.md', 'resume-scott-carpenter.md', 'resume-ryan-daley.md', 'resume-randy-chong.md'];
   for (const f of resumeFiles) { // per-resume ≤2pp check
     const tmp = path.join(BUILD, `count-${f}.pdf`);
     await render(`count-${f}`, marked.parse(prep(read(f))), tmp, 'x');

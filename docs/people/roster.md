@@ -1,0 +1,20 @@
+# Roster index
+
+| Person | Status | Roles | Named on | Biggest missing fact |
+|---|---|---|---|---|
+| [Joseph Frasier](joseph-frasier.md) | principal | PM, architect, governance, security, C++ dev | DoWEA (PM+SrDataGov, key), SSS RS (lead), NOAA (key person) | certs |
+| [Adam Wrobel](adam-wrobel.md) | active-bid (consultant) · resume ✔ | Simulation/UQ lead, OR SME (10 yrs reservoir sim/UQ, BS ChemE UT Austin '16) | SSS RS | — (Woodside clearance = Adam's own assurance 8/11) |
+| [Ryan Daley](ryan-daley.md) | active-bid · resume ✔ | Platform/IaC senior (Terraform/K8s/AWS/Azure); ⚠️ role-fit flag as DoWEA Data Architect | DoWEA (Data Architect, key), SSS RS (Sr SWE platform/IaC) | citizenship; DP-600/700 willingness |
+| [Rahmin Shoukoohi](rahmin-shoukoohi.md) | active-bid · resume ✔ | Data pipelines/backend senior (LDOE 69-district platform; Go/PostgreSQL); SIS via LDOE | DoWEA (Sr Data Eng + SIS Spec + Sr Analyst), SSS RS (Sr SWE dashboards) | — |
+| [Stacy Hunt](stacy-hunt.md) | active-bid · resume ✔ | AI-ML senior (agentic/RAG @ PwC; .NET/SQL gov data; ex-teacher) — Baton Rouge LA | DoWEA (Sr Data Eng/AI-ML), SSS RS (Sr SWE data pipeline) | citizenship + Tier 3 |
+| [Andrew Frasier](andrew-frasier.md) | active-bid · resume ✔ | Junior full-stack (Next.js/RBAC/RLS) + GDLS defense-manufacturing decade | DoWEA (Assoc Data Eng), SSS RS (SWE test/docs) | citizenship |
+| [Ethan Gula](ethan-gula.md) | **reference-POC — DO NOT propose on teams** | (post-award delivery only, after 8/31) | Region 4 reference for SSS RS + NOAA PPQs + DoWEA Vol III | durable personal email; backup Region 4 POC (title/phone/email ✔ 8/12; $75/hr ✔ 8/13) |
+| [Kenneth Benavides](kenneth-benavides.md) | prospect (removed from DoWEA 8/10) | Fractional PM | — | surname spelling, citizenship |
+| [Rida Khazi](rida-khazi.md) | active-bid · resume ✔ | Training/adoption delivery + product/BA (Region 4 ESC); NO formal ID cert — team-based 2.5.9 | DoWEA (Sr Training & Comm Spec, 2 PM) | — (confirmed + $45/hr, 8/13) |
+| [Zachary Antosko](zachary-antosko.md) | bench · resume ✔ | ETL/migration + validation at scale (1.15M records); streaming; 3D dashboards; Honeywell/ID Plans | — (surge candidate: RS build, DoWEA option years) | rate; availability; confirm DigitalCrafts student of Joseph's |
+| [Scott Carpenter](scott-carpenter.md) | bench · resume ✔ | AWS/IaC/DevOps (Amazon SDE, −96% deploy time); backend distributed systems; **Army veteran**, led teams | — (surge: cloud/platform slots, defense-adjacent bids) | rate (available now) |
+| [Seth Chesky](seth-chesky.md) | bench · resume ✔ · $50/hr, available ASAP | Junior full-stack (Next.js/Supabase/RLS/Stripe @ Irongrove, w/ Andrew); AI-tooling fluent; ex-luthier | CWMS pending (non-key, Task 5a) | location |
+| [Alan Hong](alan-hong.md) | active-bid · resume ✔ | Enterprise Azure senior; analytics/AI ed-tech (RNL); Tech Lead; ex-FAA; **standby PM if dual-hat forbidden** | DoWEA (Sr Data Analyst 1.5 PM fractional) | PM-contingency willingness ($75/hr confirmed 8/13) |
+| [Randy Chong](randy-chong.md) | bench · resume ✔ · **nameable** | Enterprise Java/Spring + Angular; AWS ops (ECS/EKS/RDS, multi-region failover) @ JPMC; ex-QA | — (surge: backend/AWS slots, fractional/moonlight; DoWEA option years, RS delivery) | — ($65/hr, US citizen, moonlight, consent all ✔ 8/19; JPMC outside-activity = his to clear) |
+| [Efrain Rocha](efrain-rocha.md) | bench · resume ✔ · **nameable** | Oracle DBA (Joseph-vouched 8/22) + data-platform/DB architect (Oracle, OCI, PostgreSQL 90+TB, RabbitMQ); 25+ yrs, Houston | — (likely: CWMS Oracle DBA slot) | final rate (~$100/hr target); certs if a matrix demands them (US citizen, consent ✔ 8/22) |
+| [Jayelon Rasmussen](jayelon-rasmussen.md) | bench · resume ✔ · **nameable** | Full-stack (Next.js/React/Node) + Access→Azure SQL migration; multi-agent AI pipelines (Claude model routing) @ Irongrove; Scrum Master; ex-teacher (JET + DigitalCrafts TA) | — (surge: full-stack, AI pipeline, training/adoption slots) | — ($60/hr, US citizen, ASAP, consent all ✔ 8/24); location; confirm DigitalCrafts student of Joseph's |

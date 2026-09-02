@@ -25,10 +25,10 @@ Frasier Digital, LLC proposes a firm-fixed price for each task in the PWS, with 
 | Labor category | Key personnel | Fully burdened rate |
 |---|---|---|
 | Project Manager | Joseph Frasier | $165.00 |
-| Senior Oracle DBA | Zachary Antosko (dual role per Q&A 9) | $145.00 |
+| Senior Oracle DBA | Randy Chong (dual role per Q&A 9) | $145.00 |
 | System Engineer / Architect | Scott Carpenter | $145.00 |
-| Senior Forms (React/TypeScript) Developer | Zachary Antosko | $145.00 |
-| Senior Java Developer | Randy Chong | $145.00 |
+| Senior Forms (React/TypeScript) Developer | Ryan Daley | $145.00 |
+| Senior Java Developer | Randy Chong (dual role) | $145.00 |
 | Associate Software Engineer | Andrew Frasier, Seth Chesky | $90.00 |
 
 Rates are fully burdened (direct labor, fringe, overhead, G&A, and profit) and are the same in every task and option — the Government's unbalanced-pricing check (instr. 3.2.3.1) will find per-task prices that follow hours only. The three-tier structure reflects differences in skill and responsibility: the Project Manager carries contractual accountability and review authority; the four senior categories carry design ownership in their area; associate engineers perform implementation and maintenance work units under senior review. The rates are set to retain the named individuals for the full period of performance and any options (instr. 3.2.3.2).

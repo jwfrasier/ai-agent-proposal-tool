@@ -16,7 +16,7 @@ Verified 9/2 (send-day render) against Proposal Submission Instructions (8/26 re
 | No price info in Vol I or II | instr. 1.2 | ✅ grep verified. Vol II's "$400,000" is the past-performance contract value **required** by instr. 2.2.1.1 — not proposal pricing |
 | LOE per task in Factor 1, no dollars | instr. 2.1.1 | ✅ Table A-2 |
 | LOE reconciles: A-2 = F2 A-3 = Vol III = xlsx | house rule | ✅ 1,660 base / 2,770 all-options everywhere |
-| 5 key roles: 4 resumes + 4 LOCs (Zach dual per Q&A 9) | instr. 2.1.2 | ✅ resumes final (card-verified facts only); ⏳ **signed LOCs pending — THE blocker** |
+| 5 key roles: 4 resumes + 4 LOCs (Randy dual per Q&A 9) | instr. 2.1.2 | ✅ resumes final (card-verified facts only); ⏳ **signed LOCs pending — THE blocker** |
 | Vol II ≤ 25 pp; min 1 ref; PPQ | instr. 2.2; Q&A 27 | ✅ 3 pp + PPQ reference copy; completed PPQ sent direct to CO/CS by client (2.2.1.2.5) and Vol II says so |
 | PPQ figures match SSS/NOAA ($400k, Jul 2024–Oct 2025) | consistency map | ✅ |
 | Vol III complete + Excel separate, all 8 CLINs | instr. 2.3.1; Q&A 5 | ✅ $217,520 / $360,140; xlsx formula-driven |

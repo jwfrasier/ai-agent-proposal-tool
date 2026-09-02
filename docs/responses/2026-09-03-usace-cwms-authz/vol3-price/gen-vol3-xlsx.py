@@ -13,8 +13,8 @@ BOLD = Font(name="Times New Roman", bold=True, size=11); BASE = Font(name="Times
 H1 = Font(name="Times New Roman", bold=True, size=13); GREY = PatternFill("solid", fgColor="E8E8E8")
 thin = Side(style="thin"); BOX = Border(left=thin, right=thin, top=thin, bottom=thin)
 MONEY, MONEY0 = '#,##0.00', '#,##0'
-PEOPLE = ["Joseph", "Scott", "Zach", "Randy", "Andrew", "Seth"]
-NAMES = {"Joseph": "J. Frasier", "Scott": "S. Carpenter", "Zach": "Z. Antosko", "Randy": "R. Chong", "Andrew": "A. Frasier", "Seth": "S. Chesky"}
+PEOPLE = ["Joseph", "Scott", "Ryan", "Randy", "Andrew", "Seth"]
+NAMES = {"Joseph": "J. Frasier", "Scott": "S. Carpenter", "Ryan": "R. Daley", "Randy": "R. Chong", "Andrew": "A. Frasier", "Seth": "S. Chesky"}
 
 def style(ws, row, cols, bold=False, fill=False):
     for c in cols:

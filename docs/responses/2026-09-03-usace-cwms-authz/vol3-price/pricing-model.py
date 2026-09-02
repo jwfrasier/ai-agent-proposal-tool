@@ -8,21 +8,21 @@ import json
 BURDEN, GA = 0.05, 0.08
 LOAD = (1 + BURDEN) * (1 + GA)
 RATE = {"PM": 165, "SR": 145, "AS": 90}
-COST = {"Joseph": 75, "Scott": 60, "Zach": 75, "Randy": 65, "Andrew": 50, "Seth": 50}
-CAT = {"Joseph": "PM", "Scott": "SR", "Zach": "SR", "Randy": "SR", "Andrew": "AS", "Seth": "AS"}
+COST = {"Joseph": 75, "Scott": 60, "Ryan": 75, "Randy": 65, "Andrew": 50, "Seth": 50}
+CAT = {"Joseph": "PM", "Scott": "SR", "Ryan": "SR", "Randy": "SR", "Andrew": "AS", "Seth": "AS"}
 LABEL = {"Joseph": "Project Manager", "Scott": "System Engineer / Architect",
-         "Zach": "Senior Forms (React/TypeScript) Developer / Senior Oracle DBA (dual role)", "Randy": "Senior Java Developer",
+         "Ryan": "Senior Forms (React/TypeScript) Developer", "Randy": "Senior Java Developer / Senior Oracle DBA (dual role)",
          "Andrew": "Associate Software Engineer", "Seth": "Associate Software Engineer"}
 # CLIN, task, description, option?, hours by person
 TASKS = [
-    ("1001", "Task 1a", "Development meetings (26)", False, {"Joseph": 78, "Scott": 12, "Zach": 20, "Randy": 12, "Seth": 8}),
-    ("2001", "Task 2",  "Improve authorization web UI and CDA integration", False, {"Joseph": 50, "Zach": 250, "Randy": 150, "Andrew": 100}),
+    ("1001", "Task 1a", "Development meetings (26)", False, {"Joseph": 78, "Scott": 12, "Ryan": 12, "Randy": 20, "Seth": 8}),
+    ("2001", "Task 2",  "Improve authorization web UI and CDA integration", False, {"Joseph": 50, "Ryan": 220, "Randy": 180, "Andrew": 100}),
     ("3001", "Task 3a", "Implement authorization in CWBI-Dev", False, {"Joseph": 40, "Scott": 120, "Randy": 40}),
-    ("5001", "Task 5a", "Maintenance (≤803 h)", False, {"Joseph": 70, "Zach": 160, "Randy": 150, "Seth": 400}),
-    ("1002", "Task 1b", "Development meetings, additional 26 (option)", True, {"Joseph": 78, "Scott": 12, "Zach": 20, "Randy": 12, "Seth": 8}),
+    ("5001", "Task 5a", "Maintenance (≤803 h)", False, {"Joseph": 70, "Ryan": 100, "Randy": 210, "Seth": 400}),
+    ("1002", "Task 1b", "Development meetings, additional 26 (option)", True, {"Joseph": 78, "Scott": 12, "Ryan": 12, "Randy": 20, "Seth": 8}),
     ("3002", "Task 3b", "Implement authorization in CWBI-Test (option)", True, {"Joseph": 20, "Scott": 80, "Randy": 20}),
-    ("4001", "Task 4",  "Load testing (option)", True, {"Joseph": 20, "Zach": 20, "Scott": 60, "Randy": 40, "Seth": 40}),
-    ("5002", "Task 5b", "Maintenance (≤704 h) (option)", True, {"Joseph": 60, "Zach": 140, "Randy": 130, "Seth": 350}),
+    ("4001", "Task 4",  "Load testing (option)", True, {"Joseph": 20, "Scott": 60, "Randy": 60, "Seth": 40}),
+    ("5002", "Task 5b", "Maintenance (≤704 h) (option)", True, {"Joseph": 60, "Ryan": 90, "Randy": 180, "Seth": 350}),
 ]
 def price(h): return sum(n * RATE[CAT[p]] for p, n in h.items())
 def cost(h): return sum(n * COST[p] for p, n in h.items())
