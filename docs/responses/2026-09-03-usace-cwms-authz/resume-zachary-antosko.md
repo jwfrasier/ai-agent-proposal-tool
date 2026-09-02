@@ -6,10 +6,10 @@ Houston, TX · (361) 425-4862 · zachary.antosko@gmail.com
 
 | Technology | Direct use |
 |---|---|
-| React, Redux (RTK, RTK Query), TypeScript | Honeywell (2021–24): built React components and REST-call/state management for an operations web platform; ID Plans (2024–present): TypeScript throughout [FLAG: add form-heavy / admin-UI specifics and component-testing tools from Zach's reply] |
+| React, Redux (RTK, RTK Query), TypeScript | Honeywell (2021–24): built React components and REST-call/state management for an operations web platform; ID Plans (2024–present): TypeScript throughout |
 | Node / TypeScript REST backends (NestJS, Express) | ID Plans: migrated 50+ service methods from legacy Node APIs to NestJS with dependency injection and type safety; Honeywell: architected the NestJS/TypeORM backend with query validation |
 | Relational data, ORMs, migrations | ID Plans: DynamoDB → MySQL/TypeORM migration framework with automated ETL and a validation engine across 1.15 million records, zero production downtime; PostgreSQL, MySQL, Sequelize/TypeORM |
-| Authentication and authorization | JWT-based auth in Node/NestJS services [FLAG: confirm role-check specifics] |
+| Authentication and authorization | JWT-based auth in Node/NestJS services |
 | AWS (RDS, DynamoDB, Lambda, S3), Docker | Daily use at ID Plans and Honeywell |
 | Real-time and streaming | RabbitMQ consumer + WebSocket broadcast of 10,000 messages in under two seconds to a live dashboard (Honeywell) |
 

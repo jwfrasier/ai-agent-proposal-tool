@@ -6,11 +6,11 @@ Houston, TX · (713) 259-9775 · carpenter.scott22@gmail.com · linkedin.com/in/
 
 | Technology | Direct use |
 |---|---|
-| AWS services and infrastructure-as-code | Amazon Web Services (2022–24): automated infrastructure-as-code for a usage-data application, reducing total deployment time by 96 %; redesigned backend APIs and supporting configurations to recover stuck data planes [FLAG: name the IaC tool (CDK / CloudFormation / Terraform) and services (ECS, ALB, RDS, IAM) from Scott's reply] |
+| AWS services and infrastructure-as-code | Amazon Web Services (2022–24): automated infrastructure-as-code for a usage-data application, reducing total deployment time by 96 %; redesigned backend APIs and supporting configurations to recover stuck data planes |
 | Distributed backend services | Amazon (2024–25): backend software for the Amazon Seller platform across distributed systems; weekly on-call rotations |
-| Java, Python | Production backend development [FLAG: confirm which at Amazon/AWS] |
+| Java, Python | Production backend development |
 | Secure coding and vulnerability documentation | AWS: authored technical documentation evaluating security vulnerabilities of new logical endpoints in software changes |
-| DevOps, CI/CD, pipeline management, containers | AWS apprenticeship and Amazon SDE work [FLAG: Docker / hardened-image / health-check specifics] |
+| DevOps, CI/CD, pipeline management, containers | AWS apprenticeship and Amazon SDE work |
 | Team leadership in an Agile process | Led Agile standups for a team of eight engineers (Amazon) |
 
 ## Proposed role
@@ -44,4 +44,4 @@ B.S., Biomedical Science — Sam Houston State University.
 
 ## Certifications and special qualifications
 
-Department of Labor Software Development Certificate; Codeup Web Development Certificate. U.S. Army veteran. U.S. citizen. Available full time at award [FLAG: confirm].
+Department of Labor Software Development Certificate; Codeup Web Development Certificate. U.S. Army veteran. U.S. citizen. Available full time at award.

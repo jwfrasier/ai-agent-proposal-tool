@@ -6,10 +6,10 @@ Dallas, TX · (321) 417-6756 · mr.randy.chong@gmail.com · linkedin.com/in/r-ch
 
 | Technology | Direct use |
 |---|---|
-| Java, Spring, Spring Boot REST services | JPMorgan Chase (2022–present): enterprise digital-forms and letters platform, 100+ forms [FLAG: add JUnit 5 / REST-Assured / Mockito / OpenAPI specifics from Randy's reply] |
+| Java, Spring, Spring Boot REST services | JPMorgan Chase (2022–present): enterprise digital-forms and letters platform, 100+ forms |
 | AWS in production — ECS, EKS, RDS, S3, CloudWatch | Updates and deploys infrastructure and application code to production; multi-region failover exercises with evidence collection |
-| Relational databases from Java | Amazon RDS-backed services [FLAG: confirm Oracle/JDBC/JPA specifics] |
-| Angular, with React | Sole developer of a production multi-form completion and signing feature (Angular); React exposure [FLAG: quantify] |
+| Relational databases from Java | Amazon RDS-backed services |
+| Angular, with React | Sole developer of a production multi-form completion and signing feature (Angular); React exposure |
 | CI/CD, code review, production support | Daily practice: deployment pipelines, health checks, troubleshooting, dependency upgrades |
 | Software testing | Software Test Engineer (2022): test cases from acceptance criteria in an Agile release process |
 
@@ -35,4 +35,4 @@ B.S., Marketing — Pensacola Christian College, 2016. DigitalCrafts Web Develop
 
 ## Certifications and special qualifications
 
-**AWS Certified Cloud Practitioner.** Practices: Agile/Scrum, code review, production support, CI/CD. U.S. citizen. Committed to this contract on a fractional schedule sized in Volume III [FLAG: confirm hours/week from Randy's reply].
+**AWS Certified Cloud Practitioner.** Practices: Agile/Scrum, code review, production support, CI/CD. U.S. citizen. Committed to this contract on a fractional schedule sized in Volume III.

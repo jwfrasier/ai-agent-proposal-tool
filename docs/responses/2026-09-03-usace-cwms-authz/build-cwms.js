@@ -127,9 +127,21 @@ const pageCount = pdf => (fs.readFileSync(pdf).toString('latin1').match(/\/Type\
   }
   const resumes = resumeFiles.map((f, i) => brk(prep(read(f)), i)).join('\n\n');
   await render('vol1-resumes', marked.parse('# Annex — Key Personnel Resumes\n\n' + resumes), rPdf, 'Volume I Annex — Resumes (excluded from page limitation)');
-  const locs = prep(read('letters-of-commitment.md')).split(/\n---\n/).map((s, i) => brk(s, i)).join('\n\n');
-  await render('vol1-locs', marked.parse(locs), lPdf, 'Volume I Annex — Letters of Commitment (excluded from page limitation)');
-  console.log(execFileSync('swift', [MERGE, path.join(OUT, 'Frasier-Digital-CWMS-Vol-I-Technical.pdf'), cPdf, tPdf, bPdf, rPdf, lPdf], { encoding: 'utf8' }).trim());
+  // Signed LOCs: drop signed PDFs into to-sign/signed/ and they replace the rendered (unsigned) annex.
+  const signedDir = path.join(DIR, 'to-sign', 'signed');
+  const signed = fs.existsSync(signedDir) ? fs.readdirSync(signedDir).filter(f => f.toLowerCase().endsWith('.pdf')).sort().map(f => path.join(signedDir, f)) : [];
+  let locInputs;
+  if (signed.length >= 4) {
+    console.log('LOC annex: using SIGNED letters ->', signed.map(f => path.basename(f)).join(', '));
+    locInputs = signed;
+  } else {
+    if (signed.length > 0) console.log(`!! only ${signed.length}/4 signed LOCs in to-sign/signed/ — annex still uses UNSIGNED renders (need all 4)`);
+    else console.log('!! no signed LOCs in to-sign/signed/ — annex uses UNSIGNED renders (not sendable)');
+    const locs = prep(read('letters-of-commitment.md')).split(/\n---\n/).map((s, i) => brk(s, i)).join('\n\n');
+    await render('vol1-locs', marked.parse(locs), lPdf, 'Volume I Annex — Letters of Commitment (excluded from page limitation)');
+    locInputs = [lPdf];
+  }
+  console.log(execFileSync('swift', [MERGE, path.join(OUT, 'Frasier-Digital-CWMS-Vol-I-Technical.pdf'), cPdf, tPdf, bPdf, rPdf].concat(locInputs), { encoding: 'utf8' }).trim());
   console.log(`VOL I BODY: ${bodyPages} / 30 pages`);
 
   // ---------- Vol II ----------
