@@ -26,3 +26,4 @@
 - **Missing:** availability.
 - **Rate (1099 cost, per Joseph 8/11 — negotiable guideline; their work for us is supplemental income):** $75/hr
 - **2026-09-02:** slated Sr Forms Dev + Sr Oracle DBA (dual) on CWMS; unreachable during the 48-h LOC window → removed day before deadline (Ryan Daley took Forms, Randy the DBA dual). No fault noted; for tight-window bids get his signature same-day or don't slate him.
+- **2026-09-02 (later, send day):** resurfaced and returned a SIGNED dual-role LOC (the pre-v3 Forms+DBA combo) hours before the deadline — after the package was built and verified around slate v3. Not used; letter archived at CWMS `to-sign/LOC-zachary-antosko-SIGNED-NOT-USED-slate-v2-role.pdf`. He IS willing and responsive when reached — keep as first-call senior for future bids (VAERS surge, SSS RFP).
