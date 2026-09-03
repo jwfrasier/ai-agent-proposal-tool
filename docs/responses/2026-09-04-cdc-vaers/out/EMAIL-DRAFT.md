@@ -29,9 +29,10 @@ Frasier Digital, LLC is pleased to submit the attached quote in response to RFQ
    Amendment 0001 Q&A 187/256, with our prototype **Accessibility Conformance Report** (PDF)
    attached as supporting evidence.
 6. **Incident Response Plan** (PDF) — per PWS Standard-4 ("as part of Proposal").
-7. **Signed solicitation cover/SF18** (PDF) — signed electronically per Q&A 37; the SF-18 schedule
-   is annotated "See Price Breakdown Worksheet" per Q&A 73. [PENDING — Joseph signs at render finalization]
-8. **Signed SF30 — Amendment 0001 acknowledgment** (PDF). [PENDING — Joseph signs]
+7. **Signed solicitation cover/SF18** (`Frasier-Digital-SF18-signed.pdf`) — signed 9/3, flattened;
+   schedule annotated "See Price Breakdown Worksheet" per Q&A 73. ✅
+8. **Signed SF30 — Amendment 0001 acknowledgment** (`Frasier-Digital-SF30-Amend0001-signed.pdf`) —
+   signed 9/3 (block 15B/15C), block 8 completed, flattened. ✅
 
 CPARS representative (CDCL.09): Joseph Frasier, Founder & Managing Member,
 joseph@frasierdigital.com, (850) 356-2382.
