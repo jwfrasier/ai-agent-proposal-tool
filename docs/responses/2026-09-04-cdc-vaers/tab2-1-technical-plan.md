@@ -59,9 +59,8 @@ program personnel edit the same configuration the form engine reads. Intelligent
 completion assistance runs against **CDC's existing enterprise Azure OpenAI service
 (EDAV)** behind a deterministic safety gate — no new AI services, no data leaving the
 boundary (our completed AI Use Compliance and Risk Management Plan, Attachment 1,
-governs this in detail). All custom code is delivered open source under M-16-21 to a
-CDC repository on a bi-weekly cadence. [FLAG: final stack wording pending Bish Q&A on
-EDAV availability; prototype covers both smart-validation-only and assistant answers.]
+governs this in detail). All custom code is delivered to a CDC repository on a
+bi-weekly cadence with Government rights under FAR 52.227-17 (Amendment 0001, Q&A 91).
 
 **Why this is sound.** Every load-bearing element is boring on purpose: React and Node
 are already present in CDC's VAERS environment; Azure SQL MI is the incumbent data
@@ -194,7 +193,7 @@ guidance (3.8, PRS#16) complete the task.
 ### Task 4 — Transition-Out
 
 Transition readiness is a standing condition, not an end-of-contract scramble: because
-code goes to CDC's repository bi-weekly under M-16-21 with documentation maintained in
+code goes to CDC's repository bi-weekly with Government rights under FAR 52.227-17 and documentation maintained in
 the same repo, the Government holds current source, configuration, and process assets
 at all times. We assess and report transition readiness monthly to the COR (4.1,
 PRS#18), deliver the detailed Transition-out Plan at least two months before contract

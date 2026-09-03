@@ -58,8 +58,7 @@ price every bid against total committed capacity: the FTE commitments above are 
 all potential concurrent awards, the named bench exists to absorb surge, and the PM's
 combined 0.55 FTE on this contract is protected as a floor, not an average. We flag this
 proactively because deliverable-based FFP work only functions when capacity claims are
-honest. [FLAG: keep wording synced with actual award status at render time — mirrors
-NOAA disclosure pattern.]
+honest.
 
 **Employee turnover — past three years.** Frasier Digital does not operate a
 salaried-staff pool, so we answer this requirement transparently rather than

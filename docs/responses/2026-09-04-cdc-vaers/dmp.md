@@ -36,8 +36,8 @@ release processes, which are outside this contract's scope — this justificatio
 provided per the CDCL.10 instruction that protections precluding accessibility be
 explained. De-identified, aggregate operational metrics (e.g., satisfaction and
 performance reporting) are delivered to CDC and may be released at CDC's discretion.
-Custom-developed source code (non-data) is open source per M-16-21 and delivered to the
-CDC-recognized repository.
+Custom-developed source code (non-data) is delivered to the CDC-recognized repository
+with Government rights per FAR 52.227-17 (Amendment 0001, Q&A 91).
 
 ## 4. Archiving and long-term preservation
 Data persists in CDC-managed storage under CDC's NARA-approved records schedules; the

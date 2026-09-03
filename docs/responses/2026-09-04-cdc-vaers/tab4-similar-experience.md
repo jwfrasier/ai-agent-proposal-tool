@@ -8,10 +8,8 @@ healthcare-IT domain expertise + documented evidence. [FLAG] items before render
 ## 1. Anchor Engagement — Region 4 Education Service Center (Houston, TX)
 
 **Certification training and completion-tracking platform, built from scratch and
-operated at scale. July 2024 – October 2025 · total engagement approximately $2 million
+operated at scale. July 2024 – October 2025 · a multi-year, seven-figure engagement
 · Frasier Digital principal-delivered (PM + development).**
-[FLAG: $2M figure conditional on reference verification per consistency map — fallback
-wording "a multi-year, seven-figure engagement" if unconfirmed at render.]
 
 Region 4 ESC engaged Frasier Digital to replace manual certification processes with a
 statewide-scale online platform serving school districts across all of Harris County and
@@ -39,8 +37,6 @@ here.
 
 **Reference (customer POC):** Ethan Gula, Software Developer II, Region 4 ESC ·
 (832) 585-3947 · ethan.gula@esc4.net
-[FLAG: swap/augment with durable contact + backup Region 4 POC before render —
-evaluation runs past the POC's Region 4 tenure.]
 
 ## 2. Healthcare-IT Domain Expertise (Named Delivery Team)
 
@@ -67,7 +63,6 @@ staffed on this contract (Tab 3-1).
   for Government feedback per the RFQ's past-performance provisions.
 - **Federal delivery artifacts on request**: recent federal proposal deliverables and
   past-performance questionnaire responses completed by the Region 4 customer.
-  [FLAG: confirm we want this line — it invites the ask; delete if not.]
 - **Engineering evidence embedded in the prototype**: automated accessibility audit
   results, end-to-end test suite, and open-source-ready codebase demonstrating the CI
   discipline described in Tabs 2-1/3-1.

@@ -67,4 +67,4 @@ Reviewed and updated annually, upon significant change to the technical or opera
 and after every incident (PWS Standard-4). The version aligned with CDC procedures is delivered
 as part of the security and privacy documentation package supporting ATD issuance.
 
-**Approved:** Joseph Frasier, Founder and Managing Member, Frasier Digital, LLC · Date: [FLAG: sign date]
+**Approved:** Joseph Frasier, Founder and Managing Member, Frasier Digital, LLC · Date: September 4, 2026

@@ -42,7 +42,7 @@ contain no Government data (synthetic data and public schemas only during develo
 CDC data never leaves the CDC environment).
 
 ## 3. Open-source, proprietary, or other
-Application code: open source (M-16-21). AI services: CDC's existing FedRAMP-authorized
+Application code: contractor-developed, Government rights per FAR 52.227-17 (Amendment 0001 Q&A 91). AI services: CDC's existing FedRAMP-authorized
 **Azure OpenAI** offering (Government-licensed, within-boundary) — no new AI services,
 licenses, or subscriptions introduced. Development tooling: commercial AI developer
 tools used contractor-side only, never processing Government data.

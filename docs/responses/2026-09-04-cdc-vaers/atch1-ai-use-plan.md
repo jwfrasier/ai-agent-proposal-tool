@@ -43,8 +43,8 @@ is retained as a companion appendix.*
 | | |
 |---|---|
 | Tool or product name | Azure OpenAI Service via CDC EDAV; Frasier-built application assistance layer |
-| Developer/vendor | Microsoft (service); OpenAI (models); Frasier Digital (application layer, delivered open source per M-16-21) |
-| Open-source, proprietary, Government-furnished, or other? | ☒ Government-furnished (EDAV Azure OpenAI service) ☒ Contractor-developed (application layer; open source per M-16-21) ☐ Open-source ☐ Proprietary/commercial ☐ Subcontractor-provided |
+| Developer/vendor | Microsoft (service); OpenAI (models); Frasier Digital (application layer, delivered with Government rights per FAR 52.227-17) |
+| Open-source, proprietary, Government-furnished, or other? | ☒ Government-furnished (EDAV Azure OpenAI service) ☒ Contractor-developed (application layer; Government rights per FAR 52.227-17) ☐ Open-source ☐ Proprietary/commercial ☐ Subcontractor-provided |
 | If the system uses an LLM or foundation model, what is the primary model? | A GPT-family model from the CDC EDAV Azure OpenAI catalog; specific model/version selected with the COR at design review, pinned and documented in the delivered system documentation |
 | Who provides the LLM/foundation model? | Microsoft Azure OpenAI, within the CDC authorization boundary |
 | What model options are available? | Models available in CDC's EDAV Azure OpenAI catalog; configurable without code change |
@@ -172,8 +172,8 @@ records, civil rights, and AI requirements.
 | | |
 |---|---|
 | Will the AI process, store, transmit, summarize, analyze, or generate Government information? | ☒ No |
-| Types of data involved | ☒ Public information (open-source application code per M-16-21, public schemas, synthetic test data only) |
-| What information will be entered into the AI tool? | Application source code (open source by contract policy), synthetic data, public documentation |
+| Types of data involved | ☒ Public and non-sensitive information (contractor-developed application code — no Government data; public schemas, synthetic test data only) |
+| What information will be entered into the AI tool? | Application source code (contractor-developed, no Government data), synthetic data, public documentation |
 | What outputs will the AI generate? | Draft code, tests, and documentation — all reviewed by the responsible senior engineer before commit |
 | Will prompts, uploads, outputs, logs, or user interactions be stored? | ☒ Yes — vendor-side per vendor retention policy; contains no Government information |
 | Retention period | Per vendor policy; contractor accounts configured for no-training/limited-retention options where offered |

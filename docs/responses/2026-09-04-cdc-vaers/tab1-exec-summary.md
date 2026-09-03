@@ -6,8 +6,9 @@
 
 Frasier Digital, LLC — a Texas small disadvantaged business — proposes to design,
 build, and deploy the modernized VAERS reporting application described in RFQ
-75D301-26-Q-00146, within CDC's FedRAMP-authorized Azure environment, open source per
-M-16-21, Section 508-conformant, delivered by a named principal-led team with deep
+75D301-26-Q-00146, within CDC's FedRAMP-authorized Azure environment, with full
+Government data rights per FAR 52.227-17 — no vendor lock-in, no license fees —
+Section 508-conformant, delivered by a named principal-led team with deep
 healthcare-IT experience (Optum/UnitedHealthcare, healthtech platform engineering,
 60k-user healthcare systems).
 

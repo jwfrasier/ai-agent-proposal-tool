@@ -30,10 +30,10 @@ bi-weekly technical reviews. Author of the Tab 2-2 prototype.
   full authentication backend, course ingestion and validation, completion tracking —
   serving thousands of non-technical users across all Harris County school districts and
   other entities dependent on Region 4's training system. No inherited codebase;
-  delivered to production and operated. [FLAG: engagement value reference per Tab 4 rule]
+  delivered to production and operated.
 - Federal proposal and prototype delivery practice: working evaluation prototypes with
   live AI-assist features behind deterministic safety guardrails, automated 508 testing
-  in CI, open-source posture per M-16-21.
+  in CI, full Government-rights code delivery per FAR 52.227-17.
 
 **PwC — Senior Software Engineer (AI implementations)** · 2026–present
 - End-to-end AI implementations for Fortune 100–500 clients: full-stack build, solution

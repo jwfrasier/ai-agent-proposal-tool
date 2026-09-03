@@ -50,7 +50,11 @@ production; updated ACRs deliver with Beta and Final per PRS#14.)*
    accessibility standards.
 3. ACR/VPAT updated and delivered with Beta and again at Final Release, with a
    remediation plan for any nonconformity then identified (PRS#14 thresholds).
-4. Legal disclaimer: [FLAG — standard VPAT disclaimer text to include at render.]
+4. Legal disclaimer: This document describes the accessibility conformance of the named
+   prototype as evaluated on the date shown, using the testing methods described herein.
+   It is provided for evaluation purposes and does not constitute a legally binding
+   warranty; conformance of the delivered production system will be documented in the
+   draft ACR at Beta and the final ACR at Final Release per PRS#14.
 
 *(End ACR draft. Render decision: expand condensed groups into the full VPAT 2.5
 criterion table (~7pp) or submit condensed with the full table as an appendix — check

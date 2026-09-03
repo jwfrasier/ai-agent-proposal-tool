@@ -58,4 +58,4 @@ and the ACR/VPAT deliverable schedule (draft at Beta, final at Final Release, wi
 plan) is priced into CLIN 0001.
 
 **Certified by:** Joseph Frasier, Founder and Managing Member, Frasier Digital, LLC ·
-joseph@frasierdigital.com · (850) 356-2382 · Date: [FLAG: sign date]
+joseph@frasierdigital.com · (850) 356-2382 · Date: September 4, 2026
