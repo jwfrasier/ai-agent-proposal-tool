@@ -64,6 +64,10 @@ python3 -c "import re;d=open(PDF,'rb').read();print(len(re.findall(rb'/Type\s*/P
 
 **Strip internal routing headers.** Response markdown often opens with a "Submit to / Suggested subject line / Respond by" block. That is a note-to-self and must never appear in the deliverable; start the render at the first real heading.
 
+**Pre-send sweeps (learned the hard way on VAERS 9/3 — memory `response-package-build-qa` has the full list).** Before calling a package sendable: (1) `pdftotext` every `out/*.pdf` and grep for `[FLAG` — the build renders draft flags into the PDFs by design; (2) when an amendment overturns a fact, grep the ENTIRE workspace including generator scripts for the dead term (M-16-21 survived in 8 places across 6 files after being "fixed"); (3) companion generators (price xlsx vs price PDF) state the same facts from separate code — fix and regenerate ALL of them; (4) compare source-vs-`out/` mtimes for staleness; (5) build scripts must not require modules from old session scratchpads (tmp purge leaves 0-byte husks). Use absolute paths in verification pipelines — cwd resets and relative `pdftotext` fails silently.
+
+**PDF form prefill + signing.** Canonical tools in `docs/tools/` (stamp, list-annots, remove-annot, flatten, render-page — see its README). Fill forms against a per-block checklist (SF30 amendment ack needs block 8 name/address AND 15C date, not just 15A/15B). Verify by rendering the PDF to PNG and looking — annotation coordinates lie, and poppler vs PDFKit render un-flattened annotations differently. Always flatten before packaging; verify the flattened file; back up signed copies (rebuilds clobber build-rendered signed docs).
+
 **Querying the opportunities DB:** never `SELECT *` from `cron_runs` — the `logs` column holds large JSON blobs that flood context. Name the columns you need.
 
 ## Notice watch monitor (`npm run watch`)
