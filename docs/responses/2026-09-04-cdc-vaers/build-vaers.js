@@ -6,7 +6,7 @@
 const fs = require('fs');
 const path = require('path');
 const { execFileSync } = require('child_process');
-const SCRATCH = '/private/tmp/claude-501/-Users-joseph-govcontracts-dashboard/f0d25a34-3af3-476c-a3e1-15001c738034/scratchpad';
+const SCRATCH = '/private/tmp/claude-501/-Users-joseph-govcontracts-dashboard/ff06c0ab-b760-432c-a0db-82d9b20ee590/scratchpad';
 const { marked } = require('/Users/joseph/govcontracts-dashboard/node_modules/marked');
 const puppeteer = require(path.join(SCRATCH, 'node_modules/puppeteer-core'));
 
@@ -150,7 +150,17 @@ ${rows}
 <tr><td>Software licenses, subscriptions, IT supplies</td><td>None required — all custom code delivered with Government rights per FAR 52.227-17 (Amendment 0001 Q&A 91); development on contractor equipment; laptops and PIV cards are Government-furnished</td><td style="text-align:right">$0</td></tr>
 <tr><td>Cloud hosting and AI services</td><td>None required — CDC-managed Azure environment and CDC enterprise Azure OpenAI (EDAV) are Government-furnished</td><td style="text-align:right">$0</td></tr>
 <tr><td>Other direct costs (excluding travel CLINs 0002/0003)</td><td>None</td><td style="text-align:right">$0</td></tr>
-<tr><td><strong>Total ODCs</strong></td><td></td><td style="text-align:right"><strong>$0</strong></td></tr></table>`;
+<tr><td><strong>Total ODCs</strong></td><td></td><td style="text-align:right"><strong>$0</strong></td></tr></table>
+
+## Representations, Certifications, and Administrative Information
+
+Submitted with the Price Proposal per Amendment 0001 Q&A 69 and Q&A 203.
+
+**Amendment acknowledgment.** Frasier Digital, LLC acknowledges receipt of Amendment 0001, effective August 31, 2026; this quote reflects the solicitation as amended. The signed SF30 accompanies this proposal.
+
+**Representations and certifications.** Frasier Digital, LLC (UEI PY8MJ4JPHJ45 · CAGE 213L8) is registered and active in SAM.gov with all annual representations and certifications current, including small disadvantaged business status.
+
+**CPARS representative (CDCL.09).** Joseph Frasier, Founder &amp; Managing Member · joseph@frasierdigital.com · (850) 356-2382 · 20915 Mystic Stone Dr, Tomball, TX 77375.`;
   await render('vol2-price', marked.parse(vol2), path.join(OUT, 'Frasier-Digital-Vol-II-Price.pdf'), 'Volume II — Price');
 
   await browser.close();

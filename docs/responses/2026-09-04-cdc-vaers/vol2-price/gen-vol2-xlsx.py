@@ -48,7 +48,7 @@ hdr = ["CLIN", "Description", "Type", "Price"]
 for i, h in enumerate(hdr, 1): ws.cell(row=5, column=i, value=h)
 style_row(ws, 5, range(1, 5), bold=True, fill=True)
 rows = [
-    ("0001", "Design, development, deployment, and compliance delivery of the Modernized VAERS Reporting Application per the PWS (severable services)", "FFP", "='CLIN 0001 Itemization'!E14"),
+    ("0001", "Design, development, deployment, and compliance delivery of the Modernized VAERS Reporting Application per the PWS (nonseverable services per Amendment 0001)", "FFP", "='CLIN 0001 Itemization'!E14"),
     ("0002", "Travel — onboarding (direct reimbursement per FTR, no fee)", "NTE", 31500),
     ("0003", "Travel — meetings (direct reimbursement per FTR, no fee)", "NTE", 31500),
 ]
@@ -96,7 +96,7 @@ hdr = ["Item", "Basis", "Price"]
 for i, h in enumerate(hdr, 1): ws3.cell(row=3, column=i, value=h)
 style_row(ws3, 3, range(1, 4), bold=True, fill=True)
 odc = [
-    ("Software licenses, subscriptions, IT supplies", "None required — all custom code delivered open source per M-16-21; development on contractor equipment; laptops and PIV cards are Government-furnished", 0),
+    ("Software licenses, subscriptions, IT supplies", "None required — all custom code delivered with Government rights per FAR 52.227-17 (Amendment 0001 Q&A 91); development on contractor equipment; laptops and PIV cards are Government-furnished", 0),
     ("Cloud hosting and AI services", "None required — CDC-managed Azure environment and CDC enterprise Azure OpenAI (EDAV) are Government-furnished", 0),
     ("Other direct costs (excluding travel CLINs 0002/0003)", "None", 0),
 ]
