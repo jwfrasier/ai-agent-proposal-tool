@@ -29,7 +29,7 @@ separately as present-tense evidence of the practices claimed here.
 | 2.2 Enough time | Supports | Session timeout warnings with extension; autosave of in-progress reports so a timeout never destroys a submission (also a PWS abandonment-reduction measure) |
 | 2.3 Seizures | Supports | Nothing flashes more than three times per second |
 | 2.4 Navigable | Supports | Skip links; unique page titles per step; visible focus indicator; descriptive headings and link text; breadcrumb/step indicator on the branching form |
-| 3.1 Readable | Supports | Language attributes set per page and per passage; **English and Spanish parity** (Amendment 0001 Q&A 270) with `lang` switching |
+| 3.1 Readable | Supports | Language attributes set per page and per passage; **English and Spanish parity** (PWS 1.13 / PRS #19, Amendment 0002; Q&A 270) with `lang` switching per page and per passage; demonstrated in the prototype |
 | 3.2 Predictable | Supports | No context changes on focus/input; consistent navigation and identification; branching reveals fields without moving focus unexpectedly |
 | 3.3 Input assistance | Supports | Inline validation with error text tied to fields by `aria-describedby`; error summary with links; plain-language error copy; suggestions on format errors; confirmation step before submission |
 | 4.1 Compatible | Supports | Valid, parseable markup; name/role/value for all custom components; status messages via live regions |

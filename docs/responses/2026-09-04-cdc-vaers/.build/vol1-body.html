@@ -102,6 +102,16 @@ Phase 2 expansion to images (2.4.2) is a policy change plus review, not a rebuil
 Stateless application tier scales horizontally under Azure load balancing; surge events
 (a safety communication driving reporting spikes) are a capacity configuration, not an
 engineering project.</p>
+<p><strong>Capacity, sized to the answered volumes.</strong> Amendment 0002 (Q&amp;A 116) states the
+demand: about 2.26 million site visits and 22,016 report submissions a year, roughly
+6,183 visits and 60 reports per day, an average of about 64 concurrent users on a
+15-minute session, with real peaks several times higher and no existing performance
+baseline. We plan capacity to a design point of 10× the average concurrency (≈650
+concurrent users) with headroom to 20× during vaccine-campaign surges, which the
+stateless application tier absorbs by horizontal scale-out under Azure load balancing at
+no architectural change. Because no baseline exists, the first 30 days of production
+telemetry (per Task 1.10) establish the measured peak profile, and we report the
+observed-versus-design ratio monthly so the Government can right-size hosting.</p>
 <h2>3. Approach by PWS Task</h2>
 <h3>Task 1 — Design and Develop the Web Application</h3>
 <p><strong>1.1–1.2 Requirements confirmation and UX artifacts.</strong> Weeks 1–3 are structured
@@ -132,10 +142,17 @@ vaccine-error-no-AE path (1.6.2, PRS#1). Branching rules are table-driven and un
 against a scenario matrix we expect the Government to extend during acceptance; the
 prototype already passes the vaccine-error-no-AE scenario, visibly announcing
 &quot;N questions removed&quot; so submitters trust the shortening form. The application delivers
-<strong>full English and Spanish parity</strong> (Amendment 0001, Q&amp;A 270): every public-path screen,
-field label, instruction, validation message, and help entry carries a reviewed Spanish
-translation managed as content in the same schema, with <code>lang</code> attributes switching
-per passage for assistive technology.</p>
+<strong>full English and Spanish parity</strong> (PWS 1.13 and PRS #19, Amendment 0002; Q&amp;A 270):
+the report form, the customer satisfaction surveys, and the landing page and navigation
+are fully functional in either language, so users complete equivalent tasks in
+Spanish or English. Every screen, field label in both plain and clinical registers,
+instruction, validation message, help entry, and FAQ carries a reviewed Spanish
+translation managed as content in the same schema, editable by program personnel
+through the same low-code interface, with <code>lang</code> attributes switching per passage for
+assistive technology. The prototype already does this end to end (Tab 2-2: the EN / ES
+control in the header, or <code>?lang=es</code>), and PRS #19&#39;s inspection criterion, 100%
+correct field presentation and suppression across both submitter types in both
+languages, is built into our acceptance scenario matrix.</p>
 <p><strong>1.8 Low-code/configurable interface.</strong> Authorized CDC personnel edit field text,
 tooltips, help/FAQ content, choice options, and field visibility — and, per Amendment
 0001 Q&amp;A 165, <strong>the submission form itself: adding and modifying form fields and the
@@ -312,6 +329,7 @@ as code delivery to the CDC repository, so review is always of current, running 
 </tbody></table>
 <div class="section-break"></div><h1>Tab 2-2: Prototype</h1>
 <p><strong>Prototype URL: <code>https://vaers-demo.frasierdigital.com</code></strong> <em>(no login required; desktop and mobile)</em></p>
+<p><strong>Spanish: <code>https://vaers-demo.frasierdigital.com/?lang=es</code></strong> <em>(same prototype; the EN / ES control in the header switches every screen, PWS 1.13 / PRS #19)</em></p>
 <p>Frasier Digital submits a <strong>working web application</strong>, not a mockup. The prototype was
 built with the same open-source stack proposed in Tab 2-1 (React front end, schema-driven
 form engine) and demonstrates the core PWS capabilities on synthetic data. Consistent

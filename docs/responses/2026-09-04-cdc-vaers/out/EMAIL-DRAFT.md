@@ -1,7 +1,7 @@
 # EMAIL DRAFT — CDC VAERS quote submission
 
 **Send: Friday, September 4, 2026 (morning). Deadline: Tuesday, September 8, 2026, 10:00 AM ET**
-(extended by Amendment 0001, 8/31; Mon 9/7 is Labor Day). Single email — package totals ~1.6MB,
+(extended by Amendment 0001, 8/31; unchanged by Amendment 0002, 9/3; Mon 9/7 is Labor Day). Single email — package totals ~1.6MB,
 well under the 12MB limit (no "Email 1 of N" labeling needed). The Government acknowledges receipt
 of each proposal email (Amendment 0001 Q&A 201) — if no acknowledgment by early afternoon, follow up.
 
@@ -33,14 +33,17 @@ Frasier Digital, LLC is pleased to submit the attached quote in response to RFQ
    schedule annotated "See Price Breakdown Worksheet" per Q&A 73. ✅
 8. **Signed SF30 — Amendment 0001 acknowledgment** (`Frasier-Digital-SF30-Amend0001-signed.pdf`) —
    signed 9/3 (block 15B/15C), block 8 completed, flattened. ✅
+9. **Signed SF30 — Amendment 0002 acknowledgment** (`Frasier-Digital-SF30-Amend0002-signed.pdf`) —
+   signed 9/4 (block 15B/15C), block 8 completed, flattened. [PENDING Joseph's signature]
 
 CPARS representative (CDCL.09): Joseph Frasier, Founder & Managing Member,
 joseph@frasierdigital.com, (850) 356-2382.
 
 Frasier Digital is a small disadvantaged business. We acknowledge receipt of Amendment 0001,
-effective August 31, 2026, and our quote reflects the solicitation as amended; the signed SF30 is
-attached. [VERIFY at send: CO signaled a further Section F amendment (Q&A 158/159) — if an
-Amendment 0002 posts before send, acknowledge it here and re-check the format rules.]
+effective August 31, 2026, and Amendment 0002, effective September 3, 2026, and our quote
+reflects the solicitation as amended, including PWS Section 1.13 and PRS #19 (English and
+Spanish); both signed SF30s are attached. Our prototype is available in Spanish at
+https://vaers-demo.frasierdigital.com/?lang=es.
 
 We appreciate the opportunity and are available for any questions through you as the
 sole authorized point of contact.
@@ -62,7 +65,9 @@ joseph@frasierdigital.com · (850) 356-2382
 - [ ] Frasier-Digital-Data-Management-Plan.pdf
 - [ ] Frasier-Digital-ATCH1-AI-Use-Plan.pdf  ← must carry Joseph's signature (stamp workflow)
 - [ ] Frasier-Digital-ACR.pdf
-- [ ] Signed cover/SF18 (build Friday from solicitation package via stamp-pdf workflow)
+- [ ] Frasier-Digital-SF18-signed.pdf
+- [ ] Frasier-Digital-SF30-Amend0001-signed.pdf
+- [ ] Frasier-Digital-SF30-Amend0002-signed.pdf  ← sign today
 
 **Pre-send gates (non-responsive without):** DMP ✓ attached · AI plan ✓ attached ·
 ACR ✓ attached · itemized price ✓ (Excel editable + PDF) · signed by authorized

@@ -77,6 +77,17 @@ Stateless application tier scales horizontally under Azure load balancing; surge
 (a safety communication driving reporting spikes) are a capacity configuration, not an
 engineering project.
 
+**Capacity, sized to the answered volumes.** Amendment 0002 (Q&A 116) states the
+demand: about 2.26 million site visits and 22,016 report submissions a year, roughly
+6,183 visits and 60 reports per day, an average of about 64 concurrent users on a
+15-minute session, with real peaks several times higher and no existing performance
+baseline. We plan capacity to a design point of 10× the average concurrency (≈650
+concurrent users) with headroom to 20× during vaccine-campaign surges, which the
+stateless application tier absorbs by horizontal scale-out under Azure load balancing at
+no architectural change. Because no baseline exists, the first 30 days of production
+telemetry (per Task 1.10) establish the measured peak profile, and we report the
+observed-versus-design ratio monthly so the Government can right-size hosting.
+
 ## 3. Approach by PWS Task
 
 ### Task 1 — Design and Develop the Web Application
@@ -113,10 +124,17 @@ vaccine-error-no-AE path (1.6.2, PRS#1). Branching rules are table-driven and un
 against a scenario matrix we expect the Government to extend during acceptance; the
 prototype already passes the vaccine-error-no-AE scenario, visibly announcing
 "N questions removed" so submitters trust the shortening form. The application delivers
-**full English and Spanish parity** (Amendment 0001, Q&A 270): every public-path screen,
-field label, instruction, validation message, and help entry carries a reviewed Spanish
-translation managed as content in the same schema, with `lang` attributes switching
-per passage for assistive technology.
+**full English and Spanish parity** (PWS 1.13 and PRS #19, Amendment 0002; Q&A 270):
+the report form, the customer satisfaction surveys, and the landing page and navigation
+are fully functional in either language, so users complete equivalent tasks in
+Spanish or English. Every screen, field label in both plain and clinical registers,
+instruction, validation message, help entry, and FAQ carries a reviewed Spanish
+translation managed as content in the same schema, editable by program personnel
+through the same low-code interface, with `lang` attributes switching per passage for
+assistive technology. The prototype already does this end to end (Tab 2-2: the EN / ES
+control in the header, or `?lang=es`), and PRS #19's inspection criterion, 100%
+correct field presentation and suppression across both submitter types in both
+languages, is built into our acceptance scenario matrix.
 
 **1.8 Low-code/configurable interface.** Authorized CDC personnel edit field text,
 tooltips, help/FAQ content, choice options, and field visibility — and, per Amendment
