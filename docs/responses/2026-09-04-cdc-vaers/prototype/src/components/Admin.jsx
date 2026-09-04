@@ -3,11 +3,13 @@
 // text — with no developer involvement. Edits apply live across the app.
 
 import { useMemo, useState } from "react";
-import { useConfig, defaultSiteContent } from "../engine/store.jsx";
+import { useConfig } from "../engine/store.jsx";
 import { Field } from "./Field.jsx";
 
 export function AdminPage() {
-  const { schema, faq, site, overrides, setOverride, resetAll } = useConfig();
+  const { schema, faq, site, siteDefaults, overrides, setOverride, resetAll, locale, setLocale } =
+    useConfig();
+  const localeName = locale === "es" ? "Spanish" : "English";
   const [previewFieldId, setPreviewFieldId] = useState("lotNumber");
   const [newOption, setNewOption] = useState("");
 
@@ -24,7 +26,7 @@ export function AdminPage() {
   const changedCount = Object.keys(overrides).length;
 
   return (
-    <main id="main" className="container">
+    <main id="main" className="container" lang="en">
       <div className="admin-grid">
         <div className="admin-panel">
           <h1>Content administration</h1>
@@ -35,6 +37,21 @@ export function AdminPage() {
             deployment involved. In production, edits are role-restricted,
             versioned, and audit-logged.{" "}
             <span className="sim-tag">demo · saved on this device</span>
+          </p>
+          <p style={{ color: "var(--c-ink-soft)", fontSize: "var(--fs-sm)" }}>
+            <strong>Editing the {localeName} content layer.</strong> Spanish is
+            managed as content in the same schema (PWS 1.13 / PRS#19): the same
+            keys, a second language. Switch with the EN / ES control in the
+            header, or{" "}
+            <button
+              type="button"
+              className="btn ghost"
+              style={{ padding: "0.1rem 0.5rem", fontSize: "var(--fs-sm)" }}
+              onClick={() => setLocale(locale === "es" ? "en" : "es")}
+            >
+              edit the {locale === "es" ? "English" : "Spanish"} layer
+            </button>
+            .
           </p>
 
           <div className="form-nav" style={{ marginTop: "1rem" }}>
@@ -53,9 +70,9 @@ export function AdminPage() {
           </h2>
           <div className="admin-list">
             {[
-              ["site.heroTitle", "Landing page headline", site.heroTitle, defaultSiteContent.heroTitle],
-              ["site.heroLede", "Landing page introduction", site.heroLede, defaultSiteContent.heroLede],
-              ["site.noticeText", "Emergency notice banner", site.noticeText, defaultSiteContent.noticeText],
+              ["site.heroTitle", "Landing page headline", site.heroTitle, siteDefaults.heroTitle],
+              ["site.heroLede", "Landing page introduction", site.heroLede, siteDefaults.heroLede],
+              ["site.noticeText", "Emergency notice banner", site.noticeText, siteDefaults.noticeText],
             ].map(([key, label, current, fallback]) => (
               <div className="admin-item" key={key}>
                 <label htmlFor={`admin-${key}`}>
@@ -255,8 +272,8 @@ export function AdminPage() {
           </div>
         </div>
 
-        <div className="admin-preview" aria-label="Live preview">
-          <p className="admin-preview-tag">Live preview: public form view</p>
+        <div className="admin-preview" aria-label="Live preview" lang={locale}>
+          <p className="admin-preview-tag">Live preview: public form view ({localeName})</p>
           {previewField ? (
             <Field
               field={previewField}

@@ -1,5 +1,6 @@
 import { useId, useState } from "react";
 import { Upload } from "./Upload.jsx";
+import { useT } from "../engine/store.jsx";
 
 function text(variant, lang) {
   if (variant == null) return null;
@@ -9,8 +10,13 @@ function text(variant, lang) {
 
 export function Field({ field, lang, value, error, onChange, onFocusField, aiSuggested = false }) {
   const id = useId();
+  const { t } = useT();
   const [tipOpen, setTipOpen] = useState(false);
   const label = text(field.label, lang);
+  // Default validation messages arrive as sentinels from conditions.js so
+  // they can be rendered in the active language.
+  const errorText =
+    error === "__required__" ? t("requiredDefault") : error === "__dateFuture__" ? t("dateFutureDefault") : error;
   const help = text(field.help, lang);
   const errId = `${id}-err`;
   const helpId = `${id}-help`;
@@ -25,7 +31,7 @@ export function Field({ field, lang, value, error, onChange, onFocusField, aiSug
           {" "}
           *
         </span>
-        <span className="crit-flag">critical</span>
+        <span className="crit-flag">{t("critical")}</span>
       </>
     ) : field.required ? (
       <span className="req-flag" aria-hidden="true">
@@ -35,7 +41,7 @@ export function Field({ field, lang, value, error, onChange, onFocusField, aiSug
     ) : null;
 
   const aiTag = aiSuggested ? (
-    <span className="ai-tag">AI-suggested · verify</span>
+    <span className="ai-tag">{t("aiSuggested")}</span>
   ) : null;
 
   const tooltipButton = field.tooltip ? (
@@ -46,7 +52,7 @@ export function Field({ field, lang, value, error, onChange, onFocusField, aiSug
       aria-controls={`${id}-tip`}
       onClick={() => setTipOpen((o) => !o)}
     >
-      Why we ask
+      {t("whyWeAsk")}
     </button>
   ) : null;
 
@@ -103,7 +109,7 @@ export function Field({ field, lang, value, error, onChange, onFocusField, aiSug
           </div>
           {error && (
             <p className="field-error" id={errId}>
-              {error}
+              {errorText}
             </p>
           )}
         </fieldset>
@@ -159,7 +165,7 @@ export function Field({ field, lang, value, error, onChange, onFocusField, aiSug
           </div>
           {error && (
             <p className="field-error" id={errId}>
-              {error}
+              {errorText}
             </p>
           )}
         </fieldset>
@@ -173,7 +179,7 @@ export function Field({ field, lang, value, error, onChange, onFocusField, aiSug
           value={value ?? ""}
           onChange={(e) => onChange(e.target.value)}
         >
-          <option value="">Select one</option>
+          <option value="">{t("selectOne")}</option>
           {field.options.map((opt) => (
             <option key={opt.value} value={opt.value}>
               {opt.label}
@@ -243,7 +249,7 @@ export function Field({ field, lang, value, error, onChange, onFocusField, aiSug
       {control}
       {error && (
         <p className="field-error" id={errId}>
-          {error}
+          {errorText}
         </p>
       )}
     </div>

@@ -2,8 +2,10 @@
 // PRS#7). Demonstration: responses acknowledged, not stored.
 
 import { useEffect, useRef, useState } from "react";
+import { useT } from "../engine/store.jsx";
 
 export function SurveyModal({ title, prompt, onClose }) {
+  const { t } = useT();
   const [rating, setRating] = useState(null);
   const [comment, setComment] = useState("");
   const [done, setDone] = useState(false);
@@ -12,6 +14,10 @@ export function SurveyModal({ title, prompt, onClose }) {
   useEffect(() => {
     const opener = document.activeElement;
     dialogRef.current?.focus();
+    // Everything behind the dialog is inert while it is open.
+    const overlay = dialogRef.current?.parentElement;
+    const siblings = overlay ? [...overlay.parentElement.children].filter((el) => el !== overlay) : [];
+    siblings.forEach((el) => el.setAttribute("inert", ""));
     function onKey(e) {
       if (e.key === "Escape") onClose();
       if (e.key === "Tab") {
@@ -34,6 +40,7 @@ export function SurveyModal({ title, prompt, onClose }) {
     window.addEventListener("keydown", onKey);
     return () => {
       window.removeEventListener("keydown", onKey);
+      siblings.forEach((el) => el.removeAttribute("inert"));
       opener?.focus?.();
     };
   }, [onClose]);
@@ -51,14 +58,13 @@ export function SurveyModal({ title, prompt, onClose }) {
       >
         {done ? (
           <>
-            <h2>Thank you</h2>
+            <h2>{t("thankYou")}</h2>
             <p style={{ fontSize: "var(--fs-sm)", color: "var(--c-ink-soft)" }}>
-              Your feedback was recorded (demonstration only, not stored). Survey
-              results are reported to CDC on the approved schedule.
+              {t("surveyRecorded")}
             </p>
             <div className="form-nav">
               <button type="button" className="btn" onClick={onClose}>
-                Close
+                {t("close")}
               </button>
             </div>
           </>
@@ -71,14 +77,14 @@ export function SurveyModal({ title, prompt, onClose }) {
             <div
               className="rating-row"
               role="group"
-              aria-label="Rating from 1 (poor) to 5 (excellent)"
+              aria-label={t("ratingGroup")}
             >
               {[1, 2, 3, 4, 5].map((n) => (
                 <button
                   key={n}
                   type="button"
                   aria-pressed={rating === n}
-                  aria-label={`${n} out of 5`}
+                  aria-label={t("outOf5", n)}
                   onClick={() => setRating(n)}
                 >
                   {n}
@@ -87,7 +93,7 @@ export function SurveyModal({ title, prompt, onClose }) {
             </div>
             <div className="field" style={{ maxWidth: "none" }}>
               <label className="field-label" htmlFor="survey-comment">
-                Anything we could improve? (optional)
+                {t("surveyComment")}
               </label>
               <textarea
                 id="survey-comment"
@@ -103,10 +109,10 @@ export function SurveyModal({ title, prompt, onClose }) {
                 disabled={rating === null}
                 onClick={() => setDone(true)}
               >
-                Send feedback
+                {t("sendFeedback")}
               </button>
               <button type="button" className="btn ghost" onClick={onClose}>
-                No thanks
+                {t("noThanks")}
               </button>
             </div>
           </>

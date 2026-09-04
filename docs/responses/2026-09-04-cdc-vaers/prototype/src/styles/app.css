@@ -156,6 +156,38 @@ textarea {
   font-weight: 600;
 }
 
+/* ---------- language toggle (PWS 1.13) ---------- */
+.lang-toggle {
+  display: inline-flex;
+  margin-left: var(--sp-2);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: var(--radius);
+  overflow: hidden;
+  align-self: center;
+}
+.lang-toggle button {
+  background: none;
+  border: 0;
+  color: #dbe6f5;
+  padding: 0.35rem 0.6rem;
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  min-width: 2.75rem;
+  cursor: pointer;
+}
+.lang-toggle button + button {
+  border-left: 1px solid rgba(255, 255, 255, 0.45);
+}
+.lang-toggle button[aria-pressed="true"] {
+  background: #fff;
+  color: var(--c-primary-dark);
+}
+.lang-toggle button:focus-visible {
+  outline: 3px solid #ffbf47;
+  outline-offset: -3px;
+}
+
 /* ---------- buttons ---------- */
 .btn,
 .choice,

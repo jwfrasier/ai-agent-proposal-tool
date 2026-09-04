@@ -2,6 +2,7 @@
 // Performance Requirements Summary, plus one-click sample scenarios so every
 // scored behavior can be seen without hand-typing a full report.
 
+import { useT } from "../engine/store.jsx";
 import { useEffect, useRef } from "react";
 import { persistAnswers } from "../engine/store.jsx";
 import { enterStagger } from "../engine/motion.js";
@@ -143,8 +144,9 @@ export function EvaluatorPage({ navigate }) {
   }
 
   return (
-    <main id="main" className="container" ref={rootRef}>
+    <main id="main" lang="en" className="container" ref={rootRef}>
       <div className="page eval-page">
+        <EvalLangNote />
         <p className="eval-eyebrow">For RFQ 75D301-26-Q-00146 evaluators</p>
         <h1>A guided look at this prototype</h1>
         <p className="eval-lede">
@@ -253,5 +255,16 @@ export function EvaluatorPage({ navigate }) {
         </p>
       </div>
     </main>
+  );
+}
+
+
+function EvalLangNote() {
+  const { t, locale } = useT();
+  if (locale !== "es") return null;
+  return (
+    <p className="eval-note" lang="es" style={{ marginBottom: "0.75rem" }}>
+      {t("evalEnglishNote")}
+    </p>
   );
 }

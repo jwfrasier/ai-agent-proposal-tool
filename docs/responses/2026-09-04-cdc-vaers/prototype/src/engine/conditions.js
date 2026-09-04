@@ -84,7 +84,7 @@ export function validateField(field, value, answers) {
     (typeof value === "string" && value.trim() === "") ||
     (Array.isArray(value) && value.length === 0);
   if (field.required && empty) {
-    return field.requiredMessage || "This information is needed for your report.";
+    return field.requiredMessage || "__required__";
   }
   if (empty) return null;
   if (field.validate) {
@@ -93,7 +93,7 @@ export function validateField(field, value, answers) {
         return rule.message;
       }
       if (rule.type === "dateNotFuture" && value > todayISO()) {
-        return rule.message || "This date can't be in the future.";
+        return rule.message || "__dateFuture__";
       }
       if (
         rule.type === "dateAfterField" &&

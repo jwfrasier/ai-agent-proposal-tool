@@ -82,6 +82,7 @@ auto-closes when the demo is healthy again. Verified green on first run.
 - [ ] `npm run build` clean
 - [ ] `node a11y.js` all PASS (WCAG 2.1 AA + 508 tags, 9 states)
 - [ ] `node e2e.js` produces the structured record
+- [ ] `node es-e2e.js` AXE CLEAN (Spanish walk: landing, public path with validation, provider error branch, FAQ, downloads, admin, survey, mobile; screenshots in `shots/es/`)
 - [ ] Open deployed URL on a phone: complete public path end-to-end
 - [ ] Provider vaccine-error-no-AE path: verify AE sections suppressed
 - [ ] Admin edit → visible in form (then Reset all changes)

@@ -138,6 +138,29 @@ const CANNED = {
     "I can only help with this VAERS reporting form. Ask me about a field, what's required, or how the form works.",
 };
 
+const CANNED_ES = {
+  emergency:
+    "Si se trata de una emergencia médica, llame al 911 o busque atención médica de inmediato. VAERS es un sistema de reportes y no puede brindar ayuda médica. Su avance en este reporte está guardado en su dispositivo; puede volver y terminarlo después.",
+  medical_advice:
+    "No puedo dar consejos médicos, diagnósticos ni orientación sobre tratamientos. Hable con un proveedor de salud sobre síntomas o decisiones de atención. Con gusto le ayudo con cualquier pregunta sobre cómo llenar este reporte.",
+  causality_or_debate:
+    "Los reportes a VAERS no determinan si una vacuna causó un problema. Los científicos de seguridad de los CDC y la FDA analizan patrones entre muchos reportes para detectar posibles señales. Reporte cualquier cosa que le preocupe, esté o no seguro de que está relacionada. Para información sobre seguridad de las vacunas, consulte las páginas de los CDC. Puedo ayudarle con el formulario.",
+  personal_info:
+    "Por favor no incluya datos personales como nombres, información de contacto o números de identificación en este chat. La información de su reporte va en los campos del formulario, que están protegidos. Este chat es solo para ayudarle a usar el formulario. Puede volver a hacer su pregunta sin los datos personales.",
+  prompt_injection:
+    "Solo puedo ayudar con este formulario de reporte a VAERS. Pregúnteme sobre un campo, qué es obligatorio o cómo funciona el formulario.",
+  off_topic:
+    "Solo puedo ayudar con este formulario de reporte a VAERS. Pregúnteme sobre un campo, qué es obligatorio o cómo funciona el formulario.",
+  abusive:
+    "Solo puedo ayudar con este formulario de reporte a VAERS. Pregúnteme sobre un campo, qué es obligatorio o cómo funciona el formulario.",
+};
+
+// PWS 1.13: the assistant answers in the language the form is being used in.
+const LANG_DIRECTIVE = {
+  en: "",
+  es: "\n\nRespond in Spanish (neutral Latin American Spanish, 'usted' register), even if the question is in English. Keep VAERS, CDC, and FDA as proper nouns.",
+};
+
 // ---------------------------------------------------------------------------
 // Stage 2 — responder
 
@@ -241,8 +264,10 @@ export default async function handler(req, res) {
     return res.status(429).json({ error: "rate_limited" });
   }
 
-  const { mode = "ask", question = "", draft = "", fieldLabel = "" } =
+  const { mode = "ask", question = "", draft = "", fieldLabel = "", locale: rawLocale = "en" } =
     req.body || {};
+  const locale = rawLocale === "es" ? "es" : "en";
+  const canned = (key) => (locale === "es" ? CANNED_ES[key] : CANNED[key]);
   if (!["ask", "coach", "extract"].includes(mode)) {
     return res.status(400).json({ error: "bad_mode" });
   }
@@ -285,17 +310,17 @@ export default async function handler(req, res) {
 
     // Deterministic gate — order matters: emergency > PII > injection > topic
     let gate = null;
-    if (verdict.intent === "emergency") gate = CANNED.emergency;
-    else if (verdict.shares_personal_info) gate = CANNED.personal_info;
+    if (verdict.intent === "emergency") gate = canned("emergency");
+    else if (verdict.shares_personal_info) gate = canned("personal_info");
     else if (verdict.injection_attempt || verdict.intent === "prompt_injection")
-      gate = CANNED.prompt_injection;
-    else if (verdict.intent === "medical_advice") gate = CANNED.medical_advice;
+      gate = canned("prompt_injection");
+    else if (verdict.intent === "medical_advice") gate = canned("medical_advice");
     else if (verdict.intent === "causality_or_debate")
-      gate = CANNED.causality_or_debate;
-    else if (verdict.intent === "off_topic") gate = CANNED.off_topic;
-    else if (verdict.intent === "abusive") gate = CANNED.abusive;
+      gate = canned("causality_or_debate");
+    else if (verdict.intent === "off_topic") gate = canned("off_topic");
+    else if (verdict.intent === "abusive") gate = canned("abusive");
     else if ((isCoach || isExtract) && verdict.intent !== "narrative_draft")
-      gate = CANNED.off_topic;
+      gate = canned("off_topic");
 
     if (gate) {
       trace({
@@ -347,9 +372,9 @@ export default async function handler(req, res) {
       model: "claude-sonnet-5",
       max_tokens: 400,
       output_config: { effort: "low" },
-      system: isCoach
-        ? COACH_SYSTEM.replace("{FIELD}", cleanLabel)
-        : RESPONDER_SYSTEM,
+      system:
+        (isCoach ? COACH_SYSTEM.replace("{FIELD}", cleanLabel) : RESPONDER_SYSTEM) +
+        LANG_DIRECTIVE[locale],
       messages: [
         {
           role: "user",
@@ -360,7 +385,7 @@ export default async function handler(req, res) {
     addSpend("sonnet", response.usage);
     if (response.stop_reason === "refusal") {
       trace({ ev: "refusal", mode, intent: verdict.intent });
-      return res.status(200).json({ answer: CANNED.off_topic, gated: true });
+      return res.status(200).json({ answer: canned('off_topic'), gated: true });
     }
     let text = response.content
       .filter((b) => b.type === "text")

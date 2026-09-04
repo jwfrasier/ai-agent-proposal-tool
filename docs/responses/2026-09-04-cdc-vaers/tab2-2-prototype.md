@@ -2,6 +2,8 @@
 
 **Prototype URL: `https://vaers-demo.frasierdigital.com`** *(no login required; desktop and mobile)*
 
+**Spanish: `https://vaers-demo.frasierdigital.com/?lang=es`** *(same prototype; the EN / ES control in the header switches every screen, PWS 1.13 / PRS #19)*
+
 Frasier Digital submits a **working web application**, not a mockup. The prototype was
 built with the same open-source stack proposed in Tab 2-1 (React front end, schema-driven
 form engine) and demonstrates the core PWS capabilities on synthetic data. Consistent

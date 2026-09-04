@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { ConfigProvider } from "./engine/store.jsx";
+import { ConfigProvider, useT, useConfig } from "./engine/store.jsx";
 import { Landing, FaqPage, DownloadsPage } from "./components/Landing.jsx";
 import { ReportFlow } from "./components/ReportFlow.jsx";
 import { AdminPage } from "./components/Admin.jsx";
@@ -14,7 +14,40 @@ function pageFromHash() {
   return PAGES.includes(h) ? h : "home";
 }
 
+function LangToggle() {
+  const { locale, setLocale, t } = useConfig();
+  return (
+    <div className="lang-toggle" role="group" aria-label={`${t("langLabel")} / Idioma`}>
+      <button
+        type="button"
+        lang="en"
+        aria-pressed={locale === "en"}
+        onClick={() => setLocale("en")}
+      >
+        EN
+      </button>
+      <button
+        type="button"
+        lang="es"
+        aria-pressed={locale === "es"}
+        onClick={() => setLocale("es")}
+      >
+        ES
+      </button>
+    </div>
+  );
+}
+
 export default function App() {
+  return (
+    <ConfigProvider>
+      <Shell />
+    </ConfigProvider>
+  );
+}
+
+function Shell() {
+  const { t } = useT();
   const [page, setPage] = useState(pageFromHash);
   const [navSurvey, setNavSurvey] = useState(false);
   const evalPillRef = useRef(null);
@@ -37,26 +70,22 @@ export default function App() {
   }
 
   return (
-    <ConfigProvider>
+    <>
       <a className="skip-link" href="#main">
-        Skip to main content
+        {t("skip")}
       </a>
 
       <div className="demo-banner">
         <div className="container">
-          <strong>Demonstration prototype</strong>
-          <span>
-            Built by Frasier Digital for CDC RFQ 75D301-26-Q-00146 evaluation.
-            Synthetic data only; no PHI/PII is collected, transmitted, or
-            stored. Not an official government website.
-          </span>
+          <strong>{t("bannerTitle")}</strong>
+          <span>{t("bannerText")}</span>
           <button
             type="button"
             className="eval-pill"
             ref={evalPillRef}
             onClick={() => navigate("evaluator")}
           >
-            Evaluator's guide →
+            {t("evalPill")}
           </button>
         </div>
       </div>
@@ -72,17 +101,15 @@ export default function App() {
             }}
           >
             <span className="brand-name">VAERS</span>
-            <span className="brand-sub">
-              Vaccine Adverse Event Reporting System modernization concept
-            </span>
+            <span className="brand-sub">{t("brandSub")}</span>
           </a>
-          <nav className="site-nav" aria-label="Primary">
+          <nav className="site-nav" aria-label={t("navPrimary")}>
             {[
-              ["home", "Home"],
-              ["report", "Submit a report"],
-              ["faq", "FAQs"],
-              ["downloads", "Data"],
-              ["admin", "Admin"],
+              ["home", t("navHome")],
+              ["report", t("navReport")],
+              ["faq", t("navFaq")],
+              ["downloads", t("navData")],
+              ["admin", t("navAdmin")],
             ].map(([key, label]) => (
               <button
                 key={key}
@@ -93,6 +120,7 @@ export default function App() {
                 {label}
               </button>
             ))}
+            <LangToggle />
           </nav>
         </div>
       </header>
@@ -107,24 +135,24 @@ export default function App() {
       <footer className="site-footer">
         <div className="container">
           <span>
-            Demonstration prototype · Frasier Digital · synthetic data only ·{" "}
+            {t("footerLead")}{" "}
             <button type="button" onClick={() => navigate("evaluator")}>
-              For RFQ evaluators
+              {t("footerEval")}
             </button>
           </span>
           <button type="button" onClick={() => setNavSurvey(true)}>
-            Tell us about your experience on this site
+            {t("footerSurvey")}
           </button>
         </div>
       </footer>
 
       {navSurvey && (
         <SurveyModal
-          title="How easy was it to find what you needed?"
-          prompt="Site-navigation satisfaction survey (PWS Task 1.5)."
+          title={t("navSurveyTitle")}
+          prompt={t("navSurveyPrompt")}
           onClose={() => setNavSurvey(false)}
         />
       )}
-    </ConfigProvider>
+    </>
   );
 }

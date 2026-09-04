@@ -3,6 +3,7 @@
 // Demonstration: file metadata only — nothing is uploaded or stored.
 
 import { useId, useRef, useState } from "react";
+import { useT } from "../engine/store.jsx";
 
 const PHASE1_EXTENSIONS = ["pdf", "doc", "docx", "rtf", "txt"];
 const IMAGE_EXTENSIONS = ["jpg", "jpeg", "png", "gif", "heic", "tif", "tiff", "bmp", "webp", "dcm"];
@@ -16,8 +17,10 @@ function classify(file) {
 
 export function Upload({ field, lang, value, onChange, onFocusField }) {
   const id = useId();
+  const { t } = useT();
   const inputRef = useRef(null);
   const [rejection, setRejection] = useState(null);
+  const extList = PHASE1_EXTENSIONS.map((e) => e.toUpperCase()).join(", ");
   const files = Array.isArray(value) ? value : [];
   const label =
     typeof field.label === "string" ? field.label : field.label[lang];
@@ -38,13 +41,12 @@ export function Upload({ field, lang, value, onChange, onFocusField }) {
       } else if (kind === "image") {
         rejected = {
           name: f.name,
-          reason:
-            "Pictures and medical images aren't accepted in Phase 1. This system is designed so image upload can be enabled in a future phase without rework. For now, please attach records as PDF or document files.",
+          reason: t("rejectImage"),
         };
       } else {
         rejected = {
           name: f.name,
-          reason: `This file type isn't accepted. Phase 1 accepts medical records and vaccine documents as: ${PHASE1_EXTENSIONS.map((e) => e.toUpperCase()).join(", ")}.`,
+          reason: t("rejectType", extList),
         };
       }
     }
@@ -70,7 +72,7 @@ export function Upload({ field, lang, value, onChange, onFocusField }) {
           onClick={() => inputRef.current?.click()}
           onFocus={() => onFocusField?.(field)}
         >
-          Choose files
+          {t("chooseFiles")}
         </button>
         <input
           ref={inputRef}
@@ -84,11 +86,7 @@ export function Upload({ field, lang, value, onChange, onFocusField }) {
             e.target.value = "";
           }}
         />
-        <p>
-          Accepted in Phase 1: medical records and vaccine documents (
-          {PHASE1_EXTENSIONS.map((e) => e.toUpperCase()).join(", ")}). Max 25 MB
-          per file. Demonstration only: files are listed, never transmitted.
-        </p>
+        <p>{t("uploadAccepted", extList)}</p>
       </div>
       {rejection && (
         <div className="upload-reject" role="alert">
@@ -110,7 +108,7 @@ export function Upload({ field, lang, value, onChange, onFocusField }) {
                 className="btn ghost"
                 onClick={() => onChange(files.filter((_, j) => j !== i))}
               >
-                Remove
+                {t("remove")}
               </button>
             </li>
           ))}

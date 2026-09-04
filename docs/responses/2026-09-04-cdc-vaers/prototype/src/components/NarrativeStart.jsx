@@ -5,6 +5,7 @@
 // tagged "AI-suggested" on the form until the user edits or confirms them.
 
 import { useMemo, useState } from "react";
+import { useConfig, useT } from "../engine/store.jsx";
 
 function labelFor(schema, fieldId, lang) {
   for (const s of schema.sections) {
@@ -42,6 +43,8 @@ function receiptFor(schema, ids, lang) {
 }
 
 export function NarrativeStart({ schema, lang, onApply }) {
+  const { locale } = useConfig();
+  const { t } = useT();
   const [draft, setDraft] = useState("");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState(null);
@@ -71,7 +74,7 @@ export function NarrativeStart({ schema, lang, onApply }) {
       const resp = await fetch("/api/assist", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ mode: "extract", draft: draft.trim().slice(0, 1500) }),
+        body: JSON.stringify({ mode: "extract", draft: draft.trim().slice(0, 1500), locale }),
         signal: controller.signal,
       });
       clearTimeout(timer);
@@ -88,7 +91,7 @@ export function NarrativeStart({ schema, lang, onApply }) {
       setError(
         typeof e?.message === "string" && e.message.length > 30
           ? e.message
-          : "The suggestion service isn't available right now. You can fill the form directly; nothing is lost."
+          : t("narrUnavailable")
       );
     } finally {
       setBusy(false);
@@ -115,19 +118,14 @@ export function NarrativeStart({ schema, lang, onApply }) {
   return (
     <details className="narrative-start">
       <summary>
-        Prefer to start by telling us what happened?{" "}
-        <span className="sim-tag">optional · live AI</span>
+        {t("narrSummary")} <span className="sim-tag">{t("narrTag")}</span>
       </summary>
-      <p className="field-help">
-        Write what happened in your own words. We'll suggest form answers drawn
-        only from what you write — you review and confirm each one, and every
-        field stays editable. Don't include names or contact details here.
-      </p>
+      <p className="field-help">{t("narrHelp")}</p>
       <textarea
-        aria-label="Tell us what happened in your own words"
+        aria-label={t("narrLabel")}
         value={draft}
         maxLength={1500}
-        placeholder="Example: My daughter got a flu shot on August 4th. That evening she had a fever of 102 and her arm was swollen. Our doctor saw her the next day. She's fine now."
+        placeholder={t("narrPlaceholder")}
         onChange={(e) => setDraft(e.target.value)}
       />
       <div className="form-nav" style={{ marginTop: "0.75rem" }}>
@@ -137,7 +135,7 @@ export function NarrativeStart({ schema, lang, onApply }) {
           disabled={busy || draft.trim().length < 20}
           onClick={suggest}
         >
-          {busy ? "Reading your story…" : "Suggest form answers"}
+          {busy ? t("narrReading") : t("narrSuggest")}
         </button>
       </div>
       {error && (
@@ -146,8 +144,8 @@ export function NarrativeStart({ schema, lang, onApply }) {
         </p>
       )}
       {rows.length > 0 && (
-        <div className="suggest-card" role="region" aria-label="Suggested answers">
-          <h3>Suggested answers — review each before applying</h3>
+        <div className="suggest-card" role="region" aria-label={t("narrRegion")}>
+          <h3>{t("narrReview")}</h3>
           <div className="narrative-rows">
             {rows.map((row) => (
               <label className="choice" key={row.id}>
@@ -167,43 +165,35 @@ export function NarrativeStart({ schema, lang, onApply }) {
           </div>
           <div className="form-nav" style={{ marginTop: "0.75rem" }}>
             <button type="button" className="btn" onClick={apply}>
-              Apply selected answers
+              {t("narrApply")}
             </button>
             <button
               type="button"
               className="btn ghost"
               onClick={() => setSuggestions(null)}
             >
-              Discard
+              {t("narrDiscard")}
             </button>
           </div>
           <p className="field-help" style={{ marginTop: "0.5rem", marginBottom: 0 }}>
-            Suggestions come only from your words and may be incomplete or
-            wrong. Applied answers are marked on the form so you can verify
-            them.
+            {t("narrCaveat")}
           </p>
         </div>
       )}
       {suggestions && rows.length === 0 && (
         <p className="field-help" role="status">
-          Nothing could be confidently drawn from that description — the form
-          will walk you through everything step by step.
+          {t("narrNothing")}
         </p>
       )}
       {applied && (
         <div className="suggest-card apply-receipt" role="status">
-          <h3>
-            {applied.total} answer{applied.total === 1 ? "" : "s"} applied to
-            the steps ahead
-          </h3>
+          <h3>{t("narrApplied", applied.total)}</h3>
           <p className="receipt-steps">
             {applied.steps.map((s) => `${s.title} (${s.count})`).join(" · ")}
           </p>
           <p className="field-help" style={{ marginBottom: 0 }}>
-            You'll see them marked{" "}
-            <span className="ai-tag">AI-suggested · verify</span> as you go —
-            the form only asks about what your story didn't cover. Your progress
-            is also shown in the completeness panel.
+            {t("narrMarkedA")} <span className="ai-tag">{t("aiSuggested")}</span>{" "}
+            {t("narrMarkedB")}
           </p>
           <div className="form-nav" style={{ marginTop: "0.75rem" }}>
             <button
@@ -211,7 +201,7 @@ export function NarrativeStart({ schema, lang, onApply }) {
               className="btn ghost"
               onClick={() => setApplied(null)}
             >
-              Got it
+              {t("gotIt")}
             </button>
           </div>
         </div>
