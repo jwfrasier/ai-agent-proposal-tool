@@ -34,7 +34,7 @@ Frasier Digital, LLC is pleased to submit the attached quote in response to RFQ
 8. **Signed SF30 — Amendment 0001 acknowledgment** (`Frasier-Digital-SF30-Amend0001-signed.pdf`) —
    signed 9/3 (block 15B/15C), block 8 completed, flattened. ✅
 9. **Signed SF30 — Amendment 0002 acknowledgment** (`Frasier-Digital-SF30-Amend0002-signed.pdf`) —
-   signed 9/4 (block 15B/15C), block 8 completed, flattened. [PENDING Joseph's signature]
+   signed 9/4 (block 15B/15C), block 8 completed, flattened. ✅
 
 CPARS representative (CDCL.09): Joseph Frasier, Founder & Managing Member,
 joseph@frasierdigital.com, (850) 356-2382.
@@ -67,7 +67,7 @@ joseph@frasierdigital.com · (850) 356-2382
 - [ ] Frasier-Digital-ACR.pdf
 - [ ] Frasier-Digital-SF18-signed.pdf
 - [ ] Frasier-Digital-SF30-Amend0001-signed.pdf
-- [ ] Frasier-Digital-SF30-Amend0002-signed.pdf  ← sign today
+- [ ] Frasier-Digital-SF30-Amend0002-signed.pdf
 
 **Pre-send gates (non-responsive without):** DMP ✓ attached · AI plan ✓ attached ·
 ACR ✓ attached · itemized price ✓ (Excel editable + PDF) · signed by authorized
