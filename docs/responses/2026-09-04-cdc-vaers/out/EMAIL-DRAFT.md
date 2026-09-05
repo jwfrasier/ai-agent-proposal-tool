@@ -1,5 +1,7 @@
 # EMAIL DRAFT — CDC VAERS quote submission
 
+**SENT: Saturday, September 5, 2026, ~7:55 AM CT** from joseph@frasierdigital.com to uwo8@cdc.gov, 11 attachments, as below. Awaiting CDC acknowledgment.
+
 **Send: Friday, September 4, 2026 (morning). Deadline: Tuesday, September 8, 2026, 10:00 AM ET**
 (extended by Amendment 0001, 8/31; unchanged by Amendment 0002, 9/3; Mon 9/7 is Labor Day). Single email — package totals ~1.6MB,
 well under the 12MB limit (no "Email 1 of N" labeling needed). The Government acknowledges receipt
