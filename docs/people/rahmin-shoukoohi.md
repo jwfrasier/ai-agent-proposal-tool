@@ -26,3 +26,4 @@
   the credential); SSS RS (Sr SWE — dashboards/exports).
 - **Citizenship:** US citizen — confirmed by Joseph 2026-08-11.
 - **Rate (1099 cost, per Joseph 8/11 — negotiable guideline; their work for us is supplemental income):** $75/hr
+- **REFERENCE ROLE (TTUHSC 739-SL3821039, added 2026-09-05 per Joseph):** LDOE reference contact — Rahmin Shoukoohi, Senior Engineer, (770) 925-5248; LDOE email TBD from Joseph (do not use his gmail on the reference form). Speaks to Joseph's LDOE engagement (statewide education data platform, C++/.NET/SQL Server). ⚠️ Must NOT be proposed on the TTUHSC team. Open question for Joseph: is Rahmin LDOE staff or a fellow contractor? TTUHSC asks for references from client organizations — if he is a contractor peer, an LDOE manager would be the stronger name.
