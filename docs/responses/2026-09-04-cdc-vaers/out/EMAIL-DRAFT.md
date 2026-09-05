@@ -30,11 +30,11 @@ Frasier Digital, LLC is pleased to submit the attached quote in response to RFQ
    attached as supporting evidence.
 6. **Incident Response Plan** (PDF) — per PWS Standard-4 ("as part of Proposal").
 7. **Signed solicitation cover/SF18** (`Frasier-Digital-SF18-signed.pdf`) — signed 9/3, flattened;
-   schedule annotated "See Price Breakdown Worksheet" per Q&A 73. ✅
+   schedule annotated "See Price Breakdown Worksheet" per Q&A 73.
 8. **Signed SF30 — Amendment 0001 acknowledgment** (`Frasier-Digital-SF30-Amend0001-signed.pdf`) —
-   signed 9/3 (block 15B/15C), block 8 completed, flattened. ✅
+   signed 9/3 (block 15B/15C), block 8 completed, flattened.
 9. **Signed SF30 — Amendment 0002 acknowledgment** (`Frasier-Digital-SF30-Amend0002-signed.pdf`) —
-   signed 9/4 (block 15B/15C), block 8 completed, flattened. ✅
+   signed 9/4 (block 15B/15C), block 8 completed, flattened.
 
 CPARS representative (CDCL.09): Joseph Frasier, Founder & Managing Member,
 joseph@frasierdigital.com, (850) 356-2382.
@@ -53,8 +53,8 @@ Respectfully,
 Joseph Frasier
 Founder & Managing Member, Frasier Digital, LLC
 20915 Mystic Stone Dr, Tomball, TX 77375
-joseph@frasierdigital.com · (850) 356-2382
-[UEI/CAGE from company identity block — insert at send]
+joseph@frasierdigital.com | (850) 356-2382
+UEI PY8MJ4JPHJ45 | CAGE 213L8 | Small Disadvantaged Business
 
 ---
 
@@ -63,13 +63,12 @@ joseph@frasierdigital.com · (850) 356-2382
 - [ ] Frasier-Digital-Vol-II-Price.pdf
 - [ ] Vol-II-Price-Quote-FrasierDigital.xlsx
 - [ ] Frasier-Digital-Data-Management-Plan.pdf
-- [ ] Frasier-Digital-ATCH1-AI-Use-Plan.pdf  ← must carry Joseph's signature (stamp workflow)
+- [ ] Frasier-Digital-ATCH1-AI-Use-Plan.pdf (signed, flattened)
 - [ ] Frasier-Digital-ACR.pdf
 - [ ] Frasier-Digital-SF18-signed.pdf
 - [ ] Frasier-Digital-SF30-Amend0001-signed.pdf
 - [ ] Frasier-Digital-SF30-Amend0002-signed.pdf
 
-**Pre-send gates (non-responsive without):** DMP ✓ attached · AI plan ✓ attached ·
-ACR ✓ attached · itemized price ✓ (Excel editable + PDF) · signed by authorized
-official ← Friday · no price info in Vol I ✓ · prototype link live + uptime monitor
-green ← verify morning of send.
+**Pre-send gates (non-responsive without):** DMP attached; AI plan attached; ACR attached;
+itemized price (Excel editable + PDF); all three forms signed by the authorized official;
+no price info in Vol I; prototype link live (verified 9/4).
