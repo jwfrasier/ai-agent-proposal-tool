@@ -1,0 +1,2326 @@
+                                                                                                                   739-SL3821039
+
+
+
+
+             REQUEST FOR PROPOSALS
+
+      Consulting Services
+               -
+   Enterprise AI Adoption &
+         Enablement
+
+
+                    RFP 739-SL3821039
+
+
+
+                  Due Date: September 21, 2026
+
+  Proposals must be time stamped by the Texas Tech University
+  Health Sciences Center Purchasing Office before the hour and
+             date specified for receipt of solicitation.
+
+    Pursuant to the provisions of Texas Government Code Title 10 Subtitle D Chapter
+  2156.121 - 2156.127, General Services Act rules and regulations adopted there under,
+  sealed proposals will be received until the date and time established for receipt. After
+   receipt, only the names of proposers will be made public. Prices and other proposal
+                details will only be divulged after the award, if one is made.
+
+
+
+
+solicitations@ttuhsc.edu                                                  Page 1 of 41                           DOC1643828-002
+
+
+           *3KJFF0I-1* *3KJFF0I-1*[***SL3821039 *18 *002302407767481909334692943583142184966383733589*1*41***]
+                                                                                                                 739-SL3821039
+
+
+
+
+                                                              SUBMITTAL
+                                                              CHECKLIST
+
+          Due Date: September 21, 2026
+
+                     Request Number:                                 RFP 739-SL3821039
+
+                     Vendor Name:
+
+                     Contact Name:
+
+                     Phone Number:
+
+                     Contact E-Mail:
+
+
+                       Check-off
+
+                           1.   ___ Signed and Completed Execution of Offer (ref Appendix B).
+
+                           2.   ___ Signed and Completed VetHUB Subcontracting Plan (ref Appendix C).
+
+                           3.   ___ Signed and Completed Addenda Checklist (ref Appendix D).
+
+                           4.   ___ Responses to questions and requests for information in the Specifications and Scope
+                                    of Work Section (ref Section 5).
+
+                           5.   ___ Signed and Completed Pricing Schedule (ref Section 6).
+
+                           6.   ___ Deliver Proposal to:
+
+                                     TTUHSC prefers that all proposals be submitted using the TechBid system
+                                     (https://bids.sciquest.com/apps/Router/PublicEvent?CustomerOrg=TexasTech).
+
+                                     Or Mailed To:
+
+                                     Texas Tech University Health Sciences Center
+                                     Purchasing Office
+                                     3601 4th Street STOP 6217
+                                     Lubbock, Texas 79430
+
+
+
+
+solicitations@ttuhsc.edu                                      Page 2 of 41                                     DOC1643828-002
+
+
+           *3KJFF0I-2* *3KJFF0I-2*
+                                [***SL3821039 *18 *002302407767481909334692943583142184966383733589*2*41***]
+                                                                                                                      739-SL3821039
+
+
+
+
+                                                            TABLE OF CONTENTS
+            Section 1: General Information
+                       1.1 Introduction
+                       1.2 Description of Texas Tech University Health Sciences Center
+                       1.3 Group Purchase Authority
+                       1.4 TTUHSC’s Right to Reject
+                       1.5 Public Information
+                       1.6 Inquiries and Interpretations
+            Section 2: Notice to Proposer
+                       2.1 Submittal Deadline
+                       2.2 TTUHSC Contact Person
+                       2.3 Key Events Schedule
+                       2.4 Anticipated Term
+            Section 3: Proposal Submission Procedures
+                       3.1 Number of Copies
+                       3.2 Submittal Instructions for Online (TechBid) Proposals
+                       3.3 Submittal Instructions for Mailed/Delivered Proposals (Not required if submitted online)
+                       3.4 Proposal Validity Period
+                       3.5 Terms and Conditions
+                       3.6 Alternate Proposals
+                       3.7 VetHUB Subcontracting Plan
+            Section 4: Evaluation Criteria and Award
+                       4.1 Evaluation Process
+                       4.2 Proposer’s Acceptance of Evaluation Methodology
+                       4.3 Evaluation Criteria and Weights
+                       4.4 Consideration of Additional Information
+                       4.5 Oral Presentations/Interviews
+                       4.6 Award Process
+                       4.7 Best and Final Offer
+                       4.8 Award of Agreement
+            Section 5: Specifications and Scope of Work
+                       5.1 General
+                       5.2 Minimum Requirements
+                       5.3 Additional Requirements Specific to this RFP
+                       5.4 Services Specifications
+            Section 6: Pricing Schedule
+                       6.1 Pricing for Services Offered
+                       6.2 TTUHSC’s Payment Terms
+            Section 7: General Terms and Conditions
+                           Appendix A: Agreement
+                           Appendix B: Execution of Offer
+                           Appendix C: VetHUB Subcontracting Plan
+                           Appendix D: Addenda Checklist
+                           Appendix E: TTUHSC Vendor Information
+
+
+
+solicitations@ttuhsc.edu                                       Page 3 of 41                                       DOC1643828-002
+
+
+           *3KJFF0I-3* *3KJFF0I-3*
+                                [***SL3821039 *18 *002302407767481909334692943583142184966383733589*3*41***]
+                                                                                                               739-SL3821039
+
+
+
+
+                                                       SECTION 1
+                                                  GENERAL INFORMATION
+
+          1.1        Introduction
+
+                     The Texas Tech University Health Sciences Center (“TTUHSC”), a part of the Texas Tech
+                     University System, seeks proposals from qualified firms for Consulting Services - Enterprise
+                     AI Adoption & Enablement (the “Services”). The Services are more specifically described in
+                     Section 5.4 entitled Service Specifications.
+
+          1.2        Description of Texas Tech University Health Sciences Center
+
+                     TTUHSC has as its major objectives the provision of quality education and development of
+                     academic, research, patient care, and community service programs to meet the health care
+                     needs of West Texas, which in total is comprised of 108 counties and represents 50% of
+                     Texas’ land mass and 11% of its total population. This 131,000 square mile service area and
+                     population of 2.7 million has been, and remains highly underserved by health professionals
+                     and accessible health care facilities, despite the substantial and meaningful contribution
+                     made by our institution. While education of students and residents remains the primary
+                     focus of the institution, there has been an important impact on the health status of West
+                     Texas.
+
+                     Please visit the campus web sites for more information:
+                      Abilene campus
+                      Amarillo campus
+                      Dallas/Fort Worth campus
+                      Lubbock campus
+                      Permian Basin campus
+
+                     TTUHSC Fact Book
+
+          1.3        Group Purchasing Authority
+
+                     Texas law authorizes institutions of higher education (defined by Section 61.003, Education
+                     Code) to use the group purchasing procurement method (ref. Sections 51.9335, 73.115, and
+                     74.008, Education Code). Additional Texas institutions of higher education may therefore
+                     elect to enter into a contract with the successful Proposer under this RFP.
+
+          1.4        TTUHSC’s Right to Reject
+
+                     This RFP does not commit TTUHSC to select a proposer or to award an agreement to any
+                     proposer. TTUHSC reserves the right to accept or reject, in whole or in part, any proposal it
+                     receives pursuant to this RFP. Proposals which are qualified with conditional clauses or
+                     alterations or items not called for in the RFP documents, or irregularities of any kind, are
+                     subject to disqualification by TTUHSC at its option. If TTUHSC receives fewer than three
+                     proposals, TTUHSC has the right to reissue this RFP in order to gain additional competitive
+                     proposals.
+
+          1.5        Public Information
+
+                     1.5.1   Proposer is hereby notified that TTUHSC strictly adheres to all statutes, court
+
+solicitations@ttuhsc.edu                                   Page 4 of 41                                     DOC1643828-002
+
+
+           *3KJFF0I-4* *3KJFF0I-4*
+                             [***SL3821039 *18 *002302407767481909334692943583142184966383733589*4*41***]
+                                                                                                                 739-SL3821039
+
+
+
+
+                             decisions and the opinions of the Texas Attorney General with respect to disclosure
+                             of public information.
+
+                     1.5.2   TTUHSC may seek to protect from disclosure all information submitted in response
+                             to this RFP until such time as a final agreement is executed.
+
+                     1.5.3   Upon execution of a final agreement, TTUHSC will consider all information,
+                             documentation, and other materials requested to be submitted in response to this
+                             RFP, to be of a non-confidential and non-proprietary nature and, therefore, subject to
+                             public disclosure under the Texas Public Information Act (Government Code,
+                             Chapter 552.001, et seq.). Proposer will be advised of a request for public information
+                             that implicates their materials and will have the opportunity to raise any objections
+                             to disclosure to the Texas Attorney General. Certain information may be protected
+                             from release under Sections 552.101, 552.110, 552.113, and 552.131, Government
+                             Code.
+
+          1.6        Inquiries and Interpretations
+
+                     1.6.1   TTUHSC may in its sole discretion respond in writing to written inquiries concerning
+                             this RFP and post its response as an Addendum to all parties recorded by TTUHSC as
+                             having received a copy of this RFP. Only TTUHSC’s responses that are made by formal
+                             written addenda will be binding on TTUHSC (“Addenda”). Any verbal responses,
+                             written interpretations or clarifications other than Addenda to this RFP will be
+                             without legal effect. All Addenda issued by TTUHSC prior to the Submittal Deadline
+                             will be and are hereby incorporated as a part of this RFP for all purposes.
+
+                     1.6.2   Proposers are required to acknowledge receipt of each Addendum as specified in this
+                             Section. The Proposer must acknowledge all Addenda by completing, signing and
+                             returning the Addenda Checklist (ref. APPENDIX D). The Addenda Checklist must be
+                             received by TTUHSC prior to the Submittal Deadline and should accompany the
+                             Proposer’s proposal.
+
+                     1.6.3   Any interested party that receives this RFP by means other than directly from
+                             TTUHSC is responsible for notifying TTUHSC that it has received an RFP package, and
+                             should provide its name, address, telephone number and FAX number to TTUHSC, so
+                             that if TTUHSC issues Addenda to this RFP or provides written answers to questions,
+                             that information can be provided to such party.
+
+
+
+
+solicitations@ttuhsc.edu                                   Page 5 of 41                                       DOC1643828-002
+
+
+           *3KJFF0I-5* *3KJFF0I-5*
+                             [***SL3821039 *18 *002302407767481909334692943583142184966383733589*5*41***]
+                                                                                                                  739-SL3821039
+
+
+
+
+                                                             SECTION 2
+                                                        NOTICE TO PROPOSER
+
+          2.1        Submittal Deadline
+
+                     TTUHSC will accept proposals submitted in response to this RFP until 4:30 PM, Central Time
+                     on September 21, 2026 (the “Submittal Deadline”). Proposals should be delivered to:
+
+                                                Texas Tech University Health Sciences Center
+                                                               Purchasing Office
+                                            Attention: Solicitation Manager - RFP 739-SL3821039
+
+          2.2        TTUHSC Contact Person
+
+                     Proposers will direct all questions or concerns regarding this RFP to the following TTUHSC
+                     contact (“TTUHSC Contact”):
+                                 Solicitation Manager
+                                 Tel. (806) 743-7841 • eFax (806) 743-7850
+                                 solicitations@ttuhsc.edu
+
+
+
+                     TTUHSC specifically instructs interested parties to restrict all contact and questions
+                     regarding this RFP to written communications forwarded to TTUHSC Contact. TTUHSC
+                     Contact must receive all questions or concerns no later than August 21, 2026. TTUHSC will
+                     have a reasonable amount of time to respond to questions or concerns. It is TTUHSC’s intent
+                     to respond to all appropriate questions and concerns; however, TTUHSC reserves the right
+                     to decline to respond to any question or concern.
+
+          2.3        Key Events Schedule
+
+                     TTUHSC will make a good faith effort to follow the timeline below for evaluating, negotiating
+                     and issuing an award:
+                           Distribution of RFP                                   August 14, 2026
+                           Deadline for Submission of Written Questions          August 21, 2026
+                           Deadline for Submission/Delivery of Proposals         September 21, 2026
+                           Evaluation of Proposals                               September 21, 2026 – November 30, 2026
+
+          2.4        Anticipated Term
+
+                     The anticipated term of any resulting agreement will begin on the date an agreement is
+                     executed, and expire on August 31, 2027.
+
+
+
+
+solicitations@ttuhsc.edu                                       Page 6 of 41                                     DOC1643828-002
+
+
+           *3KJFF0I-6* *3KJFF0I-6*
+                                [***SL3821039 *18 *002302407767481909334692943583142184966383733589*6*41***]
+                                                                                                                 739-SL3821039
+
+
+
+
+                                                    SECTION 3
+                                         PROPOSAL SUBMISSION PROCEDURES
+
+          3.1        Number of Copies
+
+                     Proposer must submit a total of one (1) complete copy of its entire proposal. An original or
+                     digital signature by an authorized officer of Proposer must appear on the Execution of Offer
+                     (ref. APPENDIX B) of the submitted proposal.
+
+          3.2        Submittal Instructions for Online (TechBid) Proposals
+
+                     3.2.1   TTUHSC prefers that all proposals be submitted using the TechBid system at
+                             https://bids.sciquest.com/apps/Router/PublicEvent?CustomerOrg=TexasTech.
+
+                     3.2.2   Proposals must be signed by the responding company’s official authorized to commit
+                             such proposals. Failure to sign the Execution of Offer will be basis for proposal
+                             disqualification. The TechBid system contains a mandatory “Bidder Affirmation”
+                             checkbox certifying this information. By submitting their proposal online,
+                             proposers automatically qualify as having a valid signature.
+
+                     3.2.3   All proposals must be submitted online no later than the date and time indicated in
+                             Section 2.1 “Submittal Deadline.”
+
+          3.3        Submittal Instructions for Mailed Proposals (Not Required if Submitted Online)
+
+                     3.3.1   TTUHSC prefers that all proposals be submitted using the TechBid system at
+                             https://bids.sciquest.com/apps/Router/PublicEvent?CustomerOrg=TexasTech.
+                             However, if necessary, the proposer may elect to submit a printed version of the
+                             proposal and submit the proposal by mail or carrier service.
+
+                     3.3.2   One (1) original individually-bound completed proposal is required for the mailed or
+                             delivered submittals. Note: One (1) electronic version (USB Drive) is also required
+                             for archival purposes.
+
+                     3.3.3   Proposals must be signed by the responding company’s official authorized to commit
+                             such proposals. Failure to sign the Execution of Offer will be basis for proposal
+                             disqualification.
+
+                     3.3.4   Proposals should be submitted in a sealed envelope or box marked with the name of
+                             the RFP (as shown on the cover page of this RFP) and the opening date. All proposals
+                             must be submitted no later than the date and time indicated in Section 2.1 “Submittal
+                             Deadline.”
+
+          3.4        Proposal Validity Period
+
+                     Each proposal must state that it will remain valid for TTUHSC’s acceptance for a minimum of
+                     ninety (90) days after the Submittal Deadline, to allow time for evaluation, selection, and any
+                     unforeseen delays.
+
+
+
+
+solicitations@ttuhsc.edu                                   Page 7 of 41                                       DOC1643828-002
+
+
+           *3KJFF0I-7* *3KJFF0I-7*
+                             [***SL3821039 *18 *002302407767481909334692943583142184966383733589*7*41***]
+                                                                                                                   739-SL3821039
+
+
+
+
+          3.5        Terms and Conditions
+
+                     Proposer must comply with the requirements and specifications contained in this RFP,
+                     including the Agreement (ref. APPENDIX A), the Notice to Proposer (ref. Section 2 of this
+                     RFP), Proposal Submission Procedures (ref. Section 3 of this RFP) and the Specifications and
+                     Scope of Work (ref. Section 5 of this RFP). If there is a conflict among the provisions in this
+                     RFP, the provision requiring Proposer to supply the better quality or greater quantity will
+                     prevail.
+
+          3.6        Alternate Proposals
+
+                     TTUHSC may consider alternate proposals submitted by Proposer. Proposers submitting
+                     alternate proposals should (i) clearly identify any exceptions taken to the requirements and
+                     specifications set forth in this RFP and (ii) include a detailed description of the alternative(s)
+                     proposed. Proposer may suggest additions to the requirements and specifications set forth
+                     in this RFP, and all such suggestions must be clearly identified. Alternate proposals should
+                     be submitted as attachments to the proposal. Alternate proposals shall meet the same
+                     requirements and shall be in the same format as the proposal’s base format.
+
+          3.7        VetHUB Subcontracting Plan
+
+                     A VetHUB Subcontracting Plan (“HSP”) is required as part of Proposer’s proposal. The HSP
+                     will be developed and administered in accordance with TTUHSC’s Policy on Utilization of
+                     Historically Underutilized Businesses attached as APPENDIX C and incorporated for all
+                     purposes.
+
+                     Each Proposer must complete and return the HSP in accordance with the terms and
+                     conditions of this RFP, including APPENDIX C. Proposers that fail to do so will be considered
+                     non-responsive to this RFP in accordance with Section 2161.252, Government Code.
+
+                     TTUHSC has reviewed this RFP in accordance with Title 34, Texas Administrative Code,
+                     Section 20.13 (a), and has determined that subcontracting opportunities are probable under
+                     this RFP.
+
+                     A search has been conducted of the Centralized Master Bidders List to identify active VetHUB
+                     vendors in accordance with Title 34, Texas Administrative Code, Section 20.14(a)(1). The
+                     following NIGP commodity codes were included:
+
+                     Code #1 (91878)
+
+                     Results can be viewed at the following link:
+
+                     https://mycpa.cpa.state.tx.us/tpasscmblsearch/index.jsp
+
+
+
+
+solicitations@ttuhsc.edu                                   Page 8 of 41                                          DOC1643828-002
+
+
+           *3KJFF0I-8* *3KJFF0I-8*
+                             [***SL3821039 *18 *002302407767481909334692943583142184966383733589*8*41***]
+                                                                                                                739-SL3821039
+
+
+
+
+                                                    SECTION 4
+                                          EVALUATION CRITERIA AND AWARD
+
+          4.1        Evaluation Process
+
+                     4.1.1   TTUHSC will utilize a proposal evaluation team for the evaluation of this RFP. The
+                             award will be based on the proposal judged to be in the best interest of TTUHSC, the
+                             judgment in this regard shall be considered final. Any agreement resulting from this
+                             request shall be awarded to the proposer providing the “best value” to TTUHSC.
+
+                     4.1.2   Under section 51.9335 of the Texas Education Code in determining what is the best
+                             value to an institution of higher education, TTUHSC shall consider the purchase price,
+                             the reputation of the proposer and of the proposer’s goods or services, the quality of
+                             the proposer’s goods or services, the extent to which the goods or services meet
+                             TTUHSC’s needs, the proposer’s past relationship with TTUHSC, the impact on the
+                             ability of TTUHSC to comply with laws and rules relating to historically underutilized
+                             businesses and to the procurement of goods and services from persons with
+                             disabilities, the total long-term cost to TTUHSC of acquiring the proposer’s goods or
+                             services, and any other relevant factor that a private business entity would consider
+                             in selecting a vendor.
+
+          4.2        Proposer’s Acceptance of Evaluation Methodology
+
+                     Submission of a proposal indicates proposer’s acceptance of the evaluation technique and
+                     proposer’s recognition that some subjective judgments must be made by TTUHSC during the
+                     assigning of points.
+
+          4.3        Evaluation Criteria and Weights
+
+                     4.3.1   Each proposal shall be evaluated on the ability to meet TTUHSC’s requirements and
+                             to provide the best value to TTUHSC.
+
+                     4.3.2   The evaluation will be based on the following formula:
+
+                             Criteria                                                       Weight
+                             Proposer’s Pricing Proposal                                    30%
+                             Proposer’s Experience and Reputation                           15%
+                             Proposer’s Service Specifications                              55%
+
+          4.4        Consideration of Additional Information
+
+                     Consideration may also be given to any additional written information and comments that
+                     may serve to clarify the proposal information to TTUHSC.
+
+          4.5        Oral Presentations/Interviews
+
+                     Upon completion of the initial review and evaluation of the proposals submitted, selected
+                     proposers may be invited to participate in oral presentations. Oral presentations/interviews
+                     are an option of the evaluation team and may or may not be conducted; therefore, proposals
+                     should be complete when submitted by the deadline indicated in the Section 2.1 entitled
+                     “Submittal Deadline.”
+
+solicitations@ttuhsc.edu                                   Page 9 of 41                                      DOC1643828-002
+
+
+           *3KJFF0I-9* *3KJFF0I-9*
+                             [***SL3821039 *18 *002302407767481909334692943583142184966383733589*9*41***]
+                                                                                                                 739-SL3821039
+
+
+
+
+          4.6        Award Process
+
+                     During the opening, proposals will be acknowledged publicly to identify the names of the
+                     proposers, but will be afforded security sufficient to preclude disclosure of the contents of
+                     the proposal, including prices or other information, prior to award. After opening, an award
+                     may be made on the basis of the proposals initially submitted, without discussion,
+                     clarification or modification, or on the basis of negotiation with any of the proposers or, at
+                     TTUHSC’s sole option and discretion, TTUHSC may discuss or negotiate all elements of the
+                     proposal with selected proposers which represent a competitive range of proposals. For
+                     purposes of negotiation, a competitive range of acceptable or potentially acceptable
+                     proposals may be established comprising the highest rated proposal(s).
+
+          4.7        Best and Final Offer
+
+                     When deemed appropriate, after the submission of proposals but before the final selection of
+                     the successful proposal, TTUHSC may permit a proposer to revise its proposal in order for
+                     TTUHSC to obtain a best and final offer. TTUHSC will provide each proposer within the
+                     competitive range with an equal opportunity for discussion and revision of their proposal,
+                     and a proposer may elect not to amend their original proposal. TTUHSC is not bound to
+                     accept the best-priced proposal if that proposal is not the most advantageous to TTUHSC as
+                     determined by the evaluation team.
+
+          4.8        Award of Agreement
+
+                     4.8.1   TTUHSC reserves the right to award an agreement for all or any portion of the
+                             requirements proposed by reason of this request, award multiple agreements, or to
+                             reject any and all proposals if deemed to be in the best interests of TTUHSC and to re-
+                             solicit for proposals, or temporarily or permanently abandon the solicitation. If
+                             TTUHSC awards an agreement, it will award the agreement to the proposer whose
+                             proposal is the most advantageous to TTUHSC, considering price and the evaluation
+                             factors set forth in this RFP. Any actual or prospective proposer who is aggrieved in
+                             connection with the solicitation, evaluation or award of an agreement may formally
+                             protest in accordance with the following:
+                             https://www.fiscal.ttuhsc.edu/purchasing/vendors/protestprocedures.aspx
+
+                     4.8.2   TTUHSC intends to negotiate and award an agreement with the vendor submitting
+                             the proposal the evaluation committee determines best meets the requirements and
+                             is considered to be the best value overall. The agreement is a non-exclusive
+                             agreement, and TTUHSC reserves the right to enter into one or more agreements with
+                             third parties covering the same or similar Services.
+
+                     4.8.3   The proposer may submit its standard agreement for review by TTUHSC. The
+                             agreement entered into by the parties shall consist of the RFP, the signed proposal
+                             submitted by the vendor, the specifications including all the modifications thereof, a
+                             written agreement, and purchase order(s), all of which shall be referred to
+                             collectively as the agreement documents.
+
+                     4.8.4   Any resulting agreement may be subject to review and approval by The Board of
+                             Regents of Texas Tech University System (the “BOR”). If the BOR does not approve
+                             the agreement, then the agreement is null, void, and of no effect. Rules governing the
+
+solicitations@ttuhsc.edu                                   Page 10 of 41                                      DOC1643828-002
+
+
+     *3KJFF0I-10* *3KJFF0I-10*
+                             [***SL3821039 *18 *002302407767481909334692943583142184966383733589*10*41***]
+                                                                                                               739-SL3821039
+
+
+
+
+                             approval and execution of contracts can be viewed here: The Rules & Regulations of
+                             the Board of Regents, Chapter 07 - https://www.texastech.edu/board-of-
+                             regents/regents-rules/chapter-07-fiscal-management.pdf
+
+                     4.8.5   TTUHSC is required under Texas Legislature House Bill 1295 (section 2252.908 of the
+                             Government Code) to request Ethics Commission Reporting from contractors with
+                             agreements that:
+
+                              (1) requires an action or vote by the governing body of the entity or agency; or
+                              (2) has a value of at least $1 million (value of an agreement is based on the amount
+                                  of consideration received or to be received by the contractor from TTUHSC).
+
+                             The Business Entity must file Form 1295 electronically with the Texas Ethics
+                             Commission using the online filing application:
+                             https://www.ethics.state.tx.us/whatsnew/elf_info_form1295.htm
+
+
+
+
+solicitations@ttuhsc.edu                                   Page 11 of 41                                     DOC1643828-002
+
+
+     *3KJFF0I-11* *3KJFF0I-11*
+                             [***SL3821039 *18 *002302407767481909334692943583142184966383733589*11*41***]
+                                                                                                                  739-SL3821039
+
+
+
+
+                                                       SECTION 5
+                                           SPECIFICATIONS AND SCOPE OF WORK
+
+          5.1        General
+
+                     The minimum requirements and the specifications for the Services, as well as certain
+                     requests for information to be provided by Proposer as part of its proposal, are set forth
+                     below. The successful Proposer is referred to as the “Contractor.”
+
+          5.2        Minimum Requirements
+
+                     Each Proposal must include information that clearly indicates that Proposer meets each of
+                     the following minimum qualification requirements if applicable:
+
+                     Proposer is current with the State of Texas Comptroller of Public Accounts (if applicable)
+                     https://fmcpa.cpa.state.tx.us/tpis/
+
+                     Proposer can provide Certificate of Franchise Tax status. (if applicable)
+                     https://ourcpa.cpa.state.tx.us/coa/Index.html
+
+                     Proposer shall demonstrate evidence of certifications, permits, licenses and insurances as
+                     appropriate to provide the Services as required.
+
+                     Proposer is in compliant with the Texas Risk and Authorization Management Program (TX-
+                     RAMP) as may be required.
+                     https://dir.texas.gov/information-security/texas-risk-and-authorization-management-
+                     program-tx-ramp
+
+                     Proposer certifies that neither it, nor its holding companies or subsidiaries, is:
+                       (a) Listed in Section 889 of the 2019 National Defense Authorization Act;
+                       (b) Listed in Section 1260H of the 2021 National Defense Authorization Act; or
+                       (c) Owned by the government of a country on the U.S. Department of Commerce’s foreign
+                           adversaries list under 15 C.F.R Section 791.4; or
+                       (d) Controlled by any governing or regulatory body located in a country on the U.S.
+                           Department of Commerce’s foreign adversaries list under 15 C.F.R Section 791.4.
+
+          5.3        Additional Requirements Specific to this RFP
+
+                     Proposer must submit the following informational sections as part of Proposer’s
+                     proposal:
+
+                     1. Proposer’s Experience and Reputation
+
+                              Provide written detail about corporate background and experience.
+
+                              Provide at least 3 references (with names and contact information) and description
+                               of services from current or recent clients. These should include specifications and
+                               requirements most similar to those described in this RFP.
+
+
+
+
+solicitations@ttuhsc.edu                                     Page 12 of 41                                     DOC1643828-002
+
+
+     *3KJFF0I-12* *3KJFF0I-12* [***SL3821039 *18 *002302407767481909334692943583142184966383733589*12*41***]
+                                                                                                                  739-SL3821039
+
+
+
+
+                     2. Service Specifications
+
+                              Detailed Project Approach
+                               Provide a description of the proposed approach to the project, detailing how Proposer
+                               will meet or exceed all requirements in Section 5.4. This should include a description
+                               of the work program, including a description of the deliverables and activities. An
+                               outline of the proposed work plan should accompany the narrative. It is the
+                               responsibility of the Proposer to assess and define the appropriate number, type and
+                               hours of its staff required to complete the project on schedule.
+
+                              Project Team
+                               Identify the key individuals, including sub-consultants if applicable, who are
+                               proposed to be part of the team, along with their qualifications and experience. The
+                               information should include the expected amount of involvement and time
+                               commitment for each of these individuals.
+
+                              Project Schedule
+                               A desired project schedule has been included in Section 5.4 Services Specifications.
+                               Please respond with the company’s ability to meet this timeline.
+
+                              Scope of Work (“SOW”)
+                               Provide a scope of work project document for inclusion as Exhibit “A” SCOPE OF
+                               WORK to the Consulting Services Agreement contained in Appendix A of the RFP.
+
+          5.4        Services Specifications
+
+                     Overview:
+                     Texas Tech University Health Sciences Center Is seeking a qualified Contractor to provide
+                     enterprise wide Artificial Intelligence (AI), strategy, workforce upskilling, workflow
+                     automation, custom development, and adoption analytics services.
+
+                     Objective:
+                     The primary objective is to move TTUHSC from an isolated, low-complexity AI utilization
+                     (e.g., basic search, text summarization) to durable, measurable, high-value adoption across
+                     academic, administrative, clinical, and research operational units.
+
+                     Background:
+                     TTUHSC has provisioned enterprise AI tools, including Large Language Models (LLMs) and
+                     embedded AI productivity assistants. To maximize return on investment (ROI), TTUHSC
+                     requires external expertise to establish governance frameworks, build institutional
+                     capability, redesign high-value workflows, and implement tracking metrics that quantify
+                     usage, proficiency, and financial/operational impact.
+
+                     This specification defines the functional requirements, scope of work, and expected
+                     deliverables. It does not mandate a single proprietary methodology or commercial software
+                     delivery mechanism. Respondents may propose integrated advisory services, training
+                     curricula, coaching frameworks, analytics platforms, custom engineering, or a combination
+                     thereof that fulfills the requirements outlined herein.
+
+
+
+solicitations@ttuhsc.edu                                     Page 13 of 41                                     DOC1643828-002
+
+
+     *3KJFF0I-13* *3KJFF0I-13* [***SL3821039 *18 *002302407767481909334692943583142184966383733589*13*41***]
+                                                                                                                739-SL3821039
+
+
+
+
+                     Requirements:
+
+                     Contractor will be responsible for:
+
+                     A. AI Strategy, Governance & Transformation Planning
+
+                           The Contractor shall provide strategic consulting and administrative planning to
+                           establish a unified enterprise roadmap for AI deployment. Requirements include:
+
+                           1. Strategic Alignment & Visioning: Facilitate executive alignment sessions to define
+                              institutional ambition, risk tolerance, target pace, and strategic benchmarks.
+
+                           2. Readiness & Maturity Assessment: Conduct an initial assessment of TTUHSC’s AI
+                              skills, data architecture, operational pain points, security policies, and cultural
+                              adoption barriers.
+
+                           3. Transformation Roadmap: Formulate an executable roadmap establishing prioritized
+                              milestones, resource requirements, key risk indicators, and governance gateways.
+
+                           4. Governance Framework: Define policies for permissible AI use cases, data privacy
+                              protection, IP management, algorithmic accountability, and risk mitigation.
+
+                           5. Traceability Matrix. For each material initiative included in the Transformation
+                              Roadmap, identify the assessment finding(s), operational need(s), or identified
+                              opportunity that support the recommendation. Provide a findings-to-
+                              recommendations traceability matrix or equivalent artifact demonstrating this
+                              relationship. The final transformation roadmap should provide an evidence-based
+                              progression from current-state findings, identified gaps and opportunities,
+                              prioritized interventions, implementation sequencing, and measurable outcomes.
+
+                     B. Leadership Activation & Change Management
+
+                           The Contractor shall design and execute a change management framework to align
+                           leadership and build sustainable internal capacity. Requirements include:
+
+                           1. Leadership Education: Deliver tailored workshops and executive briefing sessions for
+                              VPs, Deans, Department Heads, and People Managers regarding AI risk, strategy, and
+                              operational opportunities.
+
+                           2. Change Champions Network: Design and operationalize a peer champion network
+                              across administrative and academic departments to drive grassroots adoption and
+                              peer-to-peer coaching.
+
+                           3. Change Management Communications Plan: Provide communication templates,
+                              engagement playbooks, and change methodologies to drive employee engagement
+                              and reduce adoption friction.
+
+                           4. Internal Capability Handover: Develop "train-the-trainer" programs and operational
+                              playbooks to transfer change management methodologies to TTUHSC personnel,
+                              minimizing long-term reliance on external consultants.
+
+
+solicitations@ttuhsc.edu                                    Page 14 of 41                                     DOC1643828-002
+
+
+     *3KJFF0I-14* *3KJFF0I-14*[***SL3821039 *18 *002302407767481909334692943583142184966383733589*14*41***]
+                                                                                                                  739-SL3821039
+
+
+
+
+                     C. Workforce Upskilling, Training & Capability Building
+
+                           The Contractor shall deliver multi-modal training programs to raise AI and data literacy
+                           across the general workforce and targeted functional roles. Requirements include:
+
+                           1. Structured Curricula & Pathways: Provide role-based learning tracks tailored to
+                              specific functional domains (e.g., procurement, finance, clinical administration,
+                              academic operations).
+
+                           2. Multi-Format Instruction: Deliver instruction via live virtual sessions, instructor-led
+                              workshops, self-paced modules, applied project-based labs, or apprenticeship-style
+                              coaching.
+
+                           3. Applied Learning on TTUHSC Use Cases: Ensure training modules leverage practical,
+                              sanitized institutional scenarios and enterprise-approved tools rather than generic
+                              market examples.
+
+                           4. Role-Specific Coaching & Prompt Engineering: Provide guidance on advanced prompt
+                              design, contextual grounding, system instruction, and task-specific automation
+                              techniques.
+
+                           5. Institutional Knowledge Repository: Establish a searchable, filterable repository or
+                              library of validated internal AI use cases, prompts, and best practices to preserve
+                              institutional memory.
+
+                     D. Workflow Automation, Custom Solutions & Agentic Strategy
+
+                           The Contractor shall assist TTUHSC in identifying, prioritizing, engineering, and
+                           deploying high-impact workflow automations and custom AI integrations. Requirements
+                           include:
+
+                           1. Workflow Discovery & Opportunity Mapping: Evaluate functional departmental
+                              processes to identify high-ROI candidates for AI-driven redesign and task
+                              automation.
+
+                           2. Solution Engineering & Prototyping: Build, test, and validate functional prototypes
+                              for high-priority use cases, including bespoke application development, API
+                              integrations, and custom model orchestration where warranted.
+
+                           3. Agentic AI Architecture & Deployment: Formulate an operational and technical
+                              framework for deploying, monitoring, and controlling agentic AI capabilities (multi-
+                              step autonomous workflows).
+
+                           4. Agent Management & Oversight: Establish auditing, approval, access control, and
+                              human-in-the-loop (HITL) procedures to govern agentic tools operating in
+                              production environments.
+
+
+
+
+solicitations@ttuhsc.edu                                     Page 15 of 41                                     DOC1643828-002
+
+
+     *3KJFF0I-15* *3KJFF0I-15* [***SL3821039 *18 *002302407767481909334692943583142184966383733589*15*41***]
+                                                                                                                  739-SL3821039
+
+
+
+
+                     E. Analytics, Adoption Tracking & Impact Measurement
+
+                           The Contractor shall provide solutions via a software platform, managed analytics
+                           services, or integrated reporting tools to track usage, skill acquisition, and
+                           financial/operational return. Requirements include:
+
+                           1. Adoption & Engagement Analytics: Track active utilization, frequency, function
+                              distribution, and feature usage across TTUHSC’s enterprise AI solutions.
+
+                           2. Proficiency & Skill Tracking: Monitor employee skill progression from basic usage to
+                              high-value, complex workflow integrations.
+
+                           3. Intervention Identification: Provide automated or programmatic reporting that
+                              identifies lagging departments, adoption bottlenecks, or targeted coaching
+                              requirements.
+
+                           4. ROI Modeling & Verification: Provide a transparent, defensible framework to model,
+                              measure, and verify financial savings, hours saved, and operational velocity gains
+                              using TTUHSC-supplied baseline metrics and assumptions.
+
+                     F. Enterprise Security & Data Privacy Compliance
+
+                           1. Data Handling & Sovereignty: The Contractor must ensure that all services, platforms,
+                              and custom solutions strictly comply with state and federal requirements, including
+                              FERPA, HIPAA, and Texas Department of Information Resources (DIR) policies.
+
+                           2. Data Usage Restrictions: Institutional data provided by TTUHSC shall not be used to
+                              train, fine-tune, or improve vendor proprietary models, public models, or third-party
+                              datasets.
+
+                           3. Access Control & Encryption: Any software component or data transfer mechanism
+                              must enforce Role-Based Access Control (RBAC), single sign-on (SSO) integration
+                              (e.g., SAML 2.0 / OAuth2), encryption in transit (TLS 1.3), and encryption at rest (AES-
+                              256).
+
+                     G. Engagement Structure and Management
+
+                           1. Project Management Framework: The Contractor shall designate a Project Lead and
+                              provide a detailed Project Plan outlining timelines, milestones, deliverables,
+                              dependency chains, and escalation paths.
+
+                           2. Review Cadence: Establish regular operational status reporting (e.g., weekly project
+                              status, monthly executive reviews) tied directly to agreed KPIs and milestone
+                              acceptance criteria.
+
+
+
+
+solicitations@ttuhsc.edu                                    Page 16 of 41                                       DOC1643828-002
+
+
+     *3KJFF0I-16* *3KJFF0I-16*[***SL3821039 *18 *002302407767481909334692943583142184966383733589*16*41***]
+                                                                                                                         739-SL3821039
+
+
+
+
+                     Project Deliverables:
+
+                               Deliverable         Area                Description
+
+                                                                       Comprehensive AI Transformation Plan,
+                                                   Strategy &
+                               Deliverable 1                           including ambition statement, roadmap, and
+                                                   Planning
+                                                                       baseline readiness assessment report.
+
+                                                                       Leadership Enablement Package, including
+                                                   Leadership          executive workshop materials, change
+                               Deliverable 2
+                                                   Activation          management communications plan, and train-
+                                                                       the-trainer playbooks.
+
+                                                                       Role-Based Training Curricula, live/virtual
+                                                   Workforce
+                               Deliverable 3                           instruction delivery, certification/skill
+                                                   Upskilling
+                                                                       verification tracking, and use-case repository.
+
+                                                                       Workflow Redesign Specifications, functional
+                                                   Workflow &
+                               Deliverable 4                           automation prototypes/custom solutions, and
+                                                   Automation
+                                                                       Agentic AI Governance Policy.
+
+                                                                       Analytics & ROI Reporting Dashboard/Service
+                                                   Analytics &
+                               Deliverable 5                           providing adoption telemetry, proficiency
+                                                   ROI
+                                                                       tracking, and verified financial impact modeling.
+
+                                                                       Final Knowledge Transfer Package, operational
+                                                   Knowledge           documentation, code/architecture
+                               Deliverable 6
+                                                   Transfer            documentation (where applicable), and exit
+                                                                       transition plan.
+
+                     Project Schedule:
+
+                     TTUHSC desires to operate in accordance with the following schedule. These dates are for
+                     planning purposes and subject to change:
+
+                           •    Kick-off meeting: ________________
+                           •    Completion of Deliverable 1: ________________
+                           •    Completion of Deliverable 2: ________________
+                           •    Completion of Deliverable 3: ________________
+                           •    Completion of Deliverable 4: ________________
+                           •    Completion of Deliverable 5: ________________
+                           •    Completion of Deliverable 6: ________________
+
+
+
+
+solicitations@ttuhsc.edu                                        Page 17 of 41                                        DOC1643828-002
+
+
+     *3KJFF0I-17* *3KJFF0I-17*   [***SL3821039 *18 *002302407767481909334692943583142184966383733589*17*41***]
+                                                                                                                 739-SL3821039
+
+
+
+
+                                                            SECTION 6
+                                                        PRICING SCHEDULE
+
+          Proposal of: ___________________________________
+                         (Proposer Company Name)
+
+          Ref.:            Consulting Services - Enterprise AI Adoption & Enablement
+
+          RFP No.: RFP 739-SL3821039
+
+          Having carefully examined all the specifications and requirements of this RFP and any attachments
+          thereto, the undersigned proposes to furnish the Services required pursuant to the above-referenced
+          Request for Proposal upon the terms quoted below.
+
+          6.1        Pricing for Services Offered:
+
+                     1. Provide a “not to exceed” fixed fee for each of the deliverables including associated fees
+                        (i.e. printing costs, attendance at meetings, travel), for the Consulting Services -
+                        Enterprise AI Adoption & Enablement. A schedule should be included to document the
+                        level of effort used to derive the quoted fixed fee.
+
+                     2. An hourly resource rate card by resource type (e.g., Project Manager, Analyst) valid
+                        through August 31, 2027 which will be used as the basis for change orders.
+
+          6.2        TTUHSC’s Payment Terms
+
+                     TTUHSC’s standard payment terms are “Net 30 days.”
+
+
+
+                                                                 By: ___________________________
+
+                                                                 Name: _________________________
+
+                                                                 Title: __________________________
+
+                                                                 Date: _____________________
+
+
+
+
+solicitations@ttuhsc.edu                                     Page 18 of 41                                     DOC1643828-002
+
+
+     *3KJFF0I-18* *3KJFF0I-18* [***SL3821039 *18 *002302407767481909334692943583142184966383733589*18*41***]
+                                                                                                             739-SL3821039
+
+
+
+
+                                                   SECTION 7
+                                         GENERAL TERMS AND CONDITIONS
+
+          The terms and conditions contained in (i) the attached Agreement (ref. APPENDIX A) or, in the sole
+          discretion of TTUHSC, terms and conditions substantially similar to those contained in the Agreement
+          and (ii) the Texas Tech University System Required Contract Terms set forth at
+          http://www.texastech.edu/ogc/required-contract-terms.pdf (collectively, the “Required Terms”)
+          will constitute and govern any agreement that results from this RFP. If Proposer takes exception to
+          any of the Required Terms, Proposer will submit a list of the exceptions as part of its proposal.
+          Proposer’s exceptions will be reviewed by TTUHSC and may result in disqualification of Proposer’s
+          proposal as non-responsive to this RFP. If Proposer’s exceptions do not result in disqualification of
+          Proposer’s proposal, then TTUHSC may consider Proposer’s exceptions when TTUHSC evaluates the
+          Proposer’s proposal.
+
+
+
+
+solicitations@ttuhsc.edu                                 Page 19 of 41                                     DOC1643828-002
+
+
+     *3KJFF0I-19* *3KJFF0I-19*
+                           [***SL3821039 *18 *002302407767481909334692943583142184966383733589*19*41***]
+                                                                                                                                      739-SL3821039
+
+
+
+
+                                                                APPENDIX A
+                                                                AGREEMENT
+
+                                                  CONSULTANT SERVICES AGREEMENT
+
+                    This Consultant Services Agreement (“Agreement”) is made and entered into by and between Texas Tech
+          University Health Sciences Center, a public institution of higher education located in the State of Texas (“University”), and
+          _________________ (“Consultant”). University and Consultant may be referred to herein individually each as a “Party” or
+          collectively as the “Parties.”
+
+                                                                   Background
+
+                    University desires to obtain expert consulting services to provide enterprise-wide Artificial Intelligence strategy,
+                     workforce upskilling, workflow automation, custom development, and adoption analytics services.
+
+                    Consultant represents that Consultant possesses the necessary qualifications and knowledge to perform these
+                     services.
+
+                                                                    Agreement
+
+                     Now therefore, for the consideration herein expressed, University and Consultant hereby agree as follows.
+
+                                                          Responsibilities of Consultant
+
+          1.1        Consultant shall perform the scope of work shown on Exhibit “A” attached hereto and incorporated herein for all
+                     purposes.
+
+          1.2        Upon University’s request, Consultant will report in writing to University on the status of Consultant’s work.
+                     Consultant agrees to allow University and any other state agency and the legislature at University’s discretion, to
+                     distribute the consultant report, if any, and to post the report on University’s Internet website or the website of a
+                     standing committee of the legislature. During the term of this Agreement, University shall always have the right
+                     to inspect Consultant’s work in progress and to receive copies of all or any portion thereof. The work product will
+                     be advice, suggestions, and information as requested on various projects.
+
+          1.3        Consultant agrees that all writings, reports, or other materials produced by Consultant and its employees relating
+                     to the services performed under this Agreement shall be deemed “works made for hire” as that term is defined in
+                     the U.S. Copyright Act, that all rights thereto shall be owned by University for its exclusive use and re-use at any
+                     time without further compensation and without any restrictions, and that Consultant shall not assert any claim
+                     thereto, and Consultant shall execute any documents that may be necessary to transfer such rights to University.
+
+          1.4        Consultant will not remove any property of any nature whatsoever, including intellectual property, from
+                     University’s premises without University’s prior written consent. Upon completion of the services, or termination
+                     of this Agreement, Consultant will return all materials provided by University in connection with work under this
+                     Agreement along with all information developed to date during the course of providing services under this
+                     Agreement.
+
+          1.5        Consultant represents, warrants, and agrees to perform the services under this Agreement in compliance with all
+                     applicable federal, state, and local laws, regulations, and ordinances. Consultant represents, warrants, and agrees
+                     that (a) it will perform the services in a good and workmanlike manner and in accordance with commercially
+                     reasonable standards of Consultant’s profession or business, and (b) all of the services to be performed will be of
+                     the quality that prevails among similar businesses engaged in providing similar services in major United States
+                     urban areas under the same or similar circumstances. In addition, Consultant represents and warrants that
+                     Consultant and its personnel performing services under this Agreement hold and shall continue to maintain any
+                     and all licenses or certifications required under law to perform the services described herein. Consultant further
+                     represents and warrants that Consultant and its employees do not have any obligations, conflicts, commitments, or
+                     impediments of any kind that will affect, limit, or prevent its performance of the services under this Agreement,
+                     and Consultant shall immediately advise University should any such issue arise during the term of this Agreement.
+
+          1.6        Consultant agrees to maintain for Consultant’s personnel performing under this Agreement standard employer’s
+                     liability and worker’s compensation insurance. In addition, Consultant shall maintain general liability and
+solicitations@ttuhsc.edu                                         Page 20 of 41                                                     DOC1643828-002
+
+
+     *3KJFF0I-20* *3KJFF0I-20* [***SL3821039 *18 *002302407767481909334692943583142184966383733589*20*41***]
+                                                                                                                                        739-SL3821039
+
+
+
+
+                     automobile insurance coverage with limits of not less than $250,000.00 per person and $500,000.00 per occurrence.
+                     Certificates of insurance verifying the foregoing requirements shall be provided to University prior to
+                     commencement of any services under this Agreement.
+
+          1.7        Consultant agrees to indemnify and hold harmless University, its Regents, employees, and agents from any claim,
+                     damage, liability, injury, expense, or loss (including attorney’s fees) arising out of Consultant’s performance, direct
+                     or indirect, under this Agreement. In addition, Consultant warrants all writings or other materials produced by
+                     Consultant and its employees relating to the services performed under this Agreement do not infringe any patent,
+                     copyright, trademark, or other intellectual property rights of a third party and Consultant shall defend, indemnify,
+                     and hold harmless University, its Regents, employees, and agents from and against all claims arising from
+                     infringement or alleged infringement of any patent, copyright, trademark, or other intellectual property rights of a
+                     third party arising out of, in connection with, or resulting from this Agreement or the writings or other materials
+                     provided under this Agreement. This Article shall survive termination of this Agreement.
+
+          1.8        Consultant certifies this Agreement is not prohibited under Tex. Gov’t Code § 2261.252(b) and agrees that if
+                     Consultant’s certification is or becomes untrue, this Agreement is void, and Consultant will not seek and waives
+                     its right to seek any legal or equitable remedy for past or future performance under this Agreement, including
+                     damages, whether under breach of contract, unjust enrichment, or any other legal theory; specific performance;
+                     and injunctive relief.
+
+                                                                      Payment
+
+          1.9        University agrees to pay for each deliverable upon completion by Consultant in accordance with Exhibit “A” for
+                     a total not to exceed amount of $___________ including travel and expenses, attached hereto and incorporated
+                     herein for all purposes. University shall only reimburse travel expenses pre-approved in writing, at rates not to
+                     exceed         the      most        current       rates       set       by       the        Texas       Comptroller
+                     (https://fmx.cpa.texas.gov/fmx/travel/textravel/rates/current.php). University may reimburse rental car expenses at
+                     rates not to exceed those set in University contracts. University will not reimburse for alcoholic beverages.
+
+          1.10       University agrees to make payments within thirty (30) days of receipt of a properly submitted, itemized invoice
+                     from Consultant. The invoice must reference the University contract number affixed to this Agreement and must
+                     agree in all respects to the requirements and price schedules set forth herein. Final payment is contingent upon
+                     satisfactory receipt of the final work product and a final itemized invoice for services rendered.
+
+          1.11       Consultant agrees to provide the following notice to all of its employees and subcontractors who may work on any
+                     campus of Texas Tech University System: All sex offenders required to register with local law enforcement
+                     authorities under Chapter 62 of the Texas Code of Criminal Procedure and who intend to work or carry on a
+                     vocation (full-time or part-time) on any campus of Texas Tech University System for a consecutive period
+                     exceeding fourteen (14) days or for an aggregate period exceeding thirty (30) days in a calendar year are required
+                     to register (or verify registration) with the law enforcement authority for campus security in accordance with
+                     Article 62.064 of the Texas Code of Criminal Procedure within 7 days of beginning work on any campus of Texas
+                     Tech University System. In addition, such sex offenders are required to notify the law enforcement authority for
+                     campus security within seven (7) days of terminating work on any campus of Texas Tech University System. For
+                     additional information, please contact the Texas Tech University Police Department, 2901 4th St., Lubbock, TX
+                     79409, 806-742-3931.
+
+                                                              Term and Termination
+
+          1.12       The term of this Agreement shall commence on _____________, and continue in full force and effect through
+                     August 31, 2027.
+
+          1.13       Either Party may terminate this Agreement at any time, with or without cause, by giving the other Party thirty (30)
+                     days written notice. Upon notice of termination, Consultant shall not incur any additional expenses and shall submit
+                     an invoice for services rendered only to date of notice.
+
+          1.14       University may terminate this Agreement immediately upon notice to Consultant in the event that Consultant
+                     becomes insolvent, makes a general assignment for the benefit of creditors, suffers or permits the appointment of
+                     a receiver for its business or assets, becomes subject to any proceeding under any bankruptcy or insolvency laws,
+                     whether domestic or foreign, or has wound up or liquidated, voluntarily or otherwise.
+
+
+solicitations@ttuhsc.edu                                         Page 21 of 41                                                      DOC1643828-002
+
+
+     *3KJFF0I-21* *3KJFF0I-21* [***SL3821039 *18 *002302407767481909334692943583142184966383733589*21*41***]
+                                                                                                                                       739-SL3821039
+
+
+
+
+          1.15       “Event of Force Majeure” means an event beyond the control of Consultant or University which prevents or makes
+                     a Party’s compliance with any of its obligations under this Agreement illegal or impracticable, including but not
+                     limited to: act of God (including, without limitation, fire, explosion, earthquake, tornado, drought, and flood); war,
+                     act or threats of terrorism, hostilities (whether or not war be declared), invasion, act of enemies, mobilization,
+                     requisition, or embargo; rebellion, insurrection, military or usurped power, or civil war; contamination or
+                     destruction from any nuclear, chemical, or biological event; riot, commotion, strikes, go slows, lock outs, or
+                     disorder; epidemic, pandemic, viral outbreak, or health crisis; or directive of governmental authority. No Party will
+                     be considered in breach of this Agreement to the extent that performance of their respective obligations is prevented
+                     or made illegal or impracticable by an Event of Force Majeure that arises during the term (or after execution of the
+                     Agreement but prior to the beginning of the term). A Party asserting an Event of Force Majeure hereunder
+                     (“Affected Party”) will give reasonable notice to the other Party of an Event of Force Majeure upon it being
+                     foreseen by, or becoming known to, Affected Party. In the event of an Event of Force Majeure, Affected Party will
+                     endeavor to continue to perform its obligations under the Agreement only so far as reasonably practicable.
+
+          1.16       In the event this Agreement is terminated in accordance with this Article, then within thirty (30) days after the
+                     effective date of such termination, Consultant shall submit Consultant’s termination statement for Services
+                     rendered to the date of termination, and University shall pay Consultant for such Services within thirty (30) days
+                     of receipt of Consultant termination statement.
+
+          1.17       The termination or expiration of this Agreement shall not relieve either Party of any obligation pursuant to this
+                     Agreement which arose on or before the date of termination.
+
+          1.18       University’s performance under the Agreement may be dependent upon appropriation of funds by the Texas
+                     legislature (“Legislature”) and/or allocation of funds by the TTUS Board of Regents (“Regents”). Consultant
+                     acknowledges that appropriation and allocation of funds are beyond University’s control. If the Legislature fails to
+                     appropriate, or Regents fail to allocate, necessary funds, or if there is a reduction of funding from other revenue
+                     sources, University will issue written notice to Consultant and University may terminate this Agreement without
+                     further duty or obligation hereunder, other than payment for goods and services already delivered or provided. This
+                     Agreement may be funded wholly or partially with federal funds. Consultant shall comply with all applicable
+                     provisions of federal law. University utilizes http://www.gsa.gov and https://www.ecfr.gov/ for all federal
+                     guidelines.
+
+                                                                    Compliance
+
+          1.19       Sanction or Exclusion Search. Consultant represents and warrants that neither Consultant or any employees or
+                     agents who provide items or services under this Agreement are excluded, suspended, or debarred from participation
+                     in any federal or state health care program or federally funded contracts. University may conduct searches of
+                     Consultant’s name against various federal and state sanction and exclusion databases, including, but not limited to
+                     the HHS OIG List of Excluded Individuals/Entities (LEIE), the GSA Excluded Parties List System (EPLS), and
+                     the Texas HHSC Exclusion List. Consultant agrees to immediately inform University as soon as it is aware that it
+                     or any of its employees, agents, or contractors providing items or services under the Agreement are subject to the
+                     imposition of any such sanctions or exclusion. This Agreement shall be subject to immediate termination by
+                     University in the event Consultant, or any of its employees, agents, or contractors, is listed on any federal or state
+                     sanction/exclusion list as being subject to sanctions or exclusion.
+
+          1.20       Cooperation with University’s Compliance Programs. Consultant agrees that it, its employees, agents, and
+                     contractors will comply with all federal, state, or local laws or regulations applicable to Consultant’s performance
+                     of the Agreement. Consultant further agrees that it, its employees, agents, and contractors will comply with
+                     University Operating Policies and Procedures located at https://www.ttuhsc.edu/administration/operating-
+                     policies/default.aspx, as well as all relevant published University compliance programs, as they may be applicable
+                     to Consultant’s services under this Agreement.
+
+          1.21       Reporting. Consultant agrees to inform University of any violation of its obligations under this Article or the
+                     Agreement regarding compliance, and of any conduct of which it becomes aware related to the performance of the
+                     Consultant’s obligations under the Agreement by it or any of its employees, agents, or contractors, or by University
+                     or any of its agents, employees, or contractors, which a reasonable person would conclude may violate any of the
+                     legal or regulatory requirements identified herein, may represent or be the product of a conflict of interest,
+                     kickback, or other inducement, or otherwise constitute fraud, waste, or abuse. Such reporting may be to Texas
+                     Tech Compliance and Ethics Line (1-866-294-9352) or to the Institutional Compliance Officer (806-743-3950).
+
+
+solicitations@ttuhsc.edu                                         Page 22 of 41                                                     DOC1643828-002
+
+
+     *3KJFF0I-22* *3KJFF0I-22* [***SL3821039 *18 *002302407767481909334692943583142184966383733589*22*41***]
+                                                                                                                                         739-SL3821039
+
+
+
+
+          1.22       Breach. Consultant’s breach of any of the provisions of this Article shall constitute a material breach of the
+                     Agreement and may result in immediate termination of the Agreement by University. Consultant’s breach shall
+                     entitle University to any of the remedies provided in the Agreement and this Article in addition to any remedies
+                     provided by law
+
+                                                                        Audit
+
+          1.23       Consultant understands that acceptance of funds under this Agreement constitutes acceptance of the authority of
+                     the Texas State Auditor’s Office, or any successor agency (collectively, “Auditor”), to conduct an audit or
+                     investigation in connection with those funds pursuant to Section 51.9335(c) Texas Education Code. Consultant
+                     agrees to cooperate with the Auditor in the conduct of the audit or investigation, including, without limitation,
+                     providing all records requested. Consultant will include this provision in all contracts with permitted
+                     subcontractors.
+
+          1.24       In addition, at any time during the term of this Agreement and for a period of four (4) years thereafter, the State of
+                     Texas, Texas Tech University System, University, and/or other federal, state, and local agencies which may have
+                     jurisdiction over this Agreement, at reasonable times and at its expense reserves the right to audit Consultant’s
+                     records and books that relate only to this Agreement. In the event such an audit by University reveals any
+                     errors/overpayments by University, Consultant shall refund University the full amount of such overpayments
+                     within thirty (30) days of such audit findings, or University, at its option, reserves the right to deduct such amounts
+                     owing University from any payments due Consultant. If needed for audit, original or independently certified copies
+                     of off-site records will be provided to auditors at Consultant’s expense within two (2) weeks of written request.
+                     This Section shall survive termination of this Agreement.
+
+                                                                 General Provisions
+
+          1.25       Incorporated Terms. The Parties acknowledge and agree that the Required Contract Terms set forth at
+                     https://www.texastech.edu/ogc/required-contract-terms.pdf and the Required IT Terms set forth at
+                     http://www.texastech.edu/ogc/contracting/required-IT-terms.pdf are incorporated into this Agreement as if
+                     expressly stated herein.
+
+          1.26       Disclosure. Consultant agrees that Consultant, its officers, employees, and agents will not disclose any University
+                     information, data, or other materials created by Consultant, or others, relating to the services performed under this
+                     Agreement without the express written permission of an authorized University officer. Such obligations shall not,
+                     however, extend to any materials which:
+
+                     1.26.1   were in the possession of Consultant prior to this Agreement;
+
+                     1.26.2   are, or hereafter become, generally available to the public by publication or otherwise through no action
+                              of Consultant; or
+
+                     1.26.3   are required by law or regulation to be disclosed.
+
+                     This Article shall survive termination of this Agreement
+
+          1.27       Subcontract. Consultant shall not subcontract the services to be provided herein without prior written approval
+                     of University.
+
+          1.28       Anti-Discrimination. University and Consultant agree that in the performance of this Agreement there will be no
+                     discrimination against any person or persons on account of race, color, sex, religion, age, disability, national origin,
+                     or veteran status, and that both Parties agree to comply with all applicable requirements of the Civil Rights Act of
+                     1964, as amended; 1991 Civil Rights Act; the Vietnam Era Veterans Readjustment Act of 1974; the Rehabilitation
+                     Act of 1973, as amended; the Age Discrimination Act of 1975; the Americans with Disabilities Act of 1990; and
+                     all federal rules and regulations, state laws, and executive orders as applicable.
+
+          1.29       Independent Contractor. Consultant agrees that it is an independent contractor and that this Agreement does not
+                     form a joint venture or partnership. University will not be responsible for the Federal Insurance Contribution Act
+                     (FICA) payments, federal or state unemployment taxes, income tax withholding, Workers Compensation Insurance
+                     payments, or any other insurance payments, nor will University furnish any medical or retirement benefits or any
+
+
+solicitations@ttuhsc.edu                                          Page 23 of 41                                                      DOC1643828-002
+
+
+     *3KJFF0I-23* *3KJFF0I-23* [***SL3821039 *18 *002302407767481909334692943583142184966383733589*23*41***]
+                                                                                                                                           739-SL3821039
+
+
+
+
+                     paid vacation or sick leave. Consultant is responsible for conduct of business operation, including employee
+                     salaries, travel, etc.
+
+          1.30       Notices. All notices, consents, approvals, demands, requests, or other communications provided for or permitted
+                     to be given under any of the provisions of the Agreement shall be in writing and sent via registered or certified
+                     mail, overnight courier, or email, and notice will be deemed given (i) if mailed, when deposited, postage prepaid,
+                     in United States mail; (ii) if sent by overnight courier, one (1) business day after delivery to the courier; and (iii) if
+                     sent by email, when received:
+
+                                  Consultant Name                                                    University
+                                  Attention: ______________                                          Texas Tech University Health Sciences Center
+                                  Title                                                              ATTN: Contracting Office
+                                  Address                                                            3601 4th Street, STOP 6217
+                                  Address                                                            Lubbock, Texas 79430
+                                  Email Address                                                      contracting@ttuhsc.edu
+
+                     Notice of a change in address of one of the Parties shall be given in writing to the other Party as provided above
+                     but shall be effective only upon actual receipt. No agreements, amendments, or modifications, implied or
+                     otherwise, shall be binding on any of the Parties unless set forth in writing and signed by both Parties.
+
+          1.31       Amendment. This Agreement and each of its provisions shall be binding upon the Parties and may not be waived,
+                     modified, amended, or altered except by in writing signed by the Parties.
+
+          1.32       Assignment. Neither Party may assign this Agreement, in whole or in part, without the prior written consent of
+                     the other Party.
+
+          1.33       Publicity and Marks. Consultant agrees that it will not publicize this Agreement or disclose, confirm, or deny
+                     any details of this Agreement to third parties, or use University’s name or protected marks without University’s
+                     prior written approval.
+
+          1.34       Venue; Governing Law. This Agreement is governed by and construed and enforced in accordance with the laws
+                     of the State of Texas. Pursuant to Section 109.005 of the Texas Education Code, the County in which University’s
+                     Chief Executive Officer is located shall be the sole proper place of venue for any legal action or proceeding arising
+                     out of this Agreement or the enforcement of any provision in this Agreement.
+
+          1.35       Breach of Contract Claims. The dispute resolution process provided for in Texas Government Code, Chapter
+                     2260 (“Chapter 2260”) and the related rules adopted by the AG pursuant to Chapter 2260 will be used by
+                     Consultant to attempt to resolve any claim for breach of contract made by Consultant that cannot be resolved in
+                     the ordinary course of business. Chapter 2260 requires Consultant to first provide written notice of a claim and
+                     negotiate with University before proceeding to the contested case process. University will examine Consultant’s
+                     claim and any counterclaim and negotiate with Consultant in an effort to resolve such claims. Governed by rules
+                     adopted by the AG, the contested case process is Consultant’s sole and exclusive method to seek a remedy for
+                     breach unless, after considering the Administrative Law Judge’s report, the Legislature gives consent for
+                     Consultant to sue under Texas Civil Practice and Remedies Code Chapter 107. The Parties specifically agree that
+                     (i) neither the execution of the Agreement by University nor any other conduct, action, or inaction of any
+                     representative of University relating to the Agreement constitutes or is intended to constitute a waiver of University
+                     or the State's sovereign immunity to suit; and (ii) University has not waived its right to seek redress in the courts.
+                     Any term or provision in the Contractor Terms indicating agreement to arbitration, other alternative dispute
+                     resolution, or litigation options in the event of a dispute between the Parties is expressly rejected and is null and
+                     void. Notwithstanding any other provision of the Agreement to the contrary, unless otherwise requested or
+                     approved in writing by University, Consultant will continue performance and will not be excused from
+                     performance during the period any breach of agreement claim or dispute is pending under the above processes;
+                     however, Consultant may suspend performance during the pendency of such claim or dispute if Consultant has
+                     complied with all provisions of Texas Government Code § 2251.051, and such suspension of performance is
+                     expressly applicable and authorized under that law.
+
+          1.36       Severability. If one or more provisions of this Agreement, or the application of any provision to any party or
+                     circumstance, is held invalid, unenforceable, or illegal in any respect, the remainder of this Agreement and the
+                     application to other parties or circumstances will remain valid and in full force and effect.
+
+
+solicitations@ttuhsc.edu                                          Page 24 of 41                                                        DOC1643828-002
+
+
+     *3KJFF0I-24* *3KJFF0I-24* [***SL3821039 *18 *002302407767481909334692943583142184966383733589*24*41***]
+                                                                                                                                          739-SL3821039
+
+
+
+
+          1.37        No Third Party Beneficiaries. This Agreement shall be binding upon and inure to the benefit of the Parties
+                      hereto, their successors and permitted assigns. Nothing in this Agreement is intended, nor shall be deemed, to
+                      confer any benefits on any third party, including, without limitation, any patients of the Consultant, nor shall such
+                      person or entity have any right to seek, enforce, or recover any right or remedy with respect hereto.
+
+          1.38        Warranty of Authority. The person(s) executing this Agreement on behalf of the Parties, or representing
+                      themselves as executing this Agreement on behalf of a Party, warrant and guarantee that each has been duly
+                      authorized by the appropriate Party to execute this Agreement on behalf of the Party and to validly and legally
+                      bind the Party to all of its terms, performances, and provisions.
+
+          1.39        Certifications Required by Texas Law.
+
+                 a.   Taxable Entity. If Consultant is a taxable entity as defined by Chapter 171, Texas Tax Code (“Chapter 171”),
+                      then Consultant certifies that it is not delinquent in the payment of any taxes due under Chapter 171, is exempt
+                      from the payment of those taxes, or is an out-of-state taxable entity that is not subject to those taxes.
+                 b.   Child Support. Pursuant to Texas Family Code § 231.006, Consultant certifies it is not ineligible to receive the
+                      award of the Agreement or payments under the Agreement and acknowledges that the Agreement may be
+                      terminated and payment may be withheld if this certification is inaccurate.
+                 c.   No Trafficking. Pursuant to Texas Government Code § 2155.0061, Consultant certifies that the individual or
+                      business entity named in this Agreement is not ineligible to receive the Agreement and acknowledges that this
+                      Agreement may be terminated and payment withheld if this certification is inaccurate.
+                 d.   No Boycott. If this Agreement has a value of $100,000 or more to be paid wholly or partly from public funds of
+                      University, and if Consultant is a company, other than a sole proprietorship, with 10 or more full-time employees,
+                      then pursuant to Texas Government Code §§ 2271.002 and 2274.002, Consultant affirmatively states it does not
+                      and will not:
+                                      i. Boycott Israel during the term of this Agreement. In this paragraph, the terms “company” and
+                                         “boycott Israel” shall have the meanings described in Texas Government Code § 808.001.
+                                     ii. Boycott energy companies during the term of this Agreement. In this paragraph, the terms
+                                         “company” and “boycott energy companies” shall have the meanings described in Texas
+                                         Government Code § 809.001.
+                 e.   No Conflicts. Consultant certifies this Agreement is not prohibited under Texas Government Code § 2261.252(b)
+                      and agrees that if Consultant’s certification is or becomes untrue, this Agreement is void, and Consultant will not
+                      seek and waives its right to seek any legal or equitable remedy for past or future performance under this Agreement,
+                      including damages, whether under breach of contract, unjust enrichment, or any other legal theory; specific
+                      performance; and injunctive relief.
+                 f.   Compliance with Texas Government Code § 2274.002. If this Agreement has a value of $100,000 or more to be
+                      paid wholly or partly from public funds of University, and if Consultant is a company, other than a sole
+                      proprietorship, with 10 or more full-time employees, then pursuant to Texas Government Code § 2274.002,
+                      Consultant verifies it (1) does not have a practice, policy, guidance, or directive that discriminates against a firearm
+                      entity or firearm trade association; and (2) will not discriminate during the term of the contract against a firearm
+                      entity or trade association.
+          1.40        Foreign Adversaries. Pursuant to Executive Order No GA-48, as amended and/or codified, Consultant certifies
+                      that it, and—if applicable—its holding companies or subsidiaries, are not:
+                            g. Listed in Section 889 of the 2019 National Defense Authorization Act (“NDAA”); or
+                            h. Listed in Section 1260H of the 2021 NDAA; or
+                            i. Owned by the government of a country on the U.S. Department of Commerce's foreign adversaries list
+                                 under 15 C.F.R. § 791.4; or
+                            j. Controlled by any governing or regulatory body located in a country on the U.S. Department of
+                                 Commerce's foreign adversaries list under 15 C.F.R. § 791.4.
+
+          1.41        Limitations. THE PARTIES ARE AWARE THAT THERE MAY BE CONSTITUTIONAL AND STATUTORY
+                      LIMITATIONS ON THE AUTHORITY OF UNIVERSITY TO ENTER INTO CERTAIN TERMS AND
+                      CONDITIONS, INCLUDING TERMS AND CONDITIONS (IF ANY) RELATING TO LIENS ON
+                      UNIVERSITY’S PROPERTY; DISCLAIMERS AND LIMITATIONS OF WARRANTIES; DISCLAIMERS
+                      AND LIMITATIONS OF LIABILITY FOR DAMAGES; WAIVERS, DISCLAIMERS AND LIMITATIONS OF
+                      UNIVERSITY’S LEGAL RIGHTS, REMEDIES, REQUIREMENTS AND PROCESSES; LIMITATIONS OF
+solicitations@ttuhsc.edu                                           Page 25 of 41                                                      DOC1643828-002
+
+
+     *3KJFF0I-25* *3KJFF0I-25*  [***SL3821039 *18 *002302407767481909334692943583142184966383733589*25*41***]
+                                                                                                                                  739-SL3821039
+
+
+
+
+                     PERIODS TO BRING LEGAL ACTION; GRANTING CONTROL OF LITIGATION OR SETTLEMENT TO
+                     ANOTHER PARTY; LIABILITY FOR ACTS OR OMISSIONS OF THIRD PARTIES; PAYMENT OF
+                     ATTORNEYS’ FEES; DISPUTE RESOLUTION; INDEMNITIES; ANY PROVISION THAT CREATES AN
+                     UNKNOWN OR UNFUNDED LIABILITY; AND CONFIDENTIALITY (COLLECTIVELY, THE
+                     “LIMITATIONS”), AND TERMS AND CONDITIONS RELATED TO THE LIMITATIONS WILL NOT BE
+                     BINDING ON UNIVERSITY EXCEPT TO THE EXTENT AUTHORIZED BY THE LAWS AND
+                     CONSTITUTION OF THE STATE OF TEXAS.
+
+          1.42       Entire Agreement. This Agreement contains the entire agreement of the Parties concerning the subject matter
+                     described herein and there are no other promises or conditions in any other agreement whether oral or written
+                     concerning the subject matter described herein. This Agreement supersedes any prior written or oral agreements
+                     between the Parties concerning the subject matter described herein.
+
+          1.43       E-Signatures. This Agreement may be executed in two or more counterparts, each of which are deemed to be an
+                     original as against any Party whose signature appears thereon, but all of which together shall constitute but one
+                     and the same instrument. Signatures to this Agreement transmitted by facsimile, by electronic mail in “portable
+                     document format” (“.pdf”), or by any other electronic means which preserves the original graphic and pictorial
+                     appearance of the Agreement, have the same effect as physical delivery of the paper document bearing the original
+                     signature.
+
+          Texas Tech University
+          Health Sciences Center                                                       _________________________________
+
+
+
+
+          Signature                                                            Signature
+
+
+          Name                                                                 Name
+
+
+          Title                                                                Title
+
+
+          Date                                                                 Date
+
+
+
+
+solicitations@ttuhsc.edu                                       Page 26 of 41                                                   DOC1643828-002
+
+
+     *3KJFF0I-26* *3KJFF0I-26*[***SL3821039 *18 *002302407767481909334692943583142184966383733589*26*41***]
+                                                                                                             739-SL3821039
+
+
+
+
+                                                         EXHIBIT “A”
+                                                         Scope of Work
+
+
+
+
+solicitations@ttuhsc.edu                                 Page 27 of 41                                     DOC1643828-002
+
+
+     *3KJFF0I-27* *3KJFF0I-27*
+                           [***SL3821039 *18 *002302407767481909334692943583142184966383733589*27*41***]
+                                                                                                                                        739-SL3821039
+
+
+
+
+                                                    BUSINESS ASSOCIATE AGREEMENT
+
+                    This Business Associate Agreement (“Agreement”) is entered into on ___________________, between Texas
+          Tech University Health Sciences Center (“University” or “Covered Entity”) and ______________________________
+          (“Business Associate”). Both University and Business Associate are also referred to herein as “Party” or, collectively,
+          “Parties.”
+
+                                                                    Background
+
+                    Business Associate will provide services, and Covered Entity will make available and/or transfer to Business
+                     Associate certain Protected Health Information/Electronic Protected Health Information or PHI (hereinafter
+                     defined), the Use and Disclosure (hereinafter defined) of which is subject to the federal Standards for Privacy of
+                     Individually Identifiable Health Information, located at 45 CFR Parts 160 and 164 (“Privacy Rule”), and the terms
+                     and conditions set forth in this Agreement.
+
+                    Covered Entity and Business Associate agree to comply with the rights and obligations of a Covered Entity and a
+                     Business Associate, respectively, as set forth in the HIPAA and other federal rules and regulations (including,
+                     without limitation, (i) the Privacy Rule; (ii) the Security Standards for the Protection of Electronic Protected Health
+                     Information at 45 CFR 164.302 et. Seq. (“Security Rule”); (iii) the Health Information Technology for Economic
+                     and Clinical Health Act, Title XIII of the American Recovery and Reinvestment Act of 2009 (“HITECH Act”);
+                     and (iv) federal regulations promulgated by the Federal Trade Commission (FTC), including but not limited to 16
+                     CFR 681.2 (“Red Flag Rule”) with respect to the privacy and confidentiality of Protected Health Information
+                     contained in an Individual’s medical records.
+
+                    This Agreement is executed in conjunction with a service and/or purchase agreement between the Parties.
+
+                                                                     Agreement
+
+                  Now therefore, for good and valuable consideration, the receipt and sufficiency of which are hereby acknowledged,
+          Covered Entity and Business Associate agree as follows.
+
+
+                                                                     Definitions
+
+          1.44       The following terms used in this Agreement shall have the same meaning as those terms found in the HIPAA
+                     Privacy Rule, HIPAA Security Rule and the HITECH Act: Business Associate, Covered Entity, Data Aggregation,
+                     Designated Record Set, Disclosure, Electronic Protected Health Information (hereinafter “EPHI”), Breach,
+                     Disclosure, Individual, Limited Data Set, Physical Safeguards, Administrative Safeguards, Privacy Officer,
+                     Privacy Rule, Protected Health Information (hereinafter “PHI”), Required by Law, Secretary, Security Incident,
+                     Security Officer, Security Rule, Subcontractor, Technical Safeguards, Unsecured Protected Health Information,
+                     Use.
+
+          1.45       All references to PHI in this Agreement shall be construed to include EPHI.
+
+          1.46       The term “HHS” means The U.S. Department of Health and Human Services.
+
+          1.47       The term “Breach of System Security” means the unauthorized acquisition of computerized data that compromises
+                     the security, confidentiality, or integrity of PHI maintained by a person, including data that is encrypted if the
+                     person accessing the data has the key required to decrypt the data. Good faith acquisition of PHI by an employee
+                     or agent of the Business Associate for the purposes of the Business Associate is not a breach of system security
+                     unless the employee or agent of the Business Associate uses or discloses the sensitive personal information in an
+                     unauthorized manner. Tex. Bus, & Com. Code § 521.053(a).
+
+          1.48       The term “Public Domain Email Address” means any email address provided by a public domain email provider
+                     and/or internet service provider including, but not limited to, iCloud Mail, Zoho, AOL, Outlook Live, Gmail,
+                     Hotmail, Yahoo, AT&T, without a current and existing Business Associate Agreement that meets the requirements
+                     at 45 C.F.R. § 164.314(a).
+
+
+                                         Permitted Uses and Disclosures of PHI by Business Associate
+
+solicitations@ttuhsc.edu                                         Page 28 of 41                                                      DOC1643828-002
+
+
+     *3KJFF0I-28* *3KJFF0I-28* [***SL3821039 *18 *002302407767481909334692943583142184966383733589*28*41***]
+                                                                                                                                     739-SL3821039
+
+
+
+
+          1.49       Purpose Statement. Except as otherwise limited in this Agreement, Business Associate may use or disclose PHI
+                     on behalf of, or to provide services to, University for the following purpose(s), and to the extent that such use or
+                     disclosure of PHI would not violate this Agreement or applicable federal or state laws and regulations if done by
+                     University. The BAA is associated with the following service agreement/contract or purchase order (PO):
+
+                     HSC Contract/PO Number(s): ____________________________________________________________
+                     HSC Departments(s): ___________________________________________________________________
+                     HSC Campus(es): _____________________________________________________________________
+                     HSC Contact Info (Name/Tel #): _________________________________________________________
+                     Description of Service: _________________________________________________________________
+          1.50       Specific Use and Disclosure Provisions. Establish the permitted and required uses and disclosures of PHI by the
+                     Business Associate. The Business Associate Agreement may not authorize the Business Associate to use or further
+                     disclose the information in a manner that would violate the requirements of the Privacy Rule (45 CFR Part 160
+                     and Part 164, Subparts A and E), if done by the Covered Entity, except that:
+
+                     1.50.1   The BAA may permit the Business Associate to use PHI for the proper management and administration
+                              of the Business Associate or to carry out the legal responsibilities of the Business Associate.
+
+                     1.50.2   The BAA may permit the Business Associate to disclose PHI to third parties for the proper management
+                              and administration of the Business Associate or to carry out the legal responsibilities of the Business
+                              Associate if: (i) the disclosure is required by law; or (ii) the Business Associate obtains reasonable
+                              assurance from the third party to whom the information is disclosed that it will be held confidentially and
+                              used or further disclosed only as required by law or for the purposes for which it was disclosed to the
+                              third party and the third party notifies the Business Associate of any instances of which it is aware in
+                              which the confidentiality of the PHI has been breached.
+
+                                          (45 CFR § 164.504(e)(2)(i)(A)-(B) and 45 CFR § 164.504(e)(4)(i)-(ii))
+
+                     Business Associate may use or disclose PHI to report violations of law to appropriate federal and state authorities,
+                     consistent with 45 CFR 164.502(j)(1).
+
+
+                                                Obligations and Activities of Business Associate
+
+          1.51       Pursuant to the HITECH Act and implementing regulations, HIPAA Privacy Rule and Security Rule provisions
+                     and penalties shall be applicable to Business Associate to the same extent as University. (45 CFR §
+                     164.504(e)(2)(ii)(H)).
+
+          1.52       Privacy Obligations and Activities of Business Associate:
+
+                     1.52.1   Business Associate agrees to not use or further disclose PHI other than as permitted or required by this
+                              Agreement or as required by law. (45 CFR § 164.504(e)(2)(ii)(A) and 45 CFR § 164.103).
+
+                     1.52.2   Business Associate agrees to use appropriate safeguards and comply, where applicable, with 45 CFR Part
+                              160 and 164, Parts A and C with respect to electronic protected health information, to prevent use or
+                              disclosure of the information other than as provided for by its contract. (45 CFR § 164.504(e)(2)(ii)(B)).
+
+                     1.52.3   Business Associate agrees to report to University any use or disclosure of the information not provided
+                              for by the Business Associate Agreement of which it becomes aware, including breaches of unsecured
+                              protected health information as required by 45 CFR § 164.410. (45 CFR § 164.504(e)(2)(ii)(C)).
+
+                     1.52.4   Business Associate agrees, in accordance with 45 CFR §§ 164.502(e)(1)(ii) and 164.308(b)(2), to ensure
+                              that any subcontractors that create, receive, maintain, or transmit protected health information on behalf
+                              of the Business Associate agree to the same restrictions and conditions that apply to the Business
+                              Associate with respect to such information and agrees to comply with the applicable requirements of the
+                              Security Rule. (45 CFR §164.504(e)(2)(ii)(D) and 45 CFR § 164.314(a)(2)(i)(B)).
+
+solicitations@ttuhsc.edu                                        Page 29 of 41                                                     DOC1643828-002
+
+
+     *3KJFF0I-29* *3KJFF0I-29* [***SL3821039 *18 *002302407767481909334692943583142184966383733589*29*41***]
+                                                                                                                                    739-SL3821039
+
+
+
+
+                     1.52.5   Business Associate agrees to provide access to PHI in a Designated Record Set, at University’s request
+                              and in the time and manner designated by University. Such access will be provided to University, or as
+                              directed by University, to an individual in order to meet the requirements under 45 CFR § 164.524 (access
+                              of individuals to PHI). (45 CFR § 164.504(e)(2)(ii)(E)).
+
+                     1.52.6   Business Associate agrees to make available the protected health information for amendment and
+                              incorporate any amendments to PHI in accordance with 45 CFR § 164.526 (45 CFR §
+                              164.504(e)(2)(ii)(F)).
+
+                     1.52.7   Business Associate agrees to make available the information required to provide an accounting of
+                              disclosures in accordance with 45 CFR § 164.528, as amended by Section 13405(c) of the HITECH ACT.
+                              (45 CFR §164.504(e)(2)(ii)(G)).
+
+                     1.52.8   Business Associate agrees to make its internal practices, books, and records relating to the use and
+                              disclosure of protected health information received from, or created or received by the Business Associate
+                              on behalf of University available to the Secretary of the HHS for purposes of determining University’s
+                              compliance with the Privacy Rule. (45 CFR §164.504(e)(2)(ii)(I)).
+
+                     1.52.9   Business Associate agrees to apply the minimum necessary standard and implement policies with respect
+                              to the use of limited data sets. (45 CFR 160 and 45 CFR 164).
+
+                     1.52.10 Business Associate agrees to report to University any security incident of which it becomes aware,
+                             including any breach of unsecured protected health information as required by 45 CFR § 164.410 (45
+                             CFR § 164.314(a)(2)(i)(C)).
+
+                     1.52.11 Business Associate agrees to notify University’s Privacy Officer and Security Officer, in writing, after
+                             Business Associate’s discovery of any and all use and/or disclosure of the PHI that is not permitted or
+                             required by this Agreement of which Business Associate becomes aware within five (5) business days of
+                             the Business Associate’s discovery of such unauthorized use and/or disclosure, including security
+                             incident(s), unintentional use or disclosure of EPHI, breach of data, or breach of system security.
+
+                              1.52.11.1Identification of the individual(s) whose PHI has been, or is reasonably believed by the Business
+                                       Associate to have been, accessed, acquired, used, or disclosed during a breach;
+
+                              1.52.11.2Circumstances of the breach;
+
+                              1.52.11.3Persons who breached the PHI;
+
+                              1.52.11.4Date of the breach;
+
+                              1.52.11.5Date of the discovery;
+
+                              1.52.11.6Type of PHI involved (such as full name, Social Security number, date of birth, home address,
+                                       account number, or medical record number);
+
+                              1.52.11.7Corrective action taken; and
+
+                              1.52.11.8Other additional information University requests.
+
+                                       (45 CFR §§ 164.400-414)
+
+                     1.52.12 Business Associate will provide the notifications to University of any Breach as required by law and
+                             cooperate with University in any such notification with respect to required information for the notice to
+                             individuals. (45 CFR §§ 164.400-414).
+
+          1.53       Security Obligations and Activities of Business Associate
+
+                     1.53.1   Business Associate may receive from University, or create or receive or maintain on behalf of University,
+
+solicitations@ttuhsc.edu                                        Page 30 of 41                                                    DOC1643828-002
+
+
+     *3KJFF0I-30* *3KJFF0I-30*[***SL3821039 *18 *002302407767481909334692943583142184966383733589*30*41***]
+                                                                                                                                     739-SL3821039
+
+
+
+
+                              health information that is protected under applicable state and/or federal law, including without
+                              limitation, PHI. Business Associate agrees not to use or disclose (or permit the use or disclosure of) PHI
+                              in a manner that would violate the HIPAA Security Standards, the HITECH Act, or Texas law, including
+                              without limitation the provisions of Texas Health and Safety Code Chapters 181 and 182 as amended by
+                              HB 300 (82nd Legislature), effective September 1, 2012, in each case including any implementing
+                              regulations as applicable if the PHI were used or disclosed by University in the same manner.
+
+                     1.53.2   Business Associate will use appropriate safeguards to prevent the use or disclosure of PHI other than as
+                              expressly permitted under this Agreement. Business Associate will implement administrative, physical,
+                              and technical safeguards that reasonably and appropriately protect the confidentiality, integrity, and
+                              availability of the PHI that it creates, receives, maintains, or transmits on behalf of Covered Entity.
+                              Business Associate acknowledges that the HITECH Act requires Business Associate to comply with 45
+                              C.F.R. §§164.308, 164.310, 164.312 and 164.316 as if Business Associate were a Covered Entity, and
+                              Business Associate agrees to comply with these provisions of the Security Standards and all additional
+                              security provisions of the HITECH Act.
+
+                     1.53.3   To the extent feasible, Business Associate will use commercially reasonable efforts to secure PHI through
+                              technology safeguards that render such PHI unusable, unreadable, and indecipherable to individuals
+                              unauthorized to acquire or otherwise have access to such PHI in accordance with HHS Guidance
+                              published at 74 Federal Register 19006 (April 17, 2009), or such later regulations or guidance
+                              promulgated by HHS or issued by the National Institute for Standards and Technology (“NIST”)
+                              concerning the protection of identifiable data such as PHI.
+
+                     1.53.4   Business Associate agrees to implement reasonable systems for the discovery and prompt reporting to
+                              Covered Entity of any “breach” of “unsecured PHI” as those terms are defined by 45 C.F.R. §164.402.
+
+                     1.53.5   Under no circumstances may Business Associate sell PHI in such a way as to violate Texas Health and
+                              Safety Code, Chapter 181.153, as amended by HB 300 (82nd Legislature), effective September 1, 2012,
+                              nor shall Business Associate use PHI for marketing purposes in such as manner as to violate Texas Health
+                              and Safety Code Section 181.152, or attempt to re-identify any information in violation of Texas Health
+                              and Safety Code Section 181.151, regardless of whether such action is on behalf of or permitted by the
+                              University. To the extent not otherwise prohibited in the Business Arrangements or by applicable law,
+                              use, creation, and disclosure of de-identified health information, as that term is defined in 45 CFR §
+                              164.514, by Business Associate is permitted.
+
+                     1.53.6   In addition to the foregoing and notwithstanding anything to the contrary herein, Business Associate will
+                              also comply with applicable state law, including without limitation, Section 521 Texas Business and
+                              Commerce Code, as amended by HB 300 (82nd Legislature), or such other laws or regulations as may
+                              later be amended or adopted. In the event of any conflict between the HIPAA Security Rule, the HITECH
+                              ACT, Texas laws, and any other later amended or adopted laws or regulations, the most stringent
+                              requirements shall govern.
+
+                     1.53.7   Business Associate agrees to mitigate, to the extent commercially practical, harmful effects that are
+                              known to Business Associate and is the result of a use or disclosure of PHI by Business Associate in
+                              violation of this Agreement.
+
+                     1.53.8   Business Associate agree to make its internal practices, books, and records relating to the use and
+                              disclosure of protected health information received from, or created or received by the Business Associate
+                              on behalf of University, available to University for purposes of vendor risk assessment and to the
+                              Secretary of the HHS for purposes of determining Business Associate's and University’s compliance with
+                              the Security Rule.
+
+                     1.53.9   Business Associate agrees that it will provide training to all persons who act on its behalf, including
+                              employees, agents, and others in its workforce who have access to PHI, on policies and procedures with
+                              respect to the uses and disclosures of PHI so as to carry out their function within the Business Associate.
+
+
+
+solicitations@ttuhsc.edu                                        Page 31 of 41                                                     DOC1643828-002
+
+
+     *3KJFF0I-31* *3KJFF0I-31*[***SL3821039 *18 *002302407767481909334692943583142184966383733589*31*41***]
+                                                                                                                                     739-SL3821039
+
+
+
+
+                     1.53.10 Business Associate agrees that it will not access, store, share, transmit, receive, or disclose University’s
+                             PHI through any form of public domain email address.
+
+                     1.53.11 Nothing in this BAA shall permit the Business Associate to access, store, share, maintain, transmit, use,
+                             or disclose PHI in any form via any medium with any entity or person, including the Business Associate's
+                             employees and Subcontractors, beyond the boundaries and jurisdiction of the United States without
+                             express written authorization from University.
+
+          1.54       Other Obligations and Activities of Business Associate
+
+                     1.54.1   To the extent Business Associate is a Creditor as defined in the FTC Red Flag Rules, as may be amended
+                              (16 CFR Part 681) with respect to its use and disclosure of PHI under this Agreement, Business Associate
+                              agrees that it will comply with the FTC Red Flag Rules, including, but not limited to a written program
+                              to prevent, detect, and mitigate identity theft.
+
+
+                                   Electronic Transactions and Code Set Standards for Business Associate
+
+          1.55       If Business Associate conducts any Standard Transaction for, or on behalf of, the Covered Entity, Business
+                     Associate shall comply, and shall require any subcontractor or agent conducting such Standard Transaction to
+                     comply, with each applicable requirement of 45 CFR Part 162.923(c).
+
+          1.56       In accordance with 45 CFR Part 162.915, Business Associate shall not enter into, or permit its subcontractors or
+                     agents to enter into, any agreement in connection with the conduct of Standard Transaction for, or on behalf of,
+                     University that:
+
+                     1.56.1   Change the definition, data condition or use of a data element or segment in a standard;
+
+                     1.56.2   Add any data elements or segments to the maximum defined data set;
+
+                     1.56.3   Use any code or data elements that are either marked “not used” in the standard’s implementation
+                              specification or are not in the standard’s implementation specification(s); or
+
+                     1.56.4   Change the meaning or intent of the standard’s implementation specification(s).
+
+
+                                                           Notice of Privacy Practices
+
+          1.57       University agrees to make available its current HIPAA Notice of Privacy Practices at
+                     https://hscweb.ttuhsc.edu/compliance/documents/hipaa/forms/NPP_2016.pdf. Business Associate is responsible
+                     to review and comply with the uses and disclosures as set forth by 45 CFR 164.520.
+
+          1.58       University shall provide Business Associate with any changes in, or revocation of, permission by an Individual to
+                     use or disclose PHI given to University, if such changes or revocation affect Business Associate's permitted or
+                     required uses and disclosures PHI.
+
+
+                                                       Permissible Requests by University
+
+          1.59       University shall not request Business Associate to use or disclose PHI in any manner that would not be permissible
+                     under the Privacy Rule, the Security Rule, the HITECH Act, or applicable state law if done by University. (45 CFR
+                     164.504(e)(2)(i)).
+
+          1.60       University may request Business Associate to provide data aggregation services relating to the health care
+                     operations of University. (45 CFR 164.504(e)(2)(i)(B)).
+
+          1.61       University may use protected health information to create information that is not individually identifiable health
+                     information or disclose protected health information to Business Associate for such purpose of this Agreement,
+                     whether or not the de-identified information is to be used by University. (45 CFR § 164.502(d)(1)).
+
+solicitations@ttuhsc.edu                                        Page 32 of 41                                                     DOC1643828-002
+
+
+     *3KJFF0I-32* *3KJFF0I-32* [***SL3821039 *18 *002302407767481909334692943583142184966383733589*32*41***]
+                                                                                                                                        739-SL3821039
+
+
+
+
+          1.62       University may use protected health information to create a limited data set that meets the requirements of 45 CFR
+                     § 514(e)(2) or disclose protected health information to Business Associate for such purpose of this Agreement,
+                     whether or not the limited data set is to be used by University. (45 CFR § 164.514(e)(3)(ii)).
+
+
+                                                             Term and Termination
+
+          1.63       Term. The Term of this Agreement shall be effective as of the date set forth on page one of this Agreement and
+                     continue until August 31 of that fiscal year.
+
+                     1.63.1   Unless terminated, this Agreement shall be automatically renewed for one year periods starting
+                              September 1 of each year, so as not to terminate until all of the PHI provided by University to Business
+                              Associate, or created or received by Business Associate on behalf of University, is destroyed or returned
+                              to University, or, if it is infeasible to return or destroy PHI, protections are extended to such information,
+                              in accordance with the termination provisions in this Section.
+
+          1.64       Termination for Cause.
+
+                     1.64.1   Upon University’s knowledge of a breach by Business Associate (“Breaching Party”), in coordination
+                              with the Business Associate, University may investigate the breach and provide an opportunity for the
+                              Business Associate to cure the breach or end the violation. If Business Associate does not cure the breach
+                              or end the violation within the time specified by University, University may terminate this Agreement
+                              and any agreement identified in Section 2.1, upon written notice.
+
+                     1.64.2   Either Party may immediately terminate this Agreement upon written notice, if the other Party has
+                              breached a material term of this Agreement and cure of the breach is not possible. (45 CFR §
+                              164.504(e)(2)(iii)).
+
+                     1.64.3   If neither termination nor cure is feasible, the non-breaching Party shall report the violation to the
+                              Secretary of the HHS.
+
+          1.65       Effect of Termination. Upon termination of this Agreement, Business Associate agrees:
+
+                     1.65.1   To return to University or to destroy all PHI received from University, or created or received by Business
+                              Associate on behalf of University that the Business Associate or its subcontractors still maintains in any
+                              form and retain no copies of such information. Business Associate agrees that all paper, film, or other
+                              hard copy media shall be shredded or destroyed such that it may not be reconstructed, and PHI shall be
+                              purged or destroyed concurrent with NIST Guidelines for Media Sanitization (NIST SP 800-88); or
+
+                     1.65.2   In the case where return or destruction of PHI is not feasible to return or destroy, extend the protections
+                              of this Agreement to the information and limit further uses and disclosures to those purposes that make
+                              the return or destruction of the information infeasible. This provision shall apply to PHI that is in the
+                              possession of subcontractors or agents of Business Associate. (45 CFR §§ 164.504(e)(2)(ii)(J) and
+                              164.504(e)(5)).
+
+                     In the event that Business Associate determines that returning or destroying the PHI is not feasible, Business
+                     Associate shall provide to University notification of the conditions that make return or destruction infeasible.
+
+
+                                                                    Disclaimer
+
+          1.66       UNIVERSITY MAKES NO WARRANTY OR REPRESENTATION THAT COMPLIANCE BY BUSINESS
+                     ASSOCIATE WITH THIS AGREEMENT OR THE HIPAA OR HITECH REGULATIONS WILL BE
+                     ADEQUATE OR SATISFACTORY FOR BUSINESS ASSOCIATE’S OWN PURPOSES OR THAT ANY
+                     INFORMATION IN THE POSSESSION OF BUSINESS ASSOCIATE OR SUBJECT TO ITS CONTROL, OR
+                     TRANSMITTED OR RECEIVED BY THE BUSINESS ASSOCIATE, IS OR WILL BE SECURE FROM
+                     UNAUTHORIZED USE OR DISCLOSURE. BUSINESS ASSOCIATE IS SOLELY RESPONSIBLE FOR ALL
+                     DECISIONS MADE BY BUSINESS ASSOCIATE REGARDING THE SAFEGUARDING OF PHI OR EPHI.
+
+solicitations@ttuhsc.edu                                         Page 33 of 41                                                      DOC1643828-002
+
+
+     *3KJFF0I-33* *3KJFF0I-33*[***SL3821039 *18 *002302407767481909334692943583142184966383733589*33*41***]
+                                                                                                                                        739-SL3821039
+
+
+
+
+                                                            Indemnification/Insurance
+
+          1.67       Business Associate will indemnify and hold harmless University and University’s employees, subcontractors,
+                     agents, or other members of University’s workforce against all actual and direct losses, liabilities, costs, and
+                     damages suffered by the University and all liability to third parties arising from or in connection with any security
+                     incidents or breach of this Agreement or of any warranty hereunder or from any negligence or wrongful acts or
+                     omissions, including failure to perform its obligations under the Privacy Rule, the Security Rule, or the HITECH
+                     Act by Business Associate or its employees, subcontractors, agents, or other members of Business Associate's
+                     workforce.
+
+          1.68       Business Associate represents and warrants that it maintains a policy or program of insurance at levels sufficient
+                     to support the Business Associate’s indemnification obligations and duties assumed under this Agreement. Upon
+                     request, Business Associate shall provide evidence of its insurance.
+
+
+                                                                General Provisions
+
+          1.69       Regulatory References. A reference in this Agreement to HIPAA, HITECH, or a cite or section in the Privacy
+                     Rule or Security Rule means the section as is in effect or as may be amended.
+
+          1.70       Amendment. The Parties agree to take such action as is necessary to amend this Agreement from time to time as
+                     is necessary for University to comply with the requirements of applicable federal and state laws and regulations
+                     (including, but not limited to, the Privacy Rule, Security Rule, HIPAA, and HITECH, and as these may be
+                     amended). Any amendment to this Agreement shall be in writing and attached hereto.
+
+          1.71       Interpretation. Any ambiguity in this Agreement shall be resolved in favor of a meaning that permits University
+                     to comply with the federal and state laws referenced in Article 10.2 above.
+
+          1.72       Survival. The obligations of Business Associate under this Agreement shall survive the expiration, termination,
+                     or cancellation of this Agreement.
+
+          1.73       Assignment. Business Associate shall not have the right to assign or transfer its rights and obligations under this
+                     Agreement to any third party without prior written consent of University.
+
+          1.74       Force Majeure. “Event of Force Majeure” means an event beyond the control of Business Associate or University
+                     which prevents or makes a party’s compliance with any of its obligations under this Agreement illegal or
+                     impracticable, including but not limited to: act of God (including, without limitation, fire, explosion, earthquake,
+                     tornado, drought, and flood); war, act or threats of terrorism, hostilities (whether or not war be declared), invasion,
+                     act of enemies, mobilization, requisition, or embargo; rebellion, insurrection, military or usurped power, or civil
+                     war; contamination or destruction from any nuclear, chemical, or biological event; riot, commotion, strikes, go
+                     slows, lock outs, or disorder; epidemic, pandemic, viral outbreak, or health crisis; or directive of governmental
+                     authority. No party will be considered in breach of this Agreement to the extent that performance of their respective
+                     obligations is prevented or made illegal or impracticable by an Event of Force Majeure that arises during the term
+                     (or after execution of the Agreement but prior to the beginning of the term). A party asserting an Event of Force
+                     Majeure hereunder (“Affected Party”) will give reasonable notice to the other party of an Event of Force Majeure
+                     upon it being foreseen by, or becoming known to, Affected Party. In the event of an Event of Force Majeure,
+                     Affected Party will endeavor to continue to perform its obligations under the Agreement only so far as reasonably
+                     practicable.
+
+          1.75       Severability. If any term or provision of this Agreement is held to be invalid for any reason, the invalidity of that
+                     section shall not affect the validity of any other section of this Agreement, provided that any invalid provision is
+                     not material to the overall purpose and operation of this Agreement, and the remaining provisions of this
+                     Agreement shall continue in full force and effect and shall in no way be affected, impaired, or invalidated.
+
+          1.76       Binding Effect. This Agreement shall be binding upon, and shall extend to the benefit of, the Parties hereto and
+
+solicitations@ttuhsc.edu                                         Page 34 of 41                                                      DOC1643828-002
+
+
+     *3KJFF0I-34* *3KJFF0I-34* [***SL3821039 *18 *002302407767481909334692943583142184966383733589*34*41***]
+                                                                                                                                      739-SL3821039
+
+
+
+
+                     their respective permitted successors and assigns.
+
+          1.77       Execution. This Agreement may be executed in multiple counterparts, each of which shall constitute an original
+                     and all of which shall constitute but one Agreement.
+
+          1.78       Independent Contractor. Nothing in this Agreement is intended nor shall be construed to create an
+                     employer/employee relationship between University and Business Associate. The sole interest and responsibility
+                     of the Parties is to perform services and obligations under this Agreement as independent contractors in a
+                     competent, efficient, and satisfactory manner.
+
+          1.79       Venue; Governing Law. This Agreement is governed by and construed and enforced in accordance with the laws
+                     of the State of Texas. Pursuant to Section 109.005 of the Texas Education Code, the County in which University’s
+                     Chief Executive Officer is located shall be the sole proper place of venue for any legal action or proceeding arising
+                     out of this Contract or the enforcement of any provision in this Agreement.
+
+          1.80       Limitations. THE PARTIES ARE AWARE THAT THERE MAY BE CONSTITUTIONAL AND STATUTORY
+                     LIMITATIONS ON THE AUTHORITY OF UNIVERSITY TO ENTER INTO CERTAIN TERMS AND
+                     CONDITIONS, INCLUDING TERMS AND CONDITIONS (IF ANY) RELATING TO LIENS ON
+                     UNIVERSITY’S PROPERTY; DISCLAIMERS AND LIMITATIONS OF WARRANTIES; DISCLAIMERS
+                     AND LIMITATIONS OF LIABILITY FOR DAMAGES; WAIVERS, DISCLAIMERS AND LIMITATIONS OF
+                     UNIVERSITY’S LEGAL RIGHTS, REMEDIES, REQUIREMENTS AND PROCESSES; LIMITATIONS OF
+                     PERIODS TO BRING LEGAL ACTION; GRANTING CONTROL OF LITIGATION OR SETTLEMENT TO
+                     ANOTHER PARTY; LIABILITY FOR ACTS OR OMISSIONS OF THIRD PARTIES; PAYMENT OF
+                     ATTORNEYS’ FEES; DISPUTE RESOLUTION; INDEMNITIES; ANY PROVISION THAT CREATES AN
+                     UNKNOWN OR UNFUNDED LIABILITY; AND CONFIDENTIALITY (COLLECTIVELY, THE
+                     “LIMITATIONS”), AND TERMS AND CONDITIONS RELATED TO THE LIMITATIONS WILL NOT BE
+                     BINDING ON UNIVERSITY EXCEPT TO THE EXTENT AUTHORIZED BY THE LAWS AND
+                     CONSTITUTION OF THE STATE OF TEXAS.
+
+          1.81       Notices. Any notice or notification required to be provided under this Agreement by either Party shall be made to
+                     the following individuals. The person(s) executing this Agreement on behalf of the Parties, or representing
+                     themselves as executing this Agreement on behalf of a Party, warrant and guarantee that each has been duly
+                     authorized by the appropriate Party to execute this Agreement on behalf of the Party and to validly and legally
+                     bind the Party to all of its terms, performances, and provisions.
+
+                     TTUHSC (Covered Entity):
+                     TTUHSC Institutional Privacy Officer                           TTUHSC Information Security Officer
+                     3601 4th Street, STOP 8165                                     3601 4th Street, STOP 9083
+                     Lubbock, Texas 79430-8165                                      Lubbock, Texas 79430-9083
+                     (806) 743-4007                                                 (806) 743-7103
+
+
+
+
+solicitations@ttuhsc.edu                                         Page 35 of 41                                                     DOC1643828-002
+
+
+     *3KJFF0I-35* *3KJFF0I-35* [***SL3821039 *18 *002302407767481909334692943583142184966383733589*35*41***]
+                                                                                                                  739-SL3821039
+
+
+
+
+                     Business Associate:
+                     Name of Business:
+                     Attention:
+                     Title:
+                     Address:
+                     Phone:
+                     Email:
+
+           Texas Tech University
+           Health Sciences Center
+                                                                               [INSERT FULL LEGAL NAME OF BUSINESS
+                                                                               ASSOCIATE]
+
+
+
+
+          Signature                                                           Signature
+
+
+          Printed Name                                                        Printed Name
+
+
+          Title                                                               Title
+
+
+          Date                                                                Date
+
+
+
+
+solicitations@ttuhsc.edu                                      Page 36 of 41                                     DOC1643828-002
+
+
+     *3KJFF0I-36* *3KJFF0I-36*  [***SL3821039 *18 *002302407767481909334692943583142184966383733589*36*41***]
+                                                                                                                                                             739-SL3821039
+
+
+
+
+                                                                    APPENDIX B
+                                                                EXECUTION OF OFFER
+          THIS EXECUTION OF OFFER MUST BE COMPLETED, SIGNED AND RETURNED WITH PROPOSER'S PROPOSAL. FAILURE
+          TO COMPLETE, SIGN AND RETURN THIS EXECUTION OF OFFER WITH THE PROPOSER’S PROPOSAL MAY RESULT IN
+          THE REJECTION OF THE PROPOSAL.
+
+                     1.1        By signature hereon, Proposer represents and warrants the following:
+                     1.1.1      Proposer acknowledges and agrees that (1) this RFP is a solicitation for a proposal and is not a contract or an offer to contract;
+                                (2) the submission of a proposal by Proposer in response to this RFP will not create a contract between TTUHSC and
+                                Proposer; (3) TTUHSC has made no representation or warranty, written or oral, that one or more contracts with TTUHSC
+                                will be awarded under this RFP; and (4) Proposer will bear, as its sole risk and responsibility, any cost arising from Proposer’s
+                                preparation of a response to this RFP.
+
+                     1.1.2      Proposer is a reputable company that is lawfully and regularly engaged in providing the Services.
+
+                     1.1.3      Proposer has the necessary experience, knowledge, abilities, skills, and resources to provide the Services.
+
+                     1.1.4      Proposer is aware of, is fully informed about, and is in full compliance with all applicable federal, state and local laws, rules,
+                                regulations and ordinances.
+
+                     1.1.5      Proposer understands (i) the requirements and specifications set forth in this RFP and (ii) the terms and conditions set forth
+                                in the Agreement under which Proposer will be required to operate.
+
+                     1.1.6      If selected by TTUHSC, Proposer will not delegate any of its duties or responsibilities under this RFP or the Agreement to
+                                any sub-contractor, except as expressly provided in the Agreement.
+
+                     1.1.7      If selected by TTUHSC, Proposer will maintain any insurance coverage as required by the Agreement during the term thereof.
+
+                     1.1.8      All statements, information and representations prepared and submitted in response to this RFP are current, complete, true
+                                and accurate. Proposer acknowledges that TTUHSC will rely on such statements, information and representations in selecting
+                                Contractor. If selected by TTUHSC, Proposer will notify TTUHSC immediately of any material change in any matters with
+                                regard to which Proposer has made a statement or representation or provided information.
+
+                     1.1.9      PROPOSER WILL DEFEND WITH COUNSEL APPROVED BY TTUHSC, INDEMNIFY, AND HOLD HARMLESS TTUHSC, THE TEXAS
+                                TECH UNIVERSITY SYSTEM, THE STATE OF TEXAS, AND ALL OF THEIR REGENTS, OFFICERS, AGENTS AND EMPLOYEES, FROM
+                                AND AGAINST ALL ACTIONS, SUITS, DEMANDS, COSTS, DAMAGES, LIABILITIES AND OTHER CLAIMS OF ANY NATURE, KIND OR
+                                DESCRIPTION, INCLUDING REASONABLE ATTORNEYS’ FEES INCURRED IN INVESTIGATING, DEFENDING OR SETTLING ANY OF
+                                THE FOREGOING, ARISING OUT OF, CONNECTED WITH, OR RESULTING FROM ANY NEGLIGENT ACTS OR OMISSIONS OR WILLFUL
+                                MISCONDUCT OF PROPOSER OR ANY AGENT, EMPLOYEE, SUBCONTRACTOR, OR SUPPLIER OF PROPOSER IN THE EXECUTION OR
+                                PERFORMANCE OF ANY CONTRACT OR AGREEMENT RESULTING FROM THIS RFP.
+
+                     1.1.10     Pursuant to Sections 2107.008 and 2252.903, Government Code, any payments owing to Proposer under any contract or
+                                agreement resulting from this RFP may be applied directly to any debt or delinquency that Proposer owes the State of Texas
+                                or any agency of the State of Texas regardless of when it arises, until such debt or delinquency is paid in full.
+
+          1.2        By signature hereon, Proposer offers and agrees to furnish the Services to TTUHSC and comply with all terms, conditions, requirements
+                     and specifications set forth in this RFP.
+
+          1.3        By signature hereon, Proposer affirms that it has not given or offered to give, nor does Proposer intend to give at any time hereafter, any
+                     economic opportunity, future employment, gift, loan, gratuity, special discount, trip, favor or service to a public servant in connection
+                     with its submitted proposal. Failure to sign this Execution of Offer, or signing with a false statement, may void the submitted proposal
+                     or any resulting contracts, and the Proposer may be removed from all proposal lists at TTUHSC.
+
+          1.4        By signature hereon, Proposer certifies that it is not currently delinquent in the payment of any taxes due under Chapter 171, Tax Code,
+                     or that Proposer is exempt from the payment of those taxes, or that Proposer is an out-of-state taxable entity that is not subject to those
+                     taxes, whichever is applicable. A false certification will be deemed a material breach of any resulting contract or agreement and, at
+                     TTUHSC's option, may result in termination of any resulting contract or agreement.
+
+          1.5        By signature hereon, Proposer hereby certifies that neither Proposer nor any firm, corporation, partnership or institution represented by
+                     Proposer, or anyone acting for such firm, corporation or institution, has violated the antitrust laws of the State of Texas, codified in
+                     Section 15.01, et seq., Business and Commerce Code, or the Federal antitrust laws, nor communicated directly or indirectly the proposal
+                     made to any competitor or any other person engaged in such line of business.
+
+          1.6        By signature hereon, Proposer certifies that the individual signing this document and the documents made a part of this RFP, is authorized
+                     to sign such documents on behalf of Proposer and to bind Proposer under any agreements and other contractual arrangements that may
+                     result from the submission of Proposer’s proposal.
+
+
+
+solicitations@ttuhsc.edu                                                 Page 37 of 41                                                                   DOC1643828-002
+
+
+     *3KJFF0I-37* *3KJFF0I-37*   [***SL3821039 *18 *002302407767481909334692943583142184966383733589*37*41***]
+                                                                                                                                                             739-SL3821039
+
+
+
+
+          1.7        By signature hereon, Proposer certifies as follows:
+
+                     "Under Section 231.006, Family Code, relating to child support, Proposer certifies that the individual or business entity named in the
+                     Proposer’s proposal is not ineligible to receive the specified contract award and acknowledges that any agreements or other contractual
+                     arrangements resulting from this RFP may be terminated if this certification is inaccurate."
+
+          1.8        By signature hereon, Proposer certifies that (i) no relationship, whether by blood, marriage, business association, capital funding
+                     agreement or by any other such kinship or connection exists between the owner of any Proposer that is a sole proprietorship, the officers
+                     or directors of any Proposer that is a corporation, the partners of any Proposer that is a partnership, the joint venturers of any Proposer
+                     that is a joint venture or the members or managers of any Proposer that is a limited liability company, on one hand, and an employee of
+                     any component of The Texas Tech University System, on the other hand, other than the relationships which have been previously
+                     disclosed to TTUHSC in writing; (ii) Proposer has not been an employee of any component institution of The Texas Tech University
+                     System within the immediate twelve (12) months prior to the Submittal Deadline; and (iii) no person who, in the past four (4) years
+                     served as an executive of a state agency was involved with or has any interest in Proposer’s proposal or any contract resulting from this
+                     RFP (ref. Section 669.003, Government Code). All disclosures by Proposer in connection with this certification will be subject to
+                     administrative review and approval before TTUHSC enters into a contract or agreement with Proposer.
+
+          1.9        By signature hereon, Proposer certifies that in accordance with Section 2155.004, Government Code, no compensation has been received
+                     for its participation in the preparation of the requirements or specifications for this RFP. In addition, Proposer certifies that an award of
+                     a contract to Proposer will not violate Section 2155.006, Government Code, prohibiting TTUHSC from entering into a contract that
+                     involves financial participation by a person who, during the previous five years, has been convicted of violating federal law or assessed
+                     a penalty in a federal civil or administrative enforcement action in connection with a contract awarded by the federal government for
+                     relief, recovery, or reconstruction efforts as a result of Hurricane Rita, Hurricane Katrina, or any other disaster occurring after September
+                     24, 2005. Pursuant to Sections 2155.004 and 2155.006, Government Code, Proposer certifies that Proposer is not ineligible to receive
+                     the award of or payments under the Agreement and acknowledges that the Agreement may be terminated and payment withheld if these
+                     certifications are inaccurate.
+
+          1.10       By signature hereon, Proposer certifies its compliance with all federal laws and regulations pertaining to Equal Employment
+                     Opportunities and Affirmative Action.
+
+          1.11       By signature hereon, Proposer represents and warrants that all products and services offered to TTUHSC in response to this RFP meet
+                     or exceed the safety standards established and promulgated under the Federal Occupational Safety and Health Law (Public Law 91-596)
+                     and the Texas Hazard Communication Act, Chapter 502, Health and Safety Code, and all related regulations in effect or proposed as of
+                     the date of this RFP.
+
+          1.12       Proposer will and has disclosed, as part of its proposal, any exceptions to the certifications stated in this Execution of Offer. All such
+                     disclosures will be subject to administrative review and approval prior to the time TTUHSC makes an award or enters into any contract
+                     or agreement with Proposer.
+
+          1.13       Proposer certifies it is not prohibited under Tex. Gov’t Code §2261.252(b) and agrees that if Proposer’s certification is or becomes
+                     untrue, any resulting Agreement is void, and Proposer will not seek and waives its right to seek any legal or equitable remedy for past
+                     or future performance under any resulting Agreement, including damages, whether under breach of contract, unjust enrichment, or any
+                     other legal theory; specific performance; and injunctive relief.
+
+          NOTICE: WITH FEW EXCEPTIONS, INDIVIDUALS ARE ENTITLED ON REQUEST TO BE INFORMED ABOUT THE INFORMATION THAT
+          GOVERNMENTAL BODIES OF THE STATE OF TEXAS COLLECT ABOUT SUCH INDIVIDUALS. UNDER SECTIONS 552.021 AND 552.023,
+          GOVERNMENT CODE, INDIVIDUALS ARE ENTITLED TO RECEIVE AND REVIEW SUCH INFORMATION. UNDER SECTION 559.004, GOVERNMENT
+          CODE, INDIVIDUALS ARE ENTITLED TO HAVE GOVERNMENTAL BODIES OF THE STATE OF TEXAS CORRECT INFORMATION ABOUT SUCH
+          INDIVIDUALS THAT IS INCORRECT.
+
+          Submitted and Certified By:
+
+
+          (Proposer Institution’s Name)
+
+
+          (Signature of Duly Authorized Representative)
+
+
+          (Printed Name/Title)
+
+
+          (Date Signed)
+
+
+          (Proposer’s Street Address)
+
+
+          (City, State, Zip Code)
+
+
+          (Telephone Number)
+
+solicitations@ttuhsc.edu                                                   Page 38 of 41                                                                 DOC1643828-002
+
+
+     *3KJFF0I-38* *3KJFF0I-38*      [***SL3821039 *18 *002302407767481909334692943583142184966383733589*38*41***]
+                                                                                                             739-SL3821039
+
+
+
+
+                                                    APPENDIX C
+                                           VetHUB SUBCONTRACTING PLAN
+
+          Please visit the following link to fill out and print the required VetHUB Subcontracting Plan.
+
+          General Reference Documents
+          http://www.fiscal.ttuhsc.edu/purchasing/hub/resources.aspx
+
+          VetHUB Subcontracting Plan
+          https://comptroller.texas.gov/purchasing/docs/hub-forms/hsp-allfms.pdf
+
+
+
+
+solicitations@ttuhsc.edu                                 Page 39 of 41                                     DOC1643828-002
+
+
+     *3KJFF0I-39* *3KJFF0I-39*
+                           [***SL3821039 *18 *002302407767481909334692943583142184966383733589*39*41***]
+                                                                                                                 739-SL3821039
+
+
+
+
+                                                      APPENDIX D
+                                                  ADDENDA CHECKLIST
+
+
+          Proposal of: ___________________________________
+                         (Proposer Company Name)
+
+          To: Texas Tech University Health Sciences Center
+
+          RFP No.: RFP 739-SL3821039
+
+
+          The undersigned Proposer hereby acknowledges receipt of the following Addenda to the captioned
+          RFP (initial if applicable).
+
+                           No. 1 _____     No. 2 _____       No. 3 _____      No. 4 _____        No. 5 _____
+
+
+                                                             Respectfully submitted,
+
+
+                                                             By: ___________________________
+                                                                 (Authorized Signature)
+
+                                                             Name: _________________________
+
+
+                                                             Title: __________________________
+
+
+                                                             Date: _____________________
+
+
+
+
+solicitations@ttuhsc.edu                                 Page 40 of 41                                         DOC1643828-002
+
+
+     *3KJFF0I-40* *3KJFF0I-40*
+                           [***SL3821039 *18 *002302407767481909334692943583142184966383733589*40*41***]
+                                                                                                             739-SL3821039
+
+
+
+
+                                                   APPENDIX E
+                                           TTUHSC VENDOR INFORMATION
+
+          For information on TTUHSC purchase processes, please consider visiting the following:
+
+          http://www.fiscal.ttuhsc.edu/purchasing/vendors.aspx
+
+
+          Campus maps are available at the following link:
+
+          https://www.ttuhsc.edu/maps-directions/default.aspx#
+
+
+
+
+solicitations@ttuhsc.edu                                 Page 41 of 41                                     DOC1643828-002
+
+
+     *3KJFF0I-41* *3KJFF0I-41*
+                           [***SL3821039 *18 *002302407767481909334692943583142184966383733589*41*41***]
+
