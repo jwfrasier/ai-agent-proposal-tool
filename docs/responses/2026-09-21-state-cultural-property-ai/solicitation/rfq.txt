@@ -1,0 +1,1658 @@
+                                                                                                          Document Number: 19AQMM26Q0468 PROCESSED Page 1 of 26
+
+
+
+REQUEST FOR QUOTATION                                                THIS RFQ      X IS          IS NOT A SMALL BUSINESS SET-ASIDE
+                                                                                                                                                                PAGE OF PAGES
+(THIS IS NOT AN ORDER)                                                                                                                                              1            26
+1. REQUEST NO.                          2. DATE ISSUED               3. REQUISITION/PURCHASE REQUEST NO.                       4. CERT. FOR NAT. DEF.         RATING
+                                                                                                                                UNDER BDSA REG. 2 AND/
+19AQMM26Q0468                           09/14/2026                   PR16178408
+                                                                                                                                OR DMS REG. 1
+5a. ISSUED BY                                                                                                                  6. DELIVER BY (date)
+BUREAU OF GLOBAL ACQUISITIONS (GA)                                                                                             08/30/2026
+1200 Wilson Blvd., SA-6B
+ATTN: GA                                                                                                                       7. DELIVERY
+ARLINGTON, VA 22209                                                                                                                                                     OTHER
+                                                                                                                                     FOB DESTINATION          X
+                                                                                                                                                                        (See Schedule)
+                                                                                                                                               9. DESTINATION
+                                 5b. FOR INFORMATION CALL (NO COLLECT CALLS)
+NAME                                                                   TELEPHONE NUMBER                                        a. NAME OF CONSIGNEE
+                                                              AREA CODE    NUMBER
+                                                                           Ext.:
+                                                    8. TO:
+                                                                                                                               b. STREET ADDRESS
+a. NAME                                                 b. COMPANY
+                                                         DBA:
+
+c. STREET ADDRESS
+
+UEI:
+                                                                                                                               c. CITY
+
+
+
+d. CITY                                                               e. COUNTRY         f. ZIP CODE                           d. STATE    e. ZIP CODE
+
+10. PLEASE FURNISH QUOTATIONS TO THE                 IMPORTANT: This is a request for information, and quotations furnished are not offers. If you are unable to quote, please
+     ISSUING OFFICE IN BLOCK 5a ON OR                so indicate on this form and return it to the address in Block 5a. This request does not commit the Government to pay any
+     BEFORE CLOSE OF BUSINESS (Date)                 costs incurred in the preparation of the submission of this quotation or to contract for supplies or service. Supplies are of
+                                                     domestic origin unless otherwise indicated by quoter. Any representations and/or certifications attached to this Request
+                                                     for Quotation must be completed by the quoter.
+
+                                           11. SCHEDULE (Include applicable Federal, State and local taxes)
+       ITEM NO.                         SUPPLIES/SERVICES                                   QUANTITY           UNIT             UNIT PRICE                   AMOUNT
+          (a)                                      (b)                                         (c)              (d)                  (e)                          (f)
+                     See Lines
+
+
+
+
+                                                     a. 10 CALENDAR DAYS (%) b. 20 CALENDAR DAYS (%)                   c. 30 CALENDAR DAYS (%)            d. CALENDAR DAYS
+12. DISCOUNT FOR PROMPT PAYMENT 0.000                                               0.000                              0.000                          NUMBER            PERCENTAGE
+
+                                                                                                                                                      0                 0.000
+
+NOTE: Additional provisions and representations [ ] are [ X ] are not attached.
+                      13. NAME AND ADDRESS OF QUOTER                                        14. SIGNATURE OF PERSON AUTHORIZED TO SIGN                        15. DATE OF
+                                                                                                 QUOTATION                                                    QUOTATION
+a. NAME OF QUOTER
+
+
+b. STREET ADDRESS                                                                                                                 16. SIGNER
+                                                                                            a. NAME (Type or print)                                             b. TELEPHONE
+c. COUNTY                                                                                                                                                     AREA CODE
+
+
+d. CITY                                              e. STATE f. ZIP CODE                   c. TITLE (Type or print)                                          NUMBER
+
+
+AUTHORIZED FOR LOCAL REPRODUCTION                                                                                                 STANDARD FORM 18 (REV. 6-95)
+Previous edition not usable                                                                                                       Prescribed by GSA-FAR (48 CFR) 53.215-1(a)
+                                                                                              Document Number: 19AQMM26Q0468 PROCESSED Page 2 of 26
+
+
+
+
+Section A - Solicitation/Contract Form
+  Line Item     Solicitation Number:               Contract Number:   Title:                                                          Date of Solicitation:
+  Summary                                                             Cultural Property AI Prototype                                  09/14/2026
+                19AQMM26Q0468
+
+
+
+  Number                    Supplies or Services                      Qty              Unit            Unit Price           Total (Inc. disc., tax, and fees)
+
+               PSC: R606
+   001                                                                         1.0            EA                    $0.00                                 $0.00
+               PSC Description: SUPPORT- ADMINISTRATIVE:
+               COURT REPORTING
+
+               Type of Contract Pricing: Firm Fixed Price
+
+              Description: Project Management Plan
+
+              Reference Line: PR16178408 - 001
+
+
+  Number                    Supplies or Services                      Qty              Unit            Unit Price           Total (Inc. disc., tax, and fees)
+
+               PSC: R606
+   002                                                                        12.0            EA                    $0.00                                 $0.00
+               PSC Description: SUPPORT- ADMINISTRATIVE:
+               COURT REPORTING
+
+               Type of Contract Pricing: Firm Fixed Price
+
+              Description: Monthly Progress Reports
+
+              Reference Line: PR16178408 - 001
+
+
+  Number                    Supplies or Services                      Qty              Unit            Unit Price           Total (Inc. disc., tax, and fees)
+
+               PSC: R606
+   003                                                                         1.0            EA                    $0.00                                 $0.00
+               PSC Description: SUPPORT- ADMINISTRATIVE:
+               COURT REPORTING
+
+               Type of Contract Pricing: Firm Fixed Price
+
+              Description: Stakeholder Engagement Summary
+
+              Reference Line: PR16178408 - 001
+
+
+  Number                    Supplies or Services                      Qty              Unit            Unit Price           Total (Inc. disc., tax, and fees)
+
+               PSC: R606
+   004                                                                         1.0            EA                    $0.00                                 $0.00
+               PSC Description: SUPPORT- ADMINISTRATIVE:
+               COURT REPORTING
+
+               Type of Contract Pricing: Firm Fixed Price
+
+              Description: Data Sourcing and Curation Summary
+
+              Reference Line: PR16178408 - 001
+
+
+  Number                    Supplies or Services                      Qty              Unit            Unit Price           Total (Inc. disc., tax, and fees)
+
+               PSC: R606
+   005                                                                         1.0            EA                    $0.00                                 $0.00
+               PSC Description: SUPPORT- ADMINISTRATIVE:
+               COURT REPORTING
+
+               Type of Contract Pricing: Firm Fixed Price
+
+              Description: Prototype Application
+
+              Reference Line: PR16178408 - 001
+
+
+  Number                    Supplies or Services                      Qty              Unit            Unit Price           Total (Inc. disc., tax, and fees)
+
+               PSC: R606
+   006                                                                         1.0            EA                    $0.00                                 $0.00
+               PSC Description: SUPPORT- ADMINISTRATIVE:
+               COURT REPORTING
+
+               Type of Contract Pricing: Firm Fixed Price
+
+              Description: Internal Testing and Validation Report
+
+              Reference Line: PR16178408 - 001
+                                                                                                 Document Number: 19AQMM26Q0468 PROCESSED Page 3 of 26
+
+
+
+
+    Number                 Supplies or Services                             Qty           Unit          Unit Price           Total (Inc. disc., tax, and fees)
+
+              PSC: R606
+     007                                                                            1.0          EA                  $0.00                                 $0.00
+              PSC Description: SUPPORT- ADMINISTRATIVE:
+              COURT REPORTING
+
+              Type of Contract Pricing: Firm Fixed Price
+
+             Description: Simulated Field Testing and Validation Report
+
+             Reference Line: PR16178408 - 001
+
+
+    Number                 Supplies or Services                             Qty           Unit          Unit Price           Total (Inc. disc., tax, and fees)
+
+              PSC: R606
+     008                                                                            1.0          EA                  $0.00                                 $0.00
+              PSC Description: SUPPORT- ADMINISTRATIVE:
+              COURT REPORTING
+
+              Type of Contract Pricing: Firm Fixed Price
+
+             Description: Final Assessment Report
+
+             Reference Line: PR16178408 - 001
+
+
+    Number                 Supplies or Services                             Qty           Unit          Unit Price           Total (Inc. disc., tax, and fees)
+
+              PSC: R606
+     009                                                                            1.0          EA                  $0.00                                 $0.00
+              PSC Description: SUPPORT- ADMINISTRATIVE:
+              COURT REPORTING
+
+              Type of Contract Pricing: Firm Fixed Price
+
+             Description: Final Briefing/Presentation
+
+             Reference Line: PR16178408 - 001
+
+
+
+                                                                          CLIN Funding:                           Cost:
+
+                                                           Base Totals:                                   $0.00                                          $0.00
+
+                                        Exercised Options Totals:                                         $0.00                                          $0.00
+
+                                    Unexercised Options Totals:                                           $0.00                                          $0.00
+
+                                        Base and Options Totals:                                          $0.00                                          $0.00
+
+
+
+
+Section A - Solicitation/Contract Form
+Identifier   Title                                                                                                           Date            Number of
+                                                                                                                                             Pages
+1            Attachment 1 - SOW-Cultural Property Prototype.docx                                                              09/11/2026
+2            Attachment 2 C-SCRM Questionnaire.xlsx                                                                           09/09/2026
+3            Attachment 3 - Software Producer Attestation Form.pdf                                                            09/09/2026
+
+
+
+
+1.1 - Purpose
+
+
+The objective of this acquisition is to award one (1) purchase order under the procedures in Federal Acquisition Regulation (FAR)
+13.2, for the services described in this RFQ and its attachments.
+This requirement is a Total Small Business set-aside, with a NAICS code of 541511, with a size standard of $34M determined to
+represent the principal purpose of this requirement.
+It is anticipated that services will begin the day after contract award. The duration of the purchase order will be 9 months.
+                                                                               Document Number: 19AQMM26Q0468 PROCESSED Page 4 of 26
+
+
+
+52.213-4 - Terms and Conditions-Simplified Acquisitions (Other Than Commercial Products and Commercial Services) (Mar
+2026)
+
+(a) The Contractor shall comply with the following Federal Acquisition Regulation (FAR) clauses that are incorporated by reference:
+
+(1) The clauses listed below implement provisions of law or Executive order:
+
+(i) 52.203-19, Prohibition on Requiring Certain Internal Confidentiality Agreements or Statements (Jan 2017) (section 743 of Division
+E, Title VII, of the Consolidated and Further Continuing Appropriations Act, 2015 (Pub. L. 113-235) and its successor provisions in
+subsequent appropriations acts (and as extended in continuing resolutions)).
+
+(ii) 52.204-23, Prohibition on Contracting for Hardware, Software, and Services Developed or Provided by Kaspersky Lab Covered
+Entities (Dec 2023) (Section 1634 of Pub. L. 115-91).
+
+(iii) 52.204-25, Prohibition on Contracting for Certain Telecommunications and Video Surveillance Services or Equipment. (Nov
+2021) (Section 889(a)(1)(A) of Pub. L. 115-232).
+
+(iv) 52.204-27, Prohibition on a ByteDance Covered Application (Jun 2023) (Section 102 of Division R of Pub. L. 117-328), unless
+the agency grants an exception--see paragraph (b) of 52.204-27.
+
+(v) 52.204-30, Federal Acquisition Supply Chain Security Act Orders-Prohibition. (Dec 2023) (Pub. L. 115-390, title II).
+
+(vi) 52.222-3, Convict Labor (Jun 2003) (E.O. 11755).
+
+(vii) 52.222-21, Prohibition of Segregated Facilities (Apr 2015).
+
+(viii) 52.222-26, Equal Opportunity (Sept 2016) (E.O. 11246).
+
+(ix) 52.225-13, Restrictions on Certain Foreign Purchases (Feb 2021) (E.O.s, proclamations, and statutes administered by the Office of
+Foreign Assets Control of the Department of the Treasury).
+
+(x) 52.232-40, Providing Accelerated Payments to Small Business Subcontractors (Mar 2023) (31 U.S.C. 3903 and 10 U.S.C. 3801).
+
+(xi) 52.233-3, Protest After Award (Aug 1996) (31 U.S.C. 3553).
+
+(xii) 52.233-4, Applicable Law for Breach of Contract Claim (Oct 2004) (Pub. L. 108-77 and 108-78 (19 U.S.C. 3805 note)).
+
+(2) Listed below are additional clauses that apply:
+
+(i) 52.232-1, Payments (Apr 1984).
+
+(ii) 52.232-8, Discounts for Prompt Payment (Feb 2002).
+
+(iii) 52.232-11, Extras (Apr 1984).
+
+(iv) 52.232-25, Prompt Payment (Jan 2017).
+
+(v) 52.232-39, Unenforceability of Unauthorized Obligations (Jun 2013).
+
+(vi) 52.233-1, Disputes (May 2014).
+
+(vii) 52.244-6, Subcontracts for Commercial Products and Commercial Services (Oct 2025).
+
+(viii) 52.253-1, Computer Generated Forms (Jan 1991).
+
+(b) The Contractor shall comply with the following FAR clauses, incorporated by reference, unless the circumstances do not apply:
+
+(1) The clauses listed below implement provisions of law or Executive order:
+                                                                                 Document Number: 19AQMM26Q0468 PROCESSED Page 5 of 26
+
+
+
+(i) 52.203-17, Contractor Employee Whistleblower Rights (Nov 2023) (41 U.S.C. 4712); this clause does not apply to contracts of
+DoD, NASA, the Coast Guard, or applicable elements of the intelligence community--see FAR 3.900(a).
+
+(ii) 52.204-10, Reporting Executive Compensation and First-Tier Subcontract Awards (Jun 2020) (Pub. L. 109-282) (31 U.S.C. 6101
+note) (Applies to contracts valued at or above the threshold specified in FAR 4.1403(a) on the date of award of this contract).
+
+(iii) 52.222-19, Child Labor-Cooperation with Authorities and Remedies (Mar 2026) (E.O. 13126) (Applies to contracts for supplies
+exceeding the micro-purchase threshold, as defined in FAR 2.101 on the date of award of this contract).
+
+(iv) 52.222-20, Contracts for Materials, Supplies, Articles, and Equipment (Jun 2020) (41 U.S.C. chapter 65) (Applies to supply
+contracts over the threshold specified in FAR 22.602 on the date of award of this contract, in the United States, Puerto Rico, or the
+U.S. Virgin Islands).
+
+(v) 52.222-35, Equal Opportunity for Veterans (Jun 2020) (38 U.S.C. 4212) (Applies to contracts valued at or above the threshold
+specified in FAR 22.1303(a) on the date of award of this contract).
+
+(vi) 52.222-36, Equal Employment for Workers with Disabilities (Jun 2020) (29 U.S.C. 793) (Applies to contracts over the threshold
+specified in FAR 22.1408(a) on the date of award of this contract, unless the work is to be performed outside the United States by
+employees recruited outside the United States). (For purposes of this clause, "United States" includes the 50 States, the District of
+Columbia, Puerto Rico, the Northern Mariana Islands, American Samoa, Guam, the U.S. Virgin Islands, and Wake Island.)
+
+(vii) 52.222-37, Employment Reports on Veterans (Jun 2020) (38 U.S.C. 4212) (Applies to contracts valued at or above the threshold
+specified in FAR 22.1303(a) on the date of award of this contract).
+
+(viii) 52.222-41, Service Contract Labor Standards (Aug 2018) (41 U.S.C. chapter 67) (Applies to service contracts over $2,500 that
+are subject to the Service Contract Labor Standards statute and will be performed in the United States, District of Columbia, Puerto
+Rico, the Northern Mariana Islands, American Samoa, Guam, the U.S. Virgin Islands, Johnston Island, Wake Island, or the outer
+Continental Shelf).
+
+(ix)(A) 52.222-50, Combating Trafficking in Persons (Oct 2025) (22 U.S.C. chapter 78 and E.O 13627) (Applies to all solicitations
+and contracts).
+
+(B) Alternate I (Mar 2015) (Applies if the Contracting Officer has filled in the following information with regard to applicable
+directives or notices: Document title(s), source for obtaining document(s), and contract performance location outside the United States
+to which the document applies).
+
+(x) 52.222-55, Minimum Wages for Contractor Workers Under Executive Order 14026 (Jan 2022) (Applies when 52.222-6 or
+52.222-41 are in the contract and performance in whole or in part is in the United States (the 50 States, the District of Columbia,
+Puerto Rico, the Northern Mariana Islands, American Samoa, Guam, the U.S. Virgin Islands, Johnston Island, Wake Island, and the
+outer Continental Shelf as defined in the Outer Continental Shelf Lands Act (43 U.S.C. 1331, et seq.))).
+
+(xi) 52.222-62, Paid Sick Leave Under Executive Order 13706 (Jan 2022) (E.O. 13706) (Applies when 52.222-6 or 52.222-41 are in
+the contract and performance in whole or in part is in the United States (the 50 States and the District of Columbia.))
+
+(xii) 52.223-5, Pollution Prevention and Right-to-Know Information (May 2024) (42 U.S.C. 11001-11050 and 13101-13109) (Applies
+to services performed on Federal facilities).
+
+(xiii) 52.223-11, Ozone-Depleting Substances and High Global Warming Potential Hydrofluorocarbons (May 2024) (42 U.S.C. 7671,
+et seq.) (Applies to contracts for products as prescribed at FAR 23.109(d)(1)).
+
+(xiv) 52.223-12, Maintenance, Service, Repair, or Disposal of Refrigeration Equipment and Air Conditioners (May 2024) (42 U.S.C.
+7671, et seq.) (Applies to maintenance, service, repair, or disposal of refrigeration equipment and air conditioners).
+
+(xv) 52.223-20, Aerosols (May 2024) (42 U.S.C. 7671, et seq.) (Applies to contracts for products that may contain high global
+warming potential hydrofluorocarbons as a propellant or as a solvent; or contracts for maintenance or repair of electronic or
+mechanical devices).
+
+(xvi) 52.223-21, Foams (May 2024) (42 U.S.C. 7671, et seq.) (Applies to contracts for products that may contain high global
+warming potential hydrofluorocarbons or refrigerant blends containing hydrofluorocarbons as a foam blowing agent; or contracts for
+construction of buildings or facilities.
+                                                                                    Document Number: 19AQMM26Q0468 PROCESSED Page 6 of 26
+
+
+
+
+(xvii) 52.223-23, Sustainable Products and Services (May 2024) (E.O. 14057, 7 U.S.C. 8102, 42 U.S.C. 6962, 42 U.S.C. 8259b,
+and 42 U.S.C. 7671l) (Applies to contracts when the agency identifies in the statement of work, or elsewhere in the contract, the
+sustainable products and services that apply to the acquisition).
+
+(xviii)(A) 52.225-1, Buy American-Supplies (Oct 2022) (41 U.S.C. chapter 67) (Applies to contracts for supplies, and to contracts for
+services involving the furnishing of supplies, for use in the United States or its outlying areas, if the value of the supply contract or
+supply portion of a service contract exceeds the micro-purchase threshold, as defined in 2.101 on the date of award of this contract,
+and the acquisition--
+
+(1) Is set aside for small business concerns; or
+
+(2) Cannot be set aside for small business concerns (see 19.502-2), and does not exceed $50,000).
+
+(B) Alternate I (Oct 2022) (Applies if the Contracting Officer has filled in the domestic content threshold below, which will apply
+to the entire contract period of performance. Substitute the following sentence for the first sentence of paragraph (1)(ii)(A) of the
+definition of domestic end product in paragraph (a) of 52.225-1:
+
+(A) The cost of its components mined, produced, or manufactured in the United States exceeds _____ percent of the cost of all its
+components. [Contracting officer to insert the percentage per instructions at 13.302-5(d)(4).])
+
+(xix) 52.226-6, Promoting Excess Food Donation to Nonprofit Organizations (Jun 2020) (42 U.S.C. 1792) (Applies to contracts
+greater than the threshold specified in FAR 26.404 on the date of award of this contract, that provide for the provision, the service, or
+the sale of food in the United States).
+
+(xx) 52.232-33, Payment by Electronic Funds Transfer-System for Award Management (Oct 2018) (Applies when the payment will be
+made by electronic funds transfer (EFT) and the payment office uses the System for Award Management (SAM) as its source of EFT
+information).
+
+(xxi) 52.232-34, Payment by Electronic Funds Transfer-Other than System for Award Management (Jul 2013) (Applies when the
+payment will be made by EFT and the payment office does not use the SAM database as its source of EFT information).
+
+(xxii) 52.240-1, Prohibition on Unmanned Aircraft Systems Manufactured or Assembled by American Security Drone Act-Covered
+Foreign Entities (Nov 2024). (Sections 1821-1826, Pub. L. 118-31, 41 U.S.C. 3901 note prec.).
+
+(xxiii) 52.247-64, Preference for Privately Owned U.S.-Flag Commercial Vessels (Nov 2021) (46 U.S.C. 55305) (Applies to supplies
+transported by ocean vessels (except for the types of subcontracts listed at 47.504(d)).
+
+(xxiv) 52.247-69, Reporting Requirement for U.S.-Flag Air Carriers Regarding Training to Prevent Human Trafficking (Jan 2025) (49
+U.S.C. 40118(g)). (Applies to contracts with a U.S.-flag carrier for the transportation by air of passengers; does not apply to contracts
+awarded by the Department of Defense or contracts for commercial products).
+
+(2) Listed below are additional clauses that may apply:
+
+(i) 52.204-21, Basic Safeguarding of Covered Contractor Information Systems (Nov 2021) (Applies to contracts when the contractor
+or a subcontractor at any tier may have Federal contract information residing in or transiting through its information system.)
+
+(ii) 52.209-6, Protecting the Government's Interest When Subcontracting with Contractors Debarred, Suspended, Proposed for
+Debarment, or Voluntarily Excluded (Jan 2025) (Applies to contracts over the threshold specified in FAR 9.405-2(b) on the date of
+award of this contract).
+
+(iii) 52.211-17, Delivery of Excess Quantities (Sept 1989) (Applies to fixed-price supplies).
+
+(iv) 52.247-29, F.o.b. Origin (Feb 2006) (Applies to supplies if delivery is f.o.b. origin).
+
+(v) 52.247-34, F.o.b. Destination (Jan 1991) (Applies to supplies if delivery is f.o.b. destination).
+
+(c) FAR 52.252-2, Clauses Incorporated by Reference (Feb 1998). This contract incorporates one or more clauses by reference, with
+the same force and effect as if they were given in full text. Upon request, the Contracting Officer will make their full text available.
+Also, the full text of a clause may be accessed electronically at this/these address(es):
+                                                                                  Document Number: 19AQMM26Q0468 PROCESSED Page 7 of 26
+
+
+
+
+ https://www.acquisition.gov/
+[Insert one or more Internet addresses]
+
+(d) Inspection/Acceptance. The Contractor shall tender for acceptance only those items that conform to the requirements of this
+contract. The Government reserves the right to inspect or test any supplies or services that have been tendered for acceptance. The
+Government may require repair or replacement of nonconforming supplies or reperformance of nonconforming services at no increase
+in contract price. The Government must exercise its postacceptance rights--
+
+(1) Within a reasonable period of time after the defect was discovered or should have been discovered; and
+
+(2) Before any substantial change occurs in the condition of the item, unless the change is due to the defect in the item.
+
+(e) Excusable delays. The Contractor shall be liable for default unless nonperformance is caused by an occurrence beyond the
+reasonable control of the Contractor and without its fault or negligence, such as acts of God or the public enemy, acts of the
+Government in either its sovereign or contractual capacity, fires, floods, epidemics, quarantine restrictions, strikes, unusually severe
+weather, and delays of common carriers. The Contractor shall notify the Contracting Officer in writing as soon as it is reasonably
+possible after the commencement of any excusable delay, setting forth the full particulars in connection therewith, shall remedy such
+occurrence with all reasonable dispatch, and shall promptly give written notice to the Contracting Officer of the cessation of such
+occurrence.
+
+(f) Termination for the Government's convenience. The Government reserves the right to terminate this contract, or any part hereof,
+for its sole convenience. In the event of such termination, the Contractor shall immediately stop all work hereunder and shall
+immediately cause any and all of its suppliers and subcontractors to cease work. Subject to the terms of this contract, the Contractor
+shall be paid a percentage of the contract price reflecting the percentage of the work performed prior to the notice of termination,
+plus reasonable charges that the Contractor can demonstrate to the satisfaction of the Government, using its standard record keeping
+system, have resulted from the termination. The Contractor shall not be required to comply with the cost accounting standards or
+contract cost principles for this purpose. This paragraph does not give the Government any right to audit the Contractor's records. The
+Contractor shall not be paid for any work performed or costs incurred that reasonably could have been avoided.
+
+(g) Termination for cause. The Government may terminate this contract, or any part hereof, for cause in the event of any default by
+the Contractor, or if the Contractor fails to comply with any contract terms and conditions, or fails to provide the Government, upon
+request, with adequate assurances of future performance. In the event of termination for cause, the Government shall not be liable to
+the Contractor for any amount for supplies or services not accepted, and the Contractor shall be liable to the Government for any and
+all rights and remedies provided by law. If it is determined that the Government improperly terminated this contract for default, such
+termination shall be deemed a termination for convenience.
+
+(h) Warranty. The Contractor warrants and implies that the items delivered hereunder are merchantable and fit for use for the
+particular purpose described in this contract.
+
+(End of clause)
+
+
+
+
+52.222-90 - Addressing DEI Discrimination by Federal Contractors (DEVIATION APR 2026)
+
+          (a) Definitions. As used in this clause—
+
+          Program participation means membership or participation in, or access or admission to: training, mentoring, or leadership
+          development programs; educational opportunities; clubs; associations; or similar opportunities that are sponsored or
+          established by the contractor or subcontractor.
+
+          Racially discriminatory diversity, equity, and inclusion (DEI) activities means disparate treatment based on race or ethnicity
+          in the recruitment, employment (e.g., hiring, promotions), contracting (e.g., vendor agreements), program participation, or
+          allocation or deployment of an entity's resources.
+
+          (b) In connection with the performance of work under this contract, the Contractor agrees as follows:
+                    (1) The Contractor will not engage in any racially discriminatory DEI activities;
+                                                                                  Document Number: 19AQMM26Q0468 PROCESSED Page 8 of 26
+
+
+
+                    (2) The Contractor will furnish all information and reports, including providing access to books, records, and
+                    accounts, as required by the Contracting Officer, for purposes of ascertaining compliance with this clause;
+
+                    (3) In the event of the Contractor's or a subcontractor's noncompliance with this clause, this contract may be
+                    canceled, terminated, or suspended in whole or in part, and the Contractor or subcontractor may be declared
+                    ineligible for further Government contracts;
+
+                    (4) The Contractor will report any subcontractor's known or reasonably knowable conduct that may violate this
+                    clause to the Contracting Officer and take any appropriate remedial actions directed by the Contracting Officer;
+                    and
+
+                    (5) The Contractor will inform the Contracting Officer if a subcontractor sues the Contractor and the suit puts at
+                    issue, in any way, the validity of this clause.
+
+                    (6) The Contractor recognizes that compliance with the requirements of this clause are material to the
+                    Government's payment decisions for purposes of 31 U.S.C. 3729(b)(4).
+
+          (c) The Contractor must include the substance of this clause, including this paragraph (c), in subcontracts at any tier,
+          including those for commercial products and commercial services, except those where the place of delivery or performance
+          is outside the United States.
+                                                            (End of clause)
+
+
+
+
+52.227-13 - Patent Rights-Ownership by the Government (Dec 2007)
+
+(a) Definitions. As used in this clause--
+"Invention" means any invention or discovery that is or may be patentable or otherwise protectable under title 35 of the U.S. Code or
+any variety of plant that is or may be protectable under the Plant Variety Protection Act (7 U.S.C. 2321, et seq.)
+"Made" means--
+(1) When used in relation to any invention other than a plant variety, means the conception or first actual reduction to practice of the
+invention; or
+(2) When used in relation to a plant variety, means that the Contractor has at least tentatively determined that the variety has been
+reproduced with recognized characteristics.
+"Practical application" means to manufacture, in the case of a composition or product; to practice, in the case of a process or method;
+or to operate, in the case of a machine or system; and, in each case, under such conditions as to establish that the invention is being
+utilized and that its benefits are, to the extent permitted by law or Government regulations, available to the public on reasonable terms.
+"Subject invention" means any invention of the Contractor made in the performance of work under this contract.
+(b) Ownership.
+(1) Assignment to the Government. The Contractor shall assign to the Government title throughout the world to each subject invention,
+except to the extent that rights are retained under paragraphs (b)(2) and (d) of this clause.
+(2) Greater rights determinations.
+(i) The Contractor, or an employee-inventor after consultation with the Contractor, may request greater rights than the nonexclusive
+license provided in paragraph (d) of this clause. The request for a greater rights must be submitted to the Contracting Officer at the
+time of the first disclosure of the subject invention pursuant to paragraph (e)(2) of this clause, or not later than 8 months thereafter,
+unless a longer period is authorized in writing by the Contracting Officer for good cause shown in writing by the Contractor. Each
+determination of greater rights under this contract normally shall be subject to paragraph (c) of this clause, and to the reservations and
+conditions deemed to be appropriate by the agency.
+(ii) Upon request, the Contractor shall provide the filing date, serial number and title, a copy of the patent application (including an
+English-language version if filed in a language other than English), and patent number and issue date for any subject invention in any
+country for which the Contractor has retained title.
+(iii) Upon request, the Contractor shall furnish the agency an irrevocable power to inspect and make copies of the patent application
+file.
+(c) Minimum rights acquired by the Government.
+(1) Regarding each subject invention to which the Contractor retains ownership, the Contractor agrees as follows:
+(i) The Government will have a nonexclusive, nontransferable, irrevocable, paid-up license to practice, or have practiced for or on its
+behalf, the subject invention throughout the world.
+(ii) The agency has the right to require licensing pursuant to 35 U.S.C. 203 and 210(c) and in accordance with the procedures set forth
+in 37 CFR 401.6 and any supplemental regulations of the agency in effect on the date of the contract award.
+                                                                                   Document Number: 19AQMM26Q0468 PROCESSED Page 9 of 26
+
+
+
+(iii) Upon request, the Contractor shall submit periodic reports no more frequently than annually on the utilization, or efforts to obtain
+utilization, of a subject invention by the Contractor or its licensees or assignees. The reports shall include information regarding
+the status of development, date of first commercial sale or use, gross royalties received by the Contractor, and any other data and
+information as the agency may reasonably specify. The Contractor also shall provide additional reports as may be requested by the
+agency in connection with any march-in proceedings undertaken by the agency in accordance with paragraph (c)(1)(ii) of this clause.
+To the extent data or information supplied under this section is considered by the Contractor, or its licensees, or assignees to be
+privileged and confidential and is so marked, the agency, to the extent permitted by law, will not disclose such information to persons
+outside the Government.
+(iv) When licensing a subject invention, the Contractor shall--
+(A) Ensure that no royalties are charged on acquisitions involving Government funds, including funds derived through a Military
+Assistance Program of the Government or otherwise derived through the Government;
+(B) Refund any amounts received as royalty charges on a subject invention in acquisitions for, or on behalf of, the Government;
+(C) Provide for this refund in any instrument transferring rights in the subject invention to any party.
+(v) When transferring rights in a subject invention, the Contractor shall provide for the Government's rights set forth in paragraphs (c)
+(1)(i) through (c)(1)(iv) of this clause.
+(2) Nothing contained in paragraph (c) of this clause shall be deemed to grant to the Government rights in any invention other than a
+subject invention.
+(d) Minimum rights to the Contractor.
+(1) The Contractor is hereby granted a revocable, nonexclusive, paid-up license in each patent application filed in any country
+on a subject invention and any resulting patent in which the Government obtains title, unless the Contractor fails to disclose the
+subject invention within the times specified in paragraph (e)(2) of this clause. The Contractor's license extends to any of its domestic
+subsidiaries and affiliates within the corporate structure of which the Contractor is a part, and includes the right to grant sublicenses to
+the extent the Contractor was legally obligated to do so at contract award. The license is transferable only with the written approval of
+the agency except when transferred to the successor of that part of the Contractor's business to which the subject invention pertains.
+(2) The Contractor's license may be revoked or modified by the agency to the extent necessary to achieve expeditious practical
+application of the subject invention in a particular country in accordance with the procedures in FAR 27.302(i)(2) and 27.304-1(f).
+(3) When the Government elects not to apply for a patent in any foreign country, the Contractor retains rights in that foreign country to
+apply for a patent, subject to the Government's rights in paragraph (c)(1) of this clause.
+(e) Invention identification, disclosures, and reports.
+(1) The Contractor shall establish and maintain active and effective procedures to educate its employees in order to assure that
+subject inventions are promptly identified and disclosed to Contractor personnel responsible for patent matters. The procedures shall
+include the maintenance of laboratory notebooks or equivalent records and other records as are reasonably necessary to document the
+conception and/or the first actual reduction to practice of subject inventions, and records that show the procedures for identifying and
+disclosing subject inventions are followed. Upon request, the Contractor shall furnish the Contracting Officer a description of these
+procedures for evaluation and for a determination as to their effectiveness.
+(2) The Contractor shall disclose in writing each subject invention to the Contracting Officer within 2 months after the inventor
+discloses it in writing to Contractor personnel responsible for patent matters or, if earlier, within 6 months after the Contractor
+becomes aware that a subject invention has been made, but in any event before any on sale (i.e., sale or offer for sale), public use,
+or publication of the subject invention known to the Contractor. The disclosure shall identify the contract under which the subject
+invention was made and the inventor(s). It shall be sufficiently complete in technical detail to convey a clear understanding of the
+subject invention. The disclosure shall also identify any publication, on sale, or public use of the subject invention and whether a
+manuscript describing the subject invention has been submitted for publication and, if so, whether it has been accepted for publication.
+In addition, after disclosure to the agency, the Contractor shall promptly notify the Contracting Officer of the acceptance of any
+manuscript describing the subject invention for publication and any on sale or public use.
+(3) The Contractor shall furnish the Contracting Officer the following:
+(i) Interim reports every 12 months (or a longer period as may be specified by the Contracting Officer) from the date of the contract,
+listing subject inventions during that period, and stating that all subject inventions have been disclosed (or that there are none) and that
+the procedures required by paragraph (e)(1) of this clause have been followed.
+(ii) A final report, within 3 months after completion of the contracted work, listing all subject inventions or stating that there were
+none, and listing all subcontracts at any tier containing a patent rights clause or stating that there were none.
+(4) The Contractor shall require, by written agreement, its employees, other than clerical and nontechnical employees, to disclose
+promptly in writing to personnel identified as responsible for the administration of patent matters and in the Contractor's format each
+subject invention in order that the Contractor can comply with the disclosure provisions of paragraph (c) of this clause, and to execute
+all papers necessary to file patent applications on subject inventions and to establish the Government's rights in the subject inventions.
+This disclosure format should require, as a minimum, the information required by paragraph (e)(2) of this clause. The Contractor
+shall instruct such employees, through employee agreements or other suitable educational programs, as to the importance of reporting
+inventions in sufficient time to permit the filing of patent applications prior to U.S. or foreign statutory bars.
+(5) Subject to FAR 27.302(i), the Contractor agrees that the Government may duplicate and disclose subject invention disclosures and
+all other reports and papers furnished or required to be furnished pursuant to this clause.
+(f) Examination of records relating to inventions.
+                                                                                 Document Number: 19AQMM26Q0468 PROCESSED Page 10 of 26
+
+
+
+(1) The Contracting Officer or any authorized representative shall, until 3 years after final payment under this contract, have the right
+to examine any books (including laboratory notebooks), records, and documents of the Contractor relating to the conception or first
+actual reduction to practice of inventions in the same field of technology as the work under this contract to determine whether--
+(i) Any inventions are subject inventions;
+(ii) The Contractor has established and maintains the procedures required by paragraphs (e)(1) and (e)(4) of this clause; and
+(iii) The Contractor and its inventors have complied with the procedures.
+(2) The Contractor shall disclose to the Contracting Officer, for the determination of ownership rights, any unreported invention that
+the Contracting Officer believes may be a subject invention.
+(3) Any examination of records under paragraph (f) of this clause will be subject to appropriate conditions to protect the
+confidentiality of the information involved.
+(g) Withholding of payment. (This paragraph does not apply to subcontracts.)
+(1) Any time before final payment under this contract, the Contracting Officer may, in the Government's interest, withhold payment
+until a reserve not exceeding $50,000 or 5 percent of the amount of this contract, whichever is less, shall have been set aside if, in the
+Contracting Office's opinion, the Contractor fails to--
+(i) Establish, maintain, and follow effective procedures for identifying and disclosing subject inventions pursuant to paragraph (e)(1)
+of this clause;
+(ii) Disclose any subject invention pursuant to paragraph (e)(2) of this clause;
+(iii) Deliver acceptable interim reports pursuant to paragraph (e)(3)(i) of this clause; or
+(iv) Provide the information regarding subcontracts pursuant to paragraph (i)(4) of this clause.
+(2) The Contracting Officer will withhold the reserve or balance until the Contracting Officer has determined that the Contractor has
+rectified whatever deficiencies exist and has delivered all reports, disclosures, and other information required by this clause.
+(3) The Contracting Officer will not make final payment under this contract before the Contractor delivers to the Contracting Officer,
+as required by this clause, all disclosures of subject inventions, an acceptable final report, and all due confirmatory instruments.
+(4) The Contracting Officer may decrease or increase the sums withheld up to the maximum authorized. The Contracting Officer will
+not withhold any amount under this paragraph while the amount specified by this paragraph is being withheld under other provisions
+of the contract. The withholding of any amount or the subsequent payment shall not be construed as a waiver of any Government
+rights.
+(h) Preference for United States industry. Unless provided otherwise, neither the Contractor nor any assignee shall grant to any person
+the exclusive right to use or sell any subject invention in the United States unless the person agrees that any products embodying
+the subject invention or produced through the use of the subject invention will be manufactured substantially in the United States.
+However, in individual cases, the requirement may be waived by the agency upon a showing by the Contractor or assignee that
+reasonable but unsuccessful efforts have been made to grant licenses on similar terms to potential licensees that would be likely to
+manufacture substantially in the United States or that, under the circumstances, domestic manufacture is not commercially feasible.
+(i) Subcontracts.
+(1) The Contractor shall include the substance of the patent rights clause required by FAR subpart 27.3 in all subcontracts for
+experimental, developmental, or research work. The prescribed patent rights clause must be modified to identify the parties as follows:
+references to the Government are not changed, and the subcontractor has all rights and obligations of the Contractor in the clause. The
+Contractor shall not, as part of the consideration for awarding the subcontract, obtain rights in the subcontractor's subject inventions.
+(2) In the event of a refusal by a prospective subcontractor to accept the clause, the Contractor--
+(i) Shall promptly submit a written notice to the Contracting Officer setting forth the subcontractor's reasons for such refusal and other
+pertinent information that may expedite disposition of the matter; and
+(ii) Shall not proceed with such subcontract without the written authorization of the Contracting Officer.
+(3) In subcontracts at any tier, the agency, the subcontractor, and the Contractor agree that the mutual obligations of the parties created
+by the patent rights clause constitute a contract between the subcontractor and the agency with respect to those matters covered by this
+clause.
+(4) The Contractor shall promptly notify the Contracting Officer in writing upon the award of any subcontract at any tier containing
+a patent rights clause by identifying the subcontractor, the applicable patent rights clause, the work to be performed under the
+subcontract, and the dates of award and estimated completion. Upon request of the Contracting Officer, the Contractor shall furnish a
+copy of such subcontract, and, no more frequently than annually, a listing of the subcontracts that have been awarded.
+(End of clause)
+
+
+
+
+652.239-71 - SECURITY REQUIREMENTS FOR UNCLASSIFIED INFORMATION AND COMMUNICATION
+TECHNOLOGY RESOURCES (DEVIATION JUL 2025)
+
+          (a) General. The Contractor shall be responsible for information and communication technology (ICT) security, based on
+          Department of State (DOS) risk assessments, for all systems connected to a Department of State (DOS) network or operated
+          by the Contractor for DOS, regardless of location. This clause is applicable to all or any part of the contract that includes
+          information and communication technology resources or services in which the Contractor has physical or electronic access
+                                                                       Document Number: 19AQMM26Q0468 PROCESSED Page 11 of 26
+
+
+
+to DOS's information that directly supports the mission of DOS. The term "information and communication technology",
+as used in this clause, means any equipment, including telecommunications equipment, that is used in the automatic
+acquisition, storage, manipulation, management, control, display, switching, interchange, transmission, or reception of data
+or information. This includes both major applications and general support systems as defined by OMB Circular A-130.
+Examples of tasks that require security provisions include:
+           (1) Hosting of DOS e-Government sites or other ICT operations;
+           (2) Acquisition, transmission, or analysis of data owned by DOS with significant replacement cost should the
+           Contractor's copy be corrupted; and
+           (3) Access to DOS general support systems/major applications at a level beyond that granted the general public;
+           e.g., bypassing a firewall.
+(b) ICT Security Plan. The Contractor shall develop, provide, implement, and maintain an ICT Security Plan. This plan
+shall describe the processes and procedures that will be followed to ensure appropriate security of ICT resources that are
+developed, processed, or used under this contract. The plan shall describe those parts of the contract to which this clause
+applies. The Contractor's ICT Security Plan shall comply with applicable Federal laws that include, but are not limited to,
+40 U.S.C. 11331, the Federal Information Security Management Act (FISMA) of 2002, and the E-Government Act of 2002.
+The plan shall meet ICT security requirements in accordance with Federal and DOS policies and procedures, as they may be
+amended from time to time during the term of this contract that include, but are not limited to:
+           (1) OMB Circular A-130, Management of Federal Information Resources, Appendix III, Security of Federal
+           Automated Information Resources;
+           (2) National Institute of Standards and Technology (NIST) Guidelines (see NIST Special Publication 800-37,
+           Guide for the Security Certification and Accreditation of Federal Information Technology systems (http://
+           csrc.nist.gov/publications/nistpubs/800-37/SP800-37-final.pdf); and
+           (3) Department of State information security sections of the Foreign Affairs Manual (FAM) and Foreign Affairs
+           Handbook (FAH) (http://foia.state.gov/Regs/Search.asp), specifically:
+                      (i) 12 FAM 230, Personnel Security;
+                      (ii) 12 FAM 500, Information Security (sections 540, 570, and 590);
+                      (iii) 12 FAM 600, Information Security Technology (section 620, and portions of 650);
+                      (iv) 5 FAM 1060, Information Assurance Management; and
+                      (v) 5 FAH 11, Information Assurance Handbook.
+(c) Submittal of ICT Security Plan. Within 30 days after contract award, the Contractor shall submit the ICT Security Plan
+to the Contracting Officer and Contracting Officer's Representative (COR) for acceptance. This plan shall be consistent with
+and further detail the approach contained in the contractor's proposal or sealed bid that resulted in the award of this contract
+and in compliance with the requirements stated in this clause. The plan, as accepted by the Contracting Officer and COR,
+shall be incorporated into the contract as a compliance document. The Contractor shall comply with the accepted plan.
+(d) Accreditation. Within six (6) months after contract award, the Contractor shall submit written proof of ICT security
+accreditation for acceptance by the Contracting Officer. Such written proof may be furnished either by the Contractor or by
+a third party. Accreditation must be in accordance with NIST Special Publication 800-37. This accreditation will include
+a final security plan, risk assessment, security test and evaluation, and disaster recovery plan/continuity of operations
+plan. This accreditation, when accepted by the Contracting Officer, shall be incorporated into the contract as a compliance
+document, and shall include a final security plan, a risk assessment, security test and evaluation, and disaster recovery/
+continuity of operations plan. The Contractor shall comply with the accepted accreditation documentation.
+(e) Annual verification. On an annual basis, the Contractor shall submit verification to the Contracting Officer that the ICT
+Security plan remains valid.
+(f) Warning notices. The Contractor shall ensure that the following banners are displayed on all DOS systems (both public
+and private) operated by the Contractor prior to allowing anyone access to the system:
+Government Warning
+**WARNING**WARNING**WARNING**
+Unauthorized access is a violation of U.S. law and Department of State policy, and may result in criminal or administrative
+penalties. Users shall not access other user's or system files without proper authority. Absence of access controls IS NOT
+authorization for access! DOS information systems and related equipment are intended for communication, transmission,
+processing and storage of U.S. Government information. These systems and equipment are subject to monitoring by law
+enforcement and authorized Department officials. Monitoring may result in the acquisition, recording, and analysis of all
+data being communicated, transmitted, processed or stored in this system by law enforcement and authorize Department
+officials. Use of this system constitutes consent to such monitoring.
+ **WARNING**WARNING**WARNING**
+(g) Privacy Act notification. The Contractor shall ensure that the following banner is displayed on all DOS systems that
+contain Privacy Act information operated by the Contractor prior to allowing anyone access to the system:
+           This system contains information protected under the provisions of the Privacy Act of 1974 (Pub. L. 93-579). Any
+           privacy information displayed on the screen or printed shall be protected from unauthorized disclosure. Employees
+           who violate privacy safeguards may be subject to disciplinary actions, a fine of up to $5,000, or both.
+                                                                               Document Number: 19AQMM26Q0468 PROCESSED Page 12 of 26
+
+
+
+        (h) Privileged or limited privileges access. Contractor personnel requiring privileged access or limited privileges access
+        to systems operated by the Contractor for DOS or interconnected to a DOS network shall adhere to the specific contract
+        security requirements contained within this contract and/or the Contract Security Classification Specification (DD Form
+        254).
+        (i) Training. The Contractor shall ensure that its employees performing under this contract receive annual ICT security
+        training in accordance with OMB Circular A-130, FISMA, and NIST requirements, as they may be amended from time to
+        time during the term of this contract, with a specific emphasis on the rules of behavior.
+        (j) Government access. The Contractor shall afford the Government access to the Contractor's and subcontractor's facilities,
+        installations, operations, documentation, databases and personnel used in performance of the contract. Access shall be
+        provided to the extent required to carry out a program of ICT inspection (to include vulnerability testing), investigation and
+        audit to safeguard against threats and hazards to the integrity, availability and confidentiality of DOS data or to the function
+        of information communication technology systems operated on behalf of DOS, and to preserve evidence of computer crime.
+        (k) Subcontracts. The Contractor shall incorporate the substance of this clause in all subcontracts that meet the conditions in
+        paragraph (a) of this clause.
+        (l) Notification regarding employees. The Contractor shall immediately notify the Contracting Officer when an employee
+        either begins or terminates employment when that employee has access to DOS information systems or data.
+        (m) Termination. Failure on the part of the Contractor to comply with the terms of this clause may result in termination of
+        this contract.
+
+                                                           (End of clause)
+
+
+
+
+652.239-800 - Cybersecurity Supply Chain Risk Management Requirements (AUG 2026)
+
+(a) Definitions. As used in this clause:
+Covered article - The term "covered article" includes-
+
+        (1) "Information and Communications Technology" which is an
+        industry term for information technology that is involved in
+        integrating telecommunications (e.g., telephone lines and wireless
+        signals) and computers to enable users to access, store, manipulate,
+        transmit, and receive digital information. This includes software,
+        software as a service, digital and data services, and hardware
+        components that support information creation, storage, transfer, and
+        management, like computers and smartphones.
+
+        (2) “Operational Technology” (OT) is defined as programmable systems
+        or devices that interact with the physical environment (or manage
+        devices that interact with the physical environment). These
+        systems/devices detect or cause a direct change through the
+        monitoring and/or control of devices, processes, and events.
+        Examples of OT include industrial control systems, building
+        management systems, fire control systems, physical access control
+        mechanisms, and internet of things devices.
+
+        (3) “Critical software” refers to any software, firmware, or cloud-based
+        application—including its direct dependencies—that performs
+        functions vital to the organization’s security posture and operational
+        integrity. This includes any tool that manages elevated privileges,
+        possesses direct access to networking and computing resources, or
+        controls access to data and operational technology. Furthermore, any
+        software that performs essential trust functions or operates across
+        security boundaries is classified as critical, as its compromise would
+                                                                     Document Number: 19AQMM26Q0468 PROCESSED Page 13 of 26
+
+
+
+        grant an attacker significant control or visibility into the broader
+        environment.
+
+        (4) "Telecommunications Equipment", which means equipment,
+        other than customer premises equipment, used by a carrier to provide
+        telecommunications services, and includes software integral to such
+        equipment (including upgrades).
+
+        (5) "Telecommunications Service", which means the offering of
+        telecommunications for a fee directly to the public, or to such classes
+        of users as to be effectively available directly to the public, regardless
+        of the facilities used.
+
+        (6) Cybersecurity Supply Chain Risk: The term cybersecurity
+        supply chain risk means the risk that a person may sabotage,
+        maliciously introduce unwanted function, extract data, or otherwise
+        manipulate the design, integrity, manufacturing, production,
+        distribution, installation, operation, maintenance, disposition, or
+        retirement of covered articles to surveil, deny, disrupt, or otherwise
+        manipulate the function, use, or operation of the covered articles or
+        information stored or transmitted on the covered articles.
+
+        (7) Incident: The term incident means per the Federal Information
+        Security Modernization Act of 2014, “an occurrence that (A) actually
+        or imminently jeopardizes, without lawful authority, the integrity,
+        confidentiality, or availability of information or an information
+        system; or (B) constitutes a violation or imminent threat of violation
+        of law, security policies, security procedures, or acceptable use
+        policies.”
+
+        (8) Vulnerability: The term vulnerability which means any weakness
+        in an information system, system security procedures, internal
+        controls, or implementation that could be exploited or triggered by a
+        threat source.
+
+(b) Contractor Cybersecurity Supply Chain Risk Management Responsibilities.
+The Contractor must regularly identify, assess, monitor, and mitigate
+cybersecurity supply chain risks when providing covered articles or services
+to the Government. The Contractor shall maintain artifacts (i.e., any
+byproduct of hardware or software development that helps describe the
+architecture, design, and function of that hardware or software) that
+document its compliance with this paragraph and shall provide these
+artifacts to the Government within 48 hours of request, which may be
+redacted to remove sensitive proprietary information.
+
+(c) Supporting Government Cybersecurity Supply Chain Risk Assessments. No
+more than an estimated once per year, the Contractor must provide any
+requested information related to its supply chain within 10 business days
+except information that is protected by a non-disclosure agreement with its
+customers (e.g., another federal agency).
+
+(d) Novation Agreement Notice. FAR 42.1203 requires Government approval
+of novation agreements. For proposed novation agreements for this contract,
+                                                                                Document Number: 19AQMM26Q0468 PROCESSED Page 14 of 26
+
+
+
+the Contractor shall provide any information requested by the Government
+regarding the proposed successor’s identity and information regarding its
+supply chain.
+
+(e) Notification procedures for cybersecurity supply chain incidents. When an
+incident occurs, the Contractor must contact the CO or their designee within
+72 hours of the incident.
+
+(f) Subcontracts. The Contractor shall insert the substance of this clause in all
+subcontracts and other contractual instruments in support of this contract.
+
+(g) Attestation following Major Version Change. For critical software, as
+defined by NIST Guidance, provided under the contract that required an
+approved Secure Software Development Attestation Form, the responses on
+this form apply to the software’s major version changes (e.g., using a
+semantic versioning schema of Major.Minor.Patch, the software version
+number goes from 2.5 to 3.0) unless the Contractor otherwise notifies the
+Contacting Officer that the form is no longer valid. This notification to the
+Contracting Officer must be submitted within 15 days of the major version
+change and must include a new completed and signed Secure Software
+Development Attestation Form.
+
+(End of clause)
+
+
+
+652.242-70 - CONTRACTING OFFICER'S REPRESENTATIVE (COR) (AUG 1999)
+
+
+(a) The Contracting Officer may designate in writing one or more Government employees, by name and position title, to take action
+for the Contracting Officer under this contract. Each designee shall be identified as a Contracting Officer's Representative (COR).
+Such designation(s) shall specify the scope and limitations of the authority so delegated; provided, that the designee shall not change
+the terms or conditions of the contract, unless the COR is a warranted Contracting Officer and this authority is delegated in the
+designation.
+(b) The COR is Martin Perschler, Cultural Heritage Center, Team Lead for Programs and Outreach
+(End of clause)
+
+
+
+
+H-020 - SAFEGUARDING INFORMATION
+
+
+The Contractor and its employees shall exercise the utmost discretion in regard to all matters relating to their duties and
+functions. They shall not communicate to any person any information known to them by reason of their performance of services
+under this contract which has not been made public, except in the necessary performance of their duties or upon written authorization
+of the Contracting Officer. All documents and records (including photographs) generated during the performance of work under
+this contract shall be for the sole use of and become the exclusive property of the U.S. Government. Furthermore, no article,
+book, pamphlet, recording, broadcast, speech, television appearance, film or photograph concerning any aspect of work performed
+under this contract shall be published or disseminated through any media without the prior written authorization of the Contracting
+Officer. These obligations do not cease upon the expiration or termination of this contract. The Contractor shall include the substance
+of this provision in all contracts of employment and in all subcontracts hereunder.
+(end of clause)
+                                                                                Document Number: 19AQMM26Q0468 PROCESSED Page 15 of 26
+
+
+
+INV-IPP - ELECTRONIC INVOICING AND PAYMENT REQUIREMENTS AND INSTRUCTIONS TO IMPLEMENT
+USAGE OF THE INVOICE PROCESSING PLATFORM (IPP).
+
+       (a) Definitions. As used in these instructions
+
+(1)”Payment request” means a bill, voucher, invoice, or request for contract financing payment with associated
+supporting documentation. The payment request must comply with the requirements identified in FAR
+32.905(b), “Payment documentation and process” and the applicable Payment clause included in this contract.
+
+        (b) Except as provided in paragraph (c) of these instructions, the Contractor shall submit payment
+requests electronically using the Invoice Processing Platform (IPP) at www.ipp.gov. Information
+regarding IPP is available on the Internet at www.ipp.gov. Assistance with the IPP application can be
+obtained by contacting the IPP Production Helpdesk via email IPPCustomerSupport@fiscal.treasury.gov
+or phone (866)973-3131. The Contractor shall ensure that its supporting documentation conforms
+to IPP requirements. IPP accommodates up to 25 supporting attachments per invoice, individual
+attachment file size may not exceed ten megabytes (10mb). If the Contractor assesses that their
+supporting documentation will not reasonably conform to IPP requirements, the Contractor shall contact
+the Contracting Officer to explore possible alternatives. In addition, the IPP only allows certain characters
+to be used as the invoice number. The invoice number shall conform to the IPP convention and the
+attachments (if used) shall match exactly the invoice number allowed. The allowed characters in the IPP are
+“abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_”
+
+(c) If the Contractor wishes to be paid via a foreign bank account, the contractor must properly fill out form
+GFS-FO-CLM-089 and attach it to each invoice in the IPP where payment to a foreign bank account is
+requested. The form can obtained by e-mailing CGFSIPPITSForm@state.gov.
+
+(d) The Contractor may submit payment requests using other than IPP only when the Contracting Officer
+authorizes alternate procedures in writing.
+
+(e) If alternate payment procedures are authorized, the Contractor shall include a copy of the Contracting
+Officer’s written authorization with each payment request.
+
+[End of instructions]
+
+
+
+52.227-14 Alt IV - Rights in Data-General (May 2014) - Alternate IV (Dec 2007)
+
+(a) Definitions. As used in this clause--
+
+"Computer database" or "database means" a collection of recorded information in a form capable of, and for the purpose of, being
+stored in, processed, and operated on by a computer. The term does not include computer software.
+
+"Computer software"--
+
+(1) Means
+
+(i) Computer programs that comprise a series of instructions, rules, routines, or statements, regardless of the media in which recorded,
+that allow or cause a computer to perform a specific operation or series of operations; and
+
+(ii) Recorded information comprising source code listings, design details, algorithms, processes, flow charts, formulas, and related
+material that would enable the computer program to be produced, created, or compiled.
+
+(2) Does not include computer databases or computer software documentation.
+                                                                                    Document Number: 19AQMM26Q0468 PROCESSED Page 16 of 26
+
+
+
+"Computer software documentation" means owner's manuals, user's manuals, installation instructions, operating instructions, and
+other similar items, regardless of storage medium, that explain the capabilities of the computer software or provide instructions for
+using the software.
+
+"Data" means recorded information, regardless of form or the media on which it may be recorded. The term includes technical data
+and computer software. The term does not include information incidental to contract administration, such as financial, administrative,
+cost or pricing, or management information.
+
+"Form, fit, and function data" means data relating to items, components, or processes that are sufficient to enable physical and
+functional interchangeability, and data identifying source, size, configuration, mating and attachment characteristics, functional
+characteristics, and performance requirements. For computer software it means data identifying source, functional characteristics, and
+performance requirements but specifically excludes the source code, algorithms, processes, formulas, and flow charts of the software.
+
+"Limited rights" means the rights of the Government in limited rights data as set forth in the Limited Rights Notice of paragraph (g)(3)
+if included in this clause.
+
+"Limited rights data" means data, other than computer software, that embody trade secrets or are commercial or financial and
+confidential or privileged, to the extent that such data pertain to items, components, or processes developed at private expense,
+including minor modifications.
+
+"Restricted computer software" means computer software developed at private expense and that is a trade secret, is commercial or
+financial and confidential or privileged, or is copyrighted computer software, including minor modifications of the computer software.
+
+"Restricted rights," as used in this clause, means the rights of the Government in restricted computer software, as set forth in a
+Restricted Rights Notice of paragraph (g) if included in this clause, or as otherwise may be provided in a collateral agreement
+incorporated in and made part of this contract, including minor modifications of such computer software.
+
+"Technical data" means recorded information (regardless of the form or method of the recording) of a scientific or technical nature
+(including computer databases and computer software documentation). This term does not include computer software or financial,
+administrative, cost or pricing, or management data or other information incidental to contract administration. The term includes
+recorded information of a scientific or technical nature that is included in computer databases. (See 41 U.S.C. 116).
+
+"Unlimited rights" means the rights of the Government to use, disclose, reproduce, prepare derivative works, distribute copies to the
+public, and perform publicly and display publicly, in any manner and for any purpose, and to have or permit others to do so.
+
+(b) Allocation of rights.
+
+(1) Except as provided in paragraph (c) of this clause, the Government shall have unlimited rights in--
+
+(i) Data first produced in the performance of this contract;
+
+(ii) Form, fit, and function data delivered under this contract;
+
+(iii) Data delivered under this contract (except for restricted computer software) that constitute manuals or instructional and training
+material for installation, operation, or routine maintenance and repair of items, components, or processes delivered or furnished for use
+under this contract; and
+
+(iv) All other data delivered under this contract unless provided otherwise for limited rights data or restricted computer software in
+accordance with paragraph (g) of this clause.
+
+(2) The Contractor shall have the right to--
+
+(i) Assert copyright in data first produced in the performance of this contract to the extent provided in paragraph (c)(1) of this clause;
+
+(ii) Use, release to others, reproduce, distribute, or publish any data first produced or specifically used by the Contractor in the
+performance of this contract, unless provided otherwise in paragraph (d) of this clause;
+
+(iii) Substantiate the use of, add, or correct limited rights, restricted rights, or copyright notices and to take other appropriate action, in
+accordance with paragraphs (e) and (f) of this clause; and
+                                                                                   Document Number: 19AQMM26Q0468 PROCESSED Page 17 of 26
+
+
+
+(iv) Protect from unauthorized disclosure and use those data that are limited rights data or restricted computer software to the extent
+provided in paragraph (g) of this clause.
+
+(c) Copyright--
+
+(1) Data first produced in the performance of the contract. Except as otherwise specifically provided in this contract, the Contractor
+may assert copyright in any data first produced in the performance of this contract. When asserting copyright, the Contractor shall
+affix the applicable copyright notice of 17 U.S.C. 401 or 402, and an acknowledgment of Government sponsorship (including
+contract number), to the data when such data are delivered to the Government, as well as when the data are published or deposited
+for registration as a published work in the U.S. Copyright Office. For data other than computer software, the Contractor grants
+to the Government, and others acting on its behalf, a paid-up, nonexclusive, irrevocable, worldwide license for all such data to
+reproduce, prepare derivative works, distribute copies to the public, and perform publicly and display publicly, by or on behalf of the
+Government. For computer software, the Contractor grants to the Government and others acting on its behalf, a paid-up, nonexclusive,
+irrevocable, worldwide license for all such computer software to reproduce, prepare derivative works, and perform publicly and
+display publicly (but not to distribute copies to the public), by or on behalf of the Government.
+
+(2) Data not first produced in the performance of this contract. The Contractor shall not, without the prior written permission of the
+Contracting Officer, incorporate in data delivered under this contract any data not first produced in the performance of this contract
+unless the Contractor--
+
+(i) Identifies the data; and
+
+(ii) Grants to the Government, or acquires on its behalf, a license of the same scope as set forth in paragraph (c)(1) of this clause or,
+if such data are restricted computer software, the Government shall acquire a copyright license as set forth in paragraph (g)(4) of this
+clause (if included in this contract) or as otherwise provided in a collateral agreement incorporated in or made part of this contract.
+
+(3) Removal of copyright notices. The Government will not remove any authorized copyright notices placed on data pursuant to this
+paragraph (c), and will include such notices on all reproductions of the data.
+
+(d) Release, publication, and use of data. The Contractor shall have the right to use, release to others, reproduce, distribute, or publish
+any data first produced or specifically used by the Contractor in the performance of this contract, except--
+
+(1) As prohibited by Federal law or regulation (e.g., export control or national security laws or regulations);
+
+(2) As expressly set forth in this contract; or
+
+(3) If the Contractor receives or is given access to data necessary for the performance of this contract that contain restrictive markings,
+the Contractor shall treat the data in accordance with such markings unless specifically authorized otherwise in writing by the
+Contracting Officer.
+
+(e) Unauthorized marking of data.
+
+(1) Notwithstanding any other provisions of this contract concerning inspection or acceptance, if any data delivered under this contract
+are marked with the notices specified in paragraph (g)(3) or (g)(4) if included in this clause, and use of the notices is not authorized
+by this clause, or if the data bears any other restrictive or limiting markings not authorized by this contract, the Contracting Officer
+may at any time either return the data to the Contractor, or cancel or ignore the markings. However, pursuant to 41 U.S.C. 4703, the
+following procedures shall apply prior to canceling or ignoring the markings.
+
+(i) The Contracting Officer will make written inquiry to the Contractor affording the Contractor 60 days from receipt of the inquiry to
+provide written justification to substantiate the propriety of the markings;
+
+(ii) If the Contractor fails to respond or fails to provide written justification to substantiate the propriety of the markings within the
+60-day period (or a longer time approved in writing by the Contracting Officer for good cause shown), the Government shall have
+the right to cancel or ignore the markings at any time after said period and the data will no longer be made subject to any disclosure
+prohibitions.
+
+(iii) If the Contractor provides written justification to substantiate the propriety of the markings within the period set in paragraph (e)
+(1)(i) of this clause, the Contracting Officer will consider such written justification and determine whether or not the markings are
+to be cancelled or ignored. If the Contracting Officer determines that the markings are authorized, the Contractor will be so notified
+in writing. If the Contracting Officer determines, with concurrence of the head of the contracting activity, that the markings are not
+                                                                                    Document Number: 19AQMM26Q0468 PROCESSED Page 18 of 26
+
+
+
+authorized, the Contracting Officer will furnish the Contractor a written determination, which determination will become the final
+agency decision regarding the appropriateness of the markings unless the Contractor files suit in a court of competent jurisdiction
+within 90 days of receipt of the Contracting Officer's decision. The Government will continue to abide by the markings under this
+paragraph (e)(1)(iii) until final resolution of the matter either by the Contracting Officer's determination becoming final (in which
+instance the Government will thereafter have the right to cancel or ignore the markings at any time and the data will no longer be
+made subject to any disclosure prohibitions), or by final disposition of the matter by court decision if suit is filed.
+
+(2) The time limits in the procedures set forth in paragraph (e)(1) of this clause may be modified in accordance with agency
+regulations implementing the Freedom of Information Act (5 U.S.C. 552) if necessary to respond to a request thereunder.
+
+(3) Except to the extent the Government's action occurs as the result of final disposition of the matter by a court of competent
+jurisdiction, the Contractor is not precluded by paragraph (e) of the clause from bringing a claim, in accordance with the Disputes
+clause of this contract, that may arise as the result of the Government removing or ignoring authorized markings on data delivered
+under this contract.
+
+(f) Omitted or incorrect markings.
+
+(1) Data delivered to the Government without any restrictive markings shall be deemed to have been furnished with unlimited rights.
+The Government is not liable for the disclosure, use, or reproduction of such data.
+
+(2) If the unmarked data has not been disclosed without restriction outside the Government, the Contractor may request, within 6
+months (or a longer time approved by the Contracting Officer in writing for good cause shown) after delivery of the data, permission
+to have authorized notices placed on the data at the Contractor's expense. The Contracting Officer may agree to do so if the
+Contractor--
+
+(i) Identifies the data to which the omitted notice is to be applied;
+
+(ii) Demonstrates that the omission of the notice was inadvertent;
+
+(iii) Establishes that the proposed notice is authorized; and
+
+(iv) Acknowledges that the Government has no liability for the disclosure, use, or reproduction of any data made prior to the addition
+of the notice or resulting from the omission of the notice.
+
+(3) If data has been marked with an incorrect notice, the Contracting Officer may--
+
+(i) Permit correction of the notice at the Contractor's expense if the Contractor identifies the data and demonstrates that the correct
+notice is authorized; or
+
+(ii) Correct any incorrect notices.
+
+(g) Protection of limited rights data and restricted computer software. (1) The Contractor may withhold from delivery qualifying
+limited rights data or restricted computer software that are not data identified in paragraphs (b)(1)(i), (ii), and (iii) of this clause. As a
+condition to this withholding, the Contractor shall--
+
+(i) Identify the data being withheld; and
+
+(ii) Furnish form, fit, and function data instead.
+
+(2) Limited rights data that are formatted as a computer database for delivery to the Government shall be treated as limited rights data
+and not restricted computer software.
+
+(3) [Reserved]
+
+(h) Subcontracting. The Contractor shall obtain from its subcontractors all data and rights therein necessary to fulfill the Contractor's
+obligations to the Government under this contract. If a subcontractor refuses to accept terms affording the Government those rights,
+the Contractor shall promptly notify the Contracting Officer of the refusal and shall not proceed with the subcontract award without
+authorization in writing from the Contracting Officer.
+                                                                                Document Number: 19AQMM26Q0468 PROCESSED Page 19 of 26
+
+
+
+(i) Relationship to patents or other rights. Nothing contained in this clause shall imply a license to the Government under any patent
+or be construed as affecting the scope of any license or other right otherwise granted to the Government.
+
+(End of clause)
+
+
+
+
+3.1 - List of Attachments
+
+Number                                                              Description
+Attachment 1                                                        Statement of Work
+Attachment 2                                                        C-SCRM Questionnaire
+Attachment 3                                                        C-SCRM Software Producer Attestation Form.
+
+
+
+
+1.3 - Quote Due Date
+
+All submissions in response to the RFQ shall be submitted to the Contracting Officer (diangelome@state.gov). In order to be
+considered for award, quotations conforming to the requirements of the RFQ must be received no later than 5 pm EDT on September
+21, 2026.
+Proprietary information submitted in response to this solicitation shall be clearly marked as such and will be protected from
+unauthorized disclosure as required by Subsection 27 of the Office of Procurement Policy Act as amended (41 U.S.C.423) as
+implemented in the FAR. Any unmarked proprietary information will be considered releasable under the restrictions of the Freedomof
+Information Act.
+
+
+
+
+1.4 - Contract Type
+
+
+This purchase order will result in an FFP contract type.
+
+
+
+
+1.5 - Submission of Quote Package
+
+The RFQ response package is due by the date and time established in the Quotation Due Date section, and shall consist of three (3)
+volumes (separate files). The Volumes are: Volume 1 - Go/No Go, Volume 2 – Technical Quote, Volume 3 – Price Quote. Quote
+Packages shall be formatted so as to be printable on non-reduced 8-1/2” x 11” pages with 1” margins.Offerors are advised that the
+entire quote package submission, inclusive of all attachments, shall not exceed 20MB). There is a size limitation of fifteen (15) pages
+total for the Volume 2 - Technical Quote submission. This limitation is inclusive of any charts, tables, pictures, and diagrams. Pages
+that exceed the required page limitations will not be evaluated. There is no page limitation for Volumes 1 or 3.
+The RFQ response package shall be organized as follows:
+Volume 1 (Factor 1) - Go/No Go: The vendor shall submit the following:
+Verification of an active SAM.gov registration
+The offeror shall include in its offer Attachment 2, C- SCRM Questionnaire, and Attachment 3, C-SCRM Software
+ProducerAttestation Form. Both documents must be completed in accordance with each attachment’s instructions. Failure to followthe
+attachment’s instructions may result in rejection of the offer. Instead of submitting the C-SCRM Software ProducerAttestation Form,
+the offeror may provide a link in its offer to a public website and the attestation information on thatwebsite will be evaluated for this
+solicitation (except offerors shall not publicly post attestation information regarding Planof Action and Milestones Model (POA&M).
+Volume 2 (Factor 2) - Technical Quote: the technical quote shall consist of the following sections:
+
+Technical Approach: Quoters must provide a description of how they will meet the SOW requirements. Specifically, this section must
+address how the company is qualified to meet the Task Order Requirements in SOW Section 1 and the Contractor Requirements in
+SOW Section 3 and the technical methods it will use to provide the deliverables outlined throughout the SOW and summarized in
+Sections 4 and 5.
+                                                                                Document Number: 19AQMM26Q0468 PROCESSED Page 20 of 26
+
+
+
+Work Plan: Quoters must describe the team, schedule, and actions it will use to provide deliverables in the specified timeframe.
+Quoters must also provide the Quality Assurance Plan described in SOW Task 4: Prototype Design and Development
+Volume 3 (Factor 3) - The offeror must submit firm-fixed prices for every line item listed in the RFQ CLIN section.The offeror must
+also provide a Total Evaluated Price for the overall performance period. All prices quoted shall be inclusive of all labor, materials,
+and equipment to successfully perform the services identified. The quote must clearly detail the level of effort and the mix of labor to
+perform the specific tasks being requested.
+While many CLINs include unit prices based on monthly or quarterly payments, others are priced in a single lot based on deliveryof a
+final end product.
+
+
+
+
+1.6 - Evaluation Factors
+
+Non-price Factors:
+Factor 1 - Go/No Go
+Factor 2 - Technical Approach and Work Plan
+
+Evaluation of the Technical Approach will include review of each Contractor qualification listed under SOW Section 3, with attention
+to both technical and subject-matter expertise and experience.
+Price: Price will be evaluated to determine whether the proposed price is fair and reasonable to the Government and in alignment with
+the technical requirements in terms of the labor mix and any supporting costs. The Government will evaluate total overall price to
+determine overall best value when conducting trade-offs with technical factors.
+The Government reserves the right to communicate and/or conduct exchanges with any or all contractors submitting a technical
+and price quote, if it is determined advantageous to the Government to do so. This statement is not to be construed to mean thatthe
+Government is obligated to communicate with every Contractor (note that FAR Part 15 procedures do not apply here, therefore formal
+discussions are not applicable). A contractor may be eliminated from consideration without further communication ifits technical
+and/or pricing quotes are not among those contractors considered most advantageous to the Government based on a best value
+determination.
+
+
+
+
+2.2 - Tradeoff Analysis
+
+The Government will first evaluate Factor 1 on a Go/No-Go basis. Any quotes that receive a No-Go rating will not be considered
+further for award.
+
+All quotes that receive a "Go" rating for Factor 1 will proceed to the next stage of evaluation. The Government will assign an overall
+confidence rating for all requirements under Factor 2 based on the contractor's technical submission.
+
+The Government will perform a price technical trade-off analysis of Factor 2 against the stated price in Factor 3 to determine the
+best value to the Government. The technical subfactor is significantly more important than the price factor. For Price, each Quoter’s
+Evaluated Total Price will be calculated based on the Quoter’s proposed CLIN totals.
+
+
+
+
+2.1 - Factor Ratings (Non Priced Factors)
+
+The following is the rating system for Factor 1:
+
+Go                                                                  The quote meets the criteria in the following two (2)
+                                                                    paragraphs.The C-SCRM Questionnaire contains both of the
+                                                                    following: (1) C-SCRM Questionnaire instructions arecompleted;
+                                                                    and (2) contains Yes answers for all questions inSections 2 and 3
+                                                                    of the questionnaire.For suppliers offering critical software, the
+                                                                    C-SCRM SoftwareProducer Attestation Form is completedfor
+                                                                    each software producer and meets the following: (1) name
+                                                                    ofsoftware producer is provided; (2)description of which product
+                                                                    or products the statement refers to isprovided; and (3) contains
+                                                                    a statementattesting that the software products listed in Item
+                                                                                  Document Number: 19AQMM26Q0468 PROCESSED Page 21 of 26
+
+
+
+                                                                     Number 1.3 ofthis form follow the Secure SoftwareDevelopment
+                                                                     Framework (SSDF) as identified in NIST SP800-218.
+No-Go                                                                The quote does not meet one (1) or more of the criteria in
+                                                                     thefollowing two (2) paragraphs.The C-SCRM Questionnaire
+                                                                     contains both of the following: (1) C-SCRM Questionnaire
+                                                                     instructions arecompleted; and (2) contains Yes answers for all
+                                                                     questions inSections 2 and 3 of the questionnaire.For suppliers
+                                                                     offering critical software, the C-SCRM SoftwareProducer
+                                                                     Attestation Form is completedfor each software producer and
+                                                                     meets the following: (1) name ofsoftware producer is provided;
+                                                                     (2)description of which product or products the statement refers to
+                                                                     isprovided; and (3) contains a statementattesting that the software
+                                                                     products listed in Item Number 1.3 ofthis form follow the Secure
+                                                                     SoftwareDevelopment Framework (SSDF) as identified in NIST
+                                                                     SP800-218.
+
+
+The following is the rating system for all subfactors under Factor 2:
+
+Rating                                                               Description
+High Confidence                                                      The Government has high confidence that the Offeror understands
+                                                                     the requirement, proposes a sound approach, and will be
+                                                                     successful in performing the contract with little or no Government
+                                                                     intervention.
+Some Confidence                                                      The Government has some confidence that the Offeror understands
+                                                                     the requirement, proposes a sound approach, and will be
+                                                                     successful in performing the contract with some Government
+                                                                     intervention.
+Low Confidence                                                       The Government has low confidence that the Offeror understands
+                                                                     the requirement, proposes a sound approach, or will be successful
+                                                                     in performing the contract even with Government intervention.
+
+
+
+
+1.2 - Questions
+
+Questions concerning this RFQ must be submitted by 10 am EDT on September 16, 2026 via email to the Contracting Officer
+(diangelome@state.gov) with the subject header 19AQMM26Q0468.
+The Government is not obligated to provide responses to any questions submitted after that date.
+
+
+
+
+52.204-8 Alt I - Annual Representations and Certifications (Mar 2026) - Alternate I (Mar 2023)
+
+(a)(1) The North American Industry Classification System (NAICS) codes and corresponding size standards for this acquisition are as
+follows; the categories or portions these NAICS codes are assigned to are specified elsewhere in the solicitation:
+
+                            NAICS code                                                            Size Standard
+__________                                                              ____________________
+__________                                                              ____________________
+__________                                                              ____________________
+
+[Contracting Officer to insert NAICS codes and size standards].
+
+(2) The small business size standard for a concern that submits an offer, other than on a construction or service acquisition, but
+proposes to furnish an end item that it did not itself manufacture, process, or produce, (i.e., nonmanufacturer), is 500 employees, or
+150 employees for information technology value-added resellers under NAICS code 541519, if the acquisition--
+
+(i) Is set aside for small business and has a value above the simplified acquisition threshold;
+                                                                                    Document Number: 19AQMM26Q0468 PROCESSED Page 22 of 26
+
+
+
+
+(ii) Uses the HUBZone price evaluation preference regardless of dollar value, unless the offeror waives the price evaluation
+preference; or
+
+(iii) Is an 8(a), HUBZone, service-disabled veteran-owned, economically disadvantaged women-owned, or women-owned small
+business set-aside or sole-source award regardless of dollar value.
+
+(b) (1) If the provision at 52.204-7, System for Award Management, is included in this solicitation, paragraph (d) of this provision
+applies.
+
+(2) If the provision at 52.204-7, System for Award Management, is not included in this solicitation, and the Offeror has an active
+registration in the System for Award Management (SAM), the Offeror may choose to use paragraph (d) of this provision instead of
+completing the corresponding individual representations and certifications in the solicitation. The Offeror shall indicate which option
+applies by checking one of the following boxes:
+
+__ (i) Paragraph (d) applies.
+
+__ (ii) Paragraph (d) does not apply and the offeror has completed the individual representations and certifications in the solicitation.
+
+(c) (1) The following representations or certifications in SAM are applicable to this solicitation as indicated:
+
+(i) 52.203-2, Certificate of Independent Price Determination. This provision applies to solicitations when a firm-fixed-price contract or
+fixed-price contract with economic price adjustment is contemplated, unless--
+
+(A) The acquisition is to be made under the simplified acquisition procedures in Part 13;
+
+(B) The solicitation is a request for technical proposals under two-step sealed bidding procedures; or
+
+(C) The solicitation is for utility services for which rates are set by law or regulation.
+
+(ii) 52.203-11, Certification and Disclosure Regarding Payments to Influence Certain Federal Transactions. This provision applies to
+solicitations expected to exceed $200,000.
+
+(iii) 52.203-18, Prohibition on Contracting with Entities that Require Certain Internal Confidentiality Agreements or Statements-
+Representation. This provision applies to all solicitations.
+
+(iv) 52.204-3, Taxpayer Identification. This provision applies to solicitations that do not include the provision at 52.204-7, System for
+Award Management.
+
+(v) 52.204-5, Women-Owned Business (Other Than Small Business). This provision applies to solicitations that--
+
+(A) Are not set aside for small business concerns;
+
+(B) Exceed the simplified acquisition threshold; and
+
+(C) Are for contracts that will be performed in the United States or its outlying areas.
+
+(vi) 52.204-26, Covered Telecommunications Equipment or Services--Representation. This provision applies to all solicitations.
+
+(vii) 52.209-2, Prohibition on Contracting with Inverted Domestic Corporations--Representation.
+
+(viii) 52.209-5, Certification Regarding Responsibility Matters. This provision applies to solicitations where the contract value is
+expected to exceed the simplified acquisition threshold.
+
+(ix) 52.209-11, Representation by Corporations Regarding Delinquent Tax Liability or a Felony Conviction under any Federal Law.
+This provision applies to all solicitations.
+
+(x) 52.214-14, Place of Performance--Sealed Bidding. This provision applies to invitations for bids except those in which the place of
+performance is specified by the Government.
+                                                                                  Document Number: 19AQMM26Q0468 PROCESSED Page 23 of 26
+
+
+
+(xi) 52.215-6, Place of Performance. This provision applies to solicitations unless the place of performance is specified by the
+Government.
+
+(xii) 52.219-1, Small Business Program Representations (Basic, Alternates I, and II). This provision applies to solicitations when the
+contract is for supplies to be delivered or services to be performed in the United States or its outlying areas, or when the contracting
+officer has applied part 19 in accordance with 19.000(b)(1)(ii).
+
+(A) The basic provision applies when the solicitations are issued by other than DoD, NASA, and the Coast Guard.
+
+(B) The provision with its Alternate I applies to solicitations issued by DoD, NASA, or the Coast Guard.
+
+(C) The provision with its Alternate II applies to solicitations that will result in a multiple-award contract with more than one NAICS
+code assigned.
+
+(xiii) 52.219-2, Equal Low Bids. This provision applies to solicitations when contracting by sealed bidding and the contract is for
+supplies to be delivered or services to be performed in the United States or its outlying areas, or when the contracting officer has
+applied part 19 in accordance with 19.000(b)(1)(ii).
+
+(xiv) 52.222-22, Previous Contracts and Compliance Reports. This provision applies to solicitations that include the clause at
+52.222-26, Equal Opportunity.
+
+(xv) 52.222-25, Affirmative Action Compliance. This provision applies to solicitations, other than those for construction, when the
+solicitation includes the clause at 52.222-26, Equal Opportunity.
+
+(xvi) 52.222-38, Compliance with Veterans' Employment Reporting Requirements. This provision applies to solicitations when it is
+anticipated the contract award will exceed the simplified acquisition threshold and the contract is not for acquisition of commercial
+products or commercial services.
+
+(xvii) 52.223-1, Biobased Product Certification. This provision applies to solicitations that require the delivery or specify the use of
+biobased products in USDA-designated product categories; or include the clause at 52.223-2, Reporting of Biobased Products Under
+Service and Construction Contracts.
+
+(xviii) 52.223-4, Recovered Material Certification. This provision applies to solicitations that are for, or specify the use of, EPA-
+designated items.
+
+(xix) 52.223-22, Public Disclosure of Greenhouse Gas Emissions and Reduction Goals-Representation. This provision applies to
+solicitations that include the provision at 52.204-7.
+
+(xx) 52.225-2, Buy American Certificate. This provision applies to solicitations containing the clause at 52.225-1.
+
+(xxi) 52.225-4, Buy American-Free Trade Agreements-Israeli Trade Act Certificate. (Basic, Alternates II and III.) This provision
+applies to solicitations containing the clause at 52.225-3.
+
+(A) If the acquisition value is less than $50,000, the basic provision applies.
+
+(B) If the acquisition value is $50,000 or more but is less than $100,000, the provision with its Alternate II applies.
+
+(C) If the acquisition value is $100,000 or more but is less than $105,767, the provision with its Alternate III applies.
+
+(xxii) 52.225-6, Trade Agreements Certificate. This provision applies to solicitations containing the clause at 52.225-5.
+
+(xxiii) 52.225-20, Prohibition on Conducting Restricted Business Operations in Sudan--Certification. This provision applies to all
+solicitations.
+
+(xxiv) 52.225-25, Prohibition on Contracting with Entities Engaging in Certain Activities or Transactions Relating to Iran-
+Representation and Certifications. This provision applies to all solicitations.
+
+(xxv) 52.226-2, Historically Black College or University and Minority Institution Representation. This provision applies to
+solicitations for research, studies, supplies, or services of the type normally acquired from higher educational institutions.
+                                                                                 Document Number: 19AQMM26Q0468 PROCESSED Page 24 of 26
+
+
+
+(2) The following representations or certifications are applicable as indicated by the Contracting Officer:
+[Contracting Officer check as appropriate.]
+
+__ (i) 52.204-17, Ownership or Control of Offeror.
+
+__ (ii) 52.204-20, Predecessor of Offeror.
+
+__ (iii) 52.222-18, Certification Regarding Knowledge of Child Labor for Listed End Products.
+
+__ (iv) 52.222-48, Exemption from Application of the Service Contract Labor Standards to Contracts for Maintenance, Calibration, or
+Repair of Certain Equipment-Certification.
+
+__ (v) 52.222-52, Exemption from Application of the Service Contract Labor Standards to Contracts for Certain Services-
+Certification.
+
+__ (vi) 52.227-6, Royalty Information.
+
+__ (A) Basic.
+
+__ (B) Alternate I.
+
+__ (vii) 52.227-15, Representation of Limited Rights Data and Restricted Computer Software.
+
+(d) The offeror has completed the annual representations and certifications electronically in SAM website accessed through https://
+www.sam.gov. After reviewing the SAM information, the offeror verifies by submission of the offer that the representations and
+certifications currently posted electronically that apply to this solicitation as indicated in paragraph (c) of this provision have been
+entered or updated within the last 12 months, are current, accurate, complete, and applicable to this solicitation (including the business
+size standard applicable to the NAICS code referenced for this solicitation), as of the date of this offer and are incorporated in this
+offer by reference (see FAR 4.1201); except for the changes identified below [offeror to insert changes, identifying change by
+clause number, title, date]. These amended representation(s) and/or certification(s) are also incorporated in this offer and are current,
+accurate, and complete as of the date of this offer.
+
+       FAR Clause #                           Title                                 Date                          Change
+__________                         _______________                    __________                        __________
+__________                         _______________                    __________                        __________
+__________                         _______________                    __________                        __________
+
+Any changes provided by the offeror are applicable to this solicitation only, and do not result in an update to the representations and
+certifications posted on SAM.
+
+(End of provision)
+
+
+
+
+52.204-26 - Covered Telecommunications Equipment or Services-Representation (Oct 2020)
+
+(a) Definitions. As used in this provision, "covered telecommunications equipment or services" and "reasonable
+inquiry" have the meaning provided in the clause 52.204-25, Prohibition on Contracting for Certain
+Telecommunications and Video Surveillance Services or Equipment.
+
+(b) Procedures. The Offeror shall review the list of excluded parties in the System for Award Management
+(SAM) (https://www.sam.gov) for entities excluded from receiving federal awards for "covered
+telecommunications equipment or services".
+
+(c) Representations.
+                                                                               Document Number: 19AQMM26Q0468 PROCESSED Page 25 of 26
+
+
+
+(1) The Offeror represents that it ? does, ? does not provide covered telecommunications equipment or services
+as a part of its offered products or services to the Government in the performance of any contract, subcontract,
+or other contractual instrument.
+
+(2) After conducting a reasonable inquiry for purposes of this representation, the offeror represents that it ?
+does, ? does not use covered telecommunications equipment or services, or any equipment, system, or service
+that uses covered telecommunications equipment or services.
+
+(End of provision)
+
+
+
+52.219-1 - Small Business Program Representations (DEVIATION FEB 2026)
+
+        (a) Definitions. As used in this provision-
+        Economically disadvantaged women-owned small business (EDWOSB) concern means a small business concern that is
+        at least 51 percent directly and unconditionally owned by, and the management and daily business operations of which
+        are controlled by, one or more women who are citizens of the United States and who are economically disadvantaged
+        in accordance with 13 CFR part 127, and the concern is certified by SBA or an approved third-party certifier in accordance
+        with 13 CFR 127.300. It automatically qualifies as a women-owned small business concern eligible under the WOSB
+        Program.
+        HUBZone small business concern means a small business concern that meets the requirements described in 13 CFR
+        126.200, is certified by the Small Business Administration (SBA) and designated by SBA as a HUBZone small business
+        concern in the Small Business Search (SBS) ( 13 CFR 126.103).
+        Service-disabled veteran-owned small business (SDVOSB) concern eligible under the SDVOSB Program means an
+        SDVOSB concern that is designated in the System for Award Management (SAM) as certified by the Small Business
+        Administration (SBA) in accordance with 13 CFR 128.300.
+        Small business concern—
+                   (1) Means a concern, including its affiliates, that is independently owned and operated, not dominant in its field
+                   of operation, and qualified as a small business under the criteria in 13 CFR part 121 and the size standard in
+                   paragraph (b) of this provision.
+                   (2) Affiliates, as used in this definition, means business concerns, one of whom directly or indirectly controls
+                   or has the power to control the others, or a third party or parties control or have the power to control the others.
+                   In determining whether affiliation exists, consideration is given to all appropriate factors including common
+                   ownership, common management, and contractual relationships. SBA determines affiliation based on the factors
+                   set forth at 13 CFR 121.103.
+        Small disadvantaged business concern means a small business concern that-
+                   (1) Is at least 51 percent unconditionally and directly owned (as defined at 13 CFR 124.105) by one or more
+                   socially disadvantaged (as defined at 13 CFR 124.103) and economically disadvantaged (as defined at 13 CFR
+                   124.104) individuals who are citizens of the United States, and
+                   (2) The management and daily business operations of which are controlled (as defined at 13 CFR 124.106) by
+                   individuals who meet the criteria in paragraph (1) of this definition.
+        Women-owned small business (WOSB) concern eligible under the WOSB Program (in accordance with 13 CFR part 127)
+        means a small business concern that is at least 51 percent directly and unconditionally owned by, and the management and
+        daily business operations of which are controlled by, one or more women who are citizens of the United States, and the
+        concern is certified by SBA or an approved third-party certifier in accordance with 13 CFR 127.300.
+        (b) (1) The North American Industry Classification System (NAICS) code for this acquisition is 541511[insert NAICS
+        code].
+                   (2) The small business size standard is $34M [insert size standard].
+                   (3) The small business size standard for a concern that submits an offer, other than on a construction or service
+                   acquisition, but proposes to furnish an end item that it did not itself manufacture, process, or produce (i.e.,
+                   nonmanufacturer), is 500 employees, or 150 employees for information technology value-added resellers under
+                   NAICS code 541519, if the acquisition—
+                               (i) Is set aside for small business and has a value above the simplified acquisition threshold;
+                               (ii) Uses the HUBZone price evaluation preference regardless of dollar value, unless the offeror waives
+                               the price evaluation preference; or
+                               (iii)Is an 8(a), HUBZone, service-disabled veteran-owned, economically disadvantaged women-owned,
+                               or women-owned small business set-aside or sole-source award regardless of dollar value.
+                                                                       Document Number: 19AQMM26Q0468 PROCESSED Page 26 of 26
+
+
+
+(c) Representations. (1) The offeror represents as part of its offer that—
+                     (i) It __ is, __ is not a small business concern; or
+                     (ii)It __ is, __ is not a small business joint venture that complies with the requirements of 13 CFR
+                     121.103(h) and 13 CFR 125.8(a) and (b). [The offeror shall enter the name and unique entity identifier
+                     of each party to the joint venture: _________________________.]
+          (2)[Complete only if the offeror represented itself as a small business concern in paragraph (c)(1) of this
+          provision.] The offeror represents that it __ is, __ is not a women-owned small disadvantage business concern.
+          (3) Women-owned small business (WOSB) joint venture eligible under the WOSB Program. The offeror represents
+          as part of its offer that it __ is, __ is not a joint venture that complies with the requirements of 13 CFR 127.506(a)
+          through (c). [ The offeror shall enter the name and unique entity identifier of each party to the joint venture:
+          _________________________.]
+          (4) Economically disadvantaged women-owned small business (EDWOSB) joint venture. The offeror represents
+          as part of its offer that it __ is, __ is not a joint venture that complies with the requirements of 13 CFR 127.506(a)
+          through (c). [ The offeror shall enter the name and unique entity identifier of each party to the joint venture:
+          _________________________.]
+          (5) SDVOSB joint venture eligible under the SDVOSB Program. [Complete only if the offeror is certified as a
+          SDVOSB concern]. The offeror represents as part of its offer that it __ is, __ is not a SDVOSB joint venture
+          eligible under the SDVOSB Program that complies with the requirements of 13 CFR 128.402. [ The offeror shall
+          enter the name and unique entity identifier of each party to the joint venture: _________________________.]
+          (6) HUBZone joint venture eligible under the HUBZone Program. [Complete only if the offeror is a HUBZone
+          small business concern.] The offeror represents, as part of its offer, that it __ is, __ is not a HUBZone joint venture
+          that complies with the requirements of 13 CFR 126.616(a) through (c). [ The offeror shall enter the name and
+          unique entity identifier of each party to the joint venture: _________________________.] Each HUBZone small
+          business concern participating in the HUBZone joint venture must be certified as a HUBZone concern.
+(d) Notice. Under 15 U.S.C. 645(d), any person who misrepresents a firm’s status as a business concern that is small,
+HUBZone small, small disadvantaged, service-disabled veteran-owned small, economically disadvantaged women-owned
+small, or women-owned small eligible under the WOSB Program in order to obtain a contract to be awarded under the
+preference programs established pursuant to section 8, 9, 15, 31, and 36 of the Small Business Act or any other provision of
+Federal law that specifically references section 8(d) for a definition of program eligibility, will be—
+          (1) Punished by imposition of fine, imprisonment, or both;
+          (2) Subject to administrative remedies, including suspension and debarment; and
+          (3) Ineligible for participation in programs conducted under the authority of the Act.
+
+                                                 (End of provision)
+

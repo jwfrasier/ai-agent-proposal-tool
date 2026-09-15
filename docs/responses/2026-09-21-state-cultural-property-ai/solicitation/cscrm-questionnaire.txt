@@ -1,0 +1,23 @@
+[A1]       CYBERSECURITY SUPPLY CHAIN RISK MANAGEMENT (C-SCRM) QUESTIONNAIRE
+[A2] Instructions: - This worksheet shall be completed by the vendor responsible for submitting the offer. References to "organization" refer to the offering entity. If the offering entity is a joint venture (JV), the response may come from either the JV or from the JV managing partner. - Provide the requested inputs in the gray shaded lines of the template under column D, Vendor Response, for all Items Numbers for Sections 1-3. Offerors are advised that the Government may request documentation from the Offerors to validate the responses provided.
+[A3] SECTION 1 - CONTACT INFORMATION
+[A4] ITEM NO. | [B4] ITEM DESCRIPTION | [C4] VENDOR RESPONSE
+[A5] 1.1000000000000001 | [B5] Enter the name of your company.
+[A6] 1.2 | [B6] Enter the name of the primary Point-Of-Contact (POC) for your company that the Government may contact to discuss the vendor inputs on this questionnaire.
+[A7] 1.3 | [B7] Enter the job title of the primary POC.
+[A8] 1.4 | [B8] Enter the phone number of the primary POC in the following format: (555) 555-5555
+[A9] 1.5 | [B9] Enter the e-mail address of the primary POC.
+[A10] SECTION 2 VENDOR RISK MANAGEMENT PLAN
+[A11] ITEM NO. | [B11] ITEM DESCRIPTION | [C11] VENDOR RESPONSE | [D11] NIST SP 800-53 Reference
+[A12] 2.1 | [B12] Does your organization identify its key supply chain threats? (Note: if you do not have suppliers, answer "Yes") | [C12] 14
+[A13] 2.2000000000000002 | [B13] Does your organization map key suppliers to your supply chain threats? (Note: if you do not have suppliers, answer "Yes") | [C13] 14
+[A14] 2.2999999999999998 | [B14] Does your organization have written SCRM requirements in contracts with your key suppliers? (Note: if you do not have suppliers, answer "Yes") | [C14] 17
+[A15] 2.4 | [B15] Does your organization verify that your suppliers meet SCRM requirements through contractual terms and conditions? (Note: if you do not have suppliers, answer "Yes") | [C15] 19
+[A16] SECTION 3 PHYSICAL AND PERSONNEL SECURITY
+[A17] ITEM NO. | [B17] ITEM DESCRIPTION | [C17] VENDOR RESPONSE | [D17] NIST SP 800-53 Reference
+[A18] 3.1 | [B18] Does your organization have policies for conducting background checks of your employees as permitted by the country in which your organization operates?  | [C18] 22
+[A19] 3.2 | [B19] Does your organization have procedures in place to prevent tampering of Information and Communications Technology (ICT) equipment stored as supply chain inventory? | [C19] 24
+[A20] 3.3 | [B20] Do you provide literacy training on recognizing and reporting potential indicators of insider threat? | [C20] 26
+
+=== data validation / dropdown lists ===
+<dataValidations count="1"><dataValidation type="list" allowBlank="1" showErrorMessage="1" sqref="C18:C20" xr:uid="{00000000-0002-0000-0100-000000000000}"><formula1>ANSWER</formula1></dataValidation>

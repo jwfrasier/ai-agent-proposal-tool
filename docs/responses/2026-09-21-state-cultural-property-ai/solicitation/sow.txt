@@ -1,0 +1,212 @@
+
+
+STATEMENT OF WORK  
+ 
+U.S. Department of State
+Bureau of Educational and Cultural Affairs
+Cultural Heritage Center (CHC) 
+
+Prototype Development for an AI-Powered Cultural Property Identification Tool
+ 
+1. TASK ORDER REQUIREMENTS 
+ 
+The purpose of this Statement of Work (SOW) is to procure a prototype for a cultural property identification tool powered by artificial intelligence (AI) that can serve as a proof-of-concept for testing by U.S. law enforcement and assessment for the feasibility and desirability of further development and potential future acquisition.
+
+The Government’s minimum requirement is that the prototype development: 
+
+Is led by a contracted entity with demonstrated expertise in AI/machine learning and image recognition, as well as federal AI governance and compliance standards, and familiarity with relevant training data sources, the international market and illicit trafficking of international cultural property, cultural property legal and regulatory frameworks, cultural property identification processes and standards, and federal law enforcement and customs operations, as well as demonstrated skills in project management and stakeholder consultation and cooperation;
+Ensures active engagement with stakeholders, including government officials, U.S. law enforcement, representatives of cultural institutions, and other subject matter experts;
+Includes in the training dataset categories of cultural property from Ukraine and at least one other country that are covered by U.S. import restrictions under 19 CFR §12.104g;
+Includes the development and delivery of a standalone application, not connected to Department of State or other U.S. Government systems or networks, with sufficient scope, functionality, and traceability of outputs for simulated field testing by U.S. law enforcement (using representative, non-case-specific inputs);
+Ensures the Government receives Government Purpose Rights in the resulting prototype, model(s), and associated technical data and software, sufficient to use, reproduce, and share the prototype with other U.S. Government agencies for testing and evaluation purposes, while permitting the Contractor to retain rights to commercialize the resulting product with other customers;
+Includes the delivery and presentation of a report describing in detail all information related to the design, training, technical, governance, and security specifications, compliance standards, stakeholder interactions, and preliminary testing results that will allow assessment of the feasibility and desirability of the development and acquisition of a full-scale tool for operational use.
+
+2. PROJECT DESCRIPTION 
+ 
+The illicit trafficking of stolen, looted, or forged art, antiquities, and other cultural property is a serious crime and national security issue linked to terrorist financing, transnational organized crime, money laundering, smuggling, and counterfeiting.  Cultural property trafficking deprives communities of their history and identity, undermines the legal art market, and harms American collectors and cultural institutions that may unknowingly acquire stolen or looted objects.  Of paramount importance in disrupting this trafficking is the rapid and accurate identification of cultural property.  These objects can take many forms, and there are different laws that control their movement, including the Convention on Cultural Property Implementation Act (19 U.S.C. §2601–2613), under which Customs and Border Protection have imposed import restrictions on categories of archaeological and ethnological material from a number of countries, including Ukraine (19 CFR §12.104g), in order to deter the pillage of this material.  Customs officers and investigators on the front lines need a tool to swiftly inform their decision-making.
+
+The Cultural Heritage Center (CHC) in the U.S. Department of State’s Bureau of Educational and Cultural Affairs serves as the secretariat of the Cultural Heritage Coordinating Committee (CHCC), which represents 15 U.S. agencies and the Smithsonian Institution.  The CHCC was stood up by Congress in 2016 to coordinate the activities of the U.S. government to protect and preserve international cultural property at risk and consult with governmental and nongovernmental organizations, including museums, educational and research institutions, and participants in the international art and cultural property market on such efforts (PLAW 114-151).  
+
+In 2020, the CHCC developed the Cultural Property Experts On Call (CPEOC) program, managed by the University of Pennsylvania Cultural Heritage Center, to provide rapid connections between U.S. law enforcement and subject-matter experts in archaeology, art history, and anthropology for the identification of cultural property encountered in investigations.  This program is a significant advancement toward providing U.S. law enforcement with quick and reliable information and has benefited from the invaluable contributions of the time and expertise of over 200 experts.  Considering inherent capacity limits of the CPEOC program in comparison to the volume of goods crossing the U.S. border and advancements in machine-learning and image-recognition capabilities, the CHCC now proposes the development of an AI-powered cultural property identification system.  This proposal builds on the results of consultations both within the CHCC and between the CHCC and U.S. and international subject-matter experts, cultural institutions, and industry representatives.
+
+As CHCC secretariat, CHC seeks the development of a prototype for such an AI-powered cultural property identification tool that can serve as a proof-of-concept for simulated field testing by U.S. law enforcement and assessment for the feasibility and desirability of further development and potential future acquisition.
+
+3. CONTRACTOR REQUIREMENTS 
+ 
+Technical and General Qualifications 
+The Contractor shall possess the technical and subject-matter expertise, institutional capacity, and professional experience necessary to perform the work described in this Statement of Work successfully.  
+
+Demonstrated qualifications shall include:
+Expertise designing, developing, and deploying AI/machine learning image recognition and classification systems, including model training, validation, and performance benchmarking;
+Expertise in software application development, including building functional, testable applications suitable for field use by non-technical end-users;
+Expertise in data governance frameworks and federal AI governance requirements and compliance standards applicable to a standalone, non-Department-connected prototype (e.g., trustworthy AI principles), with the ability to architect the system for future extensibility to full FedRAMP authorization in subsequent development phases;
+Expertise in sourcing, curating, and managing relevant training data, including images, 3D models, and related metadata, and including establishing data-sharing arrangements with external data contributors;
+Familiarity with the international market for and illicit trafficking of cultural property, related legal and regulatory frameworks, and processes and standards for the identification of cultural property by subject-matter experts;
+Familiarity with federal law enforcement and customs operations, records management, and information security requirements, including the operational constraints of field-based investigative use;
+Ability to effectively liaise with cultural institutions in order to secure the necessary data-sharing arrangements;
+Ability to design and conduct structured stakeholder consultations across multiple stakeholder categories in the public, private, academic, and non-profit sectors;  
+Experience managing projects and developing deliverables for federal government initiatives.
+ 
+Duties and Responsibilities 
+The Contractor shall perform all services necessary to deliver the final products, including but not limited to: 
+
+Identifying and engaging relevant stakeholders, including government officials, U.S. law enforcement, cultural institution representatives, the Cultural Property Experts On Call program, and other subject-matter experts on scope selection, user workflows and requirements, and training and testing plans
+Identifying, sourcing, and curating training data, including engaging potential data contributors and establishing necessary data-sharing arrangements
+Consulting regularly with CHC and as needed with the CHCC on stakeholder and contributor outreach and feedback and on development progress
+Designing, developing, and training the AI-powered prototype application, including defining and implementing its technical, governance, and security specifications
+Designing and developing the prototype as a standalone system that does not connect to Department of State networks and does not process or store Department of State information, consistent with 5 FAH-11 H-413.3 and 12 FAH-10 H-312.2-1; and architecting the prototype in a manner reasonably extensible to future FedRAMP authorization, should a subsequent phase involve full-scale development, hosting by the Department or other U.S. Government agencies, or operational deployment
+Conducting internal testing and validation of the prototype prior to delivery
+Coordinating and supporting preliminary simulated field testing (using representative, non-case-specific data) or user-acceptance testing of the prototype with U.S. law enforcement, other relevant agencies, and the Cultural Property Experts On Call program
+Developing and delivering a comprehensive report describing the prototype's design, training, technical, governance, and security specifications, compliance standards, stakeholder interactions, and preliminary testing results
+Briefing CHC, the CHCC, and other relevant stakeholders on the prototype, findings, and recommendations for further development
+
+4. TASKS AND DELIVERABLES THE CONTRACTOR SHALL DELIVER: 
+
+Task 1: Project Management and Kickoff
+
+The Contractor shall conduct a kickoff meeting with the Contracting Officer's Representative (COR) and key CHC/CHCC stakeholders and shall establish a project management approach for the period of performance.  
+
+The Contractor will implement procedures for Project Risk Management to identify, track, and monitor project risks such as: Volatility of requirements; project scope; project management ability; project staffing levels and skills; technology experience and degree of innovation; technical complexity; realism of project schedules; contract funding balances; senior management support; security risks; and inadequate training for developers or users. These procedures should be sufficiently detailed so that they can be integrated into the Department’s risk-management processes, including those affecting the Department’s security and privacy assurance and performance of contractual requirements.
+
+Deliverables:
+Project Management Plan, including risk register addressing the risk categories identified above, schedule, and communication plan
+Monthly Progress Reports
+
+Task 2: Stakeholder Engagement and Requirements Validation
+
+The Contractor shall identify and engage relevant stakeholders — including government officials, U.S. law enforcement, cultural institution representatives, the Cultural Property Experts On Call (CPEOC) program, and other subject-matter experts — to inform scope selection, user workflows and requirements, and training and testing plans for the prototype. The Contractor shall consult regularly with CHC, and as needed with the CHCC, on stakeholder outreach and feedback throughout development.
+
+Deliverable: 
+Stakeholder Engagement Summary, including validated scope, user workflows, and training/testing plan
+
+Task 3: Data Sourcing and Curation
+
+The Contractor shall identify, source, and curate training data necessary for the prototype, including engaging potential data contributors (e.g., museums, archives, and research institutions) and establishing necessary data-sharing arrangements.  The Contractor shall endeavor where possible to utilize training data with a Creative Commons 0 license; where this is not possible, the Contractor shall be prepared to negotiate data-sharing arrangements with  institutions or governments as needed to achieve adequate scope and representativeness for training purposes and at no additional cost.  This scope shall include a sample of categories of cultural property from Ukraine and at least one other country that are covered by U.S. import restrictions under 19 CFR §12.104g.  The Contractor shall ensure that no Department of State or other U.S. Government information that is not publicly available is incorporated into the training data set.
+
+Data curation shall include vetting the appropriateness of each object in the sourced datasets for training purposes and making the data legible to AI, which may include standardizing metadata terminology, as well as editing, normalizing, and vectorizing images.
+
+Deliverable:
+Data Sourcing and Curation Summary, including an inventory of data sources and associated data-sharing arrangements
+
+Task 4: Prototype Design and Development
+The Contractor shall design, develop, and train the AI-powered prototype application as a standalone system, not connected to Department of State or other U.S. Government systems or networks, with sufficient scope, functionality, and traceability of outputs for simulated field testing. This task shall include defining and implementing the prototype's:
+Technical specifications, including model architecture, data inputs, and performance benchmarks;
+Governance specifications, including data handling, chain-of-custody, and applicable federal AI governance requirements (e.g., trustworthy AI principles) appropriate to a standalone, non-Department-connected system; and
+Security specifications, including safeguards appropriate to the prototype's standalone architecture and reasonable extensibility to future FedRAMP authorization should a subsequent phase involve Department or other USG hosting or system integration.
+Software assurance is the level of confidence that software functions as intended. That it is free of vulnerabilities, either intentionally or unintentionally, designed or inserted as part of the software throughout the life cycle. Code delivered under this contract must have substantial test code cove
+rage. The contractor will provide the Government a version-controlled repository of code developed under this contract, consistent with the Government’s Government Purpose Rights license described in Section 10.2. There will be a minimum of 90% test coverage of all code developed under this contract, excluding pre-existing commercial frameworks, development platforms, cloud infrastructure, or AI orchestration technologies not modified by the Contractor. All requirements or user stories must receive testing according to their acceptance criteria with priorities set by the Government.
+Code submitted must be free of medium- and high-level static and dynamic security vulnerabilities. Code shall demonstrate clean tests from a static testing SaaS and from open-source web application security scanners or other Department approved solutions, along with documentation explaining any false positives. Software Composition Analysis (SCA) scanning shall be conducted in addition to static and dynamic scanning at each deployment of code. The Contractor shall propose, as part of its technical proposal, a draft Quality Assurance Plan (QAP) addressing testing and validation protocols, performance and acceptance criteria, surveillance frequency, reporting and documentation requirements, and remediation/retesting timelines for issues identified during testing. The final QASP will be mutually agreed upon by the Contractor and the Government and incorporated at the time of award.
+
+Deliverable:
+Prototype Application (working build, delivered per Government Purpose Rights as specified in Section 10)
+
+Task 5: Internal Testing and Validation
+
+The Contractor shall conduct internal testing and validation of the prototype prior to delivery for simulated field testing, including verification that the application meets the technical, governance, and security specifications defined in Task 4.
+
+The contractor shall conduct performance testing of the prototype prior to delivery for simulated field testing. The contractor shall resolve issues identified during performance testing activities. 
+
+Deliverable:
+Internal Testing and Validation Report, including data, scenarios, volumes, support of performance testing activities, trending of performance data, and test results
+
+Task 6: Simulated Field Testing and Subject-Matter Validation
+
+The Contractor shall coordinate and support preliminary simulated field testing (using representative, non-case-specific data) or user-acceptance testing of the prototype with U.S. law enforcement, other relevant agencies, and the CPEOC program. Testing shall include an assessment of the concordance between the prototype's outputs and CPEOC subject-matter expert assessments, as well as user feedback on usability and field applicability.  The contractor shall resolve issues identified during these testing activities. 
+
+Deliverable:
+Simulated Field Testing and Validation Report, including data, scenarios, volumes, support of performance testing activities, trending of performance data (to include CPEOC concordance results), and user feedback
+
+Task 7: Final Assessment Report
+The Contractor shall develop and deliver a comprehensive report describing the prototype's design, training, technical, governance, and security specifications, compliance standards, stakeholder interactions, testing results, and resolution of issues identified during testing, sufficient to allow CHC and the CHCC to assess the feasibility and desirability of further development and potential future acquisition.
+
+Deliverable:
+Final Assessment Report
+
+Task 8: Final Briefing
+
+The Contractor shall present the prototype, findings, and recommendations to CHC, the CHCC, and other relevant stakeholders in a final out-briefing.
+
+Deliverable:
+Final Briefing/Presentation materials
+
+5. DELIVERY SCHEDULE 
+ 
+Deliverable
+Linked Task
+Due Date
+Project Management Plan
+Task 1
+Month 1 (within 15 days of award)
+Monthly Progress Reports
+Task 1
+Monthly, starting Month 1 (last business day of each month)
+Stakeholder Engagement Summary
+Task 2
+Month 2
+Data Sourcing and Curation Summary
+Task 3
+Month 2
+Prototype Application
+Task 4
+Month 6
+Internal Testing and Validation Report
+Task 5
+Month 7
+Simulated Field Testing and Validation Report
+Task 6
+Month 8
+Final Assessment Report
+Task 7
+Month 9
+Final Briefing/Presentation
+Task 8
+Month 9
+ 
+6. PERIOD OF PERFORMANCE 
+ 
+Base Period: 9 months from date of award 
+ 
+7. PERFORMANCE STANDARDS 
+
+Contractor’s performance will be evaluated based on the following:
+Timeliness and acceptance rate of deliverables
+Responsiveness to Government coordination
+Quality and professionalism of stakeholder and data contributor interactions
+Technical quality and functionality of the prototype application
+Rigor and completeness of internal testing and validation
+Accuracy and professionalism of deliverables and reporting
+
+8. METRICS FOR SUCCESS
+
+Indicators of success include:
+Number and breadth of stakeholders, data contributors, and end-users engaged;
+A functional, standalone prototype application meeting the defined technical, governance, and security specifications
+Concordance rate between the prototype's identification outputs and Cultural Property Experts On Call (CPEOC) subject-matter expert assessments during simulated field testing
+Positive end-user feedback on usability and field applicability from simulated field testing participants
+A decision-ready Final Assessment Report enabling CHC and the CHCC to confidently assess the feasibility and desirability of further development and potential future acquisition
+Comprehensive, traceable, and validated requirements summary covering all three required domains;
+Actionable roadmap and realistic cost estimate;
+Identification of risks, constraints, and data gaps;
+Decision-ready documents resulting in CHCC member-agency buy-in and confident next steps.
+
+10. COPYRIGHT AND DATA RIGHTS
+ 
+10.1 Copyright
+Except as otherwise specifically provided in this contract, the Contractor may assert copyright in any data first produced in the performance of this contract. When asserting copyright, the Contractor shall affix the applicable copyright notice of 17 U.S.C. 401 or 402, and an acknowledgment of Government sponsorship (including contract number), to the data when such data are delivered to the Government, as well as when the data are published or deposited for registration as a published work in the U.S. Copyright Office. 
+
+10.2 Government Purpose Rights in Data and Computer Software
+
+In recognition of the Government's need to test, evaluate, and share the prototype and its associated model(s) with other U.S. Government agencies, and the Contractor's interest in retaining the ability to further develop and commercialize the resulting product, the parties shall incorporate FAR 52.227-14, Rights in Data—General, with Alternate IV and Government Purpose License Rights, in lieu of the standard license terms otherwise applicable under the base clause.
+
+Under this arrangement:
+For data other than computer software, the Contractor grants to the Government, and others acting on its behalf, a paid-up, nonexclusive, irrevocable, worldwide license for all such data to reproduce, prepare derivative works, distribute copies to the public, and perform publicly and display publicly, by or on behalf of the Government, for Government purposes.
+For computer software (including the prototype application and any associated model(s)), the Contractor grants to the Government and others acting on its behalf, a paid-up, nonexclusive, irrevocable, worldwide license for all such computer software to reproduce, prepare derivative works, and perform publicly and display publicly (but not to distribute copies to the public), by or on behalf of the Government, for Government purposes.
+"Government purposes" means use, modification, reproduction, release, performance, display, or disclosure of data or software by or on behalf of the U.S. Government, including other U.S. Government agencies for testing and evaluation, but excludes use for competitive commercial procurement or public release without the Contractor's permission.
+The Government's license under this section shall remain in effect for a period not to exceed five (5) years from the date of this designation, or as otherwise negotiated and specified in the contract's Schedule, after which the Government's rights shall convert to unlimited rights, unless otherwise agreed by the parties.
+During the period in which Government Purpose Rights apply, the Contractor retains the right to use, modify, reproduce, and commercialize the prototype, associated model(s), and software, including making them available to non-Government customers, subject to the Government's license described above.
+ 
+  
+
+
+ 
+
