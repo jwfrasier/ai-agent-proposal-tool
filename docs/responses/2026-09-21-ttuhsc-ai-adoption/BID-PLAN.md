@@ -1,5 +1,7 @@
 # BID PLAN — TTUHSC RFP 739-SL3821039, Consulting Services: Enterprise AI Adoption & Enablement
 
+> **❌ NO-BID — decided 2026-09-17 (Joseph).** Due 9/21 4:30 PM CT; no draft or package had been built. Workspace retained for reference (NTE $750k, 6 deliverables, HSP self-performance path). Not on watchlist (ESBD, not SAM).
+
 Sources: `solicitation/rfp.txt` (R:line) and `solicitation/addendum-1.txt` (A:line). Addendum overrides RFP where they conflict (A:81 — Q&A "fully incorporated into RFP"). Prepared 2026-09-05 for Frasier Digital, LLC (self-performing, no subcontractors assumed).
 
 ---
