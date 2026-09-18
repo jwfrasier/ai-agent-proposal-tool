@@ -1,3 +1,4 @@
 SAM notice: https://sam.gov/workspace/contract/opp/bde8de729e4647a9ae1815fa06236e1f/view
 SAM record API: https://sam.gov/api/prod/opps/v2/opportunities/bde8de729e4647a9ae1815fa06236e1f
 Attachments API: https://sam.gov/api/prod/opps/v3/opportunities/bde8de729e4647a9ae1815fa06236e1f/resources
+Amendment 0001 revision notice: https://sam.gov/workspace/contract/opp/7309f946bcc24a03afcd69f304e94028/view

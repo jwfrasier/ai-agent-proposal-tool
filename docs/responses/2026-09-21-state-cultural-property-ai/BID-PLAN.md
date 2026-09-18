@@ -145,3 +145,31 @@ Pricing posture: no ceiling known. Working assumption until Q1 answered: **$180k
 - 652.239-71(d) accreditation held applicable → 9-month PoP absorbs a NIST 800-37 package; price it or take exception.
 - Award timing unknown; 9 months fixed; monthly cadence means Month 2 deliverables land ~60 days after award regardless of holidays.
 - Capacity: Joseph is named on DoWEA, SSS RS, NOAA, TTUHSC, SSA RFI. Name a delivery lead other than Joseph for day-to-day (Stacy or Jayelon) with Joseph as PM/architect.
+
+---
+
+## 11. Amendment 0001 (posted 9/17, effective 9/14) — Q&A digest (`solicitation/amendment1/qa.txt`, 90 Q&As; deadline NOT extended)
+
+| Topic | Answer | Effect on plan |
+|---|---|---|
+| Ceiling | "Not expected to exceed the simplified acquisition threshold" (Q32, Q68) | ≤ $350k confirmed; price band $180–300k stands |
+| 652.239-71 ICT security / NIST 800-37 accreditation | **Clause deleted**; applies only to eventual end product (Q14, Q71) | Q4 risk gone; no accreditation cost line |
+| CLIN 002 | Updated to **9** monthly reports (Q7, Q13, Q19, Q26, Q76); SF30 shows Change −3.0 | price 9 |
+| Patent clause | 52.227-13 replaced by 52.227-11; no jurisdiction over pre-existing inventions (Q5, Q20) | favorable |
+| Data rights | GPR applies only to prototype developed under contract; background IP stays contractor's (Q52, Q73, Q78). Objections/counteroffer on 5-yr conversion to unlimited rights may be stated in proposal (Q51) | state counteroffer in Vol 1 cover letter |
+| CPEOC / law enforcement access | **CHC will coordinate introductions to CPEOC and LE users and facilitate participation in testing**; tester count set later by CHC/CHCC; testers must not have been involved in development (Q11, Q16, Q24, Q28, Q55, Q58, Q74) | Task 2/6 access risk largely mitigated; domain *qualification* gap (§3 bullets 5–7) remains |
+| Subcontractors/consultants for §3 quals | Allowed, collectively, subject to FAR 19.505 limitations on subcontracting (Q60, Q75) | consultant SME route is explicitly sanctioned |
+| Key personnel / resumes / past performance | No key personnel; deliverables-based (Q44). Resumes not required. Past performance not a factor; CPARS used for responsibility only (Q59) | new company not penalized on PP |
+| Clearances | None; no sensitive info, no unescorted DOS access; contractor background policy sufficient (Q45) | — |
+| Place of performance / travel | Vendor proposes; some testing may occur in Government facilities; travel in FFP (Q18, Q40, Q43) | price 1–2 DC trips |
+| Hosting | Not answered directly; "sufficient scope, functionality and traceability for simulated field testing" (Q10) | propose contractor-hosted US commercial cloud, offline-capable client |
+| Data | Vendor sources; designated lists under 19 CFR 12.104g define minimum categories/cultures/periods; no minimum counts; 3D not mandated (Q8, Q69); third-party license fees not anticipated, include in FFP if needed (Q39) | CC0 source plan stands |
+| Thresholds / coverage metric | Vendor proposes per industry best practice, CHC approves in QASP (Q9, Q48, Q70) | define in QAP |
+| Vol 2 page limit | No cover/TOC required; **QAP counts** toward 15 pp (Q23, Q31, Q63) | outline stands |
+| C-SCRM §2 "key suppliers" | If no contract with model/cloud providers, not applicable → answer Yes (Q34) | eases gate item 2 |
+| Attestation | Company-wide or product-specific both acceptable if product specified (Q21); not required for excluded categories, but prototype will become critical software if advanced — "be prepared to adhere now" (Q30, Q35) | submit company-wide, name prototype |
+| Volume 3 | Organize LOE by month aligned to CLINs (Q38) | — |
+| Incumbent | None (Q57) | — |
+| FAR cite | "Updated to RFO 13.2" [sic] (Q12) | ignore |
+
+Competitive read: ~90 questions from multiple distinct askers ⇒ crowded field (likely 10+ quoters). 

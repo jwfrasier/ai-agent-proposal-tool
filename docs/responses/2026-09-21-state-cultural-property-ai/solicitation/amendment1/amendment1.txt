@@ -1,0 +1,417 @@
+                                                                                                                         Document Number: 19AQMM26Q0468 PROCESSED Page 1 of 6
+
+
+
+                                                                                                                          1. CONTRACT ID CODE                     RATING
+             AMENDMENT OF SOLICITATION/MODIFICATION OF CONTRACT
+
+2. AMENDMENT/MODIFICATION NUMBER                                         3. EFFECTIVE DATE                   4. REQUISITION/PURCHASE REQ. NUMBER                       5. PROJECT NUMBER (If
+ 0001                                                                    09/14/2026                          PR16178408                                                applicable)
+
+6. ISSUED BY                                              CODE                                               7. ADMINISTERED BY (If other than Item 6)                CODE
+                                                                         GAAM_
+ BUREAU OF GLOBAL ACQUISITIONS (GA)                                    NAME
+ 1200 Wilson Blvd., SA-6B                                               Mary E. DiAngelo
+ ATTN: GA
+ ARLINGTON, VA 22209                                                   TEL.
+ US
+                                                                       EMAIL
+                                                                        DiAngeloME@State.gov
+
+8. NAME AND ADDRESS OF CONTRACTOR (Number, street, country, state and ZIP Code)                                                                (X)   9A. AMENDMENT OF SOLICITATION NUMBER
+                                                                                                                                                     19AQMM26Q0468
+
+
+                                                                                                                                               X      9B. DATED (SEE ITEM 11)
+                                                                                                                                                     09/14/2026
+
+                                                                                                                                                     10A. MODIFICATION OF CONTRACT/ORDER
+                                                                                                                                                     NUMBER
+
+                                                                                                                                                     10B. DATED (SEE ITEM 11)
+
+
+ CODE                                                              FACILITY CODE
+
+                                                    11. THIS ITEM ONLY APPLIES TO AMENDMENTS OF SOLICITATIONS
+ X     The above numbered solicitation is amended as set forth in item 14. The hour and date specified for receipt of Offers                                   is extended,       X is not extended,
+
+  Offers must acknowledge receipt of this amendment prior to the hour and date specified in the solicitation or as amended, by one of the following methods: (a) By
+  completing items 8 and 15, and returning ____copies of the amendment; (b) By acknowledging receipt of this amendment on each copy of the offer submitted; or (c) By
+  separate letter or electronic communication which includes a reference to the solicitation and amendment numbers. FAILURE OF YOUR ACKNOWLEDGMENT TO BE
+  RECEIVED AT THE PLACE DESIGNATED FOR THE RECEIPT OF OFFERS PRIOR TO THE HOUR AND DATE SPECIFIED MAY RESULT IN REJECTION OF YOUR
+  OFFER. If by virtue of this amendment your desire to change an offer already submitted, such change may be made by letter or electronic communication, provided each
+  letter or electronic communication makes reference to the solicitation and this amendment, and is received prior to the opening hour and date specified.
+
+12. ACCOUNTING AND APPROPRIATION DATA (If required)
+
+
+
+13. THIS ITEM ONLY APPLIES TO MODIFICATION OF CONTRACTS/ORDERS.IT MODIFIES THE CONTRACT/ORDER NUMBER AS DESCRIBED IN ITEM 14.
+
+
+     CHECK ONE
+
+                   A. THIS CHANGE ORDER IS ISSUED PURSUANT TO: (Specify authority) THE CHANGES SET FORTH IN ITEM 14 ARE MADE IN THE CONTRACT
+                   ORDER NUMBER IN ITEM 10A.
+
+                   B. THE ABOVE NUMBERED CONTRACT/ORDER IS MODIFIED TO REFLECT THE ADMINISTRATIVE CHANGES (such as changes in paying office,
+                   appropriation date, etc.) SET FORTH IN ITEM 14, PURSUANT TO THE AUTHORITY OF FAR 43.103(b).
+
+                   C. THIS SUPPLEMENTAL AGREEMENT IS ENTERED INTO PURSUANT TO AUTHORITY OF:
+
+
+                   D. OTHER (Specify type of modification and authority)
+
+
+ E. IMPORTANT: Contractor                is not,          is required to sign this document and return _______ copies to the issuing office.
+
+
+14. DESCRIPTION OF AMENDMENT/MODIFICATION (Organized by UCF section headings, including solicitation/contract subject matter where feasible.)
+ This amendment is issued to update the RFQ terms in response to vendor questions.
+
+
+
+
+Except as provided herein, all terms and conditions of the document referenced in Item 9A or 10A, as heretofore changed, remains unchanged and in full force and effect.
+
+15A. NAME AND TITLE OF SIGNER (Type or print)                                                             16A. NAME AND TITLE OF CONTRACTING OFFICER (Type or print)
+                                                                                                                                               Mary E. DiAngelo
+
+15B. CONTRACTOR/OFFEROR                                                       15C. DATE SIGNED            16B. UNITED STATES OF AMERICA                                         16C. DATE SIGNED
+                                                                                                                                                                                   09/17/2026
+                                                                                                          By
+               (Signature of person authorized to sign)                                                                    (Signature of Contracting Officer)
+
+NSN 7540-01-152-8070                                                                                                                                     STANDARD FORM 30 (REV.
+Previous edition unusable                                                                                                                                11/2016)
+                                                                                                                                                         Prescribed by GSA FAR (48 CFR) 53.243
+
+                                                                                                                                                                                        CGFS // CGFS
+                                                                                                         Document Number: 19AQMM26Q0468 PROCESSED Page 2 of 6
+
+
+
+
+Section A - Solicitation/Contract Form
+    Line Item     Solicitation Number:             Contract Number:           Title:                                                                 Date of Solicitation:
+    Summary                                                                   Cultural Property AI Prototype                                         09/17/2026
+                  19AQMM26Q0468
+
+
+
+    Number                    Supplies or Services                             Qty               Unit               Unit Price             Total (Inc. disc., tax, and fees)
+
+                 PSC: R606
+     002                                                                        Original: 12.0          EA               Original: $0.00                          Original: $0.00
+                 PSC Description: SUPPORT- ADMINISTRATIVE:
+                 COURT REPORTING
+                                                                                Change: -3.0                             Change: $0.00                            Change: $0.00
+                 Type of Contract Pricing: Firm Fixed Price
+
+                                                                                 Current: 9.0                             Current: $0.00                          Current: $0.00
+
+
+                Description: Monthly Progress Reports
+
+                Reference Line: PR16178408 - 001
+
+
+
+                                                                             CLIN Funding:                                     Cost:
+
+                                                              Base Totals:                                   Original: $0.00                                 Original: $0.00
+
+                                                                                                             Change: $0.00                                   Change: $0.00
+
+                                                                                                             Current: $0.00                                   Current: $0.00
+
+                                           Exercised Options Totals:                                         Original: $0.00                                 Original: $0.00
+
+                                                                                                             Change: $0.00                                   Change: $0.00
+
+                                                                                                             Current: $0.00                                   Current: $0.00
+
+                                       Unexercised Options Totals:                                           Original: $0.00                                 Original: $0.00
+
+                                                                                                             Change: $0.00                                   Change: $0.00
+
+                                                                                                             Current: $0.00                                   Current: $0.00
+
+                                           Base and Options Totals:                                          Original: $0.00                                 Original: $0.00
+
+                                                                                                             Change: $0.00                                   Change: $0.00
+
+                                                                                                             Current: $0.00                                   Current: $0.00
+
+
+
+
+Section A - Solicitation/Contract Form
+Identifier      Title                                                                                                                      Date            Number of
+                                                                                                                                                           Pages
+2               Attachment 2 C-SCRM Questionnaire.xlsx - DELETED                                                                            09/09/2026
+2               Attachment 2 C-SCRM Questionnaire_001.xlsx - ADDED                                                                          09/17/2026
+
+
+
+
+1.1 - Purpose
+
+
+The objective of this acquisition is to award one (1) purchase order under the procedures in RFO 13.2, for the services described in
+this RFQ and its attachments.
+This requirement is a Total Small Business set-aside, with a NAICS code of 541511, with a size standard of $34M determined to
+represent the principal purpose of this requirement.
+It is anticipated that services will begin the day after contract award. The duration of the purchase order will be 9 months.
+                                                                                  Document Number: 19AQMM26Q0468 PROCESSED Page 3 of 6
+
+
+
+
+Clause 52.227-13 Patent Rights-Ownership by the Government (Dec 2007) was deleted.
+
+
+
+
+Clause 652.239-71 SECURITY REQUIREMENTS FOR UNCLASSIFIED INFORMATION AND COMMUNICATION
+TECHNOLOGY RESOURCES (DEVIATION JUL 2025) was deleted.
+
+
+
+
+1.5 - Submission of Quote Package
+
+The RFQ response package is due by the date and time established in the Quotation Due Date section, and shall consist of three (3)
+volumes (separate files). The Volumes are: Volume 1 - Go/No Go, Volume 2 – Technical Quote, Volume 3 – Price Quote. Quote
+Packages shall be formatted so as to be printable on non-reduced 8-1/2” x 11” pages with 1” margins.Offerors are advised that the
+entire quote package submission, inclusive of all attachments, shall not exceed 20MB). There is a size limitation of fifteen (15) pages
+total for the Volume 2 - Technical Quote submission. This limitation is inclusive of any charts, tables, pictures, and diagrams. Pages
+that exceed the required page limitations will not be evaluated. There is no page limitation for Volumes 1 or 3.
+
+Offerors must sign and return the SF18 when using it to complete representations and certifications. This signed copy does not count
+towards the total page count.
+The RFQ response package shall be organized as follows:
+Volume 1 (Factor 1) - Go/No Go: The vendor shall submit the following:
+Verification of an active SAM.gov registration
+The offeror shall include in its offer Attachment 2, C- SCRM Questionnaire, and Attachment 3, C-SCRM Software
+ProducerAttestation Form. Both documents must be completed in accordance with each attachment’s instructions. Failure to followthe
+attachment’s instructions may result in rejection of the offer. Instead of submitting the C-SCRM Software ProducerAttestation Form,
+the offeror may provide a link in its offer to a public website and the attestation information on thatwebsite will be evaluated for this
+solicitation (except offerors shall not publicly post attestation information regarding Planof Action and Milestones Model (POA&M).
+Volume 2 (Factor 2) - Technical Quote: the technical quote shall consist of the following sections:
+
+Technical Approach: Quoters must provide a description of how they will meet the SOW requirements. Specifically, this section must
+address how the company is qualified to meet the Task Order Requirements in SOW Section 1 and the Contractor Requirements in
+SOW Section 3 and the technical methods it will use to provide the deliverables outlined throughout the SOW and summarized in
+Sections 4 and 5.
+
+Work Plan: Quoters must describe the team, schedule, and actions it will use to provide deliverables in the specified timeframe.
+Quoters must also provide the Quality Assurance Plan described in SOW Task 4: Prototype Design and Development
+Volume 3 (Factor 3) - The offeror must submit firm-fixed prices for every line item listed in the RFQ CLIN section.The offeror must
+also provide a Total Evaluated Price for the overall performance period. All prices quoted shall be inclusive of all labor, materials,
+and equipment to successfully perform the services identified. The quote must clearly detail the level of effort and the mix of labor to
+perform the specific tasks being requested.
+While many CLINs include unit prices based on monthly or quarterly payments, others are priced in a single lot based on deliveryof a
+final end product.
+
+
+
+
+2.1 - Factor Ratings (Non Priced Factors)
+
+The following is the rating system for Factor 1:
+
+Go                                                                  The quote meets the criteria in the following two (2)
+                                                                    paragraphs.The C-SCRM Questionnaire contains both of the
+                                                                    following: (1) C-SCRM Questionnaire instructions arecompleted;
+                                                                    and (2) contains Yes answers for all questions inSections
+                                                                    2 and 3 of the questionnaire or Not Applicable with a valid
+                                                                    reason .For suppliers offering critical software, the C-SCRM
+                                                                    SoftwareProducer Attestation Form is completedfor each
+                                                                    software producer and meets the following: (1) name ofsoftware
+                                                                                   Document Number: 19AQMM26Q0468 PROCESSED Page 4 of 6
+
+
+
+                                                                     producer is provided; (2)description of which product or
+                                                                     products the statement refers to isprovided; and (3) contains
+                                                                     a statementattesting that the software products listed in Item
+                                                                     Number 1.3 ofthis form follow the Secure SoftwareDevelopment
+                                                                     Framework (SSDF) as identified in NIST SP800-218.
+No-Go                                                                The quote does not meet one (1) or more of the criteria in
+                                                                     thefollowing two (2) paragraphs.The C-SCRM Questionnaire
+                                                                     contains both of the following: (1) C-SCRM Questionnaire
+                                                                     instructions arecompleted; and (2) contains Yes answers for
+                                                                     all questions inSections 2 and 3 of the questionnaire or Not
+                                                                     Applicable for a valid reason.For suppliers offering critical
+                                                                     software, the C-SCRM SoftwareProducer Attestation Form is
+                                                                     completedfor each software producer and meets the following:
+                                                                     (1) name ofsoftware producer is provided; (2)description of
+                                                                     which product or products the statement refers to isprovided;
+                                                                     and (3) contains a statementattesting that the software products
+                                                                     listed in Item Number 1.3 ofthis form follow the Secure
+                                                                     SoftwareDevelopment Framework (SSDF) as identified in NIST
+                                                                     SP800-218.
+
+
+The following is the rating system for all subfactors under Factor 2:
+
+Rating                                                               Description
+High Confidence                                                      The Government has high confidence that the Offeror understands
+                                                                     the requirement, proposes a sound approach, and will be
+                                                                     successful in performing the contract with little or no Government
+                                                                     intervention.
+Some Confidence                                                      The Government has some confidence that the Offeror understands
+                                                                     the requirement, proposes a sound approach, and will be
+                                                                     successful in performing the contract with some Government
+                                                                     intervention.
+Low Confidence                                                       The Government has low confidence that the Offeror understands
+                                                                     the requirement, proposes a sound approach, or will be successful
+                                                                     in performing the contract even with Government intervention.
+
+
+
+
+Clause 52.227-11 Patent Rights-Ownership by the Contractor (May 2014) was added or modified.
+52.227-11 - Patent Rights-Ownership by the Contractor (May 2014)
+
+(a) As used in this clause--
+"Invention" means any invention or discovery that is or may be patentable or otherwise protectable under title 35 of the U.S. Code, or
+any variety of plant that is or may be protectable under the Plant Variety Protection Act (7 U.S.C.2321, et seq.)
+"Made" means--
+(1) When used in relation to any invention other than a plant variety, the conception or first actual reduction to practice of the
+invention; or
+(2) When used in relation to a plant variety, that the Contractor has at least tentatively determined that the variety has been reproduced
+with recognized characteristics.
+"Nonprofit organization" means a university or other institution of higher education or an organization of the type described in section
+501(c)(3) of the Internal Revenue Code of 1954 (26 U.S.C. 501(c)) and exempt from taxation under section 501(a) of the Internal
+Revenue Code (26 U.S.C.501(a)), or any nonprofit scientific or educational organization qualified under a State nonprofit organization
+statute.
+"Practical application" means to manufacture, in the case of a composition of product; to practice, in the case of a process or method;
+or to operate, in the case of a machine or system; and, in each case, under such conditions as to establish that the invention is being
+utilized and that its benefits are, to the extent permitted by law or Government regulations, available to the public on reasonable terms.
+"Subject invention" means any invention of the Contractor made in the performance of work under this contract.
+                                                                                     Document Number: 19AQMM26Q0468 PROCESSED Page 5 of 6
+
+
+
+(b) Contractor's rights. (1) Ownership. The Contractor may retain ownership of each subject invention throughout the world in
+accordance with the provisions of this clause.
+(2) License. (i) The Contractor shall retain a nonexclusive royalty-free license throughout the world in each subject invention to
+which the Government obtains title, unless the Contractor fails to disclose the invention within the times specified in paragraph (c)
+of this clause. The Contractor's license extends to any domestic subsidiaries and affiliates within the corporate structure of which the
+Contractor is a part, and includes the right to grant sublicenses to the extent the Contractor was legally obligated to do so at contract
+award. The license is transferable only with the written approval of the agency, except when transferred to the successor of that part of
+the Contractor's business to which the invention pertains.
+(ii) The Contractor's license may be revoked or modified by the agency to the extent necessary to achieve expeditious practical
+application of the subject invention in a particular country in accordance with the procedures in FAR 27.302(i)(2) and 27.304-1(f).
+(c) Contractor's obligations. (1) The Contractor shall disclose in writing each subject invention to the Contracting Officer within 2
+months after the inventor discloses it in writing to Contractor personnel responsible for patent matters. The disclosure shall identify
+the inventor(s) and this contract under which the subject invention was made. It shall be sufficiently complete in technical detail to
+convey a clear understanding of the subject invention. The disclosure shall also identify any publication, on sale (i.e., sale or offer
+for sale), or public use of the subject invention, or whether a manuscript describing the subject invention has been submitted for
+publication and, if so, whether it has been accepted for publication. In addition, after disclosure to the agency, the Contractor shall
+promptly notify the Contracting Officer of the acceptance of any manuscript describing the subject invention for publication and any
+on sale or public use.
+(2) The Contractor shall elect in writing whether or not to retain ownership of any subject invention by notifying the Contracting
+Officer within 2 years of disclosure to the agency. However, in any case where publication, on sale, or public use has initiated the 1-
+year statutory period during which valid patent protection can be obtained in the United States, the period for election of title may be
+shortened by the agency to a date that is no more than 60 days prior to the end of the statutory period.
+(3) The Contractor shall file either a provisional or a nonprovisional patent application or a Plant Variety Protection Application
+on an elected subject invention within 1 year after election. However, in any case where a publication, on sale, or public use has
+initiated the 1-year statutory period during which valid patent protection can be obtained in the United States, the Contractor
+shall file the application prior to the end of that statutory period. If the Contractor files a provisional application, it shall file a
+nonprovisional application within 10 months of the filing of the provisional application. The Contractor shall file patent applications
+in additional countries or international patent offices within either 10 months of the first filed patent application (whether provisional
+or nonprovisional) or 6 months from the date permission is granted by the Commissioner of Patents to file foreign patent applications
+where such filing has been prohibited by a Secrecy Order.
+(4) The Contractor may request extensions of time for disclosure, election, or filing under paragraphs (c)(1), (c)(2), and (c)(3) of this
+clause.
+(d) Government's rights- (1) Ownership. The Contractor shall assign to the agency, on written request, title to any subject invention--
+(i) If the Contractor fails to disclose or elect ownership to the subject invention within the times specified in paragraph (c) of
+this clause, or elects not to retain ownership; provided, that the agency may request title only within 60 days after learning of the
+Contractor's failure to disclose or elect within the specified times.
+(ii) In those countries in which the Contractor fails to file patent applications within the times specified in paragraph (c) of this clause;
+provided, however, that if the Contractor has filed a patent application in a country after the times specified in paragraph (c) of this
+clause, but prior to its receipt of the written request of the agency, the Contractor shall continue to retain ownership in that country.
+(iii) In any country in which the Contractor decides not to continue the prosecution of any application for, to pay the maintenance fees
+on, or defend in reexamination or opposition proceeding on, a patent on a subject invention.
+(2) License. If the Contractor retains ownership of any subject invention, the Government shall have a nonexclusive, nontransferable,
+irrevocable, paid-up license to practice, or have practiced for or on its behalf, the subject invention throughout the world.
+(e) Contractor action to protect the Government's interest. (1) The Contractor shall execute or have executed and promptly deliver to
+the agency all instruments necessary to--
+(i) Establish or confirm the rights the Government has throughout the world in those subject inventions in which the Contractor elects
+to retain ownership; and
+(ii) Assign title to the agency when requested under paragraph (d) of this clause and to enable the Government to obtain patent
+protection and plant variety protection for that subject invention in any country.
+(2) The Contractor shall require, by written agreement, its employees, other than clerical and nontechnical employees, to disclose
+promptly in writing to personnel identified as responsible for the administration of patent matters and in the Contractor's format, each
+subject invention in order that the Contractor can comply with the disclosure provisions of paragraph (c) of this clause, and to execute
+all papers necessary to file patent applications on subject inventions and to establish the Government's rights in the subject inventions.
+The disclosure format should require, as a minimum, the information required by paragraph (c)(1) of this clause. The Contractor shall
+instruct such employees, through employee agreements or other suitable educational programs, as to the importance of reporting
+inventions in sufficient time to permit the filing of patent applications prior to U.S. or foreign statutory bars.
+(3) The Contractor shall notify the Contracting Officer of any decisions not to file a nonprovisional patent application, continue the
+prosecution of a patent application, pay maintenance fees, or defend in a reexamination or opposition proceeding on a patent, in any
+country, not less than 30 days before the expiration of the response or filing period required by the relevant patent office.
+                                                                                   Document Number: 19AQMM26Q0468 PROCESSED Page 6 of 6
+
+
+
+(4) The Contractor shall include, within the specification of any United States nonprovisional patent or plant variety protection
+application and any patent or plant variety protection certificate issuing thereon covering a subject invention, the following statement,
+"This invention was made with Government support under (identify the contract) awarded by (identify the agency). The Government
+has certain rights in the invention."
+(f) Reporting on utilization of subject inventions. The Contractor shall submit, on request, periodic reports no more frequently than
+annually on the utilization of a subject invention or on efforts at obtaining utilization of the subject invention that are being made by
+the Contractor or its licensees or assignees. The reports shall include information regarding the status of development, date of first
+commercial sale or use, gross royalties received by the Contractor, and other data and information as the agency may reasonably
+specify. The Contractor also shall provide additional reports as may be requested by the agency in connection with any march-in
+proceeding undertaken by the agency in accordance with paragraph (h) of this clause. The Contractor also shall mark any utilization
+report as confidential/proprietary to help prevent inadvertent release outside the Government. As required by 35 U.S.C. 202(c)(5), the
+agency will not disclose that information to persons outside the Government without the Contractor's permission.
+(g) Preference for United States industry. Notwithstanding any other provision of this clause, neither the Contractor nor any assignee
+shall grant to any person the exclusive right to use or sell any subject invention in the United States unless the person agrees that any
+products embodying the subject invention or produced through the use of the subject invention will be manufactured substantially in
+the United States. However, in individual cases, the requirement for an agreement may be waived by the agency upon a showing by
+the Contractor or its assignee that reasonable but unsuccessful efforts have been made to grant licenses on similar terms to potential
+licensees that would be likely to manufacture substantially in the United States, or that under the circumstances domestic manufacture
+is not commercially feasible.
+(h) March-in rights. The Contractor acknowledges that, with respect to any subject invention in which it has retained ownership, the
+agency has the right to require licensing pursuant to 35 U.S.C. 203 and 210(c), and in accordance with the procedures in 37 CFR 401.6
+and any supplemental regulations of the agency in effect on the date of contract award.
+(i) Special provisions for contracts with nonprofit organizations. If the Contractor is a nonprofit organization, it shall--
+(1) Not assign rights to a subject invention in the United States without the written approval of the agency, except where an
+assignment is made to an organization that has as one of its primary functions the management of inventions, provided, that the
+assignee shall be subject to the same provisions as the Contractor;
+(2) Share royalties collected on a subject invention with the inventor, including Federal employee co-inventors (but through their
+agency if the agency deems it appropriate) when the subject invention is assigned in accordance with 35 U.S.C. 202(e) and 37 CFR
+401.10;
+(3) Use the balance of any royalties or income earned by the Contractor with respect to subject inventions, after payment of expenses
+(including payments to inventors) incidental to the administration of subject inventions for the support of scientific research or
+education; and
+(4) Make efforts that are reasonable under the circumstances to attract licensees of subject inventions that are small business concerns,
+and give a preference to a small business concern when licensing a subject invention if the Contractor determines that the small
+business concern has a plan or proposal for marketing the invention which, if executed, is equally as likely to bring the invention to
+practical application as any plans or proposals from applicants that are not small business concerns; provided, that the Contractor is
+also satisfied that the small business concern has the capability and resources to carry out its plan or proposal. The decision whether to
+give a preference in any specific case will be at the discretion of the Contractor.
+(5) Allow the Secretary of Commerce to review the Contractor's licensing program and decisions regarding small business applicants,
+and negotiate changes to its licensing policies, procedures, or practices with the Secretary of Commerce when the Secretary's review
+discloses that the Contractor could take reasonable steps to more effectively implement the requirements of paragraph (i)(4) of this
+clause.
+(j) Communications. _______________ [Complete according to agency instructions]
+(k) Subcontracts. (1) The Contractor shall include the substance of this clause, including this paragraph (k), in all subcontracts for
+experimental, developmental, or research work to be performed by a small business concern or nonprofit organization.
+(2) The Contractor shall include in all other subcontracts for experimental, developmental, or research work the substance of the
+patent rights clause required by FAR subpart 27.3.
+(3) At all tiers, the patent rights clause must be modified to identify the parties as follows: references to the Government are not
+changed, and the subcontractor has all rights and obligations of the Contractor in the clause. The Contractor shall not, as part of the
+consideration for awarding the subcontract, obtain rights in the subcontractor's subject inventions.
+(4) In subcontracts, at any tier, the agency, the subcontractor, and the Contractor agree that the mutual obligations of the parties
+created by this clause constitute a contract between the subcontractor and the agency with respect to the matters covered by the
+clause; provided, however, that nothing in this paragraph is intended to confer any jurisdiction under the Contract Disputes statute in
+connection with proceedings under paragraph (h) of this clause.
+(End of clause)
+
