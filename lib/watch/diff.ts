@@ -10,6 +10,16 @@ export interface NoticeSnapshot {
   modifiedDate: string | null;
   responseDeadline: string | null; // ISO from SAM (data2.solicitation.deadlines.response)
   attachments: string[]; // file names, sorted
+  awards?: string[]; // FPDS action titles for the solicitation (award / mod lines), sorted; absent on pre-upgrade state
+}
+
+/** Pull entry titles out of an FPDS-NG ATOM feed (ezsearch/FEEDS/ATOM). */
+export function parseFpdsAtomTitles(xml: string): string[] {
+  const out: string[] = [];
+  const re = /<entry>[\s\S]*?<title><!\[CDATA\[([\s\S]*?)\]\]><\/title>/g;
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(xml))) out.push((m[1] ?? "").trim());
+  return out;
 }
 
 export interface WatchChange {
@@ -58,6 +68,11 @@ export function diffSnapshots(
   }
   for (const a of removed) {
     changes.push({ severity: 'notice', message: `Attachment removed: ${a}` });
+  }
+
+  const prevAwards = new Set(prev.awards ?? []);
+  for (const a of curr.awards ?? []) {
+    if (!prevAwards.has(a)) changes.push({ severity: 'alarm', message: `AWARD POSTED (FPDS): ${a}` });
   }
 
   if (

@@ -14,7 +14,7 @@
  * Run it at the start of any bid session and before any scheduled send.
  */
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
-import { countdown, diffSnapshots, type NoticeSnapshot } from '../lib/watch/diff';
+import { countdown, diffSnapshots, parseFpdsAtomTitles, type NoticeSnapshot } from '../lib/watch/diff';
 
 const WATCHLIST_PATH = 'watchlist.json';
 const STATE_PATH = 'data/watch-state.json';
@@ -24,6 +24,10 @@ interface WatchEntry {
   noticeId: string; // last-known latest revision id
   label: string;
   deadlineOverride?: string; // used when SAM's field is absent (e.g. RFI dates)
+  /** FPDS SOLICITATION_ID to poll for award actions. Defaults to SAM's solicitation
+   *  number — but FPDS often keys it differently (SAM "90MC26Q0005" vs FPDS
+   *  "90MC0026Q0005"), so set this explicitly once a bid is submitted. Set to "" to skip. */
+  fpdsSolicitation?: string;
   notes?: string;
 }
 
@@ -65,6 +69,19 @@ async function fetchAttachments(noticeId: string): Promise<string[]> {
   }
 }
 
+/**
+ * Award actions reported to FPDS-NG for a solicitation (the public ATOM feed
+ * still works after the ezsearch HTML UI was folded into SAM.gov). FPDS lags
+ * signature by up to ~2 weeks, so silence here is not proof of no award.
+ */
+async function fetchAwards(solicitation: string | null | undefined): Promise<string[]> {
+  if (!solicitation) return [];
+  const url = `https://www.fpds.gov/ezsearch/FEEDS/ATOM?FEEDNAME=PUBLIC&q=SOLICITATION_ID%3A%22${encodeURIComponent(solicitation)}%22`;
+  const resp = await fetch(url, { headers: UA });
+  if (!resp.ok) throw new Error(`FPDS ${resp.status} ${url}`);
+  return parseFpdsAtomTitles(await resp.text()).sort();
+}
+
 async function snapshot(entry: WatchEntry): Promise<NoticeSnapshot> {
   const record = await resolveLatest(entry.noticeId);
   const d2 = record?.data2 ?? {};
@@ -78,6 +95,7 @@ async function snapshot(entry: WatchEntry): Promise<NoticeSnapshot> {
     modifiedDate: record?.modifiedDate ?? null,
     responseDeadline: d2?.solicitation?.deadlines?.response ?? entry.deadlineOverride ?? null,
     attachments: await fetchAttachments(id),
+    awards: await fetchAwards(entry.fpdsSolicitation ?? d2.solicitationNumber),
   };
 }
 
@@ -121,6 +139,7 @@ async function snapshot(entry: WatchEntry): Promise<NoticeSnapshot> {
       `\n${changes.length ? '🔔' : '  '} ${entry.label}${flags ? `  ⚑ ${flags}` : ''}`
     );
     console.log(`   ${curr.solicitationNumber ?? ''} · ${cdText}${entry.notes ? ` · ${entry.notes}` : ''}`);
+    if (curr.awards?.length) console.log(`   FPDS: ${curr.awards.length} action(s) on record — latest: ${curr.awards[curr.awards.length - 1]}`);
     for (const c of changes) {
       if (c.severity === 'alarm') alarms++;
       console.log(`   ${c.severity === 'alarm' ? '🚨' : '·'} ${c.message}`);

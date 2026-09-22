@@ -93,6 +93,13 @@ award/submission closes out.
   finds the current revision id for a solicitation number (how you chase amendments).
 - The keyed api.sam.gov search API often returns 0 for older postings — use the UI
   endpoints above for anything already known.
+- **Award lookups (FPDS):** the ezsearch HTML UI now redirects into SAM.gov, but the ATOM
+  feed still works keyless: `https://www.fpds.gov/ezsearch/FEEDS/ATOM?FEEDNAME=PUBLIC&q=SOLICITATION_ID:"<sol>"`
+  (also `PIID:"…"`, `CONTRACTING_AGENCY_NAME:"…" SIGNED_DATE:[2026/08/15,2026/09/30]`). The
+  watch script polls it per entry and alarms `AWARD POSTED`. FPDS keys solicitation numbers
+  differently from SAM (SAM `90MC26Q0005` → FPDS `90MC0026Q0005`), so set `fpdsSolicitation`
+  on the watchlist entry once a bid is submitted (`""` to skip RFIs). FPDS lags signature by
+  up to ~2 weeks, so an empty feed is not proof of no award.
 
 ## Reference
 

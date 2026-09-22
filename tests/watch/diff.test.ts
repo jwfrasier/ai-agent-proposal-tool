@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { countdown, diffSnapshots, type NoticeSnapshot } from '../../lib/watch/diff';
+import { countdown, diffSnapshots, parseFpdsAtomTitles, type NoticeSnapshot } from '../../lib/watch/diff';
 
 const base: NoticeSnapshot = {
   noticeId: 'aaa',
@@ -67,5 +67,43 @@ describe('countdown', () => {
   it('handles null and garbage', () => {
     expect(countdown(null, now)).toBeNull();
     expect(countdown('not-a-date', now)).toBeNull();
+  });
+});
+
+describe('award tracking (FPDS)', () => {
+  it('alarms when an award posts against the solicitation', () => {
+    const curr: NoticeSnapshot = {
+      ...base,
+      awards: ['New PURCHASE ORDER 90MC0026P0207 awarded to MOODLE US LLC for the amount of $356,700'],
+    };
+    const changes = diffSnapshots({ ...base, awards: [] }, curr);
+    expect(changes).toHaveLength(1);
+    expect(changes[0].severity).toBe('alarm');
+    expect(changes[0].message).toContain('AWARD POSTED');
+    expect(changes[0].message).toContain('MOODLE US LLC');
+  });
+
+  it('treats a missing awards field on old state as empty (no false alarm on upgrade)', () => {
+    expect(diffSnapshots(base, { ...base, awards: [] })).toEqual([]);
+  });
+
+  it('does not re-alarm on an award already seen', () => {
+    const a = ['New PURCHASE ORDER X awarded to Y for the amount of $1'];
+    expect(diffSnapshots({ ...base, awards: a }, { ...base, awards: [...a] })).toEqual([]);
+  });
+});
+
+describe('parseFpdsAtomTitles', () => {
+  it('extracts entry titles from the FPDS ATOM feed', () => {
+    const xml = `<?xml version="1.0"?><feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[FPDS-NG search results for: X]]></title>
+<entry><title><![CDATA[New PURCHASE ORDER 1305M326P0344 awarded to VALINOR LABS, LLC for the amount of $28,665]]></title></entry>
+<entry><title><![CDATA[PURCHASE ORDER 90MC0026P0187 (P00001) awarded to MOBOMO, LLC, was modified for the amount of $0]]></title></entry></feed>`;
+    expect(parseFpdsAtomTitles(xml)).toEqual([
+      'New PURCHASE ORDER 1305M326P0344 awarded to VALINOR LABS, LLC for the amount of $28,665',
+      'PURCHASE ORDER 90MC0026P0187 (P00001) awarded to MOBOMO, LLC, was modified for the amount of $0',
+    ]);
+  });
+  it('returns [] for a feed with no entries', () => {
+    expect(parseFpdsAtomTitles('<feed><title><![CDATA[none]]></title></feed>')).toEqual([]);
   });
 });
