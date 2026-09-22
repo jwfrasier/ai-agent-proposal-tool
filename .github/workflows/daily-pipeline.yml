@@ -40,6 +40,15 @@ jobs:
           gunzip -c dbstate/govcontracts.db.gz > data/govcontracts.db
           echo "restored $(du -h data/govcontracts.db | cut -f1) DB"
 
+      - name: Apply DB migrations
+        env:
+          DATABASE_URL: ./data/govcontracts.db
+          ANTHROPIC_API_KEY: ci-placeholder
+          SAM_GOV_API_KEY: ci-placeholder
+          CRON_SECRET: ci-placeholder-secret-not-used-in-actions
+          APP_PASSWORD: ci-not-used
+        run: npx tsx lib/db/migrate.ts
+
       - name: Run pipeline
         id: pipeline
         env:
