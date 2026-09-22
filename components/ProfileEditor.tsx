@@ -9,6 +9,7 @@ type ProfileForm = {
   uei: string;
   cageCode: string;
   naicsCodes: string;
+  searchKeywords: string;
   certifications: string;
   capabilities: string;
   contactName: string;
@@ -18,7 +19,7 @@ type ProfileForm = {
 
 export function ProfileEditor({ initial }: { initial: Partial<ProfileForm> }) {
   const [form, setForm] = useState<ProfileForm>({
-    name: '', uei: '', cageCode: '', naicsCodes: '', certifications: '',
+    name: '', uei: '', cageCode: '', naicsCodes: '', searchKeywords: '', certifications: '',
     capabilities: '', contactName: '', contactEmail: '', contactPhone: '',
     ...initial,
   });
@@ -33,6 +34,7 @@ export function ProfileEditor({ initial }: { initial: Partial<ProfileForm> }) {
       body: JSON.stringify({
         ...form,
         naicsCodes: form.naicsCodes.split(',').map((s) => s.trim()).filter(Boolean),
+        searchKeywords: form.searchKeywords.split(',').map((s) => s.trim()).filter(Boolean),
         certifications: form.certifications.split(',').map((s) => s.trim()).filter(Boolean),
         cageCode: form.cageCode || null,
         contactPhone: form.contactPhone || null,
@@ -58,6 +60,7 @@ export function ProfileEditor({ initial }: { initial: Partial<ProfileForm> }) {
         <Input placeholder="CAGE code (optional)" {...field('cageCode')} />
       </div>
       <Input placeholder="NAICS codes (comma-separated, 6-digit)" {...field('naicsCodes')} />
+      <Input placeholder="Title keywords searched alongside NAICS (comma-separated: Moodle, LMS, AI prototype, ...)" {...field('searchKeywords')} />
       <Input placeholder="Certifications (comma-separated: SB, WOSB, ...)" {...field('certifications')} />
       <Textarea rows={6} placeholder="Capabilities" {...field('capabilities')} />
       <div className="grid grid-cols-2 gap-3">

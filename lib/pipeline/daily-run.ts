@@ -294,9 +294,11 @@ export async function runDaily(args: RunDailyArgs): Promise<RunSummary> {
         : ymd(new Date(Date.now() - 7 * 86400_000)));
 
     const postedTo = ymd(new Date());
-    log('info', 'Searching SAM', { postedFrom, postedTo, naics: profile.naicsCodes });
+    const keywords = profile.searchKeywords ?? [];
+    log('info', 'Searching SAM', { postedFrom, postedTo, naics: profile.naicsCodes, keywords });
     const samOpps = await searchByProfile({
       naicsCodes: profile.naicsCodes,
+      keywords,
       postedFrom,
       postedTo,
       maxAwardCeiling: 350_000,

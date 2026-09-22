@@ -8,6 +8,9 @@ export const companyProfile = sqliteTable('company_profile', {
   uei: text('uei').notNull(),
   cageCode: text('cage_code'),
   naicsCodes: text('naics_codes', { mode: 'json' }).$type<string[]>().notNull(),
+  /** Title keywords searched alongside NAICS — agencies file custom-software buys under
+   *  NAICS we don't list (SSS Moodle LMS RFQ went out under 513210 and we never saw it). */
+  searchKeywords: text('search_keywords', { mode: 'json' }).$type<string[]>().notNull().default(sql`'[]'`),
   certifications: text('certifications', { mode: 'json' }).$type<string[]>().notNull(),
   capabilities: text('capabilities').notNull(),
   contactName: text('contact_name').notNull(),

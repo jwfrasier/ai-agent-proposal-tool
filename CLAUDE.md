@@ -28,6 +28,18 @@ Single Next.js app, single Fly machine, single SQLite file on a Fly volume. The 
 - All external responses (SAM, Anthropic) are parsed through zod schemas before use.
 - No `JSON.parse` of model output anywhere — Anthropic calls use tool-use for structured output.
 
+### Search legs (why NAICS alone is not enough)
+
+`lib/sam/search.ts` fans out one SAM call per profile NAICS **and one title search per
+`company_profile.search_keywords` entry**, then dedupes. The keyword leg exists because SSS
+posted its Moodle LMS RFQ (90MC26Q0006, 7/24–8/14/2026) under NAICS 513210 Software
+Publishers, which we did not list, and the screener never fetched it — we had answered the
+RFI and built a demo; it went to Moodle US for $356,700 with 15 offers. Agencies file
+custom-software and SaaS buys under 513210/611420/541990 at their discretion. Keywords are
+edited on the profile page (comma-separated) and bump the profile version like any edit.
+The keyed api.sam.gov search only returns ACTIVE notices (`status` accepts nothing else),
+so it cannot be used to backfill history.
+
 ### Pipeline cost cap
 
 `lib/pipeline/daily-run.ts` enforces `DAILY_COST_CAP_USD` (default $2.00). The check is forward-projecting: after each scored call, the next call is skipped if `totalCostUsd + lastCostUsd >= costCapUsd`. Runs that stop mid-loop persist what they have and write `status='partial'`. Update cost constants in `lib/ai/client.ts` if the Anthropic model or pricing changes.
@@ -80,6 +92,13 @@ revisions (amendments post as NEW notice ids), cancelled/archived flag flips, de
 changes, and added attachments — diffed against `data/watch-state.json`. Exit code 2 on
 alarms. Add a notice to the watchlist the moment a bid goes active; prune after
 award/submission closes out.
+
+**Answered an RFI / sources sought? Add the office to the watchlist THE SAME DAY** with
+`organizationId` (= `data2.organizationId` on the notice). The follow-on RFQ is a fresh
+notice id, not a revision, so chain-following never sees it; the office watch lists every
+notice the org has posted (`sgs/v1/search/?index=opp&organization_id=<id>&is_active=false`)
+and alarms `NEW NOTICE from watched office` on any new id. Set `fpdsSolicitation` once a bid
+is submitted so the award check works.
 
 **SAM notice forensics (no API key needed — these are the public UI endpoints):**
 - `https://sam.gov/api/prod/opps/v2/opportunities/<noticeId>` — full record. Key fields:

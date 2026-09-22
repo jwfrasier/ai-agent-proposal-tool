@@ -14,7 +14,7 @@
  * Run it at the start of any bid session and before any scheduled send.
  */
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
-import { countdown, diffSnapshots, parseFpdsAtomTitles, type NoticeSnapshot } from '../lib/watch/diff';
+import { countdown, diffSnapshots, parseFpdsAtomTitles, type NoticeSnapshot, type OfficeNotice } from '../lib/watch/diff';
 
 const WATCHLIST_PATH = 'watchlist.json';
 const STATE_PATH = 'data/watch-state.json';
@@ -28,6 +28,11 @@ interface WatchEntry {
    *  number — but FPDS often keys it differently (SAM "90MC26Q0005" vs FPDS
    *  "90MC0026Q0005"), so set this explicitly once a bid is submitted. Set to "" to skip. */
   fpdsSolicitation?: string;
+  /** SAM organization id (data2.organizationId on any of the office's notices). When set,
+   *  every notice the office posts is tracked and a NEW one alarms. Add this the moment we
+   *  answer an RFI: the follow-on RFQ is a fresh notice id that chain-following never sees
+   *  (SSS Moodle LMS, 90MC26Q0006, posted 7/24/26 and closed 8/14 unseen). */
+  organizationId?: string;
   notes?: string;
 }
 
@@ -82,6 +87,19 @@ async function fetchAwards(solicitation: string | null | undefined): Promise<str
   return parseFpdsAtomTitles(await resp.text()).sort();
 }
 
+/** All notices SAM lists for an organization (keyless UI search; is_active=false ⇒ any status). */
+async function fetchOfficeNotices(organizationId: string | undefined): Promise<OfficeNotice[] | undefined> {
+  if (!organizationId) return undefined;
+  const d = await fetchJson(
+    `https://sam.gov/api/prod/sgs/v1/search/?index=opp&organization_id=${encodeURIComponent(organizationId)}&is_active=false&page=0&size=100&mode=search&sort=-modifiedDate`
+  );
+  const results: any[] = d?._embedded?.results ?? [];
+  return results
+    .filter((r) => r._id)
+    .map((r) => ({ id: r._id as string, label: `${r.solicitationNumber ?? '(no solnum)'} ${r.title ?? ''}`.trim() }))
+    .sort((a, b) => a.id.localeCompare(b.id));
+}
+
 async function snapshot(entry: WatchEntry): Promise<NoticeSnapshot> {
   const record = await resolveLatest(entry.noticeId);
   const d2 = record?.data2 ?? {};
@@ -96,6 +114,7 @@ async function snapshot(entry: WatchEntry): Promise<NoticeSnapshot> {
     responseDeadline: d2?.solicitation?.deadlines?.response ?? entry.deadlineOverride ?? null,
     attachments: await fetchAttachments(id),
     awards: await fetchAwards(entry.fpdsSolicitation ?? d2.solicitationNumber),
+    officeNotices: await fetchOfficeNotices(entry.organizationId),
   };
 }
 
@@ -139,6 +158,7 @@ async function snapshot(entry: WatchEntry): Promise<NoticeSnapshot> {
       `\n${changes.length ? '🔔' : '  '} ${entry.label}${flags ? `  ⚑ ${flags}` : ''}`
     );
     console.log(`   ${curr.solicitationNumber ?? ''} · ${cdText}${entry.notes ? ` · ${entry.notes}` : ''}`);
+    if (curr.officeNotices) console.log(`   office watch: ${curr.officeNotices.length} notice(s) on record for org ${entry.organizationId}`);
     if (curr.awards?.length) console.log(`   FPDS: ${curr.awards.length} action(s) on record — latest: ${curr.awards[curr.awards.length - 1]}`);
     for (const c of changes) {
       if (c.severity === 'alarm') alarms++;

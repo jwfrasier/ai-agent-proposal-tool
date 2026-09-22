@@ -1,0 +1,1 @@
+ALTER TABLE `company_profile` ADD `search_keywords` text DEFAULT '[]' NOT NULL;

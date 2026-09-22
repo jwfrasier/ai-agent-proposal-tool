@@ -107,3 +107,19 @@ describe('parseFpdsAtomTitles', () => {
     expect(parseFpdsAtomTitles('<feed><title><![CDATA[none]]></title></feed>')).toEqual([]);
   });
 });
+
+describe('office watch (new notices from a watched organization)', () => {
+  const n1 = { id: 'n1', label: '90MC26Q0005 READINESS SIMULATION' };
+  const n2 = { id: 'n2', label: '90MC26Q0006 SSS Moodle LMS Modernization' };
+  it('alarms on a notice id not seen before', () => {
+    const changes = diffSnapshots({ ...base, officeNotices: [n1] }, { ...base, officeNotices: [n1, n2] });
+    expect(changes).toHaveLength(1);
+    expect(changes[0].severity).toBe('alarm');
+    expect(changes[0].message).toContain('NEW NOTICE from watched office');
+    expect(changes[0].message).toContain('90MC26Q0006');
+  });
+  it('is silent when the office list is unchanged or absent on old state', () => {
+    expect(diffSnapshots({ ...base, officeNotices: [n1] }, { ...base, officeNotices: [n1] })).toEqual([]);
+    expect(diffSnapshots(base, { ...base, officeNotices: [n1] })).toEqual([]);
+  });
+});

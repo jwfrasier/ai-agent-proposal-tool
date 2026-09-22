@@ -11,6 +11,15 @@ export interface NoticeSnapshot {
   responseDeadline: string | null; // ISO from SAM (data2.solicitation.deadlines.response)
   attachments: string[]; // file names, sorted
   awards?: string[]; // FPDS action titles for the solicitation (award / mod lines), sorted; absent on pre-upgrade state
+  /** Every notice SAM lists for the entry's watched organization (any status). A NEW id
+   *  here is how a fresh RFQ from an office we answered an RFI for gets caught — it is a
+   *  new notice id, not a revision, so chain-following alone never sees it. */
+  officeNotices?: OfficeNotice[];
+}
+
+export interface OfficeNotice {
+  id: string;
+  label: string; // "<solnum> <title>"
 }
 
 /** Pull entry titles out of an FPDS-NG ATOM feed (ezsearch/FEEDS/ATOM). */
@@ -68,6 +77,15 @@ export function diffSnapshots(
   }
   for (const a of removed) {
     changes.push({ severity: 'notice', message: `Attachment removed: ${a}` });
+  }
+
+  const prevOffice = new Set((prev.officeNotices ?? []).map((n) => n.id));
+  if (prev.officeNotices) {
+    for (const n of curr.officeNotices ?? []) {
+      if (!prevOffice.has(n.id)) {
+        changes.push({ severity: 'alarm', message: `NEW NOTICE from watched office: ${n.label} (https://sam.gov/opp/${n.id}/view)` });
+      }
+    }
   }
 
   const prevAwards = new Set(prev.awards ?? []);

@@ -85,7 +85,8 @@ function toSamDate(d: string | undefined): string | undefined {
 }
 
 export async function samSearch(query: {
-  naics: string;
+  naics?: string;
+  title?: string; // SAM title keyword search — the leg that catches mis-NAICS'd notices
   postedFrom?: string;
   postedTo?: string;
   limit?: number;
@@ -94,6 +95,7 @@ export async function samSearch(query: {
   const raw = await samFetch('/opportunities/v2/search', {
     api_version: 'v2',
     ncode: query.naics,
+    title: query.title,
     postedFrom: toSamDate(query.postedFrom),
     postedTo: toSamDate(query.postedTo),
     limit: query.limit ?? 25,

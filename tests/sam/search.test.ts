@@ -37,3 +37,29 @@ describe('searchByProfile', () => {
     expect(opps).toHaveLength(0);
   });
 });
+
+describe('searchByProfile keyword leg', () => {
+  beforeEach(() => { vi.mocked(samSearch).mockReset(); });
+
+  it('fans out one title search per keyword in addition to NAICS, and dedupes', async () => {
+    vi.mocked(samSearch).mockResolvedValue(fixture as never);
+    const opps = await searchByProfile({
+      naicsCodes: ['541511'],
+      keywords: ['Moodle', 'Learning Management System'],
+      postedFrom: '2026-05-01',
+    });
+    expect(samSearch).toHaveBeenCalledTimes(3);
+    const calls = vi.mocked(samSearch).mock.calls.map((c) => c[0]);
+    expect(calls[0]).toMatchObject({ naics: '541511' });
+    expect(calls[1]).toMatchObject({ title: 'Moodle' });
+    expect(calls[2]).toMatchObject({ title: 'Learning Management System' });
+    expect(opps).toHaveLength(2);
+  });
+
+  it('applies the award ceiling to keyword hits too', async () => {
+    const big = { ...fixture, opportunitiesData: [{ ...fixture.opportunitiesData[0], awardCeiling: '900000' }] };
+    vi.mocked(samSearch).mockResolvedValue(big as never);
+    const opps = await searchByProfile({ naicsCodes: [], keywords: ['Moodle'], postedFrom: '2026-05-01', maxAwardCeiling: 350_000 });
+    expect(opps).toHaveLength(0);
+  });
+});

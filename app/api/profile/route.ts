@@ -8,6 +8,7 @@ const ProfileInput = z.object({
   uei: z.string().min(1),
   cageCode: z.string().nullish(),
   naicsCodes: z.array(z.string().regex(/^\d{6}$/)).min(1),
+  searchKeywords: z.array(z.string().trim().min(1)).default([]),
   certifications: z.array(z.string()),
   capabilities: z.string().min(1),
   contactName: z.string().min(1),

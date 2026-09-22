@@ -112,6 +112,44 @@
       "RFQ_SSS_Readiness Simulation_90MC0026Q0005_07222026 Package.pdf",
       "SSS RS Project _ Acquisition Responses_08102026.pdf"
     ],
-    "awards": []
+    "awards": [],
+    "officeNotices": [
+      {
+        "id": "1267efeca5ae48ababd303c47ad8d565",
+        "label": "90MC26Q0005 READINESS SIMULATION (RS) for Selective Service System"
+      },
+      {
+        "id": "451bedc4fab1465187752981356205c2",
+        "label": "90MC26R0004 Selective Service System Website Modernization"
+      },
+      {
+        "id": "55c0fa8e4968496ea90150c2e4ed342f",
+        "label": "900024Q0002 Selective Service System Cloud based Phone Refresh Project"
+      },
+      {
+        "id": "5fb9021c7189453995d392590ac9deaf",
+        "label": "90MC26R0004 Selective Service System Website Modernization"
+      },
+      {
+        "id": "6b1c264b683f4046ba1b82fcd426ee4f",
+        "label": "SSS_RFI_2024_0001 Request for Information - High Speed Printer"
+      },
+      {
+        "id": "9cd76064973744edb84703f204b927a7",
+        "label": "90MC00_0005 Business Systems Modernization-Selective Service System"
+      },
+      {
+        "id": "9d6dfffd552345d8a99ac4b58d5f44bb",
+        "label": "90MC00_0002 Selective Service System Website Modernization"
+      },
+      {
+        "id": "b8befb3b226345aaa811286b024091ea",
+        "label": "90MC26Q0006 SSS Moodle Learning Management System (LMS) Modernization"
+      },
+      {
+        "id": "f93086d51af848beb69b7f20c08fc47f",
+        "label": "900024Q0002 Selective Service System Cloud based Phone Refresh Project"
+      }
+    ]
   }
 }

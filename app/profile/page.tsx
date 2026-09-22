@@ -12,6 +12,7 @@ export default async function ProfilePage() {
         uei: row.uei,
         cageCode: row.cageCode ?? '',
         naicsCodes: row.naicsCodes.join(', '),
+        searchKeywords: (row.searchKeywords ?? []).join(', '),
         certifications: row.certifications.join(', '),
         capabilities: row.capabilities,
         contactName: row.contactName,
