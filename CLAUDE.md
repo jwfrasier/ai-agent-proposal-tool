@@ -56,6 +56,23 @@ Editing the company profile bumps `company_profile.version`. Scores carry the pr
 
 `vitest` only. Unit tests for pure functions; integration tests for `lib/pipeline/daily-run.ts` and API routes use an in-memory SQLite + `vi.hoisted` holder pattern to swap out the `lib/db/client` singleton.
 
+## GO gate (before any workspace is built)
+
+A fit score is not a GO. A GO requires, written into the bid plan on day one:
+1. **Every must-name role filled, or on the watchlist as `staffingGap`/`staffingDeadline`.**
+2. **A price anchor from FPDS:** `npm run price-anchor -- --agency "<CONTRACTING_AGENCY_NAME>" --naics <ours> --sat`
+   (also `--office`, `--vendor`, raw `--q`). Put the P25/P50/P75 line and the closest comparable
+   award in the bid plan. NOAA COMPASS was bid at $162k against an office whose comparable award
+   went for $90k total and drew 23 offers — ten minutes with this script would have shown it.
+3. **Calendar check:** the hours between GO and close exist on Joseph's calendar, net of other live bids.
+4. The entry is on `watchlist.json` and `docs/BIDS.md` the same day.
+
+## Bid board (docs/BIDS.md)
+
+One row per pursuit, stage-tracked: GO → staffed → priced → drafted → built → sent → acked →
+decided → debriefed. Update it whenever a stage changes; review it at the start of every session
+alongside `npm run watch`. Lapses happen between stages nobody looked at.
+
 ## Response submission workflow (docs/responses/)
 
 **A drafted response is not a sendable response.** Two near-misses in one week came from this gap, not from bad writing: the VAMC COPEweb bid was fully drafted and missed its deadline, and the DoWEA capability statement sat as markdown for 8 days and was caught 2.5 hours before its date. In both cases the prose was finished and nobody had built the artifact.
