@@ -23,3 +23,4 @@
   only.** 12+ yrs delivery + Tech Lead + federal service reads as a credible PM bio as-is.
 - **Missing:** confirm availability for the 1.5 PM DoWEA slot + PM-contingency willingness.
 - **Rate: $75/hr (1099) — CONFIRMED by Joseph 2026-08-13.**
+- **Sell rate on the subcontract rate sheet: $165/hr (Principal — Delivery Lead). AVAILABLE for a Q4 2026 start (Joseph 9/23).**
