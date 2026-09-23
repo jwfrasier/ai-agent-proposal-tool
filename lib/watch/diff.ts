@@ -136,3 +136,23 @@ export function countdown(deadlineIso: string | null, now: Date): Countdown | nu
   if (days < 5) return { label: 'WARN', days, text: `${human} left` };
   return { label: 'ok', days, text: `${human} left` };
 }
+
+/**
+ * Unfilled must-name gap on a GO bid. Three bids (COPEweb, DoWEA, DOS Cultural Property)
+ * lapsed at the plan stage because a must-have — an SME, a PM, a form — had a date in the
+ * bid plan and nothing fired it. This fires every run from 3 days before `staffingDeadline`
+ * until the entry's `staffingGap` is cleared, so it nags rather than diffs.
+ */
+export function staffingAlarm(
+  entry: { staffingGap?: string; staffingDeadline?: string },
+  now: Date
+): WatchChange | null {
+  if (!entry.staffingGap || !entry.staffingDeadline) return null;
+  const cd = countdown(entry.staffingDeadline, now);
+  if (!cd) return null;
+  if (cd.days > 3) return null;
+  if (cd.days < 0) {
+    return { severity: 'alarm', message: `STAFFING GAP OVERDUE (${cd.text}): ${entry.staffingGap} — fill it or NO-BID now` };
+  }
+  return { severity: 'alarm', message: `STAFFING GAP unfilled, ${cd.text} to source: ${entry.staffingGap}` };
+}

@@ -93,6 +93,16 @@ changes, and added attachments — diffed against `data/watch-state.json`. Exit 
 alarms. Add a notice to the watchlist the moment a bid goes active; prune after
 award/submission closes out.
 
+**GO decision with a must-name gap (SME, PM, signed form)? Put it on the watchlist entry
+THE SAME DAY as `staffingGap` + `staffingDeadline`** (deadline = 3+ days before quotes are
+due, not the due date). The monitor alarms every run from 3 days out until you delete
+`staffingGap`, and escalates to OVERDUE past the date. Three GO bids (COPEweb, DoWEA, DOS
+Cultural Property 9/21) lapsed unbuilt because the bid plan named the gap and nothing fired
+it. Fill it or NO-BID by the staffing date; do not keep writing prose around the hole.
+
+**Lanes we do not bid:** cultural heritage / art & antiquities domain work (needs an
+archaeologist or art-historian SME we will not bench — Joseph, 9/23). Screen out at triage.
+
 **Answered an RFI / sources sought? Add the office to the watchlist THE SAME DAY** with
 `organizationId` (= `data2.organizationId` on the notice). The follow-on RFQ is a fresh
 notice id, not a revision, so chain-following never sees it; the office watch lists every

@@ -14,7 +14,7 @@
  * Run it at the start of any bid session and before any scheduled send.
  */
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
-import { countdown, diffSnapshots, parseFpdsAtomTitles, type NoticeSnapshot, type OfficeNotice } from '../lib/watch/diff';
+import { countdown, diffSnapshots, parseFpdsAtomTitles, staffingAlarm, type NoticeSnapshot, type OfficeNotice } from '../lib/watch/diff';
 
 const WATCHLIST_PATH = 'watchlist.json';
 const STATE_PATH = 'data/watch-state.json';
@@ -33,6 +33,11 @@ interface WatchEntry {
    *  answer an RFI: the follow-on RFQ is a fresh notice id that chain-following never sees
    *  (SSS Moodle LMS, 90MC26Q0006, posted 7/24/26 and closed 8/14 unseen). */
   organizationId?: string;
+  /** A must-name gap on a GO bid (SME, PM, signed form). Alarms every run from 3 days before
+   *  `staffingDeadline` until you delete `staffingGap`. Set both the day the bid plan names
+   *  the gap; the deadline is 3+ days before the quote is due, not the due date. */
+  staffingGap?: string;
+  staffingDeadline?: string; // ISO
   notes?: string;
 }
 
@@ -143,6 +148,8 @@ async function snapshot(entry: WatchEntry): Promise<NoticeSnapshot> {
     }
     const prev = state[entry.label];
     const changes = diffSnapshots(prev, curr);
+    const staffing = staffingAlarm(entry, now);
+    if (staffing) changes.push(staffing);
     const cd = countdown(curr.responseDeadline, now);
     const flags = [
       curr.cancelled ? 'CANCELLED' : null,

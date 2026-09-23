@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { countdown, diffSnapshots, parseFpdsAtomTitles, type NoticeSnapshot } from '../../lib/watch/diff';
+import { countdown, diffSnapshots, parseFpdsAtomTitles, staffingAlarm, type NoticeSnapshot } from '../../lib/watch/diff';
 
 const base: NoticeSnapshot = {
   noticeId: 'aaa',
@@ -121,5 +121,28 @@ describe('office watch (new notices from a watched organization)', () => {
   it('is silent when the office list is unchanged or absent on old state', () => {
     expect(diffSnapshots({ ...base, officeNotices: [n1] }, { ...base, officeNotices: [n1] })).toEqual([]);
     expect(diffSnapshots(base, { ...base, officeNotices: [n1] })).toEqual([]);
+  });
+});
+
+describe('staffingAlarm (unfilled must-name gap on a GO bid)', () => {
+  const now = new Date('2026-09-15T12:00:00Z');
+  it('is silent with no gap declared', () => {
+    expect(staffingAlarm({}, now)).toBeNull();
+    expect(staffingAlarm({ staffingGap: 'cultural-property SME' }, now)).toBeNull();
+  });
+  it('is silent when the staffing date is more than 3 days out', () => {
+    expect(staffingAlarm({ staffingGap: 'SME', staffingDeadline: '2026-09-19T12:00:00Z' }, now)).toBeNull();
+  });
+  it('alarms inside 3 days and says what is unfilled', () => {
+    const c = staffingAlarm({ staffingGap: 'cultural-property SME', staffingDeadline: '2026-09-17T12:00:00Z' }, now);
+    expect(c?.severity).toBe('alarm');
+    expect(c?.message).toContain('STAFFING GAP');
+    expect(c?.message).toContain('cultural-property SME');
+    expect(c?.message).toContain('2d');
+  });
+  it('alarms harder once the staffing date has passed', () => {
+    const c = staffingAlarm({ staffingGap: 'SME', staffingDeadline: '2026-09-14T12:00:00Z' }, now);
+    expect(c?.severity).toBe('alarm');
+    expect(c?.message).toMatch(/OVERDUE/);
   });
 });
