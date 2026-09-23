@@ -54,3 +54,12 @@ A row that has not moved in 5 days is a lapse in progress.
 | DSFederal | NOAA NWPS BPA 1305M326A0007 | BD Mgr Chen Zhou (inferred) + form | | | sent 9/23 — follow up 9/30 |
 | Integrated Monitoring | NWFSC ML EM 1305M326P0406 $627k | VP BD josh@ (published) | | | sent 9/23 — follow up 9/30 |
 | Koniag Tech Solutions | APHIS via STRATUS | GM sskakavac@ (published) via Partner Program | | | sent 9/23 — follow up 9/30 |
+
+## Texas / cooperative (not on SAM — see `docs/texas/COOP-WATCH.md`)
+
+| Vehicle | Next date | Action | Owner |
+|---|---|---|---|
+| Choice Partners Technology RFP | ~Oct 1, 2026 post | register on bidder portal, respond | Joseph → Claude |
+| TIPS monthly posting | Oct 1 / Nov 5 | register at tips.ionwave.net; check for Staffing/Consulting | Joseph → Claude |
+| CMBL | this week | $70 registration via eSystems | Joseph |
+| OMNIA / Region 4 ESC 26-14 AI & Cloud | closed 9/8 | ask Region 4 about re-open / piggyback | Joseph |
