@@ -1,6 +1,6 @@
 # Alan Hong
 
-- **Status:** active-bid · resume on file: `resumes/alan-hong-resume.docx` (read 2026-08-11)
+- **Status:** ⭐ CORE PRINCIPAL (Joseph 2026-09-23: "me and Alan Hong should be the big players") — first-named alongside Joseph on every subcontract pitch, rate sheet and teaming call; delivery lead / PM on any sub award · resume on file: `resumes/alan-hong-resume.docx` (read 2026-08-11)
 - **Location:** Fulshear, TX · (832) 563-7528 · xiupan@gmail.com · linkedin.com/in/alanhong84
 - **Current:** Senior Software Engineer, Colliers via IT Associates (Apr 2025–present) —
   TMX commercial-real-estate platform on **enterprise Azure**, TypeScript monorepo (Nx/React
