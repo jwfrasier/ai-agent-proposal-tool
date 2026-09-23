@@ -39,3 +39,9 @@ A row that has not moved in 5 days is a lapse in progress.
 | NCES DataLab | ED/NCES | 7/29 | add `organizationId` |
 | USMC manpower modeling | USMC | 7/30 | add `organizationId` |
 | SSS Moodle LMS | SSS | 7/10 | org 500000234 (on watchlist) |
+
+## Subcontract pursuits (`docs/subcontracting/`)
+
+| Prime | Their award | Contact | Sent | Reply | Status |
+|---|---|---|---|---|---|
+| (work the top 10 in the latest PROSPECTS file; playbook + outreach template alongside) | | | | | |

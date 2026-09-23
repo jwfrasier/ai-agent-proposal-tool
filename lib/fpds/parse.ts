@@ -15,6 +15,7 @@ export interface FpdsAward {
   setAside: string | null;
   offers: number | null;
   office: string | null;
+  agency: string | null; // contractingOfficeAgencyID description
   naics: string | null;
 }
 
@@ -22,8 +23,9 @@ function tag(block: string, name: string): string | null {
   const m = new RegExp(`<ns1:${name}(?:\\s[^>]*)?>([^<]*)<`).exec(block);
   return m ? (m[1] ?? '').trim() : null;
 }
+/** Attribute text on a tag: FPDS uses description="…" on code fields and name="…" on org ids. */
 function tagDesc(block: string, name: string): string | null {
-  const m = new RegExp(`<ns1:${name}\\s+description="([^"]*)"`).exec(block);
+  const m = new RegExp(`<ns1:${name}\\s[^>]*?(?:description|name)="([^"]*)"`).exec(block);
   return m ? (m[1] ?? '').trim() : null;
 }
 function num(v: string | null): number {
@@ -51,11 +53,12 @@ export function parseFpdsEntries(xml: string): FpdsAward[] {
       obligated: num(tag(e, 'obligatedAmount')),
       total: num(tag(e, 'baseAndAllOptionsValue')),
       vendor: tag(e, 'vendorName') ?? '',
-      description: unescape(tag(e, 'descriptionOfContractRequirement') ?? ''),
+      description: unescape(tag(e, 'descriptionOfContractRequirement') ?? '').replace(/\s+/g, ' ').trim(),
       competed: tagDesc(e, 'extentCompeted'),
       setAside: tagDesc(e, 'typeOfSetAside'),
       offers: tag(e, 'numberOfOffersReceived') != null ? num(tag(e, 'numberOfOffersReceived')) : null,
-      office: tag(e, 'contractingOfficeName'),
+      office: tag(e, 'contractingOfficeName') ?? tagDesc(e, 'contractingOfficeID') ?? null,
+      agency: tagDesc(e, 'contractingOfficeAgencyID'),
       naics: tag(e, 'principalNAICSCode'),
     });
   }

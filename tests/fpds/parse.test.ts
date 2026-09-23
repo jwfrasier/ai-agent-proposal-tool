@@ -6,10 +6,11 @@ const xml = `<?xml version="1.0"?><feed xmlns="http://www.w3.org/2005/Atom">
 <content><ns1:award><ns1:awardID><ns1:awardContractID><ns1:PIID>1305M326P0344</ns1:PIID></ns1:awardContractID></ns1:awardID>
 <ns1:relevantContractDates><ns1:signedDate>2026-09-17 00:00:00</ns1:signedDate></ns1:relevantContractDates>
 <ns1:dollarValues><ns1:obligatedAmount>28665.00</ns1:obligatedAmount><ns1:baseAndAllOptionsValue>28665.00</ns1:baseAndAllOptionsValue></ns1:dollarValues>
-<ns1:contractData><ns1:descriptionOfContractRequirement>SENIOR C++ PROGRAMMER TO MODIFY THE COMPASS MODEL</ns1:descriptionOfContractRequirement></ns1:contractData>
+<ns1:contractData><ns1:descriptionOfContractRequirement>SENIOR C++ PROGRAMMER
+   TO MODIFY THE COMPASS MODEL</ns1:descriptionOfContractRequirement></ns1:contractData>
 <ns1:vendor><ns1:vendorHeader><ns1:vendorName>VALINOR LABS, LLC</ns1:vendorName></ns1:vendorHeader></ns1:vendor>
 <ns1:competition><ns1:extentCompeted description="FULL AND OPEN COMPETITION">A</ns1:extentCompeted><ns1:typeOfSetAside description="SMALL BUSINESS SET ASIDE - TOTAL">SBA</ns1:typeOfSetAside><ns1:numberOfOffersReceived>4</ns1:numberOfOffersReceived></ns1:competition>
-<ns1:purchaserInformation><ns1:contractingOfficeName>NOAA WESTERN ACQUISITION</ns1:contractingOfficeName></ns1:purchaserInformation>
+<ns1:purchaserInformation><ns1:contractingOfficeAgencyID name="NATIONAL OCEANIC AND ATMOSPHERIC ADMINISTRATION" departmentID="1300">1330</ns1:contractingOfficeAgencyID><ns1:contractingOfficeID name="NOAA WESTERN ACQUISITION" country="USA">1305M3</ns1:contractingOfficeID></ns1:purchaserInformation>
 <ns1:productOrServiceInformation><ns1:principalNAICSCode description="CUSTOM COMPUTER PROGRAMMING SERVICES">541511</ns1:principalNAICSCode></ns1:productOrServiceInformation>
 </ns1:award></content></entry>
 <entry><title><![CDATA[PURCHASE ORDER 1305M224F0065 (P00001) awarded to RAYTHEON COMPANY, was modified for the amount of $0]]></title>
@@ -35,9 +36,9 @@ describe('parseFpdsEntries', () => {
       piid: '1305M326P0344', vendor: 'VALINOR LABS, LLC', signed: '2026-09-17',
       obligated: 28665, total: 28665, isNewAward: true, offers: 4,
       setAside: 'SMALL BUSINESS SET ASIDE - TOTAL', competed: 'FULL AND OPEN COMPETITION',
-      office: 'NOAA WESTERN ACQUISITION', naics: '541511',
+      office: 'NOAA WESTERN ACQUISITION', agency: 'NATIONAL OCEANIC AND ATMOSPHERIC ADMINISTRATION', naics: '541511',
     });
-    expect(rows[0].description).toContain('C++');
+    expect(rows[0].description).toBe('SENIOR C++ PROGRAMMER TO MODIFY THE COMPASS MODEL');
     expect(rows[1].isNewAward).toBe(false);
   });
 });

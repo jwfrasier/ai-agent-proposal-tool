@@ -19,7 +19,8 @@
     "run-now": "tsx scripts/run-now.ts",
     "roster-check": "tsx scripts/roster-check.ts",
     "watch": "tsx scripts/watch.ts",
-    "price-anchor": "tsx scripts/price-anchor.ts"
+    "price-anchor": "tsx scripts/price-anchor.ts",
+    "sub-prospects": "tsx scripts/sub-prospects.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.97.1",
