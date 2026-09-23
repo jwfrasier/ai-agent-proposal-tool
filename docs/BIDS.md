@@ -44,13 +44,13 @@ A row that has not moved in 5 days is a lapse in progress.
 
 | Prime | Their award | Contact | Sent | Reply | Status |
 |---|---|---|---|---|---|
-| Swingtech Consulting | DOL Enterprise AI 1605TA26F00036 $9.7M | CEO jbhargava@ (published) | | | drafted 9/23 — send first |
-| Ekasys | ATF BATS 15A00026FAQA00227 $2.6M | info@ "Teaming inquiry" + EVP svyas@ (published) | | | drafted 9/23 |
-| Easy Dynamics | USDA NIFA GMRS 1232SA26F0338 $8.1M | VP BD Harrison Smith (inferred) + form | | | drafted 9/23 |
-| Bridgecross | NOAA MCD GIS 1305M226F0424 $4.2M | CEO mdcoll@ (published) | | | drafted 9/23 |
-| Southpoint Consulting | DOJ EOIR LSU 15JPSS26F00001715 $2.3M | CEO (inferred) + info@ | | | drafted 9/23 |
-| Nüvitek | DOL UIRS Ph3 1605TA26F00028 $8.8M | Dir Growth Antoine Remy (inferred) + getintouch@ | | | drafted 9/23 |
-| AttainX | NOAA IFA 1305M326F0158 $9.5M | EVP MJ@attainx.com (published) | | | drafted 9/23 |
-| DSFederal | NOAA NWPS BPA 1305M326A0007 | BD Mgr Chen Zhou (inferred) + form | | | drafted 9/23 |
-| Integrated Monitoring | NWFSC ML EM 1305M326P0406 $627k | VP BD josh@ (published) | | | drafted 9/23 — capacity pitch |
-| Koniag Tech Solutions | APHIS via STRATUS | GM sskakavac@ (published) via Partner Program | | | drafted 9/23 — low priority |
+| Swingtech Consulting | DOL Enterprise AI 1605TA26F00036 $9.7M | CEO jbhargava@ (published) | 9/23 | | sent — follow up 9/30 |
+| Ekasys | ATF BATS 15A00026FAQA00227 $2.6M | info@ "Teaming inquiry" + EVP svyas@ (published) | 9/23 | | sent — follow up 9/30 |
+| Easy Dynamics | USDA NIFA GMRS 1232SA26F0338 $8.1M | VP BD Harrison Smith (inferred) + info@ | 9/23 | | sent 9/23 — follow up 9/30 |
+| Bridgecross | NOAA MCD GIS 1305M226F0424 $4.2M | CEO mdcoll@ (published) | | | sent 9/23 — follow up 9/30 |
+| Southpoint Consulting | DOJ EOIR LSU 15JPSS26F00001715 $2.3M | CEO (inferred) + info@ | | | sent 9/23 — follow up 9/30 |
+| Nüvitek | DOL UIRS Ph3 1605TA26F00028 $8.8M | Dir Growth Antoine Remy (inferred) + getintouch@ | | | sent 9/23 — follow up 9/30 |
+| AttainX | NOAA IFA 1305M326F0158 $9.5M | EVP MJ@attainx.com (published) | | | sent 9/23 — follow up 9/30 |
+| DSFederal | NOAA NWPS BPA 1305M326A0007 | BD Mgr Chen Zhou (inferred) + form | | | sent 9/23 — follow up 9/30 |
+| Integrated Monitoring | NWFSC ML EM 1305M326P0406 $627k | VP BD josh@ (published) | | | sent 9/23 — follow up 9/30 |
+| Koniag Tech Solutions | APHIS via STRATUS | GM sskakavac@ (published) via Partner Program | | | sent 9/23 — follow up 9/30 |
