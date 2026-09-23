@@ -22,7 +22,7 @@ Frasier Digital builds AI and data systems for public-sector programs and delive
 
 ## Why primes team with us
 
-- **Subcontracting-plan credit.** Awards to Frasier Digital count toward SDB and small-business subcontracting goals.
+- **Set-aside math works in your favor.** On a total small-business set-aside we are a similarly situated sub under 13 CFR 125.6, so our work does not count against your 50 percent in-house requirement. For large primes, awards to Frasier Digital count toward SDB and small-business subcontracting-plan goals.
 - **A slice you can hand off.** We take a defined workstream, typically an AI feature, a dashboard, a data pipeline, or a modernization sprint, and deliver it fixed-price with our own team, under your PM.
 - **Compliance-ready today.** We can sign C-SCRM questionnaires, the CISA Secure Software Development Attestation, FAR 52.204-21 safeguarding, and Section 889 representations without exception.
 - **Right-sized.** Senior engineers only; standing subcontractor bench for surge; Eastern-hours coverage standard.

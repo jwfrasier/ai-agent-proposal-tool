@@ -37,15 +37,4 @@ Pitch: Frasier Digital is an SDB — a sub award to us counts toward the prime's
 
 ## Working list
 
-| Prime | Contact found | Sent | Reply | Status |
-|---|---|---|---|---|
-| LIGHTFRONT LLC | | | | |
-| QUALTRYX, LLC | | | | |
-| DSFEDERAL, INC | | | | |
-| ATTAINX INC. | | | | |
-| VIRTUS DIGITAL LLC | | | | |
-| COHO TECHNOLOGY SOLUTIONS, LLC | | | | |
-| KONIAG TECHNOLOGY SOLUTIONS INC | | | | |
-| ASO INTERNATIONAL GROUP INC | | | | |
-| ITCON SERVICES LLC | | | | |
-| SWINGTECH CONSULTING INC. | | | | |
+Contacts researched and emails drafted 9/23 → `outreach/2026-09-23/`. Log sends/replies there and in `docs/BIDS.md`.

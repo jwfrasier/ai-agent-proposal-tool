@@ -14,7 +14,7 @@ Frasier Digital is a small disadvantaged business in Tomball, Texas. We build AI
 Two reasons this may be worth fifteen minutes:
 
 1. If `<contract short name>` has an AI, analytics or modernization slice you would rather not staff internally, we can take it as a fixed-price sub with our own team, on your paper.
-2. As an SDB, a sub award to us counts toward your small disadvantaged subcontracting goal.
+2. `<pick one>` (a) Total-SB set-aside: Because we are a small business ourselves, work you place with us is similarly situated under 13 CFR 125.6, so it does not count against the 50 percent you must keep in-house. (b) 8(a)/WOSB/SDVOSB set-aside: We know a non-`<type>` sub counts against your limitations on subcontracting, so we would scope a single workstream at 20 to 30 percent. (c) Large prime: As an SDB, a sub award to us counts toward your subcontracting-plan SDB goal.
 
 Capability statement attached. Would a short call next week work? I am flexible on time.
 
