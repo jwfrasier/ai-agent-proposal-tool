@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { countdown, diffSnapshots, parseFpdsAtomTitles, staffingAlarm, type NoticeSnapshot } from '../../lib/watch/diff';
+import { countdown, diffSnapshots, parseFpdsAtomTitles, reminderAlarm, staffingAlarm, type NoticeSnapshot } from '../../lib/watch/diff';
 
 const base: NoticeSnapshot = {
   noticeId: 'aaa',
@@ -144,5 +144,22 @@ describe('staffingAlarm (unfilled must-name gap on a GO bid)', () => {
     const c = staffingAlarm({ staffingGap: 'SME', staffingDeadline: '2026-09-14T12:00:00Z' }, now);
     expect(c?.severity).toBe('alarm');
     expect(c?.message).toMatch(/OVERDUE/);
+  });
+});
+
+describe('reminderAlarm (dated to-do on a watch entry)', () => {
+  const r = { reminder: 'Ask CO Kaplan for the invoice guide', remindOn: '2026-10-05' };
+  it('is silent with no reminder or before the date', () => {
+    expect(reminderAlarm({}, new Date('2026-10-05T15:00:00Z'))).toBeNull();
+    expect(reminderAlarm(r, new Date('2026-10-04T15:00:00Z'))).toBeNull();
+  });
+  it('alarms on the date with the reminder text', () => {
+    const c = reminderAlarm(r, new Date('2026-10-05T13:00:00Z'));
+    expect(c?.severity).toBe('alarm');
+    expect(c?.message).toContain('REMINDER');
+    expect(c?.message).toContain('invoice guide');
+  });
+  it('keeps alarming after the date until the reminder is deleted', () => {
+    expect(reminderAlarm(r, new Date('2026-10-09T13:00:00Z'))?.message).toContain('4d overdue');
   });
 });

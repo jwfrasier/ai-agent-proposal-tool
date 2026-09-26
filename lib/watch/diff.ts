@@ -156,3 +156,17 @@ export function staffingAlarm(
   }
   return { severity: 'alarm', message: `STAFFING GAP unfilled, ${cd.text} to source: ${entry.staffingGap}` };
 }
+
+/** A dated to-do on a watch entry (e.g. "ask the CO for the invoice guide on Oct 5"). Alarms every
+ *  run from `remindOn` (YYYY-MM-DD, compared as a UTC calendar date) until `reminder` is deleted. */
+export function reminderAlarm(
+  entry: { reminder?: string; remindOn?: string },
+  now: Date
+): WatchChange | null {
+  if (!entry.reminder || !entry.remindOn) return null;
+  const today = now.toISOString().slice(0, 10);
+  if (today < entry.remindOn) return null;
+  const days = Math.round((Date.parse(today) - Date.parse(entry.remindOn)) / 86_400_000);
+  const when = days === 0 ? 'today' : `${days}d overdue`;
+  return { severity: 'alarm', message: `REMINDER (${when}): ${entry.reminder} — delete \`reminder\` from the watchlist entry when done` };
+}

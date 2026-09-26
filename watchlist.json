@@ -2,8 +2,10 @@
   {
     "noticeId": "5a59cdcff71a44a7bee6e88c05dd03cf",
     "label": "USACE CWMS Authorization PANHEC-26-P-0000-026407",
-    "notes": "SUBMITTED 9/2 evening. Notice AUTO-ARCHIVED 9/18 (SAM auto15 policy, 15d after 9/3 close) — NOT an award or cancellation; award {} and no FPDS entry as of 9/18. Keep for award notice; prune after award.",
-    "fpdsSolicitation": "PANHEC-26-P-0000-026407"
+    "notes": "✅ AWARDED to Frasier Digital 9/25/2026 per email from CO David A. Kaplan. Keep entry until FPDS posts the award (FPDS lags up to ~2 wks) to capture contract # / value; then prune.",
+    "fpdsSolicitation": "PANHEC-26-P-0000-026407",
+    "reminder": "Email CO David Kaplan (cc Quan Nguyen) for the detailed CEFMS invoice guide he promised after Oct 1 for W912HQ26CA088; also ask for Matt Fleming's and Micheal Neilson's email addresses. Then update award/invoicing/contract.json (submission.detailed_guide.received, recipients).",
+    "remindOn": "2026-10-05"
   },
   {
     "noticeId": "440023c72e794374b4df5375068d1441",
@@ -22,7 +24,7 @@
     "noticeId": "1267efeca5ae48ababd303c47ad8d565",
     "label": "SSS Readiness Simulation 90MC26Q0005",
     "fpdsSolicitation": "90MC0026Q0005",
-    "notes": "SUBMITTED 8/12 ($545k). Notice auto-archived 8/29 (normal). Award watch only: no FPDS action as of 9/22 (Website Mod went to Mobomo 8/5; LMS to Moodle US 9/21). Status inquiry to Toussaint reasonable if nothing by ~10/3. OFFICE WATCH on (org 500000234): any new SSS notice alarms — the LMS RFQ 90MC26Q0006 (7/24–8/14) was missed because it was a fresh id under NAICS 513210.",
+    "notes": "❌ NOT SELECTED — Toussaint (CS) unsuccessful-offeror email 9/25/2026. Keep entry only until FPDS shows the awardee/price (for debrief + price intel); then prune. Office watch (org 500000234) stays on.",
     "organizationId": "500000234"
   }
 ]

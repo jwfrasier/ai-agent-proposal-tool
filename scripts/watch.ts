@@ -14,7 +14,7 @@
  * Run it at the start of any bid session and before any scheduled send.
  */
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
-import { countdown, diffSnapshots, parseFpdsAtomTitles, staffingAlarm, type NoticeSnapshot, type OfficeNotice } from '../lib/watch/diff';
+import { countdown, diffSnapshots, parseFpdsAtomTitles, reminderAlarm, staffingAlarm, type NoticeSnapshot, type OfficeNotice } from '../lib/watch/diff';
 
 const WATCHLIST_PATH = 'watchlist.json';
 const STATE_PATH = 'data/watch-state.json';
@@ -38,6 +38,9 @@ interface WatchEntry {
    *  the gap; the deadline is 3+ days before the quote is due, not the due date. */
   staffingGap?: string;
   staffingDeadline?: string; // ISO
+  /** Dated to-do tied to this entry; alarms every run from `remindOn` (YYYY-MM-DD) until deleted. */
+  reminder?: string;
+  remindOn?: string;
   notes?: string;
 }
 
@@ -150,6 +153,8 @@ async function snapshot(entry: WatchEntry): Promise<NoticeSnapshot> {
     const changes = diffSnapshots(prev, curr);
     const staffing = staffingAlarm(entry, now);
     if (staffing) changes.push(staffing);
+    const reminder = reminderAlarm(entry, now);
+    if (reminder) changes.push(reminder);
     const cd = countdown(curr.responseDeadline, now);
     const flags = [
       curr.cancelled ? 'CANCELLED' : null,
